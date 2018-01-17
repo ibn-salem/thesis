@@ -1,0 +1,98 @@
+\usepackage{booktabs}
+\usepackage{amsthm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code from cleanthesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% **************************************************
+% Files' Character Encoding
+% **************************************************
+\PassOptionsToPackage{utf8}{inputenc}
+\usepackage{inputenc}
+
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Genome folding and transcriptional regulation in evolution and disease}
+\newcommand{\thesisName}{Jonas Ibn-Salem}
+\newcommand{\thesisSubject}{Documentation}
+% \newcommand{\thesisDate}{January, 2018}
+\newcommand{\thesisDate}{\today}
+\newcommand{\thesisVersion}{0.0.1}
+
+\newcommand{\thesisFirstReviewer}{Prof. Dr. Miguel Andrade-Navarro}
+\newcommand{\thesisFirstReviewerUniversity}{\protect{Johannes Gutenberg-Universität Mainz}}
+\newcommand{\thesisFirstReviewerDepartment}{Fachbereich Biologie}
+
+\newcommand{\thesisSecondReviewer}{Prof. Dr. Thomas Hankeln}
+\newcommand{\thesisSecondReviewerUniversity}{\protect{Johannes Gutenberg-Universität Mainz}}
+\newcommand{\thesisSecondReviewerDepartment}{Fachbereich Biologie}
+
+\newcommand{\thesisFirstSupervisor}{Miguel Andrade}
+\newcommand{\thesisSecondSupervisor}{}
+
+\newcommand{\thesisUniversity}{\protect{Johannes Gutenberg-Universität Mainz}}
+\newcommand{\thesisUniversityDepartment}{Fachbereich Biologie}
+\newcommand{\thesisUniversityInstitute}{Institute of Organismic and Molecular Evolution}
+\newcommand{\thesisUniversityGroup}{Computational Biology and Data Mining Group}
+\newcommand{\thesisUniversityCity}{Mainz}
+\newcommand{\thesisUniversityStreetAddress}{Ackermannweg 4}
+\newcommand{\thesisUniversityPostalCode}{55128}
+
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[english]{babel} % babel system, adjust the language of the content
+\PassOptionsToPackage{% setup clean thesis style
+    figuresep=colon,%
+    sansserif=false,%
+    hangfigurecaption=false,%
+    hangsection=true,%
+    hangsubsection=true,%
+    colorize=full,%
+    colortheme=jgured,%
+    % bibsys=bibtex,%
+    % bibfile=bib-refs,%
+    % bibstyle=numeric,%
+    wrapfooter=false,%
+}{cleanthesis}
+\usepackage{cleanthesis}
+
+\hypersetup{% setup the hyperref-package options
+    pdftitle={\thesisTitle},    %   - title (PDF meta)
+    pdfsubject={\thesisSubject},%   - subject (PDF meta)
+    pdfauthor={\thesisName},    %   - author (PDF meta)
+    plainpages=false,           %   -
+    colorlinks=false,           %   - colorize links?
+    linkcolor=ctcolormain,      %   - link color (e.g., TOC)
+    citecolor=ctcolormain,      %   - cite color
+    pdfborder={0 0 0},          %   -
+    breaklinks=true,            %   - allow line break inside links
+    bookmarksnumbered=true,     %
+    bookmarksopen=true          %
+}
+
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code for custome style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{cell} % use cell journal style
+% \usepackage[backend=bibtex]{biblatex}

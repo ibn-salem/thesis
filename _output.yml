@@ -1,0 +1,20 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">A Minimal Book Example</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  template: custom_latex_template.tex
+  includes:
+    in_header: preamble.tex
+    before_body: before_body.tex
+    after_body: after_body.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default

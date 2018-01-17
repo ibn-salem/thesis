@@ -1,0 +1,22 @@
+.Rproj.user
+.Rhistory
+.RData
+_publish.R
+_book
+_bookdown_files
+rsconnect
+
+# ignore for the moment
+# .travis.yml
+LICENSE
+
+# ignore intermidiate figure files
+figures/*.png
+figures/*.log
+figures/*.synctex.gz
+figures/*/*.png
+figures/*/*.log
+figures/*/*.synctex.gz
+figures/*/*/*.png
+figures/*/*/*.log
+figures/*/*/*.synctex.gz
