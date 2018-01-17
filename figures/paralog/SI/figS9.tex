@@ -1,0 +1,38 @@
+\documentclass[10pt]{article}
+
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[paperwidth=6in, paperheight=5.5in]{geometry}
+\geometry{left=0cm,right=0cm, top=0cm,bottom=0cm}
+\usepackage{stackengine} % for labels (A) (B).. on subfigures
+\usepackage{hyperref}
+
+% set path source for figures
+\graphicspath{{./sub_figures/}}
+
+% label style
+\newcommand\bsf[1]{\Large{\textbf{\textsf{#1}}}}
+
+\begin{document}
+%-----------------------------------------------------------------------
+\begin{figure}
+    \centering
+\stackinset{l}{0in}{t}{0in}{\bsf{A}}{
+    \includegraphics[width=.48\textwidth]{{EnsemblGRCh37_paralog_genes.gene_pairs.by_group_inTAD_distTadBin.barplot}.pdf}
+}
+\stackinset{l}{0in}{t}{0in}{\bsf{C}}{
+    \includegraphics[width=.48\textwidth]{{EnsemblGRCh37_paralog_genes.captureC_rawNoZero.by_inTADclose.boxplot}.pdf}
+}
+\stackinset{l}{0in}{t}{0in}{\bsf{B}}{
+    \includegraphics[width=.96\textwidth]{{EnsemblGRCh37_paralog_genes.10-1000kb.gene_pairs.by_group_in_TAD_tadSource.barplot}.pdf}
+}
+%~ \caption{
+%~ }
+%~ \stackinset{r}{0cm}{b}{0cm}{\textbf{Fig. 3}}{\makebox[\textwidth]{~}}
+\end{figure}
+
+
+%-----------------------------------------------------------------------
+\end{document}
+
+

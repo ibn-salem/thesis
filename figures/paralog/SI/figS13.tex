@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[paperwidth=6in, paperheight=6in]{geometry}
+\geometry{left=0cm,right=0cm, top=0cm,bottom=0cm}
+\usepackage{stackengine} % for labels (A) (B).. on subfigures
+\usepackage{hyperref}
+
+% set path source for figures
+\graphicspath{{./sub_figures/}}
+
+% label style
+\newcommand\bsf[1]{\Large{\textbf{\textsf{#1}}}}
+
+\begin{document}
+%-----------------------------------------------------------------------
+\begin{figure}
+    \centering
+\includegraphics[width=.45\textwidth]{{Panel_Mouse}.pdf}
+\hspace{.05\textwidth}
+\includegraphics[width=.45\textwidth]{{Panel_Dog}.pdf}
+\vspace{.5cm}
+\stackinset{l}{0in}{t}{.1in}{\bsf{A}}{
+    \includegraphics[width=.22\textwidth]{{EnsemblGRCh37_paralog_genes.paralogPairs_One2One_orthologs.mouse.barplot}.pdf}
+}\nolinebreak
+\stackinset{l}{0in}{t}{.1in}{\bsf{B}}{
+    \includegraphics[width=.22\textwidth]{{EnsemblGRCh37_paralog_genes.paralogPairs_orthologs_onSameChrom.mouse.barplot}.pdf}
+}\nolinebreak\hspace{.05\textwidth}
+\stackinset{l}{0in}{t}{.1in}{\bsf{D}}{
+    \includegraphics[width=.22\textwidth]{{EnsemblGRCh37_paralog_genes.paralogPairs_One2One_orthologs.dog.barplot}.pdf}
+}\nolinebreak
+\stackinset{l}{0in}{t}{.1in}{\bsf{E}}{
+    \includegraphics[width=.22\textwidth]{{EnsemblGRCh37_paralog_genes.paralogPairs_orthologs_onSameChrom.dog.barplot}.pdf}
+}
+\stackinset{l}{0in}{t}{.1in}{\bsf{C}}{
+    \includegraphics[width=.45\textwidth]{{EnsemblGRCh37_paralog_genes.paralogPairs_orthologs_dist_mouse.hist}.pdf}
+}\nolinebreak\hspace{.05\textwidth}
+\stackinset{l}{0in}{t}{.1in}{\bsf{F}}{
+    \includegraphics[width=.45\textwidth]{{EnsemblGRCh37_paralog_genes.paralogPairs_orthologs_dist_dog.hist}.pdf}
+}
+\end{figure}
+
+
+%-----------------------------------------------------------------------
+\end{document}
+
+

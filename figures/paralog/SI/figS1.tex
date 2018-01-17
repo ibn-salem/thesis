@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[paperwidth=6in, paperheight=5.5in]{geometry}
+\geometry{left=0cm,right=0cm, top=0cm,bottom=0cm}
+\usepackage{stackengine} % for labels (A) (B).. on subfigures
+\usepackage{hyperref}
+
+% set path source for figures
+\graphicspath{{./sub_figures/}}
+
+% label style
+\newcommand\bsf[1]{\Large{\textbf{\textsf{#1}}}}
+
+\begin{document}
+%-----------------------------------------------------------------------
+\begin{figure}
+    \centering
+    \stackinset{l}{.1in}{t}{.1in}{\bsf{A}}{
+        \includegraphics[width=.2\textwidth, valign=t]{{EnsemblGRCh37_paralog_genes.number_of_genes}.pdf}
+    }
+    \stackinset{l}{.1in}{t}{.1in}{\bsf{B}}{
+        \includegraphics[width=.4\textwidth, valign=t]{{EnsemblGRCh37_paralog_genes.paralog_group_size}.pdf}
+    }
+    \stackinset{l}{.1in}{t}{.1in}{\bsf{C}}{
+        \includegraphics[width=.25\textwidth, valign=t]{{EnsemblGRCh37_paralog_genes.Gene_length_boxplot}.pdf}
+    }
+    \stackinset{l}{.1in}{t}{.1in}{\bsf{D}}{
+        \includegraphics[width=.4\textwidth, valign=t]{{EnsemblGRCh37_paralog_genes.number_of_enhancers.barplot}.pdf}
+    }
+    \stackinset{l}{.1in}{t}{.1in}{\bsf{E}}{
+        \includegraphics[width=.25\textwidth, valign=t]{{EnsemblGRCh37_paralog_genes.enhancer_dist_min}.pdf}
+    }
+    \stackinset{l}{0in}{t}{.1in}{\bsf{F}}{
+        \includegraphics[width=.2\textwidth, valign=t]{{EnsemblGRCh37_paralog_genes.genes_by_pralog_and_housekeeping}.pdf}
+    }
+%~ \caption{
+%~ }
+%~ \stackinset{r}{0cm}{b}{0cm}{\textbf{Fig. 3}}{\makebox[\textwidth]{~}}
+\end{figure}
+
+
+%-----------------------------------------------------------------------
+\end{document}
+
+
