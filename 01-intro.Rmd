@@ -1,21 +1,144 @@
-# Introduction {#intro}
+# Introduction {#introduction} 
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+## Structure of the Intorduction
+- Cell diversity
+- Gene Regulaiton
+- Enhancers
+    - Enahncer–promoter interaction
+- Techniques to probe the 3D chromatin archtiecture
+    - Imaging based techniques
+    - 3C based methods
+    - Hi-C 
+    - ChIA-PET
+- Chromatin 3D Structure
+    - Hierachie of chromatin 3D structure
+        - Chromosomal Territories
+        - A/B-Compartments
+        - TADs
+        - Chromatin Loops
+              - Enhancer-Promoter loops
+              - Gene Loops
+              - Architectural loops
+    - Architectural Proteins
+    - Loop extrusion model
+- Evolution of chromatin architecture
+- Disruption of chromatin architecture
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+## Cell diversity and regulation of gene expression
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+- Cell diversity
+- Gene Regulaiton
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+An important mechanism in eukaryotic gene regulation is the binding of
+transcription factors (TFs) to distal regulatory regions such as
+enhancers which perform looping interactions to the transcription
+machinery at gene promoters. Chromatin interactions can be measured by
+chromatin conformation capture (3C) and its high-throughput variations
+such as 4C, 5C, 6C, ChIA-PET and Hi-C [@Dekker2013; @Lieberman-Aiden2009].
+
+While genome-wide Hi-C data is still only available for a limited number
+of cell-types and has limited resolution, it is successfully used to
+re-discover important features of the three-dimensional chromatin
+architecture in the nucleus that is organized on different levels. In
+interphase, chromosomes occupy distinct territories in the
+nucleus [@Cremer2001] and are further organized in mega-base scale
+A/B-compartments that show specific preferential interaction patterns
+and transcriptional activity [@Lieberman-Aiden2009; @Rao2014]. On smaller
+scales topologically associating domains (TADs) were identified using
+Hi-C [@Dixon2012; @Nora2012; @Sexton2012]. These are regions of several
+hundred kb, that have more interactions within themselves than with
+other regions and are separated by boundaries that insulate interactions
+between loci in different TADs. Interestingly, TADs are largely stable
+across cell-types and conserved between mammals [@Dixon2012; @Rao2014; @Dixon2015; @VietriRudan2015]. However, many cell-type
+specific chromatin interaction loops occur within TADs [@Rao2014; @Dixon2015]. 
+This indicates a stable and cell-type invariant chromatin
+architecture on larger scales, such as TADs, and a more dynamic and
+cell-type specific organization of interactions within TADs that connect
+enhancers and TF binding sites to regulated genes.
+
+
+## Enhancers
+
+- Enhancers
+    - Enahncer–promoter interaction
+
+Enhancers where originally defined as genomic regions that enhance the 
+expression of a reporter gene, when placed experimentally in front of a minimal promoter. 
+[@Banerji1981; @Shlyueva2014]. Enhancer activity can also be detected 
+genome-wide by specific patterns of open chromatin using DNase-seq [@Song2010] 
+or ATAC-seq [@Buenrostro2013] or posttranslational modification of histones, such as
+H3K27ac by ChIP-seq [@Creyghton2010].
+Complex regulation of developmental genes is often archived by additive affects of multiple enhancers. 
+For example the $\alpha$-globin gene locus is controlled by multiple enhancers, whereby each 
+enhancer elements act independently and in an additive fashion without evidence 
+of synergistic or higher-order effects [@Hay2016]. Also the Indian hedgehog (Ihh) locus is regulated by multiple enhancers with individual combinations of tissue specificities that function in an additive manner [@Will2017].
+Experimental variation for of the copy number of enhancers is associated with expression strength.
+Significantly reduction of the expression of the oncogene *PIMI* could not be archived by perturbing a single enhancers, but only by combinatorial repression of several weak enhancers [@Xie2017].
+(Enhancers are reviewed in [@Spitz2012] and [@Andrey2017])
+
+## Methods to probe the 3D chromatin archtiecture
+- Imaging based techniques
+- 3C based methods
+- Hi-C 
+- ChIA-PET
+
+## Hierachie of chromatin 3D structure
+- Chromosomal Territories
+- A/B-Compartments
+- TADs
+- Chromatin Loops
+    - Enhancer-Promoter loops
+    - Gene Loops
+    - Architectural loops
+- Architectural Proteins
+- (Loop extrusion model)
+- Nucleosomes / 10nm / 30nm fibers
+
+## Changes of genome folding in evoltuion and disease genomes
+- Evolution of chromatin architecture
+- Disruption of chromatin architecture
+
+
+
+## Aims of this thesis
+In this PhD thesis, I analyze TADs and chromatin interactions with
+respect to gene expression regulation. More specifically, we find out
+weather TADs represent only structural units of the genome or also
+functional building blocks, in which genes regulation is coordinated.
+
+First, we focus on duplicated genes in the human genome. Because of
+their related sequence and function, shared evolutionary history, and
+close co-localization in the genome they represent an interesting model
+to study how genome folding is related to regulation of gene expression
+during evolution (Chapter [Paralog genes](#ch:paralog)). Furthermore, we make use of
+deeply sequenced genomes of other vertebrates to systematically
+investigate whether TADs represent conserved building blocks of genomes
+and whether rearrangements are associated with altered gene expression
+programs (Chapter \[ch:TadEvo\]). Next, we will address disruption of
+chromatin organization by analyzing disease associated rearrangement
+breakpoints from whole-genome sequenced patients of various genetic
+diseases to explain miss-regulation by disruption of TADs and chromatin
+contacts in diseases (Chapter \[ch:disruption\]). Finally, we will make
+use of recent insights in chromatin loop formation to provide a
+computational tool to predict chromatin loops from largely available
+genomic data, with the aim to facilitate association of TF binding sites
+in enhancers to regulated genes in many cell-types and condition, for
+which Hi-C like data is not available.
+
+**Are TADs functional genomic units in which genes are co-regulated?**
+
+- **Are paralog genes co-regulated in the 3D chromatin architecture of genomes?**
+
+**Are TADs buidling blocks of genomes and subjected to selective preasure during evolution?**
+- **Are TADs stable units that are often transmitted as a whole than disrupted by rearrangements?**
+- **Are changes of TADs during evolution associated with changes in gene expression profiles?**
+
+**Are rearrangements of TADs associated to genetic diseases?**
+- **Can TADs be used to interpred position effects of rearrangments in genetic diseases?**
+
+**Can chromatin looping interactions be predicted by ChIP-seq and sequence features?**
+
+
