@@ -8,7 +8,6 @@
 - Regulation of compartments / TADs / loops
 
 
-
 - Notes
     - Neo-TADs by tandem-duplication in evolution [@Franke2016]
     - A key component and driver for new gene function in evolution or 
@@ -48,7 +47,9 @@ While in neutral selection
 
 ## Further directions
 - Plasticity and dynamics of chromatin interactions
-- Single cell resolution
+- Single cell resolution 
+    - Single cell Hi-C studies: [@Nagano2017; @Stevens2017]
+    - Computational modelling of single cells [@Sekelja2016].
 - Functional mechanism
 - Establishment of compartments / TADs / loops
 - Regulation of compartment / TADs / loops
