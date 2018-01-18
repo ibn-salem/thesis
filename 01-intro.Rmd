@@ -62,9 +62,6 @@ enhancers and TF binding sites to regulated genes.
 
 ## Enhancers
 
-- Enhancers
-    - Enhancer–promoter interaction
-
 Enhancers where originally defined as genomic regions that enhance the 
 expression of a reporter gene, when placed experimentally in front of a minimal promoter. 
 [@Banerji1981; @Shlyueva2014]. Enhancer activity can also be detected 
@@ -84,6 +81,20 @@ Significantly reduction of the expression of the oncogene *PIMI* could not be ar
 - 3C based methods
 - Hi-C 
 - ChIA-PET
+
+### Microscopy-based techniques to visuallize the genome in 3D
+Historically, the organization of chromosomes and specific loci within the nucleus have mostly been studied using fluorescent *in situ* hybridization (FISH) experiments.
+FISH is limited to examine a few pre-defined loci a few hundred cells at once and is limited in spacial resolution. 
+Novel super-resolution microscopy approaches such as STORM and PALM have enabled direct visualization of the fin-scale structures of the genome at unprecedented resolution [@Bonev2016].
+Labeling of specific chromatin proteins, histone marks, or genomic loci allow to 
+analyze the dynamics of chromosomes at high resolution in living cells.
+However, despite spectacular technical progress, microscopy-based approaches are limited to a small number of genetic loci and do not allow a comprehensive analysis of nuclear architecture 
+of the complete genome. 
+Furthermore, the specific folding patterns observed in microscopy cannot be mapped to 
+genomic coordinates which hinders the integration with other genomic data. 
+However, future combination of imaging-based techniques with proximity-ligation experiments together with integrative computational models, might enable to study the real-time dynamics of chromatin organization with high resolution on the single cell level [@Stevens2017, @Flyamer2017]. 
+
+### Proximity-ligation based method to quantify chromatin interactions
 
 The frequency of interactions between different loci in the genome can be experimentally
 measured by proximity ligation techniques [@Sati2017]. These protocols are variations of the chromosome conformation capture (3C) experiment [@Dekker2002]. 3C works by the ability to 
@@ -123,14 +134,7 @@ regions. Interaction frequencies are usually analyzed by binning the genome into
 equal sized regions several kb depending on sequencing depth.
 While the first Hi-C study produced genome-wide interactions at 1Mb resolution [@Lieberman-Aiden2009], more recent studies could analyse folding patterns at 40kb [@Dixon2012], and later up to 1kb resolution [@Rao2014].
 
-
-
-
 <!-- libraries fo hypbrid DNA products are further digested with a second restiction enzyme and further re-ligated to g -->
-
-
-
-
 
 ## Hierarchy of chromatin 3D structure
 - Chromosomal Territories
@@ -149,43 +153,47 @@ While the first Hi-C study produced genome-wide interactions at 1Mb resolution [
 - Disruption of chromatin architecture
 
 
-
 ## Aims of this thesis
 In this PhD thesis, I analyze TADs and chromatin interactions with
 respect to gene expression regulation. More specifically, we find out
 weather TADs represent only structural units of the genome or also
 functional building blocks, in which genes regulation is coordinated.
 
-First, we focus on duplicated genes in the human genome. Because of
-their related sequence and function, shared evolutionary history, and
-close co-localization in the genome they represent an interesting model
-to study how genome folding is related to regulation of gene expression
-during evolution (Chapter [Paralog genes](#ch:paralog)). Furthermore, we make use of
-deeply sequenced genomes of other vertebrates to systematically
-investigate whether TADs represent conserved building blocks of genomes
-and whether rearrangements are associated with altered gene expression
-programs (Chapter \[ch:TadEvo\]). Next, we will address disruption of
-chromatin organization by analyzing disease associated rearrangement
-breakpoints from whole-genome sequenced patients of various genetic
-diseases to explain miss-regulation by disruption of TADs and chromatin
-contacts in diseases (Chapter \[ch:disruption\]). Finally, we will make
-use of recent insights in chromatin loop formation to provide a
-computational tool to predict chromatin loops from largely available
-genomic data, with the aim to facilitate association of TF binding sites
-in enhancers to regulated genes in many cell-types and condition, for
-which Hi-C like data is not available.
 
 **Are TADs functional genomic units in which genes are co-regulated?**
 
 - **Are paralog genes co-regulated in the 3D chromatin architecture of genomes?**
 
 **Are TADs buidling blocks of genomes and subjected to selective preasure during evolution?**
+
 - **Are TADs stable units that are often transmitted as a whole than disrupted by rearrangements?**
 - **Are changes of TADs during evolution associated with changes in gene expression profiles?**
 
 **Are rearrangements of TADs associated to genetic diseases?**
+
 - **Can TADs be used to interpred position effects of rearrangments in genetic diseases?**
 
 **Can chromatin looping interactions be predicted by ChIP-seq and sequence features?**
 
+These questions are adressed and described in the following for chapters. 
+First, we focus on duplicated genes in the human genome. Because of
+their related sequence and function, shared evolutionary history, and
+close co-localization in the genome they represent an interesting model
+to study how genome folding is related to regulation of gene expression
+during evolution (Chapter [Paralog genes](#ch:paralog_regulaion)). Furthermore, we make use of
+deeply sequenced genomes of other vertebrates to systematically
+investigate whether TADs represent conserved building blocks of genomes
+and whether rearrangements are associated with altered gene expression
+programs (Chapter [TAD evolution](#ch:TAD_evolution)). 
+Next, we will address disruption of
+chromatin organization by analyzing disease associated rearrangement
+breakpoints from whole-genome sequenced patients of various genetic
+diseases to explain miss-regulation by disruption of TADs and chromatin
+contacts in diseases (Chapter [Position effect](#ch:position_effect)). 
+Finally, we will make
+use of recent insights in chromatin loop formation to provide a
+computational tool to predict chromatin loops from largely available
+genomic data, with the aim to facilitate association of TF binding sites
+in enhancers to regulated genes in many cell-types and condition, for
+which Hi-C like data is not available (Chapter [Loop prediction](#ch:loop_prediction)).
 
