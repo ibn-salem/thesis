@@ -6,7 +6,7 @@
 <!-- - (TODO:) sectionand sub-seqction header formating -->
 
 <!-- # Computational Prediction of Position Effects of Apparently Balanced Human Chromosome Rearrangements -->
-# Position effects of rearrangements in disease genomes
+# Position effects of rearrangements in disease genomes {#ch:position_effect}
 
 Cinthya J. Zepeda-Mendoza^1,3,\*^, Jonas
 Ibn-Salem^4,\*^, Tammy Kammin^1^, David J. Harris^3,5^, Debra Rita^6^,
