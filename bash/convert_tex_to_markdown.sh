@@ -67,7 +67,7 @@ cat text_sources/position_effect/position_effect.main.md \
  | sed -r  's:\\\]:\]:g' \
  > text_sources/position_effect/position_effect.main.formated.md
 
-python text_sources/convert_bib.py \
+python python/convert_bib.py \
   -i text_sources/position_effect/position_effect.main.formated.md \
   -o text_sources/position_effect/position_effect.main.formated.md.fix_bib.md
 
@@ -75,18 +75,25 @@ python text_sources/convert_bib.py \
 # convert TAD_evolution manuscript from .docx to markdown
 ################################################################################
 
-pandoc -s text_sources/TAD_evolution/TAD_evolution_manuscript_v12.docx \
-  -t markdown+raw_html \
+pandoc \
+  --filter python/despan.py -s \
+  text_sources/TAD_evolution/TAD_evolution_manuscript_v12.docx \
+  -t markdown \
   --base-header-level=2 \
   -o text_sources/TAD_evolution/TAD_evolution_ms.md
 
-# post processing:
-cat text_sources/TAD_evolution/TAD_evolution_ms.md \
- | sed -r  's:\\\[:\[:g' \
- | sed -r  's:\\\]:\]:g' \
- > text_sources/position_effect/position_effect.main.formated.md
+python python/convert_bib_general.py \
+  -i text_sources/TAD_evolution/TAD_evolution_ms.md \
+  --ref_title "1.  References" \
+  --intro_name "1.  Background" \
+  --separater_str "," \
+  -o text_sources/TAD_evolution/TAD_evolution_ms.md.fix_bib.md
 
-python text_sources/convert_bib.py \
-  -i text_sources/position_effect/position_effect.main.formated.md \
-  -o text_sources/position_effect/position_effect.main.formated.md.fix_bib.md
+#===============================================================================
+# convert TAD_evolution figues from .pdf to .png
+#===============================================================================
+for PDFFILE in figures/TAD_evolution/fig*.pdf ; do
+  # ls -lht $PDFFILE
+  convert -density 600 "${PDFFILE}" "${PDFFILE%.*}".png
+done
 
