@@ -138,3 +138,48 @@ knitr::include_graphics("figures/paralog/SI/figS14.png")
 (ref:PPI) 
 Percent of close paralogs (red) and sampled (grey) gene pairs in the same IMR90 TAD (left bar) or not same TAD (right bar) that have a direct protein protein interaction (PPI) with each other in the HIPPIE database [@Schaefer2012]. 
 
+# Supplementary Data: Evolutionary stability of topologically associating domains is associated with conserved gene regulation
+
+## Supplementary Tables
+
+
+
+**Table S1** **Matching tissues and samples with CAGE expression data in human and
+mouse.**
+https://www.biorxiv.org/highwire/filestream/70793/field_highwire_adjunct_files/2/231431-3.tsv
+
+
+**Table S2** **Ortholog genes in human and mouse with gene expression correlation
+across tissues.**
+https://www.biorxiv.org/highwire/filestream/70793/field_highwire_adjunct_files/3/231431-4.tsv
+
+## Supplementary Figures
+
+<!-- ======================================================= -->
+```{r TadEvoS1, fig.cap='(ref:TadEvoS1)', out.width='80%', fig.align='center'}
+knitr::include_graphics("figures/TAD_evolution/fig_S1_v01.png")
+```
+(ref:TadEvoS1) **Distribution of evolutionary rearrangement breakpoints between human
+and 12 vertebrate genomes around domains.** 
+Relative breakpoint numbers
+from human and different species (horizontal panels) around hESC TADs
+(left), GM12878 contact domains (center), and GRBs (left). Blue color
+scale represents breakpoints from different fill-size thresholds. Dotted
+lines in gray show simulated background controls of randomly placed
+breakpoints.
+<!-- ======================================================= -->
+
+<!-- ======================================================= -->
+```{r TadEvoS2, fig.cap='(ref:TadEvoS2)', out.width='80%', fig.align='center'}
+knitr::include_graphics("figures/TAD_evolution/fig_S2_v01.png")
+```
+(ref:TadEvoS2) **Distance between rearrangement breakpoints and random controls to
+closest TAD boundary.** For each species (y-axis) and fill size
+threshold (vertical panels) the distances from all identified
+rearrangement breakpoints to its closest TAD boundary (x-axis) are
+compared between actual rearrangements (blue) and 100 times randomized
+background controls (gray). The left panel shows distances to next hESC
+TAD boundary and the right panel distances to closest GM12878 contact
+domain boundary. P-values according to Wilcoxon’s rank-sum test.
+<!-- ======================================================= -->
+

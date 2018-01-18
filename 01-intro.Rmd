@@ -175,7 +175,7 @@ functional building blocks, in which genes regulation is coordinated.
 
 **Can chromatin looping interactions be predicted by ChIP-seq and sequence features?**
 
-These questions are adressed and described in the following for chapters. 
+These questions are addressed and discussed in the following for chapters. 
 First, we focus on duplicated genes in the human genome. Because of
 their related sequence and function, shared evolutionary history, and
 close co-localization in the genome they represent an interesting model
