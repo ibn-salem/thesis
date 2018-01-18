@@ -4,16 +4,16 @@
 
 ## Structure of the Intorduction
 - Cell diversity
-- Gene Regulaiton
+- Gene Regulation
 - Enhancers
-    - Enahncer–promoter interaction
-- Techniques to probe the 3D chromatin archtiecture
+    - Enhancer–promoter interaction
+- Techniques to probe the 3D chromatin architecture
     - Imaging based techniques
     - 3C based methods
     - Hi-C 
     - ChIA-PET
 - Chromatin 3D Structure
-    - Hierachie of chromatin 3D structure
+    - Hierarchy of chromatin 3D structure
         - Chromosomal Territories
         - A/B-Compartments
         - TADs
@@ -29,7 +29,7 @@
 ## Cell diversity and regulation of gene expression
 
 - Cell diversity
-- Gene Regulaiton
+- Gene Regulation
 
 
 An important mechanism in eukaryotic gene regulation is the binding of
@@ -63,7 +63,7 @@ enhancers and TF binding sites to regulated genes.
 ## Enhancers
 
 - Enhancers
-    - Enahncer–promoter interaction
+    - Enhancer–promoter interaction
 
 Enhancers where originally defined as genomic regions that enhance the 
 expression of a reporter gene, when placed experimentally in front of a minimal promoter. 
@@ -85,7 +85,54 @@ Significantly reduction of the expression of the oncogene *PIMI* could not be ar
 - Hi-C 
 - ChIA-PET
 
-## Hierachie of chromatin 3D structure
+The frequency of interactions between different loci in the genome can be experimentally
+measured by proximity ligation techniques [@Sati2017]. These protocols are variations of the chromosome conformation capture (3C) experiment [@Dekker2002]. 3C works by the ability to 
+crosslink two genomic loci that are in close physical proximity in the nuclear
+space by treating cells with formaldehyde. 
+The crosslinked chromatin is than digested by enzymes to fragment the 
+genomic DNA. Than the fragmented DNA is re-ligated which results in 
+hybrid DNA molecules of restriction fragments that where in close
+physical proximity during crosslinking but normally originate from different regions in the linear genome sequence [@Dekker2013; @Andrey2017] (Fig. \@ref(fig:ProximityLigation)A). 
+
+<!-- ---------------------------------------------------------------- -->
+```{r ProximityLigation, fig.cap='(ref:ProximityLigation)', out.width='80%', fig.align='center'}
+knitr::include_graphics("figures/Dekker2013_3C.png")
+```
+(ref:ProximityLigation) **Proximity ligation technologies to measure chromatin interactions** 
+**(A)**  By treating cells with formaldehyde chromatin is crosslinked. After fragmentation 
+with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is 
+ligated to a hybrid DNA molecules that is than made from DNA that originated from 
+two regions distal in the linear genome (indicated in red and blue).
+**(B)** Different variants of the 3C experiments differ in their approaches to 
+measure the ligation products or subsets of it in order to quantify chromatin interactions. 
+Figure modified from [@Dekker2013].
+<!-- ---------------------------------------------------------------- -->
+
+There exist several 3C-based methods which differ by the way the ligation product, which represents and chromatin interaction, is measured and quantified (Fig. \@ref(fig:ProximityLigation)B). 
+The classic 3C protocol allows to quantify hybrid DNA-product by quantitative PCR using specific primers to amplify the product junction [@Dekker2002].
+In Circular chromosome conformation capture (4C) experiments, a circular PCR is used to amplify 
+all hybrid DNA products ligated with a desired restriction fragment, e.g. a specific viewpoint of interest. These products are than sequences to generate an interaction profile measuring all
+interacting regions with this viewpoint [@Noordermeer2011].
+Another variant of 3C, Carbon copy chromosome conformation capture (5C), combines
+3C with hybrid capture approaches to identify up to millions of interactions in parallel between two large sets of loci, for example between a set of promoters and a set of distal regulatory elements [@Dostie2006; @Sanyal2012].
+Some methods combine chromatin immunoprecipitation to enrich for chromatin interactions between loci bound by specific proteins of interest or marked by post-translational histone modifications. 
+One of these methods is chromatin interaction analysis by paired-end tag sequencing (ChIA-PET), which allows for genome-wide analysis of long-range interactions between sites bound by a protein of interest [@Fullwood2009]. Therefore, ChIA-PET data represent a selected subset of all interactions, but is an efficient alternative to measure interactions at very high resolution [@Tang2015]. 
+The most unbiased method to quantify all pair-wise interactions genome-wide is Hi-C [@Lieberman-Aiden2009]. After the initial restriction enzyme step of 3C, in Hi-C, the ends are filled with a biotin-marked nucleotide and subsequently re-ligated. A streptavidin pull-down step is used to enrich for the chimeric products, which are than sequenced using paired-end sequencing technology. Each read from the resulting read-pairs is than aligned independently to the reference genome to identify the originating position of the sequenced restriction fragment. 
+Thereby each read pair represent a pairwise physical interaction of the corresponding 
+regions. Interaction frequencies are usually analyzed by binning the genome into 
+equal sized regions several kb depending on sequencing depth.
+While the first Hi-C study produced genome-wide interactions at 1Mb resolution [@Lieberman-Aiden2009], more recent studies could analyse folding patterns at 40kb [@Dixon2012], and later up to 1kb resolution [@Rao2014].
+
+
+
+
+<!-- libraries fo hypbrid DNA products are further digested with a second restiction enzyme and further re-ligated to g -->
+
+
+
+
+
+## Hierarchy of chromatin 3D structure
 - Chromosomal Territories
 - A/B-Compartments
 - TADs
