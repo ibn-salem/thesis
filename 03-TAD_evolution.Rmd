@@ -397,7 +397,8 @@ The detrimental effects of such events have been shown in the study of
 diseases [@Redin2016; @Zepeda-Mendoza2017]. There are also incidences where pathogenic
 phenotypes could be specifically attributed to enhancers establishing
 contacts to promoters that were formerly out of reach because of
-intervening TAD boundaries [@Ibn-Salem2014; @Lupianez2015; @Spielmann2012]. This would explain the selective
+intervening TAD boundaries [@Ibn-Salem2014; @Lupianez2015; @Spielmann2012]. 
+This would explain the selective
 pressure to maintain TAD integrity over large evolutionary distances and
 why we observe higher gene expression conservation for human genes
 within TADs compared to genes outside TADs.
