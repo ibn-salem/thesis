@@ -123,7 +123,7 @@ There exist several 3C-based methods which differ by the way the ligation produc
 The classic 3C protocol allows to quantify hybrid DNA-product by quantitative PCR using specific primers to amplify the product junction [@Dekker2002].
 In Circular chromosome conformation capture (4C) experiments, a circular PCR is used to amplify 
 all hybrid DNA products ligated with a desired restriction fragment, e.g. a specific viewpoint of interest. These products are than sequences to generate an interaction profile measuring all
-interacting regions with this viewpoint [@Noordermeer2011].
+interacting regions with this viewpoint [@Simonis2006; @Noordermeer2011].
 Another variant of 3C, Carbon copy chromosome conformation capture (5C), combines
 3C with hybrid capture approaches to identify up to millions of interactions in parallel between two large sets of loci, for example between a set of promoters and a set of distal regulatory elements [@Dostie2006; @Sanyal2012].
 Some methods combine chromatin immunoprecipitation to enrich for chromatin interactions between loci bound by specific proteins of interest or marked by post-translational histone modifications. 
@@ -160,20 +160,27 @@ weather TADs represent only structural units of the genome or also
 functional building blocks, in which genes regulation is coordinated.
 
 
-**Are TADs functional genomic units in which genes are co-regulated?**
+### Is the three-dimensonal folding of genomes associated with co-regulation of functionally related genes?  {-}
+- How are duplicated genes during evolution distributed in the three-dimensonal gneome architecture? 
+- Can TADs provide regulatory envirnoment for co-regulation of duplicated genes?
+- (Are TADs functional genomic units in which genes are co-regulated?)
+- (Are paralog genes co-regulated in the 3D chromatin architecture of genomes?)
 
-- **Are paralog genes co-regulated in the 3D chromatin architecture of genomes?**
+### Are TADs functional buidling blocks of genomes and subjected to selective preasure during evolution? {-}
+- Are TADs conserved during evolution or disrupted by rearragements?
+- Are changes of TADs during evolution associated with changes in gene expression profiles?
+- (Are TADs stable units that are often transmitted as a whole than disrupted by rearrangements?)
 
-**Are TADs buidling blocks of genomes and subjected to selective preasure during evolution?**
+### Is the disruption of TADs by rearrangements also associated to genetic diseases?  {-}
+- Can TADs be used to interpred position effects of rearrangments in genetic diseases?
+- Can chromatin interaction data and TADs be integrated with phenotype data to predict pathomechanism of balanced chromosomal rearrangements?
 
-- **Are TADs stable units that are often transmitted as a whole than disrupted by rearrangements?**
-- **Are changes of TADs during evolution associated with changes in gene expression profiles?**
+### Can chromatin looping interactions be predicted by ChIP-seq and sequence features?  {-}
+- Are ther signals form TF ChIP-seq data at chromtin looping anchors that predict long-range contacts?
+- Does the gnomic sequnce encode features that are predicive for chromatin looping interacionts?
+- Can we provide a computational method to predict chromatin looping interactions in specifc cell-types and conditions of interest?
 
-**Are rearrangements of TADs associated to genetic diseases?**
-
-- **Can TADs be used to interpred position effects of rearrangments in genetic diseases?**
-
-**Can chromatin looping interactions be predicted by ChIP-seq and sequence features?**
+## Structure of this thesis
 
 These questions are addressed and discussed in the following for chapters. 
 First, we focus on duplicated genes in the human genome. Because of
