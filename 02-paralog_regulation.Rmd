@@ -87,7 +87,7 @@ gene occurred only once. Thereby we selected the pairs by minimizing the
 rate of synonymous mutations (dS) between them using a maximum-weighted
 matching graph algorithm implement in the python package
 `NetworkX` [@Galil1986]. The number of synonymous mutations between
-paralogs has been used to approximate the duplication age [@Lan2015].
+paralogs has been used to approximate the duplication age [@Lan2016].
 Therefore our implementation favours the selection of young paralog
 pairs for larger paralog families and guaranties that each gene occurs
 only once. This filtering strategy resulted in $6256$ unique paralog
