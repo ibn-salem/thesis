@@ -14,7 +14,6 @@ thesis.log
 packages.bib
 
 # ignore intermidiate figure files
-figures/*.png
 figures/*.log
 figures/*.synctex.gz
 figures/*/*.png
