@@ -1,5 +1,5 @@
 --- 
-title: "Genome folding and transcriptional regulation in evolution and disease"
+title: "Genome folding in evolution and disease"
 author: "Jonas Ibn-Salem"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
