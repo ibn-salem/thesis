@@ -42,23 +42,23 @@ knitr::opts_chunk$set(echo = FALSE)
 <!-- - Computational appraoch for using interaction and TADs to interpret variants -->
 <!-- - To improve analysis of genome folding in diverse conditions, we develped 7C. -->
 
-The DNA of the human genome has a total length of 2 meters, but is folded to fit 
+The DNA of the human genome has a total length of 2 meters but is folded to fit 
 in each cell's nucleus with a size of around 10 nm.
 Chromosome conformation capture experiments coupled with high-throughput sequencing (Hi-C)
 allow to measure DNA-DNA contacts genome-wide and reviled a highly organized hierarchy of three-dimensional genome organization. Chromosomes fold locally into domains of 
 several kb termed topologically associating domains (TADs) which restrict the interactions
 of gene regulatory regions, such as enhancers, and target genes. 
 
-In this theses, diverse genomic data sets are computationally integrated with genome-wide chromatin interaction maps to analyse the function of TADs for gene regulation during evolution and in disease genomes. 
+In this theses, diverse genomic datasets are computationally integrated with genome-wide chromatin interaction maps to analyze the function of TADs for gene regulation during evolution and in disease genomes. 
 
-More specifically, I show that duplicated gene pairs are enriched for co-localization in the same TAD, share more often common enhancer elements than expected and have increased contact frequencies over large genomic distances. The clustering in the three-demensional genome architecture enables concerted expression over diverse cell-types and indicate evolutionary constraints in functional genome organization. 
-Indeed, by analyzing evolutionary rearrangements between human and diverse mammal species, I show that TADs are highly conserved building blocks of genomes across millions years of evolution and that rearrangements of TADs is associated to changes in gene expression.
+More specifically, I show that duplicated gene pairs are enriched for colocalization in the same TAD, share more often common enhancer elements than expected and have increased contact frequencies over large genomic distances. The clustering in the three-dimensional genome architecture enables concerted expression over diverse cell-types and indicate evolutionary constraints in functional genome organization. 
+Indeed, by analyzing evolutionary rearrangements between human and diverse mammal species, I show that TADs are highly conserved building blocks of genomes across millions of years of evolution and that rearrangements of TADs is associated to changes in gene expression.
 
-Furthermore, we asked whether disruption of TADs can also lead to genetic disease. By analyzing balanced chromosomal rearrangements in whole-genome sequenced patients with diverse genetic syndromes, we can associate the effect mechanism of rearrangements to disruption of TAD that lead to altered gene expression of phenotypically relevant genes. 
+Furthermore, we asked whether disruption of TADs can also lead to genetic disease. By analyzing balanced chromosomal rearrangements in whole-genome sequenced patients with diverse genetic syndromes, we can associate the effect mechanism of rearrangements to disruption of TAD that leads to altered gene expression of phenotypically relevant genes. 
 
 Finally, I present a computational tool, 7C, to predict long-range chromatin interactions by largely available ChIP-seq data. This enables the analysis of genome folding in many diverse tissues and conditions. 
 
-Together, these results show that TADs are important structural and functional units of genomes and TAD disrutpion is associated altered gene regulation during evolution and in disease. 
+Together, these results show that TADs are important structural and functional units of genomes and TAD disruption is associated altered gene regulation during evolution and in disease. 
 Therefore, it will be increasingly important to take the three-dimensional folding structure
  of genomes into account to interpret genomic variations in genetic disease and cancer genomes to ultimately improve genetic diagnoses in clinical practice and treatment development.
  

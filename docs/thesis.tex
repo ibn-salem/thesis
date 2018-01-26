@@ -222,42 +222,42 @@
 \chapter*{Abstract}\label{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-The DNA of the human genome has a total length of 2 meters, but is
-folded to fit in each cell's nucleus with a size of around 10 nm.
-Chromosome conformation capture experiments coupled with high-throughput
-sequencing (Hi-C) allow to measure DNA-DNA contacts genome-wide and
-reviled a highly organized hierarchy of three-dimensional genome
-organization. Chromosomes fold locally into domains of several kb termed
-topologically associating domains (TADs) which restrict the interactions
-of gene regulatory regions, such as enhancers, and target genes.
+The DNA of the human genome has a total length of 2 meters but is folded
+to fit in each cell's nucleus with a size of around 10 nm. Chromosome
+conformation capture experiments coupled with high-throughput sequencing
+(Hi-C) allow to measure DNA-DNA contacts genome-wide and reviled a
+highly organized hierarchy of three-dimensional genome organization.
+Chromosomes fold locally into domains of several kb termed topologically
+associating domains (TADs) which restrict the interactions of gene
+regulatory regions, such as enhancers, and target genes.
 
-In this theses, diverse genomic data sets are computationally integrated
-with genome-wide chromatin interaction maps to analyse the function of
+In this theses, diverse genomic datasets are computationally integrated
+with genome-wide chromatin interaction maps to analyze the function of
 TADs for gene regulation during evolution and in disease genomes.
 
 More specifically, I show that duplicated gene pairs are enriched for
-co-localization in the same TAD, share more often common enhancer
+colocalization in the same TAD, share more often common enhancer
 elements than expected and have increased contact frequencies over large
-genomic distances. The clustering in the three-demensional genome
+genomic distances. The clustering in the three-dimensional genome
 architecture enables concerted expression over diverse cell-types and
 indicate evolutionary constraints in functional genome organization.
 Indeed, by analyzing evolutionary rearrangements between human and
 diverse mammal species, I show that TADs are highly conserved building
-blocks of genomes across millions years of evolution and that
+blocks of genomes across millions of years of evolution and that
 rearrangements of TADs is associated to changes in gene expression.
 
 Furthermore, we asked whether disruption of TADs can also lead to
 genetic disease. By analyzing balanced chromosomal rearrangements in
 whole-genome sequenced patients with diverse genetic syndromes, we can
 associate the effect mechanism of rearrangements to disruption of TAD
-that lead to altered gene expression of phenotypically relevant genes.
+that leads to altered gene expression of phenotypically relevant genes.
 
 Finally, I present a computational tool, 7C, to predict long-range
 chromatin interactions by largely available ChIP-seq data. This enables
 the analysis of genome folding in many diverse tissues and conditions.
 
 Together, these results show that TADs are important structural and
-functional units of genomes and TAD disrutpion is associated altered
+functional units of genomes and TAD disruption is associated altered
 gene regulation during evolution and in disease. Therefore, it will be
 increasingly important to take the three-dimensional folding structure
 of genomes into account to interpret genomic variations in genetic
@@ -379,26 +379,26 @@ TADs that connect enhancers and TF binding sites to regulated genes.
 
 \section{Enhancers}\label{enhancers}
 
-Enhancers where originally defined as genomic regions that enhance the
+Enhancers were originally defined as genomic regions that enhance the
 expression of a reporter gene, when placed experimentally in front of a
 minimal promoter. \citep{Banerji1981, Shlyueva2014}. Enhancer activity
 can also be detected genome-wide by specific patterns of open chromatin
 using DNase-seq \citep{Song2010} or ATAC-seq \citep{Buenrostro2013} or
 posttranslational modification of histones, such as H3K27ac by ChIP-seq
 \citep{Creyghton2010}. Complex regulation of developmental genes is
-often archived by additive affects of multiple enhancers. For example
+often archived by additive effects of multiple enhancers. For example,
 the \(\alpha\)-globin gene locus is controlled by multiple enhancers,
 whereby each enhancer elements act independently and in an additive
 fashion without evidence of synergistic or higher-order effects
-\citep{Hay2016}. Also the Indian hedgehog (Ihh) locus is regulated by
+\citep{Hay2016}. Also, the Indian hedgehog (Ihh) locus is regulated by
 multiple enhancers with individual combinations of tissue specificities
 that function in an additive manner \citep{Will2017}. Experimental
 variation for of the copy number of enhancers is associated with
 expression strength. Significantly reduction of the expression of the
 oncogene \emph{PIMI} could not be archived by perturbing a single
-enhancers, but only by combinatorial repression of several weak
-enhancers \citep{Xie2017}. (Enhancers are reviewed in \citep{Spitz2012}
-and \citep{Andrey2017})
+enhancer, but only by combinatorial repression of several weak enhancers
+\citep{Xie2017}. (Enhancers are reviewed in \citep{Spitz2012} and
+\citep{Andrey2017})
 
 \section{Methods to probe the 3D chromatin
 archtiecture}\label{methods-to-probe-the-3d-chromatin-archtiecture}
@@ -421,20 +421,20 @@ archtiecture}\label{methods-to-probe-the-3d-chromatin-archtiecture}
 Historically, the organization of chromosomes and specific loci within
 the nucleus have mostly been studied using fluorescent \emph{in situ}
 hybridization (FISH) experiments. FISH is limited to examine a few
-pre-defined loci a few hundred cells at once and is limited in spacial
+pre-defined loci a few hundred cells at once and is limited in spatial
 resolution. Novel super-resolution microscopy approaches such as STORM
-and PALM have enabled direct visualization of the fin-scale structures
-of the genome at unprecedented resolution \citep{Bonev2016}. Labeling of
-specific chromatin proteins, histone marks, or genomic loci allow to
+and PALM have enabled direct visualization of the fine-scale structures
+of the genome at an unprecedented resolution \citep{Bonev2016}. Labeling
+of specific chromatin proteins, histone marks, or genomic loci allow to
 analyze the dynamics of chromosomes at high resolution in living cells.
 However, despite spectacular technical progress, microscopy-based
 approaches are limited to a small number of genetic loci and do not
-allow a comprehensive analysis of nuclear architecture of the complete
-genome. Furthermore, the specific folding patterns observed in
+allow a comprehensive analysis of the nuclear architecture of the
+complete genome. Furthermore, the specific folding patterns observed in
 microscopy cannot be mapped to genomic coordinates which hinders the
-integration with other genomic data. However, future combination of
+integration with other genomic data. However, a future combination of
 imaging-based techniques with proximity-ligation experiments together
-with integrative computational models, might enable to study the
+with integrative computational models might enable to study the
 real-time dynamics of chromatin organization with high resolution on the
 single cell level \citep[\citet{Flyamer2017}]{Stevens2017}.
 
@@ -442,15 +442,15 @@ single cell level \citep[\citet{Flyamer2017}]{Stevens2017}.
 interactions}\label{proximity-ligation-based-method-to-quantify-chromatin-interactions}
 
 The frequency of interactions between different loci in the genome can
-be experimentally measured by proximity ligation techniques
+be measured experimentally by proximity ligation techniques
 \citep{Sati2017, Schmitt2016}. These protocols are variations of the
 chromosome conformation capture (3C) experiment \citep{Dekker2002}. 3C
-works by the ability to crosslink two genomic loci that are in close
+works by the ability to cross-link two genomic loci that are in close
 physical proximity in the nuclear space by treating cells with
-formaldehyde. The crosslinked chromatin is than digested by enzymes to
+formaldehyde. The cross-linked chromatin is than digested by enzymes to
 fragment the genomic DNA. Than the fragmented DNA is re-ligated which
 results in hybrid DNA molecules of restriction fragments that where in
-close physical proximity during crosslinking but normally originate from
+close physical proximity during cross-linking but originate from
 different regions in the linear genome sequence
 \citep{Dekker2013, Andrey2017} (Fig. \ref{fig:ProximityLigation}A).
 
@@ -490,15 +490,15 @@ measured and quantified (Fig. \ref{fig:ProximityLigation}B). The classic
 using specific primers to amplify the product junction
 \citep{Dekker2002}. In Circular chromosome conformation capture (4C)
 experiments, a circular PCR is used to amplify all hybrid DNA products
-ligated with a desired restriction fragment, e.g.~a specific viewpoint
-of interest. These products are than sequences to generate an
+that are ligated with a desired restriction fragment, e.g.~a specific
+viewpoint of interest. These products are then sequences to generate an
 interaction profile measuring all interacting regions with this
 viewpoint \citep{Simonis2006, Noordermeer2011}. Another variant of 3C,
 Carbon copy chromosome conformation capture (5C), combines 3C with
 hybrid capture approaches to identify up to millions of interactions in
 parallel between two large sets of loci, for example between a set of
 promoters and a set of distal regulatory elements
-\citep{Dostie2006, Sanyal2012}. Some methods combine chromatin
+\citep{Dostie2006, Sanyal2012}. Other methods combine chromatin
 immunoprecipitation to enrich for chromatin interactions between loci
 bound by specific proteins of interest or marked by post-translational
 histone modifications. One of these methods is chromatin interaction
@@ -506,22 +506,22 @@ analysis by paired-end tag sequencing (ChIA-PET), which allows for
 genome-wide analysis of long-range interactions between sites bound by a
 protein of interest \citep{Fullwood2009}. Therefore, ChIA-PET data
 represent a selected subset of all interactions, but is an efficient
-alternative to measure interactions at very high resolution
-\citep{Tang2015}. The most unbiased method to quantify all pair-wise
-interactions genome-wide is Hi-C \citep{Lieberman-Aiden2009}. After the
-initial restriction enzyme step of 3C, in Hi-C, the ends are filled with
-a biotin-marked nucleotide and subsequently re-ligated. A streptavidin
+alternative to measure interactions at high resolution \citep{Tang2015}.
+The most unbiased method to quantify all pair-wise interactions
+genome-wide is Hi-C \citep{Lieberman-Aiden2009}. After the initial
+restriction enzyme step of 3C, in Hi-C, the ends are filled with a
+biotin-marked nucleotide and subsequently re-ligated. A streptavidin
 pull-down step is used to enrich for the chimeric products, which are
-than sequenced using paired-end sequencing technology. Each read from
-the resulting read-pairs is than aligned independently to the reference
+then sequenced using paired-end sequencing technology. Each read from
+the resulting read-pairs is then aligned independently to the reference
 genome to identify the originating position of the sequenced restriction
-fragment. Thereby each read pair represent a pairwise physical
-interaction of the corresponding regions. Interaction frequencies are
-usually analyzed by binning the genome into equal sized regions several
-kb depending on sequencing depth. While the first Hi-C study produced
-genome-wide interactions at 1Mb resolution \citep{Lieberman-Aiden2009},
-more recent studies could analyse folding patterns at 40kb
-\citep{Dixon2012}, and later up to 1kb resolution \citep{Rao2014}.
+fragment. Each read pair represent a pairwise physical interaction of
+the corresponding regions. Interaction frequencies are usually analyzed
+by binning the genome into equal sized regions of several kb depending
+on sequencing depth. While the first Hi-C study produced genome-wide
+interactions at 1Mb resolution \citep{Lieberman-Aiden2009}, more recent
+studies could analyse folding patterns at 40kb \citep{Dixon2012}, and
+later up to 1kb resolution \citep{Rao2014}.
 
 \section{Hierarchy of chromatin 3D
 structure}\label{hierarchy-of-chromatin-3d-structure}
@@ -574,23 +574,23 @@ Figure source \citep{Bonev2016}
 \subsection{Chromosomal territories and inter-chromosomal
 contacts}\label{chromosomal-territories-and-inter-chromosomal-contacts}
 
-The eukaryotic genome is highly organized in the interpahse nucelus.
+The eukaryotic genome is highly organized in the interphase nucleus.
 Chromosomes occupy distinct spatial regions, called chromosome
 territories, and intermingle less than one would expect by chance
 \citep{Cremer2001}. This was first observed using imaging based
 approaches, and is reflected in Hi-C interaction maps, where
-inter-chromosomal contacts occur order of magnitudes less frequent than
-intra-chromosomal contacts \citep{Lieberman-Aiden2009}. However, despite
-this spatial segregation of chromosome, intermingling of chromosome
-occurs and is associated with chromosomal translocations
+inter-chromosomal contacts occur an order of magnitudes less frequent
+than intra-chromosomal contacts \citep{Lieberman-Aiden2009}. However,
+despite this spatial segregation of chromosome, intermingling of
+chromosome occurs and is associated with chromosomal translocations
 \citep[\citet{Roukos2013}, \citet{Roukos2014}]{Branco2006}. There are
 also specific gene regulatory interactions between different chromosomes
 \citep{DeLaat2007}, for example olfactory receptor genes cluster densely
-in the nucleus of olfactory neurons to facilitate monoallelic expression
-of a single receptor gene per cell \citep{Monahan2015}. While there are
-specific inter-chromosomal contacts, the genome is non-randomly
-organized in chromosomes which occupy distinct territories in the
-spacial nucleus.
+in the nucleus of olfactory neurons to facilitate mono-allelic
+expression of a single receptor gene per cell \citep{Monahan2015}. While
+there are specific inter-chromosomal contacts, the genome is
+non-randomly organized in chromosomes which occupy distinct territories
+in the spacial nucleus.
 
 \subsection{A/B compartments}\label{ab-compartments}
 
@@ -598,9 +598,10 @@ The ability to measure genome-wide chromatin contacts using Hi-C,
 revealed that individual regions on chromosomes segregate by
 preferential interactions into two compartments mayor clusters, referred
 to as A/B-compartments \citep{Lieberman-Aiden2009}. Interestingly,
-regions A-compartments are associated with active histone-modifications
-and active transcription, whereas B-compartment is associated with
-heterochromatin, lamina association, and repressed genes.
+regions in A-compartments are associated with active
+histone-modifications and active transcription, whereas B-compartment is
+associated with heterochromatin, lamina association, and repressed
+genes.
 
 \subsection{Topologically associating domains
 (TADs)}\label{topologically-associating-domains-tads}
@@ -608,62 +609,62 @@ heterochromatin, lamina association, and repressed genes.
 Compartments could be identified by clustering of long-range
 interactions in Hi-C maps with bin resolution of 1 Mb. In 2012 higher
 resolution Hi-C maps of up to 40 kb lead to the identification of
-genomic regions with preferential interactions wiht them. These genomic
+genomic regions with preferential interactions with them. These genomic
 regions were termed topologically associating domains (TADs)
-\citep{Dixon2012, Nora2012, Sexton2012}. They are opperationlly defined
+\citep{Dixon2012, Nora2012, Sexton2012}. They are operationally defined
 as genomic regions with frequent interactions of loci within the domain
-and decreased interactions across domain boundares
+and decreased interactions across domain boundaries
 \citep{Merkenschlager2016}.
 
 TADs can be identified from Hi-C interaction maps computationally by
 different algorithms \citep{Ay2015}. The directionality index is a score
 for each bin in the Hi-C matrix that quantifies the number of upstream
 versus downstream interactions of this bin. Using hidden Markov models
-TAD boundaries where than identified in regions where DI is changing
+TAD boundaries where then identified in regions where DI is changing
 drastically \citep{Dixon2012}. Other algorithms compute an insulation
 score as the extent to which interactions to cross potential TAD
 boundaries \citep{Crane2015}. Later the Arrowhead algorithm was
 introduced to find ``contact domains'' as smaller nested structures
 along the diagonal of high resolution Hi-C matrices \citep{Rao2014}.
-Furthermore, when analyzing Hi-C interactions at differnt length scales,
-hierarchies of TADs and sub-TADs could be identifed that overlap each
-other \citep[\citet{Fraser2015}]{Filippova2014}.\\
-The different algorithms and parameters used in each is only one source
-of variation in reliably identifying TADs. Also the resolution of Hi-C
+Furthermore, when analyzing Hi-C interactions at different length
+scales, hierarchies of TADs and sub-TADs could be identified that
+overlap each other \citep[\citet{Fraser2015}]{Filippova2014}.~ The
+different algorithms and parameters used in each is only one source of
+variation in reliably identifying TADs. Also, the resolution of Hi-C
 maps, which is mainly defined by sequencing depths but also the Hi-C
 protocol itself \citep{Rao2014}, as well as different normalization
 strategies for Hi-C contacts introduce variability \citep{Forcato2017}.
-Therefore the number and size of TADs varies between different studies
+Therefore, the number and size of TADs varies between different studies
 and cannot be directly compared.
 
-The first studies on TADs identifed around 3000 TADs in human and mouse
+The first studies on TADs identified around 3000 TADs in human and mouse
 genomes with a median size of \textasciitilde{}800 kb \citep{Dixon2012}
-and \textasciitilde{}100 kb in \emph{Drosophila} gneomes
+and \textasciitilde{}100 kb in \emph{Drosophila} genomes
 \citep{Sexton2012}. Analysis of 1kb or 5kb resolution Hi-C matrixes
-resulted in nested ``contact domains'' with median size of 185 kb (range
-40 kb - 3 Mb) in human and mouse cells \citep{Rao2014}.
+resulted in nested ``contact domains'' with a median size of 185 kb
+(range 40 kb - 3 Mb) in human and mouse cells \citep{Rao2014}.
 
 Importantly, TADs might be equivalent to ``chromatin domains'' of 10 kb
 - 1 Mb in size detected by microscopy approaches
-\citep{Cremer2010, Gibcus2013}. Annother connection of Hi-C derived
+\citep{Cremer2010, Gibcus2013}. Another connection of Hi-C derived
 interaction maps with previous microscopy observations, is that TADs in
 \emph{Drosophila} correspond to bands of polytene chromosomes
 \citep{Eagen2015}.
 
 The spatial positioning of TADs correlate with many genomic features
 measured along the linear genome \citep{Merkenschlager2016}. TAD
-boudnaries are enriched for binding of ``insulator protins'', such as
+boundaries are enriched for binding of ``insulator proteins'', such as
 CTCF in mammals and CP190 in Drosophila \citep{Dixon2012, Sexton2012}.
-Furthermore, TAD boundares are associated with active chromatin, such as
-H3K4me3 and H3K27me3, DNase I hypersensivity, actie transcription, and
-house-keeping genes \citep{Dixon2012}. Furthermore, TADs correspond to
-regions of early and late replication timing
+Furthermore, TAD boundaries are associated with active chromatin, such
+as H3K4me3 and H3K27me3, DNase I hypersensitivity, active transcription,
+and house-keeping genes \citep{Dixon2012}. Furthermore, TADs correspond
+to regions of early and late replication timing
 \citep{Pope2014, Dileep2015} and lamina associated domains (LADs)
 \citep{Dixon2012}. Importantly, enhancer-promoter interactions seems to
 be mostly constrained within TADs \citep{Shen2012}
 
-There is acumulating evidence, that TADs are fundamental units of
-chromosome organization \citep{Dixon2016}
+Alltogether, there is accumulating evidence that TADs are fundamental
+units of chromosome organization \citep{Dixon2016}
 
 \begin{itemize}
 \tightlist
@@ -683,12 +684,26 @@ chromosome organization \citep{Dixon2016}
 
 \subsection{Chromatin loops}\label{chromatin-loops}
 
+\begin{itemize}
+\tightlist
+\item
+  Loop domains
+\item
+  Architectural proteins
+\item
+  Enhancer-promoter loops
+\item
+  Polycomp mediated loops
+\item
+  Gene loops
+\end{itemize}
+
 In summary, these findings suggest a hierarchical organization of
 chromosome architecture. First, dynamic nucleosome contacts from
-clutches and fibers. These engage in dynamic long-range chromatin loops,
-some of which are stabilized by architectural proteins, such as CTCF and
-cohesin, and lead to the formation of TADs. TADs in tern cluster by
-their epigenomic type into A/B compartments and coalescence of
+clutches and fibers. These engage in long-range chromatin loops, some of
+which are stabilized by architectural proteins, such as CTCF and
+cohesin, and lead to the formation of TADs. TADs in form cluster by
+their epi-genomic type into A/B compartments and coalescence of
 compartments in the same chromosome forms chromosome territories
 \citep{Bonev2016}.
 
@@ -721,11 +736,11 @@ respect to gene expression regulation. More specifically, we find out
 weather TADs represent only structural units of the genome or also
 functional building blocks, in which genes regulation is coordinated.
 
-\subsection*{Is the three-dimensonal folding of genomes associated with
+\subsection*{Is the three-dimensional folding of genomes associated with
 co-regulation of functionally related
-genes?}\label{is-the-three-dimensonal-folding-of-genomes-associated-with-co-regulation-of-functionally-related-genes}
-\addcontentsline{toc}{subsection}{Is the three-dimensonal folding of
-genomes associated with co-regulation of functionally related genes?}
+genes?~}\label{is-the-three-dimensional-folding-of-genomes-associated-with-co-regulation-of-functionally-related-genes}
+\addcontentsline{toc}{subsection}{Is the three-dimensional folding of
+genomes associated with co-regulation of functionally related genes?~}
 
 \begin{itemize}
 \tightlist
@@ -733,7 +748,7 @@ genomes associated with co-regulation of functionally related genes?}
   How are duplicated genes during evolution distributed in the
   three-dimensional genome architecture?
 \item
-  Can TADs provide regulatory environment for co-regulation of
+  Can TADs provide a regulatory environment for co-regulation of
   duplicated genes?
 \item
   (Are TADs functional genomic units in which genes are co-regulated?)
@@ -742,11 +757,11 @@ genomes associated with co-regulation of functionally related genes?}
   genomes?)
 \end{itemize}
 
-\subsection*{Are TADs functional buidling blocks of genomes and
-subjected to selective preasure during
-evolution?}\label{are-tads-functional-buidling-blocks-of-genomes-and-subjected-to-selective-preasure-during-evolution}
-\addcontentsline{toc}{subsection}{Are TADs functional buidling blocks of
-genomes and subjected to selective preasure during evolution?}
+\subsection*{Are TADs functional building blocks of genomes and
+subjected to selective pressure during
+evolution?}\label{are-tads-functional-building-blocks-of-genomes-and-subjected-to-selective-pressure-during-evolution}
+\addcontentsline{toc}{subsection}{Are TADs functional building blocks of
+genomes and subjected to selective pressure during evolution?}
 
 \begin{itemize}
 \tightlist
@@ -797,16 +812,16 @@ predicted by ChIP-seq and sequence features?}
 
 \section{Structure of this thesis}\label{structure-of-this-thesis}
 
-These questions are addressed and discussed in the following for
-chapters. First, we focus on duplicated genes in the human genome.
-Because of their related sequence and function, shared evolutionary
-history, and close co-localization in the genome they represent an
-interesting model to study how genome folding is related to regulation
-of gene expression during evolution (Chapter
-\protect\hyperlink{ch:paralog_regulaion}{Paralog genes}). Furthermore,
-we make use of deeply sequenced genomes of other vertebrates to
+The followig four chapters adress and discuss these questions. First, we
+focus on duplicated genes in the human genome. Because of their related
+sequence and function, shared evolutionary history, and close
+colocalization in the genome they represent an interesting model to
+study how genome folding is related to regulation of gene expression
+during evolution (Chapter
+\protect\hyperlink{ch:paralog_regulaion}{Paralog genes}). We analyze
+whole-genome alignement between human and other vertebrate genomes to
 systematically investigate whether TADs represent conserved building
-blocks of genomes and whether rearrangements are associated with altered
+blocks of genomes and whether rearrangements of TADs lead to altered
 gene expression programs (Chapter
 \protect\hyperlink{ch:TAD_evolution}{TAD evolution}). Next, we will
 address disruption of chromatin organization by analyzing disease
@@ -816,9 +831,9 @@ disruption of TADs and chromatin contacts in diseases (Chapter
 \protect\hyperlink{ch:position_effect}{Position effect}). Finally, we
 will make use of recent insights in chromatin loop formation to provide
 a computational tool to predict chromatin loops from largely available
-genomic data, with the aim to facilitate association of TF binding sites
-in enhancers to regulated genes in many cell-types and condition, for
-which Hi-C like data is not available (Chapter
+genomic data, with the aim to facilitate the association of TF binding
+sites in enhancers to regulated genes in many cell types and condition,
+for which Hi-C like data is not available (Chapter
 \protect\hyperlink{ch:loop_prediction}{Loop prediction}).
 
 \hypertarget{ch:paralog_regulaion}{\chapter{Paralog genes in the 3D
