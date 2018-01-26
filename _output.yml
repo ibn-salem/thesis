@@ -1,5 +1,7 @@
 bookdown::gitbook:
   css: style.css
+  split_by: section+number
+  split_bib: TRUE
   config:
     toc:
       before: |

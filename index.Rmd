@@ -26,11 +26,10 @@ github-repo: ibn-salem/thesis
 description: "This is a draft PhD thesis."
 ---
 
+# Preface {-}
 <!-- biblio-style: unsrtnat -->
 ```{r, echo = FALSE}
 # Set global options to not show code chunks
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-# Preface {-}
 

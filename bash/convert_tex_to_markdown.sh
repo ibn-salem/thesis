@@ -48,6 +48,7 @@ done
 ################################################################################
 
 pandoc -s text_sources/position_effect/PredictionPosEffecNonCodRearr_AJHG_CZetal_revision_70717.docx \
+  --filter python/despan.py -s \
   -t markdown \
   --base-header-level=2 \
   -o text_sources/position_effect/position_effect.main.md

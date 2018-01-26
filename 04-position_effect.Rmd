@@ -8,14 +8,16 @@
 <!-- # Computational Prediction of Position Effects of Apparently Balanced Human Chromosome Rearrangements -->
 # Position effects of rearrangements in disease genomes {#ch:position_effect}
 
-Cinthya J. Zepeda-Mendoza^1,3,\*^, Jonas
-Ibn-Salem^4,\*^, Tammy Kammin^1^, David J. Harris^3,5^, Debra Rita^6^,
-Karen W. Gripp^7^, Jennifer J. MacKenzie^8^, Andrea Gropman^9^, Brett
-Graham^10^, Ranad Shaheen^11^, Fowzan S. Alkuraya^11,12^, Campbell K.
-Brasington^13^, Edward J. Spence^13^, Diane Masser-Frye^14^, Lynne M.
-Bird^14,15^, Erica Spiegel^16^, Rebecca L. Sparkes^17^, Zehra
-Ordulu^18^, Michael E. Talkowski^18-24^, Miguel A. Andrade-Navarro^4^,
-Peter N. Robinson^25^, Cynthia C. Morton^1-3,23,26†^
+**Computational Prediction of Position Effects of Apparently Balanced Human Chromosome Rearrangements**
+
+Cinthya J. Zepeda-Mendoza^1,3,\*^, Jonas Ibn-Salem^4,\*^, Tammy
+Kammin^1^, David J. Harris^3,5^, Debra Rita^6^, Karen W. Gripp^7^,
+Jennifer J. MacKenzie^8^, Andrea Gropman^9^, Brett Graham^10^, Ranad
+Shaheen^11^, Fowzan S. Alkuraya^11,12^, Campbell K. Brasington^13^,
+Edward J. Spence^13^, Diane Masser-Frye^14^, Lynne M. Bird^14,15^, Erica
+Spiegel^16^, Rebecca L. Sparkes^17^, Zehra Ordulu^18^, Michael E.
+Talkowski^18-24^, Miguel A. Andrade-Navarro^4^, Peter N. Robinson^25^,
+Cynthia C. Morton^1-3,23,26†^
 
 Departments of ^1^Obstetrics, Gynecology and Reproductive Biology and
 ^2^Pathology, Brigham and Women's Hospital, Boston, MA 02115, USA
@@ -85,7 +87,7 @@ Hospital, New Research Building, Rm. 160D, 77 Avenue Louis Pasteur.
 Boston, MA 02115. Tel: 617-525-4535; Fax: 617-525-4533. Email:
 cmorton@partners.org
 
-## Abstract
+**Abstract**
 
 Interpretation of variants of uncertain significance, especially
 chromosome rearrangements in non-coding regions of the human genome,
@@ -105,17 +107,17 @@ demonstrate the need to utilize chromatin conformation data for the
 prediction of position effects in the clinical interpretation of cases
 of non-coding chromosome rearrangements.
 
-## Introduction
+**Introduction**
 
 The importance of the integrity of chromosome structure and its
 association with human disease is one of the oldest and most studied
 topics in clinical genetics. As early as 1959, cytogenetic studies in
 humans linked specific genetic or genomic disorders and intellectual
 disability syndromes to changes in chromosomal ploidy, translocations,
-and DNA duplications and deletions.[@Iafrate2004; @Sebat2004; @Conrad2006; @McCarroll2006; @Hinds2006; @Redon2006; @Conrad2010] The discovery of copy-number
+and DNA duplications and deletions.[@Iafrate2004; @Sebat2004; @Conrad2006; @Hinds2006; @Conrad2010] The discovery of copy-number
 variants (CNVs) by microarray and sequencing technologies expanded the
 catalogue of genetic variation between individuals to test such
-associations at higher resolution.[@Iafrate2004; @Sebat2004; @Conrad2006; @McCarroll2006; @Hinds2006; @Redon2006; @Conrad2010; @Korbel2007; @Alkan2009; @Chen2009; @McKernan2009; @Sudmant2010; @International HapMap2010] Over the years, analysis of
+associations at higher resolution.[@Iafrate2004; @Sebat2004; @Conrad2006; @McCarroll2006; @Hinds2006; @Conrad2010; @Korbel2007; @Alkan2009; @Chen2009; @McKernan2009; @Sudmant2010; @International HapMap2010] Over the years, analysis of
 disease-related structural rearrangements has illuminated genes that are
 mutated in various human developmental disorders.[@Zhang2009; @Theisen2010; @Nambiar2011] Such chromosome
 aberrations can directly disrupt gene sequences, affect gene dosage,
@@ -139,16 +141,13 @@ Examples of position effect genes include paired box gene 6 (*PAX6*
 affect its *cis*-regulatory control and produce aniridia (AN [MIM:
 106210]);[@Fantes1995; @Kleinjan2001] twist family bHLH transcription factor 1 (*TWIST1*
 [MIM: 601622]), where downstream translocations and inversions are
-associated with <span id="_Hlk482619620"
-class="anchor"></span>Saethre-Chotzen syndrome (SCS [MIM:
-101400]);[@Cai2003] paired like homeodomain 2 (*PITX2* [MIM: 601542]) for
-which translocations are associated with <span id="_Hlk482619628"
-class="anchor"></span>Axenfeld-<span id="_Hlk482619735"
-class="anchor"></span>Rieger syndrome type 1 (RIEG1 [MIM:
-180500]);[@Flomen1998; @Trembath2004] SRY-box 9 (*SOX9* [MIM: 608160]), where
-translocation breakpoints located up to 900 Kilobases (Kb) upstream and
-1.3 Megabases (Mb) downstream are associated with campomelic dysplasia
-(CMPD [MIM: 114290]),[@Velagaleti2005] in addition to several
+associated with Saethre-Chotzen syndrome (SCS [MIM: 101400]);[@Cai2003]
+paired like homeodomain 2 (*PITX2* [MIM: 601542]) for which
+translocations are associated with Axenfeld-Rieger syndrome type 1
+(RIEG1 [MIM: 180500]);[@Flomen1998; @Trembath2004] SRY-box 9 (*SOX9* [MIM: 608160]),
+where translocation breakpoints located up to 900 Kilobases (Kb)
+upstream and 1.3 Megabases (Mb) downstream are associated with
+campomelic dysplasia (CMPD [MIM: 114290]),[@Velagaleti2005] in addition to several
 others.[@Kleinjan2005; @Kleinjan1998; @Lupski2005]
 
 The availability of genome sequencing in the clinical setting has
@@ -156,7 +155,7 @@ generated a need for rapid prediction and interpretation of structural
 variants, especially those pertaining to *de novo* non-coding
 rearrangements in individual subjects. With the development and
 subsequent branching of the chromosome conformation capture (3C)
-technique ([@Dekker2002], reviewed in [@de Wit2012]), regulatory issues such as alteration
+technique ([@Dekker2002], reviewed in [@DeWit2012]), regulatory issues such as alteration
 of long-range transcriptional control and position effects can now be
 predicted in terms of chromosome organization. The high resolution view
 of chromosome architecture in diverse human cell lines and
@@ -168,23 +167,23 @@ These examples underscore the importance of chromatin interactions in
 quantitative and temporal control of gene expression, which can greatly
 enhance our power to predict pathologic consequences.
 
-<span id="_qivn16ddnl7g" class="anchor"></span> To test the feasibility
-of prediction and clinical interpretation of position effects of
-non-coding chromosome rearrangements, we analyzed 17 subjects from the
-Developmental Gene Anatomy Project (DGAP)[@Higgins2008; @Ligon2005; @Kim2008; @Lu2007] with *de novo*
-non-coding BCAs classified as variants of uncertain significance (VUS).
-Using publicly available chromatin contact information, annotated and
-predicted regulatory elements, and correlation between phenotypes
-observed in DGAP subjects and those associated with neighboring genes,
-we reliably predicted candidate genes exhibiting mis-regulated
-expression in DGAP-derived lymphoblastoid cell lines (LCLs). These
-results suggest that many VUS are likely to be further interpretable via
-long-range effects, and warrant their routine assessment and integration
-in clinical diagnosis.
+ To test the feasibility of prediction and clinical interpretation of
+position effects of non-coding chromosome rearrangements, we analyzed 17
+subjects from the Developmental Gene Anatomy Project (DGAP)[@Higgins2008; @Ligon2005; @Kim2008; @Lu2007]
+with *de novo* non-coding BCAs classified as variants of uncertain
+significance (VUS). Using publicly available chromatin contact
+information, annotated and predicted regulatory elements, and
+correlation between phenotypes observed in DGAP subjects and those
+associated with neighboring genes, we reliably predicted candidate genes
+exhibiting mis-regulated expression in DGAP-derived lymphoblastoid cell
+lines (LCLs). These results suggest that many VUS are likely to be
+further interpretable via long-range effects, and warrant their routine
+assessment and integration in clinical diagnosis.
 
-## Materials and Methods
+**Materials and Methods**
 
-### Selection of subjects with apparently balanced chromosome abnormalities
+**Selection of subjects with apparently balanced chromosome
+abnormalities**
 
 BCA breakpoints and clinical data were obtained from DGAP cases for
 which whole-genome sequencing was performed using a previously described
@@ -197,21 +196,19 @@ these elements have been shown to exert functional roles (reviewed in
 criteria, 12 of whom had available and reportedly normal clinical array
 results, suggesting lack of large duplications or deletions.
 
-### Clinical descriptions of DGAP cases
+**Clinical descriptions of DGAP cases**
 
 The clinical presentation of the 17 subjects varied, ranging from
 developmental delay to neurological conditions, offering the opportunity
 to assess long-range position effects in different phenotypes. Subjects'
-<span id="_Hlk482354378" class="anchor"></span>karyotypes are presented
-in the main text using the International System for Human Cytogenetic
-Nomenclature (ISCN2016) (Table 1).<span id="_Hlk482619903"
-class="anchor"></span> Detailed case descriptions are included in the
-Supplemental Note: Case Reports, as well as a nomenclature developed to
-describe chromosome rearrangements using next-generation sequencing.[@Ordulu2014]
-Reported ages of DGAP subjects are from time of enrollment. All reported
-genomic coordinates use GRCh37.
+karyotypes are presented in the main text using the International System
+for Human Cytogenetic Nomenclature (ISCN2016) (Table 1). Detailed case
+descriptions are included in the Supplemental Note: Case Reports, as
+well as a nomenclature developed to describe chromosome rearrangements
+using next-generation sequencing.[@Ordulu2014] Reported ages of DGAP subjects are
+from time of enrollment. All reported genomic coordinates use GRCh37.
 
-### Analysis of genes bordering the rearrangement breakpoints
+**Analysis of genes bordering the rearrangement breakpoints**
 
 The presence of annotated genes or pseudogenes and lincRNAs was assessed
 in windows of ±3 and ±1 Mb neighboring each subject's translocation and
@@ -222,8 +219,8 @@ we used the Human Body Map lincRNAs catalog.[@Cabili2011] Haploinsufficiency (HI
 and triplosensitivity scores were assigned using Huang *et al*.,
 2010[@Huang2010] and version hg19 of ClinGen[@Rehm2015] data downloaded on 9/20/2016.
 
-### Assessment of disrupted functional elements and chromatin interactions
-bordering rearrangement breakpoints
+**Assessment of disrupted functional elements and chromatin interactions
+bordering rearrangement breakpoints**
 
 The disruption of regulatory elements such as enhancers, promoters,
 locus control regions, and insulators can lead to disease-related gene
@@ -240,7 +237,7 @@ positions of the selected DGAP subjects against data corresponding to
 CTCF binding sites, DHS sites, and chromatin segmentation
 classifications (Broad ChromHMM) derived from a lymphoblastoid cell line
 (GM12878) and human stem cells (H1-hESC), obtained from the Encyclopedia
-of DNA Elements (ENCODE) project[@Consortium2012] and accessed through the University
+of DNA Elements (ENCODE) project[@Dunham2012] and accessed through the University
 of California Santa Cruz Genome Browser.[@Kent2002] Enhancer positions were
 additionally obtained from Andersson *et al*., 2014[@Andersson2014] for tissue and
 primary cells, and the VISTA Enhancer browser, human version hg19.[@Visel2007]
@@ -255,38 +252,31 @@ Lastly, distal DHS/enhancer–promoter connections[@Thurman2012] were used to as
 disrupted predicted cis-regulatory interactions by the BCAs. Genomic
 overlaps between the rearrangement breakpoints, functional elements and
 disrupted chromatin interactions were calculated using custom Perl
-scripts, the BEDtools suite<span id="_xf3s3u6v3g1e"
-class="anchor"></span>[@Quinlan2010] and the genomic association tester (GAT)
+scripts, the BEDtools suite[@Quinlan2010] and the genomic association tester (GAT)
 tool.[@Heger2013]
 
-### Ontological analysis of genes neighboring breakpoints
+**Ontological analysis of genes neighboring breakpoints**
 
 Phenotype similarity between potential position effect genes and DGAP
 cases was calculated by converting the phenotypes of the 17 subjects to
 Human Phenotype Ontology (HPO)[@Kohler2014] terms and calculating their
 phenomatch score as described in Ibn-Salem *et al*., 2014.[@Ibn-Salem2014] The
 phenomatch score quantiﬁes the information content of the most speciﬁc
-HPO term <span id="__Fieldmark__10518_1889830811" class="anchor"><span
-id="__Fieldmark__9564_1889830811" class="anchor"><span
-id="__Fieldmark__10521_1889830811" class="anchor"><span
-id="__Fieldmark__9563_1889830811"
-class="anchor"></span></span></span></span>that is part of or a common
-ancestor (more general term) of a set of phenotypes. Our set of
-phenotypes is constituted by the HPO terms associated to DGAP cases and
-the ones annotated to candidate position effect genes within windows of
-±3 and ±1 Mb of sequence in proximity to the breakpoints. We used two
-background models to assess signiﬁcance of this similarity. The ﬁrst is
-based on randomly permuting the associations of phenotypes to genes; to
-this effect, the phenotype-gene associations are shuffled 100 times
-randomly and the similarity of these random phenotypes to the studied
-case clinical findings is calculated. The second background control is
-based on shifting the breakpoint location along the chromosome; each
-breakpoint is shifted by -9, -6, -3, +3, +6, and +9 Mb and the
-similarity of genes in proximity to the shifted breakpoints is computed.
+HPO term that is part of or a common ancestor (more general term) of a
+set of phenotypes. Our set of phenotypes is constituted by the HPO terms
+associated to DGAP cases and the ones annotated to candidate position
+effect genes within windows of ±3 and ±1 Mb of sequence in proximity to
+the breakpoints. We used two background models to assess signiﬁcance of
+this similarity. The ﬁrst is based on randomly permuting the
+associations of phenotypes to genes; to this effect, the phenotype-gene
+associations are shuffled 100 times randomly and the similarity of these
+random phenotypes to the studied case clinical findings is calculated.
+The second background control is based on shifting the breakpoint
+location along the chromosome; each breakpoint is shifted by -9, -6, -3,
++3, +6, and +9 Mb and the similarity of genes in proximity to the
+shifted breakpoints is computed.
 
-<span id="_9psny0iyco5a" class="anchor"></span>
-
-### Quantitative real-time PCR
+**Quantitative real-time PCR**
 
 LCLs derived from DGAP236-02m, DGAP244-02m and DGAP245-02m were used as
 karyotypically normal male controls. These are karyotypically normal
@@ -303,7 +293,8 @@ Hs00264887\_s1 (*POU3F4*), Hs00201978\_m1 (*MID2*), Hs00176828\_m1
 (*PAK3*), Hs00893134\_m1 (*SOS1*), and Hs00939627\_m1 (*GUSB*). Data
 were analyzed using the ΔCT method.
 
-### Assessment of DGAP breakpoints overlapping with non-coding structural variants in public databases
+**Assessment of DGAP breakpoints overlapping with non-coding structural
+variants in public databases**
 
 To find similar non-coding structural rearrangement subjects and compare
 their annotated clinical phenotypes to those observed in DGAP cases, we
@@ -314,9 +305,9 @@ dbVar database from the National Center for Biotechnology Information
 community-supported repositories of clinical cases with novel and
 extremely rare genomic variants.
 
-## Results
+**Results**
 
-### Genomic characterization of non-coding breakpoints
+**Genomic characterization of non-coding breakpoints**
 
 To study the structural and evolutionary context of BCAs and their
 impact on nuclear architecture and gene expression, we used data
@@ -326,16 +317,13 @@ developmental and cognitive phenotypes, many of which have yet to be
 investigated in detail. Each studied DGAP BCA has two breakpoint
 positions (as two distinct chromosome regions are involved in their
 generation), which we labeled with the DGAP\#\_A and DGAP\#\_B
-identifiers. We filtered DGAP data to select cases <span
-id="_Hlk482353484" class="anchor"></span>with both breakpoints in
-non-coding regions only, and excluding lincRNAs and pseudogenes; a total
-of 17 cases fulfilled our criteria, 15 translocations and 2 inversions
-(Figure 1 and <span id="_Hlk482620254" class="anchor"></span>Table S1).
-These subjects are phenotypically distinct, and most of them presented
-with congenital developmental and neurological conditions not recognized
-as a known syndrome or genomic disorder (<span id="_Hlk482620291"
-class="anchor"></span>see clinical descriptions in Supplemental Note:
-Case Reports).
+identifiers. We filtered DGAP data to select cases with both breakpoints
+in non-coding regions only, and excluding lincRNAs and pseudogenes; a
+total of 17 cases fulfilled our criteria, 15 translocations and 2
+inversions (Figure 1 and Table S1). These subjects are phenotypically
+distinct, and most of them presented with congenital developmental and
+neurological conditions not recognized as a known syndrome or genomic
+disorder (see clinical descriptions in Supplemental Note: Case Reports).
 
 Further analysis revealed that BCA breakpoints were significantly
 depleted for overlapping annotated promoters or transcription factor
@@ -364,27 +352,25 @@ Noticeably, either one or two breakpoints from all the non-coding DGAP
 BCAs fall within previously reported TADs in H1-hESC and IMR90 cell
 lines (Table 1 and Table S9).[@Dixon2012] However, this overlap was not
 significant for both cell lines (GAT H1-ESC p=0.0537 and IMR90 p=0.28).
-We <span id="_Hlk482608106" class="anchor"></span>found that the
-breakpoints disrupt dozens, hundreds, or even thousands of chromatin
-contacts when assessed at the 20 and 40 Kb resolution in Hi-C data of
-H1-hESC and IMR90 cells, as well as chromatin contacts at 100 Kb and 1
-Mb resolution in GM06990 cells (Table S11). Breakpoint DGAP111\_A had a
-consistent absence of disrupted chromatin contacts, which is expected as
-it overlaps a repetitive satellite region so no chromatin contacts could
-be mapped to the segment (Table S9 and Table S11). With the availability
-of higher resolution data, it is possible to detect whether BCA
-breakpoints disrupt smaller chromatin domains and loops not detected in
-previous studies. When analyzing <span id="_Hlk482358811"
-class="anchor"></span>high resolution IMR90 and GM12878 Hi-C data,[@Rao2014]
-we discovered that 32 out of 34 breakpoints are contained within GM12878
-sub-compartments (Table 1 and Table S10); interestingly, 28 of these are
-classified as members of the B compartment, which is less gene dense and
-less expressed compared to the A compartment. On the other hand, 18 and
-24 breakpoints are contained within GM12878 and IMR90 arrowhead domains,
-respectively (Table S10), which are regions of enhanced contact
-frequency that tile the diagonal of each chromatin contact matrix. In
-addition, the breakpoints disrupt several significant <span
-id="_Hlk482608863" class="anchor"></span>short and long-range chromatin
+We found that the breakpoints disrupt dozens, hundreds, or even
+thousands of chromatin contacts when assessed at the 20 and 40 Kb
+resolution in Hi-C data of H1-hESC and IMR90 cells, as well as chromatin
+contacts at 100 Kb and 1 Mb resolution in GM06990 cells (Table S11).
+Breakpoint DGAP111\_A had a consistent absence of disrupted chromatin
+contacts, which is expected as it overlaps a repetitive satellite region
+so no chromatin contacts could be mapped to the segment (Table S9 and
+Table S11). With the availability of higher resolution data, it is
+possible to detect whether BCA breakpoints disrupt smaller chromatin
+domains and loops not detected in previous studies. When analyzing high
+resolution IMR90 and GM12878 Hi-C data,[@Rao2014] we discovered that 32 out of
+34 breakpoints are contained within GM12878 sub-compartments (Table 1
+and Table S10); interestingly, 28 of these are classified as members of
+the B compartment, which is less gene dense and less expressed compared
+to the A compartment. On the other hand, 18 and 24 breakpoints are
+contained within GM12878 and IMR90 arrowhead domains, respectively
+(Table S10), which are regions of enhanced contact frequency that tile
+the diagonal of each chromatin contact matrix. In addition, the
+breakpoints disrupt several significant short and long-range chromatin
 interactions in the GM12878 Hi-C data (Table S12).
 
 Overall, the observation of breakpoint-associated DHS sites suggests the
@@ -393,7 +379,7 @@ outcomes, while the predicted extensive disruption of chromatin contacts
 and the alteration of TAD boundaries by the BCAs may affect long-range
 regulatory interactions of neighboring genes (see Discussion).
 
-### Identification of genes with potential position effects
+**Identification of genes with potential position effects**
 
 To identify genes which could be generating the complex DGAP phenotypes
 via position effects from chromosome rearrangements, we analyzed all
@@ -406,26 +392,24 @@ genes have ClinGen emerging evidence suggesting that dosage
 haplo/triplo-sensitivity, respectively, is associated with clinical
 phenotype (Table S15).
 
-<span id="_mi37vs9hq9rp" class="anchor"></span> To further refine our
-search for genes which may exhibit position effects, we performed an
-unbiased correlation between DGAP case phenotypes and the clinical
-traits associated with genes bordering each breakpoint. To this end, we
-used the HPO dataset,[@Kohler2014] which provides a standardized vocabulary of
-phenotypic abnormalities encountered in human disease, and currently
-contains \~11,000 terms and over 115,000 annotations to hereditary
-diseases. We <span id="_Hlk482610868" class="anchor"></span>translated
-DGAP clinical features to HPO terms (Table S16), and calculated
-phenotype similarity between DGAP cases and neighboring genes using the
-phenomatch score.[@Ibn-Salem2014] The phenomatch score distinguishes between general
-and very specific phenotypic descriptions by quantifying the information
-content of the most speciﬁc HPO terms that are common to, or a common
-ancestor of, the DGAP case and neighboring gene phenotypes. The
-similarity significance is then calculated based on randomly permuting
-the associations of phenotypes to genes, and in shifting the DGAP
-translocation and inversion breakpoint positions along the chromosome.
-We obtained phenomatch scores ranging from 0.003 to 91.48 for 179 genes
-within the ±3 and ±1 Mb windows, <span id="_Hlk482620945"
-class="anchor"></span>as well as within the TAD positions (Table S15).
+ To further refine our search for genes which may exhibit position
+effects, we performed an unbiased correlation between DGAP case
+phenotypes and the clinical traits associated with genes bordering each
+breakpoint. To this end, we used the HPO dataset,[@Kohler2014] which provides a
+standardized vocabulary of phenotypic abnormalities encountered in human
+disease, and currently contains \~11,000 terms and over 115,000
+annotations to hereditary diseases. We translated DGAP clinical features
+to HPO terms (Table S16), and calculated phenotype similarity between
+DGAP cases and neighboring genes using the phenomatch score.[@Ibn-Salem2014] The
+phenomatch score distinguishes between general and very specific
+phenotypic descriptions by quantifying the information content of the
+most speciﬁc HPO terms that are common to, or a common ancestor of, the
+DGAP case and neighboring gene phenotypes. The similarity significance
+is then calculated based on randomly permuting the associations of
+phenotypes to genes, and in shifting the DGAP translocation and
+inversion breakpoint positions along the chromosome. We obtained
+phenomatch scores ranging from 0.003 to 91.48 for 179 genes within the
+±3 and ±1 Mb windows, as well as within the TAD positions (Table S15).
 
 In addition to dosage sensitivity and phenotypic similarity information,
 we complemented our analysis with assessment of enhancer-promoter
@@ -434,16 +418,14 @@ mechanism by which chromosome rearrangements cause position effects is
 through disruptions in the association of genes with their regulatory
 regions.[@Kleinjan2005; @Kleinjan1998] We therefore reasoned that genes and enhancers
 included in predicted enhancer-promoter interactions would be strong
-position effect candidates. We used the <span id="_Hlk482609237"
-class="anchor"></span>ENCODE distal DHS/enhancer–promoter
-connections[@Thurman2012] to assess disrupted predicted *cis*-regulatory
-interactions by the DGAP breakpoints within a ±500 Kb window. The
-analysis revealed 193 genes that were separated from their predicted
-candidate enhancers, potentially altering gene expression (Table S13). A
-<span id="_Hlk482609962" class="anchor"></span>total of 133 candidate
-genes were separated from &lt;10 of their predicted enhancers, while 60
-genes were separated from their predicted interactions with 10 or up to
-91 enhancers (Table S14).
+position effect candidates. We used the ENCODE distal
+DHS/enhancer–promoter connections[@Thurman2012] to assess disrupted predicted
+*cis*-regulatory interactions by the DGAP breakpoints within a ±500 Kb
+window. The analysis revealed 193 genes that were separated from their
+predicted candidate enhancers, potentially altering gene expression
+(Table S13). A total of 133 candidate genes were separated from &lt;10
+of their predicted enhancers, while 60 genes were separated from their
+predicted interactions with 10 or up to 91 enhancers (Table S14).
 
 For the 17 analyzed DGAP BCAs, there are a total of 645 genes with
 either evidence of dosage sensitivity, disrupted enhancer-promoter
@@ -485,38 +467,38 @@ ClinGen (Table S15).
 
 Taken together, these cases represent more plausible candidates in the
 search for position effect genes with functional consequences in the
-subjects’ phenotypes.<span id="_1momymjcrc1t" class="anchor"></span>
-Examples include *GRIK2* which could explain the intellectual disability
-observed in DGAP138; *SOS1*, forkhead box G1 (*FOXG1* [MIM: 164874])
-and cochlin (*COCH* [MIM: 603196]) may be related to the neurological
-and developmental delay as well as hearing loss of DGAP163; acyl-CoA
-synthetase long-chain family member 4 (*ACSL4* [MIM: 300157]) and
-*POU3F4* could be involved in DGAP176’s cognitive impairment and hearing
-loss; SATB homeobox 2 (*SATB2* [MIM: 608148]) may underlie the delayed
-speech and language development observed in DGAP249; RB binding protein
-8 endonuclease (*RBBP8* [MIM: 604124]) may be involved in DGAP252’s
-craniofacial dysmorphic features; *SOX9* most likely explains the cleft
-palate observed in DGAP288; DNA polymerase epsilon catalytic subunit
-(*POLE* [MIM: 174762]) may contribute to the extreme short stature
-observed in DGAP275, and zinc finger E-box binding homeobox 2 (*ZEB2*
-[MIM: 605802]) can potentially explain the hypotonia and neurological
-features observed in DGAP329. *SOX9* had been previously proposed to
-explain DGAP288’s phenotype, and as predicted by our method, a decrease
-in its expression was observed in RNA derived from DGAP288’s umbilical
-cord blood.[@Ordulu2016] Additional quantitative real-time PCR analyses revealed
-*SOS1* as having reduced expression in DGAP163-derived LCLs compared to
-three normal sex-matched controls (Figure 2).Expression assessment for
-second-tier candidates *PAK3*, *MID2* and *POU3F4* in DGAP176 LCLs did
-not deviate substantially from their control expression values (Figure
-S1); further searches into the Genotype-Tissue Expression (GTEx)
-project[@Consortium2013] reveal that *PAK3*, *MID2* and *POU3F4* have low expression
-in LCLs, which would have made assessing changes in expression of these
-genes technically difficult. This points to the importance of the
-availability of tissues and cell lines relevant to the studied
-phenotypes, or the capacity to generate animal models that reproduce the
-observed BCAs for further analysis.
+subjects’ phenotypes. Examples include *GRIK2* which could explain the
+intellectual disability observed in DGAP138; *SOS1*, forkhead box G1
+(*FOXG1* [MIM: 164874]) and cochlin (*COCH* [MIM: 603196]) may be
+related to the neurological and developmental delay as well as hearing
+loss of DGAP163; acyl-CoA synthetase long-chain family member 4 (*ACSL4*
+[MIM: 300157]) and *POU3F4* could be involved in DGAP176’s cognitive
+impairment and hearing loss; SATB homeobox 2 (*SATB2* [MIM: 608148])
+may underlie the delayed speech and language development observed in
+DGAP249; RB binding protein 8 endonuclease (*RBBP8* [MIM: 604124]) may
+be involved in DGAP252’s craniofacial dysmorphic features; *SOX9* most
+likely explains the cleft palate observed in DGAP288; DNA polymerase
+epsilon catalytic subunit (*POLE* [MIM: 174762]) may contribute to the
+extreme short stature observed in DGAP275, and zinc finger E-box binding
+homeobox 2 (*ZEB2* [MIM: 605802]) can potentially explain the
+hypotonia and neurological features observed in DGAP329. *SOX9* had been
+previously proposed to explain DGAP288’s phenotype, and as predicted by
+our method, a decrease in its expression was observed in RNA derived
+from DGAP288’s umbilical cord blood.[@Ordulu2016] Additional quantitative
+real-time PCR analyses revealed *SOS1* as having reduced expression in
+DGAP163-derived LCLs compared to three normal sex-matched controls
+(Figure 2).Expression assessment for second-tier candidates *PAK3*,
+*MID2* and *POU3F4* in DGAP176 LCLs did not deviate substantially from
+their control expression values (Figure S1); further searches into the
+Genotype-Tissue Expression (GTEx) project[@Lonsdale2013] reveal that *PAK3*, *MID2*
+and *POU3F4* have low expression in LCLs, which would have made
+assessing changes in expression of these genes technically difficult.
+This points to the importance of the availability of tissues and cell
+lines relevant to the studied phenotypes, or the capacity to generate
+animal models that reproduce the observed BCAs for further analysis.
 
-### Identification of subjects with shared non-coding chromosome alterations and phenotypes
+**Identification of subjects with shared non-coding chromosome
+alterations and phenotypes**
 
 The identification of subjects with shared non-coding chromosome
 alterations and phenotypes as described herein would further support our
@@ -526,25 +508,23 @@ DECIPHER[@Firth2009] and dbVar databases,[@Lappalainen2013] both comprehensive
 community-supported repositories of clinical cases with novel or
 extremely rare genomic variants.
 
-We found 494 <span id="_Hlk482612787" class="anchor"></span>DECIPHER
-cases overlapping our 34 non-coding BCA breakpoints (Table S19). Of
-these, 489 had rearrangements that overlapped one or more annotated
-genes (Table S20). Only five DECIPHER cases fulfilled our non-coding
-selection criteria (Table S21): cases 1985 and 1989, both of which
-overlap one of DGAP017’s breakpoints in chromosome 10, but which have
-several other gene-altering genomic rearrangements; case 289720, a
-subject with a 161.44 Kb deletion in chromosome 10 described as likely
-benign and sharing a sequence breakpoint with DGAP126; case 289865
-overlapping a breakpoint in DGAP126 in chromosome 10, very similar to
-case 289720, however with the presence of an additional pathogenic
-gene-altering rearrangement; and lastly case 293610, a pathogenic
-duplication of 364.43 Kb in chromosome 17 sharing a breakpoint with
-DGAP288. <span id="_Hlk482621666" class="anchor"></span>Only two of the
-five DECIPHER cases have reported clinical phenotypes. DECIPHER case
-289720 presents with intellectual disability and psychosis, both
-pertaining to the superclasses of behavioral and neurodevelopmental
-abnormalities under the HPO classification. <span id="_Hlk482621758"
-class="anchor"></span>Interestingly, DGAP126 has abnormal aggressive,
+We found 494 DECIPHER cases overlapping our 34 non-coding BCA
+breakpoints (Table S19). Of these, 489 had rearrangements that
+overlapped one or more annotated genes (Table S20). Only five DECIPHER
+cases fulfilled our non-coding selection criteria (Table S21): cases
+1985 and 1989, both of which overlap one of DGAP017’s breakpoints in
+chromosome 10, but which have several other gene-altering genomic
+rearrangements; case 289720, a subject with a 161.44 Kb deletion in
+chromosome 10 described as likely benign and sharing a sequence
+breakpoint with DGAP126; case 289865 overlapping a breakpoint in DGAP126
+in chromosome 10, very similar to case 289720, however with the presence
+of an additional pathogenic gene-altering rearrangement; and lastly case
+293610, a pathogenic duplication of 364.43 Kb in chromosome 17 sharing a
+breakpoint with DGAP288. Only two of the five DECIPHER cases have
+reported clinical phenotypes. DECIPHER case 289720 presents with
+intellectual disability and psychosis, both pertaining to the
+superclasses of behavioral and neurodevelopmental abnormalities under
+the HPO classification. Interestingly, DGAP126 has abnormal aggressive,
 impulsive or violent behavior and auto-aggression, as well as language
 and motor delays, which also fall under the classification of behavioral
 and neurodevelopmental abnormalities. DECIPHER case 293610 has reported
@@ -576,15 +556,15 @@ with phenotypes observed in the DGAP cases, especially DGAP017’s
 hypoplasia, the developmental delay observed in DGAP113, and DGAP315’s
 significant developmental or morphological phenotypes.
 
-Strictly speaking, these phenotypes are disparate, but fall under similar
-phenotypic categories, which could enable identification of long-range
-effect genes between different cases <span id="_Hlk482621878"
-class="anchor"></span>with similar clinical features and chromosome
-rearrangements. These comparisons highlight the importance of
-establishing detailed, specific, and unbiased guidelines for assigning
-phenotypes when performing computational phenotype comparisons.
+Strictly speaking, these phenotypes are disparate, but fall under
+similar phenotypic categories, which could enable identification of
+long-range effect genes between different cases with similar clinical
+features and chromosome rearrangements. These comparisons highlight the
+importance of establishing detailed, specific, and unbiased guidelines
+for assigning phenotypes when performing computational phenotype
+comparisons.
 
-## Discussion
+**Discussion**
 
 Structural variation of the human genome, either inherited or arising by
 *de novo* germline or somatic mutations, can give rise to different
@@ -601,7 +581,7 @@ regions.[@Zhang2015; @Spielmann2016]
 The study of chromatin conformation has been requisite in the analysis
 of such non-coding rearrangements. DNA is organized in the
 three-dimensional nucleus at varying hierarchical levels that are
-important for the regulation of gene expression,[@de Wit2012] with primary roles
+important for the regulation of gene expression,[@DeWit2012] with primary roles
 in embryonic development and disease.[@Bonev2016] Several studies have analyzed
 the impact of structural variants in disruption of the regulatory
 chromatin environment leading to disease;[@Lupianez2015; @Groschel2014; @Visser2012; @Roussos2014; @Ibn-Salem2014] these
@@ -630,23 +610,21 @@ subjects’ clinical phenotypes (Table 1).
 We observed that eight of the sequenced DGAP BCA breakpoints,
 corresponding to six DGAP cases (DGAP017, 176, 249, 275, 288 and 322),
 overlapped reported annotated and predicted enhancers and DHS sites.
-<span id="_Hlk482705599" class="anchor"></span>Disruption of these
-regulatory elements could potentially cause improper gene expression or
-repression through altered enhancer-promoter interactions or
-interactions with other DHS-associated elements such as insulators and
-locus control regions, among others. <span id="_Hlk482611220"
-class="anchor"></span>In fact, four of the breakpoints that disrupt
-annotated DHS sites and enhancers have been shown to establish chromatin
-contacts with our top position effect candidate genes in the region in
-Hi-C data of H1-hESC cells at 40 Kb resolution (Table S18). For example,
-the DGAP275\_B breakpoint is involved in a chromatin interaction that
-puts it into physical proximity with *POLE* and *ANKLE2,* DGAP288\_B
-contacts *SOX9*, and DGAP176\_B interacts with *ACSL4*. Three additional
-breakpoints from DGAP111, 249 and 287 overlap CTCF binding sites. CTCF
-binding sites are enriched in TAD boundaries,[@Dixon2012] and the elimination of
-these binding sites could potentially induce gene expression or other
-functional changes through alteration of the structural regulatory
-landscape of the region.[@Lupianez2015]
+Disruption of these regulatory elements could potentially cause improper
+gene expression or repression through altered enhancer-promoter
+interactions or interactions with other DHS-associated elements such as
+insulators and locus control regions, among others. In fact, four of the
+breakpoints that disrupt annotated DHS sites and enhancers have been
+shown to establish chromatin contacts with our top position effect
+candidate genes in the region in Hi-C data of H1-hESC cells at 40 Kb
+resolution (Table S18). For example, the DGAP275\_B breakpoint is
+involved in a chromatin interaction that puts it into physical proximity
+with *POLE* and *ANKLE2,* DGAP288\_B contacts *SOX9*, and DGAP176\_B
+interacts with *ACSL4*. Three additional breakpoints from DGAP111, 249
+and 287 overlap CTCF binding sites. CTCF binding sites are enriched in
+TAD boundaries,[@Dixon2012] and the elimination of these binding sites could
+potentially induce gene expression or other functional changes through
+alteration of the structural regulatory landscape of the region.[@Lupianez2015]
 
 There are nine DGAP cases (DGAP113, 126, 138, 153, 163, 252, 315, 319
 and 329), six with normal arrays and two with benign CNVs, for which no
@@ -660,31 +638,29 @@ included in H1-hESC TADs,[@Dixon2012] and the separation of 193 genes from one
 and up to 91 of their predicted enhancers after the occurrence of the
 BCAs (Table S14). For example, *SOS1*, one of the most significant
 candidates in explaining DGAP163’s global developmental delay,
-dysmorphic/distinctive facies and hearing loss, as observed in <span
-id="_Hlk482622030" class="anchor"></span>Noonan Syndrome 1 (NS1 [MIM:
-163950]), is separated from its interaction with 88 predicted enhancers
-(Figure 3), and exhibited a decrease in expression in DGAP163-derived
-LCLs. However, NS1 is caused by autosomal dominant mutations in *SOS1*;
-we hypothesize that the reduced expression of *SOS1* might affect the
-RAS/MAPK signaling pathway and generate clinical features not completely
-overlapping those of NS1; however, this possibility remains to be
-functionally tested and complimented with analyses of genomic single
-nucleotide variants. A similar approach could be explored for DGAP275,
-where we hypothesize that *POLE*, associated with <span
-id="_Hlk482622104" class="anchor"></span>the facial dysmorphism,
-immunodeficiency, livedo, and short stature syndrome (FILS [MIM:
-615139]) in an autosomal recessive manner,[@Pachlopnik Schmid2012] may contribute to the
-extreme short stature observed in this DGAP subject; and *ZEB2*,
-etiologic for <span id="_Hlk482622233"
-class="anchor"></span>Mowat-Wilson syndrome (MOWS [MIM: 235730]) in an
-autosomal dominant manner (OMIM\#235730), may potentially explain the
-hypotonia and neurological features observed in DGAP329 but not present
-all of the dysmorphic features or medical/non-neurologic phenotype of
-MOWS. Overall, more candidate genes will need to be analyzed rigorously
-to assess the validity of our position effect predictions and the
-disruption of important chromatin regulatory elements. Nonetheless,
-insight into the molecular pathway of disorders may be forthcoming from
-our approach and of value in the management of some individuals.
+dysmorphic/distinctive facies and hearing loss, as observed in Noonan
+Syndrome 1 (NS1 [MIM: 163950]), is separated from its interaction with
+88 predicted enhancers (Figure 3), and exhibited a decrease in
+expression in DGAP163-derived LCLs. However, NS1 is caused by autosomal
+dominant mutations in *SOS1*; we hypothesize that the reduced expression
+of *SOS1* might affect the RAS/MAPK signaling pathway and generate
+clinical features not completely overlapping those of NS1; however, this
+possibility remains to be functionally tested and complimented with
+analyses of genomic single nucleotide variants. A similar approach could
+be explored for DGAP275, where we hypothesize that *POLE*, associated
+with the facial dysmorphism, immunodeficiency, livedo, and short stature
+syndrome (FILS [MIM: 615139]) in an autosomal recessive manner,[@PachlopnikSchmid2012]
+may contribute to the extreme short stature observed in this DGAP
+subject; and *ZEB2*, etiologic for Mowat-Wilson syndrome (MOWS [MIM:
+235730]) in an autosomal dominant manner (OMIM\#235730), may
+potentially explain the hypotonia and neurological features observed in
+DGAP329 but not present all of the dysmorphic features or
+medical/non-neurologic phenotype of MOWS. Overall, more candidate genes
+will need to be analyzed rigorously to assess the validity of our
+position effect predictions and the disruption of important chromatin
+regulatory elements. Nonetheless, insight into the molecular pathway of
+disorders may be forthcoming from our approach and of value in the
+management of some individuals.
 
 All predicted candidate genes have different lines of evidence
 supporting their selection, starting with a significant phenomatch score
@@ -731,17 +707,15 @@ involvement and decreased expression of *SOX9* in the cleft palate
 Pierre-Robin sequence (PRBNS [MIM: 261800]) association in
 DGAP288.[@Ordulu2016]
 
-Lastly, we would like to
-note that predicting the pathogenic outcome of disrupted chromatin
-contacts is not a straightforward endeavor: it has been shown that a
-single gene promoter can be targeted by several enhancers,[@Thurman2012] therefore
-compensating for the perturbed interactions by the chromosome
-rearrangements. <span id="_Hlk482704398" class="anchor"></span>In
-addition, rearrangements can reposition gene promoters and enhancers
-outside of their preferred chromatin environments, leading to improper
-gene activation by enhancer adoption.[@Lupianez2015] <span id="_Hlk482704355"
-class="anchor"></span>Our method currently identifies instances in which
-known and predicted enhancer/promoter interactions are disrupted by the
+Lastly, we would like to note that predicting the pathogenic outcome of
+disrupted chromatin contacts is not a straightforward endeavor: it has
+been shown that a single gene promoter can be targeted by several
+enhancers,[@Thurman2012] therefore compensating for the perturbed interactions by
+the chromosome rearrangements. In addition, rearrangements can
+reposition gene promoters and enhancers outside of their preferred
+chromatin environments, leading to improper gene activation by enhancer
+adoption.[@Lupianez2015] Our method currently identifies instances in which known
+and predicted enhancer/promoter interactions are disrupted by the
 rearrangement breakpoints and thus lead to decreased candidate gene
 expression. Enhancer adoption prediction will be incorporated once
 mathematical models of TAD formation upon changes in genomic sequence
@@ -754,27 +728,25 @@ related phenotypes to the DGAP cases does not prove the involvement of
 neighboring genes in the etiology of these phenotypes, it is a step
 forward towards prediction of pathogenic effects starting from a simple
 computational analysis, pointing to a better phenotypic categorization
-when clinically examining affected individuals. <span id="_Hlk482622863"
-class="anchor"></span>By making our position effect prediction method
-available to the human genetics community, we hope to study additional
-cases with complete phenotypic information and be able to refine better
-the rules for the prediction of position effects on gene expression and
-discover new mechanisms of pathogenicity.
+when clinically examining affected individuals. By making our position
+effect prediction method available to the human genetics community, we
+hope to study additional cases with complete phenotypic information and
+be able to refine better the rules for the prediction of position
+effects on gene expression and discover new mechanisms of pathogenicity.
 
-## Acknowledgements
+**Acknowledgements**
 
 We offer heartfelt gratitude to all DGAP research participants and their
 families, and to countless genetic counselors, clinical geneticists,
 cytogeneticists, and physicians for their ongoing support of our study
 and for referrals to our project. This study was funded by the National
-Institutes of Health (GM061354 to CCM and MET). <span id="_Hlk482174184"
-class="anchor"></span>The authors declare no conflicts of interest.
+Institutes of Health (GM061354 to CCM and MET). The authors declare no
+conflicts of interest.
 
-## Tables
+**Tables**
 
-### Table 1. 
-**Description of the 17 analyzed DGAP cases with non-codingBCAs.** 
-Corresponding clinical karyotypes are reported, with overlap of
+**Table 1.** **Description of the 17 analyzed DGAP cases with non-coding
+BCAs.** Corresponding clinical karyotypes are reported, with overlap of
 breakpoints with regulatory elements (E = enhancer, DHS = DNaseI
 hypersensitive sites, CTCF = CTCF binding sites), and TADs from H1-hESC,
 IMR90, and GM12878 (1= one breakpoint within TAD, 2=both BCA breakpoints
@@ -785,7 +757,6 @@ ClinGen known recessive genes, b= ClinGen genes with emerging and
 sufficient evidence suggesting haploinsufficiency is associated with
 clinical phenotype, c = HI scores less than 10, d = within H1-ESC TAD, e
 = DHS enhancer-promoter disrupted interactions).
-
 
   **Subject ID**   **Reported Karyotype**          **Disruption of Functional Elemen**   **Breakpoints within TADs (hESC)**   **Breakpoints within TADs (IMR90)**   **Breakpoints within TADs (GM12878)**   **Top-ranking Candidates ±1 Mb **
   ---------------- ------------------------------- ------------------------------------- ------------------------------------ ------------------------------------- --------------------------------------- -----------------------------------
@@ -807,8 +778,7 @@ clinical phenotype, c = HI scores less than 10, d = within H1-ESC TAD, e
   **DGAP322**      46,XY,t(1;18)(q32.1;q22.1)      DHS                                   1                                    2                                     2                                       *IRF6^bcd^*
   **DGAP329**      46,XX,t(2;14)(q21;q24.3)dn      -                                     1                                    2                                     2                                       *ZEB2^bcde^*
 
-
-## Figures
+**Figures**
 
 **Figure 1.** Chromosome locations of the 17 analyzed DGAP cases with
 non-coding BCAs. Breakpoint positions are marked with a blue line and
@@ -816,14 +786,13 @@ the corresponding DGAP number. All chromosomes are aligned by the
 centromere (marked in pink) and are indicated above by their
 corresponding chromosome number.
 
-**Figure 2.** <span id="_Hlk482696865" class="anchor"></span>Assessment
-of gene expression changes for DGAP163-derived LCLs. Each column
-represents the ΔCT results of three culture replicates, with four
-technical replicates each, compared to three sex-matched control cell
-lines. Error bars indicate the standard deviation calculated from the
-biological replicates. The Mann-Whitney U test p-value is provided for
-the comparison between expression values of *SOS1* and the control
-*GUSB*.
+**Figure 2.** Assessment of gene expression changes for DGAP163-derived
+LCLs. Each column represents the ΔCT results of three culture
+replicates, with four technical replicates each, compared to three
+sex-matched control cell lines. Error bars indicate the standard
+deviation calculated from the biological replicates. The Mann-Whitney U
+test p-value is provided for the comparison between expression values of
+*SOS1* and the control *GUSB*.
 
 **Figure 3.** Disrupted enhancer-promoter DHS interactions predicted for
 *SOS1* (gene position indicated by asterisk). The color graded rectangle
@@ -832,37 +801,47 @@ ENCODE. The dashed line indicates the translocation breakpoint position
 in chromosome 2. Lilac colored rectangles represent genes, and pink
 rectangles show TAD positions annotated in H1-hESC.
 
-## Web Resources
+**Web Resources**
 
 The scripts used in this study to predict position effects can be
-downloaded from: <https://github.com/ibn-salem/position_effect>
+downloaded from:
+[*https://github.com/ibn-salem/position\_effect*](https://github.com/ibn-salem/position_effect)
 
-OMIM, <http://www.omim.org>
+OMIM, [*http://www.omim.org*](http://www.omim.org/)
 
-Ensembl GRCh37 archive, <http://grch37.ensembl.org>
+Ensembl GRCh37 archive,
+[*http://grch37.ensembl.org*](http://grch37.ensembl.org/)
 
 Human lincRNAs catalog,
-<http://portals.broadinstitute.org/genome_bio/human_lincrnas>
+[*http://portals.broadinstitute.org/genome\_bio/human\_lincrnas*](http://portals.broadinstitute.org/genome_bio/human_lincrnas)
 
-Haploinsufficiency scores, <https://decipher.sanger.ac.uk>
+Haploinsufficiency scores,
+[*https://decipher.sanger.ac.uk*](https://decipher.sanger.ac.uk/)
 
-ClinGen GRCh37 data, <ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/clingen>
+ClinGen GRCh37 data,
+[*ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/clingen*](ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/clingen)
 
 University of California Santa Cruz Genome Browser,
-<https://genome.ucsc.edu>
+[*https://genome.ucsc.edu*](https://genome.ucsc.edu/)
 
-Human Phenotype Ontology, <http://human-phenotype-ontology.github.io>
+Human Phenotype Ontology,
+[*http://human-phenotype-ontology.github.io*](http://human-phenotype-ontology.github.io/)
 
-Harvard Biopolymers Facility, <https://genome.med.harvard.edu>
+Harvard Biopolymers Facility,
+[*https://genome.med.harvard.edu*](https://genome.med.harvard.edu/)
 
-dbVar Variation Viewer, <https://www.ncbi.nlm.nih.gov/variation/view>
+dbVar Variation Viewer,
+[*https://www.ncbi.nlm.nih.gov/variation/view*](https://www.ncbi.nlm.nih.gov/variation/view)
 
-3D Genome Browser, <http://promoter.bx.psu.edu/hi-c>
+3D Genome Browser,
+[*http://promoter.bx.psu.edu/hi-c*](http://promoter.bx.psu.edu/hi-c)
 
-ENCODE, <https://www.encodeproject.org>
+ENCODE,
+[*https://www.encodeproject.org*](https://www.encodeproject.org/)
 
-WashU EpiGenome Browser, <span id="_Hlk482608672"
-class="anchor"></span>http://epigenomegateway.wustl.edu/
+WashU EpiGenome Browser,
+[*http://epigenomegateway.wustl.edu/*](http://epigenomegateway.wustl.edu/)
 
-GTEx portal, <https://www.gtexportal.org/home>
+GTEx portal,
+[*https://www.gtexportal.org/home*](https://www.gtexportal.org/home)
 
