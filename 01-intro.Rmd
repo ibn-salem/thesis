@@ -1,5 +1,5 @@
-# Introduction {#introduction} 
 
+# Introduction {#thesis-intro}
 
 
 ## Structure of the Intorduction
@@ -274,19 +274,21 @@ First, we focus on duplicated genes in the human genome. Because of
 their related sequence and function, shared evolutionary history, and
 close colocalization in the genome they represent an interesting model
 to study how genome folding is related to regulation of gene expression
-during evolution (Chapter [Paralog genes](#ch:paralog_regulaion)). 
+during evolution (Chapter \@ref(paralog-regulation)). 
 We analyze whole-genome alignement between human and other vertebrate genomes to systematically
 investigate whether TADs represent conserved building blocks of genomes
 and whether rearrangements of TADs lead to altered gene expression
-programs (Chapter [TAD evolution](#ch:TAD_evolution)). 
+programs (Chapter \@ref(TAD-evolution)). 
 Next, we will address disruption of
 chromatin organization by analyzing disease associated rearrangement
 breakpoints from whole-genome sequenced patients of various genetic
 diseases to explain miss-regulation by disruption of TADs and chromatin
-contacts in diseases (Chapter [Position effect](#ch:position_effect)). 
+contacts in diseases (Chapter \@ref(position-effect)). 
 Finally, we will make
 use of recent insights in chromatin loop formation to provide a
 computational tool to predict chromatin loops from largely available
 genomic data, with the aim to facilitate the association of TF binding sites
 in enhancers to regulated genes in many cell types and condition, for
-which Hi-C like data is not available (Chapter [Loop prediction](#ch:loop_prediction)).
+which Hi-C like data is not available (Chapter \@ref(loop-prediction)).
+The overall findings are then discussed together with further research perspectives (Chapter \@ref(thesis-discussion)).
+

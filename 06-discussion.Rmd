@@ -1,4 +1,4 @@
-# Discussion
+# Discussion {#thesis-discussion}
 
 - Limitations of 3C based methods
 - Plasticity and dynamics of chromatin interactions

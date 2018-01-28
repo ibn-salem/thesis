@@ -1,5 +1,5 @@
 <!-- # Co-regulation of paralog genes in the three-dimensional chromatin architecture {#ch:paralog} -->
-# Paralog genes in the 3D genome architecture {#ch:paralog_regulaion}
+# Paralog genes in the 3D genome architecture {#paralog-regulation}
 
 This chapter is published in Nucleac Acid Research [@Ibn-Salem2017].
 The surce code for the complete analysis is available at GitHub:

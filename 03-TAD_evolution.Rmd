@@ -1,19 +1,20 @@
-# Stability of TADs in evolution {#ch:TAD_evolution}
+# Stability of TADs in evolution {#TAD-evolution}
 
-Evolutionary stability of topologically associating domains is
-associated with conserved gene regulation
+This chapter is published as preprint on bioRxiv and currently under Review at BMC Biology:
 
-Jan Krefting^1,2^, Miguel A. Andrade-Navarro^1,2^ and Jonas
-Ibn-Salem^1,2,\#^
+**Evolutionary stability of topologically associating domains is
+associated with conserved gene regulation**  
+Jan Krefting^1,2^, Miguel A. Andrade-Navarro^1,2^ and *Jonas Ibn-Salem*^1,2,\#^
 
 ^1^Faculty of Biology, Johannes Gutenberg University of Mainz, 55128
 Mainz, Germany
-
 ^2^Institute of Molecular Biology, 55128 Mainz, Germany
-
 \# corresponding author
 
-https://doi.org/10.1101/231431 
+Availible online: https://doi.org/10.1101/231431 
+
+For contributions to this chapter see Table \@ref(tab:Contribution).
+
 
 ###  Abstract {-}
 

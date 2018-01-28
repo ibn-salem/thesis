@@ -6,7 +6,7 @@
 <!-- - (TODO:) sectionand sub-seqction header formating -->
 
 <!-- # Computational Prediction of Position Effects of Apparently Balanced Human Chromosome Rearrangements -->
-# Position effects of rearrangements in disease genomes {#ch:position_effect}
+# Position effects of rearrangements in disease genomes {#position-effect}
 
 **Computational Prediction of Position Effects of Apparently Balanced Human Chromosome Rearrangements**
 
