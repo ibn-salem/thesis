@@ -1,12 +1,20 @@
 <!-- # Co-regulation of paralog genes in the three-dimensional chromatin architecture {#ch:paralog} -->
 # Paralog genes in the 3D genome architecture {#paralog-regulation}
 
-This chapter is published in Nucleac Acid Research [@Ibn-Salem2017].
-The surce code for the complete analysis is available at GitHub:
-[https://github.com/ibn-salem/paralog_regulation](https://github.com/ibn-salem/paralog_regulation)
+### Preamble {-}
+> 
+> This chapter was published as a first-author paper in the journal Nucleic Acids Research:
+> 
+> **Ibn-Salem J**, Muro EM, Andrade-Navarro MA. **_Co-regulation of paralog genes in the three-dimensional chromatin architecture_**. Nucleic Acids Res. 2017;45(1):81-91. [doi:10.1093/nar/gkw813](https://doi.org/10.1093/nar/gkw813).
+> 
+> The publication is availible online: https://doi.org/10.1093/nar/gkw813.
+> My contributions to this publication is indicated in Table \@ref(tab:contribution). 
+> The source code of the complete analysis is available at GitHub:
+> [https://github.com/ibn-salem/paralog_regulation](https://github.com/ibn-salem/paralog_regulation). 
+> Supplementary figures are shown in Appendix \@ref(sup-paralog-regulation).
+>
 
-
-## Abstract {-}
+### Abstract {-}
 
 Paralog genes arise from gene duplication events during evolution, which often lead to similar proteins that cooperate in common pathways and in protein complexes. Consequently, paralogs show correlation in gene expression whereby the mechanisms of co-regulation remain unclear. In eukaryotes, genes are regulated in part by distal enhancer elements through looping interactions with gene promoters. These looping interactions can be measured by genome-wide chromatin conformation capture (Hi-C) experiments, which revealed self-interacting regions called topologically associating domains (TADs). We hypothesize that paralogs share common regulatory mechanisms to enable coordinated expression according to TADs. To test this hypothesis, we integrated paralogy annotations with human gene expression data in diverse tissues, genome-wide enhancer–promoter associations and Hi-C experiments in human, mouse and dog genomes. We show that paralog gene pairs are enriched for co-localization in the same TAD, share more often common enhancer elements than expected and have increased contact frequencies over large genomic distances. Combined, our results indicate that paralogs share common regulatory mechanisms and cluster not only in the linear genome but also in the three-dimensional chromatin architecture. This enables concerted expression of paralogs over diverse cell-types and indicate evolutionary constraints in functional genome organization.
 
@@ -67,7 +75,7 @@ regulatory mechanisms allowing the separation of paralogs into different
 TADs in the same chromosome but connected, and eventually their
 migration into different chromosomes.
 
-MATERIALS AND METHODS {#sec:paralog-methods}
+Materials and methods {#sec:paralog-methods}
 ---------------------
 
 ### Selection of pairs of paralog genes
@@ -253,7 +261,7 @@ frequencies and genomic distances between TSS of gene pairs were
 compared using a Wilcoxon rank-sum test. All analyses were carried out
 in the statistic software R version 3.2.2.
 
-RESULTS
+Results
 -------
 
 ### Distribution of paralog genes in the human genome
@@ -363,7 +371,7 @@ associated enhancers to single genes (Fig. \@ref(fig:samplingDistEh),
 section \@ref(sec:paralog-methods)).
 
 
-```{r sharedEnhancer, fig.cap='(ref:sharedEnhancer)', out.width='50%', fig.align='center'}
+```{r sharedEnhancer, fig.cap='(ref:sharedEnhancer)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig2_09.png")
 ```
 (ref:sharedEnhancer) Shared enhancers among paralog gene pairs.
@@ -420,7 +428,7 @@ compared to sampled gene pairs ($p=0.00013$, stable\_TADs in
 Fig. \@ref(fig:TAD)A).
 
 
-```{r TAD, fig.cap='(ref:TAD)', out.width='50%', fig.align='center'}
+```{r TAD, fig.cap='(ref:TAD)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig3_09.png")
 ```
 (ref:TAD) **(A)** Co-localization of close paralog genes within the same TAD compared against sampled gene pairs for TAD data sets from different cell types and studies. The first seven bars show values for TADs called in HeLa, HUVEC, K562, KBM7, NHEK, IMR90, and GM12878 cells by [@Rao2014]. The eighth bar shows the value for stable TADs across cell types form this study (at least 90\% reciprocal overlap in 50\% of cells). The last two bars show data for TADs called in hESC and IMR90 cells by [@Dixon2012]. Error bars indicate standard deviation in 10 times replicated sampling of gene pairs. P-values are computed using Fisher's exact test.
@@ -508,7 +516,7 @@ tissues is not significantly higher for paralogs whether they are in the
 same TAD or not (Fig. \@ref(fig:ExpByTAD)).
 
 
-```{r closePairs, fig.cap='(ref:closePairs)', out.width='50%', fig.align='center'}
+```{r closePairs, fig.cap='(ref:closePairs)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig4_09.png")
 ```
 (ref:closePairs) **(A)** Normalized Hi-C contacts by genomic distance between paralog (red) and sampled (grey) gene pairs. Lines show linear regression fit separately for paralogs (red) and sampled (grey) pairs with 95\% confidence intervals in shaded areas.
@@ -586,7 +594,7 @@ Fig. \@ref(fig:orthologsMouseDog)A). Significant enrichment was observed
 with orthologs in the dog genome ($85\%$ vs. $77\%$, $p=0.0016$;
 Fig. \@ref(fig:orthologsMouseDog)A).
 
-```{r orthologsMouseDog, fig.cap='(ref:orthologsMouseDog)', out.width='50%', fig.align='center'}
+```{r orthologsMouseDog, fig.cap='(ref:orthologsMouseDog)', out.width='75%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig6_09.png")
 ```
 (ref:orthologsMouseDog) One-to-one orthologs of human paralog genes in mouse and dog genome.
@@ -613,7 +621,7 @@ TADs but following evolutionary events allow their reorganization
 outside TADs. While within oganisms distal paralog genes are
 coordinated, such coordination can be eventually erased by evolution.
 
-DISCUSSION
+Discussions
 ----------
 
 The generation of large datasets of gene expression across multiple
@@ -710,7 +718,7 @@ non-interacting proteins, which supports our hypothesis that paralog
 pairs within the same TAD would have a tendency to encode for proteins
 replacing each other.
 
-CONCLUSION
+Conclusion
 ----------
 
 We propose that paralog genes generated by tandem duplication start
@@ -728,7 +736,7 @@ This seems to be a reasonable evolutionary mechanism, much simpler than
 creating from nothing a complete new regulatory environment for a new
 gene.
 
-ACKNOWLEDGEMENTS
+Acknowledgements
 ----------------
 
 The authors thank all members of the CBDM group for fruitful

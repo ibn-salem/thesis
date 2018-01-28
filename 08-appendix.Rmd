@@ -1,7 +1,7 @@
 
 # (APPENDIX) Appendix {-} 
 
-# Supporting Information: Co-regulation of paralog genes in the three-dimensional chromatin architecture
+# Supporting Information: Co-regulation of paralog genes in the three-dimensional chromatin architecture {#sup-paralog-regulation}
 
 <!-- FIGURE S1 ---------------------------------------------------------------->
 ```{r paraVSnonPara, fig.cap='(ref:paraVSnonPara)', out.width='50%', fig.align='center'}
@@ -138,7 +138,9 @@ knitr::include_graphics("figures/paralog/SI/figS14.png")
 (ref:PPI) 
 Percent of close paralogs (red) and sampled (grey) gene pairs in the same IMR90 TAD (left bar) or not same TAD (right bar) that have a direct protein protein interaction (PPI) with each other in the HIPPIE database [@Schaefer2012]. 
 
-# Supplementary Data: Evolutionary stability of topologically associating domains is associated with conserved gene regulation
+<!-- =========================================================================== -->
+
+# Supplementary Data: Evolutionary stability of topologically associating domains is associated with conserved gene regulation {#sup-TAD-evolution}
 
 ## Supplementary Tables {#TadEvoSupTab}
 
@@ -183,9 +185,10 @@ domain boundary. P-values according to Wilcoxon’s rank-sum test.
 
 
 
-## Contribution to individual publications
+<!-- ======================================================================= -->
+# Contribution to individual publications
 
-```{r Contribution, message=FALSE, echo=FALSE}
+```{r contribution, message=FALSE, echo=FALSE}
 require(readr)
 # read table from attached file
 contrib <- read_tsv("data/contributions.tsv", col_types = "cciiii")

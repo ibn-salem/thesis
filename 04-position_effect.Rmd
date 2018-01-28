@@ -8,86 +8,31 @@
 <!-- # Computational Prediction of Position Effects of Apparently Balanced Human Chromosome Rearrangements -->
 # Position effects of rearrangements in disease genomes {#position-effect}
 
-**Computational Prediction of Position Effects of Apparently Balanced Human Chromosome Rearrangements**
+### Preamble {-}
+> 
+> This chapter was published as a co-first-author paper in the American Journal of Human Genetics:
+> 
+> Cinthya J. Zepeda-Mendoza^\*^, **Jonas Ibn-Salem^\*^**, Tammy
+Kammin, David J. Harris, Debra Rita, Karen W. Gripp,
+Jennifer J. MacKenzie, Andrea Gropman, Brett Graham, Ranad
+Shaheen, Fowzan S. Alkuraya, Campbell K. Brasington,
+Edward J. Spence, Diane Masser-Frye, Lynne M. Bird, Erica
+Spiegel, Rebecca L. Sparkes, Zehra Ordulu, Michael E.
+Talkowski, Miguel A. Andrade-Navarro, Peter N. Robinson,
+Cynthia C. Morton^#^. **_Computational Prediction of Position Effects of Apparently Balanced Human Chromosomal Rearrangements_**. Am J Hum Genet. 2017;101(2):206-217. [doi:10.1016/j.ajhg.2017.06.011](https://doi.org/10.1016/j.ajhg.2017.06.011).
+> 
+> The publication is availible online: https://doi.org/10.1016/j.ajhg.2017.06.011.
+> My contributions to this publication is indicated in Table \@ref(tab:contribution). 
+> The source code of the complete analysis is available at GitHub:
+> [https://github.com/ibn-salem/position_effect](https://github.com/ibn-salem/position_effect). 
+> Supplementary information is shown in Appendix \@ref(sup-position-effect).
+>
+>
+>^\*^These authors contributed equally to this work  
+>^#^corresponding author
+> 
 
-Cinthya J. Zepeda-Mendoza^1,3,\*^, Jonas Ibn-Salem^4,\*^, Tammy
-Kammin^1^, David J. Harris^3,5^, Debra Rita^6^, Karen W. Gripp^7^,
-Jennifer J. MacKenzie^8^, Andrea Gropman^9^, Brett Graham^10^, Ranad
-Shaheen^11^, Fowzan S. Alkuraya^11,12^, Campbell K. Brasington^13^,
-Edward J. Spence^13^, Diane Masser-Frye^14^, Lynne M. Bird^14,15^, Erica
-Spiegel^16^, Rebecca L. Sparkes^17^, Zehra Ordulu^18^, Michael E.
-Talkowski^18-24^, Miguel A. Andrade-Navarro^4^, Peter N. Robinson^25^,
-Cynthia C. Morton^1-3,23,26†^
-
-Departments of ^1^Obstetrics, Gynecology and Reproductive Biology and
-^2^Pathology, Brigham and Women's Hospital, Boston, MA 02115, USA
-
-^3^Harvard Medical School, Boston, MA 02115, USA
-
-^4^Johannes Gutenberg University, Mainz 55122, Germany
-
-^5^Boston Children’s Hospital, Boston, MA 02115, USA
-
-^6^ACL laboratories. Cytogenetics Lab, Rosemont, IL 60018, USA
-
-^7^Nemours Alfred I. DuPont Hospital for Children; Wilmington, DE 19803,
-USA
-
-^8^Department of Pediatrics, McMaster University, Hamilton, ON L8S 4L8,
-Canada
-
-^9^Children's National Medical Center, Washington, DC 20010, USA
-
-^10^Department of Molecular and Human Genetics, Baylor College of
-Medicine, Houston, TX 77030, USA
-
-^11^Department of Genetics, King Faisal Specialist Hospital and Research
-Center, Riyadh 12713, Saudi Arabia
-
-^12^Department of Anatomy and Cell Biology, College of Medicine,
-Alfaisal University, Riyadh 11533, Saudi Arabia
-
-^13^Clinical Genetics Division, Department of Pediatrics. Levine
-Children’s Hospital at Carolinas Medical Center. Charlotte, NC 28203,
-USA
-
-^14^Genetics and Dysmorphology, Rady Children's Hospital San Diego, San
-Diego, CA 92123, USA
-
-^15^University of California, San Diego, La Jolla, CA 92093, USA
-
-^16^Maternal Fetal Medicine, Columbia University Medical Center, New
-York, NY 10032, USA
-
-^17^Department of Medical Genetics, Cumming School of Medicine,
-University of Calgary, Calgary, AB T2N 1N4, Canada
-
-Departments of ^18^Pathology, ^19^Neurology and ^20^Psychiatry and
-^21^Center for Genomic Medicine and, Massachusetts General Hospital,
-Boston, MA 02114, USA
-
-^22^Department of Neurology, Harvard Medical School, Boston, MA 02115,
-USA
-
-^23^Program in Medical and Population Genetics and ^24^Stanley Center
-for Psychiatric Genetics, Broad Institute of Harvard and MIT, Cambridge,
-MA 02142, USA
-
-^25^The Jackson Laboratory for Genomic Medicine, Farmington, CT 06032,
-USA
-
-^26^Division of Evolution and Genomic Science, School of Biological
-Sciences, Manchester Academic Health Science Centre, Manchester M13 9NT,
-UK
-
-\*These authors contributed equally to this work
-
-^†^Corresponding author: Cynthia C. Morton, Ph.D. Brigham and Women’s
-Hospital, New Research Building, Rm. 160D, 77 Avenue Louis Pasteur.
-Boston, MA 02115. Tel: 617-525-4535; Fax: 617-525-4533. Email:
-cmorton@partners.org
-
-**Abstract**
+### Abstract {-}
 
 Interpretation of variants of uncertain significance, especially
 chromosome rearrangements in non-coding regions of the human genome,
@@ -107,7 +52,7 @@ demonstrate the need to utilize chromatin conformation data for the
 prediction of position effects in the clinical interpretation of cases
 of non-coding chromosome rearrangements.
 
-**Introduction**
+## Introduction
 
 The importance of the integrity of chromosome structure and its
 association with human disease is one of the oldest and most studied
@@ -180,10 +125,9 @@ lines (LCLs). These results suggest that many VUS are likely to be
 further interpretable via long-range effects, and warrant their routine
 assessment and integration in clinical diagnosis.
 
-**Materials and Methods**
+## Materials and Methods
 
-**Selection of subjects with apparently balanced chromosome
-abnormalities**
+### Selection of subjects with apparently balanced chromosome abnormalities
 
 BCA breakpoints and clinical data were obtained from DGAP cases for
 which whole-genome sequencing was performed using a previously described
@@ -196,19 +140,54 @@ these elements have been shown to exert functional roles (reviewed in
 criteria, 12 of whom had available and reportedly normal clinical array
 results, suggesting lack of large duplications or deletions.
 
-**Clinical descriptions of DGAP cases**
+### Clinical descriptions of DGAP cases
 
 The clinical presentation of the 17 subjects varied, ranging from
 developmental delay to neurological conditions, offering the opportunity
 to assess long-range position effects in different phenotypes. Subjects'
 karyotypes are presented in the main text using the International System
-for Human Cytogenetic Nomenclature (ISCN2016) (Table 1). Detailed case
+for Human Cytogenetic Nomenclature (ISCN2016) (Table \@ref(tab:position-effect-subjects)). Detailed case
 descriptions are included in the Supplemental Note: Case Reports, as
 well as a nomenclature developed to describe chromosome rearrangements
 using next-generation sequencing.[@Ordulu2014] Reported ages of DGAP subjects are
 from time of enrollment. All reported genomic coordinates use GRCh37.
 
-**Analysis of genes bordering the rearrangement breakpoints**
+Table: (\#tab:position-effect-subjects)  **Description of the 17 analyzed DGAP cases with non-coding
+BCAs.** Corresponding clinical karyotypes are reported, with overlap of
+breakpoints with regulatory elements (E = enhancer, DHS = DNaseI
+hypersensitive sites, CTCF = CTCF binding sites), and TADs from H1-hESC,
+IMR90, and GM12878 (1= one breakpoint within TAD, 2=both BCA breakpoints
+are located within TAD). Top-ranking position effect genes are provided
+for the ±1 Mb windows surrounding the BCA breakpoints; each gene is
+highlighted with different evidence supporting its inclusion (a =
+ClinGen known recessive genes, b= ClinGen genes with emerging and
+sufficient evidence suggesting haploinsufficiency is associated with
+clinical phenotype, c = HI scores less than 10, d = within H1-ESC TAD, e
+= DHS enhancer-promoter disrupted interactions).
+
+  **Subject ID**   **Reported Karyotype**          **Disruption of Functional Elemen**   **Breakpoints within TADs (hESC / IMR90 / GM12878)**   **Top-ranking Candidates ±1 Mb **
+  ---------------- ------------------------------- ------------------------------------- ----------------------------------------------------   -----------------------------------
+  **DGAP017**      46,X,t(X;10)(p11.2;q24.3)       DHS                                   2 / 2 / 1                                              -
+  **DGAP111**      46,XY,t(16;20)(q11.2;q13.2)dn   CTCF                                  1 / 1 / 2                                              *ORC6^a^*
+  **DGAP113**      46,XY,t(1;3)(q32.1;q13.2)dn     -                                     2 / 2 / 2                                              *ASPM^a^*
+  **DGAP126**      46,XX,t(5;10)(p13.3;q21.1)dn    -                                     2 / 1 / 2                                               -
+  **DGAP138**      46,XY,t(1;6)(q23;q13)dn         -                                     2 / 2 / 2                                               *GRIK2^ac^*
+  **DGAP153**      46,X,t(X;17)(p11.23;p11.2)dn    -                                     1 / 1 / 1                                               -
+  **DGAP163**      46,XY,t(2;14)(p23;q13)dn        -                                     2 / 2 / 2                                               *SOS1^cde^, COCH^de^*
+  **DGAP176**      46,Y,inv(X)(q13q24)mat          DHS, CTCF                             2 / 1 / 2                                               *ACSL4^bd^, COL4A5^bcde^*
+  **DGAP249**      46,XX,t(2;11)(q33;q23)dn        E, DHS                                2 / 2 / 2                                               *SATB2^bcde^, SORL1^e^*
+  **DGAP252**      46,XY,t(3;18)(q13.2;q11.2)dn    -                                     2 / 2 / 2                                               *RBBP8^a^,GATA6^bcde^*
+  **DGAP275**      46,XX,t(7;12)(p13;q24.33)dn     DHS                                   1 / 1 / 2                                               *ANKLE2^e^, POLE^e^*
+  **DGAP287**      46,XY,t(10;14)(p13;q32.1)dn     CTCF                                  2 / 2 / 2                                               -
+  **DGAP288**      46,XX,t(6:17)(q13;q21)dn        DHS                                   2 / 2 / 2                                               *SOX9^bcd^*
+  **DGAP315**      46,XX,inv(6)(p24q11)dn          -                                     1 / 1 / 2                                               -
+  **DGAP319**      46,XX,t(4;13)(q31.3;q14.3)dn    -                                     2 / 1 / 2                                               -
+  **DGAP322**      46,XY,t(1;18)(q32.1;q22.1)      DHS                                   1 / 2 / 2                                               *IRF6^bcd^*
+  **DGAP329**      46,XX,t(2;14)(q21;q24.3)dn      -                                     1 / 2 / 2                                               *ZEB2^bcde^*
+
+
+
+###  Analysis of genes bordering the rearrangement breakpoints
 
 The presence of annotated genes or pseudogenes and lincRNAs was assessed
 in windows of ±3 and ±1 Mb neighboring each subject's translocation and
@@ -219,8 +198,7 @@ we used the Human Body Map lincRNAs catalog.[@Cabili2011] Haploinsufficiency (HI
 and triplosensitivity scores were assigned using Huang *et al*.,
 2010[@Huang2010] and version hg19 of ClinGen[@Rehm2015] data downloaded on 9/20/2016.
 
-**Assessment of disrupted functional elements and chromatin interactions
-bordering rearrangement breakpoints**
+### Assessment of disrupted functional elements and chromatin interactions bordering rearrangement breakpoints
 
 The disruption of regulatory elements such as enhancers, promoters,
 locus control regions, and insulators can lead to disease-related gene
@@ -255,7 +233,7 @@ disrupted chromatin interactions were calculated using custom Perl
 scripts, the BEDtools suite[@Quinlan2010] and the genomic association tester (GAT)
 tool.[@Heger2013]
 
-**Ontological analysis of genes neighboring breakpoints**
+### Ontological analysis of genes neighboring breakpoints
 
 Phenotype similarity between potential position effect genes and DGAP
 cases was calculated by converting the phenotypes of the 17 subjects to
@@ -276,7 +254,7 @@ location along the chromosome; each breakpoint is shifted by -9, -6, -3,
 +3, +6, and +9 Mb and the similarity of genes in proximity to the
 shifted breakpoints is computed.
 
-**Quantitative real-time PCR**
+### Quantitative real-time PCR
 
 LCLs derived from DGAP236-02m, DGAP244-02m and DGAP245-02m were used as
 karyotypically normal male controls. These are karyotypically normal
@@ -293,8 +271,7 @@ Hs00264887\_s1 (*POU3F4*), Hs00201978\_m1 (*MID2*), Hs00176828\_m1
 (*PAK3*), Hs00893134\_m1 (*SOS1*), and Hs00939627\_m1 (*GUSB*). Data
 were analyzed using the ΔCT method.
 
-**Assessment of DGAP breakpoints overlapping with non-coding structural
-variants in public databases**
+### Assessment of DGAP breakpoints overlapping with non-coding structural variants in public databases
 
 To find similar non-coding structural rearrangement subjects and compare
 their annotated clinical phenotypes to those observed in DGAP cases, we
@@ -305,9 +282,9 @@ dbVar database from the National Center for Biotechnology Information
 community-supported repositories of clinical cases with novel and
 extremely rare genomic variants.
 
-**Results**
+## Results
 
-**Genomic characterization of non-coding breakpoints**
+### Genomic characterization of non-coding breakpoints
 
 To study the structural and evolutionary context of BCAs and their
 impact on nuclear architecture and gene expression, we used data
@@ -329,16 +306,16 @@ Further analysis revealed that BCA breakpoints were significantly
 depleted for overlapping annotated promoters or transcription factor
 (TF) binding sites (GAT TF p=0.0003, promoter p=0.0001, Table S2,3).
 Only one breakpoint (DGAP249\_B) overlapped a ChromHMM enhancer in
-GM12878 cells (Table 1); the others had no overlap with annotated or
+GM12878 cells (Table \@ref(tab:position-effect-subjects)); the others had no overlap with annotated or
 predicted enhancers in the analyzed datasets, and this depletion was
 significant for VISTA (GAT p=0.0364) and Hi-ESC (GAT p=0.0036) but not
 for the annotated tissue and primary cell enhancers from Andersson *et
 al*., 2014[@Andersson2014] (Table S4). Eight breakpoints overlapped cell-type
-specific DHS sites (Table 1 and Table S5); these corresponded to DGAP
+specific DHS sites (Table \@ref(tab:position-effect-subjects) and Table S5); these corresponded to DGAP
 cases 017, 176, 249, 275, 288 and 322; of these, DGAP176 and DGAP275
 overlapped DHS sites at both BCA breakpoint sites. In addition, three
 DGAP cases overlapped CTCF binding sites in H1-hESC (DGAP cases 111,
-176, and 287) and none in GM12878 cells (Table 1 and Table S6). Except
+176, and 287) and none in GM12878 cells (Table \@ref(tab:position-effect-subjects) and Table S6). Except
 for two cases in H1-hESC (DGAP17 and DGAP176), and four cases in GM12878
 (DGAP 017, 126, 163 and 176), all rearrangements fall within ChromHMM
 repressed chromatin regions, but this association was not significant
@@ -350,7 +327,7 @@ generation.[@Gu2008; @Cardoso2016]
 
 Noticeably, either one or two breakpoints from all the non-coding DGAP
 BCAs fall within previously reported TADs in H1-hESC and IMR90 cell
-lines (Table 1 and Table S9).[@Dixon2012] However, this overlap was not
+lines (Table \@ref(tab:position-effect-subjects) and Table S9).[@Dixon2012] However, this overlap was not
 significant for both cell lines (GAT H1-ESC p=0.0537 and IMR90 p=0.28).
 We found that the breakpoints disrupt dozens, hundreds, or even
 thousands of chromatin contacts when assessed at the 20 and 40 Kb
@@ -363,7 +340,7 @@ Table S11). With the availability of higher resolution data, it is
 possible to detect whether BCA breakpoints disrupt smaller chromatin
 domains and loops not detected in previous studies. When analyzing high
 resolution IMR90 and GM12878 Hi-C data,[@Rao2014] we discovered that 32 out of
-34 breakpoints are contained within GM12878 sub-compartments (Table 1
+34 breakpoints are contained within GM12878 sub-compartments (Table \@ref(tab:position-effect-subjects)
 and Table S10); interestingly, 28 of these are classified as members of
 the B compartment, which is less gene dense and less expressed compared
 to the A compartment. On the other hand, 18 and 24 breakpoints are
@@ -379,7 +356,7 @@ outcomes, while the predicted extensive disruption of chromatin contacts
 and the alteration of TAD boundaries by the BCAs may affect long-range
 regulatory interactions of neighboring genes (see Discussion).
 
-**Identification of genes with potential position effects**
+### Identification of genes with potential position effects
 
 To identify genes which could be generating the complex DGAP phenotypes
 via position effects from chromosome rearrangements, we analyzed all
@@ -450,7 +427,7 @@ their inclusion.
 
 Applying this ranking strategy to the 17 non-coding BCAs, we predict 16
 top-ranking candidates for 11 DGAP cases and 102 second-tier candidates
-for the 17 analyzed DGAP cases within ±1 Mb analysis windows (Table 1
+for the 17 analyzed DGAP cases within ±1 Mb analysis windows (Table \@ref(tab:position-effect-subjects)
 and Table S15). This is a significant reduction compared to the initial
 645 possible candidates (\~3.8% of the neighboring genes in the ±3 Mb
 windows considering top and second-tier candidates, and only 0.05%
@@ -497,8 +474,7 @@ This points to the importance of the availability of tissues and cell
 lines relevant to the studied phenotypes, or the capacity to generate
 animal models that reproduce the observed BCAs for further analysis.
 
-**Identification of subjects with shared non-coding chromosome
-alterations and phenotypes**
+### Identification of subjects with shared non-coding chromosome alterations and phenotypes
 
 The identification of subjects with shared non-coding chromosome
 alterations and phenotypes as described herein would further support our
@@ -564,7 +540,7 @@ importance of establishing detailed, specific, and unbiased guidelines
 for assigning phenotypes when performing computational phenotype
 comparisons.
 
-**Discussion**
+## Discussion
 
 Structural variation of the human genome, either inherited or arising by
 *de novo* germline or somatic mutations, can give rise to different
@@ -605,7 +581,7 @@ haploinsufficiency and triplosensitivity information for all genes
 surrounding the BCA breakpoints at different window sizes (±3 and ±1 Mb
 as well as BCA-containing TAD positions), we discovered 16 genes for 11
 DGAP cases that are top-ranking position effect candidates for the
-subjects’ clinical phenotypes (Table 1).
+subjects’ clinical phenotypes (Table \@ref(tab:position-effect-subjects)).
 
 We observed that eight of the sequenced DGAP BCA breakpoints,
 corresponding to six DGAP cases (DGAP017, 176, 249, 275, 288 and 322),
@@ -734,7 +710,8 @@ hope to study additional cases with complete phenotypic information and
 be able to refine better the rules for the prediction of position
 effects on gene expression and discover new mechanisms of pathogenicity.
 
-**Acknowledgements**
+
+### Acknowledgements {-}
 
 We offer heartfelt gratitude to all DGAP research participants and their
 families, and to countless genetic counselors, clinical geneticists,
@@ -743,42 +720,7 @@ and for referrals to our project. This study was funded by the National
 Institutes of Health (GM061354 to CCM and MET). The authors declare no
 conflicts of interest.
 
-**Tables**
-
-**Table 1.** **Description of the 17 analyzed DGAP cases with non-coding
-BCAs.** Corresponding clinical karyotypes are reported, with overlap of
-breakpoints with regulatory elements (E = enhancer, DHS = DNaseI
-hypersensitive sites, CTCF = CTCF binding sites), and TADs from H1-hESC,
-IMR90, and GM12878 (1= one breakpoint within TAD, 2=both BCA breakpoints
-are located within TAD). Top-ranking position effect genes are provided
-for the ±1 Mb windows surrounding the BCA breakpoints; each gene is
-highlighted with different evidence supporting its inclusion (a =
-ClinGen known recessive genes, b= ClinGen genes with emerging and
-sufficient evidence suggesting haploinsufficiency is associated with
-clinical phenotype, c = HI scores less than 10, d = within H1-ESC TAD, e
-= DHS enhancer-promoter disrupted interactions).
-
-  **Subject ID**   **Reported Karyotype**          **Disruption of Functional Elemen**   **Breakpoints within TADs (hESC)**   **Breakpoints within TADs (IMR90)**   **Breakpoints within TADs (GM12878)**   **Top-ranking Candidates ±1 Mb **
-  ---------------- ------------------------------- ------------------------------------- ------------------------------------ ------------------------------------- --------------------------------------- -----------------------------------
-  **DGAP017**      46,X,t(X;10)(p11.2;q24.3)       DHS                                   2                                    2                                     1                                       -
-  **DGAP111**      46,XY,t(16;20)(q11.2;q13.2)dn   CTCF                                  1                                    1                                     2                                       *ORC6^a^*
-  **DGAP113**      46,XY,t(1;3)(q32.1;q13.2)dn     -                                     2                                    2                                     2                                       *ASPM^a^*
-  **DGAP126**      46,XX,t(5;10)(p13.3;q21.1)dn    -                                     2                                    1                                     2                                       -
-  **DGAP138**      46,XY,t(1;6)(q23;q13)dn         -                                     2                                    2                                     2                                       *GRIK2^ac^*
-  **DGAP153**      46,X,t(X;17)(p11.23;p11.2)dn    -                                     1                                    1                                     1                                       -
-  **DGAP163**      46,XY,t(2;14)(p23;q13)dn        -                                     2                                    2                                     2                                       *SOS1^cde^, COCH^de^*
-  **DGAP176**      46,Y,inv(X)(q13q24)mat          DHS, CTCF                             2                                    1                                     2                                       *ACSL4^bd^, COL4A5^bcde^*
-  **DGAP249**      46,XX,t(2;11)(q33;q23)dn        E, DHS                                2                                    2                                     2                                       *SATB2^bcde^, SORL1^e^*
-  **DGAP252**      46,XY,t(3;18)(q13.2;q11.2)dn    -                                     2                                    2                                     2                                       *RBBP8^a^,GATA6^bcde^*
-  **DGAP275**      46,XX,t(7;12)(p13;q24.33)dn     DHS                                   1                                    1                                     2                                       *ANKLE2^e^, POLE^e^*
-  **DGAP287**      46,XY,t(10;14)(p13;q32.1)dn     CTCF                                  2                                    2                                     2                                       -
-  **DGAP288**      46,XX,t(6:17)(q13;q21)dn        DHS                                   2                                    2                                     2                                       *SOX9^bcd^*
-  **DGAP315**      46,XX,inv(6)(p24q11)dn          -                                     1                                    1                                     2                                       -
-  **DGAP319**      46,XX,t(4;13)(q31.3;q14.3)dn    -                                     2                                    1                                     2                                       -
-  **DGAP322**      46,XY,t(1;18)(q32.1;q22.1)      DHS                                   1                                    2                                     2                                       *IRF6^bcd^*
-  **DGAP329**      46,XX,t(2;14)(q21;q24.3)dn      -                                     1                                    2                                     2                                       *ZEB2^bcde^*
-
-**Figures**
+## Figures
 
 **Figure 1.** Chromosome locations of the 17 analyzed DGAP cases with
 non-coding BCAs. Breakpoint positions are marked with a blue line and
@@ -801,7 +743,7 @@ ENCODE. The dashed line indicates the translocation breakpoint position
 in chromosome 2. Lilac colored rectangles represent genes, and pink
 rectangles show TAD positions annotated in H1-hESC.
 
-**Web Resources**
+### Web Resources
 
 The scripts used in this study to predict position effects can be
 downloaded from:
