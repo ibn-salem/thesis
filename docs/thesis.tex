@@ -160,7 +160,7 @@
 
 \title{Genome folding in evolution and disease}
 \author{Jonas Ibn-Salem}
-\date{2018-01-26}
+\date{2018-01-28}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -222,49 +222,48 @@
 \chapter*{Abstract}\label{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-The DNA of the human genome has a total length of 2 meters but is folded
-to fit in each cell's nucleus with a size of around 10 nm. Chromosome
-conformation capture experiments coupled with high-throughput sequencing
-(Hi-C) allow to measure DNA-DNA contacts genome-wide and reviled a
-highly organized hierarchy of three-dimensional genome organization.
-Chromosomes fold locally into domains of several kb termed topologically
-associating domains (TADs) which restrict the interactions of gene
-regulatory regions, such as enhancers, and target genes.
+The DNA of the human genome has a total length of 2 meters and fits into
+a 10 nm nucleus. Hi-C experiments probe the three-dimensional genome
+architecture by genome-wide DNA-DNA contact maps. In these maps,
+interphase chromosomes fold locally into regions of several hundred kb,
+called topologically associating domains (TADs). TADs can restrict the
+interactions of genes with distal regulatory sequences, such as
+enhancers, and might, therefore, represent important functional units of
+genomes.
 
-In this theses, diverse genomic datasets are computationally integrated
-with genome-wide chromatin interaction maps to analyze the function of
-TADs for gene regulation during evolution and in disease genomes.
+In this thesis, I integrate genome-wide chromatin interaction maps with
+diverse genomic datasets to analyze the function of TADs for gene
+regulation during evolution and in disease genomes. More specifically, I
+show that duplicated gene pairs are enriched for colocalization in the
+same TAD, share more often common enhancer elements than expected and
+have increased contact frequencies over large genomic distances. The
+clustering of functionally related genes within TADs enables concerted
+gene expression and indicates evolutionary constraints in functional
+genome organization. Indeed, by analyzing evolutionary rearrangements
+between human and diverse mammal species, I show that TADs are highly
+conserved building blocks of genomes across millions of years of
+evolution. While TADs seems to conserve gene expression profiles between
+mouse and human, genes in rearranged TADs show divergent expression.
+Next, I analyze disruption of TADs in whole-genome sequenced subjects
+with diverse neurodevelopmental phenotypes. While the phenotypes cannot
+be explained by variants in protein-coding sequences, balanced
+chromosomal rearrangements disrupt TADs and promoter-enhancer
+interactions of phenotypically matching genes. This effect mechanism
+leads to altered gene expression in patient-derived cell lines. Finally,
+I present a computational tool, 7C, to predict long-range chromatin
+interactions by largely available ChIP-seq data. This enables the
+analysis of three-dimensional genome folding in many diverse tissues and
+conditions.
 
-More specifically, I show that duplicated gene pairs are enriched for
-colocalization in the same TAD, share more often common enhancer
-elements than expected and have increased contact frequencies over large
-genomic distances. The clustering in the three-dimensional genome
-architecture enables concerted expression over diverse cell-types and
-indicate evolutionary constraints in functional genome organization.
-Indeed, by analyzing evolutionary rearrangements between human and
-diverse mammal species, I show that TADs are highly conserved building
-blocks of genomes across millions of years of evolution and that
-rearrangements of TADs is associated to changes in gene expression.
+Together, these results show that TAD disruption is associated with
+altered gene regulation during evolution and in diseases. TADs are not
+only structural units of genomes but also important functional building
+blocks and represent regulatory environments for genes.~ Therefore, it
+will be increasingly important to take the three-dimensional genome
+structure into account, not only in genomic research but also in
+clinical practice.
 
-Furthermore, we asked whether disruption of TADs can also lead to
-genetic disease. By analyzing balanced chromosomal rearrangements in
-whole-genome sequenced patients with diverse genetic syndromes, we can
-associate the effect mechanism of rearrangements to disruption of TAD
-that leads to altered gene expression of phenotypically relevant genes.
-
-Finally, I present a computational tool, 7C, to predict long-range
-chromatin interactions by largely available ChIP-seq data. This enables
-the analysis of genome folding in many diverse tissues and conditions.
-
-Together, these results show that TADs are important structural and
-functional units of genomes and TAD disruption is associated altered
-gene regulation during evolution and in disease. Therefore, it will be
-increasingly important to take the three-dimensional folding structure
-of genomes into account to interpret genomic variations in genetic
-disease and cancer genomes to ultimately improve genetic diagnoses in
-clinical practice and treatment development.
-
-\chapter{Introduction}\label{introduction}
+\chapter{Introduction}\label{thesis-intro}
 
 \section{Structure of the
 Intorduction}\label{structure-of-the-intorduction}
@@ -817,27 +816,26 @@ focus on duplicated genes in the human genome. Because of their related
 sequence and function, shared evolutionary history, and close
 colocalization in the genome they represent an interesting model to
 study how genome folding is related to regulation of gene expression
-during evolution (Chapter
-\protect\hyperlink{ch:paralog_regulaion}{Paralog genes}). We analyze
+during evolution (Chapter \ref{paralog-regulation}). We analyze
 whole-genome alignement between human and other vertebrate genomes to
 systematically investigate whether TADs represent conserved building
 blocks of genomes and whether rearrangements of TADs lead to altered
-gene expression programs (Chapter
-\protect\hyperlink{ch:TAD_evolution}{TAD evolution}). Next, we will
+gene expression programs (Chapter \ref{TAD-evolution}). Next, we will
 address disruption of chromatin organization by analyzing disease
 associated rearrangement breakpoints from whole-genome sequenced
 patients of various genetic diseases to explain miss-regulation by
 disruption of TADs and chromatin contacts in diseases (Chapter
-\protect\hyperlink{ch:position_effect}{Position effect}). Finally, we
-will make use of recent insights in chromatin loop formation to provide
-a computational tool to predict chromatin loops from largely available
-genomic data, with the aim to facilitate the association of TF binding
-sites in enhancers to regulated genes in many cell types and condition,
-for which Hi-C like data is not available (Chapter
-\protect\hyperlink{ch:loop_prediction}{Loop prediction}).
+\ref{position-effect}). Finally, we will make use of recent insights in
+chromatin loop formation to provide a computational tool to predict
+chromatin loops from largely available genomic data, with the aim to
+facilitate the association of TF binding sites in enhancers to regulated
+genes in many cell types and condition, for which Hi-C like data is not
+available (Chapter \ref{loop-prediction}). The overall findings are then
+discussed together with further research perspectives (Chapter
+\ref{thesis-discussion}).
 
-\hypertarget{ch:paralog_regulaion}{\chapter{Paralog genes in the 3D
-genome architecture}\label{ch:paralog_regulaion}}
+\chapter{Paralog genes in the 3D genome
+architecture}\label{paralog-regulation}
 
 This chapter is published in Nucleac Acid Research
 \citep{Ibn-Salem2017}. The surce code for the complete analysis is
@@ -1774,24 +1772,24 @@ gene.
 The authors thank all members of the CBDM group for fruitful
 discussions.
 
-\hypertarget{ch:TAD_evolution}{\chapter{Stability of TADs in
-evolution}\label{ch:TAD_evolution}}
+\chapter{Stability of TADs in evolution}\label{TAD-evolution}
 
-Evolutionary stability of topologically associating domains is
-associated with conserved gene regulation
+This chapter is published as preprint on bioRxiv and currently under
+Review at BMC Biology:
 
+\textbf{Evolutionary stability of topologically associating domains is
+associated with conserved gene regulation}\\
 Jan Krefting\textsuperscript{1,2}, Miguel A.
-Andrade-Navarro\textsuperscript{1,2} and Jonas
-Ibn-Salem\textsuperscript{1,2,\#}
+Andrade-Navarro\textsuperscript{1,2} and \emph{Jonas
+Ibn-Salem}\textsuperscript{1,2,\#}
 
 \textsuperscript{1}Faculty of Biology, Johannes Gutenberg University of
-Mainz, 55128 Mainz, Germany
+Mainz, 55128 Mainz, Germany \textsuperscript{2}Institute of Molecular
+Biology, 55128 Mainz, Germany \# corresponding author
 
-\textsuperscript{2}Institute of Molecular Biology, 55128 Mainz, Germany
+Availible online: \url{https://doi.org/10.1101/231431}
 
-\# corresponding author
-
-\url{https://doi.org/10.1101/231431}
+For contributions to this chapter see Table \ref{tab:Contribution}.
 
 \subsection*{Abstract}\label{abstract-2}
 \addcontentsline{toc}{subsection}{Abstract}
@@ -2379,27 +2377,57 @@ explain evolutionary leaps.
 alignments}\label{rearrangement-breakpoints-from-whole-genome-alignments}
 
 Rearrangement breakpoints were identified between human and 12 selected
-vertebrate species from whole-genome-alignment data (Table 1). Alignment
-data were downloaded as net files from UCSC Genome Browser for human
-genome hg38 and the genomes listed in Table 1. The whole-genome data
-consists of consecutive alignment blocks that are chained and
-hierarchically ordered in the so-called nets \citep{Kent2003}. Chains
-represent blocks of interrupted syntenic regions and may include larger
-gaps. When hierarchically arranged in a net file, child chains can
-complement their parents when they align nearby segments that fill the
-alignment gaps of their parents but may also break the synteny when
-incorporating distal segments. We implemented a computer program to
-extract rearrangement breakpoints from net files based on the length and
-type of fills. Start and end points of top-level or non-syntenic fills
-are reported as rearrangement breakpoint if the fill exceeds a given
-size threshold. We used different size thresholds to optimize both the
-number of identified breakpoints and to avoid biases of transposable
-elements that might be responsible for many small interruptions of
-alignment chains. In this way, we extracted rearrangement breakpoints
-between human and 12 genomes using size thresholds of 10 kb, 100 kb, and
-1000 kb. To compare breakpoints to TADs we converted the breakpoint
-coordinates from hg38 to hg19 genome assembly using the liftOver tool
-from UCSC Genome Browser \citep{Hinrichs2006}.
+vertebrate species from whole-genome-alignment data (Table
+\ref{tab:TadEvoSpecies}). Alignment data were downloaded as net files
+from UCSC Genome Browser for human genome hg38 and the genomes listed in
+Table \ref{tab:TadEvoSpecies}. The whole-genome data consists of
+consecutive alignment blocks that are chained and hierarchically ordered
+in the so-called nets \citep{Kent2003}. Chains represent blocks of
+interrupted syntenic regions and may include larger gaps. When
+hierarchically arranged in a net file, child chains can complement their
+parents when they align nearby segments that fill the alignment gaps of
+their parents but may also break the synteny when incorporating distal
+segments. We implemented a computer program to extract rearrangement
+breakpoints from net files based on the length and type of fills. Start
+and end points of top-level or non-syntenic fills are reported as
+rearrangement breakpoint if the fill exceeds a given size threshold. We
+used different size thresholds to optimize both the number of identified
+breakpoints and to avoid biases of transposable elements that might be
+responsible for many small interruptions of alignment chains. In this
+way, we extracted rearrangement breakpoints between human and 12 genomes
+using size thresholds of 10 kb, 100 kb, and 1000 kb. To compare
+breakpoints to TADs we converted the breakpoint coordinates from hg38 to
+hg19 genome assembly using the liftOver tool from UCSC Genome Browser
+\citep{Hinrichs2006}.
+
+\begin{longtable}[]{@{}llll@{}}
+\caption{\label{tab:TadEvoSpecies} Species used for breakpoint
+identification from whole-genome alignments with human. }\tabularnewline
+\toprule
+Common name & Species & Genome Assembly & Divergence to human
+(mya)\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Common name & Species & Genome Assembly & Divergence to human
+(mya)\tabularnewline
+\midrule
+\endhead
+Chimpanzee & \emph{Pan troglodytes} & panTro5 & 6.65\tabularnewline
+Gorilla & \emph{Gorilla gorilla gorilla} & gorGor5 & 9.06\tabularnewline
+Orangutan & \emph{Pongo abelii} & ponAbe2 & 15.76\tabularnewline
+Rhesus & \emph{Macaca mulatta} & rheMac8 & 29.44\tabularnewline
+Mouse lemur & \emph{Microcebus murinus} & micMur2 & 74\tabularnewline
+Mouse & \emph{Mus musculus} & mm10 & 90\tabularnewline
+Cattle & \emph{Bos taurus} & bosTau8 & 96\tabularnewline
+Manatee & \emph{Trichechus manatus latirostris} & triMan1 &
+105\tabularnewline
+Opossum & \emph{Monodelphis domestica} & monDom5 & 159\tabularnewline
+Chicken & \emph{Gallus gallus} & galGal5 & 312\tabularnewline
+Clawed frog & \emph{Xenopus tropicalis} & xenTro7 & 352\tabularnewline
+Zebrafish & \emph{Danio rerio} & danRer10 & 435\tabularnewline
+\bottomrule
+\end{longtable}
 
 \subsection{Topologically associating domains and contact
 domains}\label{topologically-associating-domains-and-contact-domains}
@@ -2524,8 +2552,8 @@ The source code of all analysis is available on GitHub:
 \href{https://github.com/Juppen/TAD-Evolution}{\emph{https://github.com/Juppen/TAD-Evolution}}.
 All the genomic data used for analyses are freely available to be
 downloaded from the UCSC Genome Browser and EBI Expression Atlas with
-identifiers listed in Table 1 and \protect\hyperlink{TadEvoSupTab}{Table
-S1}.
+identifiers listed in Table \ref{tab:TadEvoSpecies} and
+\protect\hyperlink{TadEvoSupTab}{Table S1}.
 
 \subsection{Competing interests}\label{competing-interests}
 
@@ -2546,37 +2574,8 @@ manuscript. JK, MA and JI wrote the manuscript. MA supervised the study.
 The authors thank all members of the CBDM group for fruitful
 discussions.
 
-\section{Tables}\label{tables}
-
-\subsection{Table 1}\label{table-1}
-
-\begin{verbatim}
-    Species used for breakpoint identification from whole-genome
-    alignments with human.
-\end{verbatim}
-
-\begin{longtable}[]{@{}llll@{}}
-\toprule
-Common name & Species & Genome Assembly & Divergence to human
-(mya)\tabularnewline
-Chimpanzee & \emph{Pan troglodytes} & panTro5 & 6.65\tabularnewline
-Gorilla & \emph{Gorilla gorilla gorilla} & gorGor5 & 9.06\tabularnewline
-Orangutan & \emph{Pongo abelii} & ponAbe2 & 15.76\tabularnewline
-Rhesus & \emph{Macaca mulatta} & rheMac8 & 29.44\tabularnewline
-Mouse lemur & \emph{Microcebus murinus} & micMur2 & 74\tabularnewline
-Mouse & \emph{Mus musculus} & mm10 & 90\tabularnewline
-Cattle & \emph{Bos taurus} & bosTau8 & 96\tabularnewline
-Manatee & \emph{Trichechus manatus latirostris} & triMan1 &
-105\tabularnewline
-Opossum & \emph{Monodelphis domestica} & monDom5 & 159\tabularnewline
-Chicken & \emph{Gallus gallus} & galGal5 & 312\tabularnewline
-Clawed frog & \emph{Xenopus tropicalis} & xenTro7 & 352\tabularnewline
-Zebrafish & \emph{Danio rerio} & danRer10 & 435\tabularnewline
-\bottomrule
-\end{longtable}
-
-\hypertarget{ch:position_effect}{\chapter{Position effects of
-rearrangements in disease genomes}\label{ch:position_effect}}
+\chapter{Position effects of rearrangements in disease
+genomes}\label{position-effect}
 
 \textbf{Computational Prediction of Position Effects of Apparently
 Balanced Human Chromosome Rearrangements}
@@ -3495,12 +3494,12 @@ WashU EpiGenome Browser,
 GTEx portal,
 \href{https://www.gtexportal.org/home}{\emph{https://www.gtexportal.org/home}}
 
-\hypertarget{ch:loop_prediction}{\chapter{Prediction of chromatin
-looping interactions}\label{ch:loop_prediction}}
+\chapter{Prediction of chromatin looping
+interactions}\label{loop-prediction}
 
 This chapter has to be added.
 
-\chapter{Discussion}\label{discussion-2}
+\chapter{Discussion}\label{thesis-discussion}
 
 \begin{itemize}
 \item
@@ -3536,6 +3535,18 @@ This chapter has to be added.
     functional building blocks of genomes.
   \end{itemize}
 \end{itemize}
+
+\section{Discussion on TAD evolution}\label{discussion-on-tad-evolution}
+
+Follow up studes might experimentally support the functional importance
+of evolutionary conserved TADs. A very recent study investigated the
+requirenment of ultra-conserved non-coding region containing enhancers
+by knock-out experiments in mice \citep{Dickel2018}. Knowck-out mice
+that lack individual or combination of enhancers were viable but showed
+strong neurological phenotypes. Indicating that the remarkably strong
+sequence conservation likely results from fitness deficit that appear
+subtle in a laboratory setting \citep{Dickel2018}. This could be similar
+for targeted deletions of conserved TAD boundaries.
 
 In this thesis, I analysed the functions of TADs for gene regulation and
 highlight their stability in evolution as well as their consideration
@@ -4089,7 +4100,38 @@ domain boundary. P-values according to Wilcoxon's rank-sum test.}\label{fig:TadE
 
 
 
-\bibliography{bib/book.bib,bib/packages.bib,bib/PhD.bib}
+\section{Contribution to individual
+publications}\label{contribution-to-individual-publications}
+
+\begin{table}
+
+\caption{\label{tab:Contribution}Contribution to individual publications. Contributions in percent from all authors for each contribution role and publication. Author contribution definitions according to the CRediT Taxonomy (http://journals.plos.org/plosone/s/authorship).}
+\centering
+\begin{tabular}[t]{llrrrr}
+\toprule
+Contributor Role & Role Definition & Paralog regulation (Chapter \textbackslash{}@ref(paralog-regulation)) & TAD evolution (Chapter \textbackslash{}@ref(TAD-evolution)) & Position effect (Chapter \textbackslash{}@ref(position-effect)) & Loop prediction (Chapter \textbackslash{}@ref(loop-prediction))\\
+\midrule
+Conceptualization & Ideas; formulation or evolution of overarching research goals and aims. & 80 & 90 & 20 & 90\\
+Data Curation & Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later reuse. & 100 & 80 & 50 & 100\\
+Formal Analysis & Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data. & 100 & 50 & 40 & 100\\
+Funding Acquisition & Acquisition of the financial support for the project leading to this publication. & 0 & 0 & 0 & 0\\
+Investigation & Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection. & 100 & 80 & 20 & 100\\
+\addlinespace
+Methodology & Development or design of methodology; creation of models & 90 & 80 & 30 & 100\\
+Project Administration & Management and coordination responsibility for the research activity planning and execution. & 50 & 80 & 0 & 80\\
+Resources & Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools. & 0 & 20 & 0 & 0\\
+Software & Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components. & 100 & 50 & 50 & 100\\
+Supervision & Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team. & 0 & 80 & 0 & 0\\
+\addlinespace
+Validation & Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs. & 100 & 80 & 20 & 100\\
+Visualization & Preparation, creation and/or presentation of the published work, specifically visualization/data presentation. & 100 & 50 & 0 & 100\\
+Writing – Original Draft Preparation & Creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation). & 100 & 60 & 20 & 100\\
+Writing – Review \& Editing & Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages. & 50 & 80 & 20 & 50\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\bibliography{bib/PhD.bib}
 
 
 
