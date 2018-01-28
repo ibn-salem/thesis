@@ -181,3 +181,18 @@ TAD boundary and the right panel distances to closest GM12878 contact
 domain boundary. P-values according to Wilcoxon’s rank-sum test.
 <!-- ======================================================= -->
 
+
+
+## Contribution to individual publications
+
+```{r Contribution, message=FALSE, echo=FALSE}
+require(readr)
+# read table from attached file
+contrib <- read_tsv("data/contributions.tsv", col_types = "cciiii")
+# build table output
+knitr::kable(
+  contrib, booktabs = TRUE,
+  caption = 'Contribution to individual publications. Contributions in percent from all authors for each contribution role and publication. Author contribution definitions according to the CRediT Taxonomy (http://journals.plos.org/plosone/s/authorship).'
+)
+```
+
