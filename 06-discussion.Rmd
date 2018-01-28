@@ -18,6 +18,15 @@
 and lead to exciting findings of higher order organisation. 
     - TADs are not only structural units of chromosomes, but also functional building blocks of genomes.
 
+## Discussion on TAD evolution
+Follow up studes might experimentally support the functional importance of evolutionary conserved TADs.
+A very recent study investigated the requirenment of ultra-conserved non-coding region containing enhancers by 
+knock-out experiments in mice [@Dickel2018].
+Knowck-out mice that lack individual or combination of enhancers were viable but showed strong neurological phenotypes.
+Indicating that the remarkably strong sequence conservation likely results from fitness deficit that appear subtle in a laboratory setting [@Dickel2018].
+This could be similar for targeted deletions of conserved TAD boundaries.
+
+
 <!-- Summary of whole wokr -->
 In this thesis, I analysed the functions of TADs for gene regulation and 
 highlight their stability in evolution as well as their consideration when 
