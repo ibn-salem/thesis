@@ -515,9 +515,9 @@ explain evolutionary leaps.
 ### Rearrangement breakpoints from whole-genome alignments
 
 Rearrangement breakpoints were identified between human and 12 selected
-vertebrate species from whole-genome-alignment data (Table 1). Alignment
+vertebrate species from whole-genome-alignment data (Table \@ref(tab:TadEvoSpecies)). Alignment
 data were downloaded as net files from UCSC Genome Browser for human
-genome hg38 and the genomes listed in Table 1. The whole-genome data
+genome hg38 and the genomes listed in Table \@ref(tab:TadEvoSpecies). The whole-genome data
 consists of consecutive alignment blocks that are chained and
 hierarchically ordered in the so-called nets [@Kent2003]. Chains represent
 blocks of interrupted syntenic regions and may include larger gaps. When
@@ -536,6 +536,26 @@ using size thresholds of 10 kb, 100 kb, and 1000 kb. To compare
 breakpoints to TADs we converted the breakpoint coordinates from hg38 to
 hg19 genome assembly using the liftOver tool from UCSC Genome Browser
 [@Hinrichs2006].
+
+<!-- ======================================================================= -->
+Common name   Species                            Genome Assembly   Divergence to human (mya)
+------------- ---------------------------------- ----------------- ---------------------------
+Chimpanzee    *Pan troglodytes*                  panTro5           6.65
+Gorilla       *Gorilla gorilla gorilla*          gorGor5           9.06
+Orangutan     *Pongo abelii*                     ponAbe2           15.76
+Rhesus        *Macaca mulatta*                   rheMac8           29.44
+Mouse lemur   *Microcebus murinus*               micMur2           74
+Mouse         *Mus musculus*                     mm10              90
+Cattle        *Bos taurus*                       bosTau8           96
+Manatee       *Trichechus manatus latirostris*   triMan1           105
+Opossum       *Monodelphis domestica*            monDom5           159
+Chicken       *Gallus gallus*                    galGal5           312
+Clawed frog   *Xenopus tropicalis*               xenTro7           352
+Zebrafish     *Danio rerio*                      danRer10          435
+
+Table: (\#tab:TadEvoSpecies) Species used for breakpoint identification from whole-genome alignments with human.
+<!-- ======================================================================= -->
+
 
 ### Topologically associating domains and contact domains
 
@@ -649,7 +669,7 @@ The source code of all analysis is available on GitHub:
 [*https://github.com/Juppen/TAD-Evolution*](https://github.com/Juppen/TAD-Evolution).
 All the genomic data used for analyses are freely available to be
 downloaded from the UCSC Genome Browser and EBI Expression Atlas with
-identifiers listed in Table 1 and [Table S1](#TadEvoSupTab).
+identifiers listed in Table \@ref(tab:TadEvoSpecies) and [Table S1](#TadEvoSupTab).
 
 ### Competing interests
 
@@ -669,28 +689,4 @@ manuscript. JK, MA and JI wrote the manuscript. MA supervised the study.
 
 The authors thank all members of the CBDM group for fruitful
 discussions.
-
-## Tables
-
-###  Table 1
-
-        Species used for breakpoint identification from whole-genome
-        alignments with human.
-
-  ------------- ---------------------------------- ----------------- ---------------------------
-  Common name   Species                            Genome Assembly   Divergence to human (mya)
-  Chimpanzee    *Pan troglodytes*                  panTro5           6.65
-  Gorilla       *Gorilla gorilla gorilla*          gorGor5           9.06
-  Orangutan     *Pongo abelii*                     ponAbe2           15.76
-  Rhesus        *Macaca mulatta*                   rheMac8           29.44
-  Mouse lemur   *Microcebus murinus*               micMur2           74
-  Mouse         *Mus musculus*                     mm10              90
-  Cattle        *Bos taurus*                       bosTau8           96
-  Manatee       *Trichechus manatus latirostris*   triMan1           105
-  Opossum       *Monodelphis domestica*            monDom5           159
-  Chicken       *Gallus gallus*                    galGal5           312
-  Clawed frog   *Xenopus tropicalis*               xenTro7           352
-  Zebrafish     *Danio rerio*                      danRer10          435
-  ------------- ---------------------------------- ----------------- ---------------------------
-
 
