@@ -66,8 +66,11 @@ pandoc -s text_sources/position_effect/PredictionPosEffecNonCodRearr_AJHG_CZetal
 cat text_sources/position_effect/position_effect.main.md \
  | sed -r  's:\\\[:\[:g' \
  | sed -r  's:\\\]:\]:g' \
+ | sed  's:\^1-8\^:\^1-4\^:g' \
+ | sed  's:\^1-14\^:\^5-14\^:g' \
  > text_sources/position_effect/position_effect.main.formated.md
 
+# replace citations with markdown citations
 python python/convert_bib.py \
   -i text_sources/position_effect/position_effect.main.formated.md \
   -o text_sources/position_effect/position_effect.main.formated.md.fix_bib.md
