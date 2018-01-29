@@ -297,58 +297,68 @@ generation), which we labeled with the DGAP\#\_A and DGAP\#\_B
 identifiers. We filtered DGAP data to select cases with both breakpoints
 in non-coding regions only, and excluding lincRNAs and pseudogenes; a
 total of 17 cases fulfilled our criteria, 15 translocations and 2
-inversions (Figure 1 and Table S1). These subjects are phenotypically
+inversions (Figure \@ref(fig:position-effect-1) and [Table S](#position-effect-sub-tab)1). These subjects are phenotypically
 distinct, and most of them presented with congenital developmental and
 neurological conditions not recognized as a known syndrome or genomic
 disorder (see clinical descriptions in Supplemental Note: Case Reports).
 
+<!-- ======================================================= -->
+```{r position-effect-1, fig.cap='(ref:position-effect-1)', out.width='80%', fig.align='center'}
+knitr::include_graphics("figures/position_effect/Figure1.png")
+```
+(ref:position-effect-1) **Chromosome locations of the 17 analyzed DGAP cases with non-coding BCAs.** Breakpoint positions are marked with a blue line and
+the corresponding DGAP number. All chromosomes are aligned by the
+centromere (marked in pink) and are indicated above by their
+corresponding chromosome number.
+<!-- ======================================================= -->
+
 Further analysis revealed that BCA breakpoints were significantly
 depleted for overlapping annotated promoters or transcription factor
-(TF) binding sites (GAT TF p=0.0003, promoter p=0.0001, Table S2,3).
+(TF) binding sites (GAT TF p=0.0003, promoter p=0.0001, [Table S](#position-effect-sub-tab)2,3).
 Only one breakpoint (DGAP249\_B) overlapped a ChromHMM enhancer in
 GM12878 cells (Table \@ref(tab:position-effect-subjects)); the others had no overlap with annotated or
 predicted enhancers in the analyzed datasets, and this depletion was
 significant for VISTA (GAT p=0.0364) and Hi-ESC (GAT p=0.0036) but not
 for the annotated tissue and primary cell enhancers from Andersson *et
-al*., 2014[@Andersson2014] (Table S4). Eight breakpoints overlapped cell-type
-specific DHS sites (Table \@ref(tab:position-effect-subjects) and Table S5); these corresponded to DGAP
+al*., 2014[@Andersson2014] ([Table S](#position-effect-sub-tab)4). Eight breakpoints overlapped cell-type
+specific DHS sites (Table \@ref(tab:position-effect-subjects) and [Table S](#position-effect-sub-tab)5); these corresponded to DGAP
 cases 017, 176, 249, 275, 288 and 322; of these, DGAP176 and DGAP275
 overlapped DHS sites at both BCA breakpoint sites. In addition, three
 DGAP cases overlapped CTCF binding sites in H1-hESC (DGAP cases 111,
-176, and 287) and none in GM12878 cells (Table \@ref(tab:position-effect-subjects) and Table S6). Except
+176, and 287) and none in GM12878 cells (Table \@ref(tab:position-effect-subjects) and [Table S](#position-effect-sub-tab)6). Except
 for two cases in H1-hESC (DGAP17 and DGAP176), and four cases in GM12878
 (DGAP 017, 126, 163 and 176), all rearrangements fall within ChromHMM
 repressed chromatin regions, but this association was not significant
-(GAT p= 0.40 for GM12878 and p= 0.15 for H1-hESC, Table S2F).
+(GAT p= 0.40 for GM12878 and p= 0.15 for H1-hESC, [Table S](#position-effect-sub-tab)2F).
 Interestingly, 22 of the 34 breakpoints (\~65%) overlap repeated
-elements at a significant level (GAT p=0.0002, Table S8), which may
+elements at a significant level (GAT p=0.0002, [Table S](#position-effect-sub-tab)8), which may
 indicate a non-allelic homologous recombination process in their
 generation.[@Gu2008; @Cardoso2016]
 
 Noticeably, either one or two breakpoints from all the non-coding DGAP
 BCAs fall within previously reported TADs in H1-hESC and IMR90 cell
-lines (Table \@ref(tab:position-effect-subjects) and Table S9).[@Dixon2012] However, this overlap was not
+lines (Table \@ref(tab:position-effect-subjects) and [Table S](#position-effect-sub-tab)9).[@Dixon2012] However, this overlap was not
 significant for both cell lines (GAT H1-ESC p=0.0537 and IMR90 p=0.28).
 We found that the breakpoints disrupt dozens, hundreds, or even
 thousands of chromatin contacts when assessed at the 20 and 40 Kb
 resolution in Hi-C data of H1-hESC and IMR90 cells, as well as chromatin
-contacts at 100 Kb and 1 Mb resolution in GM06990 cells (Table S11).
+contacts at 100 Kb and 1 Mb resolution in GM06990 cells ([Table S](#position-effect-sub-tab)11).
 Breakpoint DGAP111\_A had a consistent absence of disrupted chromatin
 contacts, which is expected as it overlaps a repetitive satellite region
 so no chromatin contacts could be mapped to the segment (Table S9 and
-Table S11). With the availability of higher resolution data, it is
+[Table S](#position-effect-sub-tab)11). With the availability of higher resolution data, it is
 possible to detect whether BCA breakpoints disrupt smaller chromatin
 domains and loops not detected in previous studies. When analyzing high
 resolution IMR90 and GM12878 Hi-C data,[@Rao2014] we discovered that 32 out of
 34 breakpoints are contained within GM12878 sub-compartments (Table \@ref(tab:position-effect-subjects)
-and Table S10); interestingly, 28 of these are classified as members of
+and [Table S](#position-effect-sub-tab)10); interestingly, 28 of these are classified as members of
 the B compartment, which is less gene dense and less expressed compared
 to the A compartment. On the other hand, 18 and 24 breakpoints are
 contained within GM12878 and IMR90 arrowhead domains, respectively
-(Table S10), which are regions of enhanced contact frequency that tile
+([Table S](#position-effect-sub-tab)10), which are regions of enhanced contact frequency that tile
 the diagonal of each chromatin contact matrix. In addition, the
 breakpoints disrupt several significant short and long-range chromatin
-interactions in the GM12878 Hi-C data (Table S12).
+interactions in the GM12878 Hi-C data ([Table S](#position-effect-sub-tab)12).
 
 Overall, the observation of breakpoint-associated DHS sites suggests the
 alteration of underlying regulatory elements with potential pathogenic
@@ -367,7 +377,7 @@ windows for all cases; 106 of these genes (\~3.4%) have an HI score of
 &lt;10%, which is a predictor of haploinsufficiency,[@Huang2010] and 55 and two
 genes have ClinGen emerging evidence suggesting that dosage
 haplo/triplo-sensitivity, respectively, is associated with clinical
-phenotype (Table S15).
+phenotype ([Table S](#position-effect-sub-tab)15).
 
  To further refine our search for genes which may exhibit position
 effects, we performed an unbiased correlation between DGAP case
@@ -376,7 +386,7 @@ breakpoint. To this end, we used the HPO dataset,[@Kohler2014] which provides a
 standardized vocabulary of phenotypic abnormalities encountered in human
 disease, and currently contains \~11,000 terms and over 115,000
 annotations to hereditary diseases. We translated DGAP clinical features
-to HPO terms (Table S16), and calculated phenotype similarity between
+to HPO terms ([Table S](#position-effect-sub-tab)16), and calculated phenotype similarity between
 DGAP cases and neighboring genes using the phenomatch score.[@Ibn-Salem2014] The
 phenomatch score distinguishes between general and very specific
 phenotypic descriptions by quantifying the information content of the
@@ -386,7 +396,7 @@ is then calculated based on randomly permuting the associations of
 phenotypes to genes, and in shifting the DGAP translocation and
 inversion breakpoint positions along the chromosome. We obtained
 phenomatch scores ranging from 0.003 to 91.48 for 179 genes within the
-±3 and ±1 Mb windows, as well as within the TAD positions (Table S15).
+±3 and ±1 Mb windows, as well as within the TAD positions ([Table S](#position-effect-sub-tab)15).
 
 In addition to dosage sensitivity and phenotypic similarity information,
 we complemented our analysis with assessment of enhancer-promoter
@@ -400,9 +410,9 @@ DHS/enhancer–promoter connections[@Thurman2012] to assess disrupted predicted
 *cis*-regulatory interactions by the DGAP breakpoints within a ±500 Kb
 window. The analysis revealed 193 genes that were separated from their
 predicted candidate enhancers, potentially altering gene expression
-(Table S13). A total of 133 candidate genes were separated from &lt;10
+([Table S](#position-effect-sub-tab)13). A total of 133 candidate genes were separated from &lt;10
 of their predicted enhancers, while 60 genes were separated from their
-predicted interactions with 10 or up to 91 enhancers (Table S14).
+predicted interactions with 10 or up to 91 enhancers ([Table S](#position-effect-sub-tab)14).
 
 For the 17 analyzed DGAP BCAs, there are a total of 645 genes with
 either evidence of dosage sensitivity, disrupted enhancer-promoter
@@ -428,7 +438,7 @@ their inclusion.
 Applying this ranking strategy to the 17 non-coding BCAs, we predict 16
 top-ranking candidates for 11 DGAP cases and 102 second-tier candidates
 for the 17 analyzed DGAP cases within ±1 Mb analysis windows (Table \@ref(tab:position-effect-subjects)
-and Table S15). This is a significant reduction compared to the initial
+and [Table S](#position-effect-sub-tab)15). This is a significant reduction compared to the initial
 645 possible candidates (\~3.8% of the neighboring genes in the ±3 Mb
 windows considering top and second-tier candidates, and only 0.05%
 considering top candidates only). Of note, only nine of the 16
@@ -440,7 +450,7 @@ autosomal recessive phenotypes, and an additional seven have sufficient
 or some evidence for haploinsufficiency. Only one candidate gene for
 DGAP138, glutamate ionotropic receptor kainate type subunit 2 (*GRIK2*
 [MIM: 138244]) was a confirmed triplosensitive annotated gene in
-ClinGen (Table S15).
+ClinGen ([Table S](#position-effect-sub-tab)15).
 
 Taken together, these cases represent more plausible candidates in the
 search for position effect genes with functional consequences in the
@@ -464,7 +474,7 @@ our method, a decrease in its expression was observed in RNA derived
 from DGAP288’s umbilical cord blood.[@Ordulu2016] Additional quantitative
 real-time PCR analyses revealed *SOS1* as having reduced expression in
 DGAP163-derived LCLs compared to three normal sex-matched controls
-(Figure 2).Expression assessment for second-tier candidates *PAK3*,
+(Figure \@ref(fig:position-effect-2)).Expression assessment for second-tier candidates *PAK3*,
 *MID2* and *POU3F4* in DGAP176 LCLs did not deviate substantially from
 their control expression values (Figure S1); further searches into the
 Genotype-Tissue Expression (GTEx) project[@Lonsdale2013] reveal that *PAK3*, *MID2*
@@ -473,6 +483,20 @@ assessing changes in expression of these genes technically difficult.
 This points to the importance of the availability of tissues and cell
 lines relevant to the studied phenotypes, or the capacity to generate
 animal models that reproduce the observed BCAs for further analysis.
+
+<!-- ======================================================= -->
+```{r position-effect-2, fig.cap='(ref:position-effect-2)', out.width='50%', fig.align='center'}
+knitr::include_graphics("figures/position_effect/Figure2.png")
+```
+(ref:position-effect-2) **Assessment of gene expression changes for DGAP163-derived LCLs.** 
+Each column represents the ΔCT results of three culture
+replicates, with four technical replicates each, compared to three
+sex-matched control cell lines. Error bars indicate the standard
+deviation calculated from the biological replicates. The Mann-Whitney U
+test p-value is provided for the comparison between expression values of
+*SOS1* and the control *GUSB*.
+<!-- ======================================================= -->
+
 
 ### Identification of subjects with shared non-coding chromosome alterations and phenotypes
 
@@ -485,9 +509,9 @@ community-supported repositories of clinical cases with novel or
 extremely rare genomic variants.
 
 We found 494 DECIPHER cases overlapping our 34 non-coding BCA
-breakpoints (Table S19). Of these, 489 had rearrangements that
-overlapped one or more annotated genes (Table S20). Only five DECIPHER
-cases fulfilled our non-coding selection criteria (Table S21): cases
+breakpoints ([Table S](#position-effect-sub-tab)19). Of these, 489 had rearrangements that
+overlapped one or more annotated genes ([Table S](#position-effect-sub-tab)20). Only five DECIPHER
+cases fulfilled our non-coding selection criteria ([Table S](#position-effect-sub-tab)21): cases
 1985 and 1989, both of which overlap one of DGAP017’s breakpoints in
 chromosome 10, but which have several other gene-altering genomic
 rearrangements; case 289720, a subject with a 161.44 Kb deletion in
@@ -513,7 +537,7 @@ report of sex reversal.
 
 From the dbVar database, 675 non-coding structural rearrangements
 including CNVs, deletions, inversions, and translocations overlap DGAP
-breakpoints (Table S22). Of these, only five variants had associated
+breakpoints ([Table S](#position-effect-sub-tab)22). Of these, only five variants had associated
 clinical information, including variant nsv534336, a 530 Kb duplication
 overlapping the DGAP017 breakpoint in chromosome 10, classified as
 “uncertain significance”[@Miller2010] and exhibiting a growth delay phenotype;
@@ -593,7 +617,7 @@ insulators and locus control regions, among others. In fact, four of the
 breakpoints that disrupt annotated DHS sites and enhancers have been
 shown to establish chromatin contacts with our top position effect
 candidate genes in the region in Hi-C data of H1-hESC cells at 40 Kb
-resolution (Table S18). For example, the DGAP275\_B breakpoint is
+resolution ([Table S](#position-effect-sub-tab)18). For example, the DGAP275\_B breakpoint is
 involved in a chromatin interaction that puts it into physical proximity
 with *POLE* and *ANKLE2,* DGAP288\_B contacts *SOX9*, and DGAP176\_B
 interacts with *ACSL4*. Three additional breakpoints from DGAP111, 249
@@ -612,11 +636,11 @@ chromatin contacts in four different cell lines (H1-hESC, IMR90,
 GM06990, GM12878) at different Hi-C window resolutions, 32 breakpoints
 included in H1-hESC TADs,[@Dixon2012] and the separation of 193 genes from one
 and up to 91 of their predicted enhancers after the occurrence of the
-BCAs (Table S14). For example, *SOS1*, one of the most significant
+BCAs ([Table S](#position-effect-sub-tab)14). For example, *SOS1*, one of the most significant
 candidates in explaining DGAP163’s global developmental delay,
 dysmorphic/distinctive facies and hearing loss, as observed in Noonan
 Syndrome 1 (NS1 [MIM: 163950]), is separated from its interaction with
-88 predicted enhancers (Figure 3), and exhibited a decrease in
+88 predicted enhancers (Figure \@ref(fig:position-effect-3)), and exhibited a decrease in
 expression in DGAP163-derived LCLs. However, NS1 is caused by autosomal
 dominant mutations in *SOS1*; we hypothesize that the reduced expression
 of *SOS1* might affect the RAS/MAPK signaling pathway and generate
@@ -637,6 +661,18 @@ position effect predictions and the disruption of important chromatin
 regulatory elements. Nonetheless, insight into the molecular pathway of
 disorders may be forthcoming from our approach and of value in the
 management of some individuals.
+
+<!-- ======================================================= -->
+```{r position-effect-3, fig.cap='(ref:position-effect-3)', out.width='50%', fig.align='center'}
+knitr::include_graphics("figures/position_effect/Figure3.png")
+```
+(ref:position-effect-3) **Disrupted enhancer-promoter DHS interactions predicted for *SOS1* ** 
+(gene position indicated by asterisk). The color graded rectangle
+represents the correlation values for the interactions as reported by
+ENCODE. The dashed line indicates the translocation breakpoint position
+in chromosome 2. Lilac colored rectangles represent genes, and pink
+rectangles show TAD positions annotated in H1-hESC.
+<!-- ======================================================= -->
 
 All predicted candidate genes have different lines of evidence
 supporting their selection, starting with a significant phenomatch score
@@ -719,29 +755,6 @@ cytogeneticists, and physicians for their ongoing support of our study
 and for referrals to our project. This study was funded by the National
 Institutes of Health (GM061354 to CCM and MET). The authors declare no
 conflicts of interest.
-
-## Figures
-
-**Figure 1.** Chromosome locations of the 17 analyzed DGAP cases with
-non-coding BCAs. Breakpoint positions are marked with a blue line and
-the corresponding DGAP number. All chromosomes are aligned by the
-centromere (marked in pink) and are indicated above by their
-corresponding chromosome number.
-
-**Figure 2.** Assessment of gene expression changes for DGAP163-derived
-LCLs. Each column represents the ΔCT results of three culture
-replicates, with four technical replicates each, compared to three
-sex-matched control cell lines. Error bars indicate the standard
-deviation calculated from the biological replicates. The Mann-Whitney U
-test p-value is provided for the comparison between expression values of
-*SOS1* and the control *GUSB*.
-
-**Figure 3.** Disrupted enhancer-promoter DHS interactions predicted for
-*SOS1* (gene position indicated by asterisk). The color graded rectangle
-represents the correlation values for the interactions as reported by
-ENCODE. The dashed line indicates the translocation breakpoint position
-in chromosome 2. Lilac colored rectangles represent genes, and pink
-rectangles show TAD positions annotated in H1-hESC.
 
 ### Web Resources
 

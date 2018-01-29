@@ -155,7 +155,7 @@ https://www.biorxiv.org/highwire/filestream/70793/field_highwire_adjunct_files/3
 
 ## Supplementary Figures
 
-<!-- ======================================================= -->
+<!-- ----------------------------------------------------------------------- -->
 ```{r TadEvoS1, fig.cap='(ref:TadEvoS1)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/TAD_evolution/fig_S1_v01.png")
 ```
@@ -167,9 +167,9 @@ from human and different species (horizontal panels) around hESC TADs
 scale represents breakpoints from different fill-size thresholds. Dotted
 lines in gray show simulated background controls of randomly placed
 breakpoints.
-<!-- ======================================================= -->
+<!-- ----------------------------------------------------------------------- -->
 
-<!-- ======================================================= -->
+<!-- ----------------------------------------------------------------------- -->
 ```{r TadEvoS2, fig.cap='(ref:TadEvoS2)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/TAD_evolution/fig_S2_v01.png")
 ```
@@ -181,8 +181,575 @@ compared between actual rearrangements (blue) and 100 times randomized
 background controls (gray). The left panel shows distances to next hESC
 TAD boundary and the right panel distances to closest GM12878 contact
 domain boundary. P-values according to Wilcoxon’s rank-sum test.
-<!-- ======================================================= -->
+<!-- ----------------------------------------------------------------------- -->
 
+<!-- ======================================================================= -->
+# Supplemental Data: Computational Prediction of Position Effects of Apparently Balanced Human Chromosomal Rearrangements {#sup-position-effect}
+
+
+<!-- Supplemental Data include a Supplemental Note detailing clinical case reports, a Supplemental Note detailing the karyotypes of DGAP subjects, 1 figure, and 22 tables and can be found with this article online at http://dx.doi.org/10.1016/j.ajhg.2017.06.011. -->
+
+## Supplemental Note: Case Reports
+
+**DGAP017**
+
+46,X,t(X;10)(p11.2;q24.3)dn.arr(1-22,X)x2
+
+Newborn female with a bicornuate uterus, diaphragmatic hernia, thenar
+hypoplasia, pulmonary hypoplasia, absent right olfactory lobe, loose
+skin, scoliosis, small thorax, hypoplastic labia, right clinodactyly and
+camptodactyly, as well as a scaphoid abdomen. This collection of
+features was reminiscent of Fryns syndrome (FRNS [MIM: 229850]). This
+case was obtained from the NIGMS Human Genetic Cell Repository at the
+Coriell Institute for Medical Research (GM00972) [@Tang2013]. An Affymetrix
+Genome-Wide Human SNP Array 6.0 performed at Coriell is reportedly
+normal.
+
+**DGAP111**
+
+46,XY,t(16;20)(q11.2;q13.2)dn.arr[hg18] 1q23.3(159763523\_159905125)x3
+
+Six-year-old male with congenital heart disease (one atrial septal
+defect, seven small ventricular septal defects), eye anomaly (Duane
+syndrome), poor growth, developmental delay, chronic constipation, left
+undescended testis, history of scoliosis (resolved), history of weak
+ankles and feet requiring braces (resolved), and asthma. Microarray
+analysis of DNA extracted from the DGAP111 EBV-transformed cell line
+contributed from DGAP to the NIGMS Human Genetic Cell Repository
+(GM22709, Coriell) was performed on the Affymetrix Genome-Wide Human SNP
+Array 6.0 and revealed a duplication of \~141.6 Kb in 1q23.3
+(159763523-159905125) that was interpreted as likely benign.
+
+**DGAP113**
+
+46,XY,t(1;3)(q32.1;q13.2)dn
+
+One-year-old male with bilateral congenital cataracts (TORCH screen,
+positive IgG and negative IgM for rubella, cytomegalovirus, herpes
+simplex virus; rubella virus isolation from urine and lens was
+negative), and mild developmental delay. Cranial magnetic resonance
+imaging (MRI) revealed prominent extra-axial cerebrospinal fluid spaces
+of uncertain significance, and the subject has marked macrocephaly (head
+circumference &gt;95th percentile) [@Lachke2012]. No microarray was performed.
+
+**DGAP126**
+
+46,XX,t(5;10)(p13.3;q21.1)dn.arr[hg18] 7q34(142030226\_142154515)x1
+
+Ten-year-old female with significant developmental delay with
+regression, autistic tendencies, and receptive and expressive language
+delay, disruptive behavior disorder, enuresis, dysthymia, sleep
+disturbance, self-injurious behaviors, and agitation. She had delays in
+gross and fine motor skills. No dysmorphic features were observed.
+Microarray analysis of DNA extracted from the DGAP126 EBV-transformed
+cell line contributed from DGAP to the NIGMS Human Genetic Cell
+Repository (GM18825, Coriell) was performed on the Affymetrix
+Genome-Wide Human SNP Array 6.0 and revealed a deletion of \~124.3 Kb in
+region 7q34 (142030226-142154515) that was interpreted to be benign.
+
+**DGAP138**
+
+46,XY,t(1;6)(q23;q13)dn.arr(1-22)x2,(X,Y)x1
+
+Seven-year-old male with intellectual disability, fat distribution
+around trunk, gastroesophageal reflux, feeding problems (gastrostomy),
+seizure disorder, movement disorder (random, writhing type movements),
+wheelchair-dependence, Pierre-Robin sequence (mild micrognathia and
+cleft of the soft palate) (PRBNS [MIM: 261800]), microcephaly,
+pseudogynecomastia, and low growth hormone and high cortisone levels.
+Normal microarray results were reported from of DNA extracted from the
+DGAP138 EBV-transformed cell line contributed from DGAP to the NIGMS
+Human Genetic Cell Repository (GM20568, Coriell) on the Affymetrix
+Genome-Wide Human SNP Array 6.0.
+
+**DGAP153**
+
+46,X,t(X;17)(p11.23;p11.2)dn.arr(1-22,X)x2
+
+Eight-year-old female with dysmorphic features (including mild
+synophrys, a flat philtrum and thin upper lip vermilion), mild
+developmental delay, sleep disturbance, and behavior problems (including
+temper tantrums, self-biting, and agitation). Deletion testing was
+negative for Smith-Magenis syndrome (SMS [MIM: 182290]). No cryptic
+aneusomies were reported to be detected by clinical aCGH. The DGAP153
+EBV-transformed cell line was contributed to the NIGMS Human Genetic
+Cell Repository (GM20572, Coriell).
+
+**DGAP163**
+
+46,XY,t(2;14)(p23;q13)dn.arr(1-22)x2,(X,Y)x1
+
+Four-year-old male with severe global developmental delay, absent
+speech, dysmorphic/distinctive facies, hypospadias (repaired), seizures
+as an infant (now seizure free), myopia, nystagmus, small left retinal
+coloboma, and conductive hearing loss (history of otitis media). MRI
+showed periventricular white matter changes of unknown origin (no record
+of anoxic event), and recent electroencephalograms (EEGs) were normal.
+Fluorescence *in situ* hybridization (FISH) for SMS, DiGeorge syndrome
+(DGS [MIM: 188400]) and Velocardiofacial syndrome (VCFS [MIM:
+192430]) was reportedly normal, as was aCGH using a 1M Agilent array
+with a resolution of 6.3 Kb.
+
+**DGAP176**
+
+46,Y,inv(X)(q13q24)mat
+
+Four-year-old male with congenital, severe, bilateral sensorineural
+hearing loss, cognitive impairment, plagiocephaly, lax joints, and
+coordination difficulties. Dysmorphic features include macrocephaly,
+broad forehead, hypertelorism, downslanting palpebral fissures,
+epicanthic folds, flat midface, rounded nasal tip, flat nasal root,
+downturned corners of the mouth, simple helix of left ear, and full
+lips. He also had fifth finger clinodactyly and bridged palmar creases.
+No mutations were detected in the coding regions of gap junction protein
+beta 2 (*GJB2* [MIM: 121011]) or gap junction protein beta 6 (*GJB6*
+[MIM: 604418]). The mother is mosaic for inv(X)(q13q24) and 45,X but
+is reportedly healthy [@Anger2014]. No microarray was performed.
+
+**DGAP249**
+
+46,XX,t(2;11)(q33;q23)dn.arr(1-22,X)x2
+
+Seven-year-old female with a history of global developmental delay. She
+has gross and fine motor delays, atypical oral motor skills and limited
+exploration of sensory materials. At four years she had an abnormal
+sleep-deprived EEG and increased bilateral electrocortical excitability;
+at six years EEG results were significantly abnormal with bifrontal
+symptoms consistent with epileptiform disturbance recorded in the
+interictal state. She has decreased visual motor integration, and a
+composite intellectual coefficient (IQ) of 71. Normal clinical
+microarray results were reported.
+
+**DGAP252**
+
+46,XY,t(3;18)(q13.2;q11.2)dn.arr(1-22)x2,(X,Y)x1
+
+Four-month-old male whose prenatal course was complicated by
+polyhydramnios with an accompanying abnormal prenatal ultrasound and
+MRI, revealing an abnormal cerebellum, dilated cisterna magna, right
+lung apex cyst, intra-abdominal cysts and bilateral abnormal feet.
+Delivery was at term with two right posterior mediastinal cysts
+identified as a foregut duplication cyst and a bronchogenic cyst by
+pathology after surgical excision. Three ileal cysts were identified as
+duplication cysts with complete muscularis propria, small bowel/colon,
+and gastric oxyntic type mucosa by pathologic examination after
+excision. Cerebellar hypoplasia was noted by MRI of his brain at one day
+of age. A wide anterior fontanelle (three finger widths) was observed,
+and his head was reportedly mildly turricephalic with a high forehead
+and a round bony protrusion of his skull at the occipital base. Normal
+clinical microarray results (CMA-HR + SNP (v.8.3)) were reported.
+
+**DGAP275**
+
+46,XX,t(7;12)(p13;q24.33)dn.arr(1-22,X)x2
+
+Nine-year-old female with severe unexplained short stature (&lt;4 SDs)
+and normal radiographs. An extensive endocrine workup revealed a normal
+growth hormone axis and no evidence of precocious puberty. She was
+non-dysmorphic and had normal cognitive development. A normal clinical
+Affymetrix Cytoscan SNP microarray was reported.
+
+**DGAP287**
+
+46,XY,t(10;14)(p13;q32.1)dn.arr(1-22)x2,(X,Y)x1
+
+Four-year-old male with a history of global developmental delay and
+asymmetric spastic diplegia. He is ataxic, non-verbal, and drools
+frequently. He is non-dysmorphic, and a brain MRI was normal. Normal
+clinical Affymetrix Cytoscan HD SNP microarray results were reported.
+
+**DGAP288**
+
+46,XX,t(6;17)(q13;q21)dn.arr(1-22,X)x2
+
+Prenatal case enrolled in study at 15 weeks, following ultrasound at 11
+weeks revealing a cystic hygroma and chorionic villus sampling (CVS) at
+12 weeks revealing the t(6;17) apparently balanced chromosome
+translocation. Normal clinical Affymetrix Cytoscan HD SNP microarray
+results were reported at 13 weeks. Micrognathia was seen on ultrasound
+at 18 weeks. At 19 weeks, DGAP sequencing results revealed no genes
+disrupted by the translocation, and the pregnancy was continued.
+Polyhydramnios and micrognathia were noted at 28 weeks. Fetal MRI at 34
+weeks revealed a small jaw index consistent with micrognathia and
+retrognathia, glossoptosis, and cleft palate without cleft lip; findings
+were suspicious for PRBNS. Following delivery at 39 weeks, initial exams
+revealed a cleft palate. She was placed on continuous positive airway
+pressure, but otherwise was considered well.
+
+**DGAP315**
+
+46,XX,inv(6)(p24q11)dn.arr(1-22,X)x2
+
+Fifteen-year-old female with severe static encephalopathy of unknown
+etiology. She uses a wheelchair, is microcephalic, nonverbal, and has
+severe generalized spasticity with poorly controlled epilepsy. She had a
+normal echo and eye examination and reportedly normal aCGH results.
+
+**DGAP319**
+
+46,XX,t(4;13)(q31.3;q14.3)dn.arr(1-22,X)x2
+
+Thirteen-year-old female with intellectual disability, and height,
+weight, and head circumference below the 3rd percentile. She has a grade
+II-IV systolic murmur, abnormal facies, finger and toe abnormalities.
+This case was obtained from the NIGMS Human Genetic Cell Repository at
+the Coriell Institute for Medical Research (GM00972) [@Tang2013]. This case was
+previously reported [@Jenkins1975]. The Affymetrix Genome-Wide Human SNP Array 6.0
+performed at Coriell is reportedly normal.
+
+**DGAP322**
+
+46,XY,t(1;18)(q32.1;q22.1).arr(1-22)x2,(X,Y)x1
+
+Male subject of unknown age with genitourinary malformations, third
+degree hypospadias, labialized scrotum with palpable descended testes,
+mild developmental delay, growth delay, and apparently intact hormonal
+axis. This case was obtained from the NIGMS Human Genetic Cell
+Repository at the Coriell Institute for Medical Research (GM16438) [@Tang2013; @Frizell1998].
+The Affymetrix Genome-Wide Human SNP Array 6.0 performed at Coriell
+is reportedly normal.
+
+**DGAP329**
+
+46,XX,t(2;14)(q21;q24.3)dn.arr[GRCh37/hg19]
+18q22.3(72545050\_72692202)x1 pat
+
+Five-year-old female with a progressive neurologic disorder. She has
+nearly constant choreoathetosis, dystonia (including painful neck
+dystonia), and myoclonic movements, which are exacerbated by fatigue and
+emotional stress and are worsening with time. She is profoundly
+hypotonic and non-ambulatory. She is nonverbal but able to follow simple
+commands. She had a reported normal clinical CytoSure ISCA 8x60K v2.0
+microarray, although a paternally inherited 150 Kb deletion at 18q22.3
+from her phenotypically normal father was detected.
+
+## Supplemental Note: Nucleotide Level Nomenclature for DGAP karyotypes
+
+Karyotypes of DGAP cases are described using a revised nomenclature that
+incorporates next-generation sequencing positions from Ordulu *et al*.,
+2014.
+
+**DGAP017**
+
+46,X,t(X;10)(p11.2;q24.3)dn.arr(1-22,X)x2.seq[GRCh37/hg19]
+t(X;10)(10pter-&gt;10q25.1(107,711,256)::TATCCTTTG::Xp11.22(51,702,992)-&gt;Xpter;10qter-&gt;10q25.1(107,714,387)::GAGAAAAC::Xp11.22(51,707,815)-&gt;Xqter)dn
+
+**DGAP111**
+
+46,XY,t(16;20)(q11.2;q13.2)dn.arr[hg18]
+1q23.3(159763523\_159905125)x3.seq[GRCh37/hg19]
+(16,20)cx,der(16)(16pter-&gt;16q11.2(46,396,774)::16q11.2(46,397,625-46,397,900)::16q11.2(46,408,942-464093{69-70})::20q13.2(53,969,64{0-1}-53,970,162)::20q13.2(53,970,203)-&gt;20qter),der(20)(20pter-&gt;20q13.2(53,969,63{5-6})::16q11.2(46,403,29{1-2})-&gt;16qter)dn
+
+**DGAP113**
+
+46,XY,t(1;3)(q32.1;q13.2)dn.seq[GRCh37/hg19]
+t(1;3)(1pter-&gt;1q31.3(198,076,14{1})::3q13.13(110,275,76{4})-&gt;3qter;3pter-&gt;3q13.13(110,275,769)::AGAA::1q31.3(198,076,137)-&gt;1qter)dn
+
+**DGAP126**
+
+46,XX,t(5;10)(p13.3;q21.1)dn.arr[hg18]
+7q34(142030226\_142154515)x1.seq[GRCh37/hg19]
+t(5;10)(10qter-&gt;10q21.3(67,539,99{7-5})::5p13.3(29,658,44{0-2})-&gt;5qter;10pter-&gt;10q21.3(67,539,99{0})::5p13.3(29,658,42{6})-&gt;5pter)dn
+
+**DGAP138**
+
+46,XY,t(1;6)(q23;q13)dn.arr(1-22)x2,(X,Y)x1.seq[GRCh37/hg19]
+t(1;6)(1pter-&gt;1q31.2(193,491,602)::6q16.2(100,159,181)-&gt;6qter;6pter-&gt;6q16.2(100,159,182)::A::1q31.2(193,491,602)-&gt;1qter)dn
+
+**DGAP153**
+
+46,X,t(X;17)(p11.23;p11.2)dn.arr(1-22,X)x2.seq[GRCh37/hg19]
+t(X;17)(17pter-&gt;17p11.2(20,682,69{0-1})::Xp11.3(44,372,16{4-5})-&gt;Xqter;17qter-&gt;17p11.2(20,682,68{7-4})::Xp11.3(44,372,1{72-69})-&gt;Xpter)dn
+
+**DGAP163**
+
+46,XY,t(2;14)(p23;q13)dn.arr(1-22)x2,(X,Y)x1.seq[GRCh37/hg19]
+t(2;14)(14qter-&gt;14q13(31,717,834)::G::2p23(39,206,240-39,206,384)::2p23(39,206,414)-&gt;2qter;14pter-&gt;14q13(31,717,73{3})::2p23(39,206,24{2})-&gt;2pter)dn
+
+**DGAP176**
+
+46,Y,inv(X)(q13q24)mat.seq[GRCh37/hg19]
+inv(X)(pter-&gt;q13(82,275,014)::ATCAATTTA::q24q13(108,129,970-82,320,86{7-5})::q24(108,149,24{9-7})-&gt;qter)mat
+
+**DGAP249**
+
+46,XX,t(2;11)(q33;q23)dn.arr(1-22,X)x2.seq[GRCh37/hg19]
+t(2;11)(2pter-&gt;2q33.1(199,943,78{1-9})::11q24.1(121,642,3{46-54})-&gt;11qter;11pter-&gt;11q24.1(121,638,616)::AGATCT::2q33.1(199,943,805)-&gt;2qter)dn
+
+**DGAP252**
+
+46,XY,t(3;18)(q13.2;q11.2)dn.arr(1-22)x2,(X,Y)x1.seq[GRCh37/hg19]
+t(3;18)(3pter-&gt;3q13.11(104,627,622)::TCAATACCTTTTA::18q11.2(19,498,398)-&gt;18qter;18pter-&gt;18q11.2(19,498,400)::AAAAATGGC::3q13.11(104,627,629)-&gt;3qter)dn
+
+**DGAP275**
+
+46,XX,t(7;12)(p13;q24.33)dn.arr(1-22,X)x2.seq[GRCh37/hg19]
+t(7;12)(12qter-&gt;12q24.33(132,983,131)::TC::7p12.3(46,111,841)-&gt;7qter;12pter-&gt;12q24.33(132,983,129)::7p12.3(46,111,839)-&gt;7pter)dn
+
+**DGAP287**
+
+46,XY,t(10;14)(p13;q32.1)dn.arr(1-22)x2,(X,Y)x1.seq[GRCh37/hg19]
+t(10;14)(14qter-&gt;14q32.13(95,212,573)::AGTAAAGGGTTGGGTTAC::10p14(10,161,500-10,161,740)::TCG::10p14(10,161,685)-&gt;10qter;14pter-&gt;14q32.13(95,212,572)::TATCAG::10p14(10,161,498)-&gt;10pter)dn
+
+**DGAP288**
+
+46,XX,t(6;17)(q13;q21)dn.arr(1-22,X)x2.seq[GRCh37/hg19]
+t(6;17)(6pter-&gt;6q21(112,976,04{2-4})::17q24.3(69,728,01{7-9}-&gt;17qter;17pter-&gt;17q24.3(69,728,006)::CCCTTTA::6q21(112,976,031)-&gt;6qter)dn
+
+**DGAP315**
+
+46,XX,inv(6)(p24q11)dn.arr(1-22,X)x2.seq[GRCh37/hg19]
+inv(6)(qter-&gt;q11.1(63,115,715)::p24.3q11.1(9,394,991-63,115,685)::T::p24.3(9,394,994)-&gt;pter)dn
+
+**DGAP319**
+
+46,XX,t(4;13)(q31.3;q14.3)dn.arr(1-22,X)x2.seq[GRCh37/hg19]
+t(4;13)(4pter-&gt;4q32.2(161,913,247)::13q21.1(59,345,837)-&gt;13qter;13pter-&gt;13q21.1(59,345,83{5-6})::4q32.2(161,913,24{7-8})-&gt;4qter)dn
+
+**DGAP322**
+
+46,XY,t(1;18)(q32.1;q22.1)dn.arr(1-22)x2,(X,Y)x1.seq[GRCh37/hg19]
+t(1;18)(1pter-&gt;1q32.2(208,544,055)::ACTCCTCCAACTCCTATGTAGTTG::18q22.1(63,566,045)-&gt;18qter;18pter-&gt;18q22.1(63,566,053)::TACA::1q32.2(208,544,091)-&gt;1qter)dn
+
+**DGAP329**
+
+46,XX,t(2;14)(q21;q24.3)dn. arr[GRCh37/hg19]
+18q22.3(72545050\_72692202)x1 pat.seq[GRCh37/hg19]
+t(2;14)(2pter-&gt;2pter-&gt;2q22.3(145,110,93{6})::14q31.1(83,574,72{4})-&gt;14qter;14pter-&gt;14q31.1(83,574,71{5-9}::2q22.3(14,511,09{37-41}-&gt;2qter)dn
+
+
+## Supplemental Figure
+
+<!-- ----------------------------------------------------------------------- -->
+```{r position-effect-S1, fig.cap='(ref:position-effect-S1)', out.width='60%', fig.align='center'}
+knitr::include_graphics("figures/position_effect/FigureS1.png")
+```
+(ref:position-effect-S1)  **Assessment of gene expression changes for DGAP176-derived LCLs.** 
+Control gene expression is shown in blue and surveyed genes are
+marked in different colors. Each column represents the ΔCT results of
+three culture replicates, with four technical replicates each, compared
+to three sex-matched control cell lines. Error bars indicate the
+standard deviation calculated from the biological replicates per gene.
+<!-- ----------------------------------------------------------------------- -->
+
+
+## Supplemental Table Legends  {#position-effect-sub-tab}
+
+Supplemental Tables can be found with this article online at http://dx.doi.org/10.1016/j.ajhg.2017.06.011.
+
+**Table S1. Table describing the 17 cases with both breakpoints in non-coding regions.** 
+Case identifiers are provided per studied subject
+(Subject ID), in addition to their karyotypes using the International
+System for Human Cytogenetic Nomenclature (ISCN2016) and array
+information reported in hg19 unless otherwise stated in hg18. Each case
+has two reported breakpoints (A and B), and for each we provide
+cytogenetic band and nucleotide locations in hg19 coordinates for the
+derivative chromosomes involved in their generation (der(A) and der(B)).
+We also report the sequencing reads by which the breakpoints were
+identified, and the overlap with known annotated genes (Disrupted gene 1
+and Disrupted Gene 2), as well as the two nearest genes (Closest Gene 1
+and Closest Gene 2) and their distance in base pairs (bp) to the
+breakpoint locations (Distance to gene 1 and Distance to Gene 2) in the
+derivative chromosomes. Negative distance numbers indicate genes
+upstream of the breakpoint position, while positive numbers indicate
+genes located downstream of the breakpoint.
+
+**Table S2. Overlap of non-coding DGAP breakpoint positions with gene
+promoters.** Table reporting the number of annotated Ensembl GRCh37 gene
+promoters (Ensembl\_GRCh37\_promoters) that overlap non-coding DGAP
+breakpoints (DGAP id, chr, start, end).
+
+**Table S3. Overlap of non-coding DGAP breakpoint positions with
+transcription factor binding sites.** Table reporting the number of
+annotated Ensembl GRCh37 transcription factor binding sites
+(Ensembl\_GRCh37\_tfbindingsites) that overlap non-coding DGAP
+breakpoints (DGAP id, chr, start, end).
+
+**Table S4. Overlap of non-coding DGAP breakpoint positions with
+enhancers.** Table reporting the number of primary cell
+(Primary\_cell\_enhancers), tissue (Tissue\_enhancers), H1-ESC
+(ChromHMM\_H1\_ESC\_enhancers), GM12878 (ChromHMM\_GM12878\_enhancers),
+and VISTA (VISTA\_db\_hg19) enhancers that overlap non-coding DGAP
+breakpoints (DGAP id, chr, start, end). Enhancer positions were obtained
+from Andersson *et al*., 2014, ENCODE, and the VISTA enhancer database
+human version hg19. Highlighted green rows indicate breakpoints which
+overlapped one or more of the enhancer categories analyzed.
+
+**Table S5. Overlap of non-coding DGAP breakpoint positions with DNaseI
+hypersensitive sites.** Table reporting the number of DNaseI
+hypersensitive sites from H1-hESC, GM06990, GM12878, and the master
+table (a compilation of 125 cell lines DNaseI clusters) from ENCODE that
+overlap non-coding DGAP breakpoints (DGAP id, chr, start, end).
+Highlighted green rows indicate breakpoints which overlapped one or more
+of the DNaseI hypersensitive sites in the different cell lines analyzed.
+
+**Table S6. Overlap of non-coding DGAP breakpoint positions with CTCF
+binding sites.** Table reporting the number of ENCODE CTCF binding sites
+from H1-hESC and GM12878 that overlap non-coding DGAP breakpoints (DGAP
+id, chr, start, end). Highlighted green rows indicate breakpoints which
+overlapped one or more of the CTCF binding sites in the two cell lines
+analyzed.
+
+**Table S7. Overlap of non-coding DGAP breakpoint positions with ENCODE
+chromatin state segments.** Table reporting the ENCODE chromatin state
+segment classifications per non-coding DGAP breakpoint (DGAP id, chr,
+start, end) for H1-hESC and GM12878 cell lines. Chromatin state segment
+coordinates and other bed file information is displayed starting from
+column \#bin until column itemRGB. Please refer to ENCODE’s bed items
+description from here:
+<http://rohsdb.cmb.usc.edu/GBshape/cgi-bin/hgTables>. Chromatin state
+names CTCF = CTCF binding site, E = enhancer, WE = weak enhancer, T =
+transcriptionally active, R = transcriptionally repressed.
+
+**Table S8. Overlap of non-coding DGAP breakpoint positions with
+repetitive elements.** Table reporting the number of repetitive elements
+as assessed by Repeat Masker that overlap non-coding DGAP breakpoints
+(DGAP id, chr, start, end). Repetitive elements information such as
+coordinates (Rep\_chr, Rep\_start, Rep\_end), name, class and family are
+provided for each overlap.
+
+**Table S9. Overlap of non-coding DGAP breakpoint positions with
+topologically associating domains (TADs).** Table reporting the number
+of TADs in H1-hESC and IMR90 (Dixon *et al*., 2012) that overlap
+non-coding DGAP breakpoints (DGAP id, chr, start, end). TAD information
+such as coordinates (TAD\_chr, TAD\_start, TAD\_end) are provided for
+each overlap.
+
+**Table S10. Overlap of non-coding DGAP breakpoint positions with
+high-resolution chromatin subcompartments and arrowhead domains.** Table
+reporting the number of high-resolution chromatin subcompartments and
+arrowhead domains in IMR90 and GM12878 (Rao *et al*., 2014) that overlap
+non-coding DGAP breakpoints (DGAP id, chr, start, end). Chromatin
+subcompartments and arrowhead domains information such as coordinates
+and class are provided for each overlap.
+
+**Table S11. Disruption of chromatin contacts by non-coding DGAP
+breakpoint positions.** Table reporting the number of chromatin contacts
+disrupted by non-coding DGAP breakpoint positions (DGAP id, chr, start,
+end) within their analysis windows (window\_start, window\_end) in Hi-C
+datasets of 20 and 40 Kb resolution of H1-hESC (Dixon *et al*., 2012)
+(Esc\_20kb\_HindIII\_rep1, Esc\_20kb\_HindIII\_rep2,
+Esc\_40kb\_hindIII\_combined, Esc\_40kb\_hindIII\_rep1,
+Esc\_40kb\_hindIII\_rep2), 20 and 40 Kb resolution of IMR90 (Dixon *et
+al*., 2012) (IMR90\_20kb\_hindIII\_rep1, IMR90\_20kb\_hindIII\_rep2,
+IMR90\_40kb\_hindIII\_combined, IMR90\_40kb\_hindIII\_rep1,
+IMR90\_40kb\_hindIII\_rep2), 100Kb and 1Mb resolution of GM06990
+(<http://epigenomegateway.wustl.edu/>) (GM06990\_obsexp\_100kb,
+GM06990\_obsexp\_1mb) and looplists from Rao *et al*., 2014 for GM12878
+and IMR90 (GSE63525\_GM12878\_primary+replicate\_HiCCUPS\_looplist,
+GSE63525\_IMR90\_HiCCUPS\_looplist).
+
+**Table S12. Disruption of GM12878 chromatin contacts at various
+resolution levels by non-coding DGAP breakpoint positions.** Table
+reporting the number of chromatin contacts disrupted by non-coding DGAP
+breakpoint positions (DGAP id, chr, start, end) within their analysis
+windows (window\_start, window\_end) in the 50Kb, 100Kb, 250Kb, 500Kb
+and 1Mb resolution Hi-C datasets from Rao *et al*., 2014 for GM12878.
+
+**Table S13. Disruption of predicted disrupted ENCODE distal
+DHS/enhancer–promoter connections by non-coding DGAP breakpoint
+positions.** Table reporting the number of predicted ENCODE distal
+DHS/enhancer–promoter connections (Thurman *et al*., 2012)
+(promoter\_DHS\_chr, promoter\_DHS\_start, promoter\_DHS\_end,
+promoter\_DHS\_gene, distal\_DHS\_chr, distal\_DHS\_start,
+distal\_DHS\_end, promoter\_distal\_DHS\_correlation) by non-coding DGAP
+breakpoint positions (DGAP id, chr, start, end) within their ±500 Kb
+analysis windows (window\_start, window\_end).
+
+**Table S14. Genes with predicted disrupted ENCODE distal
+DHS/enhancer–promoter connections by the non-coding DGAP breakpoint
+positions.** Table reporting the names of genes (Genes) separated from
+their predicted enhancers (Disrupted\_enh\_prom\_interactions) (Thurman
+*et al*., 2012).
+
+**Table S15. Identification of genes with potential position effects.**
+Table reporting the candidate genes (ensembl\_gene\_ID, Gene\_chr,
+Gene\_start, Gene\_end, Gene\_name) and their various lines of selection
+evidence for each non-coding DGAP breakpoint position (DGAP id, chr,
+start, end) within their analysis windows (window\_start, window\_end).
+Evidence lines include Hi-C domain inclusion (Hi\_domain, HiC\_chr,
+HiC\_start, HiC\_end), haploinsufficiency (HI\_chr, Gene-start,
+gene\_end, HI\_prob, Haploinsufficiency\_score,), triplosensitivity
+(Triplosensitivity\_score), phenomatch score (PhenoScore, MaxPhenoScore,
+Phone\_percentile, count\_Pheno\_percentile, MaxPheno\_percentile,
+count\_MaxPheno\_percentile, Percentile\_final\_count). All of the
+evidence information is summarized (6Mb, 2Mb, TAD, DHS, Count\_haplo,
+count\_triplo) and the gene rankings are presented in the
+PERC+DHS+TAD+HAPLO+TRIPLO and PERC+DHS+2Mb+HAPLO+TRIPLO columns which
+take different evidence lines into considerarion. Green row highlight
+indicates highest ranking gene, and yellow row highlight indicates
+second best ranking genes.
+
+**Table S16. Translation of DGAP clinical features to HPO terms.** Table
+reporting the HPO identifiers per DGAP case.
+
+**Table S17. Identification of genes with potential position effects for
+known pathogenic positive controls.** Table reporting the candidate
+genes (ensembl\_gene\_ID, Gene\_chr, Gene\_start, Gene\_end, Gene\_name)
+and their various lines of selection evidence for the set of known
+pathogenic rearrangement positive controls (DGAP id, chr, start, end)
+within their analysis windows (window\_start, window\_end) from Redin
+*et al*., 2017. Evidence lines include Hi-C domain inclusion
+(Hi\_domain, HiC\_chr, HiC\_start, HiC\_end), haploinsufficiency
+(HI\_chr, Gene-start, gene\_end, HI\_prob, Haploinsufficiency\_score,),
+triplosensitivity (Triplosensitivity\_score), phenomatch score
+(PhenoScore, MaxPhenoScore, Phone\_percentile, count\_Pheno\_percentile,
+MaxPheno\_percentile, count\_MaxPheno\_percentile,
+Percentile\_final\_count). All of the evidence information is summarized
+(6Mb, 2Mb, TAD, DHS, Count\_haplo, count\_triplo) and the gene rankings
+are presented in the PERC+DHS+TAD+HAPLO+TRIPLO and
+PERC+DHS+2Mb+HAPLO+TRIPLO columns which take different evidence lines
+into considerarion. Yellow row highlight indicates pathogenic genes
+reported by Redin *et al*., 2017.
+
+**Table S18. Identification of disrupted chromatin contacts between
+disrupted DHS and enhancers by the non-coding DGAP breakpoint
+positions.** An agnostic search revealed the existence of chromatin
+contacts between breakpoint-disrupted sequences of DHS sites and gene
+enhancers in Hi-C data of H1-hESC cells at 40 Kb resolution (Dixon *et
+al*., 2012). The reported genes are our top position effect candidate
+genes in the region. Table columns report the candidate gene information
+(Gene\_chr, Gene\_start, Gene\_end, Gene\_name), the associated DGAP
+case information (DGAP\_ID, DGAP\_chr, DGAP\_start, DGAP\_end) and the
+disrupted Hi-C chromatin interaction (HiC\_1\_chr, HiC\_1\_start,
+HiC\_1\_end, HiC\_2\_chr, HiC\_2\_start, HiC\_2\_end,
+HiC\_1\_interaction).
+
+**Table S19. Overlap of non-coding DGAP breakpoint positions with
+DECIPHER cases.** Table reporting the number of DECIPHER cases that
+overlap non-coding DGAP breakpoints (DGAP\_ID, DGAP\_chr, DGAP\_start,
+DGAP\_end). DECIPHER case information such as ID\_patient, chr\_start,
+chr\_end, chr, mean\_ratio, classification\_type and phenotype are
+provided for each overlap.
+
+**Table S20. Genes contained within overlapped DECIPHER cases by
+non-coding DGAP breakpoint positions.** Table reporting the number of
+genes contained within overlapped DECIPHER cases by the non-coding DGAP
+breakpoints (DGAP\_ID, DGAP\_chr, DGAP\_start, DGAP\_end). DECIPHER case
+and gene information such as gene\_count, DECIPHER\_ID, DECIPHER\_chr,
+DECIPHER\_start, DECIPHER\_end, DECIPHER\_value, DECIPHER\_type\_rearr,
+DECIPHER\_phenotype and HG\_symbol are provided for each overlapped
+DECIPHER case.
+
+**Table S21. DECIPHER cases overlapped by non-coding DGAP breakpoint
+positions that fulfilled non-coding selection criteria.** Table
+reporting the number of DECIPHER cases that have non-coding breakpoints.
+DGAP comparison case information (DGAP\_ID, DGAP\_chr, DGAP\_start,
+DGAP\_end) is provided, as well as overlapped DECIPHER case information
+containing id\_patient, chr\_start, chr\_end, chr, mean\_ratio,
+classification\_type and phenotype.
+
+**Table S22. Overlap of non-coding DGAP breakpoint positions with dbVar
+cases.** Table reporting the number of dbVar cases that overlap
+non-coding DGAP breakpoints (DGAP\_chr, DGAP\_start, DGAP\_end,
+DGAP\_ID). dbVar case information such as dbVar ID, Start, End, Variant
+type, Gene, Molecular consequences, Most severe clinical significance,
+1000G minor allele, 1000G MAF, GO-ESP minor allele, GO-ESP MAF, ExAC
+minor allele, ExAC MAF, Publications (PMIDs), Variant allele, Transcript
+change, RefSeq, Protein change, Molecular consequence, HGVS\_c, HGVS\_g,
+HGVS\_ng, HGVS\_p, Condition, Most severe clinical significance,
+Submitters, Highest review status and Last evaluated are provided for
+each overlap.
 
 
 <!-- ======================================================================= -->

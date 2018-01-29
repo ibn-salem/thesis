@@ -72,6 +72,34 @@ python python/convert_bib.py \
   -i text_sources/position_effect/position_effect.main.formated.md \
   -o text_sources/position_effect/position_effect.main.formated.md.fix_bib.md
 
+#-------------------------------------------------------------------------------
+# convert position effect supplemntary data to markdown
+#-------------------------------------------------------------------------------
+pandoc -s text_sources/position_effect/Supplemental_Data_CZetal_070317_tracked_changes.docx \
+  --filter python/despan.py -s \
+  -t markdown \
+  --base-header-level=2 \
+  -o text_sources/position_effect/position_effect.SI.md
+
+cat text_sources/position_effect/position_effect.SI.md \
+ | sed -r  's:\\\[:\[:g' \
+ | sed -r  's:\\\]:\]:g' \
+ > text_sources/position_effect/position_effect.SI.formated.md
+
+# python python/convert_bib.py \
+#   -i text_sources/position_effect/position_effect.SI.formated.md \
+#   -o text_sources/position_effect/position_effect.SI.formated.md.fix_bib.md
+#
+
+#===============================================================================
+# convert position effect figues from .tif to .png
+#===============================================================================
+for FILE in figures/position_effect/*.tif ; do
+  # echo $PDFFILE
+  convert "${FILE}" "${FILE%.*}".png
+done
+
+
 ################################################################################
 # convert TAD_evolution manuscript from .docx to markdown
 ################################################################################
