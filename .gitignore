@@ -25,3 +25,5 @@ figures/*/*/*.synctex.gz
 
 # ignore text_sources folder
 text_sources
+
+data/notes.html

@@ -1,0 +1,71 @@
+---
+title: "Notes on thesis content"
+author: "Jonas Ibn-Salem"
+output: html_document
+---
+
+## Structure of the Intorduction
+- Cell diversity
+- Gene Regulation
+- Enhancers
+    - Enhancer–promoter interaction
+- Techniques to probe the 3D chromatin architecture
+    - Imaging based techniques
+    - 3C based methods
+    - Hi-C 
+    - ChIA-PET
+- Chromatin 3D Structure
+    - Hierarchy of chromatin 3D structure
+        - Chromosomal Territories
+        - A/B-Compartments
+        - TADs
+            - [X] Definition, number, and size
+            - [X] Algorithms to identify TADs
+            - Functional features
+                - [X] CTCF binding at boundaries
+                - [X] housekeeping genes at boundaries
+                - enhancer-gene associations within TADs
+        - Chromatin Loops
+            - Loop domains
+            - Architectural loops (architectural proteins)
+            - Enhancer-promoter loops
+            - Polycomp mediated loops
+            - Gene loops
+    - Architectural Proteins
+    - Loop extrusion model
+    - Nucleosomes / 10nm / 30nm fibers    
+- Evolution of chromatin architecture
+- Disruption of chromatin architecture
+
+
+# Introduction from TAC report
+An important mechanism in eukaryotic gene regulation is the binding of
+transcription factors (TFs) to distal regulatory regions such as
+enhancers which perform looping interactions to the transcription
+machinery at gene promoters. Chromatin interactions can be measured by
+chromatin conformation capture (3C) and its high-throughput variations
+such as 4C, 5C, 6C, ChIA-PET and Hi-C [@Dekker2013; @Lieberman-Aiden2009].
+
+While genome-wide Hi-C data is still only available for a limited number
+of cell-types and has limited resolution, it is successfully used to
+re-discover important features of the three-dimensional chromatin
+architecture in the nucleus that is organized on different levels. In
+interphase, chromosomes occupy distinct territories in the
+nucleus [@Cremer2001] and are further organized in mega-base scale
+A/B-compartments that show specific preferential interaction patterns
+and transcriptional activity [@Lieberman-Aiden2009; @Rao2014]. On smaller
+scales topologically associating domains (TADs) were identified using
+Hi-C [@Dixon2012; @Nora2012; @Sexton2012]. These are regions of several
+hundred kb, that have more interactions within themselves than with
+other regions and are separated by boundaries that insulate interactions
+between loci in different TADs. Interestingly, TADs are largely stable
+across cell-types and conserved between mammals [@Dixon2012; @Rao2014; @Dixon2015; @VietriRudan2015]. However, many cell-type
+specific chromatin interaction loops occur within TADs [@Rao2014; @Dixon2015]. 
+This indicates a stable and cell-type invariant chromatin
+architecture on larger scales, such as TADs, and a more dynamic and
+cell-type specific organization of interactions within TADs that connect
+enhancers and TF binding sites to regulated genes.
+
+
+## Structure of Discussion
+
