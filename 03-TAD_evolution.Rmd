@@ -9,7 +9,7 @@
 > The preprint is availible online: https://doi.org/10.1101/231431.
 > My contributions to this publication is indicated in Table \@ref(tab:contribution). 
 > The source code of the complete analysis is available at GitHub: https://github.com/Juppen/TAD-Evolution.
-> Supplementary figures and links to supplementary tables are shown in Appendix \@ref(sup-TAD-evolution).
+> Supplementary figures and links to supplementary tables are shown in Appendix \@ref(sup-tad-evolution).
 > 
 
 
