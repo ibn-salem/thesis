@@ -59,16 +59,22 @@ association with human disease is one of the oldest and most studied
 topics in clinical genetics. As early as 1959, cytogenetic studies in
 humans linked specific genetic or genomic disorders and intellectual
 disability syndromes to changes in chromosomal ploidy, translocations,
-and DNA duplications and deletions.[@Iafrate2004; @Sebat2004; @Conrad2006; @Hinds2006; @Conrad2010] The discovery of copy-number
+and DNA duplications and deletions [@Lejeune1959; @Ford1959; @Jacobs1959; @Stankiewicz2002; @Iafrate2004].
+
+<!-- @Iafrate2004; @Sebat2004; @Conrad2006; @Hinds2006; @Conrad2010]. -->
+
+The discovery of copy-number
 variants (CNVs) by microarray and sequencing technologies expanded the
 catalogue of genetic variation between individuals to test such
-associations at higher resolution.[@Iafrate2004; @Sebat2004; @Conrad2006; @McCarroll2006; @Hinds2006; @Conrad2010; @Korbel2007; @Alkan2009; @Chen2009; @McKernan2009; @Sudmant2010; @International HapMap2010] Over the years, analysis of
+associations at higher resolution [@Iafrate2004; @Sebat2004; @Hinds2006; @Conrad2006; @Conrad2010; @Korbel2007; @Stankiewicz2010; @Altshuler2010; @Durbin2010; @Carvalho2016].
+<!-- @Alkan2009; @Chen2009; @McKernan2009; @Sudmant2010; @International; @HapMap2010] -->
+Over the years, analysis of
 disease-related structural rearrangements has illuminated genes that are
-mutated in various human developmental disorders.[@Zhang2009; @Theisen2010; @Nambiar2011] Such chromosome
+mutated in various human developmental disorders [@Zhang2009; @Theisen2010; @Nambiar2011; @Higgins2008]. Such chromosome
 aberrations can directly disrupt gene sequences, affect gene dosage,
 generate gene fusions, unmask recessive alleles, reveal imprinted genes,
 or result in alterations of gene expression through additional
-mechanisms such as position effects.[@Zhang2009] The latter is particularly
+mechanisms such as position effects [@Zhang2009]. The latter is particularly
 important for the study of apparently balanced chromosome abnormalities
 (BCAs), such as translocations and inversions, often found outside of
 the hypothesized disease-causing genes (reviewed in [@Kleinjan2005]).
@@ -104,17 +110,17 @@ technique ([@Dekker2002], reviewed in [@DeWit2012]), regulatory issues such as a
 of long-range transcriptional control and position effects can now be
 predicted in terms of chromosome organization. The high resolution view
 of chromosome architecture in diverse human cell lines and
-tissues[@Lieberman-Aiden2009; @Fullwood2009; @Dixon2012; @Sanyal2012; @Phillips-Cremins2013; @Rao2014; @Mifsud2015] has allowed molecular assessment of the disruption of
+tissues[@Lieberman-Aiden2009; @Fullwood2009; @Dixon2012; @Sanyal2012; @Phillips-Cremins2013; @Rao2014; @Mifsud2015; @Dixon2015] has allowed molecular assessment of the disruption of
 regulatory chromatin contacts by pathogenic structural variants and
 single nucleotide changes; examples include the study of limb
-malformations,[@Lupianez2015] leukemia,[@Groschel2014] and obesity,[@Claussnitzer2015] among others.[@Visser2012; @Roussos2014; @Giorgio2015; @Oldridge2015; @Ibn-Salem2014]
+malformations,[@Lupianez2015] leukemia,[@Groschel2014] and obesity,[@Claussnitzer2015] among others.[@Visser2012; @Roussos2014; @Giorgio2015; @Oldridge2015; @Ibn-Salem2014; @Ordulu2016]
 These examples underscore the importance of chromatin interactions in
 quantitative and temporal control of gene expression, which can greatly
 enhance our power to predict pathologic consequences.
 
  To test the feasibility of prediction and clinical interpretation of
 position effects of non-coding chromosome rearrangements, we analyzed 17
-subjects from the Developmental Gene Anatomy Project (DGAP)[@Higgins2008; @Ligon2005; @Kim2008; @Lu2007]
+subjects from the Developmental Gene Anatomy Project (DGAP)[@Higgins2008; @Ligon2005; @Kim2008; @Lu2007; @Redin2017]
 with *de novo* non-coding BCAs classified as variants of uncertain
 significance (VUS). Using publicly available chromatin contact
 information, annotated and predicted regulatory elements, and
@@ -131,7 +137,7 @@ assessment and integration in clinical diagnosis.
 
 BCA breakpoints and clinical data were obtained from DGAP cases for
 which whole-genome sequencing was performed using a previously described
-large-insert jumping library approach.[@Higgins2008; @Ligon2005; @Kim2008; @Lu2007; @Redin2017] A total of 151 cases
+large-insert jumping library approach.[@Higgins2008; @Ligon2005; @Kim2008; @Lu2007; @Redin2017; @Talkowski2011] A total of 151 cases
 were filtered to select only subjects whose translocation or inversion
 breakpoints fall within intergenic regions (GRCh37) and did not overlap
 known long intergenic non-coding RNAs (lincRNAs) or pseudogenes, as
@@ -288,7 +294,7 @@ extremely rare genomic variants.
 
 To study the structural and evolutionary context of BCAs and their
 impact on nuclear architecture and gene expression, we used data
-generated by DGAP,[@Higgins2008; @Ligon2005; @Kim2008; @Lu2007] the largest collection of sequenced
+generated by DGAP,[@Higgins2008; @Ligon2005; @Kim2008; @Lu2007; @Redin2017] the largest collection of sequenced
 balanced chromosome rearrangements from individuals with abnormal
 developmental and cognitive phenotypes, many of which have yet to be
 investigated in detail. Each studied DGAP BCA has two breakpoint
@@ -476,7 +482,7 @@ real-time PCR analyses revealed *SOS1* as having reduced expression in
 DGAP163-derived LCLs compared to three normal sex-matched controls
 (Figure \@ref(fig:position-effect-2)).Expression assessment for second-tier candidates *PAK3*,
 *MID2* and *POU3F4* in DGAP176 LCLs did not deviate substantially from
-their control expression values (Figure S1); further searches into the
+their control expression values (Figure \@ref(fig:position-effect-S1)); further searches into the
 Genotype-Tissue Expression (GTEx) project[@Lonsdale2013] reveal that *PAK3*, *MID2*
 and *POU3F4* have low expression in LCLs, which would have made
 assessing changes in expression of these genes technically difficult.
@@ -584,7 +590,7 @@ three-dimensional nucleus at varying hierarchical levels that are
 important for the regulation of gene expression,[@DeWit2012] with primary roles
 in embryonic development and disease.[@Bonev2016] Several studies have analyzed
 the impact of structural variants in disruption of the regulatory
-chromatin environment leading to disease;[@Lupianez2015; @Groschel2014; @Visser2012; @Roussos2014; @Ibn-Salem2014] these
+chromatin environment leading to disease;[@Lupianez2015; @Groschel2014; @Visser2012; @Roussos2014; @Giorgio2015; @Ibn-Salem2014] these
 studies have set the precedent for integrative analyses of disrupted
 chromatin conformation to expedite functional annotations of non-coding
 chromosome rearrangements.
