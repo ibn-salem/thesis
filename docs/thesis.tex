@@ -270,11 +270,11 @@ expression}\label{regulation-of-gene-expression}
 
 Each cell in our body originate from the same fertilized stem cell and
 has therefore virtually the same genome. However, different cell types
-have distinct morphologies and fulfill diverse functions. This diversity
-is archived by expressing only a subset of genes to a specific extent
-for any cell type, developmental state, and environmental condition.
-Gene expression is therefore complex and controlled on many molecular
-levels \citep{Lelli2012}.
+have distinct morphological and fulfill diverse functions. This
+diversity is archived by expressing only a subset of genes to a specific
+extent for any cell type, developmental state, and environmental
+condition. Gene expression is therefore complex and controlled on many
+molecular levels \citep{Lelli2012}.
 
 The genomic DNA sequence itself encodes cis-regulatory modules (CRMs) to
 which transcription factors (TFs) bind by recognizing specific DNA
@@ -289,7 +289,7 @@ remodel it to make it accessible for other TFs that require open
 chromatin and specific post-translational histone modifications to bind
 enhancers and promoters and regulate target gene expression.
 
-Another layer in gene regulation is the three-dimensonal foldig
+Another layer in gene regulation is the three-dimensional folding
 structure of chromatin in the nucleus. However, most of the cell-type
 specific gene regulation that accounts for cell differentiation in
 development and morphological diversification in evolution, are driven
@@ -518,7 +518,7 @@ and cannot be directly compared.
 The first studies on TADs identified around 3000 TADs in human and mouse
 genomes with a median size of \textasciitilde{}800 kb \citep{Dixon2012}
 and \textasciitilde{}100 kb in \emph{Drosophila} genomes
-\citep{Sexton2012}. Analysis of 1kb or 5kb resolution Hi-C matrixes
+\citep{Sexton2012}. Analysis of 1kb or 5kb resolution Hi-C matrices
 resulted in nested ``contact domains'' with a median size of 185 kb
 (range 40 kb - 3 Mb) in human and mouse cells \citep{Rao2014}.
 
@@ -541,7 +541,7 @@ to regions of early and late replication timing
 \citep{Dixon2012}. Importantly, enhancer-promoter interactions seems to
 be mostly constrained within TADs \citep{Shen2012}
 
-Alltogether, there is accumulating evidence that TADs are fundamental
+Altogether, there is accumulating evidence that TADs are fundamental
 units of chromosome organization \citep{Dixon2016}
 
 \subsection{Chromatin loops}\label{chromatin-loops}
@@ -551,28 +551,107 @@ chromosome architecture. First, dynamic nucleosome contacts from
 clutches and fibers. These engage in long-range chromatin loops, some of
 which are stabilized by architectural proteins, such as CTCF and
 cohesin, and lead to the formation of TADs. TADs in form cluster by
-their epi-genomic type into A/B compartments and coalescence of
+their epigenomic type into A/B compartments and coalescence of
 compartments in the same chromosome forms chromosome territories
 \citep{Bonev2016}.
 
 \section{Dynamics of chromatin
 structure}\label{dynamics-of-chromatin-structure}
 
+It is important to keep in mind how chromosome folding change during
+cell division. Spatial organization is generally studied in
+non-synchronous cells, of which interphase cells make up the biggest
+proportion \citep{Bouwman2015}. In interphase, chromosomes are
+decondenced and hierarchically organized into the territories,
+compartments, and TADs as described above. To prepare for cell division
+chromosomes untangle and condense, while transcription ceases almost
+entirely. Mitotic chromosomes do not show preferential organization,
+such as compartments or TAS \citep{Naumova2013}. Enhancer-promoter
+looping might absent as well \citep{Dekker2014}. After cell division,
+chromosomes decondense and fold into the interphase hierarchy. While
+individual genes are relatively mobile during early G1 phase, they
+become quickly constrained to a small nuclear sub-volume, after which
+genome folding is relatively stable for the rest of the interphase
+\citep{Shubb2002, Walter2003}.
+
 \begin{itemize}
 \tightlist
 \item
-  Cell-type invariant TADs\\
+  The topological organization of chromatin was shown to undergo a
+  dramatic reorganization in M-phase and to be restored in early
+  G\textsubscript{1} phase \citep{Naumova2013}.
 \item
-  Conservation of TADs
+  These dynamics during cell-cycle raise the question of how the pattern
+  of 3D organization is re-established with each cell division.
 \end{itemize}
 
-\section{Changes of genome folding in evoltuion and disease
-genomes}\label{changes-of-genome-folding-in-evoltuion-and-disease-genomes}
+\subsection{Charmatin dynamics across cell
+types}\label{charmatin-dynamics-across-cell-types}
+
+The primary domain architecture of chromatin is largely preserved in
+different cell types and even across species \citep{Dixon2012, Rao2014}.
+However, chromatin dynamics specify distinct gene expression programs
+and biological functions \citep{Bonev2016}. One example of dynamic
+chromatin organization ins dosage compensation, in the X chromosome is
+transcriptionally inactivated in human female cells. Whereas normal TAD
+structures were observed on the active X chromosome, only two very large
+domains were identified on the inactive X chromosome in
+\emph{Drosophila} and human \citep{Deng2015, Rao2014}. Other examples
+include differences in terminally differentiated post-mitotic cells. For
+example, rod photo-receptor cells in nocturnal mammals have an unusual,
+inverted nuclear architecture, in which heterochromatin is enriched in
+the center of the nucleus and is absent from the periphery
+\citep{Solovei2013}. Further biological processes related to cell cycle
+exit, strongly affect chromatin three-dimensional organization. These
+are quiescence in yeast, where intrachromosomal contacts increase
+\citep{Rutledge2015}, and senescence, where heterochromatin relocalizes
+from the nuclear periphery to the interior \citep{Chandra2015}.
+
+Subtler effects of changes in chromatin reorganization are observed
+during biological processes such as cell differentiation and signaling
+\citep{Bonev2016}. During the transition of embryonal stem cells (ESC)
+from ground-state of pluripotency to a primed state for differentiation,
+a gradual and reversible establishment of long-range contacts between
+bivalent gene promoters \citep{Joshi2015}. These changes depended on
+Polycomb repressive complex 2, underscoring its role in establishing 3D
+genome organization in early development, as was previously shown for
+\emph{Drosophila} \citep{Bantignies2011}. To address the question, how
+nuclear architecture change during lineage specification, a recent Hi-C
+study produced Hi-C interaction maps in ESCs and four ESC-derived
+lineages representing early developmental stages \citep{Dixon2015}.
+Interestingly, TADs are mostly unchanged during lineage specification,
+but intra-TAD interactions in some domains were strongly altered and
+these changes correlate with active chromatin state \citep{Dixon2015}.
+Furthermore, often entire TADs relocate from one compartment to another,
+which was also associated with transcriptional changes of genes in these
+TADs. Also in B cell differentiation, several regions change compartment
+identity and relocate from the nuclear periphery to the interior
+\citep{Lin2012}.
+
+The dynamics of chromatin architecture were also studied in response to
+stimuli, such as hormone signaling by progestin or estradiol. Despite
+large changes in the transcriptional activity, only small changes were
+observed in the domain organization of chromatin \citep{LeDily2014}.
+However, often the entire TAD responded as a unit by changing histone
+modifications and switching between A and B compartment. This suggests,
+that transcription status is coordinated within TADs.
+
+\section{Chromatin organization and
+evolution}\label{chromatin-organization-and-evolution}
 
 \begin{itemize}
 \tightlist
 \item
   Evolution of chromatin architecture
+\item
+  Conservation of TADs
+\end{itemize}
+
+\section{Disruption of chromatin architecture in
+disease}\label{disruption-of-chromatin-architecture-in-disease}
+
+\begin{itemize}
+\tightlist
 \item
   Disruption of chromatin architecture
 \end{itemize}
@@ -660,13 +739,13 @@ predicted by ChIP-seq and sequence features?}
 
 \section{Structure of this thesis}\label{structure-of-this-thesis}
 
-The followig four chapters adress and discuss these questions. First, we
+The following four chapters dress and discuss these questions. First, we
 focus on duplicated genes in the human genome. Because of their related
 sequence and function, shared evolutionary history, and close
 colocalization in the genome they represent an interesting model to
 study how genome folding is related to regulation of gene expression
 during evolution (Chapter \ref{paralog-regulation}). We analyze
-whole-genome alignement between human and other vertebrate genomes to
+whole-genome alignment between human and other vertebrate genomes to
 systematically investigate whether TADs represent conserved building
 blocks of genomes and whether rearrangements of TADs lead to altered
 gene expression programs (Chapter \ref{TAD-evolution}). Next, we will
