@@ -154,11 +154,41 @@ These engage in long-range chromatin loops, some of which are stabilized by arch
 TADs in form cluster by their epi-genomic type into A/B compartments and coalescence of compartments in the same chromosome forms chromosome territories [@Bonev2016]. 
 
 ## Dynamics of chromatin structure
-- Cell-type invariant TADs  
+It is important to keep in mind how chromosome folding change during cell division. Spatial organization is geerally studied in non-synchronous cells, of which interphase cells make up the biggest proportion [@Bouwman2015].
+In interphase, chromosomes are decondenced and hierarchically orgnized into the territories, compartemtns, and TADs as decribed above. 
+To prepare for cell division chromosomes untangel and condense, while transcritpion ceases almost entirely. Miotic chromosomes do not show prefferential organization, such as compartments or TAS [@Naumova2013]. Enhancer-promoter looping might absenct as well [@Dekker2014].
+After cell division, chromosomes decondense and fold into the interphase hierarchy. While individual genes are realtively mobile during early G1 phase, they become quickly constrained to a small nuclear subvolume, after which genome fodling is relatively stable for the rest of the interphase [@Shubb2002; @Walter2003].
+
+- The topological organization of chromatin was shown to undergo a dramatic reorganization in M-phase and to be restored in early G~1~ phase [@Naumova2013].
+- These dynamics during cell-cicle rais the question of how the patern of 3D organization is re-established with each cell division.
+
+### Charmatin dynamics across cell types
+<!-- - Variablity between cell types and conditions -->
+<!-- - Cell-type invariant TADs   -->
+  
+The primary domain architecture of chromatin is largely preserved in different cell types and even across species [@Dixon2012; @Rao2014].
+However, chromatin dynamics specify distinct gene expression programmes and biological functions [@Bonev2016].
+One example of dynamic chromatin organization ins dosage compensation, in the X chromosome is transcriptionally inactivated in human female cells. 
+Whereas normal TAD structures were observed on the active X chromosome, only two very large domains were identified on the inactive X chromosome in *Drosophila* and human [@Deng2015; @Rao2014].
+Other examples include differences in terminally differentiated post-mitotic cells. For example, rod photoreceptor cells in nocturnal mammals have an unusual, inverted nuclear architecture, in which heterochromatin is enriched in the center of the nucleus and is absent from the periphery [@Solovei2013]. 
+Further biological processes related to cell cycle exit, strongly affect chromatin three-dimensional organization. These are quiescence in yeast, where intrachromosomal contacts increase [@Rutledge2015], and senescence, where heterochromatin relocalizes from the nuclear periphery to the interior [@Chandra2015].
+
+Subtler effects of changes in chromatin reorganization are observed during biological processes such as cell differentiation and signaling [@Bonev2016].
+During the transition of embryonal stem cells (ESC) from ground-state of pluripotency to a primed state for differentiation, a gradual and reversible establishment of long-range contacts between bivalent gene promoters [@Joshi2015]. These changes depended on Polycomb repressive complex 2, underscoring its role in establishing 3D genome organization in early development, as was previously shown for *Drosophila* [@Bantignies2011]. To address the question, how nuclear architecture change during lineage specification, a recent Hi-C study produced Hi-C interaction
+maps in ESCs and four ESC-derived lineages representing early developmental stages [@Dixon2015]. Interestingly, TADs are mostly unchanged during lineage specification, but intra-TAD interactions in some domains were strongly altered and these changes correlate with active chromatin state [@Dixon2015].
+Furthermore, often entire TADs relocate from one compartment to another, which was also associated with transcriptional changes of genes in these TADs. 
+Also in B cell differentiation, several regions change compartment identity and relocate from the nuclear periphery to the interior [@Lin2012].
+
+The dynamics of chromatin architecture were also studied in response to stimuli, such as hormone signaling by progestin or estradiol. Despite large changes in the transcriptional activity, only small changes were observed in the domain organization of chromatin [@LeDily2014]. 
+However, often the entire TAD responded as a unit by changing histone modifications and switching between A and B compartment. This suggests, that transcription status is coordinated within TADs.
+
+
+
+## Chromatin organization and evolution
+- Evolution of chromatin architecture
 - Conservation of TADs
 
-## Changes of genome folding in evoltuion and disease genomes
-- Evolution of chromatin architecture
+## Disruption of chromatin architecture in disease
 - Disruption of chromatin architecture
 
 
