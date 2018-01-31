@@ -1,10 +1,6 @@
 #!/bin/sh
 
-# build html version
+# build book in seprate R sessions for all output formats
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
-
-# build pdf version
-Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book', clean = FALSE)"
-
-# build epub version
-Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book', clean = FALSE)"
+Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
+Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
