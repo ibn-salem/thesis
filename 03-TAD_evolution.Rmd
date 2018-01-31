@@ -297,7 +297,7 @@ sequences while prohibiting the influence of other sequences [@Symmons2014; @Lup
 TAD disruption would prevent formerly established contacts.
 Rearrangements of TADs might also enable the recruitment of new
 cis-regulatory sequences which would alter the expression patterns of
-genes in rearranged TADs [@Lupianez2015; @Redin2016]. Because of these detrimental effects,
+genes in rearranged TADs [@Lupianez2015; @Redin2017]. Because of these detrimental effects,
 rearranged TADs should largely be eliminated by purifying selection.
 However, rearrangement of TADs could also enable the expression of genes
 in a new context and be selected if conferring an advantage. Therefore,
@@ -392,7 +392,7 @@ regulation of transcription [@Andrey2017]. The disruption of these enclosed
 regulatory environments enables the recruitment of other cis-regulatory
 sequences and might prevent formerly established interactions [@Montavon2012].
 The detrimental effects of such events have been shown in the study of
-diseases [@Redin2016; @Zepeda-Mendoza2017]. There are also incidences where pathogenic
+diseases [@Redin2017; @Zepeda-Mendoza2017]. There are also incidences where pathogenic
 phenotypes could be specifically attributed to enhancers establishing
 contacts to promoters that were formerly out of reach because of
 intervening TAD boundaries [@Ibn-Salem2014; @Lupianez2015; @Spielmann2012]. 
@@ -458,7 +458,7 @@ in conserved TADs and more divergent expression patterns in rearranged
 TADs. This supports a model in which disruption of TADs are most often
 disadvantageous for an organism. Structural variations disrupting TADs
 can lead to miss regulation of neighboring genes as shown for genetic
-diseases [@Ibn-Salem2014; @Lupianez2015; @Redin2016; @Franke2016] and cancers [@Hnisz2016; @Northcott2014; @Weischenfeldt2016].
+diseases [@Ibn-Salem2014; @Lupianez2015; @Redin2017; @Franke2016] and cancers [@Hnisz2016; @Northcott2014; @Weischenfeldt2016].
 
 Interestingly, we observed higher gene expression conservation for human
 genes within TADs compared to genes outside TADs. The larger syntenic
