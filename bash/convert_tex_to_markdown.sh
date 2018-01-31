@@ -129,3 +129,13 @@ for PDFFILE in figures/TAD_evolution/fig*.pdf ; do
   convert -density 600 "${PDFFILE}" "${PDFFILE%.*}".png
 done
 
+
+################################################################################
+# Filter .bib file for only contained references
+################################################################################
+python python/clean_bib.py \
+  -i bib/PhD.bib \
+  -rmd *.Rmd \
+  -o bib/PhD_clean.bib
+
+
