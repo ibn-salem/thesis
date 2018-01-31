@@ -22,7 +22,7 @@ def read_citations(rmd_files) :
 
     for file in rmd_files:
       content = file.read()
-      keys = re.findall("(@[a-zA-Z0-9_]+)[\] ;]", content)
+      keys = re.findall("(@[a-zA-Z0-9_-]+)[\] ;]", content)
 
       cite_keys |= set(keys)
 
