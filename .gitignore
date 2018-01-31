@@ -12,7 +12,7 @@ docs
 # .travis.yml
 LICENSE
 
-thesis.log
+#thesis.log
 packages.bib
 
 # ignore intermidiate figure files
