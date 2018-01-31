@@ -18,10 +18,10 @@ packages.bib
 # ignore intermidiate figure files
 figures/*.log
 figures/*.synctex.gz
-figures/*/*.png
+#figures/*/*.png
 figures/*/*.log
 figures/*/*.synctex.gz
-figures/*/*/*.png
+#figures/*/*/*.png
 figures/*/*/*.log
 figures/*/*/*.synctex.gz
 
