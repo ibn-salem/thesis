@@ -60,14 +60,12 @@ topics in clinical genetics. As early as 1959, cytogenetic studies in
 humans linked specific genetic or genomic disorders and intellectual
 disability syndromes to changes in chromosomal ploidy, translocations,
 and DNA duplications and deletions [@Lejeune1959; @Ford1959; @Jacobs1959; @Stankiewicz2002; @Iafrate2004].
-
-<!-- @Iafrate2004; @Sebat2004; @Conrad2006; @Hinds2006; @Conrad2010]. -->
-
 The discovery of copy-number
 variants (CNVs) by microarray and sequencing technologies expanded the
 catalogue of genetic variation between individuals to test such
-associations at higher resolution [@Iafrate2004; @Sebat2004; @Hinds2006; @Conrad2006; @Conrad2010; @Korbel2007; @Stankiewicz2010; @Altshuler2010; @Durbin2010; @Carvalho2016].
-<!-- @Alkan2009; @Chen2009; @McKernan2009; @Sudmant2010; @International; @HapMap2010] -->
+associations at higher resolution [@Iafrate2004; @Sebat2004; @Hinds2006; @Conrad2006; @Conrad2010; @Korbel2007; @Stankiewicz2010; @Altshuler2010; @Carvalho2016].
+
+<!-- [@Iafrate2004; @Sebat2004; @Hinds2006; @Conrad2006; @Conrad2010; @Korbel2007; @Stankiewicz2010; @Altshuler2010; @Durbin2010; @Carvalho2016]. -->
 Over the years, analysis of
 disease-related structural rearrangements has illuminated genes that are
 mutated in various human developmental disorders [@Zhang2009; @Theisen2010; @Nambiar2011; @Higgins2008]. Such chromosome
