@@ -96,7 +96,7 @@ The eukaryotic genome is highly organized in the interphase nucleus.
 Chromosomes occupy distinct spatial regions, called chromosome territories, and 
 intermingle less than one would expect by chance [@Cremer2001]. This was first observed 
 using imaging based approaches, and is reflected in Hi-C interaction maps, where inter-chromosomal contacts occur an order of magnitudes less frequent than intra-chromosomal contacts [@Lieberman-Aiden2009].
-However, despite this spatial segregation of chromosome, intermingling of chromosome occurs and is associated with chromosomal translocations [@Branco2006, @Roukos2013, @Roukos2014].
+However, despite this spatial segregation of chromosome, intermingling of chromosome occurs and is associated with chromosomal translocations [@Branco2006; @Roukos2013; @Roukos2014].
 There are also specific gene regulatory interactions between different chromosomes [@DeLaat2007], for example olfactory receptor genes cluster densely in the nucleus of olfactory neurons to facilitate mono-allelic expression of a single receptor gene per cell [@Monahan2015].
 While there are specific inter-chromosomal contacts, the genome is non-randomly organized in chromosomes which occupy distinct territories in the spacial nucleus.
 
@@ -122,7 +122,7 @@ TADs can be identified from Hi-C interaction maps computationally by different a
 number of upstream versus downstream interactions of this bin. Using hidden Markov models TAD boundaries where then identified in regions where DI is changing drastically [@Dixon2012]. 
 Other algorithms compute an insulation score as the extent to which interactions to cross potential TAD boundaries [@Crane2015].
 Later the Arrowhead algorithm was introduced to find "contact domains" as smaller nested structures along the diagonal of high resolution Hi-C matrices [@Rao2014].
-Furthermore, when analyzing Hi-C interactions at different length scales, hierarchies of TADs and sub-TADs could be identified that overlap each other [@Filippova2014, @Fraser2015].  
+Furthermore, when analyzing Hi-C interactions at different length scales, hierarchies of TADs and sub-TADs could be identified that overlap each other [@Filippova2014; @Fraser2015].  
 The different algorithms and parameters used in each is only one source of variation 
 in reliably identifying TADs. Also, the resolution of Hi-C maps, which is mainly defined by
 sequencing depths but also the Hi-C protocol itself [@Rao2014], as well as different 
