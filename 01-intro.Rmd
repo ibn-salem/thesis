@@ -157,7 +157,7 @@ TADs in form cluster by their epigenomic type into A/B compartments and coalesce
 It is important to keep in mind how chromosome folding change during cell division. Spatial organization is generally studied in non-synchronous cells, of which interphase cells make up the biggest proportion [@Bouwman2015].
 In interphase, chromosomes are decondenced and hierarchically organized into the territories, compartments, and TADs as described above. 
 To prepare for cell division chromosomes untangle and condense, while transcription ceases almost entirely. Mitotic chromosomes do not show preferential organization, such as compartments or TAS [@Naumova2013]. Enhancer-promoter looping might absent as well [@Dekker2014].
-After cell division, chromosomes decondense and fold into the interphase hierarchy. While individual genes are relatively mobile during early G1 phase, they become quickly constrained to a small nuclear sub-volume, after which genome folding is relatively stable for the rest of the interphase [@Shubb2002; @Walter2003].
+After cell division, chromosomes decondense and fold into the interphase hierarchy. While individual genes are relatively mobile during early G1 phase, they become quickly constrained to a small nuclear sub-volume, after which genome folding is relatively stable for the rest of the interphase [@Chubb2002; @Walter2003].
 
 - The topological organization of chromatin was shown to undergo a dramatic reorganization in M-phase and to be restored in early G~1~ phase [@Naumova2013].
 - These dynamics during cell-cycle raise the question of how the pattern of 3D organization is re-established with each cell division.
