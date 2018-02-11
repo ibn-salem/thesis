@@ -306,15 +306,14 @@ distinct, and most of them presented with congenital developmental and
 neurological conditions not recognized as a known syndrome or genomic
 disorder (see clinical descriptions in Supplemental Note: Case Reports).
 
-<!-- ======================================================= -->
+<!-- ---------------------------------------------------------------- -->
 ```{r position-effect-1, fig.cap='(ref:position-effect-1)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/position_effect/Figure1.png")
 ```
-(ref:position-effect-1) **Chromosome locations of the 17 analyzed DGAP cases with non-coding BCAs.** Breakpoint positions are marked with a blue line and
-the corresponding DGAP number. All chromosomes are aligned by the
-centromere (marked in pink) and are indicated above by their
-corresponding chromosome number.
-<!-- ======================================================= -->
+
+(ref:position-effect-1) **Chromosome locations of the 17 analyzed DGAP cases with non-coding BCAs.** Breakpoint positions are marked with a blue line and the corresponding DGAP number. All chromosomes are aligned by the centromere (marked in pink) and are indicated above by their corresponding chromosome number.
+
+<!-- ---------------------------------------------------------------- -->
 
 Further analysis revealed that BCA breakpoints were significantly
 depleted for overlapping annotated promoters or transcription factor
@@ -488,18 +487,14 @@ This points to the importance of the availability of tissues and cell
 lines relevant to the studied phenotypes, or the capacity to generate
 animal models that reproduce the observed BCAs for further analysis.
 
-<!-- ======================================================= -->
+<!-- ---------------------------------------------------------------- -->
 ```{r position-effect-2, fig.cap='(ref:position-effect-2)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/position_effect/Figure2.png")
 ```
-(ref:position-effect-2) **Assessment of gene expression changes for DGAP163-derived LCLs.** 
-Each column represents the ΔCT results of three culture
-replicates, with four technical replicates each, compared to three
-sex-matched control cell lines. Error bars indicate the standard
-deviation calculated from the biological replicates. The Mann-Whitney U
-test p-value is provided for the comparison between expression values of
-*SOS1* and the control *GUSB*.
-<!-- ======================================================= -->
+
+(ref:position-effect-2) **Assessment of gene expression changes for DGAP163-derived LCLs.** Each column represents the ΔCT results of three culture replicates, with four technical replicates each, compared to three sex-matched control cell lines. Error bars indicate the standard deviation calculated from the biological replicates. The Mann-Whitney U test p-value is provided for the comparison between expression values of *SOS1* and the control *GUSB*.
+
+<!-- ---------------------------------------------------------------- -->
 
 
 ### Identification of subjects with shared non-coding chromosome alterations and phenotypes
@@ -666,17 +661,14 @@ regulatory elements. Nonetheless, insight into the molecular pathway of
 disorders may be forthcoming from our approach and of value in the
 management of some individuals.
 
-<!-- ======================================================= -->
+<!-- ---------------------------------------------------------------- -->
 ```{r position-effect-3, fig.cap='(ref:position-effect-3)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/position_effect/Figure3.png")
 ```
-(ref:position-effect-3) **Disrupted enhancer-promoter DHS interactions predicted for *SOS1* ** 
-(gene position indicated by asterisk). The color graded rectangle
-represents the correlation values for the interactions as reported by
-ENCODE. The dashed line indicates the translocation breakpoint position
-in chromosome 2. Lilac colored rectangles represent genes, and pink
-rectangles show TAD positions annotated in H1-hESC.
-<!-- ======================================================= -->
+
+(ref:position-effect-3) **Disrupted enhancer-promoter DHS interactions predicted for *SOS1* **  (gene position indicated by asterisk). The color graded rectangle represents the correlation values for the interactions as reported by ENCODE. The dashed line indicates the translocation breakpoint position in chromosome 2. Lilac colored rectangles represent genes, and pink rectangles show TAD positions annotated in H1-hESC.
+
+<!-- ---------------------------------------------------------------- -->
 
 All predicted candidate genes have different lines of evidence
 supporting their selection, starting with a significant phenomatch score

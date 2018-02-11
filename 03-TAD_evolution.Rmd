@@ -2,7 +2,7 @@
 
 ###  Preamble {-}
 > 
-> This chapter is submitted as a corresponding-author paper to BMC Biology and currently under review. A preprint is published at bioRxiv:
+> This chapter is submitted as a corresponding-author paper to BMC Biology and is currently under review. A preprint is published at bioRxiv:
 >
 > Krefting J, Andrade-Navarro MA, **Ibn-Salem J**. **_Evolutionary stability of topologically associating domains is associated with conserved gene regulation_**. bioRxiv. 2017. [doi:doi.org/10.1101/231431](https://doi.org/10.1101/231431).
 > 
@@ -127,28 +127,14 @@ of such fills represent borders of syntenic regions and were extracted
 as rearrangement breakpoints for further analysis (see Methods for
 details).
 
-<!-- ======================================================= -->
+<!-- ---------------------------------------------------------------- -->
 ```{r TadEvo1, fig.cap='(ref:TadEvo1)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/TAD_evolution/fig1_v02.png")
 ```
-(ref:TadEvo1) **Number and size distributions of fill sizes of whole-genome alignments
-between human and 12 other species. ** 
-**(A)** Number of syntenic alignment
-blocks (fills) between human (hg38) and 12 other species. Top-level
-fills are the largest and highest scoring chains and occur at the top
-level in the hierarchy in net files (top panel). Non-syn fills map to
-different chromosomes as their parent fills in the net files (bottom
-panel). 
-**(B)** Size distribution of top-level (top panel) and
-non-syntenic (bottom panel) fills as violin plot. 
-**(C)** Number of
-identified rearrangement breakpoints between human and 12 other species.
-Breakpoints are borders of top-level or non-syn fills that are larger or
-equal than a given size threshold (x-axis). 
-**(D)** Phylogenetic tree
-with estimated divergence times according to
-[*http://timetree.org/*](http://timetree.org/).
-<!-- ======================================================= -->
+
+(ref:TadEvo1) **Number and size distributions of fill sizes of whole-genome alignments between human and 12 other species. **  **(A)** Number of syntenic alignment blocks (fills) between human (hg38) and 12 other species. Top-level fills are the largest and highest scoring chains and occur at the top level in the hierarchy in net files (top panel). Non-syn fills map to different chromosomes as their parent fills in the net files (bottom panel).  **(B)** Size distribution of top-level (top panel) and non-syntenic (bottom panel) fills as violin plot.  **(C)** Number of identified rearrangement breakpoints between human and 12 other species. Breakpoints are borders of top-level or non-syn fills that are larger or equal than a given size threshold (x-axis).  **(D)** Phylogenetic tree with estimated divergence times according to [*http://timetree.org/*](http://timetree.org/).
+
+<!-- ---------------------------------------------------------------- -->
 
 First, we analyzed the number and size distributions of top-level and
 non-syntenic fills between human and other species (Fig \@ref(fig:TadEvo1)). As
@@ -181,34 +167,17 @@ computed the number of overlapping rearrangement breakpoints. This
 results in a size-normalized distribution of rearrangement breakpoints
 along TAD regions. 
 
-<!-- ======================================================= -->
+<!-- ---------------------------------------------------------------- -->
 ```{r TadEvo2, fig.cap='(ref:TadEvo2)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/TAD_evolution/fig2_v02.png")
 ```
-(ref:TadEvo2) **Evolutionary rearrangements are enriched at TAD boundaries.** 
-**(A)** Distribution of evolutionary rearrangement breakpoints between human and
-mouse around hESC TADs. Each TAD and 50% of its adjacent sequence was
-subdivided into 20 bins of equal size, the breakpoints were assigned to
-the bins and their number summed up over the corresponding bins in all
-TADs. Blue color scale represents breakpoints from different fill-size
-thresholds. Dotted lines in gray show simulated background controls of
-randomly placed breakpoints. **(B)** Distribution of rearrangement
-breakpoints between human and: chimpanzee, cattle, opossum, and
-zebrafish, at 10 kb size threshold around hESC TADs. Dotted lines in
-gray show simulated background controls of randomly placed breakpoints.
-**(C)** Enrichment of breakpoints at TAD boundaries as log-odds-ratio
-between actual breakpoints at TAD boundaries and randomly placed
-breakpoints. Enrichment is shown for three different fill size
-thresholds (blue color scale) and TADs in hESC from [@Dixon2012] (top) and
-contact domains in human GM12878 cells from [@Rao2014] (bottom),
-respectively. Asterisks indicate significance of the enrichment using
-Fisher’s exact test (\*p &lt;= 0.05; \*\*p &lt;= 0.01; \*\*\*p &lt;=
-0.001).
-<!-- ======================================================= -->
+
+(ref:TadEvo2) **Evolutionary rearrangements are enriched at TAD boundaries.** **(A)** Distribution of evolutionary rearrangement breakpoints between human and mouse around hESC TADs. Each TAD and 50% of its adjacent sequence was subdivided into 20 bins of equal size, the breakpoints were assigned to the bins and their number summed up over the corresponding bins in all TADs. Blue color scale represents breakpoints from different fill-size thresholds. Dotted lines in gray show simulated background controls of randomly placed breakpoints. **(B)** Distribution of rearrangement breakpoints between human and: chimpanzee, cattle, opossum, and zebrafish, at 10 kb size threshold around hESC TADs. Dotted lines in gray show simulated background controls of randomly placed breakpoints. **(C)** Enrichment of breakpoints at TAD boundaries as log-odds-ratio between actual breakpoints at TAD boundaries and randomly placed breakpoints. Enrichment is shown for three different fill size thresholds (blue color scale) and TADs in hESC from [@Dixon2012] (top) and contact domains in human GM12878 cells from [@Rao2014] (bottom), respectively. Asterisks indicate significance of the enrichment using Fisher’s exact test (\*p &lt;= 0.05; \*\*p &lt;= 0.01; \*\*\*p &lt;= 0.001).
+
+<!-- ---------------------------------------------------------------- -->
 
 First, we analyzed the distribution of breakpoints at
-different size thresholds between human and mouse at hESC TADs (Fig.
-2A). Rearrangement breakpoints are clearly enriched at TAD boundaries
+different size thresholds between human and mouse at hESC TADs (Fig. \@ref(fig:TadEvo2)A). Rearrangement breakpoints are clearly enriched at TAD boundaries
 and depleted within TAD regions. Notably, this enrichment is observed
 for all size thresholds applied in the identification of rearrangement
 breakpoints. Next, we also analyzed the breakpoints from chimpanzee,
@@ -257,17 +226,14 @@ important developmental genes. Indeed we saw a strong enrichment around
 GRBs (Fig \@ref(fig:TadEvo3)A). This is consistent with previous studies in *Drosophila*
 and Fish where CNE arrays often correspond to syntenic blocks [@Engstrom2007; @Dimitrieva2013].
 
-<!-- ======================================================= -->
+<!-- ---------------------------------------------------------------- -->
 ```{r TadEvo3, fig.cap='(ref:TadEvo3)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/TAD_evolution/fig3_v02.png")
 ```
-(ref:TadEvo3) **Rearrangement breakpoint distribution around GRBs and GRB-TADs. **
-**(A)** Rearrangement breakpoints between mouse and human around 816 GRBs.
-**(B)** Breakpoint distribution around GRB-TADs and non-GRB-TADs.
-GRB-TADs are defined as TADs overlapping more than 80% with GRBs and
-non-GRB-TADs have less than 20% overlap with GRBs. Breakpoints using a
-10 kb fill size threshold are shown.
-<!-- ======================================================= -->
+
+(ref:TadEvo3) **Rearrangement breakpoint distribution around GRBs and GRB-TADs. ** **(A)** Rearrangement breakpoints between mouse and human around 816 GRBs. **(B)** Breakpoint distribution around GRB-TADs and non-GRB-TADs. GRB-TADs are defined as TADs overlapping more than 80% with GRBs and non-GRB-TADs have less than 20% overlap with GRBs. Breakpoints using a 10 kb fill size threshold are shown.
+
+<!-- ---------------------------------------------------------------- -->
 
 Next, we subdivided TADs according to their overlap with GRBs in
 GRB-TADs (&gt; 80% overlap) and non-GRB-TADs (&lt; 20% overlap) as in
@@ -328,21 +294,14 @@ in TADs and is consistent with the observation of housekeeping genes at
 TAD boundaries [@Dixon2012] and the role of TADs in providing conserved
 regulatory environments for gene regulation [@Harmston2017; @Ibn-Salem2017].
 
-
-<!-- ======================================================= -->
+<!-- ---------------------------------------------------------------- -->
 ```{r TadEvo4, fig.cap='(ref:TadEvo4)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/TAD_evolution/fig4_v04.png")
 ```
-(ref:TadEvo4) **Ortholog gene expression correlation across tissues in conserved and
-rearranged TADs.**
-**(A)** Expression correlation of orthologs across 19
-matching tissues in human and mouse for human genes within or outside of
-hESC TADs. **(B)** Expression correlation of orthologs across 19
-matching tissues in human and mouse for genes in conserved or rearranged
-TADs. **(C)** Expression correlation of orthologs across 19 matching
-tissues in human and mouse for genes in GRB-TADs and non-GRB TADs. All
-P-values according to Wilcoxon rank-sum test.
-<!-- ======================================================= -->
+
+(ref:TadEvo4) **Ortholog gene expression correlation across tissues in conserved and rearranged TADs.** **(A)** Expression correlation of orthologs across 19 matching tissues in human and mouse for human genes within or outside of hESC TADs. **(B)** Expression correlation of orthologs across 19 matching tissues in human and mouse for genes in conserved or rearranged TADs. **(C)** Expression correlation of orthologs across 19 matching tissues in human and mouse for genes in GRB-TADs and non-GRB TADs. All P-values according to Wilcoxon rank-sum test.
+
+<!-- ---------------------------------------------------------------- -->
 
 
 Next, we further subdivided TADs in two groups, rearranged and

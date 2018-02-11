@@ -58,14 +58,9 @@ physical proximity during cross-linking but originate from different regions in 
 ```{r ProximityLigation, fig.cap='(ref:ProximityLigation)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/Dekker2013_3C.png")
 ```
-(ref:ProximityLigation) **Proximity ligation technologies to measure chromatin interactions** 
-**(A)**  By treating cells with formaldehyde chromatin is crosslinked. After fragmentation 
-with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is 
-ligated to a hybrid DNA molecules that is than made from DNA that originated from 
-two regions distal in the linear genome (indicated in red and blue).
-**(B)** Different variants of the 3C experiments differ in their approaches to 
-measure the ligation products or subsets of it in order to quantify chromatin interactions. 
-Figure modified from [@Dekker2013].
+
+(ref:ProximityLigation) **Proximity ligation technologies to measure chromatin interactions** **(A)**  By treating cells with formaldehyde chromatin is crosslinked. After fragmentation with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is ligated to a hybrid DNA molecules that is than made from DNA that originated from two regions distal in the linear genome (indicated in red and blue). **(B)** Different variants of the 3C experiments differ in their approaches to measure the ligation products or subsets of it in order to quantify chromatin interactions. Figure modified from [@Dekker2013].
+
 <!-- ---------------------------------------------------------------- -->
 
 There exist several 3C-based methods which differ by the way the ligation product, which represents and chromatin interaction, is measured and quantified (Fig. \@ref(fig:ProximityLigation)B). 
@@ -91,9 +86,9 @@ While the first Hi-C study produced genome-wide interactions at 1Mb resolution [
 ```{r GenomeHierarchy, fig.cap='(ref:GenomeHierarchy)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/Bonev2016Fig2.png")
 ```
-(ref:GenomeHierarchy) **Hierarchical organization of chromatin three-dimensional chromatin architecture** 
-**(A)**  
-Figure source [@Bonev2016] [https://www.nature.com/articles/nrg.2016.112/figures/2](https://www.nature.com/articles/nrg.2016.112/figures/2).
+
+(ref:GenomeHierarchy) **Hierarchical organization of chromatin three-dimensional chromatin architecture** **(A)**  Figure source [@Bonev2016] [https://www.nature.com/articles/nrg.2016.112/figures/2](https://www.nature.com/articles/nrg.2016.112/figures/2).
+
 <!-- ---------------------------------------------------------------- -->
 
 ### Chromosomal territories and inter-chromosomal contacts
@@ -254,5 +249,5 @@ use of recent insights in chromatin loop formation to provide a
 computational tool to predict chromatin loops from largely available
 genomic data, with the aim to facilitate the association of TF binding sites
 in enhancers to regulated genes in many cell types and condition, for
-which Hi-C like data is not available (Chapter \@ref(loop-prediction)).
+which Hi-C like data is not available (Chapter \@ref(loop)).
 The overall findings are then discussed together with further research perspectives (Chapter \@ref(thesis-discussion)).

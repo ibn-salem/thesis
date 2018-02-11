@@ -302,14 +302,14 @@ random gene pairs from all protein coding human genes and found only
 $5.3\%$ of randomly sampled gene pairs on the same chromosome
 ($p<10^{-16}$, Fig. \@ref(fig:paraData)A).
 
+<!-- ---------------------------------------------------------------- -->
 ```{r paraData, fig.cap='(ref:paraData)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig1_09.png")
 ```
-(ref:paraData) **(A)** Percent of paralog (red) and random (dark grey) gene pairs that are located on the same chromosome. The error bar indicates the standard deviation observed in 10 times replicated random sampling of gene pairs.
- **(B)** Genomic distance distribution of paralogs gene pairs (top), random gene pairs (center) and gene pairs sampled according to distance distribution of paralogs (bottom). Distances are measured in kilo base pairs (kb) between TSS of genes in pairs. P-values are calculated using Wilcoxon rank-sum test.
-    **(C)** Percent of paralog (red) and sampled (grey) gene pairs that are transcribed from the same strand. Only pairs on the the same chromosome within 1 Mb are considered here. Error bars indicate the standard deviation observed in 10 times replicated sampling of gene pairs.
-    **(D)** Boxplot of the genomic distance between paralogs and sampled gene pairs with the same or opposite strands.
-    **(E)** Distribution of Pearson correlation coefficients of gene expression values in four independent data sets between paralog gene pairs (red) and sampled control gene pairs (grey). White boxes show 25th, 50th and 75th percent quantile of the data and the filled areas indicate the density distribution..
+
+(ref:paraData) **(A)** Percent of paralog (red) and random (dark grey) gene pairs that are located on the same chromosome. The error bar indicates the standard deviation observed in 10 times replicated random sampling of gene pairs. **(B)** Genomic distance distribution of paralogs gene pairs (top), random gene pairs (center) and gene pairs sampled according to distance distribution of paralogs (bottom). Distances are measured in kilo base pairs (kb) between TSS of genes in pairs. P-values are calculated using Wilcoxon rank-sum test. **(C)** Percent of paralog (red) and sampled (grey) gene pairs that are transcribed from the same strand. Only pairs on the the same chromosome within 1 Mb are considered here. Error bars indicate the standard deviation observed in 10 times replicated sampling of gene pairs.  **(D)** Boxplot of the genomic distance between paralogs and sampled gene pairs with the same or opposite strands. **(E)** Distribution of Pearson correlation coefficients of gene expression values in four independent data sets between paralog gene pairs (red) and sampled control gene pairs (grey). White boxes show 25th, 50th and 75th percent quantile of the data and the filled areas indicate the density distribution..
+
+<!-- ---------------------------------------------------------------- -->
 
 We further analysed whether paralog pairs tend to be located in close
 genomic distance on the same chromosomes. We compared the distance
@@ -370,13 +370,14 @@ pairs with the same distributions as paralogs in distances and
 associated enhancers to single genes (Fig. \@ref(fig:samplingDistEh),
 section \@ref(sec:paralog-methods)).
 
-
+<!-- ---------------------------------------------------------------- -->
 ```{r sharedEnhancer, fig.cap='(ref:sharedEnhancer)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig2_09.png")
 ```
-(ref:sharedEnhancer) Shared enhancers among paralog gene pairs.
-**(A)** Percent of close paralog (red) and sampled control (grey) gene pairs with at least one shared enhancer.
-**(B)** Percent of gene pairs versus number of shared enhancers for paralog and sampled control gene pairs.
+
+(ref:sharedEnhancer) **Shared enhancers among paralog gene pairs. ** **(A)** Percent of close paralog (red) and sampled control (grey) gene pairs with at least one shared enhancer. **(B)** Percent of gene pairs versus number of shared enhancers for paralog and sampled control gene pairs.
+
+<!-- ---------------------------------------------------------------- -->
 
 While $27.2$% of the paralog gene pairs have at least one enhancer in
 common, we observed this for only $11.7$% of the sampled gene pairs
@@ -427,16 +428,14 @@ pairs a $1.25$ fold enrichment to be located in the same stable TADs
 compared to sampled gene pairs ($p=0.00013$, stable\_TADs in
 Fig. \@ref(fig:TAD)A).
 
-
+<!-- ---------------------------------------------------------------- -->
 ```{r TAD, fig.cap='(ref:TAD)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig3_09.png")
 ```
-(ref:TAD) **(A)** Co-localization of close paralog genes within the same TAD compared against sampled gene pairs for TAD data sets from different cell types and studies. The first seven bars show values for TADs called in HeLa, HUVEC, K562, KBM7, NHEK, IMR90, and GM12878 cells by [@Rao2014]. The eighth bar shows the value for stable TADs across cell types form this study (at least 90\% reciprocal overlap in 50\% of cells). The last two bars show data for TADs called in hESC and IMR90 cells by [@Dixon2012]. Error bars indicate standard deviation in 10 times replicated sampling of gene pairs. P-values are computed using Fisher's exact test.
-**(B)** Percent of gene pairs annotated to same A/B compartment according to Hi-C data in GM12878 cells from [@Rao2014]. Pairs located in the very same compartment interval were excluded.
-**(C)** Percent of gene pairs annotated to same sub compartment (A1, A2, B1, B2, B3, B4) according to [@Rao2014]. Pairs located in the same subcompartment interval were excluded.
-**(D)** Normalized Hi-C contact frequencies between TSSs of distal paralog gene pairs and sampled background gene pairs.
-**(E)** Promoter capture-C contact frequencies between distal paralog gene pairs and sampled background gene pairs.
 
+(ref:TAD) **(A)** Co-localization of close paralog genes within the same TAD compared against sampled gene pairs for TAD data sets from different cell types and studies. The first seven bars show values for TADs called in HeLa, HUVEC, K562, KBM7, NHEK, IMR90, and GM12878 cells by [@Rao2014]. The eighth bar shows the value for stable TADs across cell types form this study (at least 90\% reciprocal overlap in 50\% of cells). The last two bars show data for TADs called in hESC and IMR90 cells by [@Dixon2012]. Error bars indicate standard deviation in 10 times replicated sampling of gene pairs. P-values are computed using Fisher's exact test. **(B)** Percent of gene pairs annotated to same A/B compartment according to Hi-C data in GM12878 cells from [@Rao2014]. Pairs located in the very same compartment interval were excluded. **(C)** Percent of gene pairs annotated to same sub compartment (A1, A2, B1, B2, B3, B4) according to [@Rao2014]. Pairs located in the same subcompartment interval were excluded. **(D)** Normalized Hi-C contact frequencies between TSSs of distal paralog gene pairs and sampled background gene pairs. **(E)** Promoter capture-C contact frequencies between distal paralog gene pairs and sampled background gene pairs.
+
+<!-- ---------------------------------------------------------------- -->
 
 Beside TADs, Hi-C interaction maps have revealed interaction patterns of
 two compartments (A and B) that alternate along chromosomes in intervals
@@ -516,15 +515,14 @@ tissues is not significantly higher for paralogs whether they are in the
 same TAD or not (Fig. \@ref(fig:ExpByTAD)).
 
 
+<!-- ---------------------------------------------------------------- -->
 ```{r closePairs, fig.cap='(ref:closePairs)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig4_09.png")
 ```
-(ref:closePairs) **(A)** Normalized Hi-C contacts by genomic distance between paralog (red) and sampled (grey) gene pairs. Lines show linear regression fit separately for paralogs (red) and sampled (grey) pairs with 95\% confidence intervals in shaded areas.
-**(B)** Normalized Hi-C contacts between pairs of paralogs (red) and sampled gene pairs (grey) for the groups: $<$10kb genomic distance, located in the same TAD, not in the same TAD, and with genomic distance $>$1000kb.
-**(C)** Number of gene pairs located either in no TAD, in different TADs (or only one pair member in a TAD), both in a TAD but in different sub-TADs, or within the same sub-TAD, for paralogs (red) and sampled (grey) pairs. TADs from IMR90 cells from [@Rao2014] were used, which nested in contrast to TAD calls from [@Dixon2012].
-**(D)** Normalized Hi-C contacts between pairs of paralogs (red) and sampled gene pairs (grey) for the four groups of pairs in sub-TAD structures shown in (C).
-**(E)** Percent of gene pairs with at least one shared enhancer for paralog genes (red) and sampled control genes (grey) separated for pairs in the same IMR90 TAD (left) or not (right).
 
+(ref:closePairs) **(A)** Normalized Hi-C contacts by genomic distance between paralog (red) and sampled (grey) gene pairs. Lines show linear regression fit separately for paralogs (red) and sampled (grey) pairs with 95\% confidence intervals in shaded areas. **(B)** Normalized Hi-C contacts between pairs of paralogs (red) and sampled gene pairs (grey) for the groups: $<$10kb genomic distance, located in the same TAD, not in the same TAD, and with genomic distance $>$1000kb. **(C)** Number of gene pairs located either in no TAD, in different TADs (or only one pair member in a TAD), both in a TAD but in different sub-TADs, or within the same sub-TAD, for paralogs (red) and sampled (grey) pairs. TADs from IMR90 cells from [@Rao2014] were used, which nested in contrast to TAD calls from [@Dixon2012]. **(D)** Normalized Hi-C contacts between pairs of paralogs (red) and sampled gene pairs (grey) for the four groups of pairs in sub-TAD structures shown in (C). **(E)** Percent of gene pairs with at least one shared enhancer for paralog genes (red) and sampled control genes (grey) separated for pairs in the same IMR90 TAD (left) or not (right).
+
+<!-- ---------------------------------------------------------------- -->
 
 In summary, we observed that while close paralogs (situated at less than
 1Mb) have more shared enhancers if they are in the same TAD than not,
@@ -560,13 +558,14 @@ enriched long-range interactions between paralogs are not human specific
 but rather a general evolutionary conserved feature of genome
 organization.
 
+<!-- ---------------------------------------------------------------- -->
 ```{r paralogsMouseDog, fig.cap='(ref:paralogsMouseDog)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig5_09.png")
 ```
-(ref:paralogsMouseDog)
-**(A)** Co-occurrence of close paralog genes with the same TAD in mouse (left panel) and dog (right panel).
-**(B)** Hi-C contacts between promoter of distal gene pairs in Hi-C experiments in liver cells from mouse (left panel) and dog (right panel). Hi-C data and TAD calls were taken from [@VietriRudan2015].
 
+(ref:paralogsMouseDog) **(A)** Co-occurrence of close paralog genes with the same TAD in mouse (left panel) and dog (right panel). **(B)** Hi-C contacts between promoter of distal gene pairs in Hi-C experiments in liver cells from mouse (left panel) and dog (right panel). Hi-C data and TAD calls were taken from [@VietriRudan2015].
+
+<!-- ---------------------------------------------------------------- -->
 
 ### Orthologs of human paralogs show conserved co-localization
 
@@ -594,13 +593,14 @@ Fig. \@ref(fig:orthologsMouseDog)A). Significant enrichment was observed
 with orthologs in the dog genome ($85\%$ vs. $77\%$, $p=0.0016$;
 Fig. \@ref(fig:orthologsMouseDog)A).
 
+<!-- ---------------------------------------------------------------- -->
 ```{r orthologsMouseDog, fig.cap='(ref:orthologsMouseDog)', out.width='75%', fig.align='center'}
 knitr::include_graphics("figures/paralog/fig6_09.png")
 ```
-(ref:orthologsMouseDog) One-to-one orthologs of human paralog genes in mouse and dog genome.
-**(A)**  Percent of mouse (left) and dog (right) orthologs of human paralog pairs that are in the same TAD in the mouse and dog genome, respectively.
-**(B)** Normalized Hi-C contacts between promoters of one-to-one orthologs of human distal paralogs in the mouse (left) and dog (right) genome.
-**(C)** Percent of gene pairs with conserved co-localization. Orthologs in the same TAD in mouse (left) and dog (right) as percent of all orthologs of human paralog pairs that are in the same TAD in human. For human TADs from IMR90 cells from  [@Rao2014] were used.
+
+(ref:orthologsMouseDog) ** One-to-one orthologs of human paralog genes in mouse and dog genome.**  **(A)**  Percent of mouse (left) and dog (right) orthologs of human paralog pairs that are in the same TAD in the mouse and dog genome, respectively. **(B)** Normalized Hi-C contacts between promoters of one-to-one orthologs of human distal paralogs in the mouse (left) and dog (right) genome. **(C)** Percent of gene pairs with conserved co-localization. Orthologs in the same TAD in mouse (left) and dog (right) as percent of all orthologs of human paralog pairs that are in the same TAD in human. For human TADs from IMR90 cells from  [@Rao2014] were used.
+
+<!-- ---------------------------------------------------------------- -->
 
 
 For distal human paralogs we quantified the promoter contacts of their
