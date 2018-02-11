@@ -138,3 +138,30 @@ python python/clean_bib.py \
   -o bib/PhDclean.bib
 
 
+
+################################################################################
+# convert loop prediction manuscript from .odt to markdown
+################################################################################
+
+pandoc \
+  --filter python/despan.py -s \
+  text_sources/loop_prediction/loop_prediction_manuscript_v15.docx \
+  -t markdown \
+  --base-header-level=2 \
+  -o text_sources/loop_prediction/loop_prediction_ms.md
+
+python python/convert_bib_general.py \
+  -i   text_sources/loop_prediction/loop_prediction_ms.md \
+  --ref_title "1.  References" \
+  -nt "1.  Figure legends" \
+  --intro_name "1.  Background" \
+  --separater_str "," \
+  -o text_sources/loop_prediction/loop_prediction_ms.md.fix_bib.md
+#===============================================================================
+# convert loop_prediction figues from .pdf to .png
+#===============================================================================
+for PDFFILE in figures/loop_prediction/fig*.pdf ; do
+  # ls -lht $PDFFILE
+  convert -density 600 "${PDFFILE}" "${PDFFILE%.*}".png
+done
+

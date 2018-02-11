@@ -4,137 +4,101 @@
 # Co-regulation of paralog genes: Supporting Information {#sup-paralog-regulation}
 
 <!-- FIGURE S1 ---------------------------------------------------------------->
-```{r paraVSnonPara, fig.cap='(ref:paraVSnonPara)', out.width='50%', fig.align='center'}
+```{r paraVSnonPara, fig.cap='(ref:paraVSnonPara)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS1.png")
 ```
-(ref:paraVSnonPara) **(A)** Number of paralog and non-paralog genes in the human genome.
-**(B)** Paralog group size distribution in the human genome.
-**(C)** Gene length of paralog and non-paralog genes.
-**(D)** Distribution of the number of enhancers linked to single genes compared between paralog genes (red) and non-paralog genes (blue). 
-**(E)** Genomic distance to nearest enhancer for paralogs and non-paralog genes.
-**(F)** Number of housekeeping genes among paralogs and non-paralog human genes.
-A recently published set of housekeeping genes was used here [@Eisenberg2013].
-The p-values shown in this figure were calculated using the Wilcoxon rank-sum test.
+
+(ref:paraVSnonPara) **(A)** Number of paralog and non-paralog genes in the human genome. **(B)** Paralog group size distribution in the human genome. **(C)** Gene length of paralog and non-paralog genes. **(D)** Distribution of the number of enhancers linked to single genes compared between paralog genes (red) and non-paralog genes (blue).  **(E)** Genomic distance to nearest enhancer for paralogs and non-paralog genes. **(F)** Number of housekeeping genes among paralogs and non-paralog human genes. A recently published set of housekeeping genes was used here [@Eisenberg2013]. The p-values shown in this figure were calculated using the Wilcoxon rank-sum test.
 
 <!-- FIGURE S2 ---------------------------------------------------------------->
-```{r selectOldPairs, fig.cap='(ref:selectOldPairs)', out.width='50%', fig.align='center'}
+```{r selectOldPairs, fig.cap='(ref:selectOldPairs)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS2.png")
 ```
-(ref:selectOldPairs) 
-Main results of this study by changing the selection of paralog pairs from families with more than two paralogs. Here pairs are selected by maximizing the rate of synonymous mutations between them instead of minimizing, as in the main text.
-**(A)** Percent of paralogs pairs on the same chromosome compared to random pairs.
-**(B)** Distance distribution between pairs of paralogs (red), random pairs (dark grey), and sampled pairs according to the distances of paralogs (grey).
-**(C)** Genomic distance between close paralogs and sampled pairs separated by same strand or not same strand of gene pairs.
-**(D)** Percent of close paralogs and sampled pairs with at least one shared enhancer.
-**(E)** Percent of close gene pairs located within the same TAD for different TAD data sets.
-**(F)** Percent of paralog and sampled pairs that are in the same A/B compartment.
-**(G)** Percent of paralog and sampled pairs that are in the same subcompartment. 
-**(H)** Normalized Hi-C contacts between distal paralogs and sampled genes. 
-**(I)** Promoter capture-C contacts between distal paralogs and sampled genes.
+
+(ref:selectOldPairs)  Main results of this study by changing the selection of paralog pairs from families with more than two paralogs. Here pairs are selected by maximizing the rate of synonymous mutations between them instead of minimizing, as in the main text. **(A)** Percent of paralogs pairs on the same chromosome compared to random pairs. **(B)** Distance distribution between pairs of paralogs (red), random pairs (dark grey), and sampled pairs according to the distances of paralogs (grey). **(C)** Genomic distance between close paralogs and sampled pairs separated by same strand or not same strand of gene pairs. **(D)** Percent of close paralogs and sampled pairs with at least one shared enhancer. **(E)** Percent of close gene pairs located within the same TAD for different TAD data sets. **(F)** Percent of paralog and sampled pairs that are in the same A/B compartment. **(G)** Percent of paralog and sampled pairs that are in the same subcompartment.  **(H)** Normalized Hi-C contacts between distal paralogs and sampled genes. **(I)** Promoter capture-C contacts between distal paralogs and sampled genes.
 
 <!-- FIGURE S3 ---------------------------------------------------------------->
-```{r samplingDist, fig.cap='(ref:samplingDist)', out.width='50%', fig.align='center'}
+```{r samplingDist, fig.cap='(ref:samplingDist)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS3.png")
 ```
-(ref:samplingDist) 
-**Sampling of gene pairs by distance.** Distance distribution of paralog pairs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
+
+(ref:samplingDist) **Sampling of gene pairs by distance.** Distance distribution of paralog pairs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
 
 <!-- FIGURE S4 ---------------------------------------------------------------->
-```{r samplingDistEh, fig.cap='(ref:samplingDistEh)', out.width='50%', fig.align='center'}
+```{r samplingDistEh, fig.cap='(ref:samplingDistEh)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS4.png")
 ```
-(ref:samplingDistEh) 
-**Sampling of gene pairs by distance and number of enhancers.**
-Top row: Distance distribution of paralog pairs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
-Bottom row: Distance of the number of enhancers linked to each single gene in the pairs of paralogs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
+
+(ref:samplingDistEh)  **Sampling of gene pairs by distance and number of enhancers.** Top row: Distance distribution of paralog pairs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column). Bottom row: Distance of the number of enhancers linked to each single gene in the pairs of paralogs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
 
 <!-- FIGURE S5 ---------------------------------------------------------------->
-```{r samplingDistEhStrand, fig.cap='(ref:samplingDistEhStrand)', out.width='50%', fig.align='center'}
+```{r samplingDistEhStrand, fig.cap='(ref:samplingDistEhStrand)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS5.png")
 ```
-(ref:samplingDistEhStrand) 
-**Sampling of gene pairs by distance, number of enhancers, and same strand frequency.**
-Top row: Distance distribution of paralog pairs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
-Middle row: Distance of the number of enhancers linked to each single gene in the pairs of paralogs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
-Bottom row: Percentages of pairs of genes with opposite or same strand of transcription for paralog pairs (red) and sampled pairs (grey).
+
+(ref:samplingDistEhStrand) **Sampling of gene pairs by distance, number of enhancers, and same strand frequency.** Top row: Distance distribution of paralog pairs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column). Middle row: Distance of the number of enhancers linked to each single gene in the pairs of paralogs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column). Bottom row: Percentages of pairs of genes with opposite or same strand of transcription for paralog pairs (red) and sampled pairs (grey).
 
 <!-- FIGURE S6 ---------------------------------------------------------------->
-```{r samplingDistEhLen, fig.cap='(ref:samplingDistEhLen)', out.width='50%', fig.align='center'}
+```{r samplingDistEhLen, fig.cap='(ref:samplingDistEhLen)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS6.png")
 ```
-(ref:samplingDistEhLen) 
-**Sampling of gene pairs by distance, number of enhancers, and same strand frequency.**
-Top row: Distance distribution of paralog pairs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
-Middle row: Distance of the number of enhancers linked to each single gene in the pairs of paralogs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column).
-Bottom row: Distribution of gene lengths of each single gene in the pairs of paralogs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and $\log_{10}$ of gene lengths (fourth column).
+
+(ref:samplingDistEhLen) **Sampling of gene pairs by distance, number of enhancers, and same strand frequency.** Top row: Distance distribution of paralog pairs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column). Middle row: Distance of the number of enhancers linked to each single gene in the pairs of paralogs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and log scaled axis (fourth column). Bottom row: Distribution of gene lengths of each single gene in the pairs of paralogs (red) and sampled background gene pairs (grey) and quantile-quantile plot of these two distributions in linear axis (third column) and $\log_{10}$ of gene lengths (fourth column).
 
 <!-- FIGURE S7 ---------------------------------------------------------------->
 ```{r ehBySampType, fig.cap='(ref:ehBySampType)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS7.png")
 ```
-(ref:ehBySampType) 
-Percent of gene pairs with at least one shared enhancer in paralog pairs and four different types of sampled gene pairs. Only pairs with TSS distance $\leq$ 1Mb are considered. Error bars indicate standard variation of ten times replicated sampling.
+
+(ref:ehBySampType) Percent of gene pairs with at least one shared enhancer in paralog pairs and four different types of sampled gene pairs. Only pairs with TSS distance $\leq$ 1Mb are considered. Error bars indicate standard variation of ten times replicated sampling.
 
 <!-- FIGURE S8 ---------------------------------------------------------------->
-```{r TADsize, fig.cap='(ref:TADsize)', out.width='50%', fig.align='center'}
+```{r TADsize, fig.cap='(ref:TADsize)', out.width='60%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS8.png")
 ```
-(ref:TADsize) 
-**Size distribution of TADs in different cell-types, studies, and species.**
-Each box shows the size-distribution of one data set of TADs. The labels indicate the study (Rao [@Rao2014], or Dixon [@Dixon2012]), cell type and number of TADs in each data set. The last two boxes are for TADs from Hi-C experiments in mouse and dog Hi-C liver cells [@VietriRudan2015].
+
+(ref:TADsize) **Size distribution of TADs in different cell-types, studies, and species.** Each box shows the size-distribution of one data set of TADs. The labels indicate the study (Rao [@Rao2014], or Dixon [@Dixon2012]), cell type and number of TADs in each data set. The last two boxes are for TADs from Hi-C experiments in mouse and dog Hi-C liver cells [@VietriRudan2015].
 
 <!-- FIGURE S9 ---------------------------------------------------------------->
-```{r closePairsInTAD, fig.cap='(ref:closePairsInTAD)', out.width='50%', fig.align='center'}
+```{r closePairsInTAD, fig.cap='(ref:closePairsInTAD)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS9.png")
 ```
-(ref:closePairsInTAD) 
-**(A)** Number of paralog (red) and sampled (grey) gene pairs that are in the same TAD or not separated in three groups of genomic distances (0-10kb, 10-1000kb and $>$ 1000kb). TADs called from IMR90 cells by [@Rao2014] were used here. 
-**(B)** Co-localization of gene pairs with genomic distances between 10kb and 1000kb within the same TAD for paralogs and sampled gene pairs and separated by TAD data sets from different cell types and studies. The first seven bars show values for TADs called in HeLa, HUVEC, K562, KBM7, NHEK, IMR90, and GM12878 cells by [@Rao2014]. The eighth bar shows the value for stable TADs across cell types form this study (at least 90\% reciprocal overlap in 50\% of cells). The last two bars show data for TADs called in hESC and IMR90 cells by [@Dixon2012]. Error bars indicate standard deviation in 10 times replicated sampling of gene pairs. P-values are computed using Fisher's exact test.
-**(C)** Promoter capture-C contacts between pairs of paralogs (red) and sampled gene pairs (grey) for the groups: $<$10kb genomic distance, located in the same TAD, not in the same TAD, and with genomic distance $>$1000kb.
+
+(ref:closePairsInTAD)  **(A)** Number of paralog (red) and sampled (grey) gene pairs that are in the same TAD or not separated in three groups of genomic distances (0-10kb, 10-1000kb and $>$ 1000kb). TADs called from IMR90 cells by [@Rao2014] were used here. **(B)** Co-localization of gene pairs with genomic distances between 10kb and 1000kb within the same TAD for paralogs and sampled gene pairs and separated by TAD data sets from different cell types and studies. The first seven bars show values for TADs called in HeLa, HUVEC, K562, KBM7, NHEK, IMR90, and GM12878 cells by [@Rao2014]. The eighth bar shows the value for stable TADs across cell types form this study (at least 90\% reciprocal overlap in 50\% of cells). The last two bars show data for TADs called in hESC and IMR90 cells by [@Dixon2012]. Error bars indicate standard deviation in 10 times replicated sampling of gene pairs. P-values are computed using Fisher's exact test. **(C)** Promoter capture-C contacts between pairs of paralogs (red) and sampled gene pairs (grey) for the groups: $<$10kb genomic distance, located in the same TAD, not in the same TAD, and with genomic distance $>$1000kb.
 
 <!-- FIGURE S10 --------------------------------------------------------------->
-```{r ExpByTAD, fig.cap='(ref:ExpByTAD)', out.width='50%', fig.align='center'}
+```{r ExpByTAD, fig.cap='(ref:ExpByTAD)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS10.png")
 ```
-(ref:ExpByTAD) 
-Distribution of Pearson correlation coefficients of gene expression values in four independent data sets between close paralog gene pairs (red) and sampled control gene pairs (grey) separated for gene pairs within the same IMR90 TAD (top) or not in the same TAD (bottom). Boxes show 25th, 50th and 75th percent quantile of the data and the filled areas indicate the density distribution.
+
+(ref:ExpByTAD) Distribution of Pearson correlation coefficients of gene expression values in four independent data sets between close paralog gene pairs (red) and sampled control gene pairs (grey) separated for gene pairs within the same IMR90 TAD (top) or not in the same TAD (bottom). Boxes show 25th, 50th and 75th percent quantile of the data and the filled areas indicate the density distribution.
 
 <!-- FIGURE S11 --------------------------------------------------------------->
-```{r paralogsSpecies, fig.cap='(ref:paralogsSpecies)', out.width='50%', fig.align='center'}
+```{r paralogsSpecies, fig.cap='(ref:paralogsSpecies)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS11.png")
 ```
-(ref:paralogsSpecies) 
-Paralog gene pairs in mouse (left) and dog (right) genome cluster on chromosome within short genomic distances.
-**(A)** Number of genes with paralogs (red) and without (blue) in mouse genomes.
-**(B)** Percent of filtered mouse paralog pairs on the same chromosome (red) and random gene pairs on the same chromosome (dark grey). Error-bars indicate standard deviation of 10 times replicated randomizations.
-**(C)** Distribution of linear genomic distances between mouse gene pairs for filtered paralog genes (top, red), random genes (center, dark grey) and sampled gene pairs (bottom, grey). 
-**(D, E, F)** show the same data for the dog genome as figures A, B, C, respectively.
 
-
+(ref:paralogsSpecies) Paralog gene pairs in mouse (left) and dog (right) genome cluster on chromosome within short genomic distances. **(A)** Number of genes with paralogs (red) and without (blue) in mouse genomes. **(B)** Percent of filtered mouse paralog pairs on the same chromosome (red) and random gene pairs on the same chromosome (dark grey). Error-bars indicate standard deviation of 10 times replicated randomizations. **(C)** Distribution of linear genomic distances between mouse gene pairs for filtered paralog genes (top, red), random genes (center, dark grey) and sampled gene pairs (bottom, grey).  **(D, E, F)** show the same data for the dog genome as figures A, B, C, respectively.
 
 <!-- FIGURE S12 --------------------------------------------------------------->
 ```{r orthologModel, fig.cap='(ref:orthologModel)', out.width='50%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS12.png")
 ```
-(ref:orthologModel) 
-Phylogenetic gene tree model of a gene that is duplicated before the separation of mouse and human and consequently leads to two paralogs in mouse and human that are one-to-one orthologs to each other and a single ortholog in the dog genome that cannot be assigned uniquely to a human gene.
+
+(ref:orthologModel) Phylogenetic gene tree model of a gene that is duplicated before the separation of mouse and human and consequently leads to two paralogs in mouse and human that are one-to-one orthologs to each other and a single ortholog in the dog genome that cannot be assigned uniquely to a human gene.
 
 <!-- FIGURE S13 --------------------------------------------------------------->
-```{r orthologsSpecies, fig.cap='(ref:orthologsSpecies)', out.width='50%', fig.align='center'}
+```{r orthologsSpecies, fig.cap='(ref:orthologsSpecies)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS13.png")
 ```
-(ref:orthologsSpecies) 
-One-to-one orthologs of human paralogs in mouse (left) and dog (right) genome.
-**(A)** Percent of filtered human paralog pairs with one-to-one orthologs for both genes in mouse genome compared to random genes. 
-**(B)** Percent of one-to-one orthologs on the same chromosome in the mouse genome (light red) and one-to-one orthologs of random human gene pairs on the same chromosome (dark grey). Error-bars indicate standard deviation of 10 times replicated randomizations.
-**(C)** Distribution of linear genomic distances between gene pairs for mouse one-to-one orthologs of human paralog gene pairs (top, light red) and one-to-one orthologs of random human gene pairs (bottom, dark grey).
-**(D, E, F)** show the same data for the dog genome as figures A, B, C, respectively.
 
+(ref:orthologsSpecies) One-to-one orthologs of human paralogs in mouse (left) and dog (right) genome. **(A)** Percent of filtered human paralog pairs with one-to-one orthologs for both genes in mouse genome compared to random genes.  **(B)** Percent of one-to-one orthologs on the same chromosome in the mouse genome (light red) and one-to-one orthologs of random human gene pairs on the same chromosome (dark grey). Error-bars indicate standard deviation of 10 times replicated randomizations. **(C)** Distribution of linear genomic distances between gene pairs for mouse one-to-one orthologs of human paralog gene pairs (top, light red) and one-to-one orthologs of random human gene pairs (bottom, dark grey). **(D, E, F)** show the same data for the dog genome as figures A, B, C, respectively.
 
 <!-- FIGURE S14 --------------------------------------------------------------->
-```{r PPI, fig.cap='(ref:PPI)', out.width='50%', fig.align='center'}
+```{r PPI, fig.cap='(ref:PPI)', out.width='30%', fig.align='center'}
 knitr::include_graphics("figures/paralog/SI/figS14.png")
 ```
+
 (ref:PPI) Percent of close paralogs (red) and sampled (grey) gene pairs in the same IMR90 TAD (left bar) or not same TAD (right bar) that have a direct protein protein interaction (PPI) with each other in the HIPPIE database [@Schaefer2012]. 
 
 <!-- =========================================================================== -->
@@ -142,8 +106,7 @@ knitr::include_graphics("figures/paralog/SI/figS14.png")
 # TAD evolution: Supporting Information {#sup-tad-evolution}
 <!-- # Supplementary Data: Evolutionary stability of TADs {#sup-tad-evolution} -->
 
-## Supplementary Tables 
-<!-- {#TadEvoSupTab} -->
+## Supplementary Tables {#TadEvoSupTab}
 
 **Table S1** **Matching tissues and samples with CAGE expression data in human and
 mouse.**
@@ -160,28 +123,18 @@ https://www.biorxiv.org/highwire/filestream/70793/field_highwire_adjunct_files/3
 ```{r TadEvoS1, fig.cap='(ref:TadEvoS1)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/TAD_evolution/fig_S1_v01.png")
 ```
-(ref:TadEvoS1) **Distribution of evolutionary rearrangement breakpoints between human
-and 12 vertebrate genomes around domains.** 
-Relative breakpoint numbers
-from human and different species (horizontal panels) around hESC TADs
-(left), GM12878 contact domains (center), and GRBs (left). Blue color
-scale represents breakpoints from different fill-size thresholds. Dotted
-lines in gray show simulated background controls of randomly placed
-breakpoints.
+
+(ref:TadEvoS1) **Distribution of evolutionary rearrangement breakpoints between human and 12 vertebrate genomes around domains.**  Relative breakpoint numbers from human and different species (horizontal panels) around hESC TADs (left), GM12878 contact domains (center), and GRBs (left). Blue color scale represents breakpoints from different fill-size thresholds. Dotted lines in gray show simulated background controls of randomly placed breakpoints.
+
 <!-- ----------------------------------------------------------------------- -->
 
 <!-- ----------------------------------------------------------------------- -->
 ```{r TadEvoS2, fig.cap='(ref:TadEvoS2)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/TAD_evolution/fig_S2_v01.png")
 ```
-(ref:TadEvoS2) **Distance between rearrangement breakpoints and random controls to
-closest TAD boundary.** For each species (y-axis) and fill size
-threshold (vertical panels) the distances from all identified
-rearrangement breakpoints to its closest TAD boundary (x-axis) are
-compared between actual rearrangements (blue) and 100 times randomized
-background controls (gray). The left panel shows distances to next hESC
-TAD boundary and the right panel distances to closest GM12878 contact
-domain boundary. P-values according to Wilcoxon’s rank-sum test.
+
+(ref:TadEvoS2) **Distance between rearrangement breakpoints and random controls to closest TAD boundary.** For each species (y-axis) and fill size threshold (vertical panels) the distances from all identified rearrangement breakpoints to its closest TAD boundary (x-axis) are compared between actual rearrangements (blue) and 100 times randomized background controls (gray). The left panel shows distances to next hESC TAD boundary and the right panel distances to closest GM12878 contact domain boundary. P-values according to Wilcoxon’s rank-sum test.
+
 <!-- ----------------------------------------------------------------------- -->
 
 <!-- ======================================================================= -->
@@ -525,12 +478,9 @@ t(2;14)(2pter-&gt;2pter-&gt;2q22.3(145,110,93{6})::14q31.1(83,574,72{4})-&gt;14q
 ```{r position-effect-S1, fig.cap='(ref:position-effect-S1)', out.width='60%', fig.align='center'}
 knitr::include_graphics("figures/position_effect/FigureS1.png")
 ```
-(ref:position-effect-S1)  **Assessment of gene expression changes for DGAP176-derived LCLs.** 
-Control gene expression is shown in blue and surveyed genes are
-marked in different colors. Each column represents the ΔCT results of
-three culture replicates, with four technical replicates each, compared
-to three sex-matched control cell lines. Error bars indicate the
-standard deviation calculated from the biological replicates per gene.
+
+(ref:position-effect-S1)  **Assessment of gene expression changes for DGAP176-derived LCLs.** Control gene expression is shown in blue and surveyed genes are marked in different colors. Each column represents the ΔCT results of three culture replicates, with four technical replicates each, compared to three sex-matched control cell lines. Error bars indicate the standard deviation calculated from the biological replicates per gene.
+
 <!-- ----------------------------------------------------------------------- -->
 
 
@@ -751,6 +701,32 @@ change, RefSeq, Protein change, Molecular consequence, HGVS\_c, HGVS\_g,
 HGVS\_ng, HGVS\_p, Condition, Most severe clinical significance,
 Submitters, Highest review status and Last evaluated are provided for
 each overlap.
+
+# Loop prediction: Supplemental Information {#sup-loop-prediction}
+
+## Supplementary Tables {#LoopPredSupTab}
+
+**Table S1** Metadata of ChIP-seq experiments from ENCODE in human GM12878 cells with accession ID and download link.
+https://www.biorxiv.org/highwire/filestream/79233/field_highwire_adjunct_files/0/257584-1.tsv
+
+**Table S2 ** Metadata of ChIP-seq experiments from ENCODE human HeLa cells with
+accession ID and download link.
+https://www.biorxiv.org/highwire/filestream/79233/field_highwire_adjunct_files/1/257584-2.tsv
+
+**Table S3** Accession numbers and download URLs for data sets used in data type
+comparisons.
+https://www.biorxiv.org/highwire/filestream/79233/field_highwire_adjunct_files/2/257584-3.tsv
+
+## Supplementary Figures
+
+<!-- ----------------------------------------------------------------------- -->
+```{r LoopPredS1, fig.cap='(ref:LoopPredS1)', out.width='50%', fig.align='center'}
+knitr::include_graphics("figures/loop_prediction/fig_S1_v02.png")
+```
+
+(ref:LoopPredS1) **7C model parameters and optimal cut-offs for binary prediction.** **(A)** Parameter values of the logistic regression model in 7C for different features (columns), separated for different models (rows). Average of model parameters of model training in 10-fold cross-validation is shown with error bars indicating the standard deviations. While the first six rows represent the models with the indicated TF ChIP-seq data and the genomic features, “Avg. all TF” is the average across all 124 TFs analyzed and “Avg. best 10 TF” is the average across the best ten performing TF models. **(B)** Prediction performance as f1 score (y-axis) for different cutoffs on the prediction probability *p* for the six selected models. **(C)** Prediction performance as auPRC (top) and auROC (bottom) of four different models (colors) on ChIP-seq data for six selected TFs (x-axis). ‘Specific TF’ is the model fitted using the ChIP-seq data indicated on the x-axis, ‘RAD21’ is the model trained on RAD21 ChIP-seq data, ‘Avg. all TF’ is a model averaged across all 124 models of analyzed TFs, and ‘Avg. best 10 TF’ is the averaged model across the 10 best performing models.
+
+<!-- ----------------------------------------------------------------------- -->
 
 
 <!-- ======================================================================= -->

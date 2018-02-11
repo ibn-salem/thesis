@@ -61,15 +61,16 @@ def read_references(infile, ref_title, next_title) :
       try:
         # extract number
         number = re.search('^(\d+)(\\\)?\. ?', ref).group(1)
-
+        print("number", number)
         # extract first author:
         author = re.search('^\d+(\\\)?\. ?(.*?) ', ref).group(2)
+        print("author", author)
 
         # extract year
-        year = re.search('[ .;](\d{4})[;|.]', ref).group(1)
+        year = re.search('[ .;](\d{4})[;|. ]', ref).group(1)
 
-        # print("number, author, year:")
-        # print(number, author, year)
+        print("number, author, year:")
+        print(number, author, year)
         d[number] = author + year
 
       except AttributeError:
