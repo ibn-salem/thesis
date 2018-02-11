@@ -6,8 +6,6 @@ _publish.R
 _bookdown_files
 rsconnect
 
-docs
-
 # ignore for the moment
 # .travis.yml
 LICENSE
