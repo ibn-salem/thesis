@@ -18,6 +18,13 @@
 and lead to exciting findings of higher order organisation. 
     - TADs are not only structural units of chromosomes, but also functional building blocks of genomes.
 
+## Discussion paralog co-regulation in TADs
+
+The association of gene expression with gene localizing in TADs is consistent with a recent computational study with the aim to separate the proportion of expression associated with genome organization from independent sources. A large fraction of expression can be attributed to positioning of genes in genome architecture and hihgly informative for TAD activity and organization [@Rennie2018].
+
+
+
+
 ## Discussion on TAD evolution
 Follow up studes might experimentally support the functional importance of evolutionary conserved TADs.
 A very recent study investigated the requirenment of ultra-conserved non-coding region containing enhancers by 
@@ -26,6 +33,7 @@ Knowck-out mice that lack individual or combination of enhancers were viable but
 Indicating that the remarkably strong sequence conservation likely results from fitness deficit that appear subtle in a laboratory setting [@Dickel2018].
 This could be similar for targeted deletions of conserved TAD boundaries.
 
+The increased expression conservation of genes within TADs is somewhat consistent with a very recent study, in which promoter and enhancer activity was measured in liver samples from 15 species [@Berthelot2017]. In this study gene expression conservation could best be explained by the number and conservation of surrounding enhancers and promoters.
 
 <!-- Summary of whole wokr -->
 In this thesis, I analysed the functions of TADs for gene regulation and 
