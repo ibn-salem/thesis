@@ -702,7 +702,7 @@ HGVS\_ng, HGVS\_p, Condition, Most severe clinical significance,
 Submitters, Highest review status and Last evaluated are provided for
 each overlap.
 
-# Loop prediction: Supplemental Information {#sup-loop-prediction}
+# Loop prediction: Supplemental Information {#sup-loop}
 
 ## Supplementary Tables {#LoopPredSupTab}
 
