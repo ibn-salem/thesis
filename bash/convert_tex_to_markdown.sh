@@ -137,6 +137,9 @@ python python/clean_bib.py \
   -rmd *.Rmd \
   -o bib/PhDclean.bib
 
+# convert .bib to .json
+pandoc-citeproc --bib2json bib/PhDclean.bib > bib/PhDclean.json
+pandoc-citeproc --bib2yaml bib/PhDclean.bib > bib/PhDclean.yaml
 
 
 ################################################################################

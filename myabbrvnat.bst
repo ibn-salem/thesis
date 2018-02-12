@@ -1,5 +1,5 @@
 %% File: `abbrvnat.bst'
-%% A modification of `abbrv.bst' for use with natbib package
+%% A modification of `abbrv.bst' for use with natbib package 
 %%
 %% Copyright 1993-2007 Patrick W Daly
 %% Max-Planck-Institut f\"ur Sonnensystemforschung
@@ -219,7 +219,7 @@ FUNCTION {format.names}
   s num.names$ 'numnames :=
   numnames 'namesleft :=
     { namesleft #0 > }
-    { s nameptr "{vv~}{ll}{, f.}{~jj}" format.name$ 't :=.
+    { s nameptr "{vv~}{ll}{, jj}{, f.}" format.name$ 't :=
       nameptr #1 >
         { namesleft #1 >
             { ", " * t * }
@@ -1346,7 +1346,7 @@ FUNCTION {presort}
 
 ITERATE {presort}
 
-SORT
+% SORT
 
 STRINGS { longest.label last.label next.extra }
 
@@ -1401,7 +1401,7 @@ FUNCTION {bib.sort.order}
 
 ITERATE {bib.sort.order}
 
-SORT
+% SORT
 
 FUNCTION {begin.bib}
 {   preamble$ empty$
