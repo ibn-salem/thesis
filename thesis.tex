@@ -30,7 +30,7 @@
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
-\bibliographystyle{unsrtnat}
+\bibliographystyle{myabbrvnat}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
@@ -160,7 +160,7 @@
 
 \title{Genome folding in evolution and disease}
 \author{Jonas Ibn-Salem}
-\date{2018-02-11}
+\date{2018-02-12}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -3613,8 +3613,7 @@ contributions to this publication is indicated in Table
 \ref{tab:contribution}. The source code of the complete analysis is
 available at GitHub: \url{https://github.com/Juppen/sevenC} and
 \url{https://github.com/Juppen/sevenC_analysis}. Supplementary figures
-and links to supplementary tables are shown in Appendix
-\ref{sup-loop-prediction}.
+and links to supplementary tables are shown in Appendix \ref{sup-loop}.
 \end{quote}
 
 \hypertarget{abstract-4}{%
@@ -3872,7 +3871,7 @@ ChIP-seq data sets in GM12878 cells. \textbf{(B)} Distance distribution
 between looping (green) and non-looping CTCF motif pairs. \textbf{(C)}
 Number of looping and non-looping CTCF motif pairs in convergent,
 divergent, both forward, or both reverse orientation. \textbf{(D)}
-Distribution of CTCF motif hit significance as -log\textsubscript{10}
+Distribution of CTCF motif hit significance as \(-\log_{10}\)
 transformed p-value for looping and non-looping CTCF motif pairs. For
 each motif pair only the less significant motif is considered.}\label{fig:LoopPred2}
 \end{figure}
@@ -4468,15 +4467,16 @@ motifs}\label{similarity-of-chip-seq-profiles-as-correlation-of-coverage-around-
 
 For each CTCF sequence motif in the human genome, we quantified the
 number of reads overlapping each base within +/- 500 bp around the motif
-center. This results in a vectorwhereis the coverage signal at position
-\emph{k} around CTCF motif \emph{i}. Coverage vectors for motif hits
-reported on the minus strand were reversed because CTCF motif sites are
-assumed to be symmetrically aligned to each other when cooperating at
-loop anchors (Fig. \ref{fig:LoopPred1}A)
-\citep{Krijger2016, Naville2015}. For all considered pairs of CTCF
-motifs \emph{i} and \emph{j}, we calculated the ChIP-seq profile
-similarity as Pearson correlation coefficientof the corresponding
-coverage vectorsand.
+center. This results in a vector
+\(x_i = (x_{i,1}, x_{i,2}, ..., x_{i,n})\) where \(x_{i,k}\) is the
+coverage signal at position \(k\) around CTCF motif \(i\). Coverage
+vectors for motif hits reported on the minus strand were reversed
+because CTCF motif sites are assumed to be symmetrically aligned to each
+other when cooperating at loop anchors (Fig. \ref{fig:LoopPred1}A)
+\citep{Rao2014, Tang2015, Guo2015, deWit2015, Sanborn2015}. For all
+considered pairs of CTCF motifs \(i\) and \(j\), we calculated the
+ChIP-seq profile similarity as Pearson correlation coefficient
+\(r_{i,j}\) of the corresponding coverage vectors \(x_i\) and \(x_j\).
 
 \hypertarget{genomic-sequence-features-of-chromatin-loops}{%
 \subsection{Genomic sequence features of chromatin
@@ -4490,8 +4490,8 @@ categorical variable orientation \emph{o} is either, \emph{convergent},
 orientation of CTCF motifs in the pair (+-, ++, --, and -+,
 respectively). The motif hit similarity \emph{s} is the minimum of the
 two motif hit scores in each pair; we derived these motif scores from
-the JASPAR motif hit tracks as -log\textsubscript{10} transformed
-p-values \citep{Khan2018}.
+the JASPAR motif hit tracks as \(-\log_{10}\) transformed p-values
+\citep{Khan2018}.
 
 \hypertarget{chromatin-loop-prediction-model}{%
 \subsection{Chromatin Loop prediction
@@ -4499,14 +4499,17 @@ model}\label{chromatin-loop-prediction-model}}
 
 We used a logistic regression model to predict the log-likelihood
 probability of CTCF motif pairs to perform chromatin looping
-interactions. The probability \emph{p} that two sites interact is
-modeled as:
-
-whereare the unknown model parameters and the features.
+interactions. The probability \(p\) that two sites interact is modeled
+as: \[
+\ln (\frac{p}{1-p}) = \beta_0 + \beta_1 x_1, + ... + \beta_k x_k
+\] where \(\beta\) are the unknown model parameters and
+\(x_1, ..., x_k\) the features.
 
 More specifically, for the 7C model with a single ChIP-seq experiment as
 input, the logistic regression model for the interaction probability
-\emph{p} is:
+\emph{p} is: \[
+\ln (\frac{p}{1-p}) = \beta_0 + \beta_1 d, + \beta_2 o + \beta_3 s + \beta_4 r
+\]
 
 Parameters were estimated using the function `glm()' with option
 `family=binomial()' in R during model training as described below.
@@ -4559,10 +4562,10 @@ reading bigWig files from the \emph{rtracklayer} package
 Predicted loops can be written as interaction tracks for visualization
 in the WashU Epigenome Browser \citep{Zhou2013} or as BEDPE format using
 the \emph{GenomicInteractions} package \citep{Harmston2015} for
-visualization in the Juicebox tool \citep{Mourad2017}. The package is
+visualization in the Juicebox tool \citep{Durand2016}. The package is
 freely available and easy to install from GitHub under
 \href{https://ibn-salem.github.io/sevenC/}{\emph{https://ibn-salem.github.io/sevenC/}}
-and has been submitted to the Bioconductor project \citep{Rowley2017}.
+and has been submitted to the Bioconductor project \citep{Huber2015}.
 All analysis presented in this work were implemented in R and all
 scripts used have been made available in a separate GitHub repository:
 \href{https://github.com/ibn-salem/chromloop_analysis}{\emph{https://github.com/ibn-salem/sevenC\_analysis}}.
@@ -4664,6 +4667,17 @@ anchors.
   \end{itemize}
 \end{itemize}
 
+\hypertarget{discussion-paralog-co-regulation-in-tads}{%
+\section{Discussion paralog co-regulation in
+TADs}\label{discussion-paralog-co-regulation-in-tads}}
+
+The association of gene expression with gene localizing in TADs is
+consistent with a recent computational study with the aim to separate
+the proportion of expression associated with genome organization from
+independent sources. A large fraction of expression can be attributed to
+positioning of genes in genome architecture and hihgly informative for
+TAD activity and organization \citep{Rennie2018}.
+
 \hypertarget{discussion-on-tad-evolution}{%
 \section{Discussion on TAD
 evolution}\label{discussion-on-tad-evolution}}
@@ -4677,6 +4691,13 @@ strong neurological phenotypes. Indicating that the remarkably strong
 sequence conservation likely results from fitness deficit that appear
 subtle in a laboratory setting \citep{Dickel2018}. This could be similar
 for targeted deletions of conserved TAD boundaries.
+
+The increased expression conservation of genes within TADs is somewhat
+consistent with a very recent study, in which promoter and enhancer
+activity was measured in liver samples from 15 species
+\citep{Berthelot2017}. In this study gene expression conservation could
+best be explained by the number and conservation of surrounding
+enhancers and promoters.
 
 In this thesis, I analysed the functions of TADs for gene regulation and
 highlight their stability in evolution as well as their consideration
@@ -5822,9 +5843,8 @@ HGVS\_ng, HGVS\_p, Condition, Most severe clinical significance,
 Submitters, Highest review status and Last evaluated are provided for
 each overlap.
 
-\hypertarget{sup-loop-prediction}{%
-\chapter{Loop prediction: Supplemental
-Information}\label{sup-loop-prediction}}
+\hypertarget{sup-loop}{%
+\chapter{Loop prediction: Supplemental Information}\label{sup-loop}}
 
 \hypertarget{LoopPredSupTab}{%
 \section{Supplementary Tables}\label{LoopPredSupTab}}
@@ -5921,7 +5941,7 @@ Writing – Review \& Editing & Preparation, creation and/or presentation of the
 \end{tabular}
 \end{table}
 
-\bibliography{bib/PhD.bib}
+\bibliography{bib/PhDclean.bib}
 
 
 
