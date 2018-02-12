@@ -18,7 +18,7 @@ classoption: [
   captions=tableabove, 
   draft=false]
 papersize: a4
-bibliography: [bib/PhDclean.bib]
+bibliography: [bib/PhDclean.cleaner.bib]
 biblio-style: myabbrvnat
 csl: american-journal-of-medical-genetics.csl
 link-citations: yes
