@@ -83,7 +83,7 @@ While the first Hi-C study produced genome-wide interactions at 1Mb resolution [
 ## Hierarchy of chromatin 3D structure
 
 <!-- ---------------------------------------------------------------- -->
-```{r GenomeHierarchy, fig.cap='(ref:GenomeHierarchy)', out.width='80%', fig.align='center'}
+```{r GenomeHierarchy, fig.cap='(ref:GenomeHierarchy)', out.width='100%', fig.align='center'}
 knitr::include_graphics("figures/Bonev2016Fig2.png")
 ```
 
@@ -194,7 +194,7 @@ observed in Hi-C experiments in *A. thaliana*.
 Interestingly, both *C.elegans* and *A.thaliana* do not encode a CTCF homolog [@Heger2012], 
 suggesting alternative mechanisms of genome organization and segmentation in these species [@Long2016]. 
 TAD-like structures are therefore not required for eukaryotic interphase chromosome folding. 
-Nevertheless, Hi-C experiments in bacteria and yeast suggest that self-interacting domains may be an ancient feature of chromosome organization. 
+Nevertheless, Hi-C experiments in bacteria and yeast suggest that self-interacting domains may be an ancient feature of chromosome organization. 
 Hi-C data in *Caulobacter* cells revealed so-called chromosomally interacting domains (CIDs) of 30 to 420 kb in size [@Le2013].
 In fission yeast *S. pombe*, globule structures at the 40-100 kb scale were identified and depend on cohesin complex [@Mizuguchi2014]. Furthermore, in very short CIDs of around 2-10 kb were detected in *S.cerevisiae* and bounded by highly transcribed genes [@Hsieh2015].
 Further high-resolution experiments in more diverse species are needed to understand the evolutionary origin of genome segregation into TAD-like structures. 
