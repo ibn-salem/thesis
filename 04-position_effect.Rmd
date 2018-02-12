@@ -169,25 +169,65 @@ sufficient evidence suggesting haploinsufficiency is associated with
 clinical phenotype, c = HI scores less than 10, d = within H1-ESC TAD, e
 = DHS enhancer-promoter disrupted interactions).
 
-  **Subject ID**   **Reported Karyotype**          **Disruption of Functional Elemen**   **Breakpoints within TADs (hESC / IMR90 / GM12878)**   **Top-ranking Candidates ±1 Mb **
-  ---------------- ------------------------------- ------------------------------------- ----------------------------------------------------   -----------------------------------
-  **DGAP017**      46,X,t(X;10)(p11.2;q24.3)       DHS                                   2 / 2 / 1                                              -
-  **DGAP111**      46,XY,t(16;20)(q11.2;q13.2)dn   CTCF                                  1 / 1 / 2                                              *ORC6^a^*
-  **DGAP113**      46,XY,t(1;3)(q32.1;q13.2)dn     -                                     2 / 2 / 2                                              *ASPM^a^*
-  **DGAP126**      46,XX,t(5;10)(p13.3;q21.1)dn    -                                     2 / 1 / 2                                               -
-  **DGAP138**      46,XY,t(1;6)(q23;q13)dn         -                                     2 / 2 / 2                                               *GRIK2^ac^*
-  **DGAP153**      46,X,t(X;17)(p11.23;p11.2)dn    -                                     1 / 1 / 1                                               -
-  **DGAP163**      46,XY,t(2;14)(p23;q13)dn        -                                     2 / 2 / 2                                               *SOS1^cde^, COCH^de^*
-  **DGAP176**      46,Y,inv(X)(q13q24)mat          DHS, CTCF                             2 / 1 / 2                                               *ACSL4^bd^, COL4A5^bcde^*
-  **DGAP249**      46,XX,t(2;11)(q33;q23)dn        E, DHS                                2 / 2 / 2                                               *SATB2^bcde^, SORL1^e^*
-  **DGAP252**      46,XY,t(3;18)(q13.2;q11.2)dn    -                                     2 / 2 / 2                                               *RBBP8^a^,GATA6^bcde^*
-  **DGAP275**      46,XX,t(7;12)(p13;q24.33)dn     DHS                                   1 / 1 / 2                                               *ANKLE2^e^, POLE^e^*
-  **DGAP287**      46,XY,t(10;14)(p13;q32.1)dn     CTCF                                  2 / 2 / 2                                               -
-  **DGAP288**      46,XX,t(6:17)(q13;q21)dn        DHS                                   2 / 2 / 2                                               *SOX9^bcd^*
-  **DGAP315**      46,XX,inv(6)(p24q11)dn          -                                     1 / 1 / 2                                               -
-  **DGAP319**      46,XX,t(4;13)(q31.3;q14.3)dn    -                                     2 / 1 / 2                                               -
-  **DGAP322**      46,XY,t(1;18)(q32.1;q22.1)      DHS                                   1 / 2 / 2                                               *IRF6^bcd^*
-  **DGAP329**      46,XX,t(2;14)(q21;q24.3)dn      -                                     1 / 2 / 2                                               *ZEB2^bcde^*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Subject ID and Reported Karyotype**             **Disruption of Functional Elements** **Breakpoints within TADs (hESC / IMR90 / GM12878)**   **Top-ranking Candidates +/-1 Mb **
+----------------------------------------------    ------------------------------------- -------------------------------------------------   -----------------------------------
+**DGAP017**      *46,X,t(X;10)(p11.2;q24.3)*       DHS                                   2/2/1                                              -
+
+**DGAP111**      *46,XY,t(16;20)(q11.2;q13.2)dn*   CTCF                                  1/1/2                                              *ORC6^a^*
+
+**DGAP113**      *46,XY,t(1;3)(q32.1;q13.2)dn      -                                     2/2/2                                              *ASPM^a^*
+
+**DGAP126**      *46,XX,t(5;10)(p13.3;q21.1)dn*    -                                     2/1/2                                               -
+
+**DGAP138**      *46,XY,t(1;6)(q23;q13)dn*         -                                     2/2/2                                               *GRIK2^ac^*
+
+**DGAP153**      *46,X,t(X;17)(p11.23;p11.2)dn*    -                                     1/1/1                                               -
+
+**DGAP163**      *46,XY,t(2;14)(p23;q13)dn*        -                                     2/2/2                                               *SOS1^cde^, COCH^de^*
+
+
+**DGAP176**      *46,Y,inv(X)(q13q24)mat*          DHS, CTCF                             2/1/2                                               *ACSL4^bd^, COL4A5^bcde^*
+
+**DGAP249**      *46,XX,t(2;11)(q33;q23)dn*        E, DHS                                2/2/2                                               *SATB2^bcde^, SORL1^e^*
+
+**DGAP252**      *46,XY,t(3;18)(q13.2;q11.2)dn*    -                                     2/2/2                                               *RBBP8^a^,GATA6^bcde^*
+
+**DGAP275**      *46,XX,t(7;12)(p13;q24.33)dn*     DHS                                   1/1/2                                               *ANKLE2^e^, POLE^e^*
+
+**DGAP287**      *46,XY,t(10;14)(p13;q32.1)dn*     CTCF                                  2/2/2                                               -
+
+**DGAP288**      *46,XX,t(6:17)(q13;q21)dn*        DHS                                   2/2/2                                               *SOX9^bcd^*
+
+**DGAP315**      *46,XX,inv(6)(p24q11)dn*          -                                     1/1/2                                               -
+
+**DGAP319**      *46,XX,t(4;13)(q31.3;q14.3)dn*    -                                     2/1/2                                               -
+
+**DGAP322**      *46,XY,t(1;18)(q32.1;q22.1)*      DHS                                   1/2/2                                               *IRF6^bcd^*
+
+**DGAP329**      *46,XX,t(2;14)(q21;q24.3)dn*      -                                     1/2/2                                               *ZEB2^bcde^*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  <!-- **Subject ID**   **Reported Karyotype**          **Disruption of Functional Elements**   **Breakpoints within <br>TADs (hESC / IMR90 / GM12878)**   **Top-ranking Candidates ±1 Mb ** -->
+  <!-- ---------------- ------------------------------- ------------------------------------- ----------------------------------------------------   ----------------------------------- -->
+  <!-- **DGAP017**      46,X,t(X;10)(p11.2;q24.3)       DHS                                   2 / 2 / 1                                              - -->
+  <!-- **DGAP111**      46,XY,t(16;20)(q11.2;q13.2)dn   CTCF                                  1 / 1 / 2                                              *ORC6^a^* -->
+  <!-- **DGAP113**      46,XY,t(1;3)(q32.1;q13.2)dn     -                                     2 / 2 / 2                                              *ASPM^a^* -->
+  <!-- **DGAP126**      46,XX,t(5;10)(p13.3;q21.1)dn    -                                     2 / 1 / 2                                               - -->
+  <!-- **DGAP138**      46,XY,t(1;6)(q23;q13)dn         -                                     2 / 2 / 2                                               *GRIK2^ac^* -->
+  <!-- **DGAP153**      46,X,t(X;17)(p11.23;p11.2)dn    -                                     1 / 1 / 1                                               - -->
+  <!-- **DGAP163**      46,XY,t(2;14)(p23;q13)dn        -                                     2 / 2 / 2                                               *SOS1^cde^, COCH^de^* -->
+  <!-- **DGAP176**      46,Y,inv(X)(q13q24)mat          DHS, CTCF                             2 / 1 / 2                                               *ACSL4^bd^, COL4A5^bcde^* -->
+  <!-- **DGAP249**      46,XX,t(2;11)(q33;q23)dn        E, DHS                                2 / 2 / 2                                               *SATB2^bcde^, SORL1^e^* -->
+  <!-- **DGAP252**      46,XY,t(3;18)(q13.2;q11.2)dn    -                                     2 / 2 / 2                                               *RBBP8^a^,GATA6^bcde^* -->
+  <!-- **DGAP275**      46,XX,t(7;12)(p13;q24.33)dn     DHS                                   1 / 1 / 2                                               *ANKLE2^e^, POLE^e^* -->
+  <!-- **DGAP287**      46,XY,t(10;14)(p13;q32.1)dn     CTCF                                  2 / 2 / 2                                               - -->
+  <!-- **DGAP288**      46,XX,t(6:17)(q13;q21)dn        DHS                                   2 / 2 / 2                                               *SOX9^bcd^* -->
+  <!-- **DGAP315**      46,XX,inv(6)(p24q11)dn          -                                     1 / 1 / 2                                               - -->
+  <!-- **DGAP319**      46,XX,t(4;13)(q31.3;q14.3)dn    -                                     2 / 1 / 2                                               - -->
+  <!-- **DGAP322**      46,XY,t(1;18)(q32.1;q22.1)      DHS                                   1 / 2 / 2                                               *IRF6^bcd^* -->
+  <!-- **DGAP329**      46,XX,t(2;14)(q21;q24.3)dn      -                                     1 / 2 / 2                                               *ZEB2^bcde^* -->
 
 
 
@@ -307,7 +347,7 @@ neurological conditions not recognized as a known syndrome or genomic
 disorder (see clinical descriptions in Supplemental Note: Case Reports).
 
 <!-- ---------------------------------------------------------------- -->
-```{r position-effect-1, fig.cap='(ref:position-effect-1)', out.width='80%', fig.align='center'}
+```{r position-effect-1, fig.cap='(ref:position-effect-1)', out.width='100%', fig.align='center'}
 knitr::include_graphics("figures/position_effect/Figure1.png")
 ```
 
@@ -662,7 +702,7 @@ disorders may be forthcoming from our approach and of value in the
 management of some individuals.
 
 <!-- ---------------------------------------------------------------- -->
-```{r position-effect-3, fig.cap='(ref:position-effect-3)', out.width='50%', fig.align='center'}
+```{r position-effect-3, fig.cap='(ref:position-effect-3)', out.width='80%', fig.align='center'}
 knitr::include_graphics("figures/position_effect/Figure3.png")
 ```
 
