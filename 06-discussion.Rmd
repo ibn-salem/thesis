@@ -62,6 +62,12 @@ Therefore selective pressure is likely to act on TAD structures.
 While in neutral selection
 
 
+<!-- Discussing loop prediction for association of variatns to disease target genes -->
+The majority of disease-associated variants uncovered by genome-wide association studies (GWAS) reside in noncoding sequences. Many variants are located near cis-regulatory sequences and enhancers and could, therefore, contribute to pathogenesis by affecting transcription of specific genes [@Hindorff2009]. 
+The ability to measure long-range chromatin interactions makes it possible to assign understand the role of non-coding variants by predicting its interacting target gene [@Smemo2014; @Visser2012]. 
+This has been shown by measuring the interactions of promoters in 17 human primary hematopoietic cells types revealing more than 2,400 potential disease-associated genes liked to thousands of GWAS SNPs [@Javierre2016].
+In another study, the noncoding variants associated with schizophrenia could be annotated using Hi-C contact maps from human cerebral cortex [@Won2016].
+
 ## Further directions
 - Plasticity and dynamics of chromatin interactions
 - Single cell resolution 
