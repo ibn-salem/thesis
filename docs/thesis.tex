@@ -459,7 +459,7 @@ structure}\label{hierarchy-of-chromatin-3d-structure}}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{figures/Bonev2016Fig2} 
+{\centering \includegraphics[width=1\linewidth]{figures/Bonev2016Fig2} 
 
 }
 
@@ -667,27 +667,77 @@ However, often the entire TAD responded as a unit by changing histone
 modifications and switching between A and B compartment. This suggests,
 that transcription status is coordinated within TADs.
 
-\hypertarget{chromatin-organization-and-evolution}{%
-\section{Chromatin organization and
-evolution}\label{chromatin-organization-and-evolution}}
+\hypertarget{evolution-of-chromatin-organization}{%
+\section{Evolution of chromatin
+organization}\label{evolution-of-chromatin-organization}}
 
-\begin{itemize}
-\tightlist
-\item
-  Evolution of chromatin architecture
-\item
-  Conservation of TADs
-\end{itemize}
+While TADs were initially described for mammalian genomes, a similar
+domain organization was found in the genomes of non-mammalian species
+such as \emph{Drosophila} \citep{Sexton2012}, zebrafish
+\citep{Gomez-Marin2015} \emph{Caenorhabditis elegans} \citep{Crane2015}
+and yeast \citep{Hsieh2015, Mizuguchi2014}.
+
+However, in \emph{C. elegans} TADs were only observed on the X
+chromosome of XX hermaphrodites and not on autosomes \citep{Crane2015}.
+The small and compact genome with most of the cis-regulatory information
+within 10kb from the TSS might not need long-range domains for gene
+regulation \citep{Long2016}. In contrast, plants have long-range
+cell-type specific enhancers \citep{Zhu2015}, but TAD like structures
+could not be observed in Hi-C experiments in \emph{A. thaliana}.
+Interestingly, both \emph{C.elegans} and \emph{A.thaliana} do not encode
+a CTCF homolog \citep{Heger2012}, suggesting alternative mechanisms of
+genome organization and segmentation in these species \citep{Long2016}.
+TAD-like structures are therefore not required for eukaryotic interphase
+chromosome folding. Nevertheless, Hi-C experiments in bacteria and yeast
+suggest that self-interacting domains may be an ancient feature of
+chromosome organization. Hi-C data in \emph{Caulobacter} cells revealed
+so-called chromosomally interacting domains (CIDs) of 30 to 420 kb in
+size \citep{Le2013}. In fission yeast \emph{S. pombe}, globule
+structures at the 40-100 kb scale were identified and depend on cohesin
+complex \citep{Mizuguchi2014}. Furthermore, in very short CIDs of around
+2-10 kb were detected in \emph{S.cerevisiae} and bounded by highly
+transcribed genes \citep{Hsieh2015}. Further high-resolution experiments
+in more diverse species are needed to understand the evolutionary origin
+of genome segregation into TAD-like structures.
+
+The presence of domain-like structures in diverse species across the
+tree of life leads to the question if not only the genomic sequence but
+also its folding structure is conserved between species. Interestingly,
+TADs are not only largely stable across different cell-types
+\citep{Dixon2012, Rao2014} and during differentiation \citep{Dixon2015},
+but also remarkably similar between homologous regions in mouse and
+human \citep{Dixon2012}. More than 54\% of TAD boundaries in human hESC
+cells occur at homologous genomic positions in mouse ESCs
+\citep{Dixon2012}. Similarly, 45\% of contact domains called in mouse
+B-lymphoblasts were also identified at homologous regions in human
+lymphoblastoid cells \citep{Rao2014}. A single TAD boundary at the Six
+gene loci could be traced back in evolution to the origin of
+deuterostomes \citep{Gomez-Marin2015}. However, these analyses focused
+only on the subset of syntenic regions that can be mapped uniquely
+between genomes. Initial comparative Hi-C studies identified several
+evolutionary breakpoints at TAD boundaries and a major role of conserved
+CTCF binding sites in TAD conservation \citep{VietriRudan2015}. However,
+it remains to be investigated systematically if TAD regions as a whole
+might be stable or disrupted by rearrangements during evolution and how
+this is associated to conserved or divergent transcriptional regulation.
 
 \hypertarget{disruption-of-chromatin-architecture-in-disease}{%
 \section{Disruption of chromatin architecture in
 disease}\label{disruption-of-chromatin-architecture-in-disease}}
 
-\begin{itemize}
-\tightlist
-\item
-  Disruption of chromatin architecture
-\end{itemize}
+The insulating function of TADs to restrict promoter-enhancer
+interactions within them \citep{Symmons2015} and evolutionary
+conservation of TADs suggests that alternations of TAD structures may
+induce ectopic interactions between regulatory elements, leading to gene
+dysregulation. Several experiments of genetic manipulation of specific
+TAD boundaries can change the surrounding interaction patterns and thus
+affect the expression of nearby genes. After deletion of a 58-kb region
+encompassing a TAD boundary in mouse ESC, interactions between adjacent
+TADS significantly increase and genes in neighboring TADs were
+upregulated \citep{Nora2012}. More precise deletion or inversion of CTCF
+binding site at loop anchors in TAD boundaries altered local chromatin
+architecture and nearby gene expression
+\citep{Dowen2014, Guo2015, Narendra2015}.
 
 \hypertarget{aims-of-this-thesis}{%
 \section{Aims of this thesis}\label{aims-of-this-thesis}}
@@ -2808,7 +2858,7 @@ next-generation sequencing.\citep{Ordulu2014} Reported ages of DGAP
 subjects are from time of enrollment. All reported genomic coordinates
 use GRCh37.
 
-\begin{longtable}[]{@{}lllll@{}}
+\begin{longtable}[]{@{}lllr@{}}
 \caption{\label{tab:position-effect-subjects} \textbf{Description of the 17
 analyzed DGAP cases with non-coding BCAs.} Corresponding clinical
 karyotypes are reported, with overlap of breakpoints with regulatory
@@ -2823,54 +2873,182 @@ haploinsufficiency is associated with clinical phenotype, c = HI scores
 less than 10, d = within H1-ESC TAD, e = DHS enhancer-promoter disrupted
 interactions).}\tabularnewline
 \toprule
-\textbf{Subject ID} & \textbf{Reported Karyotype} & \textbf{Disruption
-of Functional Elemen} & \textbf{Breakpoints within TADs (hESC / IMR90 /
-GM12878)} & \textbf{Top-ranking Candidates ±1 Mb }\tabularnewline
+\begin{minipage}[b]{0.25\columnwidth}\raggedright
+\textbf{Subject ID and Reported Karyotype}\strut
+\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright
+\textbf{Disruption of Functional Elements}\strut
+\end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\raggedright
+\textbf{Breakpoints within TADs (hESC / IMR90 / GM12878)}\strut
+\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedleft
+\textbf{Top-ranking Candidates +/-1 Mb }\strut
+\end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
-\textbf{Subject ID} & \textbf{Reported Karyotype} & \textbf{Disruption
-of Functional Elemen} & \textbf{Breakpoints within TADs (hESC / IMR90 /
-GM12878)} & \textbf{Top-ranking Candidates ±1 Mb }\tabularnewline
+\begin{minipage}[b]{0.25\columnwidth}\raggedright
+\textbf{Subject ID and Reported Karyotype}\strut
+\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright
+\textbf{Disruption of Functional Elements}\strut
+\end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\raggedright
+\textbf{Breakpoints within TADs (hESC / IMR90 / GM12878)}\strut
+\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedleft
+\textbf{Top-ranking Candidates +/-1 Mb }\strut
+\end{minipage}\tabularnewline
 \midrule
 \endhead
-\textbf{DGAP017} & 46,X,t(X;10)(p11.2;q24.3) & DHS & 2 / 2 / 1 &
--\tabularnewline
-\textbf{DGAP111} & 46,XY,t(16;20)(q11.2;q13.2)dn & CTCF & 1 / 1 / 2 &
-\emph{ORC6\textsuperscript{a}}\tabularnewline
-\textbf{DGAP113} & 46,XY,t(1;3)(q32.1;q13.2)dn & - & 2 / 2 / 2 &
-\emph{ASPM\textsuperscript{a}}\tabularnewline
-\textbf{DGAP126} & 46,XX,t(5;10)(p13.3;q21.1)dn & - & 2 / 1 / 2 &
--\tabularnewline
-\textbf{DGAP138} & 46,XY,t(1;6)(q23;q13)dn & - & 2 / 2 / 2 &
-\emph{GRIK2\textsuperscript{ac}}\tabularnewline
-\textbf{DGAP153} & 46,X,t(X;17)(p11.23;p11.2)dn & - & 1 / 1 / 1 &
--\tabularnewline
-\textbf{DGAP163} & 46,XY,t(2;14)(p23;q13)dn & - & 2 / 2 / 2 &
-\emph{SOS1\textsuperscript{cde},
-COCH\textsuperscript{de}}\tabularnewline
-\textbf{DGAP176} & 46,Y,inv(X)(q13q24)mat & DHS, CTCF & 2 / 1 / 2 &
-\emph{ACSL4\textsuperscript{bd},
-COL4A5\textsuperscript{bcde}}\tabularnewline
-\textbf{DGAP249} & 46,XX,t(2;11)(q33;q23)dn & E, DHS & 2 / 2 / 2 &
-\emph{SATB2\textsuperscript{bcde},
-SORL1\textsuperscript{e}}\tabularnewline
-\textbf{DGAP252} & 46,XY,t(3;18)(q13.2;q11.2)dn & - & 2 / 2 / 2 &
-\emph{RBBP8\textsuperscript{a},GATA6\textsuperscript{bcde}}\tabularnewline
-\textbf{DGAP275} & 46,XX,t(7;12)(p13;q24.33)dn & DHS & 1 / 1 / 2 &
-\emph{ANKLE2\textsuperscript{e}, POLE\textsuperscript{e}}\tabularnewline
-\textbf{DGAP287} & 46,XY,t(10;14)(p13;q32.1)dn & CTCF & 2 / 2 / 2 &
--\tabularnewline
-\textbf{DGAP288} & 46,XX,t(6:17)(q13;q21)dn & DHS & 2 / 2 / 2 &
-\emph{SOX9\textsuperscript{bcd}}\tabularnewline
-\textbf{DGAP315} & 46,XX,inv(6)(p24q11)dn & - & 1 / 1 / 2 &
--\tabularnewline
-\textbf{DGAP319} & 46,XX,t(4;13)(q31.3;q14.3)dn & - & 2 / 1 / 2 &
--\tabularnewline
-\textbf{DGAP322} & 46,XY,t(1;18)(q32.1;q22.1) & DHS & 1 / 2 / 2 &
-\emph{IRF6\textsuperscript{bcd}}\tabularnewline
-\textbf{DGAP329} & 46,XX,t(2;14)(q21;q24.3)dn & - & 1 / 2 / 2 &
-\emph{ZEB2\textsuperscript{bcde}}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP017} \emph{46,X,t(X;10)(p11.2;q24.3)}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+DHS\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/2/1\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP111} \emph{46,XY,t(16;20)(q11.2;q13.2)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+CTCF\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+1/1/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{ORC6\textsuperscript{a}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP113} *46,XY,t(1;3)(q32.1;q13.2)dn\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{ASPM\textsuperscript{a}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP126} \emph{46,XX,t(5;10)(p13.3;q21.1)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/1/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP138} \emph{46,XY,t(1;6)(q23;q13)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{GRIK2\textsuperscript{ac}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP153} \emph{46,X,t(X;17)(p11.23;p11.2)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+1/1/1\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP163} \emph{46,XY,t(2;14)(p23;q13)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{SOS1\textsuperscript{cde}, COCH\textsuperscript{de}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP176} \emph{46,Y,inv(X)(q13q24)mat}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+DHS, CTCF\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/1/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{ACSL4\textsuperscript{bd}, COL4A5\textsuperscript{bcde}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP249} \emph{46,XX,t(2;11)(q33;q23)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+E, DHS\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{SATB2\textsuperscript{bcde}, SORL1\textsuperscript{e}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP252} \emph{46,XY,t(3;18)(q13.2;q11.2)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{RBBP8\textsuperscript{a},GATA6\textsuperscript{bcde}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP275} \emph{46,XX,t(7;12)(p13;q24.33)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+DHS\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+1/1/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{ANKLE2\textsuperscript{e}, POLE\textsuperscript{e}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP287} \emph{46,XY,t(10;14)(p13;q32.1)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+CTCF\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP288} \emph{46,XX,t(6:17)(q13;q21)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+DHS\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{SOX9\textsuperscript{bcd}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP315} \emph{46,XX,inv(6)(p24q11)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+1/1/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP319} \emph{46,XX,t(4;13)(q31.3;q14.3)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+2/1/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP322} \emph{46,XY,t(1;18)(q32.1;q22.1)}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+DHS\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+1/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{IRF6\textsuperscript{bcd}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\textbf{DGAP329} \emph{46,XX,t(2;14)(q21;q24.3)dn}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+1/2/2\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedleft
+\emph{ZEB2\textsuperscript{bcde}}\strut
+\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -3016,7 +3194,7 @@ Note: Case Reports).
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{figures/position_effect/Figure1} 
+{\centering \includegraphics[width=1\linewidth]{figures/position_effect/Figure1} 
 
 }
 
@@ -3440,7 +3618,7 @@ management of some individuals.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\linewidth]{figures/position_effect/Figure3} 
+{\centering \includegraphics[width=0.8\linewidth]{figures/position_effect/Figure3} 
 
 }
 
@@ -4724,6 +4902,20 @@ change associated with TAD disruption to be a consequence of selective
 pressure on TAD structure. Therefore selective pressure is likely to act
 on TAD structures. While in neutral selection
 
+The majority of disease-associated variants uncovered by genome-wide
+association studies (GWAS) reside in noncoding sequences. Many variants
+are located near cis-regulatory sequences and enhancers and could,
+therefore, contribute to pathogenesis by affecting transcription of
+specific genes \citep{Hindorff2009}. The ability to measure long-range
+chromatin interactions makes it possible to assign understand the role
+of non-coding variants by predicting its interacting target gene
+\citep{Smemo2014, Visser2012}. This has been shown by measuring the
+interactions of promoters in 17 human primary hematopoietic cells types
+revealing more than 2,400 potential disease-associated genes liked to
+thousands of GWAS SNPs \citep{Javierre2016}. In another study, the
+noncoding variants associated with schizophrenia could be annotated
+using Hi-C contact maps from human cerebral cortex \citep{Won2016}.
+
 \hypertarget{further-directions}{%
 \section{Further directions}\label{further-directions}}
 
@@ -5941,7 +6133,7 @@ Writing – Review \& Editing & Preparation, creation and/or presentation of the
 \end{tabular}
 \end{table}
 
-\bibliography{bib/PhDclean.bib}
+\bibliography{bib/PhD.bib}
 
 
 
