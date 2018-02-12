@@ -25,7 +25,7 @@
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-11">
+<meta name="date" content="2018-02-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -211,9 +211,10 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="6-thesis-discussion.html"><a href="6-thesis-discussion.html"><i class="fa fa-check"></i><b>6</b> Discussion</a><ul>
-<li class="chapter" data-level="6.1" data-path="6-1-discussion-on-tad-evolution.html"><a href="6-1-discussion-on-tad-evolution.html"><i class="fa fa-check"></i><b>6.1</b> Discussion on TAD evolution</a></li>
-<li class="chapter" data-level="6.2" data-path="6-2-further-directions.html"><a href="6-2-further-directions.html"><i class="fa fa-check"></i><b>6.2</b> Further directions</a></li>
-<li class="chapter" data-level="6.3" data-path="6-3-conclusions.html"><a href="6-3-conclusions.html"><i class="fa fa-check"></i><b>6.3</b> Conclusions</a></li>
+<li class="chapter" data-level="6.1" data-path="6-1-discussion-paralog-co-regulation-in-tads.html"><a href="6-1-discussion-paralog-co-regulation-in-tads.html"><i class="fa fa-check"></i><b>6.1</b> Discussion paralog co-regulation in TADs</a></li>
+<li class="chapter" data-level="6.2" data-path="6-2-discussion-on-tad-evolution.html"><a href="6-2-discussion-on-tad-evolution.html"><i class="fa fa-check"></i><b>6.2</b> Discussion on TAD evolution</a></li>
+<li class="chapter" data-level="6.3" data-path="6-3-further-directions.html"><a href="6-3-further-directions.html"><i class="fa fa-check"></i><b>6.3</b> Further directions</a></li>
+<li class="chapter" data-level="6.4" data-path="6-4-conclusions.html"><a href="6-4-conclusions.html"><i class="fa fa-check"></i><b>6.4</b> Conclusions</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -228,7 +229,7 @@
 <li class="chapter" data-level="C.3" data-path="C-3-supplemental-figure.html"><a href="C-3-supplemental-figure.html"><i class="fa fa-check"></i><b>C.3</b> Supplemental Figure</a></li>
 <li class="chapter" data-level="C.4" data-path="C-4-position-effect-sub-tab.html"><a href="C-4-position-effect-sub-tab.html"><i class="fa fa-check"></i><b>C.4</b> Supplemental Table Legends</a></li>
 </ul></li>
-<li class="chapter" data-level="D" data-path="D-sup-loop-prediction.html"><a href="D-sup-loop-prediction.html"><i class="fa fa-check"></i><b>D</b> Loop prediction: Supplemental Information</a><ul>
+<li class="chapter" data-level="D" data-path="D-sup-loop.html"><a href="D-sup-loop.html"><i class="fa fa-check"></i><b>D</b> Loop prediction: Supplemental Information</a><ul>
 <li class="chapter" data-level="D.1" data-path="D-1-LoopPredSupTab.html"><a href="D-1-LoopPredSupTab.html"><i class="fa fa-check"></i><b>D.1</b> Supplementary Tables</a></li>
 <li class="chapter" data-level="D.2" data-path="D-2-supplementary-figures-1.html"><a href="D-2-supplementary-figures-1.html"><i class="fa fa-check"></i><b>D.2</b> Supplementary Figures</a></li>
 </ul></li>
@@ -262,7 +263,7 @@ vertebrate species from whole-genome-alignment data (Table <a href="3-5-methods.
 data were downloaded as net files from UCSC Genome Browser for human
 genome hg38 and the genomes listed in Table <a href="3-5-methods.html#tab:TadEvoSpecies">3.1</a>. The whole-genome data
 consists of consecutive alignment blocks that are chained and
-hierarchically ordered in the so-called nets <span class="citation">(Kent et al., <a href="#ref-Kent2003">2003</a>)</span>. Chains represent
+hierarchically ordered in the so-called nets <span class="citation">[Kent et al., <a href="#ref-Kent2003">2003</a>]</span>. Chains represent
 blocks of interrupted syntenic regions and may include larger gaps. When
 hierarchically arranged in a net file, child chains can complement their
 parents when they align nearby segments that fill the alignment gaps of
@@ -278,7 +279,7 @@ way, we extracted rearrangement breakpoints between human and 12 genomes
 using size thresholds of 10 kb, 100 kb, and 1000 kb. To compare
 breakpoints to TADs we converted the breakpoint coordinates from hg38 to
 hg19 genome assembly using the liftOver tool from UCSC Genome Browser
-<span class="citation">(Hinrichs et al., <a href="#ref-Hinrichs2006">2006</a>)</span>.</p>
+<span class="citation">[Hinrichs et al., <a href="#ref-Hinrichs2006">2006</a>]</span>.</p>
 <!-- ======================================================================= -->
 <table>
 <caption><span id="tab:TadEvoSpecies">Table 3.1: </span> Species used for breakpoint identification from whole-genome alignments with human.
@@ -370,10 +371,10 @@ hg19 genome assembly using the liftOver tool from UCSC Genome Browser
 <div id="topologically-associating-domains-and-contact-domains" class="section level3">
 <h3><span class="header-section-number">3.5.2</span> Topologically associating domains and contact domains</h3>
 <p>We obtained topologically associating domain (TAD) calls from published
-Hi-C experiments in human embryonic stem cells (hESC) <span class="citation">(Dixon et al., <a href="#ref-Dixon2012">2012</a>)</span> and contact
+Hi-C experiments in human embryonic stem cells (hESC) <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span> and contact
 domains from published <em>in situ</em> Hi-C experiments in human GM12878 cells
-<span class="citation">(Rao et al., <a href="#ref-Rao2014">2014</a>)</span>. Genomic coordinates of hESC TADs were converted from hg18 to
-hg19 genome assembly using the UCSC liftOver tool <span class="citation">(Hinrichs et al., <a href="#ref-Hinrichs2006">2006</a>)</span>.</p>
+<span class="citation">[Rao et al., <a href="#ref-Rao2014">2014</a>]</span>. Genomic coordinates of hESC TADs were converted from hg18 to
+hg19 genome assembly using the UCSC liftOver tool <span class="citation">[Hinrichs et al., <a href="#ref-Hinrichs2006">2006</a>]</span>.</p>
 </div>
 <div id="breakpoint-distributions-at-tads" class="section level3">
 <h3><span class="header-section-number">3.5.3</span> Breakpoint distributions at TADs</h3>
@@ -411,18 +412,18 @@ test.</p>
 <div id="expression-data-for-mouse-and-human-orthologs" class="section level3">
 <h3><span class="header-section-number">3.5.5</span> Expression data for mouse and human orthologs</h3>
 <p>Promoter based expression data from CAGE analysis in human and mouse
-tissues from the FANTOM5 project <span class="citation">(Forrest et al., <a href="#ref-Forrest2014">2014</a>)</span> were retrieved from the EBI
-Expression Atlas <span class="citation">(Hinrichs et al., <a href="#ref-Hinrichs2006">2006</a>)</span> as baseline expression values per gene and
+tissues from the FANTOM5 project <span class="citation">[Forrest et al., <a href="#ref-Forrest2014">2014</a>]</span> were retrieved from the EBI
+Expression Atlas <span class="citation">[Hinrichs et al., <a href="#ref-Hinrichs2006">2006</a>]</span> as baseline expression values per gene and
 tissue. The meta data of samples contains tissue annotations as term IDs
 from Uberon, an integrated cross-species ontology covering anatomical
-structures in animals <span class="citation">(Herrero et al., <a href="#ref-Herrero2016">2016</a>)</span>. Human and mouse samples were assigned to
+structures in animals <span class="citation">[Herrero et al., <a href="#ref-Herrero2016">2016</a>]</span>. Human and mouse samples were assigned to
 each other if they had the same developmental stage and matching Uberon
 term IDs. This resulted in 19 samples for each organism with
 corresponding tissues.</p>
 <p>We used the R package biomaRt to retrieve all human genes in the Ensembl
 database (version grch37.ensembl.org) and could assign 13,065 to
 ortholog genes in mouse by allowing only the one-to-one orthology type
-<span class="citation">(Herrero et al., <a href="#ref-Herrero2016">2016</a>)</span>. Of these ortholog pairs, 12,696 are contained in the expression
+<span class="citation">[Herrero et al., <a href="#ref-Herrero2016">2016</a>]</span>. Of these ortholog pairs, 12,696 are contained in the expression
 data described above. For each pair of orthologs we computed the
 correlation of expression values across matching tissues as Pearson’s
 correlation coefficient.</p>
@@ -437,7 +438,7 @@ size threshold is located in the TAD region with a distance larger than
 is not enclosed completely by any fill in the net file, overlaps at
 least one breakpoint inferred using a 1000 kb fill size threshold, and
 this breakpoint is further than 80 kb away from each TAD boundary. TADs
-were also classified according to their overlap with GRBs as in <span class="citation">(Harmston et al., <a href="#ref-Harmston2017">2017</a>)</span>.
+were also classified according to their overlap with GRBs as in <span class="citation">[Harmston et al., <a href="#ref-Harmston2017">2017</a>]</span>.
 A given TAD is a GRB-TAD if it overlaps with more than 80% of the TAD
 size with a GRB. A TAD is classified as non-GRB if it has less than 20%
 overlap with GRBs. The 12,696 human genes with mouse ortholog and
@@ -456,47 +457,47 @@ GitHub:
 The identification of breakpoints and extraction of fills from
 whole-genome alignment data was implemented in Python scripts. Reading
 of BED files and overlap calculations with TADs and TAD bins were
-computed in R with Bioconductor <span class="citation">(Huber et al., <a href="#ref-Huber2015">2015</a>)</span> packages rtracklayer <span class="citation">(Lawrence et al., <a href="#ref-Lawrence2009">2009</a>)</span> and
-GenomicRanges <span class="citation">(Lawrence et al., <a href="#ref-Lawrence2013">2013</a>)</span>. Gene coordinates and ortholog assignments were
+computed in R with Bioconductor <span class="citation">[Huber et al., <a href="#ref-Huber2015">2015</a>]</span> packages rtracklayer <span class="citation">[Lawrence et al., <a href="#ref-Lawrence2009">2009</a>]</span> and
+GenomicRanges <span class="citation">[Lawrence et al., <a href="#ref-Lawrence2013">2013</a>]</span>. Gene coordinates and ortholog assignments were
 retrieved from Ensemble data base (version grch37.ensembl.org) using the
-package biomaRt <span class="citation">(Durinck et al., <a href="#ref-Durinck2009">2009</a><a href="#ref-Durinck2009">b</a>)</span>. For data integration and visualization we used R
-packages from tidyverse <span class="citation">(Wickham and Grolemund)</span>.</p>
+package biomaRt <span class="citation">[Durinck et al., <a href="#ref-Durinck2009">2009</a><a href="#ref-Durinck2009">a</a>]</span>. For data integration and visualization we used R
+packages from tidyverse <span class="citation">[Wickham and Grolemund]</span>.</p>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-Kent2003">
-<p>Kent, W.J., Baertsch, R., Hinrichs, A., Miller, W., and Haussler, D. (2003). Evolution’s cauldron: duplication, deletion, and rearrangement in the mouse and human genomes. Proceedings of the National Academy of Sciences of the United States of America <em>100</em>, 11484–11489.</p>
+<p>Kent WJ, Baertsch R, Hinrichs A, Miller W, Haussler D. 2003. Evolution’s cauldron: duplication, deletion, and rearrangement in the mouse and human genomes. Proceedings of the National Academy of Sciences of the United States of America 100: 11484–11489.</p>
 </div>
 <div id="ref-Hinrichs2006">
-<p>Hinrichs, A.S., Karolchik, D., Baertsch, R., Barber, G.P., Bejerano, G., Clawson, H., Diekhans, M., Furey, T.S., Harte, R.A., Hsu, F., et al. (2006). The UCSC Genome Browser Database: update 2006. Nucleic Acids Res <em>34</em>, D590—–D598.</p>
+<p>Hinrichs AS, Karolchik D, Baertsch R, Barber GP, Bejerano G, Clawson H, Diekhans M, Furey TS, Harte RA, Hsu F, Hillman-Jackson J, Kuhn RM, Pedersen JS, Pohl A, Raney BJ, Rosenbloom KR, Siepel A, Smith KE, Sugnet CW, Sultan-Qurraie A, Thomas DJ, Trumbower H, Weber RJ, Weirauch M, Zweig AS, Haussler D, Kent WJ. 2006. The UCSC Genome Browser Database: update 2006. Nucleic Acids Res 34: D590—–D598.</p>
 </div>
 <div id="ref-Dixon2012">
-<p>Dixon, J.R., Selvaraj, S., Yue, F., Kim, A., Li, Y., Shen, Y., Hu, M., Liu, J.S., and Ren, B. (2012). Topological domains in mammalian genomes identified by analysis of chromatin interactions. Nature <em>485</em>, 376–380.</p>
+<p>Dixon JR, Selvaraj S, Yue F, Kim A, Li Y, Shen Y, Hu M, Liu JS, Ren B. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. Nature 485: 376–380.</p>
 </div>
 <div id="ref-Rao2014">
-<p>Rao, S.S.P., Huntley, M.H., Durand, N.C., Stamenova, E.K., Bochkov, I.D., Robinson, J.T., Sanborn, A.L., Machol, I., Omer, A.D., Lander, E.S., et al. (2014). A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. Cell <em>159</em>, 1665–1680.</p>
+<p>Rao SSP, Huntley MH, Durand NC, Stamenova EK, Bochkov ID, Robinson JT, Sanborn AL, Machol I, Omer AD, Lander ES, Aiden EL. 2014. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. Cell 159: 1665–80.</p>
 </div>
 <div id="ref-Forrest2014">
-<p>Forrest, A.R.R., Kawaji, H., Rehli, M., Baillie, J.K., Hoon, M.J.L. de, Lassmann, T., Itoh, M., Summers, K.M., Suzuki, H., Daub, C.O., et al. (2014). A promoter-level mammalian expression atlas. Nature <em>507</em>, 462–470.</p>
+<p>Forrest ARR, Kawaji H, Rehli M, Baillie JK, Hoon MJL de, Lassmann T, Itoh M, Summers KM, Suzuki H, Daub CO, Kawai J, Heutink P, Hide W, Freeman TC, Lenhard B, Bajic VB, Taylor MS, Makeev VJ, Sandelin A, Hume D a, Carninci P, Hayashizaki Y. 2014. A promoter-level mammalian expression atlas. Nature 507: 462–70.</p>
 </div>
 <div id="ref-Herrero2016">
-<p>Herrero, J., Muffato, M., Beal, K., Fitzgerald, S., Gordon, L., Pignatelli, M., Vilella, A.J., Searle, S.M.J., Amode, R., Brent, S., et al. (2016). Ensembl comparative genomics resources. Database <em>2016</em>, bav096.</p>
+<p>Herrero J, Muffato M, Beal K, Fitzgerald S, Gordon L, Pignatelli M, Vilella AJ, Searle SMJ, Amode R, Brent S, Spooner W, Kulesha E, Yates A, Flicek P. 2016. Ensembl comparative genomics resources. Database 2016: bav096.</p>
 </div>
 <div id="ref-Harmston2017">
-<p>Harmston, N., Ing-Simmons, E., Tan, G., Perry, M., Merkenschlager, M., and Lenhard, B. (2017). Topologically associating domains are ancient features that coincide with Metazoan clusters of extreme noncoding conservation. Nature Communications <em>8</em>, 441.</p>
+<p>Harmston N, Ing-Simmons E, Tan G, Perry M, Merkenschlager M, Lenhard B. 2017. Topologically associating domains are ancient features that coincide with Metazoan clusters of extreme noncoding conservation. Nature Communications 8: 441.</p>
 </div>
 <div id="ref-Huber2015">
-<p>Huber, W., Carey, V.J., Gentleman, R., Anders, S., Carlson, M., Carvalho, B.S., Bravo, H.C., Davis, S., Gatto, L., Girke, T., et al. (2015). Orchestrating high-throughput genomic analysis with Bioconductor. Nature Methods <em>12</em>, 115–121.</p>
+<p>Huber W, Carey VJ, Gentleman R, Anders S, Carlson M, Carvalho BS, Bravo HC, Davis S, Gatto L, Girke T, Gottardo R, Hahne F, Hansen KD, Irizarry RA, Lawrence M, Love MI, MacDonald J, Obenchain V, Oleś AK, Pagès H, Reyes A, Shannon P, Smyth GK, Tenenbaum D, Waldron L, Morgan M. 2015. Orchestrating high-throughput genomic analysis with Bioconductor. Nature Methods 12: 115–121.</p>
 </div>
 <div id="ref-Lawrence2009">
-<p>Lawrence, M., Gentleman, R., and Carey, V. (2009). rtracklayer: an R package for interfacing with genome browsers. Bioinformatics <em>25</em>, 1841–1842.</p>
+<p>Lawrence M, Gentleman R, Carey V. 2009. rtracklayer: an R package for interfacing with genome browsers. Bioinformatics 25: 1841–1842.</p>
 </div>
 <div id="ref-Lawrence2013">
-<p>Lawrence, M., Huber, W., Pagès, H., Aboyoun, P., Carlson, M., Gentleman, R., Morgan, M.T., and Carey, V.J. (2013). Software for computing and annotating genomic ranges. PLoS Computational Biology <em>9</em>, e1003118.</p>
+<p>Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan MT, Carey VJ. 2013. Software for computing and annotating genomic ranges. PLoS computational biology 9: e1003118.</p>
 </div>
 <div id="ref-Durinck2009">
-<p>Durinck, S., Spellman, P.T., Birney, E., and Huber, W. (2009b). Mapping identifiers for the integration of genomic datasets with the R/Bioconductor package biomaRt. Nature Protocols <em>4</em>, 1184–1191.</p>
+<p>Durinck S, Spellman PT, Birney E, Huber W. 2009a. Mapping identifiers for the integration of genomic datasets with the R/Bioconductor package biomaRt. Nature Protocols 4: 1184–1191.</p>
 </div>
 </div>
             </section>
