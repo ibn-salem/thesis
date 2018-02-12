@@ -213,8 +213,14 @@ TAD boundaries and a major role of conserved CTCF binding sites in TAD conservat
 However, it remains to be investigated systematically if TAD regions as a whole might be stable or disrupted by rearrangements during evolution and how this is associated to conserved or divergent transcriptional regulation. 
 
 ## Disruption of chromatin architecture in disease
-- Disruption of chromatin architecture
 
+The insulating function of TADs to restrict promoter-enhancer interactions within them [@Symmons2015]
+and evolutionary conservation of TADs suggests that alternations of TAD structures may
+induce ectopic interactions between regulatory elements, leading to gene dysregulation. 
+Several experiments of genetic manipulation of specific TAD boundaries can change the surrounding interaction
+patterns and thus affect the expression of nearby genes. 
+After deletion of a 58-kb region encompassing a TAD boundary in mouse ESC, interactions between adjacent TADS significantly increase and genes in neighboring TADs were upregulated [@Nora2012].
+More precise deletion or inversion of CTCF binding site at loop anchors in TAD boundaries altered local chromatin architecture and nearby gene expression [@Dowen2014; @Guo2015; @Narendra2015].
 
 ## Aims of this thesis
 The recent advances of genome-wide ligation proximity mapping revealed that 
