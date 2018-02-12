@@ -186,7 +186,7 @@ similarity can be used to predict looping interactions.
 knitr::include_graphics("figures/loop_prediction/fig2_v04.png")
 ```
 
-(ref:LoopPred2) **ChIP-seq similarity and genomic features of looping and non-looping CTCF motif pairs.** **(A)** Boxplot of Pearson correlation coefficient of ChIP-seq signals between CTCF motif pairs for all CTCF motif pairs within 1 Mb genome-wide. The correlation is shown separately for non-looping and looping motif pairs (according to HI-C and ChIA-PET data in GM12878 cells), and for six selected ChIP-seq data sets in GM12878 cells. **(B)** Distance distribution between looping (green) and non-looping CTCF motif pairs. **(C)** Number of looping and non-looping CTCF motif pairs in convergent, divergent, both forward, or both reverse orientation. **(D)** Distribution of CTCF motif hit significance as -log~10~ transformed p-value for looping and non-looping CTCF motif pairs. For each motif pair only the less significant motif is considered.
+(ref:LoopPred2) **ChIP-seq similarity and genomic features of looping and non-looping CTCF motif pairs.** **(A)** Boxplot of Pearson correlation coefficient of ChIP-seq signals between CTCF motif pairs for all CTCF motif pairs within 1 Mb genome-wide. The correlation is shown separately for non-looping and looping motif pairs (according to HI-C and ChIA-PET data in GM12878 cells), and for six selected ChIP-seq data sets in GM12878 cells. **(B)** Distance distribution between looping (green) and non-looping CTCF motif pairs. **(C)** Number of looping and non-looping CTCF motif pairs in convergent, divergent, both forward, or both reverse orientation. **(D)** Distribution of CTCF motif hit significance as $-\log_{10}$ transformed p-value for looping and non-looping CTCF motif pairs. For each motif pair only the less significant motif is considered.
 
 <!-- ---------------------------------------------------------------- -->
 
@@ -622,13 +622,14 @@ above.
 
 For each CTCF sequence motif in the human genome, we quantified the
 number of reads overlapping each base within +/- 500 bp around the motif
-center. This results in a vectorwhereis the coverage signal at position
-*k* around CTCF motif *i*. Coverage vectors for motif hits reported on
+center. This results in a vector $x_i = (x_{i,1}, x_{i,2}, ..., x_{i,n})$ where $x_{i,k}$ is the coverage signal at position
+$k$ around CTCF motif $i$. Coverage vectors for motif hits reported on
 the minus strand were reversed because CTCF motif sites are assumed to
 be symmetrically aligned to each other when cooperating at loop anchors
-(Fig. \@ref(fig:LoopPred1)A) [@Krijger2016; @Naville2015]. For all considered pairs of CTCF motifs *i* and *j*,
+(Fig. \@ref(fig:LoopPred1)A) [@Rao2014; @Tang2015; @Guo2015; @deWit2015; @Sanborn2015]. 
+For all considered pairs of CTCF motifs $i$ and $j$,
 we calculated the ChIP-seq profile similarity as Pearson correlation
-coefficientof the corresponding coverage vectorsand.
+coefficient $r_{i,j}$ of the corresponding coverage vectors $x_i$ and $x_j$.
 
 ### Genomic sequence features of chromatin loops
 
@@ -639,20 +640,25 @@ orientation *o* is either, *convergent*, *forward*, *reverse*, or
 *divergent*, depending on the orientation of CTCF motifs in the pair
 (+-, ++, –, and -+, respectively). The motif hit similarity *s* is the
 minimum of the two motif hit scores in each pair; we derived these motif
-scores from the JASPAR motif hit tracks as -log~10~ transformed p-values
+scores from the JASPAR motif hit tracks as $-\log_{10}$ transformed p-values
 [@Khan2018].
 
 ### Chromatin Loop prediction model
 
 We used a logistic regression model to predict the log-likelihood
 probability of CTCF motif pairs to perform chromatin looping
-interactions. The probability *p* that two sites interact is modeled as:
-
-whereare the unknown model parameters and the features.
+interactions. The probability $p$ that two sites interact is modeled as:
+$$
+\ln (\frac{p}{1-p}) = \beta_0 + \beta_1 x_1, + ... + \beta_k x_k
+$$
+where $\beta$ are the unknown model parameters and $x_1, ..., x_k$ the features.
 
 More specifically, for the 7C model with a single ChIP-seq experiment as
 input, the logistic regression model for the interaction probability *p*
 is:
+$$
+\ln (\frac{p}{1-p}) = \beta_0 + \beta_1 d, + \beta_2 o + \beta_3 s + \beta_4 r
+$$
 
 Parameters were estimated using the function ‘glm()’ with option
 ‘family=binomial()’ in R during model training as described below.
@@ -696,10 +702,10 @@ package [@Lun2016] and functionality for reading bigWig files from the
 Predicted loops can be written as interaction tracks for visualization
 in the WashU Epigenome Browser [@Zhou2013] or as BEDPE format using the
 *GenomicInteractions* package [@Harmston2015] for visualization in the Juicebox
-tool [@Mourad2017]. The package is freely available and easy to install from
+tool [@Durand2016]. The package is freely available and easy to install from
 GitHub under
 [*https://ibn-salem.github.io/sevenC/*](https://ibn-salem.github.io/sevenC/)
-and has been submitted to the Bioconductor project [@Rowley2017]. All analysis
+and has been submitted to the Bioconductor project [@Huber2015]. All analysis
 presented in this work were implemented in R and all scripts used have
 been made available in a separate GitHub repository:
 [*https://github.com/ibn-salem/sevenC\_analysis*](https://github.com/ibn-salem/chromloop_analysis).
