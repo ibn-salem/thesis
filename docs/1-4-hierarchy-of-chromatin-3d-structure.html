@@ -25,7 +25,7 @@
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-12">
+<meta name="date" content="2018-02-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -256,6 +256,8 @@
             <section class="normal" id="section-">
 <div id="hierarchy-of-chromatin-3d-structure" class="section level2">
 <h2><span class="header-section-number">1.4</span> Hierarchy of chromatin 3D structure</h2>
+<p>The three-dimensonal organization of genome folding was studied extensively in recent years
+and is reviewd comprehensively by leading expertes in the field <span class="citation">[Pombo and Dillon, <a href="#ref-Pombo2015">2015</a>; Sexton and Cavalli, <a href="#ref-Sexton2015">2015</a>; Dekker and Mirny, <a href="#ref-Dekker2016">2016</a>; Dixon et al., <a href="#ref-Dixon2016">2016</a>; Schmitt et al., <a href="#ref-Schmitt2016">2016</a>; Bonev and Cavalli, <a href="#ref-Bonev2016">2016</a>; Hnisz et al., <a href="#ref-Hnisz2016">2016</a>; Merkenschlager and Nora, <a href="#ref-Merkenschlager2016">2016</a>; Long et al., <a href="#ref-Long2016">2016</a>; Ruiz-Velasco and Zaugg, <a href="#ref-Ruiz-Velasco2017">2017</a>; Andrey and Mundlos, <a href="#ref-Andrey2017">2017</a>]</span>.</p>
 <!-- ---------------------------------------------------------------- -->
 <div class="figure" style="text-align: center"><span id="fig:GenomeHierarchy"></span>
 <img src="figures/Bonev2016Fig2.png" alt="Hierarchical organization of chromatin three-dimensional chromatin architecture (A) Figure source [Bonev and Cavalli, 2016] https://www.nature.com/articles/nrg.2016.112/figures/2." width="100%" />
@@ -273,15 +275,17 @@ intermingle less than one would expect by chance <span class="citation">[Cremer 
 using imaging based approaches, and is reflected in Hi-C interaction maps, where inter-chromosomal contacts occur an order of magnitudes less frequent than intra-chromosomal contacts <span class="citation">[Lieberman-Aiden et al., <a href="#ref-Lieberman-Aiden2009">2009</a>]</span>.
 However, despite this spatial segregation of chromosome, intermingling of chromosome occurs and is associated with chromosomal translocations <span class="citation">[Branco and Pombo, <a href="#ref-Branco2006">2006</a>; Roukos et al., <a href="#ref-Roukos2013">2013</a>; Roukos and Misteli, <a href="#ref-Roukos2014">2014</a>]</span>.
 There are also specific gene regulatory interactions between different chromosomes <span class="citation">[Laat and Grosveld, <a href="#ref-DeLaat2007">2007</a>]</span>, for example olfactory receptor genes cluster densely in the nucleus of olfactory neurons to facilitate mono-allelic expression of a single receptor gene per cell <span class="citation">[Monahan and Lomvardas, <a href="#ref-Monahan2015">2015</a>]</span>.
-While there are specific inter-chromosomal contacts, the genome is non-randomly organized in chromosomes which occupy distinct territories in the spacial nucleus.</p>
+Togther, there exists only a few but specific inter-chromosomal contacts and the genome is non-randomly organized in the nucleus by chromosomes occupying distinct spatial territories.</p>
 </div>
 <div id="ab-compartments" class="section level3">
 <h3><span class="header-section-number">1.4.2</span> A/B compartments</h3>
 <p>The ability to measure genome-wide chromatin contacts using Hi-C,
 revealed that individual regions on chromosomes segregate by preferential interactions
-into two compartments mayor clusters, referred to as A/B-compartments <span class="citation">[Lieberman-Aiden et al., <a href="#ref-Lieberman-Aiden2009">2009</a>]</span>.
+into two mayor clusters, referred to as A/B-compartments <span class="citation">[Lieberman-Aiden et al., <a href="#ref-Lieberman-Aiden2009">2009</a>]</span>.
 Interestingly, regions in A-compartments are associated with active histone-modifications and
-active transcription, whereas B-compartment is associated with heterochromatin, lamina association, and repressed genes.</p>
+active transcription, whereas B-compartment is associated with heterochromatin, lamina association, and repressed genes <span class="citation">[Bonev and Cavalli, <a href="#ref-Bonev2016">2016</a>]</span>.
+More recnetly, higher resolution Hi-C maps further subdevided A/B compartments into
+six sub-compartments with prefferntial interacitons and associations to distinct chromatin features <span class="citation">[Rao et al., <a href="#ref-Rao2014">2014</a>]</span>.</p>
 <!--  further organized in mega-base scale -->
 <!-- A/B-compartments that show specific preferential interaction patterns -->
 <!-- and transcriptional activity [@Lieberman-Aiden2009; @Rao2014]. -->
@@ -289,28 +293,29 @@ active transcription, whereas B-compartment is associated with heterochromatin, 
 <div id="topologically-associating-domains-tads" class="section level3">
 <h3><span class="header-section-number">1.4.3</span> Topologically associating domains (TADs)</h3>
 <p>Compartments could be identified by clustering of long-range interactions in Hi-C maps
-with bin resolution of 1 Mb. In 2012 higher resolution Hi-C maps of up to 40 kb lead to the identification of genomic regions with preferential interactions with them.
-These genomic regions were termed topologically associating domains (TADs) <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>; Nora et al., <a href="#ref-Nora2012">2012</a>; Sexton et al., <a href="#ref-Sexton2012">2012</a>]</span>. They are operationally defined as genomic regions with frequent interactions of loci within the domain and decreased interactions across domain boundaries <span class="citation">[Merkenschlager and Nora, <a href="#ref-Merkenschlager2016">2016</a>]</span>.</p>
+with bin resolution of 1 Mb. In 2012 higher resolution Hi-C maps of up to 40 kb lead to the identification of genomic regions with preferential interactions within them.
+These genomic regions were termed topologically associating domains (TADs) <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>; Nora et al., <a href="#ref-Nora2012">2012</a>; Sexton et al., <a href="#ref-Sexton2012">2012</a>]</span>. They are operationally defined as genomic regions with frequent interactions of loci within the domain and decreased interactions across domain boundaries. Quantitatively, Hi-C contact frequencies between loci in the same TAD are approximately two to three times those of genomic regions outside of the TAD <span class="citation">[Merkenschlager and Nora, <a href="#ref-Merkenschlager2016">2016</a>]</span>.</p>
 <p>TADs can be identified from Hi-C interaction maps computationally by different algorithms <span class="citation">[Ay and Noble, <a href="#ref-Ay2015">2015</a>]</span>. The directionality index is a score for each bin in the Hi-C matrix that quantifies the
 number of upstream versus downstream interactions of this bin. Using hidden Markov models TAD boundaries where then identified in regions where DI is changing drastically <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span>.
-Other algorithms compute an insulation score as the extent to which interactions to cross potential TAD boundaries <span class="citation">[Crane et al., <a href="#ref-Crane2015">2015</a>]</span>.
+Other algorithms compute an insulation score as the extent to which interactions cross potential TAD boundaries <span class="citation">[Crane et al., <a href="#ref-Crane2015">2015</a>]</span>.
 Later the Arrowhead algorithm was introduced to find “contact domains” as smaller nested structures along the diagonal of high resolution Hi-C matrices <span class="citation">[Rao et al., <a href="#ref-Rao2014">2014</a>]</span>.
-Furthermore, when analyzing Hi-C interactions at different length scales, hierarchies of TADs and sub-TADs could be identified that overlap each other <span class="citation">[Filippova et al., <a href="#ref-Filippova2014">2014</a>; Fraser et al., <a href="#ref-Fraser2015">2015</a>]</span>. 
-The different algorithms and parameters used in each is only one source of variation
+Furthermore, when analyzing Hi-C interactions at different length scales, hierarchies of TADs and sub-TADs could be identified that overlap each other <span class="citation">[Filippova et al., <a href="#ref-Filippova2014">2014</a>; Fraser et al., <a href="#ref-Fraser2015">2015</a>]</span>.
+The different algorithms and parameters used in each study is only one source of variation
 in reliably identifying TADs. Also, the resolution of Hi-C maps, which is mainly defined by
 sequencing depths but also the Hi-C protocol itself <span class="citation">[Rao et al., <a href="#ref-Rao2014">2014</a>]</span>, as well as different
 normalization strategies for Hi-C contacts introduce variability <span class="citation">[Forcato et al., <a href="#ref-Forcato2017">2017</a>]</span>.
-Therefore, the number and size of TADs varies between different studies and cannot be directly compared.</p>
-<p>The first studies on TADs identified around 3000 TADs in human and mouse genomes with a median size of ~800 kb <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span> and ~100 kb in <em>Drosophila</em> genomes <span class="citation">[Sexton et al., <a href="#ref-Sexton2012">2012</a>]</span>.
+Therefore, the number and size of TADs varies between different studies, making it
+difficult to compare TADs in different conditions and species across studies.</p>
+<p>The first studies on TADs identified around 3,000 TADs with a median size of ~800 kb in human and mouse genomes <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span> and arround 1,200 physical domains of arround 100 kb in <em>Drosophila</em> genomes <span class="citation">[Sexton et al., <a href="#ref-Sexton2012">2012</a>]</span>.
 Analysis of 1kb or 5kb resolution Hi-C matrices resulted in nested “contact domains”
 with a median size of 185 kb (range 40 kb - 3 Mb) in human and mouse cells <span class="citation">[Rao et al., <a href="#ref-Rao2014">2014</a>]</span>.</p>
-<p>Importantly, TADs might be equivalent to “chromatin domains” of 10 kb - 1 Mb in size detected by microscopy approaches <span class="citation">[Cremer and Cremer, <a href="#ref-Cremer2010">2010</a>; Gibcus and Dekker, <a href="#ref-Gibcus2013">2013</a>]</span>. Another connection of Hi-C derived interaction maps with previous microscopy observations, is that TADs in <em>Drosophila</em> correspond to bands of polytene chromosomes <span class="citation">[Eagen et al., <a href="#ref-Eagen2015">2015</a>]</span>.</p>
+<p>Interestingly, TADs might be equivalent to “chromatin domains” of 10 kb - 1 Mb in size detected by microscopy approaches <span class="citation">[Cremer and Cremer, <a href="#ref-Cremer2010">2010</a>; Gibcus and Dekker, <a href="#ref-Gibcus2013">2013</a>]</span>. Another connection of Hi-C derived interaction maps with previous microscopy observations, is that TADs in <em>Drosophila</em> correspond to bands of polytene chromosomes <span class="citation">[Eagen et al., <a href="#ref-Eagen2015">2015</a>]</span>.</p>
 <p>The spatial positioning of TADs correlate with many genomic features measured along the
 linear genome <span class="citation">[Merkenschlager and Nora, <a href="#ref-Merkenschlager2016">2016</a>]</span>.
 TAD boundaries are enriched for binding of “insulator proteins”, such as CTCF in mammals and CP190 in Drosophila <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>; Sexton et al., <a href="#ref-Sexton2012">2012</a>]</span>. Furthermore, TAD boundaries are associated
 with active chromatin, such as H3K4me3 and H3K27me3, DNase I hypersensitivity, active transcription,
 and house-keeping genes <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span>.
-Furthermore, TADs correspond to regions of early and late replication timing <span class="citation">[Pope et al., <a href="#ref-Pope2014">2014</a>; Dileep et al., <a href="#ref-Dileep2015">2015</a>]</span> and lamina associated domains (LADs) <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span>.
+TADs correspond to regions of early and late replication timing <span class="citation">[Pope et al., <a href="#ref-Pope2014">2014</a>; Dileep et al., <a href="#ref-Dileep2015">2015</a>]</span> and lamina associated domains (LADs) <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span>.
 Importantly, enhancer-promoter interactions seems to be mostly constrained within TADs <span class="citation">[Shen et al., <a href="#ref-Shen2012">2012</a>]</span></p>
 <p>Altogether, there is accumulating evidence that TADs are fundamental units of chromosome organization <span class="citation">[Dixon et al., <a href="#ref-Dixon2016">2016</a>]</span></p>
 </div>
@@ -318,13 +323,43 @@ Importantly, enhancer-promoter interactions seems to be mostly constrained withi
 <h3><span class="header-section-number">1.4.4</span> Chromatin loops</h3>
 <p>In summary, these findings suggest a hierarchical organization of chromosome architecture. First, dynamic nucleosome contacts from clutches and fibers.
 These engage in long-range chromatin loops, some of which are stabilized by architectural proteins, such as CTCF and cohesin, and lead to the formation of TADs.
-TADs in form cluster by their epigenomic type into A/B compartments and coalescence of compartments in the same chromosome forms chromosome territories <span class="citation">[Bonev and Cavalli, <a href="#ref-Bonev2016">2016</a>]</span>.</p>
+TADs form cluster by their epigenomic type into A/B compartments and coalescence of compartments in the same chromosome forms chromosome territories <span class="citation">[Bonev and Cavalli, <a href="#ref-Bonev2016">2016</a>]</span>.</p>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
+<div id="ref-Pombo2015">
+<p>Pombo A, Dillon N. 2015. Three-dimensional genome architecture: players and mechanisms. Nature Reviews Molecular Cell Biology 12.</p>
+</div>
+<div id="ref-Sexton2015">
+<p>Sexton T, Cavalli G. 2015. The Role of Chromosome Domains in Shaping the Functional Genome. Cell 160: 1049–1059.</p>
+</div>
+<div id="ref-Dekker2016">
+<p>Dekker J, Mirny L. 2016. The 3D Genome as Moderator of Chromosomal Communication. Cell 164: 1110–1121.</p>
+</div>
+<div id="ref-Dixon2016">
+<p>Dixon JR, Gorkin DU, Ren B. 2016. Chromatin Domains: The Unit of Chromosome Organization. Molecular Cell 62: 668–680.</p>
+</div>
+<div id="ref-Schmitt2016">
+<p>Schmitt AD, Hu M, Ren B. 2016. Genome-wide mapping and analysis of chromosome architecture. Nature Reviews Molecular Cell Biology.</p>
+</div>
 <div id="ref-Bonev2016">
 <p>Bonev B, Cavalli G. 2016. Organization and function of the 3D genome. Nature Reviews Genetics 17: 661–678.</p>
+</div>
+<div id="ref-Hnisz2016">
+<p>Hnisz D, Weintraub AS, Day DS, Valton A-l, Bak RO, Li CH, Goldmann J, Lajoie BR, Fan ZP, Sigova AA, Reddy J, Borges-Rivera D, Lee TI, Jaenisch R, Porteus MH, Dekker J, Young RA. 2016. Activation of proto-oncogenes by disruption of chromosome neighborhoods. Science (New York, N.Y.) 351: 1454–8.</p>
+</div>
+<div id="ref-Merkenschlager2016">
+<p>Merkenschlager M, Nora EP. 2016. CTCF and Cohesin in Genome Folding and Transcriptional Gene Regulation. Annual review of genomics and human genetics 17: 17–43.</p>
+</div>
+<div id="ref-Long2016">
+<p>Long HK, Prescott SL, Wysocka J. 2016. Ever-Changing Landscapes: Transcriptional Enhancers in Development and Evolution. Cell 167: 1170–1187.</p>
+</div>
+<div id="ref-Ruiz-Velasco2017">
+<p>Ruiz-Velasco M, Zaugg JB. 2017. Structure meets function: How chromatin organisation conveys functionality. Current Opinion in Systems Biology 1: 129–136.</p>
+</div>
+<div id="ref-Andrey2017">
+<p>Andrey G, Mundlos S. 2017. The three-dimensional genome: regulating gene expression during pluripotency and development. Development 144: 3646–3658.</p>
 </div>
 <div id="ref-Cremer2001">
 <p>Cremer T, Cremer C. 2001. Chromosome territories, nuclear architecture and gene regulation in mammalian cells. Nature reviews genetics 2: 292–301.</p>
@@ -347,6 +382,9 @@ TADs in form cluster by their epigenomic type into A/B compartments and coalesce
 <div id="ref-Monahan2015">
 <p>Monahan K, Lomvardas S. 2015. Monoallelic Expression of Olfactory Receptors. Annual Review of Cell and Developmental Biology 31: annurev–cellbio–100814–125308.</p>
 </div>
+<div id="ref-Rao2014">
+<p>Rao SSP, Huntley MH, Durand NC, Stamenova EK, Bochkov ID, Robinson JT, Sanborn AL, Machol I, Omer AD, Lander ES, Aiden EL. 2014. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. Cell 159: 1665–80.</p>
+</div>
 <div id="ref-Dixon2012">
 <p>Dixon JR, Selvaraj S, Yue F, Kim A, Li Y, Shen Y, Hu M, Liu JS, Ren B. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. Nature 485: 376–380.</p>
 </div>
@@ -356,17 +394,11 @@ TADs in form cluster by their epigenomic type into A/B compartments and coalesce
 <div id="ref-Sexton2012">
 <p>Sexton T, Yaffe E, Kenigsberg E, Bantignies F, Leblanc B, Hoichman M, Parrinello H, Tanay A, Cavalli G. 2012. Three-dimensional folding and functional organization principles of the Drosophila genome. Cell 148: 458–72.</p>
 </div>
-<div id="ref-Merkenschlager2016">
-<p>Merkenschlager M, Nora EP. 2016. CTCF and Cohesin in Genome Folding and Transcriptional Gene Regulation. Annual review of genomics and human genetics 17: 17–43.</p>
-</div>
 <div id="ref-Ay2015">
 <p>Ay F, Noble WS. 2015. Analysis methods for studying the 3D architecture of the genome. Genome Biology 16: 183.</p>
 </div>
 <div id="ref-Crane2015">
 <p>Crane E, Bian Q, McCord RP, Lajoie BR, Wheeler BS, Ralston EJ, Uzawa S, Dekker J, Meyer BJ. 2015. Condensin-driven remodelling of X chromosome topology during dosage compensation. Nature.</p>
-</div>
-<div id="ref-Rao2014">
-<p>Rao SSP, Huntley MH, Durand NC, Stamenova EK, Bochkov ID, Robinson JT, Sanborn AL, Machol I, Omer AD, Lander ES, Aiden EL. 2014. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. Cell 159: 1665–80.</p>
 </div>
 <div id="ref-Filippova2014">
 <p>Filippova D, Patro R, Duggal G, Kingsford C. 2014. Identification of alternative topological domains in chromatin. Algorithms for molecular biology : AMB 9: 14.</p>
@@ -394,9 +426,6 @@ TADs in form cluster by their epigenomic type into A/B compartments and coalesce
 </div>
 <div id="ref-Shen2012">
 <p>Shen Y, Yue F, McCleary DF, Ye Z, Edsall L, Kuan S, Wagner U, Dixon J, Lee L, Lobanenkov VV, Ren B. 2012. A map of the cis-regulatory sequences in the mouse genome. Nature 488: 116–20.</p>
-</div>
-<div id="ref-Dixon2016">
-<p>Dixon JR, Gorkin DU, Ren B. 2016. Chromatin Domains: The Unit of Chromosome Organization. Molecular Cell 62: 668–680.</p>
 </div>
 </div>
             </section>

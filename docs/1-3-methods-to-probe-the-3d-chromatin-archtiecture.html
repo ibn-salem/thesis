@@ -25,7 +25,7 @@
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-12">
+<meta name="date" content="2018-02-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -264,7 +264,7 @@ Novel super-resolution microscopy approaches such as STORM and PALM have enabled
 Labeling of specific chromatin proteins, histone marks, or genomic loci allow to
 analyze the dynamics of chromosomes at high resolution in living cells.
 However, despite spectacular technical progress, microscopy-based approaches are limited to a small number of genetic loci and do not allow a comprehensive analysis of the nuclear architecture of the complete genome.
-Furthermore, the specific folding patterns observed in microscopy cannot be mapped to genomic coordinates which hinders the integration with other genomic data.
+Furthermore, the specific folding patterns observed in microscopy cannot be mapped to genomic coordinates, substantially limiting the integration with other genomic data.
 However, a future combination of imaging-based techniques with proximity-ligation experiments together with integrative computational models might enable to study the real-time dynamics of chromatin organization with high resolution on the single cell level <span class="citation">[Stevens et al., <a href="#ref-Stevens2017">2017</a>, <span class="citation">@Flyamer2017</span>]</span>.</p>
 </div>
 <div id="proximity-ligation-based-method-to-quantify-chromatin-interactions" class="section level3">
@@ -272,16 +272,16 @@ However, a future combination of imaging-based techniques with proximity-ligatio
 <p>The frequency of interactions between different loci in the genome can be
 measured experimentally by proximity ligation techniques <span class="citation">[Sati and Cavalli, <a href="#ref-Sati2017">2017</a>; Schmitt et al., <a href="#ref-Schmitt2016">2016</a>]</span>. These protocols are variations of the chromosome conformation capture (3C) experiment <span class="citation">[Dekker et al., <a href="#ref-Dekker2002">2002</a>]</span>.
 3C works by the ability to cross-link two genomic loci that are in close physical proximity in the nuclear
-space by treating cells with formaldehyde.
-The cross-linked chromatin is than digested by enzymes to fragment the
-genomic DNA. Than the fragmented DNA is re-ligated which results in
+space by treating cells with formaldehyde leading to covalent bonds between proteins and DNA with proteins <span class="citation">[Hoffman et al., <a href="#ref-Hoffman2015">2015</a>]</span>.
+The cross-linked chromatin is than digested by enzymes to fragment the genomic DNA.
+Than, re-ligation of fragmented DNA result in
 hybrid DNA molecules of restriction fragments that where in close
 physical proximity during cross-linking but originate from different regions in the linear genome sequence <span class="citation">[Dekker et al., <a href="#ref-Dekker2013">2013</a>; Andrey and Mundlos, <a href="#ref-Andrey2017">2017</a>]</span> (Fig. <a href="1-3-methods-to-probe-the-3d-chromatin-archtiecture.html#fig:ProximityLigation">.</a>A).</p>
 <!-- ---------------------------------------------------------------- -->
 <div class="figure" style="text-align: center"><span id="fig:ProximityLigation"></span>
-<img src="figures/Dekker2013_3C.png" alt="Proximity ligation technologies to measure chromatin interactions (A) By treating cells with formaldehyde chromatin is crosslinked. After fragmentation with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is ligated to a hybrid DNA molecules that is than made from DNA that originated from two regions distal in the linear genome (indicated in red and blue). (B) Different variants of the 3C experiments differ in their approaches to measure the ligation products or subsets of it in order to quantify chromatin interactions. Figure modified from [Dekker et al., 2013]." width="80%" />
+<img src="figures/Dekker2013_3C.png" alt="Proximity ligation technologies to measure chromatin interactions (A) By treating cells with formaldehyde chromatin is crosslinked. After fragmentation with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is ligated to a hybrid DNA molecules that is than made from DNA that originated from two regions distal in the linear genome (indicated in red and blue). (B) Different variants of the 3C experiments differ in their approaches to measure the ligation products or subsets of it in order to quantify chromatin interactions. Figure adapted from [Dekker et al., 2013]." width="80%" />
 <p class="caption">
-Figure .: <strong>Proximity ligation technologies to measure chromatin interactions</strong> <strong>(A)</strong> By treating cells with formaldehyde chromatin is crosslinked. After fragmentation with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is ligated to a hybrid DNA molecules that is than made from DNA that originated from two regions distal in the linear genome (indicated in red and blue). <strong>(B)</strong> Different variants of the 3C experiments differ in their approaches to measure the ligation products or subsets of it in order to quantify chromatin interactions. Figure modified from <span class="citation">[Dekker et al., <a href="#ref-Dekker2013">2013</a>]</span>.
+Figure .: <strong>Proximity ligation technologies to measure chromatin interactions</strong> <strong>(A)</strong> By treating cells with formaldehyde chromatin is crosslinked. After fragmentation with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is ligated to a hybrid DNA molecules that is than made from DNA that originated from two regions distal in the linear genome (indicated in red and blue). <strong>(B)</strong> Different variants of the 3C experiments differ in their approaches to measure the ligation products or subsets of it in order to quantify chromatin interactions. Figure adapted from <span class="citation">[Dekker et al., <a href="#ref-Dekker2013">2013</a>]</span>.
 </p>
 </div>
 
@@ -319,6 +319,9 @@ While the first Hi-C study produced genome-wide interactions at 1Mb resolution <
 </div>
 <div id="ref-Dekker2002">
 <p>Dekker J, Rippe K, Dekker M, Kleckner N. 2002. Capturing chromosome conformation. Science (New York, N.Y.) 295: 1306–11.</p>
+</div>
+<div id="ref-Hoffman2015">
+<p>Hoffman EA, Frey BL, Smith LM, Auble DT. 2015. Formaldehyde crosslinking: a tool for the study of chromatin complexes. The Journal of biological chemistry 290: 26404–11.</p>
 </div>
 <div id="ref-Dekker2013">
 <p>Dekker J, Marti-Renom MA, Mirny LA. 2013. Exploring the three-dimensional organization of genomes: interpreting chromatin interaction data. Nature reviews. Genetics 14: 390–403.</p>

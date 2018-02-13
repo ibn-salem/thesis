@@ -25,7 +25,7 @@
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-12">
+<meta name="date" content="2018-02-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -258,18 +258,17 @@
 <h2><span class="header-section-number">1.8</span> Aims of this thesis</h2>
 <p>The recent advances of genome-wide ligation proximity mapping revealed that
 interphase chromosomes are highly organized and structurally segregate into TADs.
-At the start of this thesis project in 2014, TADs were already shown to be related to diverse genomic functions such as replication timing, epigenetic marks, and gene regulation.
-We previously showed a significant association of TAD disruptions by large chromosomal deletions with clinical phenotypes, likely caused by an enhancer adaption mechanism <span class="citation">[Ibn-Salem et al., <a href="#ref-Ibn-Salem2014">2014</a>]</span>.
-However, it is still unclear how and why the genome folds into TADs.
-For example, it is not clear to which extends genes within the same TAD are expressed and regulated in a coordinated manner. Despite initial evidence of evolutionary conservation of TADs in homologous regions between human and mouse, there was no systematic analysis of the stability of TADs during evolution and the consequences of TAD disruptions on gene expression during evolution. The accumulating evidence of the important gene regulatory function of TADs leads to the question if TADs play an important role in genetic diseases. More specifically, TADs might be used together with other genomic annotations, such as enhancers and their measured or predicted interactions with genes to interpret structural variations in patient genomes.
-Furthermore, increasing mechanistic understanding of chromatin looping interactions and TADs could be used to improve genome-wide contact maps and predict long-range interactions in diverse tissues and conditions.
-Therefore, this thesis addresses the question whether TADs represent only structural units of the genome or also important functional building blocks in which genes regulation is coordinated.
-By computationally integrating genome-wide chromatin interaction maps and with diverse genomic datasets, including sequence conservation, regulatory activity, protein binding, gene expression and clinical phenotypes, I address the following questions.  </p>
+TADs were already shown to associate with diverse genomic functions such as histone modifications <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>; Sexton et al., <a href="#ref-Sexton2012">2012</a>]</span>, replication timing <span class="citation">[Pope et al., <a href="#ref-Pope2014">2014</a>]</span>, and gene expression correlation <span class="citation">[Nora et al., <a href="#ref-Nora2012">2012</a>; <span class="citeproc-not-found" data-reference-id="LeDilay2014"><strong>???</strong></span>]</span>.
+We previously showed a significant association of TAD disruptions by large chromosomal deletions with clinical phenotypes, likely caused by an enhancer adaption mechanism <span class="citation">[Ibn-Salem et al., <a href="#ref-Ibn-Salem2014">2014</a>; Lupiáñez et al., <a href="#ref-Lupianez2015">2015</a>]</span>.
+However, it is still unclear how exactley the genome folds into TADs and what consequence this has for gene regulation during evolution and in genetic diseases. For example, it is not clear to which extends genes within the same TAD are expressed and regulated in a coordinated manner. Despite initial evidence of evolutionary conservation of TADs in homologous regions between human and mouse <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>; Vietri Rudan et al., <a href="#ref-VietriRudan2015">2015</a>]</span>, there was no systematic analysis of the stability of TADs during evolution and the consequences of TAD disruptions on gene expression divergence between species. The accumulating evidence of the important gene regulatory function of TADs leads to the question if TADs play an important role in genetic diseases <span class="citation">[Spielmann and Mundlos, <a href="#ref-Spielmann2016">2016</a>]</span>. More specifically, TADs might be used together with other genomic annotations, such as enhancers and their interactions with regulated genes to interpret structural variations in patient genomes.
+Furthermore, increasing mechanistic understanding of chromatin looping interactions and TAD formation could be used to improve genome-wide contact maps and predict long-range interactions in diverse tissues and conditions.
+Therefore, this thesis addresses the question whether TADs represent only structural units of the genome or also important functional building blocks in which gene regulation is coordinated.
+By computationally integrating genome-wide chromatin interaction maps with diverse genomic datasets, including sequence conservation, regulatory activity, protein binding, gene expression and clinical phenotypes, I address the following questions.</p>
 <p><strong>Is the three-dimensional folding structure of genomes associated with co-regulation of functionally related genes?</strong></p>
 <ul>
 <li>How are paralog genes distributed in the linear genome and in the three-dimensional genome architecture?</li>
 <li>Are paralogs co-regulated with shared enhancers and located in the same TAD in genomes of human and other species?</li>
-<li>Finally, can we learn about the evolutionary history of genes and how they are created within regulatory environments of TADs?</li>
+<li>Can we learn about the evolutionary history of genes and how they are created within regulatory environments of TADs?</li>
 </ul>
 <p><strong>Are TADs functional building blocks of genomes and subjected to selective pressure during evolution?</strong></p>
 <ul>
@@ -293,8 +292,29 @@ By computationally integrating genome-wide chromatin interaction maps and with d
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
+<div id="ref-Dixon2012">
+<p>Dixon JR, Selvaraj S, Yue F, Kim A, Li Y, Shen Y, Hu M, Liu JS, Ren B. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. Nature 485: 376–380.</p>
+</div>
+<div id="ref-Sexton2012">
+<p>Sexton T, Yaffe E, Kenigsberg E, Bantignies F, Leblanc B, Hoichman M, Parrinello H, Tanay A, Cavalli G. 2012. Three-dimensional folding and functional organization principles of the Drosophila genome. Cell 148: 458–72.</p>
+</div>
+<div id="ref-Pope2014">
+<p>Pope BD, Ryba T, Dileep V, Yue F, Wu W, Denas O, Vera DL, Wang Y, Hansen RS, Canfield TK, Thurman RE, Cheng Y, Gülsoy G, Dennis JH, Snyder MP, Stamatoyannopoulos Ja, Taylor J, Hardison RC, Kahveci T, Ren B, Gilbert DM. 2014. Topologically associating domains are stable units of replication-timing regulation. Nature 515: 402–405.</p>
+</div>
+<div id="ref-Nora2012">
+<p>Nora EP, Lajoie BR, Schulz EG, Giorgetti L, Okamoto I, Servant N, Piolot T, Berkum NL van, Meisig J, Sedat J, Gribnau J, Barillot E, Blüthgen N, Dekker J, Heard E. 2012. Spatial partitioning of the regulatory landscape of the X-inactivation centre. Nature 485: 381–5.</p>
+</div>
 <div id="ref-Ibn-Salem2014">
 <p>Ibn-Salem J, Köhler S, Love MI, Chung H-R, Huang N, Hurles ME, Haendel M, Washington NL, Smedley D, Mungall CJ, Lewis SE, Ott C-E, Bauer S, Schofield PN, Mundlos S, Spielmann M, Robinson PN. 2014. Deletions of chromosomal regulatory boundaries are associated with congenital disease. Genome Biology 15: 423.</p>
+</div>
+<div id="ref-Lupianez2015">
+<p>Lupiáñez DG, Kraft K, Heinrich V, Krawitz P, Brancati F, Klopocki E, Horn D, Kayserili H, Opitz JM, Laxova R, Santos-Simarro F, Gilbert-Dussardier B, Wittler L, Borschiwer M, Haas SA, Osterwalder M, Franke M, Timmermann B, Hecht J, Spielmann M, Visel A, Mundlos S. 2015. Disruptions of Topological Chromatin Domains Cause Pathogenic Rewiring of Gene-Enhancer Interactions. Cell 161: 1012–1025.</p>
+</div>
+<div id="ref-VietriRudan2015">
+<p>Vietri Rudan M, Barrington C, Henderson S, Ernst C, Odom DT, Tanay A, Hadjur S. 2015. Comparative Hi-C reveals that CTCF underlies evolution of chromosomal domain architecture. Cell reports 10: 1297–309.</p>
+</div>
+<div id="ref-Spielmann2016">
+<p>Spielmann M, Mundlos S. 2016. Looking beyond the genes: the role of non-coding variants in human disease. Human Molecular Genetics: ddw205.</p>
 </div>
 </div>
             </section>
