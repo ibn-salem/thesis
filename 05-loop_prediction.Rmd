@@ -110,11 +110,11 @@ where low resolution Hi-C data is available. We implemented our method
 as the R package *sevenC*.
 
 <!-- ---------------------------------------------------------------- -->
-```{r LoopPred1, fig.cap='(ref:LoopPred1)', out.width='80%', fig.align='center'}
+```{r LoopPred1, fig.cap='(ref:LoopPred1)', out.width='90%', fig.align='center'}
 knitr::include_graphics("figures/loop_prediction/fig1_v06.png")
 ```
 
-(ref:LoopPred1) **Chromatin looping interactions result in ChIP-seq coverage signals at direct and indirect bound loop anchors.** **(A)** Schematic illustration of a chromatin loop with CTCF motifs at the loop anchors (top right). A transcription factor (TF) binds directly at the right loop anchor close to the CTCF motif. This results in a ChIP-seq coverage peak at the directly bound locus (bottom right) and in a minor signal at the other loop anchor (bottom left), both at the same distance to each CTCF motif. **(B)** Znf143 ChIP-seq coverage at six selected example CTCF motif pairs of which the ones in the left panel interact via loops according to Hi-C and ChIA-PET data and the ones in the right panel do not interact. The ChIP-seq coverage signal for each loci pair is shown in red for the left anchor region and in blue for the right anchor region, according to the distance to the CTCF motif (x-axis). Interacting CTCF motif pairs show more similar ChIP-seq coverage signals, which are often enriched at similar distances to the CTCF motif pairs, while the profiles of non-interacting pairs are less similar. **(C)** The similarity of ChIP-seq profiles by correlation of the ChIP-seq coverage signals of the selected motif pairs in (B). For each pair, the coverage at the right anchor is plotted versus the coverage at the left anchor at the same distance (color coded) from each CTCF motif. The Pearson correlation coefficient (R) of the dots is higher for interacting loci pairs. **(D)** Example loci on chromosome 1 shown in the genome-browser with six ChIP-seq tracks. Red and blue bars indicate CTCF recognition motifs on the forward and reverse strand, respectively. The bottom panel shows CTCF motif pairs in gray (candidates) and actually interacting pairs in green, according to ChIA-PET and Hi-C data.
+(ref:LoopPred1) **Chromatin looping interactions result in ChIP-seq coverage signals at direct and indirect bound loop anchors.** **(A)** Schematic illustration of a chromatin loop with CTCF motifs at the loop anchors (top right). A TF binds directly at the right loop anchor close to the CTCF motif. This results in a ChIP-seq coverage peak at the directly bound locus (bottom right) and in a minor signal at the other loop anchor (bottom left), both at the same distance to each CTCF motif. **(B)** Znf143 ChIP-seq coverage at six selected example CTCF motif pairs of which the ones in the left panel interact via loops according to Hi-C and ChIA-PET data and the ones in the right panel do not interact. The ChIP-seq coverage signal for each loci pair is shown in red for the left anchor region and in blue for the right anchor region, according to the distance to the CTCF motif (x-axis). Interacting CTCF motif pairs show more similar ChIP-seq coverage signals, which are often enriched at similar distances to the CTCF motif pairs, while the profiles of non-interacting pairs are less similar. **(C)** The similarity of ChIP-seq profiles by correlation of the ChIP-seq coverage signals of the selected motif pairs in (B). For each pair, the coverage at the right anchor is plotted versus the coverage at the left anchor at the same distance (color coded) from each CTCF motif. The Pearson correlation coefficient (R) of the dots is higher for interacting loci pairs. **(D)** Example loci on chromosome 1 shown in the genome-browser with six ChIP-seq tracks. Red and blue bars indicate CTCF recognition motifs on the forward and reverse strand, respectively. The bottom panel shows CTCF motif pairs in gray (candidates) and actually interacting pairs in green, according to ChIA-PET and Hi-C data.
 
 <!-- ---------------------------------------------------------------- -->
 
@@ -182,7 +182,7 @@ are more similar at interacting CTCF sites, indicating that this
 similarity can be used to predict looping interactions.
 
 <!-- ---------------------------------------------------------------- -->
-```{r LoopPred2, fig.cap='(ref:LoopPred2)', out.width='80%', fig.align='center'}
+```{r LoopPred2, fig.cap='(ref:LoopPred2)', out.width='100%', fig.align='center'}
 knitr::include_graphics("figures/loop_prediction/fig2_v04.png")
 ```
 
@@ -258,7 +258,7 @@ between 0.08 and 0.09 (Fig. \@ref(fig:LoopPred3)C). Using the three sequence fea
 together improved prediction performance (auROC = 0.85, auPRC = 0.22).
 
 <!-- ---------------------------------------------------------------- -->
-```{r LoopPred3, fig.cap='(ref:LoopPred3)', out.width='80%', fig.align='center'}
+```{r LoopPred3, fig.cap='(ref:LoopPred3)', out.width='100%', fig.align='center'}
 knitr::include_graphics("figures/loop_prediction/fig3_v05.png")
 ```
 
@@ -335,7 +335,7 @@ curves (auPRC up to 0.91, Fig. \@ref(fig:LoopPred4)A) and PRC curves (auPRC up t
 Fig. \@ref(fig:LoopPred4)B,C).
 
 <!-- ---------------------------------------------------------------- -->
-```{r LoopPred4, fig.cap='(ref:LoopPred4)', out.width='80%', fig.align='center'}
+```{r LoopPred4, fig.cap='(ref:LoopPred4)', out.width='100%', fig.align='center'}
 knitr::include_graphics("figures/loop_prediction/fig4_v04.png")
 ```
 
