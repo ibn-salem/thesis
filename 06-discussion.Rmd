@@ -61,6 +61,7 @@ Therefore, we interpret the depletion of evolutionary rearrangements in TADs and
 Therefore selective pressure is likely to act on TAD structures.
 While in neutral selection
 
+- Relate to GRBs and CNE clusters [@Harmston2017; @Polychronopoulos2017]
 
 <!-- Discussing loop prediction for association of variatns to disease target genes -->
 The majority of disease-associated variants uncovered by genome-wide association studies (GWAS) reside in noncoding sequences. Many variants are located near cis-regulatory sequences and enhancers and could, therefore, contribute to pathogenesis by affecting transcription of specific genes [@Hindorff2009]. 
