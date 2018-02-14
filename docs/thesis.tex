@@ -156,11 +156,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \usepackage{cell} % use cell journal style
+% \usepackage{genres} % use cell journal style
 % \usepackage[backend=bibtex]{biblatex}
 
 \title{Genome folding in evolution and disease}
 \author{Jonas Ibn-Salem}
-\date{2018-02-13}
+\date{2018-02-14}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -457,7 +458,7 @@ structure}\label{hierarchy-of-chromatin-3d-structure}}
 The three-dimensonal organization of genome folding was studied
 extensively in recent years and is reviewd comprehensively by leading
 expertes in the field
-\citep{Pombo2015, Sexton2015, Dekker2016, Dixon2016, Schmitt2016, Bonev2016, Hnisz2016, Merkenschlager2016, Long2016, Ruiz-Velasco2017, Andrey2017}.
+\citep{Pombo2015, Sexton2015, Bouwman2015, Dekker2016, Dixon2016, Schmitt2016, Bonev2016, Hnisz2016, Merkenschlager2016, Long2016, Ruiz-Velasco2017, Andrey2017}.
 
 \begin{figure}
 
@@ -546,8 +547,8 @@ parameters used in each study is only one source of variation in
 reliably identifying TADs. Also, the resolution of Hi-C maps, which is
 mainly defined by sequencing depths but also the Hi-C protocol itself
 \citep{Rao2014}, as well as different normalization strategies for Hi-C
-contacts introduce variability \citep{Forcato2017}. Therefore, the
-number and size of TADs varies between different studies, making it
+contacts introduce variability \citep{Dali2017, Forcato2017}. Therefore,
+the number and size of TADs varies between different studies, making it
 difficult to compare TADs in different conditions and species across
 studies.
 
@@ -572,17 +573,32 @@ boundaries are enriched for binding of ``insulator proteins'', such as
 CTCF in mammals and CP190 in Drosophila \citep{Dixon2012, Sexton2012}.
 Furthermore, TAD boundaries are associated with active chromatin, such
 as H3K4me3 and H3K27me3, DNase I hypersensitivity, active transcription,
-and house-keeping genes \citep{Dixon2012}. TADs correspond to regions of
-early and late replication timing \citep{Pope2014, Dileep2015} and
-lamina associated domains (LADs) \citep{Dixon2012}. Importantly,
-enhancer-promoter interactions seems to be mostly constrained within
-TADs \citep{Shen2012}
+short interspersed nuclear elements (SINEs), and house-keeping genes
+\citep{Dixon2012}. TADs correspond to regions of early and late
+replication timing \citep{Pope2014, Dileep2015} and lamina associated
+domains (LADs) \citep{Dixon2012}. Importantly, enhancer-promoter
+interactions seems to be mostly constrained within TADs
+\citep{Shen2012, Ghavi-helm2014, Symmons2014}
 
 Altogether, there is accumulating evidence that TADs are fundamental
 units of chromosome organization \citep{Dixon2016}
 
 \hypertarget{chromatin-loops}{%
 \subsection{Chromatin loops}\label{chromatin-loops}}
+
+Recent studies provide functional insights about how chromatin loops are
+formed and highlight the role of architectural proteins such as CTCF and
+cohesin \citep{Merkenschlager2016}. CTCF recognizes a specific sequence
+motif, to which it binds with high affinity \citep{Kim2007, Nagy2016}.
+Interestingly, CTCF motifs are present in convergent orientation at
+chromatin loop anchors \citep{Rao2014, Tang2015, VietriRudan2015}.
+Furthermore, experimental inversion of the motif results in changes of
+loop formation and altered gene expression \citep{Guo2015, deWit2015}.
+Polymer simulations and experimental perturbations led to a model of
+loop extrusion, in which loop-extruding factors, such as cohesin, form
+progressively larger loops but stall at CTCF binding sites in convergent
+orientation \citep{Sanborn2015, Fudenberg2016}. According to these
+models, CTCF binding sites can function as anchors of chromatin loops.
 
 In summary, these findings suggest a hierarchical organization of
 chromosome architecture. First, dynamic nucleosome contacts from
@@ -591,6 +607,20 @@ which are stabilized by architectural proteins, such as CTCF and
 cohesin, and lead to the formation of TADs. TADs form cluster by their
 epigenomic type into A/B compartments and coalescence of compartments in
 the same chromosome forms chromosome territories \citep{Bonev2016}.
+
+\hypertarget{molecular-mechanisms-of-tad-and-loop-formation}{%
+\subsection{Molecular mechanisms of TAD and loop
+formation}\label{molecular-mechanisms-of-tad-and-loop-formation}}
+
+Several initial studies analyzed the role of CTCF and cohesin in TAD
+formation. In two studies depletion of cohesin reduced interactions
+within TADs but did not alter TAD strucures completley
+\citep{Seitan2013, Zuin2014}. One study report a significant increase in
+interactions between differnt TADs after cohesin depletion
+\citep{Sofueva2013}. Depletio of CTCF had a similar effect with
+increased inter-domains interactions \citep{Seitan2013, Zuin2014}. These
+result suggest a functinoal role of cohesin and CTCF in
+promoter-enhancer interactions and TAD formation \citep{Pombo2015}.
 
 \hypertarget{dynamics-of-chromatin-structure}{%
 \section{Dynamics of chromatin
@@ -739,19 +769,114 @@ or divergent transcriptional regulation between species.
 \section{Disruption of chromatin architecture in
 disease}\label{disruption-of-chromatin-architecture-in-disease}}
 
-The insulating function of TADs to restrict promoter-enhancer
-interactions within them \citep{Symmons2014} and evolutionary
-conservation of TADs suggests that alternations of TAD structures may
-induce ectopic interactions between regulatory elements, leading to gene
-dysregulation. Several experiments of genetic manipulation of specific
-TAD boundaries can change the surrounding interaction patterns and thus
-affect the expression of nearby genes. After experimental deletion of a
-58-kb region encompassing a TAD boundary in mouse ESC, interactions
-between adjacent TADs significantly increase and genes in neighboring
-TADs were upregulated \citep{Nora2012}. More precise deletion or
-inversion of CTCF binding site at loop anchors in TAD boundaries altered
-local chromatin architecture and nearby gene expression
+The insulating function of TADs restricting promoter-enhancer
+interactions \citep{Symmons2014} suggests that alternations of TAD
+structures may induce ectopic interactions between regulatory elements
+and genes in neighboring TADs, leading to gene dysregulation (Fig.
+\#ref(fig:EnhancerAdoption)).
+
+Several experiments of genetic manipulation of specific TAD boundaries
+can change the surrounding interaction patterns and thus affect the
+expression of nearby genes. After experimental deletion of a 58-kb
+region encompassing a TAD boundary in mouse ESC, interactions between
+adjacent TADs significantly increase and genes in neighboring TADs were
+upregulated \citep{Nora2012}. More precise deletion or inversion of CTCF
+binding site at loop anchors in TAD boundaries altered local chromatin
+architecture and nearby gene expression
 \citep{Dowen2014, Guo2015, Narendra2015}.
+
+The alternation of chromatin contacts upon TAD boundary disruptions
+leads to the question whether disrutpion of TADs could also be and
+mechansim of disease pathology. This hypothesis were initilay dirven by
+studying the etiology of the Liebernberg syndrome, in which an
+upper-limb malformation phenotype is casued by deletion in the vinicity
+of \emph{PITX1} gene. \emph{PITX1} becomes therby accessible to an
+enhancer with specific activity in lower-limb and was missexpressed in a
+corresponding mouse model \citep{Spielmann2012}. An overlap of thes
+deletion with later identifed TAD boundaries lead to the hypothesis of
+an regulatory effect mechanism of boundary deletions referred to as
+enhancer adoption \citep{Spielmann2013a}.
+
+An association of TAD disrutpions with disease was first shown by
+computational analysis integrating TAD structures, with tissue specific
+enhancers, and large crhomosomal deletions associated with clinical
+phenotypes \citep{Ibn-Salem2014}.
+
+In this study, the Human Phenotype Ontology database \citep{Kohler2014}
+was used to relate the phenotypes of 922 deletion cases from the
+DECIPHER database \citep{Firth2009} to monogenic diseases associated
+with genes in or adjacent to the deletions. This was used to
+differntiate for each deletion case between two possible pathogenic
+effect mechanism that best explains the phenotypes observed in the
+patients. Many deletions could be explained by a gene dosage mechansim
+and haploinsufficiency of genes located within the deletion. However,
+about 12 percent of cases could be best explained by a TAD boundary
+disruption and a specific combinations of tissue-specific enhancers and
+genes in adjacent TADs. Importantly, randomization of phenotype data
+showed that this enhancer adaption mechanism was significantly more
+frequent then expected by chance \citep{Ibn-Salem2014}. Therfore, this
+study shows for the first time an association of TAD disrutpiton with
+genetic diseases and highglight an regulatory effect mechansims of TAD
+disruption that need to be further investigated and has to be considered
+when interpreting the gentic variations in patient genomes.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/GDE_vs_TDBD_v03} 
+
+}
+
+\caption{\textbf{Models of pathomechanisms by chromosomal
+deletions involving TAD disruption} In each panel, an exemplary deletion
+is shown as a red bar, a TDB is indicated with a black arrow, and genes
+associated with the phenotypes of the CNV patient are shown in blue,
+other genes in gray. Phenotypic abnormalities are represented as
+exemplary HPO terms (HP1, HP2 and HP3). Three tissue-specific enhancers
+are shown in (B) as black ovals. \textbf{(A)} Gene-dosage effect. A
+deletion leads to a reduction in the dosage of haplosensitive genes
+located within the CNV. The individual with the deletion has two
+phenotypic abnormalities (HP1, HP2) resulting from deletion of two
+haplosensitive genes. AMendelian disease related to mutations in the
+first gene is associated with HP1, and aMendelian disease related to
+mutations in the second gene is associated with HP2. \textbf{(B)} TAD
+boundary deletion and enhancer adoption. Removal of the topological
+domain boundary allows the tissue-specific enhancer inappropriately to
+activate a phenotypically relevant gene located adjacent to the
+deletion, a phenomenon that we refer to as enhancer adoption. In this
+case, the individual with the deletion has a phenotypic abnormality
+(HP3) that is also seen in individuals with a Mendelian disease related
+to a mutation in the gene adjacent to the deletion. Figure adopted from
+\citep{Ibn-Salem2014}.}\label{fig:EnhancerAdoption}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Intersingly, these initial results are largly confirmed by very recent
+studies investigating structural variants that disrupt TADs and lead to
+ectopic gene expression in genetic diseases
+\citep{Lupianez2015, Franke2016, Redin2017} and cancers
+\citep{Northcott2014, Hnisz2016, Weischenfeldt2016}. This is discussed
+in more detial in secion \#ref(thesis-discussion).
 
 \hypertarget{aims-of-this-thesis}{%
 \section{Aims of this thesis}\label{aims-of-this-thesis}}
@@ -761,7 +886,7 @@ that interphase chromosomes are highly organized and structurally
 segregate into TADs. TADs were already shown to associate with diverse
 genomic functions such as histone modifications
 \citep{Dixon2012, Sexton2012}, replication timing \citep{Pope2014}, and
-gene expression correlation \citep{Nora2012, LeDilay2014}. We previously
+gene expression correlation \citep{Nora2012, LeDily2014}. We previously
 showed a significant association of TAD disruptions by large chromosomal
 deletions with clinical phenotypes, likely caused by an enhancer
 adaption mechanism \citep{Ibn-Salem2014, Lupianez2015}. However, it is
@@ -4926,6 +5051,10 @@ on TAD structures. While in neutral selection
   \citep{Harmston2017, Polychronopoulos2017}
 \end{itemize}
 
+\hypertarget{tad-disruption-as-a-new-mechanism-of-disease-pathogenesis.}{%
+\section{TAD disruption as a new mechanism of disease
+pathogenesis.}\label{tad-disruption-as-a-new-mechanism-of-disease-pathogenesis.}}
+
 The majority of disease-associated variants uncovered by genome-wide
 association studies (GWAS) reside in noncoding sequences. Many variants
 are located near cis-regulatory sequences and enhancers and could,
@@ -6157,7 +6286,7 @@ Writing – Review \& Editing & Preparation, creation and/or presentation of the
 \end{tabular}
 \end{table}
 
-\bibliography{bib/PhD.bib}
+\bibliography{bib/PhDfltClean.bib}
 
 
 

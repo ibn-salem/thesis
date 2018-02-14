@@ -25,7 +25,7 @@
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-13">
+<meta name="date" content="2018-02-14">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -79,6 +79,7 @@
 <li class="chapter" data-level="1.4.2" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#ab-compartments"><i class="fa fa-check"></i><b>1.4.2</b> A/B compartments</a></li>
 <li class="chapter" data-level="1.4.3" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#topologically-associating-domains-tads"><i class="fa fa-check"></i><b>1.4.3</b> Topologically associating domains (TADs)</a></li>
 <li class="chapter" data-level="1.4.4" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#chromatin-loops"><i class="fa fa-check"></i><b>1.4.4</b> Chromatin loops</a></li>
+<li class="chapter" data-level="1.4.5" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#molecular-mechanisms-of-tad-and-loop-formation"><i class="fa fa-check"></i><b>1.4.5</b> Molecular mechanisms of TAD and loop formation</a></li>
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="1-5-dynamics-of-chromatin-structure.html"><a href="1-5-dynamics-of-chromatin-structure.html"><i class="fa fa-check"></i><b>1.5</b> Dynamics of chromatin structure</a><ul>
 <li class="chapter" data-level="1.5.1" data-path="1-5-dynamics-of-chromatin-structure.html"><a href="1-5-dynamics-of-chromatin-structure.html#variation-of-chromatin-structure-across-cell-types"><i class="fa fa-check"></i><b>1.5.1</b> Variation of chromatin structure across cell types</a></li>
@@ -213,8 +214,9 @@
 <li class="chapter" data-level="6" data-path="6-thesis-discussion.html"><a href="6-thesis-discussion.html"><i class="fa fa-check"></i><b>6</b> Discussion</a><ul>
 <li class="chapter" data-level="6.1" data-path="6-1-discussion-paralog-co-regulation-in-tads.html"><a href="6-1-discussion-paralog-co-regulation-in-tads.html"><i class="fa fa-check"></i><b>6.1</b> Discussion paralog co-regulation in TADs</a></li>
 <li class="chapter" data-level="6.2" data-path="6-2-discussion-on-tad-evolution.html"><a href="6-2-discussion-on-tad-evolution.html"><i class="fa fa-check"></i><b>6.2</b> Discussion on TAD evolution</a></li>
-<li class="chapter" data-level="6.3" data-path="6-3-further-directions.html"><a href="6-3-further-directions.html"><i class="fa fa-check"></i><b>6.3</b> Further directions</a></li>
-<li class="chapter" data-level="6.4" data-path="6-4-conclusions.html"><a href="6-4-conclusions.html"><i class="fa fa-check"></i><b>6.4</b> Conclusions</a></li>
+<li class="chapter" data-level="6.3" data-path="6-3-tad-disruption-as-a-new-mechanism-of-disease-pathogenesis-.html"><a href="6-3-tad-disruption-as-a-new-mechanism-of-disease-pathogenesis-.html"><i class="fa fa-check"></i><b>6.3</b> TAD disruption as a new mechanism of disease pathogenesis.</a></li>
+<li class="chapter" data-level="6.4" data-path="6-4-further-directions.html"><a href="6-4-further-directions.html"><i class="fa fa-check"></i><b>6.4</b> Further directions</a></li>
+<li class="chapter" data-level="6.5" data-path="6-5-conclusions.html"><a href="6-5-conclusions.html"><i class="fa fa-check"></i><b>6.5</b> Conclusions</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -260,12 +262,12 @@
 <h3><span class="header-section-number">3.2.1</span> Identification of evolutionary rearrangement breakpoints from whole-genome alignments</h3>
 <p>To analyze the stability of TADs in evolution, we first identified
 evolutionary rearrangements by using whole-genome alignment data from
-the UCSC Genome Browser <span class="citation">[Kent et al., <a href="#ref-Kent2003">2003</a>, <a href="#ref-Kent2002">2002</a>]</span> to compare the human genome to 12
+the UCSC Genome Browser <span class="citation">(Kent et al. <a href="#ref-Kent2003">2003</a>, <a href="#ref-Kent2002">2002</a>)</span> to compare the human genome to 12
 other species. These species where selected to have genome assemblies of
 good quality and to span several hundred million years of evolution.
 They range from chimpanzee to zebrafish (Fig <a href="3-2-results-1.html#fig:TadEvo1">3.1</a>). The whole-genome
 data consists of consecutive alignment blocks that are chained and
-hierarchically ordered into so-called net files as fills <span class="citation">[Kent et al., <a href="#ref-Kent2003">2003</a>]</span>. To
+hierarchically ordered into so-called net files as fills <span class="citation">(Kent et al. <a href="#ref-Kent2003">2003</a>)</span>. To
 overcome alignment artifacts and smaller local variations between
 genomes we only considered top-level fills or non-syntenic fills and
 additionally applied a size threshold to use only fills that are larger
@@ -289,7 +291,7 @@ general fewer fills but larger fill sizes (mean length ≥1 kb), whereas
 species which are more distant to human, such as chicken and zebrafish,
 tend to have more but smaller fills (mean length ≤ 1 kb, Fig <a href="3-2-results-1.html#fig:TadEvo1">3.1</a>A,B).
 However, we also observe many small non-syntenic fills in closely
-related species, likely arising from transposon insertions <span class="citation">[Mills et al., <a href="#ref-Mills2006">2006</a>]</span>. As a
+related species, likely arising from transposon insertions <span class="citation">(Mills et al. <a href="#ref-Mills2006">2006</a>)</span>. As a
 consequence of the number of fills and size distributions, we identify
 different breakpoint numbers depending on species and size threshold
 applied. For example, the whole-genome alignment between human and mouse
@@ -304,9 +306,9 @@ analysis at TADs.</p>
 <h3><span class="header-section-number">3.2.2</span> Rearrangement breakpoints are enriched at TAD boundaries</h3>
 <p>Next, we analyzed how the identified rearrangement breakpoints are
 distributed in the human genome with respect to TADs. We obtained 3,062
-TADs identified in human embryonic stem cells (hESC) <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span> and 9,274
+TADs identified in human embryonic stem cells (hESC) <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>)</span> and 9,274
 contact domains from high-resolution <em>in situ</em> Hi-C in human
-B-lymphoblastoid cells (GM12878) <span class="citation">[Rao et al., <a href="#ref-Rao2014">2014</a>]</span>. To calculate the number of
+B-lymphoblastoid cells (GM12878) <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span>. To calculate the number of
 breakpoints around TADs, we enlarged each TAD region by +/-50% of its
 size and divided the region in 20 equal sized bins. For each bin we
 computed the number of overlapping rearrangement breakpoints. This
@@ -314,9 +316,9 @@ results in a size-normalized distribution of rearrangement breakpoints
 along TAD regions.</p>
 <!-- ---------------------------------------------------------------- -->
 <div class="figure" style="text-align: center"><span id="fig:TadEvo2"></span>
-<img src="figures/TAD_evolution/fig2_v02.png" alt="Evolutionary rearrangements are enriched at TAD boundaries. (A) Distribution of evolutionary rearrangement breakpoints between human and mouse around hESC TADs. Each TAD and 50% of its adjacent sequence was subdivided into 20 bins of equal size, the breakpoints were assigned to the bins and their number summed up over the corresponding bins in all TADs. Blue color scale represents breakpoints from different fill-size thresholds. Dotted lines in gray show simulated background controls of randomly placed breakpoints. (B) Distribution of rearrangement breakpoints between human and: chimpanzee, cattle, opossum, and zebrafish, at 10 kb size threshold around hESC TADs. Dotted lines in gray show simulated background controls of randomly placed breakpoints. (C) Enrichment of breakpoints at TAD boundaries as log-odds-ratio between actual breakpoints at TAD boundaries and randomly placed breakpoints. Enrichment is shown for three different fill size thresholds (blue color scale) and TADs in hESC from [Dixon et al., 2012] (top) and contact domains in human GM12878 cells from [Rao et al., 2014] (bottom), respectively. Asterisks indicate significance of the enrichment using Fisher’s exact test (*p &lt;= 0.05; **p &lt;= 0.01; ***p &lt;= 0.001)." width="50%" />
+<img src="figures/TAD_evolution/fig2_v02.png" alt="Evolutionary rearrangements are enriched at TAD boundaries. (A) Distribution of evolutionary rearrangement breakpoints between human and mouse around hESC TADs. Each TAD and 50% of its adjacent sequence was subdivided into 20 bins of equal size, the breakpoints were assigned to the bins and their number summed up over the corresponding bins in all TADs. Blue color scale represents breakpoints from different fill-size thresholds. Dotted lines in gray show simulated background controls of randomly placed breakpoints. (B) Distribution of rearrangement breakpoints between human and: chimpanzee, cattle, opossum, and zebrafish, at 10 kb size threshold around hESC TADs. Dotted lines in gray show simulated background controls of randomly placed breakpoints. (C) Enrichment of breakpoints at TAD boundaries as log-odds-ratio between actual breakpoints at TAD boundaries and randomly placed breakpoints. Enrichment is shown for three different fill size thresholds (blue color scale) and TADs in hESC from (Dixon et al. 2012) (top) and contact domains in human GM12878 cells from (Rao et al. 2014) (bottom), respectively. Asterisks indicate significance of the enrichment using Fisher’s exact test (*p &lt;= 0.05; **p &lt;= 0.01; ***p &lt;= 0.001)." width="50%" />
 <p class="caption">
-Figure 3.2: <strong>Evolutionary rearrangements are enriched at TAD boundaries.</strong> <strong>(A)</strong> Distribution of evolutionary rearrangement breakpoints between human and mouse around hESC TADs. Each TAD and 50% of its adjacent sequence was subdivided into 20 bins of equal size, the breakpoints were assigned to the bins and their number summed up over the corresponding bins in all TADs. Blue color scale represents breakpoints from different fill-size thresholds. Dotted lines in gray show simulated background controls of randomly placed breakpoints. <strong>(B)</strong> Distribution of rearrangement breakpoints between human and: chimpanzee, cattle, opossum, and zebrafish, at 10 kb size threshold around hESC TADs. Dotted lines in gray show simulated background controls of randomly placed breakpoints. <strong>(C)</strong> Enrichment of breakpoints at TAD boundaries as log-odds-ratio between actual breakpoints at TAD boundaries and randomly placed breakpoints. Enrichment is shown for three different fill size thresholds (blue color scale) and TADs in hESC from <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span> (top) and contact domains in human GM12878 cells from <span class="citation">[Rao et al., <a href="#ref-Rao2014">2014</a>]</span> (bottom), respectively. Asterisks indicate significance of the enrichment using Fisher’s exact test (*p &lt;= 0.05; **p &lt;= 0.01; ***p &lt;= 0.001).
+Figure 3.2: <strong>Evolutionary rearrangements are enriched at TAD boundaries.</strong> <strong>(A)</strong> Distribution of evolutionary rearrangement breakpoints between human and mouse around hESC TADs. Each TAD and 50% of its adjacent sequence was subdivided into 20 bins of equal size, the breakpoints were assigned to the bins and their number summed up over the corresponding bins in all TADs. Blue color scale represents breakpoints from different fill-size thresholds. Dotted lines in gray show simulated background controls of randomly placed breakpoints. <strong>(B)</strong> Distribution of rearrangement breakpoints between human and: chimpanzee, cattle, opossum, and zebrafish, at 10 kb size threshold around hESC TADs. Dotted lines in gray show simulated background controls of randomly placed breakpoints. <strong>(C)</strong> Enrichment of breakpoints at TAD boundaries as log-odds-ratio between actual breakpoints at TAD boundaries and randomly placed breakpoints. Enrichment is shown for three different fill size thresholds (blue color scale) and TADs in hESC from <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>)</span> (top) and contact domains in human GM12878 cells from <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span> (bottom), respectively. Asterisks indicate significance of the enrichment using Fisher’s exact test (*p &lt;= 0.05; **p &lt;= 0.01; ***p &lt;= 0.001).
 </p>
 </div>
 
@@ -346,11 +348,11 @@ for actual breakpoints compared to random controls (Fig <a href="B-2-supplement
 the enrichment was stronger for TADs in hESC compared to the contact
 domains in GM12878. However, these differences were likely due to
 different sizes of TADs and contact domains and the nested structure of
-contact domains, which overlap each other <span class="citation">[Rao et al., <a href="#ref-Rao2014">2014</a>]</span>. Rearrangements between
+contact domains, which overlap each other <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span>. Rearrangements between
 human and both closely and distantly related species are highly enriched
 at TAD boundaries and depleted within TADs. These results show (i) that
 rearrangements are not randomly distributed in the genome, in agreement
-with <span class="citation">[Farré et al., <a href="#ref-Farre2015">2015</a>]</span>, and (ii) strong conservation of TAD regions over large
+with <span class="citation">(Farré et al. <a href="#ref-Farre2015">2015</a>)</span>, and (ii) strong conservation of TAD regions over large
 evolutionary time scales, indicating selective pressure against
 disruption of TADs, presumably because of their functional role in gene
 expression regulation.</p>
@@ -358,18 +360,18 @@ expression regulation.</p>
 <div id="clusters-of-conserved-non-coding-elements-are-depleted-for-rearrangement-breakpoints" class="section level3">
 <h3><span class="header-section-number">3.2.3</span> Clusters of conserved non-coding elements are depleted for rearrangement breakpoints</h3>
 <p>Another interesting feature that can be extracted from whole-genome
-alignments are highly conserved non-coding elements (CNEs) <span class="citation">[Polychronopoulos et al., <a href="#ref-Polychronopoulos2017">2017</a>]</span>. CNEs
+alignments are highly conserved non-coding elements (CNEs) <span class="citation">(Polychronopoulos et al. <a href="#ref-Polychronopoulos2017">2017</a>)</span>. CNEs
 are defined as non-protein-coding sequences of at least 50 bp with over
 70% sequence identity between distantly related species such as human
-and chicken <span class="citation">[Polychronopoulos et al., <a href="#ref-Polychronopoulos2017">2017</a>]</span>. In the human genome, CNEs cluster around
+and chicken <span class="citation">(Polychronopoulos et al. <a href="#ref-Polychronopoulos2017">2017</a>)</span>. In the human genome, CNEs cluster around
 developmental genes in so-called genomic regulatory blocks (GRBs)
-<span class="citation">[Kikuta et al., <a href="#ref-Kikuta2007">2007</a>]</span>. It has been shown recently that many GRBs coincide with TADs in
-human and <em>Drosophila</em> genomes <span class="citation">[Harmston et al., <a href="#ref-Harmston2017">2017</a>]</span>. Therefore, we asked whether
+<span class="citation">(Kikuta et al. <a href="#ref-Kikuta2007">2007</a>)</span>. It has been shown recently that many GRBs coincide with TADs in
+human and <em>Drosophila</em> genomes <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>)</span>. Therefore, we asked whether
 evolutionary breakpoints are also enriched at boundaries of GRBs. This
 would support the idea of a conserved regulatory environment around
 important developmental genes. Indeed we saw a strong enrichment around
 GRBs (Fig <a href="3-2-results-1.html#fig:TadEvo3">3.3</a>A). This is consistent with previous studies in <em>Drosophila</em>
-and Fish where CNE arrays often correspond to syntenic blocks <span class="citation">[Engström et al., <a href="#ref-Engstrom2007">2007</a>; Dimitrieva and Bucher, <a href="#ref-Dimitrieva2013">2013</a>]</span>.</p>
+and Fish where CNE arrays often correspond to syntenic blocks <span class="citation">(Engström et al. <a href="#ref-Engstrom2007">2007</a>; Dimitrieva and Bucher <a href="#ref-Dimitrieva2013">2013</a>)</span>.</p>
 <!-- ---------------------------------------------------------------- -->
 <div class="figure" style="text-align: center"><span id="fig:TadEvo3"></span>
 <img src="figures/TAD_evolution/fig3_v02.png" alt="Rearrangement breakpoint distribution around GRBs and GRB-TADs. (A) Rearrangement breakpoints between mouse and human around 816 GRBs. (B) Breakpoint distribution around GRB-TADs and non-GRB-TADs. GRB-TADs are defined as TADs overlapping more than 80% with GRBs and non-GRB-TADs have less than 20% overlap with GRBs. Breakpoints using a 10 kb fill size threshold are shown." width="50%" />
@@ -381,7 +383,7 @@ Figure 3.3: <strong>Rearrangement breakpoint distribution around GRBs and GRB-TA
 <!-- ---------------------------------------------------------------- -->
 <p>Next, we subdivided TADs according to their overlap with GRBs in
 GRB-TADs (&gt; 80% overlap) and non-GRB-TADs (&lt; 20% overlap) as in
-the original study <span class="citation">[Harmston et al., <a href="#ref-Harmston2017">2017</a>]</span>. As expected, we observed a higher
+the original study <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>)</span>. As expected, we observed a higher
 accumulation of breakpoints at boundaries and stronger depletion within
 TADs for GRB-TADs compared to non-GRB-TADs (Fig <a href="3-2-results-1.html#fig:TadEvo3">3.3</a>B). However, also the
 non-GRB-TADs, that have less than 20% overlap with GRBs, are enriched
@@ -398,16 +400,16 @@ developmental genes.</p>
 that TADs are stable across large evolutionary time scales. However, the
 reason for this strong conservation of TAD regions is unclear. A
 mechanistic explanation could be that certain chromatin features at TAD
-boundaries promote or prevent DNA double strand breaks (DSBs) <span class="citation">[Farré et al., <a href="#ref-Farre2015">2015</a>; Canela et al., <a href="#ref-Canela2017">2017</a>]</span>.
+boundaries promote or prevent DNA double strand breaks (DSBs) <span class="citation">(Farré et al. <a href="#ref-Farre2015">2015</a>; Canela et al. <a href="#ref-Canela2017">2017</a>)</span>.
 Alternatively, selective pressure might act against the disruption of
 TADs due to their functional importance, for example in developmental
-gene regulation <span class="citation">[Nora et al., <a href="#ref-Nora2013">2013</a>; Farré et al., <a href="#ref-Farre2015">2015</a>]</span>. TADs constitute a structural framework
+gene regulation <span class="citation">(Nora et al. <a href="#ref-Nora2013">2013</a>; Farré et al. <a href="#ref-Farre2015">2015</a>)</span>. TADs constitute a structural framework
 determining possible interactions between promoters and cis-regulatory
-sequences while prohibiting the influence of other sequences <span class="citation">[Symmons et al., <a href="#ref-Symmons2014">2014</a>; Lupiáñez et al., <a href="#ref-Lupianez2015">2015</a>]</span>.
+sequences while prohibiting the influence of other sequences <span class="citation">(Symmons et al. <a href="#ref-Symmons2014">2014</a>; Lupiáñez et al. <a href="#ref-Lupianez2015">2015</a>)</span>.
 TAD disruption would prevent formerly established contacts.
 Rearrangements of TADs might also enable the recruitment of new
 cis-regulatory sequences which would alter the expression patterns of
-genes in rearranged TADs <span class="citation">[Lupiáñez et al., <a href="#ref-Lupianez2015">2015</a>; Redin et al., <a href="#ref-Redin2017">2017</a>]</span>. Because of these detrimental effects,
+genes in rearranged TADs <span class="citation">(Lupiáñez et al. <a href="#ref-Lupianez2015">2015</a>; Redin et al. <a href="#ref-Redin2017">2017</a>)</span>. Because of these detrimental effects,
 rearranged TADs should largely be eliminated by purifying selection.
 However, rearrangement of TADs could also enable the expression of genes
 in a new context and be selected if conferring an advantage. Therefore,
@@ -417,7 +419,7 @@ rearranged TADs between two species might have a more divergent
 expression between species.</p>
 <p>To test this, we analyzed the conservation of gene expression of
 ortholog genes between human and mouse across 19 matched tissues from
-the FANTOM5 project (<a href="B-1-TadEvoSupTab.html#TadEvoSupTab">Table S1</a>) <span class="citation">[Forrest et al., <a href="#ref-Forrest2014">2014</a>]</span>. If a human gene and its mouse
+the FANTOM5 project (<a href="B-1-TadEvoSupTab.html#TadEvoSupTab">Table S1</a>) <span class="citation">(Forrest et al. <a href="#ref-Forrest2014">2014</a>)</span>. If a human gene and its mouse
 ortholog have high correlation across matching tissues, they are likely
 to have the same regulation and eventually similar functions.
 Conversely, low correlation of expression across tissues can indicate
@@ -433,8 +435,8 @@ significantly higher expression correlation with their mouse ortholog
 (median R = 0,340) compared to genes outside TADs (mean R = 0,308, p =
 0.0015, Fig <a href="3-2-results-1.html#fig:TadEvo4">3.4</a>A). This indicates higher conservation of gene regulation
 in TADs and is consistent with the observation of housekeeping genes at
-TAD boundaries <span class="citation">[Dixon et al., <a href="#ref-Dixon2012">2012</a>]</span> and the role of TADs in providing conserved
-regulatory environments for gene regulation <span class="citation">[Harmston et al., <a href="#ref-Harmston2017">2017</a>; Ibn-Salem et al., <a href="#ref-Ibn-Salem2017">2017</a>]</span>.</p>
+TAD boundaries <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>)</span> and the role of TADs in providing conserved
+regulatory environments for gene regulation <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>; Ibn-Salem et al. <a href="#ref-Ibn-Salem2017">2017</a>)</span>.</p>
 <!-- ---------------------------------------------------------------- -->
 <div class="figure" style="text-align: center"><span id="fig:TadEvo4"></span>
 <img src="figures/TAD_evolution/fig4_v04.png" alt="Ortholog gene expression correlation across tissues in conserved and rearranged TADs. (A) Expression correlation of orthologs across 19 matching tissues in human and mouse for human genes within or outside of hESC TADs. (B) Expression correlation of orthologs across 19 matching tissues in human and mouse for genes in conserved or rearranged TADs. (C) Expression correlation of orthologs across 19 matching tissues in human and mouse for genes in GRB-TADs and non-GRB TADs. All P-values according to Wilcoxon rank-sum test." width="80%" />
@@ -476,58 +478,58 @@ structural variations such as rearrangements.</p>
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-Kent2003">
-<p>Kent WJ, Baertsch R, Hinrichs A, Miller W, Haussler D. 2003. Evolution’s cauldron: duplication, deletion, and rearrangement in the mouse and human genomes. Proceedings of the National Academy of Sciences of the United States of America 100: 11484–11489.</p>
+<p>Kent WJ, Baertsch R, Hinrichs A, Miller W, Haussler D. 2003. Evolution’s cauldron: Duplication, deletion, and rearrangement in the mouse and human genomes. <em>Proceedings of the National Academy of Sciences of the United States of America</em> <strong>100</strong>: 11484–11489.</p>
 </div>
 <div id="ref-Kent2002">
-<p>Kent WJ, Sugnet CW, Furey TS, Roskin KM, Pringle TH, Zahler AM, Haussler D. 2002. The human genome browser at UCSC. Genome research 12: 996–1006.</p>
+<p>Kent WJ, Sugnet CW, Furey TS, Roskin KM, Pringle TH, Zahler AM, Haussler D. 2002. The human genome browser at ucsc. <em>Genome research</em> <strong>12</strong>: 996–1006.</p>
 </div>
 <div id="ref-Mills2006">
-<p>Mills RE, Bennett EA, Iskow RC, Luttig CT, Tsui C, Pittard WS, Devine SE. 2006. Recently Mobilized Transposons in the Human and Chimpanzee Genomes. The American Journal of Human Genetics 78: 671–679.</p>
+<p>Mills RE, Bennett EA, Iskow RC, Luttig CT, Tsui C, Pittard WS, Devine SE. 2006. Recently mobilized transposons in the human and chimpanzee genomes. <em>The American Journal of Human Genetics</em> <strong>78</strong>: 671–679.</p>
 </div>
 <div id="ref-Dixon2012">
-<p>Dixon JR, Selvaraj S, Yue F, Kim A, Li Y, Shen Y, Hu M, Liu JS, Ren B. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. Nature 485: 376–380.</p>
+<p>Dixon JR, Selvaraj S, Yue F, Kim A, Li Y, Shen Y, Hu M, Liu JS, Ren B. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. <em>Nature</em> <strong>485</strong>: 376–380.</p>
 </div>
 <div id="ref-Rao2014">
-<p>Rao SSP, Huntley MH, Durand NC, Stamenova EK, Bochkov ID, Robinson JT, Sanborn AL, Machol I, Omer AD, Lander ES, Aiden EL. 2014. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. Cell 159: 1665–80.</p>
+<p>Rao SSP, Huntley MH, Durand NC, Stamenova EK, Bochkov ID, Robinson JT, Sanborn AL, Machol I, Omer AD, Lander ES, et al. 2014. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. <em>Cell</em> <strong>159</strong>: 1665–80.</p>
 </div>
 <div id="ref-Farre2015">
-<p>Farré M, Robinson TJ, Ruiz-Herrera A. 2015. An Integrative Breakage Model of genome architecture, reshuffling and evolution. BioEssays: n/a–n/a.</p>
+<p>Farré M, Robinson TJ, Ruiz-Herrera A. 2015. An integrative breakage model of genome architecture, reshuffling and evolution. <em>BioEssays</em> n/a–n/a.</p>
 </div>
 <div id="ref-Polychronopoulos2017">
-<p>Polychronopoulos D, King JWD, Nash AJ, Tan G, Lenhard B. 2017. Conserved non-coding elements: developmental gene regulation meets genome organization. Nucleic Acids Research: 1–14.</p>
+<p>Polychronopoulos D, King JWD, Nash AJ, Tan G, Lenhard B. 2017. Conserved non-coding elements: Developmental gene regulation meets genome organization. <em>Nucleic Acids Research</em> 1–14.</p>
 </div>
 <div id="ref-Kikuta2007">
-<p>Kikuta H, Laplante M, Navratilova P, Komisarczuk AZ, Engström PG, Fredman D, Akalin A, Caccamo M, Sealy I, Howe K, Ghislain J, Pezeron G, Mourrain P, Ellingsen S, Oates AC, Thisse C, Thisse B, Foucher I, Adolf B, Geling A, Lenhard B, Becker TS. 2007. Genomic regulatory blocks encompass multiple neighboring genes and maintain conserved synteny in vertebrates. Genome Research 17: 545–555.</p>
+<p>Kikuta H, Laplante M, Navratilova P, Komisarczuk AZ, Engström PG, Fredman D, Akalin A, Caccamo M, Sealy I, Howe K, et al. 2007. Genomic regulatory blocks encompass multiple neighboring genes and maintain conserved synteny in vertebrates. <em>Genome Research</em> <strong>17</strong>: 545–555.</p>
 </div>
 <div id="ref-Harmston2017">
-<p>Harmston N, Ing-Simmons E, Tan G, Perry M, Merkenschlager M, Lenhard B. 2017. Topologically associating domains are ancient features that coincide with Metazoan clusters of extreme noncoding conservation. Nature Communications 8: 441.</p>
+<p>Harmston N, Ing-Simmons E, Tan G, Perry M, Merkenschlager M, Lenhard B. 2017. Topologically associating domains are ancient features that coincide with metazoan clusters of extreme noncoding conservation. <em>Nature Communications</em> <strong>8</strong>: 441.</p>
 </div>
 <div id="ref-Engstrom2007">
-<p>Engström PG, Sui SJH, Drivenes Ø, Becker TS, Lenhard B. 2007. Genomic regulatory blocks underlie extensive microsynteny conservation in insects. Genome Research 17: 1898–1908.</p>
+<p>Engström PG, Sui SJH, Drivenes Ø, Becker TS, Lenhard B. 2007. Genomic regulatory blocks underlie extensive microsynteny conservation in insects. <em>Genome Research</em> <strong>17</strong>: 1898–1908.</p>
 </div>
 <div id="ref-Dimitrieva2013">
-<p>Dimitrieva S, Bucher P. 2013. UCNEbase—a database of ultraconserved non-coding elements and genomic regulatory blocks. Nucleic Acids Research 41: D101–D109.</p>
+<p>Dimitrieva S, Bucher P. 2013. UCNEbase—a database of ultraconserved non-coding elements and genomic regulatory blocks. <em>Nucleic Acids Research</em> <strong>41</strong>: D101–D109.</p>
 </div>
 <div id="ref-Canela2017">
-<p>Canela A, Maman Y, Jung S, Wong N, Callen E, Day A, Kieffer-Kwon K-R, Pekowska A, Zhang H, Rao SS, Huang S-c, Mckinnon PJ, Aplan PD, Pommier Y, Aiden EL, Casellas R, Nussenzweig A. 2017. Genome Organization Drives Chromosome Fragility. Cell: 1–15.</p>
+<p>Canela A, Maman Y, Jung S, Wong N, Callen E, Day A, Kieffer-Kwon K-R, Pekowska A, Zhang H, Rao SS, et al. 2017. Genome organization drives chromosome fragility. <em>Cell</em> 1–15.</p>
 </div>
 <div id="ref-Nora2013">
-<p>Nora EP, Dekker J, Heard E. 2013. Segmental folding of chromosomes: A basis for structural and regulatory chromosomal neighborhoods? BioEssays 35: 818–828.</p>
+<p>Nora EP, Dekker J, Heard E. 2013. Segmental folding of chromosomes: A basis for structural and regulatory chromosomal neighborhoods? <em>BioEssays</em> <strong>35</strong>: 818–828.</p>
 </div>
 <div id="ref-Symmons2014">
-<p>Symmons O, Uslu VV, Tsujimura T, Ruf S, Nassari S, Schwarzer W, Ettwiller L, Spitz F. 2014. Functional and topological characteristics of mammalian regulatory domains. Genome research 24: 390–400.</p>
+<p>Symmons O, Uslu VV, Tsujimura T, Ruf S, Nassari S, Schwarzer W, Ettwiller L, Spitz F. 2014. Functional and topological characteristics of mammalian regulatory domains. <em>Genome research</em> <strong>24</strong>: 390–400.</p>
 </div>
 <div id="ref-Lupianez2015">
-<p>Lupiáñez DG, Kraft K, Heinrich V, Krawitz P, Brancati F, Klopocki E, Horn D, Kayserili H, Opitz JM, Laxova R, Santos-Simarro F, Gilbert-Dussardier B, Wittler L, Borschiwer M, Haas SA, Osterwalder M, Franke M, Timmermann B, Hecht J, Spielmann M, Visel A, Mundlos S. 2015. Disruptions of Topological Chromatin Domains Cause Pathogenic Rewiring of Gene-Enhancer Interactions. Cell 161: 1012–1025.</p>
+<p>Lupiáñez DG, Kraft K, Heinrich V, Krawitz P, Brancati F, Klopocki E, Horn D, Kayserili H, Opitz JM, Laxova R, et al. 2015. Disruptions of topological chromatin domains cause pathogenic rewiring of gene-enhancer interactions. <em>Cell</em> <strong>161</strong>: 1012–1025.</p>
 </div>
 <div id="ref-Redin2017">
-<p>Redin C, Brand H, Collins RL, Kammin T, Mitchell E, Hodge JC, Hanscom C, Pillalamarri V, Seabra CM, Abbott M-A, Abdul-Rahman OA, Aberg E, Adley R, Alcaraz-Estrada SL, Alkuraya FS, An Y, Anderson M-A, Antolik C, Anyane-Yeboa K, Atkin JF, Bartell T, Bernstein JA, Beyer E, Blumenthal I, Bongers EMHF, Brilstra EH, Brown CW, Brüggenwirth HT, Callewaert B, Chiang C, Corning K, Cox H, Cuppen E, Currall BB, Cushing T, David D, Deardorff MA, Dheedene A, D’Hooghe M, Vries BBA de, Earl DL, Ferguson HL, Fisher H, FitzPatrick DR, Gerrol P, Giachino D, Glessner JT, Gliem T, Grady M, Graham BH, Griffis C, Gripp KW, Gropman AL, Hanson-Kahn A, Harris DJ, Hayden MA, Hill R, Hochstenbach R, Hoffman JD, Hopkin RJ, Hubshman MW, Innes AM, Irons M, Irving M, Jacobsen JC, Janssens S, Jewett T, Johnson JP, Jongmans MC, Kahler SG, Koolen DA, Korzelius J, Kroisel PM, Lacassie Y, Lawless W, Lemyre E, Leppig K, Levin AV, Li H, Li H, Liao EC, Lim C, Lose EJ, Lucente D, Macera MJ, Manavalan P, Mandrile G, Marcelis CL, Margolin L, Mason T, Masser-Frye D, McClellan MW, Mendoza CJZ, Menten B, Middelkamp S, Mikami LR, Moe E, Mohammed S, et al. 2017. The genomic landscape of balanced cytogenetic abnormalities associated with human congenital anomalies. Nature Genetics 49: 36–45.</p>
+<p>Redin C, Brand H, Collins RL, Kammin T, Mitchell E, Hodge JC, Hanscom C, Pillalamarri V, Seabra CM, Abbott M-A, et al. 2017. The genomic landscape of balanced cytogenetic abnormalities associated with human congenital anomalies. <em>Nature Genetics</em> <strong>49</strong>: 36–45.</p>
 </div>
 <div id="ref-Forrest2014">
-<p>Forrest ARR, Kawaji H, Rehli M, Baillie JK, Hoon MJL de, Lassmann T, Itoh M, Summers KM, Suzuki H, Daub CO, Kawai J, Heutink P, Hide W, Freeman TC, Lenhard B, Bajic VB, Taylor MS, Makeev VJ, Sandelin A, Hume D a, Carninci P, Hayashizaki Y. 2014. A promoter-level mammalian expression atlas. Nature 507: 462–70.</p>
+<p>Forrest ARR, Kawaji H, Rehli M, Baillie JK, Hoon MJL de, Lassmann T, Itoh M, Summers KM, Suzuki H, Daub CO, et al. 2014. A promoter-level mammalian expression atlas. <em>Nature</em> <strong>507</strong>: 462–70.</p>
 </div>
 <div id="ref-Ibn-Salem2017">
-<p>Ibn-Salem J, Muro EM, Andrade-Navarro MA. 2017. Co-regulation of paralog genes in the three-dimensional chromatin architecture. Nucleic Acids Research 45: 81–91.</p>
+<p>Ibn-Salem J, Muro EM, Andrade-Navarro MA. 2017. Co-regulation of paralog genes in the three-dimensional chromatin architecture. <em>Nucleic Acids Research</em> <strong>45</strong>: 81–91.</p>
 </div>
 </div>
             </section>
