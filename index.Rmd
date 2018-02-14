@@ -18,9 +18,9 @@ classoption: [
   captions=tableabove, 
   draft=false]
 papersize: a4
-bibliography: [bib/PhD.bib]
+bibliography: [bib/PhDfltClean.bib]
 biblio-style: myabbrvnat
-csl: american-journal-of-medical-genetics.csl
+csl: genome-research.csl
 link-citations: yes
 github-repo: ibn-salem/thesis
 description: "This is a draft PhD thesis."
