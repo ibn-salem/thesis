@@ -1,11 +1,17 @@
+"""
+A script to clean up a bibtex file.
+Adapted from:
+
+"""
+
 import datetime
 import bibtexparser
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.customization import *
 
-input_b = "bib/PhDclean.bib"
-output_b = "bib/PhDclean.cleaner.bib"
+input_b = "bib/PhDflt.bib"
+output_b = "bib/PhDfltClean.bib"
 
 now = datetime.datetime.now()
 print("{0} Cleaning duff bib records from {1} into {2}".format(now, input_b, output_b))
@@ -17,13 +23,35 @@ def customizations(record):
     :param record: a record
     :returns: -- customized record
     """
-    record = type(record)
-    record = page_double_hyphen(record)
-    record = convert_to_unicode(record)
+    # record = type(record)
+    # record = page_double_hyphen(record)
+    # record = convert_to_unicode(record)
+
+    maxAuthor = 30
+
     ## delete the following keys.
-    unwanted = ["doi", "url", "abstract", "file", "gobbledegook", "isbn", "link", "keyword", "mendeley-tags", "annote", "pmid", "chapter", "institution", "issn", "month"]
+    # unwanted = ["doi", "url", "abstract", "file", "gobbledegook", "isbn", "link", "keyword", "mendeley-tags", "annote", "pmid", "chapter", "institution", "issn", "month"]
+    unwanted = ["abstract", "file", "gobbledegook", "isbn", "link", "keyword", "mendeley-tags", "annote", "pmid", "chapter", "institution", "issn", "month"]
     for val in unwanted:
         record.pop(val, None)
+
+    # print("DEBUG", record)
+
+    # filter author list
+    authors = record.get("author")
+    authorList = authors.split(" and ")
+
+    if (len(authorList) > maxAuthor):
+      authorList = authorList[0:(maxAuthor-1)] + ["others"]
+      authorsFiltered = " and ".join(authorList)
+    else:
+      authorsFiltered = authors
+
+    record["author"] = authorsFiltered
+    # print("All:", authors)
+    # print("Flt list:", authorList)
+    # print("Flt:", authorsFiltered)
+
     return record
 
 
