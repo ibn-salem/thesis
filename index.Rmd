@@ -18,6 +18,7 @@ classoption: [
   captions=tableabove, 
   draft=false]
 papersize: a4
+toc-depth: 3
 bibliography: [bib/PhDfltClean.bib]
 biblio-style: myabbrvnat
 csl: genome-research.csl
