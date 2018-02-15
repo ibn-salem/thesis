@@ -220,7 +220,6 @@ However, often the entire TAD responded as a unit by changing histone modificati
 While TADs were initially described for mammalian genomes, 
 a similar domain organization was found in the genomes of non-mammalian species such as *Drosophila* [@Sexton2012],
 zebrafish [@Gomez-Marin2015] *Caenorhabditis elegans* [@Crane2015] and yeast [@Hsieh2015; @Mizuguchi2014].
-
 However, in *C. elegans* TADs were only observed on the X chromosome of XX hermaphrodites and not on autosomes [@Crane2015]. 
 The small and compact genome with most of the cis-regulatory information within 10kb from the TSS might not need long-range domains for gene regulation [@Long2016].
 In contrast, plants have long-range cell-type specific enhancers [@Zhu2015], but TAD like structures could not be
@@ -231,6 +230,8 @@ TAD-like structures are therefore not required for eukaryotic interphase chromos
 Nevertheless, Hi-C experiments in bacteria and yeast suggest that self-interacting domains may be an ancient feature of chromosome organization. 
 Hi-C data in *Caulobacter* cells revealed so-called chromosomally interacting domains (CIDs) of 30 to 420 kb in size [@Le2013].
 In fission yeast *S. pombe*, globule structures at the 40-100 kb scale were identified and depend on cohesin complex [@Mizuguchi2014]. Furthermore, in very short CIDs of around 2-10 kb were detected in *S.cerevisiae* and bounded by highly transcribed genes [@Hsieh2015].
+
+In summary, TAD like structures have been detected in many organisms, including files, worms, fungi, and bacteria, but variations in size and interanl strucure indicate differnces in their fromation by protein complexes and biological functions [@Dekker2015].
 Further high-resolution experiments in more diverse species are needed to understand the evolutionary origin of genome segregation into TAD-like structures. 
 
 The presence of domain-like structures in diverse species across the tree of life leads
@@ -276,7 +277,7 @@ knitr::include_graphics("figures/GDE_vs_TDBD_v03.png")
 
 (ref:EnhancerAdoption) **Models of pathomechanisms by chromosomal deletions involving TAD disruption** In each panel, an exemplary deletion is shown as a red bar, a TDB is indicated with a black arrow, and genes associated with the phenotypes of the CNV patient are shown in blue, other genes in gray. Phenotypic abnormalities are represented as exemplary HPO terms (HP1, HP2 and HP3). Three tissue-specific enhancers are shown in (B) as black ovals. **(A)** Gene-dosage effect. A deletion leads to a reduction in the dosage of haplosensitive genes located within the CNV. The individual with the deletion has two phenotypic abnormalities (HP1, HP2) resulting from deletion of two haplosensitive genes. A Mendelian disease related to mutations in the first gene is associated with HP1, and a Mendelian disease related to mutations in the second gene is associated with HP2. **(B)** TAD boundary deletion and enhancer adoption. Removal of the topological domain boundary allows the tissue-specific enhancer inappropriately to activate a phenotypically relevant gene located adjacent to the deletion, a phenomenon that we refer to as enhancer adoption. In this case, the individual with the deletion has a phenotypic abnormality (HP3) that is also seen in individuals with a Mendelian disease related to a mutation in the gene adjacent to the deletion. Figure adapted from [@Ibn-Salem2014].
 
-Interestingly, these initial results are largely confirmed by very recent studies investigating structural variants that disrupt TADs and lead to ectopic gene expression in genetic diseases [@Lupianez2015; @Franke2016; @Redin2017] and cancers [@Northcott2014; @Hnisz2016; @Weischenfeldt2016]. This is discussed in more detail in section \#ref(thesis-discussion).
+Interestingly, these initial results are largely confirmed by very recent studies investigating structural variants that disrupt TADs and lead to ectopic gene expression in genetic diseases [@Lupianez2015; @Franke2016; @Redin2017] and cancers [@Northcott2014; @Hnisz2016; @Weischenfeldt2016]. This is discussed in more detail in chapter \@ref(thesis-discussion).
 
 Together, these observations lead to the questions whether other types of structural variants, like translocations and inversions, could also disrupt TADs and regulatory interactions of genes.
 To analyze such a position effect, we need careful integration of diverse genomic and phenotypic data. Computational tools could predict the impact of rearrangement breakpoints on TAD disruption and potential regulatory effects on phenotypically relevant genes. Such a method would improve molecular diagnoses of many patients with variants of unknown significance.
