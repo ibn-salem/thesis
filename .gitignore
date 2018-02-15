@@ -6,6 +6,9 @@ _publish.R
 _bookdown_files
 rsconnect
 
+# ignore docs folder with builds in html, pdf and epub
+docs
+
 # ignore for the moment
 # .travis.yml
 LICENSE
