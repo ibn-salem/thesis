@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="1-1-regulation-of-gene-expression.html">
+<link rel="prev" href="1-2-enhancers.html">
+<link rel="next" href="1-4-hierarchy-of-chromatin-3d-structure.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -255,16 +255,112 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="thesis-intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1> 
+<div id="methods-to-probe-the-3d-chromatin-architecture" class="section level2">
+<h2><span class="header-section-number">1.3</span> Methods to probe the 3D chromatin architecture</h2>
+<div id="microscopy-based-techniques-to-visualize-the-genome-in-3d" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Microscopy-based techniques to visualize the genome in 3D</h3>
+<p>Historically, the organization of chromosomes and specific loci within the nucleus have mostly been studied using fluorescent <em>in situ</em> hybridization (FISH) experiments.
+FISH is limited to examine a few pre-defined loci a few hundred cells at once and is limited in spatial resolution.
+Novel super-resolution microscopy approaches such as STORM and PALM have enabled direct visualization of the fine-scale structures of the genome at an unprecedented resolution <span class="citation">(Bonev and Cavalli <a href="#ref-Bonev2016">2016</a>)</span>.
+Labeling of specific chromatin proteins, histone marks, or genomic loci allow to
+analyze the dynamics of chromosomes at high resolution in living cells.
+However, despite spectacular technical progress, microscopy-based approaches are limited to a small number of genetic loci and do not allow a comprehensive analysis of the nuclear architecture of the complete genome.
+Furthermore, the specific folding patterns observed in microscopy cannot be mapped to genomic coordinates, substantially limiting the integration with other genomic data.
+However, a future combination of imaging-based techniques with proximity-ligation experiments together with integrative computational models might enable to study the real-time dynamics of chromatin organization with high resolution on the single cell level <span class="citation">(Stevens et al. <a href="#ref-Stevens2017">2017</a>, <span class="citation">@Flyamer2017</span>)</span>.</p>
+</div>
+<div id="proximity-ligation-based-method-to-quantify-chromatin-interactions" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Proximity-ligation based method to quantify chromatin interactions</h3>
+<p>The frequency of interactions between different loci in the genome can be
+measured experimentally by proximity ligation techniques <span class="citation">(Sati and Cavalli <a href="#ref-Sati2017">2017</a>; Schmitt et al. <a href="#ref-Schmitt2016">2016</a>)</span>. These protocols are variations of the chromosome conformation capture (3C) experiment <span class="citation">(Dekker et al. <a href="#ref-Dekker2002">2002</a>)</span>.
+3C works by the ability to cross-link two genomic loci that are in close physical proximity in the nuclear
+space by treating cells with formaldehyde leading to covalent bonds between proteins and DNA with proteins <span class="citation">(Hoffman et al. <a href="#ref-Hoffman2015">2015</a>)</span>.
+The cross-linked chromatin is then digested by enzymes to fragment the genomic DNA.
+Than, re-ligation of fragmented DNA result in hybrid DNA molecules of restriction fragments that were in close
+physical proximity during cross-linking but originate from different regions in the linear genome sequence <span class="citation">(Dekker et al. <a href="#ref-Dekker2013">2013</a>; Andrey and Mundlos <a href="#ref-Andrey2017">2017</a>)</span> (Fig. <a href="1-3-methods-to-probe-the-3d-chromatin-architecture.html#fig:ProximityLigation">.</a>A).</p>
+<!-- ---------------------------------------------------------------- -->
+<div class="figure" style="text-align: center"><span id="fig:ProximityLigation"></span>
+<img src="figures/Dekker2013_3C.png" alt="Proximity ligation technologies to measure chromatin interactions (A) By treating cells with formaldehyde chromatin is crosslinked. After fragmentation with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is ligated to a hybrid DNA molecule that is then made from DNA that originated from two regions distal in the linear genome (indicated in red and blue). (B) Different variants of the 3C experiments differ in their approaches to measure the ligation products or subsets of it in order to quantify chromatin interactions. Figure adapted from (Dekker et al. 2013)." width="80%" />
+<p class="caption">
+Figure .: <strong>Proximity ligation technologies to measure chromatin interactions</strong> <strong>(A)</strong> By treating cells with formaldehyde chromatin is crosslinked. After fragmentation with restriction enzymes, DNA from two loci in close physical proximity in the nucleus is ligated to a hybrid DNA molecule that is then made from DNA that originated from two regions distal in the linear genome (indicated in red and blue). <strong>(B)</strong> Different variants of the 3C experiments differ in their approaches to measure the ligation products or subsets of it in order to quantify chromatin interactions. Figure adapted from <span class="citation">(Dekker et al. <a href="#ref-Dekker2013">2013</a>)</span>.
+</p>
+</div>
+
+<!-- ---------------------------------------------------------------- -->
+<p>There exist several 3C-based methods which differ by the way the ligation product, which represents and chromatin interaction, is measured and quantified (Fig. <a href="1-3-methods-to-probe-the-3d-chromatin-architecture.html#fig:ProximityLigation">.</a>B).
+The classic 3C protocol allows quantifying hybrid DNA-product by quantitative PCR using specific primers to amplify the product junction <span class="citation">(Dekker et al. <a href="#ref-Dekker2002">2002</a>)</span>.
+In Circular chromosome conformation capture (4C) experiments, a circular PCR is used to amplify all hybrid DNA products that are ligated with the desired restriction fragment, e.g. a specific viewpoint of interest. These products are then sequences to generate an interaction profile measuring all
+interacting regions with this viewpoint <span class="citation">(Simonis et al. <a href="#ref-Simonis2006">2006</a>; Noordermeer et al. <a href="#ref-Noordermeer2011">2011</a>)</span>.
+Another variant of 3C, Carbon copy chromosome conformation capture (5C), combines
+3C with hybrid capture approaches to identify up to millions of interactions in parallel between two large sets of loci, for example between a set of promoters and a set of distal regulatory elements <span class="citation">(Dostie et al. <a href="#ref-Dostie2006">2006</a>; Sanyal et al. <a href="#ref-Sanyal2012">2012</a>)</span>.
+Other methods combine chromatin immunoprecipitation to enrich for chromatin interactions between loci bound by specific proteins of interest or marked by post-translational histone modifications.
+One of these methods is chromatin interaction analysis by paired-end tag sequencing (ChIA-PET), which allows for genome-wide analysis of long-range interactions between sites bound by a protein of interest <span class="citation">(Fullwood et al. <a href="#ref-Fullwood2009">2009</a>)</span>. Therefore, ChIA-PET data represent a selected subset of all interactions, but is an efficient alternative to measure interactions at high resolution <span class="citation">(Tang et al. <a href="#ref-Tang2015">2015</a>)</span>.
+The most unbiased method to quantify all pair-wise interactions genome-wide is Hi-C <span class="citation">(Lieberman-Aiden et al. <a href="#ref-Lieberman-Aiden2009">2009</a>)</span>. After the initial restriction enzyme step of 3C, in Hi-C, the ends are filled with a biotin-marked nucleotide and subsequently re-ligated. A streptavidin pull-down step enriches the chimeric products, which are then sequenced using paired-end sequencing technology. Each read from the resulting read-pairs is then aligned independently to the reference genome to identify the originating position of the sequenced restriction fragment.
+Each read pair represents a pairwise physical interaction of the corresponding regions.
+Interaction frequencies are usually analyzed by binning the genome into equal-sized regions of several kb depending on sequencing depth.
+While the first Hi-C study produced genome-wide interactions at a 1Mb resolution <span class="citation">(Lieberman-Aiden et al. <a href="#ref-Lieberman-Aiden2009">2009</a>)</span>, more recent studies could analyze folding patterns at 40kb <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>)</span> and later up to 1kb resolution <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span>.</p>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Bonev2016">
+<p>Bonev B, Cavalli G. 2016. Organization and function of the 3D genome. <em>Nature Reviews Genetics</em> <strong>17</strong>: 661–678.</p>
+</div>
+<div id="ref-Stevens2017">
+<p>Stevens TJ, Lando D, Basu S, Liam P, Cao Y, Lee SF, Leeb M, Wohlfahrt KJ, Boucher W, Shaughnessy-kirwan AO, et al. 2017. 3D structures of individual mammalian genomes studied by single-cell hi-c. <em>Nature</em> 1–21.</p>
+</div>
+<div id="ref-Sati2017">
+<p>Sati S, Cavalli G. 2017. Chromosome conformation capture technologies and their impact in understanding genome function. <em>Chromosoma</em> <strong>126</strong>: 33–44.</p>
+</div>
+<div id="ref-Schmitt2016">
+<p>Schmitt AD, Hu M, Ren B. 2016. Genome-wide mapping and analysis of chromosome architecture. <em>Nature Reviews Molecular Cell Biology</em>.</p>
+</div>
+<div id="ref-Dekker2002">
+<p>Dekker J, Rippe K, Dekker M, Kleckner N. 2002. Capturing chromosome conformation. <em>Science (New York, NY)</em> <strong>295</strong>: 1306–11.</p>
+</div>
+<div id="ref-Hoffman2015">
+<p>Hoffman EA, Frey BL, Smith LM, Auble DT. 2015. Formaldehyde crosslinking: A tool for the study of chromatin complexes. <em>The Journal of biological chemistry</em> <strong>290</strong>: 26404–11.</p>
+</div>
+<div id="ref-Dekker2013">
+<p>Dekker J, Marti-Renom MA, Mirny LA. 2013. Exploring the three-dimensional organization of genomes: Interpreting chromatin interaction data. <em>Nature reviews Genetics</em> <strong>14</strong>: 390–403.</p>
+</div>
+<div id="ref-Andrey2017">
+<p>Andrey G, Mundlos S. 2017. The three-dimensional genome: Regulating gene expression during pluripotency and development. <em>Development</em> <strong>144</strong>: 3646–3658.</p>
+</div>
+<div id="ref-Simonis2006">
+<p>Simonis M, Klous P, Splinter E, Moshkin Y, Willemsen R, Wit E de, Steensel B van, Laat W de. 2006. Nuclear organization of active and inactive chromatin domains uncovered by chromosome conformation capture–on-chip (4C). <em>Nature Genetics</em> <strong>38</strong>: 1348–1354.</p>
+</div>
+<div id="ref-Noordermeer2011">
+<p>Noordermeer D, Wit E de, Klous P, Werken H van de, Simonis M, Lopez-Jones M, Eussen B, Klein A de, Singer RH, Laat W de. 2011. Variegated gene expression caused by cell-specific long-range dna interactions. <em>Nature Cell Biology</em> <strong>13</strong>: 944–951.</p>
+</div>
+<div id="ref-Dostie2006">
+<p>Dostie J, Richmond TA, Arnaout RA, Selzer RR, Lee WL, Honan TA, Rubio ED, Krumm A, Lamb J, Nusbaum C, et al. 2006. Chromosome conformation capture carbon copy (5C): A massively parallel solution for mapping interactions between genomic elements. <em>Genome Research</em> <strong>16</strong>: 1299–1309.</p>
+</div>
+<div id="ref-Sanyal2012">
+<p>Sanyal A, Lajoie BR, Jain G, Dekker J. 2012. The long-range interaction landscape of gene promoters. <em>Nature</em> <strong>489</strong>: 109–113.</p>
+</div>
+<div id="ref-Fullwood2009">
+<p>Fullwood MJ, Liu MH, Pan YF, Liu J, Xu H, Mohamed YB, Orlov YL, Velkov S, Ho A, Mei PH, et al. 2009. An oestrogen-receptor-<span class="math inline">\(\alpha\)</span>-bound human chromatin interactome. <em>Nature</em> <strong>462</strong>: 58–64.</p>
+</div>
+<div id="ref-Tang2015">
+<p>Tang Z, Luo OJ, Li X, Zheng M, Zhu JJ, Szalaj P, Trzaskoma P, Magalska A, Wlodarczyk J, Ruszczycki B, et al. 2015. CTCF-mediated human 3D genome architecture reveals chromatin topology for transcription. <em>Cell</em> 1–17.</p>
+</div>
+<div id="ref-Lieberman-Aiden2009">
+<p>Lieberman-Aiden E, Berkum NL van, Williams L, Imakaev M, Ragoczy T, Telling A, Amit I, Lajoie BR, Sabo PJ, Dorschner MO, et al. 2009. Comprehensive mapping of long-range interactions reveals folding principles of the human genome. <em>Science (New York, NY)</em> <strong>326</strong>: 289–93.</p>
+</div>
+<div id="ref-Dixon2012">
+<p>Dixon JR, Selvaraj S, Yue F, Kim A, Li Y, Shen Y, Hu M, Liu JS, Ren B. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. <em>Nature</em> <strong>485</strong>: 376–380.</p>
+</div>
+<div id="ref-Rao2014">
+<p>Rao SSP, Huntley MH, Durand NC, Stamenova EK, Bochkov ID, Robinson JT, Sanborn AL, Machol I, Omer AD, Lander ES, et al. 2014. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. <em>Cell</em> <strong>159</strong>: 1665–80.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="1-1-regulation-of-gene-expression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="1-2-enhancers.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="1-4-hierarchy-of-chromatin-3d-structure.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
