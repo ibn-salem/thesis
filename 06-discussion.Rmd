@@ -18,6 +18,7 @@
 and lead to exciting findings of higher order organisation. 
     - TADs are not only structural units of chromosomes, but also functional building blocks of genomes.
     - Discuss [@Liu2016b] Evidence of reduced recombination rate in human regulatory domains
+    - Discuss loop and TAD abolishing upon CTCF and cohesin KO.
 
 ## Discussion paralog co-regulation in TADs
 

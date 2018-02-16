@@ -460,7 +460,7 @@ structure}\label{hierarchy-of-chromatin-3d-structure}}
 The three-dimensional organization of genome folding was studied
 extensively in recent years and is reviewed comprehensively by leading
 experts in the field
-\citep{Pombo2015, Sexton2015, Bouwman2015, Dekker2016, Dixon2016, Schmitt2016, Bonev2016, Hnisz2016a, Merkenschlager2016, Long2016, Ruiz-Velasco2017, Andrey2017}.
+\citep{Pombo2015, Sexton2015, Bouwman2015, Dekker2016, Dixon2016, Schmitt2016, Bonev2016, Hnisz2016a, Merkenschlager2016, Long2016, Rowley2016, Ruiz-Velasco2017, Andrey2017}.
 
 \begin{figure}
 
@@ -587,9 +587,9 @@ slightly increased co-expression of genes within the same TAD
 Altogether, there is accumulating evidence that TADs are fundamental
 units of chromosome organization \citep{Dixon2016}
 
-\hypertarget{sub-tad-structures-and-chromatin-loops}{%
-\subsection{Sub-TAD structures and chromatin
-loops}\label{sub-tad-structures-and-chromatin-loops}}
+\hypertarget{hierarchy-of-domain-like-structures-across-genomic-length-scales}{%
+\subsection{Hierarchy of domain-like structures across genomic-length
+scales}\label{hierarchy-of-domain-like-structures-across-genomic-length-scales}}
 
 Globally, higher-order interactions between different TADs leads to a
 tree-like hierarchy of TADs and meta-TADs across genomic scales up to
@@ -598,78 +598,141 @@ A/B-compartments, these three structures correlate with epigenetic marks
 and expression changes during cell differentiation \citep{Fraser2015}.
 
 However, TADs can also be divided further into smaller regions with
-stronger preferential interactions within them, which are often referred
-to as sub-TADs \citep{Phillips-Cremins2013}. They might correspond to
+stronger preferential interactions within them. These are often referred
+to as sub-TADs \citep{Phillips-Cremins2013} and might correspond to
 contact domains which were later identified using high-resolution Hi-C
 \citep{Rao2014}. While sub-TADs display the same self-association
 features as TADs with decreased contact frequencies across sub-TAD
 boundaries, sub-TADs seems to be less stable across different cell types
 and tissues and are stronger related to tissue-specific gene expression
-\citep{Berlivet2013, Phillips-Cremins2013}. Smaller structural units
-within TADs were also reported from studies of CTCF and cohesin mediated
-interactions using ChiA-PET \citep{Dowen2014}. Chromatin loops anchored
-at CTCF and cohesin binding sites span genomic regions described as
-insulated neighborhoods that restict enhancer-promoter interactions
-\citep{Hnisz2016a}. Perturbations of anchor regions by naturally
-occuring or or experimentally induced mutations lead to dysregulation of
-enclosed genes \citep{Dowen2014, Hnisz2016, Ji2016}
+\citep{Berlivet2013, Phillips-Cremins2013}. Studies of CTCF and cohesin
+mediated interactions using ChiA-PET identified smaller structural units
+within TADs \citep{Dowen2014}. Chromatin loops anchored at CTCF and
+cohesin binding sites span genomic regions described as insulated
+neighborhoods that restrict enhancer-promoter interactions
+\citep{Hnisz2016a}. Furthermore, perturbations of anchor regions by
+naturally occurring or experimentally induced mutations lead to
+dysregulation of enclosed genes \citep{Dowen2014, Hnisz2016, Ji2016}. In
+summary, segregation of chromosomes into domain-like structures seems to
+follow a hierarchical organization across genomic-length scales.
+Accordingly, interaction clustering appears at scales of A/-B
+compartments or meta-TADs over TADs, contact domains, sub-TADs to
+individual chromatin loops.
 
-\begin{itemize}
-\tightlist
-\item
-  long distnace between regulatory regions and genes in vertebrate genes
-\end{itemize}
-
-To function as a transcriptional regulator an enhancer needs to be
-brought into close spatial proximity with its target promoter through
-chromatin looping. For example, the enhancers of the \(\beta\)-globin
-gene interact strongly with its target gene via long-range chromatin
-contacts in erythroid cells where the \(\beta\)-globin gene is active
-but shows little or no interactions in cells from different lineages
-\citep{Palstra2003}.
+\hypertarget{chromatin-looping-interactions}{%
+\subsection{Chromatin looping
+interactions}\label{chromatin-looping-interactions}}
 
 High-resolution proximity ligation techniques enabled to measure
 genome-wide pairwise interactions that interact significantly more
 frequently than background interactions. Chromatin loops can be broadly
-divided into two types, constitutive or architectural loops and cell
-type-specific loops \citep{Yu2016}. Constitutive loops are largely
+divided into two types \citep{Yu2017, Andrey2017} The first type is
+constitutive or architectural loops. Constitutive loops are mostly
 invariant across cell types and demarcate TAD or sub-TAD boundaries
-\citep{Dowen2014, Ji2016, Phillips-Cremins2013} and are often formed by
-CTCF and cohesin complexes \citep{Rao2014}. CTCF recognizes a specific
-DNA sequence motif, to which it binds with high affinity
-\citep{Kim2007, Nagy2016}. Interestingly, CTCF motifs are present in
-convergent orientation at chromatin loop anchors
-\citep{Rao2014, Tang2015, VietriRudan2015}. Furthermore, experimental
-inversion of the motif results in changes of loop formation and altered
-gene expression \citep{Guo2015, deWit2015, Sanborn2015}. Polymer
-simulations together with perturbation experiments led to a model of
-loop extrusion, in which loop-extruding factors, such as cohesin, form
-progressively larger loops but stall at CTCF binding sites in convergent
-orientation \citep{Sanborn2015, Fudenberg2016}.
+\citep{Dowen2014, Ji2016, Phillips-Cremins2013}. Often, they are formed
+by CTCF and cohesin complexes \citep{Rao2014}.
 
-Another type of chromatin loops is enhancer-promoter interactions.
+High-resolution Hi-C data showed that around 80\% of borders of contact
+domains interact each other as loop anchors \citep{Rao2014}. This
+indicating that TADs from through loops between their borders and
+eventually several further nested loops within them.
 
-In summary, these findings suggest a hierarchical organization of
-chromosome architecture. First, dynamic nucleosome contacts from
-clutches and fibers. These engage in long-range chromatin loops, some of
-which are stabilized by architectural proteins, such as CTCF and
-cohesin, and lead to the formation of TADs. TADs form clusters by their
-epigenomic type into A/B compartments, and coalescence of compartments
-in the same chromosome forms chromosome territories \citep{Bonev2016}.
+An intrinsic feature of vertebrate genomes is a comparatively long
+distance between regulatory regions, such as enhancers, and their
+regulated genes. For their ability to function as transcriptional
+regulators, enhancers need to be brought into close spatial proximity
+with its target promoter. These regulatory interactions are facilitated
+by the second type of chromatin loops, facultative loops. These loops
+are more cell type-specific and represent enhancer-promoter
+interactions. Notably, such regulatory interactions appear mostly within
+TADs or consecutive loops.
 
-\hypertarget{molecular-mechanisms-of-tad-and-loop-formation}{%
-\subsection{Molecular mechanisms of TAD and loop
-formation}\label{molecular-mechanisms-of-tad-and-loop-formation}}
+For example, the enhancers of the \(\beta\)-globin gene interact
+strongly with its target gene via long-range chromatin contacts in
+erythroid cells where the \(\beta\)-globin gene is active but shows
+little or no interactions in cells from different lineages
+\citep{Palstra2003}.
 
-Several initial studies analyzed the role of CTCF and cohesin in TAD
-formation. In two studies depletion of cohesin reduced interactions
-within TADs but did not alter TAD structures completely
-\citep{Seitan2013, Zuin2014}. One study report a significant increase in
-interactions between different TADs after cohesin depletion
-\citep{Sofueva2013}. Depletion of CTCF had a similar effect with
-increased inter-domains interactions \citep{Seitan2013, Zuin2014}. These
-results suggest a functional role of cohesin and CTCF in
-promoter-enhancer interactions and TAD formation \citep{Pombo2015}.
+\hypertarget{tad-and-loop-formation-by-architectural-proteins}{%
+\subsection{TAD and loop formation by architectural
+proteins}\label{tad-and-loop-formation-by-architectural-proteins}}
+
+An important question in current research efforts is to understand how
+the TADs and chromatin loops are established on a molecular level. These
+mechanisms might differ between species. Several, so-called,
+architectural proteins are enriched at TAD boundaries in flies and allow
+dynamic regulation of these boundaries
+\citep{Bortle2014, Gomez-Diaz2014}.\\
+In vertebrates, only a some of these proteins are conserved, indicating
+a partially different set of factors with such functions
+\citep{Phillips-Cremins2013, Bonev2016}.
+
+Profiling 76 TFs for binding signals at strong chromatin loop anchors
+identified CTCF, subunits of the cohesin complex, ying yang 1 (YY1) and
+zinc finger protein 143 (ZNF143) as highly enriched \citep{Rao2014}.
+Furthermore, the mediator complex has a well-characterized role in
+bridging enhancer and promoters of long-range distances and assemble the
+pre-initiation complex for transcriptional elongation \citep{Allen2015}.
+Mediator depletion resulted in diminished looping interaction strength
+\citep{Bonev2016}.
+
+Cohesin is a ring-shaped protein and has several functions including
+sister chromatid cohesion and DNA repair and interacts with mediator
+complex and CTCF in the context of chromatin architecture
+\citep{Bonev2016, Merkenschlager2016}. Initial studies analzed chromatin
+organization in cohesin deficient cells. In two studies depletion of
+cohesin reduced interactions within TADs but did not alter TAD
+structures completely \citep{Seitan2013, Zuin2014}. One study report a
+significant increase in interactions between different TADs after
+cohesin depletion \citep{Sofueva2013}. Conditional deletion of cohesin
+in noncycling thymocytes suggested a role of cohesin in mediating
+regulatory interactions between enhancers within TADs
+\citep{Ing-simmons2015}.
+
+The best studied architectural protein is probably CTCF \citep{Ong2014}.
+CTCF is conserved in most bilaterians, expressed in all tissues, and
+essential for embryonic development. By its ability to restrict
+promoter-enhancer interaction in reporter plasmids, CTCF was
+characterized as insulator protein. CTCF has 11 zinc finger binding
+domains which recognize a specific DNA sequence motif, to which CTCF
+binds with high affinity \citep{Kim2007, Nagy2016}. CTCF binding sites
+are enriched at TAD boundaries in \emph{Drosophila} and mammals.
+However, only around 15\% of CTCF binding sites are located at TAD
+boundaries, suggesting that CTCF binding not be sufficient for TAD
+formation \citep{Bonev2016}. About 30\% to 60\% of CTCF binding sites
+are cell-type specific, and many variable sites show an association of
+DNA methylation with CTCF binding. CTCF binding sites that depend on
+methylation are located mostly within TADs. Interestingly, CTCF ChIP-seq
+data across individuals show a higher variability of CTCF binding within
+TADs and lower variation at TAD boundaries \citep{Ruiz-Velasco2017}.
+Also evolutionary conservation of CTCF binding across species stronger
+at TAD boundaries \citep{VietriRudan2015}. Depletion of CTCF had a
+similar effect than with increased inter-domains interactions
+\citep{Seitan2013, Zuin2014}. These results suggest a functional role of
+cohesin and CTCF in promoter-enhancer interactions and TAD formation
+\citep{Pombo2015}.
+
+Interestingly, CTCF motifs are present in convergent orientation at
+chromatin loop anchors \citep{Rao2014, Tang2015, VietriRudan2015}.
+Furthermore, experimental inversion of the motif results in changes of
+loop formation and, at least in some cases, altered gene expression
+\citep{Guo2015, deWit2015, Sanborn2015}. Polymer simulation studies
+together with perturbation experiments led to a model of TAD and loop
+formation by loop extrusion. According to this model, loop-extruding
+factors, such as cohesin, form progressively larger loops but stall at
+CTCF binding sites in convergent orientation
+\citep{Sanborn2015, Fudenberg2016}. Interestingly, this model explains
+many features of chromatin interaction data, such as the directionality
+of CTCF motif and nested hierarchy of TADs and TAD-like structures.
+
+In summary, genome-wide interaction data suggest a hierarchical
+organization of chromosome architecture. First, dynamic nucleosome
+contacts form clutches and fibers. These engage in long-range chromatin
+loops, some of which are stabilized by architectural proteins, such as
+CTCF and cohesin at convergently oriented motif sites, and lead to the
+formation of TADs. TADs form clusters by their epigenomic type into A/B
+compartments, and coalescence of compartments in the same chromosome
+forms chromosome territories \citep{Bonev2016}.
 
 \hypertarget{dynamics-of-chromatin-structure}{%
 \section{Dynamics of chromatin
@@ -5071,6 +5134,8 @@ anchors.
   \item
     Discuss \citep{Liu2016b} Evidence of reduced recombination rate in
     human regulatory domains
+  \item
+    Discuss loop and TAD abolishing upon CTCF and cohesin KO.
   \end{itemize}
 \end{itemize}
 
