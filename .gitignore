@@ -7,7 +7,7 @@ _bookdown_files
 rsconnect
 
 # ignore docs folder with builds in html, pdf and epub
-docs
+#docs
 
 # ignore for the moment
 # .travis.yml

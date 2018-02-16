@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Genome folding in evolution and disease</title>
+  <meta name="description" content="A draft PhD thesis on genome folding in evoultion and disease.">
+  <meta name="generator" content="bookdown 0.6.1 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Genome folding in evolution and disease" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ibn-salem.github.io/thesis/" />
+  
+  <meta property="og:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
+  <meta name="github-repo" content="ibn-salem/thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Genome folding in evolution and disease" />
+  
+  <meta name="twitter:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
+  
+
+<meta name="author" content="Jonas Ibn-Salem">
+
+
+<meta name="date" content="2018-02-16">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="4-position-effect.html">
+<link rel="next" href="4-2-materials-and-methods.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Thesis</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="1" data-path="1-thesis-intro.html"><a href="1-thesis-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-1-regulation-of-gene-expression.html"><a href="1-1-regulation-of-gene-expression.html"><i class="fa fa-check"></i><b>1.1</b> Regulation of gene expression</a></li>
+<li class="chapter" data-level="1.2" data-path="1-2-enhancers.html"><a href="1-2-enhancers.html"><i class="fa fa-check"></i><b>1.2</b> Enhancers</a></li>
+<li class="chapter" data-level="1.3" data-path="1-3-methods-to-probe-the-3d-chromatin-architecture.html"><a href="1-3-methods-to-probe-the-3d-chromatin-architecture.html"><i class="fa fa-check"></i><b>1.3</b> Methods to probe the 3D chromatin architecture</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="1-3-methods-to-probe-the-3d-chromatin-architecture.html"><a href="1-3-methods-to-probe-the-3d-chromatin-architecture.html#microscopy-based-techniques-to-visualize-the-genome-in-3d"><i class="fa fa-check"></i><b>1.3.1</b> Microscopy-based techniques to visualize the genome in 3D</a></li>
+<li class="chapter" data-level="1.3.2" data-path="1-3-methods-to-probe-the-3d-chromatin-architecture.html"><a href="1-3-methods-to-probe-the-3d-chromatin-architecture.html#proximity-ligation-based-method-to-quantify-chromatin-interactions"><i class="fa fa-check"></i><b>1.3.2</b> Proximity-ligation based method to quantify chromatin interactions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html"><i class="fa fa-check"></i><b>1.4</b> Hierarchy of chromatin 3D structure</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#chromosomal-territories-and-inter-chromosomal-contacts"><i class="fa fa-check"></i><b>1.4.1</b> Chromosomal territories and inter-chromosomal contacts</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#ab-compartments"><i class="fa fa-check"></i><b>1.4.2</b> A/B compartments</a></li>
+<li class="chapter" data-level="1.4.3" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#topologically-associating-domains-tads"><i class="fa fa-check"></i><b>1.4.3</b> Topologically associating domains (TADs)</a></li>
+<li class="chapter" data-level="1.4.4" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#sub-tad-structures-and-chromatin-loops"><i class="fa fa-check"></i><b>1.4.4</b> Sub-TAD structures and chromatin loops</a></li>
+<li class="chapter" data-level="1.4.5" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#molecular-mechanisms-of-tad-and-loop-formation"><i class="fa fa-check"></i><b>1.4.5</b> Molecular mechanisms of TAD and loop formation</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="1-5-dynamics-of-chromatin-structure.html"><a href="1-5-dynamics-of-chromatin-structure.html"><i class="fa fa-check"></i><b>1.5</b> Dynamics of chromatin structure</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="1-5-dynamics-of-chromatin-structure.html"><a href="1-5-dynamics-of-chromatin-structure.html#variation-of-chromatin-structure-across-cell-types"><i class="fa fa-check"></i><b>1.5.1</b> Variation of chromatin structure across cell types</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="1-6-evolution-of-chromatin-organization.html"><a href="1-6-evolution-of-chromatin-organization.html"><i class="fa fa-check"></i><b>1.6</b> Evolution of chromatin organization</a></li>
+<li class="chapter" data-level="1.7" data-path="1-7-disruption-of-chromatin-architecture-in-disease.html"><a href="1-7-disruption-of-chromatin-architecture-in-disease.html"><i class="fa fa-check"></i><b>1.7</b> Disruption of chromatin architecture in disease</a></li>
+<li class="chapter" data-level="1.8" data-path="1-8-aims-of-this-thesis.html"><a href="1-8-aims-of-this-thesis.html"><i class="fa fa-check"></i><b>1.8</b> Aims of this thesis</a></li>
+<li class="chapter" data-level="1.9" data-path="1-9-structure-of-this-thesis.html"><a href="1-9-structure-of-this-thesis.html"><i class="fa fa-check"></i><b>1.9</b> Structure of this thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-paralog-regulation.html"><a href="2-paralog-regulation.html"><i class="fa fa-check"></i><b>2</b> Paralog genes in the 3D genome architecture</a><ul>
+<li class="chapter" data-level="" data-path="2-paralog-regulation.html"><a href="2-paralog-regulation.html#preamble"><i class="fa fa-check"></i>Preamble</a></li>
+<li class="chapter" data-level="" data-path="2-paralog-regulation.html"><a href="2-paralog-regulation.html#abstract-1"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="2.1" data-path="2-1-introduction.html"><a href="2-1-introduction.html"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="2-2-sec-paralog-methods.html"><a href="2-2-sec-paralog-methods.html"><i class="fa fa-check"></i><b>2.2</b> Materials and methods</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-2-sec-paralog-methods.html"><a href="2-2-sec-paralog-methods.html#selection-of-pairs-of-paralog-genes"><i class="fa fa-check"></i><b>2.2.1</b> Selection of pairs of paralog genes</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-2-sec-paralog-methods.html"><a href="2-2-sec-paralog-methods.html#enhancers-to-gene-association"><i class="fa fa-check"></i><b>2.2.2</b> Enhancers to gene association</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-2-sec-paralog-methods.html"><a href="2-2-sec-paralog-methods.html#topological-associating-domains"><i class="fa fa-check"></i><b>2.2.3</b> Topological associating domains</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-2-sec-paralog-methods.html"><a href="2-2-sec-paralog-methods.html#hi-c-interaction-maps"><i class="fa fa-check"></i><b>2.2.4</b> Hi-C interaction maps</a></li>
+<li class="chapter" data-level="2.2.5" data-path="2-2-sec-paralog-methods.html"><a href="2-2-sec-paralog-methods.html#randomization"><i class="fa fa-check"></i><b>2.2.5</b> Randomization</a></li>
+<li class="chapter" data-level="2.2.6" data-path="2-2-sec-paralog-methods.html"><a href="2-2-sec-paralog-methods.html#statistical-tests"><i class="fa fa-check"></i><b>2.2.6</b> Statistical tests</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-3-results.html"><a href="2-3-results.html"><i class="fa fa-check"></i><b>2.3</b> Results</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-3-results.html"><a href="2-3-results.html#distribution-of-paralog-genes-in-the-human-genome"><i class="fa fa-check"></i><b>2.3.1</b> Distribution of paralog genes in the human genome</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-3-results.html"><a href="2-3-results.html#co-expression-of-paralog-gene-pairs-across-tissues"><i class="fa fa-check"></i><b>2.3.2</b> Co-expression of paralog gene pairs across tissues</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-3-results.html"><a href="2-3-results.html#paralog-genes-share-enhancers"><i class="fa fa-check"></i><b>2.3.3</b> Paralog genes share enhancers</a></li>
+<li class="chapter" data-level="2.3.4" data-path="2-3-results.html"><a href="2-3-results.html#co-localization-of-paralogs-in-tads"><i class="fa fa-check"></i><b>2.3.4</b> Co-localization of paralogs in TADs</a></li>
+<li class="chapter" data-level="2.3.5" data-path="2-3-results.html"><a href="2-3-results.html#distal-paralog-pairs-are-enriched-for-long-range-chromatin-contacts"><i class="fa fa-check"></i><b>2.3.5</b> Distal paralog pairs are enriched for long-range chromatin contacts</a></li>
+<li class="chapter" data-level="2.3.6" data-path="2-3-results.html"><a href="2-3-results.html#close-paralogs-have-fewer-contacts-than-expected"><i class="fa fa-check"></i><b>2.3.6</b> Close paralogs have fewer contacts than expected</a></li>
+<li class="chapter" data-level="2.3.7" data-path="2-3-results.html"><a href="2-3-results.html#paralogs-in-mouse-and-dog-genome"><i class="fa fa-check"></i><b>2.3.7</b> Paralogs in mouse and dog genome</a></li>
+<li class="chapter" data-level="2.3.8" data-path="2-3-results.html"><a href="2-3-results.html#orthologs-of-human-paralogs-show-conserved-co-localization"><i class="fa fa-check"></i><b>2.3.8</b> Orthologs of human paralogs show conserved co-localization</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-4-discussions.html"><a href="2-4-discussions.html"><i class="fa fa-check"></i><b>2.4</b> Discussions</a></li>
+<li class="chapter" data-level="2.5" data-path="2-5-conclusion.html"><a href="2-5-conclusion.html"><i class="fa fa-check"></i><b>2.5</b> Conclusion</a></li>
+<li class="chapter" data-level="2.6" data-path="2-6-acknowledgements.html"><a href="2-6-acknowledgements.html"><i class="fa fa-check"></i><b>2.6</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-TAD-evolution.html"><a href="3-TAD-evolution.html"><i class="fa fa-check"></i><b>3</b> Stability of TADs in evolution</a><ul>
+<li class="chapter" data-level="" data-path="3-TAD-evolution.html"><a href="3-TAD-evolution.html#preamble-1"><i class="fa fa-check"></i>Preamble</a></li>
+<li class="chapter" data-level="" data-path="3-TAD-evolution.html"><a href="3-TAD-evolution.html#abstract-2"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="3-TAD-evolution.html"><a href="3-TAD-evolution.html#keywords"><i class="fa fa-check"></i>Keywords</a></li>
+<li class="chapter" data-level="3.1" data-path="3-1-introduction-1.html"><a href="3-1-introduction-1.html"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="3-2-results-1.html"><a href="3-2-results-1.html"><i class="fa fa-check"></i><b>3.2</b> Results</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-2-results-1.html"><a href="3-2-results-1.html#identification-of-evolutionary-rearrangement-breakpoints-from-whole-genome-alignments"><i class="fa fa-check"></i><b>3.2.1</b> Identification of evolutionary rearrangement breakpoints from whole-genome alignments</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-2-results-1.html"><a href="3-2-results-1.html#rearrangement-breakpoints-are-enriched-at-tad-boundaries"><i class="fa fa-check"></i><b>3.2.2</b> Rearrangement breakpoints are enriched at TAD boundaries</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-2-results-1.html"><a href="3-2-results-1.html#clusters-of-conserved-non-coding-elements-are-depleted-for-rearrangement-breakpoints"><i class="fa fa-check"></i><b>3.2.3</b> Clusters of conserved non-coding elements are depleted for rearrangement breakpoints</a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-2-results-1.html"><a href="3-2-results-1.html#rearranged-tads-are-associated-with-divergent-gene-expression-between-species"><i class="fa fa-check"></i><b>3.2.4</b> Rearranged TADs are associated with divergent gene expression between species</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-3-discussion.html"><a href="3-3-discussion.html"><i class="fa fa-check"></i><b>3.3</b> Discussion</a></li>
+<li class="chapter" data-level="3.4" data-path="3-4-conclusion-1.html"><a href="3-4-conclusion-1.html"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+<li class="chapter" data-level="3.5" data-path="3-5-methods.html"><a href="3-5-methods.html"><i class="fa fa-check"></i><b>3.5</b> Methods</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="3-5-methods.html"><a href="3-5-methods.html#rearrangement-breakpoints-from-whole-genome-alignments"><i class="fa fa-check"></i><b>3.5.1</b> Rearrangement breakpoints from whole-genome alignments</a></li>
+<li class="chapter" data-level="3.5.2" data-path="3-5-methods.html"><a href="3-5-methods.html#topologically-associating-domains-and-contact-domains"><i class="fa fa-check"></i><b>3.5.2</b> Topologically associating domains and contact domains</a></li>
+<li class="chapter" data-level="3.5.3" data-path="3-5-methods.html"><a href="3-5-methods.html#breakpoint-distributions-at-tads"><i class="fa fa-check"></i><b>3.5.3</b> Breakpoint distributions at TADs</a></li>
+<li class="chapter" data-level="3.5.4" data-path="3-5-methods.html"><a href="3-5-methods.html#quantification-of-breakpoint-enrichment"><i class="fa fa-check"></i><b>3.5.4</b> Quantification of breakpoint enrichment</a></li>
+<li class="chapter" data-level="3.5.5" data-path="3-5-methods.html"><a href="3-5-methods.html#expression-data-for-mouse-and-human-orthologs"><i class="fa fa-check"></i><b>3.5.5</b> Expression data for mouse and human orthologs</a></li>
+<li class="chapter" data-level="3.5.6" data-path="3-5-methods.html"><a href="3-5-methods.html#classification-of-tads-and-genes-according-to-rearrangements-and-grbs"><i class="fa fa-check"></i><b>3.5.6</b> Classification of TADs and genes according to rearrangements and GRBs</a></li>
+<li class="chapter" data-level="3.5.7" data-path="3-5-methods.html"><a href="3-5-methods.html#source-code-and-implementation-details"><i class="fa fa-check"></i><b>3.5.7</b> Source code and implementation details</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="3-6-declarations.html"><a href="3-6-declarations.html"><i class="fa fa-check"></i><b>3.6</b> Declarations</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="3-6-declarations.html"><a href="3-6-declarations.html#ethics-approval-and-consent-to-participate"><i class="fa fa-check"></i><b>3.6.1</b> Ethics approval and consent to participate</a></li>
+<li class="chapter" data-level="3.6.2" data-path="3-6-declarations.html"><a href="3-6-declarations.html#consent-for-publication"><i class="fa fa-check"></i><b>3.6.2</b> Consent for publication</a></li>
+<li class="chapter" data-level="3.6.3" data-path="3-6-declarations.html"><a href="3-6-declarations.html#availability-of-data-and-material"><i class="fa fa-check"></i><b>3.6.3</b> Availability of data and material</a></li>
+<li class="chapter" data-level="3.6.4" data-path="3-6-declarations.html"><a href="3-6-declarations.html#competing-interests"><i class="fa fa-check"></i><b>3.6.4</b> Competing interests</a></li>
+<li class="chapter" data-level="3.6.5" data-path="3-6-declarations.html"><a href="3-6-declarations.html#funding"><i class="fa fa-check"></i><b>3.6.5</b> Funding</a></li>
+<li class="chapter" data-level="3.6.6" data-path="3-6-declarations.html"><a href="3-6-declarations.html#authors-contributions"><i class="fa fa-check"></i><b>3.6.6</b> Authors‘ contributions</a></li>
+<li class="chapter" data-level="3.6.7" data-path="3-6-declarations.html"><a href="3-6-declarations.html#acknowledgments"><i class="fa fa-check"></i><b>3.6.7</b> Acknowledgments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-position-effect.html"><a href="4-position-effect.html"><i class="fa fa-check"></i><b>4</b> Position effects of rearrangements in disease genomes</a><ul>
+<li class="chapter" data-level="" data-path="4-position-effect.html"><a href="4-position-effect.html#preamble-2"><i class="fa fa-check"></i>Preamble</a></li>
+<li class="chapter" data-level="" data-path="4-position-effect.html"><a href="4-position-effect.html#abstract-3"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="4.1" data-path="4-1-introduction-2.html"><a href="4-1-introduction-2.html"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="4-2-materials-and-methods.html"><a href="4-2-materials-and-methods.html"><i class="fa fa-check"></i><b>4.2</b> Materials and Methods</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="4-2-materials-and-methods.html"><a href="4-2-materials-and-methods.html#selection-of-subjects-with-apparently-balanced-chromosome-abnormalities"><i class="fa fa-check"></i><b>4.2.1</b> Selection of subjects with apparently balanced chromosome abnormalities</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-2-materials-and-methods.html"><a href="4-2-materials-and-methods.html#clinical-descriptions-of-dgap-cases"><i class="fa fa-check"></i><b>4.2.2</b> Clinical descriptions of DGAP cases</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-2-materials-and-methods.html"><a href="4-2-materials-and-methods.html#analysis-of-genes-bordering-the-rearrangement-breakpoints"><i class="fa fa-check"></i><b>4.2.3</b> Analysis of genes bordering the rearrangement breakpoints</a></li>
+<li class="chapter" data-level="4.2.4" data-path="4-2-materials-and-methods.html"><a href="4-2-materials-and-methods.html#assessment-of-disrupted-functional-elements-and-chromatin-interactions-bordering-rearrangement-breakpoints"><i class="fa fa-check"></i><b>4.2.4</b> Assessment of disrupted functional elements and chromatin interactions bordering rearrangement breakpoints</a></li>
+<li class="chapter" data-level="4.2.5" data-path="4-2-materials-and-methods.html"><a href="4-2-materials-and-methods.html#ontological-analysis-of-genes-neighboring-breakpoints"><i class="fa fa-check"></i><b>4.2.5</b> Ontological analysis of genes neighboring breakpoints</a></li>
+<li class="chapter" data-level="4.2.6" data-path="4-2-materials-and-methods.html"><a href="4-2-materials-and-methods.html#quantitative-real-time-pcr"><i class="fa fa-check"></i><b>4.2.6</b> Quantitative real-time PCR</a></li>
+<li class="chapter" data-level="4.2.7" data-path="4-2-materials-and-methods.html"><a href="4-2-materials-and-methods.html#assessment-of-dgap-breakpoints-overlapping-with-non-coding-structural-variants-in-public-databases"><i class="fa fa-check"></i><b>4.2.7</b> Assessment of DGAP breakpoints overlapping with non-coding structural variants in public databases</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="4-3-results-2.html"><a href="4-3-results-2.html"><i class="fa fa-check"></i><b>4.3</b> Results</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="4-3-results-2.html"><a href="4-3-results-2.html#genomic-characterization-of-non-coding-breakpoints"><i class="fa fa-check"></i><b>4.3.1</b> Genomic characterization of non-coding breakpoints</a></li>
+<li class="chapter" data-level="4.3.2" data-path="4-3-results-2.html"><a href="4-3-results-2.html#identification-of-genes-with-potential-position-effects"><i class="fa fa-check"></i><b>4.3.2</b> Identification of genes with potential position effects</a></li>
+<li class="chapter" data-level="4.3.3" data-path="4-3-results-2.html"><a href="4-3-results-2.html#identification-of-subjects-with-shared-non-coding-chromosome-alterations-and-phenotypes"><i class="fa fa-check"></i><b>4.3.3</b> Identification of subjects with shared non-coding chromosome alterations and phenotypes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="4-4-discussion-1.html"><a href="4-4-discussion-1.html"><i class="fa fa-check"></i><b>4.4</b> Discussion</a><ul>
+<li class="chapter" data-level="" data-path="4-4-discussion-1.html"><a href="4-4-discussion-1.html#acknowledgements-1"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="4.4.1" data-path="4-4-discussion-1.html"><a href="4-4-discussion-1.html#web-resources"><i class="fa fa-check"></i><b>4.4.1</b> Web Resources</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-loop.html"><a href="5-loop.html"><i class="fa fa-check"></i><b>5</b> Prediction of chromatin looping interactions</a><ul>
+<li class="chapter" data-level="" data-path="5-loop.html"><a href="5-loop.html#preamble-3"><i class="fa fa-check"></i>Preamble</a></li>
+<li class="chapter" data-level="" data-path="5-loop.html"><a href="5-loop.html#abstract-4"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="5-loop.html"><a href="5-loop.html#keywords-1"><i class="fa fa-check"></i>Keywords</a></li>
+<li class="chapter" data-level="5.1" data-path="5-1-introduction-3.html"><a href="5-1-introduction-3.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="5-2-results-3.html"><a href="5-2-results-3.html"><i class="fa fa-check"></i><b>5.2</b> Results</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="5-2-results-3.html"><a href="5-2-results-3.html#ctcf-motif-pairs-as-candidate-chromatin-loop-anchors"><i class="fa fa-check"></i><b>5.2.1</b> CTCF motif pairs as candidate chromatin loop anchors</a></li>
+<li class="chapter" data-level="5.2.2" data-path="5-2-results-3.html"><a href="5-2-results-3.html#similarity-of-chip-seq-signals-at-looping-ctcf-motifs"><i class="fa fa-check"></i><b>5.2.2</b> Similarity of ChIP-seq signals at looping CTCF motifs</a></li>
+<li class="chapter" data-level="5.2.3" data-path="5-2-results-3.html"><a href="5-2-results-3.html#genomic-sequence-features-of-ctcf-motif-pairs-are-associated-with-looping"><i class="fa fa-check"></i><b>5.2.3</b> Genomic sequence features of CTCF motif pairs are associated with looping</a></li>
+<li class="chapter" data-level="5.2.4" data-path="5-2-results-3.html"><a href="5-2-results-3.html#chromatin-loop-prediction-using-7c"><i class="fa fa-check"></i><b>5.2.4</b> Chromatin loop prediction using 7C</a></li>
+<li class="chapter" data-level="5.2.5" data-path="5-2-results-3.html"><a href="5-2-results-3.html#prediction-performance-evaluation"><i class="fa fa-check"></i><b>5.2.5</b> Prediction performance evaluation</a></li>
+<li class="chapter" data-level="5.2.6" data-path="5-2-results-3.html"><a href="5-2-results-3.html#prediction-performance-of-7c-with-sequence-features-and-single-tf-chip-seq-data-sets"><i class="fa fa-check"></i><b>5.2.6</b> Prediction performance of 7C with sequence features and single TF ChIP-seq data sets</a></li>
+<li class="chapter" data-level="5.2.7" data-path="5-2-results-3.html"><a href="5-2-results-3.html#comparison-of-transcription-factors-by-prediction-performance"><i class="fa fa-check"></i><b>5.2.7</b> Comparison of transcription factors by prediction performance</a></li>
+<li class="chapter" data-level="5.2.8" data-path="5-2-results-3.html"><a href="5-2-results-3.html#prediction-performance-in-other-cell-types-and-for-different-tfs"><i class="fa fa-check"></i><b>5.2.8</b> Prediction performance in other cell types and for different TFs</a></li>
+<li class="chapter" data-level="5.2.9" data-path="5-2-results-3.html"><a href="5-2-results-3.html#the-high-resolution-of-chip-nexus-improves-prediction-performance"><i class="fa fa-check"></i><b>5.2.9</b> The high resolution of ChIP-nexus improves prediction performance</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="5-3-discussion-2.html"><a href="5-3-discussion-2.html"><i class="fa fa-check"></i><b>5.3</b> Discussion</a></li>
+<li class="chapter" data-level="5.4" data-path="5-4-conclusion-2.html"><a href="5-4-conclusion-2.html"><i class="fa fa-check"></i><b>5.4</b> Conclusion</a></li>
+<li class="chapter" data-level="5.5" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html"><i class="fa fa-check"></i><b>5.5</b> Methods</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#ctcf-motifs-in-the-human-genome"><i class="fa fa-check"></i><b>5.5.1</b> CTCF motifs in the human genome</a></li>
+<li class="chapter" data-level="5.5.2" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#loop-interaction-data-for-training-and-validation"><i class="fa fa-check"></i><b>5.5.2</b> Loop interaction data for training and validation</a></li>
+<li class="chapter" data-level="5.5.3" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#chip-seq-datasets-in-gm12878-cells"><i class="fa fa-check"></i><b>5.5.3</b> ChIP-seq datasets in GM12878 cells</a></li>
+<li class="chapter" data-level="5.5.4" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#chip-seq-data-types"><i class="fa fa-check"></i><b>5.5.4</b> ChIP-seq data types</a></li>
+<li class="chapter" data-level="5.5.5" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#chip-nexus-data-processing-for-rad21-and-scm3"><i class="fa fa-check"></i><b>5.5.5</b> ChIP-nexus data processing for RAD21 and SCM3</a></li>
+<li class="chapter" data-level="5.5.6" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#similarity-of-chip-seq-profiles-as-correlation-of-coverage-around-motifs"><i class="fa fa-check"></i><b>5.5.6</b> Similarity of ChIP-seq profiles as correlation of coverage around motifs</a></li>
+<li class="chapter" data-level="5.5.7" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#genomic-sequence-features-of-chromatin-loops"><i class="fa fa-check"></i><b>5.5.7</b> Genomic sequence features of chromatin loops</a></li>
+<li class="chapter" data-level="5.5.8" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#chromatin-loop-prediction-model"><i class="fa fa-check"></i><b>5.5.8</b> Chromatin Loop prediction model</a></li>
+<li class="chapter" data-level="5.5.9" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#training-and-validation-of-prediction-model"><i class="fa fa-check"></i><b>5.5.9</b> Training and validation of prediction model</a></li>
+<li class="chapter" data-level="5.5.10" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#analysis-of-prediction-performance"><i class="fa fa-check"></i><b>5.5.10</b> Analysis of prediction performance</a></li>
+<li class="chapter" data-level="5.5.11" data-path="5-5-methods-1.html"><a href="5-5-methods-1.html#implementation-of-7c-and-compatibility-to-other-tools"><i class="fa fa-check"></i><b>5.5.11</b> Implementation of 7C and compatibility to other tools</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="5-6-declarations-1.html"><a href="5-6-declarations-1.html"><i class="fa fa-check"></i><b>5.6</b> Declarations</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="5-6-declarations-1.html"><a href="5-6-declarations-1.html#ethics-approval-and-consent-to-participate-1"><i class="fa fa-check"></i><b>5.6.1</b> Ethics approval and consent to participate</a></li>
+<li class="chapter" data-level="5.6.2" data-path="5-6-declarations-1.html"><a href="5-6-declarations-1.html#consent-for-publication-1"><i class="fa fa-check"></i><b>5.6.2</b> Consent for publication</a></li>
+<li class="chapter" data-level="5.6.3" data-path="5-6-declarations-1.html"><a href="5-6-declarations-1.html#availability-of-data-and-material-1"><i class="fa fa-check"></i><b>5.6.3</b> Availability of data and material</a></li>
+<li class="chapter" data-level="5.6.4" data-path="5-6-declarations-1.html"><a href="5-6-declarations-1.html#competing-interests-1"><i class="fa fa-check"></i><b>5.6.4</b> Competing interests</a></li>
+<li class="chapter" data-level="5.6.5" data-path="5-6-declarations-1.html"><a href="5-6-declarations-1.html#funding-1"><i class="fa fa-check"></i><b>5.6.5</b> Funding</a></li>
+<li class="chapter" data-level="5.6.6" data-path="5-6-declarations-1.html"><a href="5-6-declarations-1.html#authors-contributions-1"><i class="fa fa-check"></i><b>5.6.6</b> Authors‘ contributions</a></li>
+<li class="chapter" data-level="5.6.7" data-path="5-6-declarations-1.html"><a href="5-6-declarations-1.html#acknowledgments-1"><i class="fa fa-check"></i><b>5.6.7</b> Acknowledgments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-thesis-discussion.html"><a href="6-thesis-discussion.html"><i class="fa fa-check"></i><b>6</b> Discussion</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-1-discussion-paralog-co-regulation-in-tads.html"><a href="6-1-discussion-paralog-co-regulation-in-tads.html"><i class="fa fa-check"></i><b>6.1</b> Discussion paralog co-regulation in TADs</a></li>
+<li class="chapter" data-level="6.2" data-path="6-2-discussion-on-tad-evolution.html"><a href="6-2-discussion-on-tad-evolution.html"><i class="fa fa-check"></i><b>6.2</b> Discussion on TAD evolution</a></li>
+<li class="chapter" data-level="6.3" data-path="6-3-further-directions.html"><a href="6-3-further-directions.html"><i class="fa fa-check"></i><b>6.3</b> Further directions</a></li>
+<li class="chapter" data-level="6.4" data-path="6-4-conclusions.html"><a href="6-4-conclusions.html"><i class="fa fa-check"></i><b>6.4</b> Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-sup-paralog-regulation.html"><a href="A-sup-paralog-regulation.html"><i class="fa fa-check"></i><b>A</b> Co-regulation of paralog genes: Supporting Information</a></li>
+<li class="chapter" data-level="B" data-path="B-sup-tad-evolution.html"><a href="B-sup-tad-evolution.html"><i class="fa fa-check"></i><b>B</b> TAD evolution: Supporting Information</a><ul>
+<li class="chapter" data-level="B.1" data-path="B-1-TadEvoSupTab.html"><a href="B-1-TadEvoSupTab.html"><i class="fa fa-check"></i><b>B.1</b> Supplementary Tables</a></li>
+<li class="chapter" data-level="B.2" data-path="B-2-supplementary-figures.html"><a href="B-2-supplementary-figures.html"><i class="fa fa-check"></i><b>B.2</b> Supplementary Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="C-sup-position-effect.html"><a href="C-sup-position-effect.html"><i class="fa fa-check"></i><b>C</b> Position Effect: Supplemental Data</a><ul>
+<li class="chapter" data-level="C.1" data-path="C-1-supplemental-note-case-reports.html"><a href="C-1-supplemental-note-case-reports.html"><i class="fa fa-check"></i><b>C.1</b> Supplemental Note: Case Reports</a></li>
+<li class="chapter" data-level="C.2" data-path="C-2-supplemental-note-nucleotide-level-nomenclature-for-dgap-karyotypes.html"><a href="C-2-supplemental-note-nucleotide-level-nomenclature-for-dgap-karyotypes.html"><i class="fa fa-check"></i><b>C.2</b> Supplemental Note: Nucleotide Level Nomenclature for DGAP karyotypes</a></li>
+<li class="chapter" data-level="C.3" data-path="C-3-supplemental-figure.html"><a href="C-3-supplemental-figure.html"><i class="fa fa-check"></i><b>C.3</b> Supplemental Figure</a></li>
+<li class="chapter" data-level="C.4" data-path="C-4-position-effect-sub-tab.html"><a href="C-4-position-effect-sub-tab.html"><i class="fa fa-check"></i><b>C.4</b> Supplemental Table Legends</a></li>
+</ul></li>
+<li class="chapter" data-level="D" data-path="D-sup-loop.html"><a href="D-sup-loop.html"><i class="fa fa-check"></i><b>D</b> Loop prediction: Supplemental Information</a><ul>
+<li class="chapter" data-level="D.1" data-path="D-1-LoopPredSupTab.html"><a href="D-1-LoopPredSupTab.html"><i class="fa fa-check"></i><b>D.1</b> Supplementary Tables</a></li>
+<li class="chapter" data-level="D.2" data-path="D-2-supplementary-figures-1.html"><a href="D-2-supplementary-figures-1.html"><i class="fa fa-check"></i><b>D.2</b> Supplementary Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="E" data-path="E-contribution-to-individual-publications.html"><a href="E-contribution-to-individual-publications.html"><i class="fa fa-check"></i><b>E</b> Contribution to individual publications</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Build with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Genome folding in evolution and disease</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-2" class="section level2">
+<h2><span class="header-section-number">4.1</span> Introduction</h2>
+<p>The importance of the integrity of chromosome structure and its
+association with human disease is one of the oldest and most studied
+topics in clinical genetics. As early as 1959, cytogenetic studies in
+humans linked specific genetic or genomic disorders and intellectual
+disability syndromes to changes in chromosomal ploidy, translocations,
+and DNA duplications and deletions <span class="citation">(LeJeune et al. <a href="#ref-Lejeune1959">1959</a>; Ford et al. <a href="#ref-Ford1959">1959</a>; Jacobs and Strong <a href="#ref-Jacobs1959">1959</a>; Stankiewicz and Lupski <a href="#ref-Stankiewicz2002">2002</a>; Iafrate et al. <a href="#ref-Iafrate2004">2004</a>)</span>.
+The discovery of copy-number
+variants (CNVs) by microarray and sequencing technologies expanded the
+catalogue of genetic variation between individuals to test such
+associations at higher resolution <span class="citation">(Iafrate et al. <a href="#ref-Iafrate2004">2004</a>; Sebat et al. <a href="#ref-Sebat2004">2004</a>; Hinds et al. <a href="#ref-Hinds2006">2006</a>; Conrad et al. <a href="#ref-Conrad2006">2006</a>, <a href="#ref-Conrad2010">2010</a>; Korbel et al. <a href="#ref-Korbel2007">2007</a>; Stankiewicz and Lupski <a href="#ref-Stankiewicz2010">2010</a>; International HapMap 3 Consortium et al. <a href="#ref-Altshuler2010">2010</a>; Carvalho and Lupski <a href="#ref-Carvalho2016">2016</a>)</span>.</p>
+<!-- [@Iafrate2004; @Sebat2004; @Hinds2006; @Conrad2006; @Conrad2010; @Korbel2007; @Stankiewicz2010; @Altshuler2010; @Durbin2010; @Carvalho2016]. -->
+<p>Over the years, analysis of
+disease-related structural rearrangements has illuminated genes that are
+mutated in various human developmental disorders <span class="citation">(Zhang et al. <a href="#ref-Zhang2009">2009</a>; Theisen and Shaffer <a href="#ref-Theisen2010">2010</a>; Nambiar and Raghavan <a href="#ref-Nambiar2011">2011</a>; Higgins et al. <a href="#ref-Higgins2008">2008</a>)</span>. Such chromosome
+aberrations can directly disrupt gene sequences, affect gene dosage,
+generate gene fusions, unmask recessive alleles, reveal imprinted genes,
+or result in alterations of gene expression through additional
+mechanisms such as position effects <span class="citation">(Zhang et al. <a href="#ref-Zhang2009">2009</a>)</span>. The latter is particularly
+important for the study of apparently balanced chromosome abnormalities
+(BCAs), such as translocations and inversions, often found outside of
+the hypothesized disease-causing genes (reviewed in <span class="citation">(Kleinjan and Van Heyningen <a href="#ref-Kleinjan2005">2005</a>)</span>).</p>
+<p>Position effects were first identified in <em>Drosophila melanogaster</em>,
+where chromosomal inversions placing <em>white+</em> near centric
+heterochromatin caused mosaic red/white eye patterns.<span class="citation">(Weiler and Wakimoto <a href="#ref-Weiler1995">1995</a>)</span> In humans,
+BCAs can induce position effects through disruption of a gene’s
+long-range transcriptional control (<em>i.e</em>., enhancer-promoter
+interactions, insulator influence, etc.), or its placement in regions
+with different local chromatin environments as observed in the classical
+<em>Drosophila</em> position effect variegation (reviewed in <span class="citation">(Kleinjan and Van Heyningen <a href="#ref-Kleinjan2005">2005</a>; Zhang and Wolynes <a href="#ref-Zhang2015">2015</a>; Spielmann and Mundlos <a href="#ref-Spielmann2016">2016</a>)</span>).
+Examples of position effect genes include paired box gene 6 (<em>PAX6</em>
+[MIM: 607108])<em>,</em> for which downstream chromosome translocations
+affect its <em>cis</em>-regulatory control and produce aniridia (AN [MIM:
+106210]);<span class="citation">(Fantes et al. <a href="#ref-Fantes1995">1995</a>; Kleinjan et al. <a href="#ref-Kleinjan2001">2001</a>)</span> twist family bHLH transcription factor 1 (<em>TWIST1</em>
+[MIM: 601622]), where downstream translocations and inversions are
+associated with Saethre-Chotzen syndrome (SCS [MIM: 101400]);<span class="citation">(Cai et al. <a href="#ref-Cai2003">2003</a>)</span>
+paired like homeodomain 2 (<em>PITX2</em> [MIM: 601542]) for which
+translocations are associated with Axenfeld-Rieger syndrome type 1
+(RIEG1 [MIM: 180500]);<span class="citation">(Flomen et al. <a href="#ref-Flomen1998">1998</a>; Trembath et al. <a href="#ref-Trembath2004">2004</a>)</span> SRY-box 9 (<em>SOX9</em> [MIM: 608160]),
+where translocation breakpoints located up to 900 Kilobases (Kb)
+upstream and 1.3 Megabases (Mb) downstream are associated with
+campomelic dysplasia (CMPD [MIM: 114290]),<span class="citation">(Velagaleti et al. <a href="#ref-Velagaleti2005">2005</a>)</span> in addition to several
+others.<span class="citation">(Kleinjan and Van Heyningen <a href="#ref-Kleinjan2005">2005</a>; Kleinjan and Heyningen <a href="#ref-Kleinjan1998">1998</a>; Lupski and Stankiewicz <a href="#ref-Lupski2005">2005</a>)</span></p>
+<p>The availability of genome sequencing in the clinical setting has
+generated a need for rapid prediction and interpretation of structural
+variants, especially those pertaining to <em>de novo</em> non-coding
+rearrangements in individual subjects. With the development and
+subsequent branching of the chromosome conformation capture (3C)
+technique (<span class="citation">(Dekker et al. <a href="#ref-Dekker2002">2002</a>)</span>, reviewed in <span class="citation">(Wit and Laat <a href="#ref-DeWit2012">2012</a>)</span>), regulatory issues such as alteration
+of long-range transcriptional control and position effects can now be
+predicted in terms of chromosome organization. The high resolution view
+of chromosome architecture in diverse human cell lines and
+tissues<span class="citation">(Lieberman-Aiden et al. <a href="#ref-Lieberman-Aiden2009">2009</a>; Fullwood et al. <a href="#ref-Fullwood2009">2009</a>; Dixon et al. <a href="#ref-Dixon2012">2012</a>, <a href="#ref-Dixon2015">2015</a>; Sanyal et al. <a href="#ref-Sanyal2012">2012</a>; Phillips-Cremins et al. <a href="#ref-Phillips-Cremins2013">2013</a>; Rao et al. <a href="#ref-Rao2014">2014</a>; Mifsud et al. <a href="#ref-Mifsud2015">2015</a>)</span> has allowed molecular assessment of the disruption of
+regulatory chromatin contacts by pathogenic structural variants and
+single nucleotide changes; examples include the study of limb
+malformations,<span class="citation">(Lupiáñez et al. <a href="#ref-Lupianez2015">2015</a>)</span> leukemia,<span class="citation">(Gröschel et al. <a href="#ref-Groschel2014">2014</a>)</span> and obesity,<span class="citation">(Claussnitzer et al. <a href="#ref-Claussnitzer2015">2015</a>)</span> among others.<span class="citation">(Visser et al. <a href="#ref-Visser2012">2012</a>; Roussos et al. <a href="#ref-Roussos2014">2014</a>; Giorgio et al. <a href="#ref-Giorgio2015">2015</a>; Oldridge et al. <a href="#ref-Oldridge2015">2015</a>; Ibn-Salem et al. <a href="#ref-Ibn-Salem2014">2014</a>; Ordulu et al. <a href="#ref-Ordulu2016">2016</a>)</span>
+These examples underscore the importance of chromatin interactions in
+quantitative and temporal control of gene expression, which can greatly
+enhance our power to predict pathologic consequences.</p>
+<p>To test the feasibility of prediction and clinical interpretation of
+position effects of non-coding chromosome rearrangements, we analyzed 17
+subjects from the Developmental Gene Anatomy Project (DGAP)<span class="citation">(Higgins et al. <a href="#ref-Higgins2008">2008</a>; Ligon et al. <a href="#ref-Ligon2005">2005</a>; Kim and Marcotte <a href="#ref-Kim2008">2008</a>; Lu et al. <a href="#ref-Lu2007">2007</a>; Redin et al. <a href="#ref-Redin2017">2017</a>)</span>
+with <em>de novo</em> non-coding BCAs classified as variants of uncertain
+significance (VUS). Using publicly available chromatin contact
+information, annotated and predicted regulatory elements, and
+correlation between phenotypes observed in DGAP subjects and those
+associated with neighboring genes, we reliably predicted candidate genes
+exhibiting mis-regulated expression in DGAP-derived lymphoblastoid cell
+lines (LCLs). These results suggest that many VUS are likely to be
+further interpretable via long-range effects, and warrant their routine
+assessment and integration in clinical diagnosis.</p>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Lejeune1959">
+<p>LeJeune J, Gautier M, Turpin R. 1959. Study of somatic chromosomes from 9 mongoloid children. <em>Comptes rendus hebdomadaires des seances de l’Academie des sciences</em> <strong>248</strong>: 1721–2.</p>
+</div>
+<div id="ref-Ford1959">
+<p>Ford C, Jones K, Polani P, De Almeida J, Briggs J. 1959. A sex-chromosome anomaly in a case of gonadal dysgenesis (turner’S syndrome). <em>The Lancet</em> <strong>273</strong>: 711–713.</p>
+</div>
+<div id="ref-Jacobs1959">
+<p>Jacobs PA, Strong JA. 1959. A case of human intersexuality having a possible xxy sex-determining mechanism. <em>Nature</em> <strong>183</strong>: 302–303.</p>
+</div>
+<div id="ref-Stankiewicz2002">
+<p>Stankiewicz P, Lupski JR. 2002. Genome architecture, rearrangements and genomic disorders. <em>Trends in Genetics</em> <strong>18</strong>: 74–82.</p>
+</div>
+<div id="ref-Iafrate2004">
+<p>Iafrate AJ, Feuk L, Rivera MN, Listewnik ML, Donahoe PK, Qi Y, Scherer SW, Lee C. 2004. Detection of large-scale variation in the human genome. <em>Nature Genetics</em> <strong>36</strong>: 949–951.</p>
+</div>
+<div id="ref-Sebat2004">
+<p>Sebat J, Lakshmi B, Troge J, Alexander J, Young J, Lundin P, Manér S, Massa H, Walker M, Chi M, et al. 2004. Large-scale copy number polymorphism in the human genome. <em>Science</em> <strong>305</strong>: 525–528.</p>
+</div>
+<div id="ref-Hinds2006">
+<p>Hinds DA, Kloek AP, Jen M, Chen X, Frazer KA. 2006. Common deletions and snps are in linkage disequilibrium in the human genome. <em>Nature Genetics</em> <strong>38</strong>: 82–85.</p>
+</div>
+<div id="ref-Conrad2006">
+<p>Conrad DF, Andrews TD, Carter NP, Hurles ME, Pritchard JK. 2006. A high-resolution survey of deletion polymorphism in the human genome. <em>Nature Genetics</em> <strong>38</strong>: 75–81.</p>
+</div>
+<div id="ref-Conrad2010">
+<p>Conrad DF, Pinto D, Redon R, Feuk L, Gokcumen O, Zhang Y, Aerts J, Andrews TD, Barnes C, Campbell P, et al. 2010. Origins and functional impact of copy number variation in the human genome. <em>Nature</em> <strong>464</strong>: 704–12.</p>
+</div>
+<div id="ref-Korbel2007">
+<p>Korbel JO, Urban AE, Affourtit JP, Godwin B, Grubert F, Simons JF, Kim PM, Palejev D, Carriero NJ, Du L, et al. 2007. Paired-end mapping reveals extensive structural variation in the human genome. <em>Science (New York, NY)</em> <strong>318</strong>: 420–6.</p>
+</div>
+<div id="ref-Stankiewicz2010">
+<p>Stankiewicz P, Lupski JR. 2010. Structural variation in the human genome and its role in disease. <em>Annual Review of Medicine</em> <strong>61</strong>: 437–455.</p>
+</div>
+<div id="ref-Altshuler2010">
+<p>International HapMap 3 Consortium, Altshuler DM, Gibbs RA, Peltonen L, Altshuler DM, Gibbs RA, Peltonen L, Dermitzakis E, Schaffner SF, Yu F, et al. 2010. Integrating common and rare genetic variation in diverse human populations. <em>Nature</em> <strong>467</strong>: 52–8.</p>
+</div>
+<div id="ref-Carvalho2016">
+<p>Carvalho CMB, Lupski JR. 2016. Mechanisms underlying structural variant formation in genomic disorders. <em>Nature Reviews Genetics</em> <strong>17</strong>: 224–238.</p>
+</div>
+<div id="ref-Zhang2009">
+<p>Zhang F, Gu W, Hurles ME, Lupski JR. 2009. Copy number variation in human health, disease, and evolution. <em>Annual Review of Genomics and Human Genetics</em> <strong>10</strong>: 451–481.</p>
+</div>
+<div id="ref-Theisen2010">
+<p>Theisen A, Shaffer LG. 2010. Disorders caused by chromosome abnormalities. <em>The application of clinical genetics</em> <strong>3</strong>: 159–74.</p>
+</div>
+<div id="ref-Nambiar2011">
+<p>Nambiar M, Raghavan SC. 2011. How does dna break during chromosomal translocations? <em>Nucleic Acids Research</em> <strong>39</strong>: 5813–5825.</p>
+</div>
+<div id="ref-Higgins2008">
+<p>Higgins AW, Alkuraya FS, Bosco AF, Brown KK, Bruns GA, Donovan DJ, Eisenman R, Fan Y, Farra CG, Ferguson HL, et al. 2008. Characterization of apparently balanced chromosomal rearrangements from the developmental genome anatomy project. <em>American Journal of Human Genetics</em> <strong>82</strong>: 712–722.</p>
+</div>
+<div id="ref-Kleinjan2005">
+<p>Kleinjan DA, Van Heyningen V. 2005. Long-range control of gene expression: Emerging mechanisms and disruption in disease. <em>Am J Hum Genet</em> <strong>76</strong>: 8–32.</p>
+</div>
+<div id="ref-Weiler1995">
+<p>Weiler KS, Wakimoto BT. 1995. Heterochromatin and gene expression in drosophila. <em>Annual review of genetics</em> <strong>29</strong>: 577–605.</p>
+</div>
+<div id="ref-Zhang2015">
+<p>Zhang B, Wolynes PG. 2015. Topology, structures, and energy landscapes of human chromosomes. <em>Proceedings of the National Academy of Sciences</em> <strong>112</strong>: 201506257.</p>
+</div>
+<div id="ref-Spielmann2016">
+<p>Spielmann M, Mundlos S. 2016. Looking beyond the genes: The role of non-coding variants in human disease. <em>Human Molecular Genetics</em> ddw205.</p>
+</div>
+<div id="ref-Fantes1995">
+<p>Fantes J, Redeker B, Breen M, Boyle S, Brown J, Fletcher J, Jones S, Bickmore W, Fukushima Y, Mannens M, et al. 1995. Aniridia-associated cytogenetic rearrangements suggest that a position effect may cause the mutant phenotype. <em>Human Molecular Genetics</em> <strong>4</strong>: 415–422.</p>
+</div>
+<div id="ref-Kleinjan2001">
+<p>Kleinjan DA, Seawright A, Schedl A, Quinlan RA, Danes S, Heyningen V van. 2001. Aniridia-associated translocations, dnase hypersensitivity, sequence comparison and transgenic analysis redefine the functional domain of pax6. <em>Human Molecular Genetics</em> <strong>10</strong>: 2049–2059.</p>
+</div>
+<div id="ref-Cai2003">
+<p>Cai J, Goodman BK, Patel AS, Mulliken JB, Van Maldergem L, Hoganson GE, Paznekas WA, Ben-Neriah Z, Sheffer R, Cunningham ML, et al. 2003. Increased risk for developmental delay in saethre-chotzen syndrome is associated with twist deletions: An improved strategy for twist mutation screening. <em>Human Genetics</em> <strong>114</strong>: 68–76.</p>
+</div>
+<div id="ref-Flomen1998">
+<p>Flomen RH, Vatcheva R, Gorman PA, Baptista PR, Groet J, Barišić I, Ligutic I, Nižetić D. 1998. Construction and analysis of a sequence-ready map in 4q25: Rieger syndrome can be caused by haploinsufficiency ofRIEG, but also by chromosome breaks ≈90 kb upstream of this gene. <em>Genomics</em> <strong>47</strong>: 409–413.</p>
+</div>
+<div id="ref-Trembath2004">
+<p>Trembath DG, Semina EV, Jones DH, Patil SR, Qian Q, Amendt BA, Russo AF, Murray JC. 2004. Analysis of two translocation breakpoints and identification of a negative regulatory element in patients with rieger’s syndrome. <em>Birth Defects Research Part A: Clinical and Molecular Teratology</em> <strong>70</strong>: 82–91.</p>
+</div>
+<div id="ref-Velagaleti2005">
+<p>Velagaleti GV, Bien-Willner GA, Northup JK, Lockhart LH, Hawkins JC, Jalal SM, Withers M, Lupski JR, Stankiewicz P. 2005. Position effects due to chromosome breakpoints that map ∼900 kb upstream and ∼1.3 mb downstream of sox9 in two patients with campomelic dysplasia. <em>The American Journal of Human Genetics</em> <strong>76</strong>: 652–662.</p>
+</div>
+<div id="ref-Kleinjan1998">
+<p>Kleinjan D, Heyningen V van. 1998. Position effect in human genetic disease. <em>Human Molecular Genetics</em> <strong>7</strong>: 1611–1618.</p>
+</div>
+<div id="ref-Lupski2005">
+<p>Lupski JR, Stankiewicz P. 2005. Genomic disorders: Molecular mechanisms for rearrangements and conveyed phenotypes. <em>PLoS Genetics</em> <strong>1</strong>: e49.</p>
+</div>
+<div id="ref-Dekker2002">
+<p>Dekker J, Rippe K, Dekker M, Kleckner N. 2002. Capturing chromosome conformation. <em>Science (New York, NY)</em> <strong>295</strong>: 1306–11.</p>
+</div>
+<div id="ref-DeWit2012">
+<p>Wit E de, Laat W de. 2012. A decade of 3C technologies: Insights into nuclear organization. <em>Genes &amp; development</em> <strong>26</strong>: 11–24.</p>
+</div>
+<div id="ref-Lieberman-Aiden2009">
+<p>Lieberman-Aiden E, Berkum NL van, Williams L, Imakaev M, Ragoczy T, Telling A, Amit I, Lajoie BR, Sabo PJ, Dorschner MO, et al. 2009. Comprehensive mapping of long-range interactions reveals folding principles of the human genome. <em>Science (New York, NY)</em> <strong>326</strong>: 289–93.</p>
+</div>
+<div id="ref-Fullwood2009">
+<p>Fullwood MJ, Liu MH, Pan YF, Liu J, Xu H, Mohamed YB, Orlov YL, Velkov S, Ho A, Mei PH, et al. 2009. An oestrogen-receptor-<span class="math inline">\(\alpha\)</span>-bound human chromatin interactome. <em>Nature</em> <strong>462</strong>: 58–64.</p>
+</div>
+<div id="ref-Dixon2012">
+<p>Dixon JR, Selvaraj S, Yue F, Kim A, Li Y, Shen Y, Hu M, Liu JS, Ren B. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. <em>Nature</em> <strong>485</strong>: 376–380.</p>
+</div>
+<div id="ref-Dixon2015">
+<p>Dixon JR, Jung I, Selvaraj S, Shen Y, Antosiewicz-Bourget JE, Lee AY, Ye Z, Kim A, Rajagopal N, Xie W, et al. 2015. Chromatin architecture reorganization during stem cell differentiation. <em>Nature</em> <strong>518</strong>: 331–336.</p>
+</div>
+<div id="ref-Sanyal2012">
+<p>Sanyal A, Lajoie BR, Jain G, Dekker J. 2012. The long-range interaction landscape of gene promoters. <em>Nature</em> <strong>489</strong>: 109–113.</p>
+</div>
+<div id="ref-Phillips-Cremins2013">
+<p>Phillips-Cremins JE, Sauria MEG, Sanyal A, Gerasimova TI, Lajoie BR, Bell JSK, Ong C-T, Hookway T a, Guo C, Sun Y, et al. 2013. Architectural protein subclasses shape 3D organization of genomes during lineage commitment. <em>Cell</em> <strong>153</strong>: 1281–95.</p>
+</div>
+<div id="ref-Rao2014">
+<p>Rao SSP, Huntley MH, Durand NC, Stamenova EK, Bochkov ID, Robinson JT, Sanborn AL, Machol I, Omer AD, Lander ES, et al. 2014. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. <em>Cell</em> <strong>159</strong>: 1665–80.</p>
+</div>
+<div id="ref-Mifsud2015">
+<p>Mifsud B, Tavares-Cadete F, Young AN, Sugar R, Schoenfelder S, Ferreira L, Wingett SW, Andrews S, Grey W, Ewels P a, et al. 2015. Mapping long-range promoter contacts in human cells with high-resolution capture hi-c. <em>Nature Genetics</em> <strong>47</strong>.</p>
+</div>
+<div id="ref-Lupianez2015">
+<p>Lupiáñez DG, Kraft K, Heinrich V, Krawitz P, Brancati F, Klopocki E, Horn D, Kayserili H, Opitz JM, Laxova R, et al. 2015. Disruptions of topological chromatin domains cause pathogenic rewiring of gene-enhancer interactions. <em>Cell</em> <strong>161</strong>: 1012–1025.</p>
+</div>
+<div id="ref-Groschel2014">
+<p>Gröschel S, Sanders MA, Hoogenboezem R, Wit E de, Bouwman BAM, Erpelinck C, Velden VHJ van der, Havermans M, Avellino R, Lom K van, et al. 2014. A single oncogenic enhancer rearrangement causes concomitant evi1 and gata2 deregulation in leukemia. <em>Cell</em> <strong>157</strong>: 369–381.</p>
+</div>
+<div id="ref-Claussnitzer2015">
+<p>Claussnitzer M, Dankel SN, Kim K-H, Quon G, Meuleman W, Haugen C, Glunk V, Sousa IS, Beaudry JL, Puviindran V, et al. 2015. &lt;i&gt;FTO&lt;/i&gt; obesity variant circuitry and adipocyte browning in humans. <em>New England Journal of Medicine</em> <strong>373</strong>: 895–907.</p>
+</div>
+<div id="ref-Visser2012">
+<p>Visser M, Kayser M, Palstra R-J. 2012. HERC2 rs12913832 modulates human pigmentation by attenuating chromatin-loop formation between a long-range enhancer and the oca2 promoter. <em>Genome research</em> <strong>22</strong>: 446–55.</p>
+</div>
+<div id="ref-Roussos2014">
+<p>Roussos P, Mitchell AC, Voloudakis G, Fullard JF, Pothula VM, Tsang J, Stahl EA, Georgakopoulos A, Ruderfer DM, Charney A, et al. 2014. A role for noncoding variation in schizophrenia. <em>Cell reports</em> <strong>9</strong>: 1417–29.</p>
+</div>
+<div id="ref-Giorgio2015">
+<p>Giorgio E, Robyr D, Spielmann M, Ferrero E, Di Gregorio E, Imperiale D, Vaula G, Stamoulis G, Santoni F, Atzori C, et al. 2015. A large genomic deletion leads to enhancer adoption by the lamin b1 gene: A second path to autosomal dominant adult-onset demyelinating leukodystrophy (adld). <em>Human Molecular Genetics</em> <strong>24</strong>: 3143–3154.</p>
+</div>
+<div id="ref-Oldridge2015">
+<p>Oldridge DA, Wood AC, Weichert-Leahey N, Crimmins I, Sussman R, Winter C, McDaniel LD, Diamond M, Hart LS, Zhu S, et al. 2015. Genetic predisposition to neuroblastoma mediated by a lmo1 super-enhancer polymorphism. <em>Nature</em> <strong>528</strong>: 418–421.</p>
+</div>
+<div id="ref-Ibn-Salem2014">
+<p>Ibn-Salem J, Köhler S, Love MI, Chung H-R, Huang N, Hurles ME, Haendel M, Washington NL, Smedley D, Mungall CJ, et al. 2014. Deletions of chromosomal regulatory boundaries are associated with congenital disease. <em>Genome Biology</em> <strong>15</strong>: 423.</p>
+</div>
+<div id="ref-Ordulu2016">
+<p>Ordulu Z, Kammin T, Brand H, Pillalamarri V, Redin CE, Collins RL, Blumenthal I, Hanscom C, Pereira S, Crandall BF, et al. 2016. Structural chromosomal rearrangements require nucleotide-level resolution : Lessons from next-generation sequencing in prenatal diagnosis. <em>The American Journal of Human Genetics</em> 1–19.</p>
+</div>
+<div id="ref-Ligon2005">
+<p>Ligon AH, Moore SD, Parisi MA, Mealiffe ME, Harris DJ, Ferguson HL, Quade BJ, Morton CC. 2005. Constitutional rearrangement of the architectural factor hmga2: A novel human phenotype including overgrowth and lipomas. <em>The American Journal of Human Genetics</em> <strong>76</strong>: 340–348.</p>
+</div>
+<div id="ref-Kim2008">
+<p>Kim WK, Marcotte EM. 2008. Age-dependent evolution of the yeast protein interaction network suggests a limited role of gene duplication and divergence. <em>PLoS computational biology</em> <strong>4</strong>: e1000232.</p>
+</div>
+<div id="ref-Lu2007">
+<p>Lu W, Quintero-Rivera F, Fan Y, Alkuraya FS, Donovan DJ, Xi Q, Turbe-Doan A, Li Q-G, Campbell CG, Shanske AL, et al. 2007. NFIA haploinsufficiency is associated with a cns malformation syndrome and urinary tract defects. <em>PLoS Genetics</em> <strong>3</strong>: e80.</p>
+</div>
+<div id="ref-Redin2017">
+<p>Redin C, Brand H, Collins RL, Kammin T, Mitchell E, Hodge JC, Hanscom C, Pillalamarri V, Seabra CM, Abbott M-A, et al. 2017. The genomic landscape of balanced cytogenetic abnormalities associated with human congenital anomalies. <em>Nature Genetics</em> <strong>49</strong>: 36–45.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="4-position-effect.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="4-2-materials-and-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ibn-salem/thesis/edit/master/04-position_effect.Rmd",
+"text": "Edit"
+},
+"download": ["thesis.pdf", "thesis.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
