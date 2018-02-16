@@ -9,6 +9,9 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Build with bookdown</a></li>
     edit: https://github.com/ibn-salem/thesis/edit/master/%s
+    sharing:
+      github: yes
+      facebook: no
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   template: custom_latex_template.tex

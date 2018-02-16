@@ -23,8 +23,9 @@ bibliography: [bib/PhDfltClean.bib]
 biblio-style: myabbrvnat
 csl: genome-research.csl
 link-citations: yes
-github-repo: ibn-salem/thesis
-description: "This is a draft PhD thesis."
+github-repo: "ibn-salem/thesis"
+url: 'https\://ibn-salem.github.io/thesis/'
+description: "A draft PhD thesis on genome folding in evoultion and disease."
 ---
 
 # Abstract {-}
