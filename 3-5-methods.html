@@ -6,26 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Genome folding in evolution and disease</title>
-  <meta name="description" content="This is a draft PhD thesis.">
+  <meta name="description" content="A draft PhD thesis on genome folding in evoultion and disease.">
   <meta name="generator" content="bookdown 0.6.2 and GitBook 2.6.7">
 
   <meta property="og:title" content="Genome folding in evolution and disease" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ibn-salem.github.io/thesis/" />
   
-  
-  <meta property="og:description" content="This is a draft PhD thesis." />
+  <meta property="og:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   <meta name="github-repo" content="ibn-salem/thesis" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Genome folding in evolution and disease" />
   
-  <meta name="twitter:description" content="This is a draft PhD thesis." />
+  <meta name="twitter:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   
 
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-15">
+<meta name="date" content="2018-02-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -259,32 +259,10 @@
 <h2><span class="header-section-number">3.5</span> Methods</h2>
 <div id="rearrangement-breakpoints-from-whole-genome-alignments" class="section level3">
 <h3><span class="header-section-number">3.5.1</span> Rearrangement breakpoints from whole-genome alignments</h3>
-<p>Rearrangement breakpoints were identified between human and 12 selected
-vertebrate species from whole-genome-alignment data (Table <a href="3-5-methods.html#tab:TadEvoSpecies">3.1</a>). Alignment
-data were downloaded as net files from UCSC Genome Browser for human
-genome hg38 and the genomes listed in Table <a href="3-5-methods.html#tab:TadEvoSpecies">3.1</a>. The whole-genome data
-consists of consecutive alignment blocks that are chained and
-hierarchically ordered in the so-called nets <span class="citation">(Kent et al. <a href="#ref-Kent2003">2003</a>)</span>. Chains represent
-blocks of interrupted syntenic regions and may include larger gaps. When
-hierarchically arranged in a net file, child chains can complement their
-parents when they align nearby segments that fill the alignment gaps of
-their parents but may also break the synteny when incorporating distal
-segments. We implemented a computer program to extract rearrangement
-breakpoints from net files based on the length and type of fills. Start
-and end points of top-level or non-syntenic fills are reported as
-rearrangement breakpoint if the fill exceeds a given size threshold. We
-used different size thresholds to optimize both the number of identified
-breakpoints and to avoid biases of transposable elements that might be
-responsible for many small interruptions of alignment chains. In this
-way, we extracted rearrangement breakpoints between human and 12 genomes
-using size thresholds of 10 kb, 100 kb, and 1000 kb. To compare
-breakpoints to TADs we converted the breakpoint coordinates from hg38 to
-hg19 genome assembly using the liftOver tool from UCSC Genome Browser
-<span class="citation">(Hinrichs et al. <a href="#ref-Hinrichs2006">2006</a>)</span>.</p>
+<p>Rearrangement breakpoints were identified between human and 12 selected vertebrate species from whole-genome-alignment data (Table <a href="3-5-methods.html#tab:TadEvoSpecies">3.1</a>). Alignment data were downloaded as net files from UCSC Genome Browser for human genome hg38 and the genomes listed in Table <a href="3-5-methods.html#tab:TadEvoSpecies">3.1</a>. The whole-genome data consists of consecutive alignment blocks that are chained and hierarchically ordered in the so-called nets <span class="citation">(Kent et al. <a href="#ref-Kent2003">2003</a>)</span>. Chains represent blocks of interrupted syntenic regions and may include larger gaps. When hierarchically arranged in a net file, child chains can complement their parents when they align nearby segments that fill the alignment gaps of their parents but may also break the synteny when incorporating distal segments. We implemented a computer program to extract rearrangement breakpoints from net files based on the length and type of fills. Start and end points of top-level or non-syntenic fills are reported as rearrangement breakpoint if the fill exceeds a given size threshold. We used different size thresholds to optimize both the number of identified breakpoints and to avoid biases of transposable elements that might be responsible for many small interruptions of alignment chains. In this way, we extracted rearrangement breakpoints between human and 12 genomes using size thresholds of 10 kb, 100 kb, and 1000 kb. To compare breakpoints to TADs we converted the breakpoint coordinates from hg38 to hg19 genome assembly using the liftOver tool from UCSC Genome Browser <span class="citation">(Hinrichs et al. <a href="#ref-Hinrichs2006">2006</a>)</span>.</p>
 <!-- ======================================================================= -->
 <table>
-<caption><span id="tab:TadEvoSpecies">Table 3.1: </span> Species used for breakpoint identification from whole-genome alignments with human.
-<!-- ======================================================================= --></caption>
+<caption><span id="tab:TadEvoSpecies">Table 3.1: </span> Species used for breakpoint identification from whole-genome alignments with human. <!-- ======================================================================= --></caption>
 <thead>
 <tr class="header">
 <th align="left">Common name</th>
@@ -371,98 +349,28 @@ hg19 genome assembly using the liftOver tool from UCSC Genome Browser
 </div>
 <div id="topologically-associating-domains-and-contact-domains" class="section level3">
 <h3><span class="header-section-number">3.5.2</span> Topologically associating domains and contact domains</h3>
-<p>We obtained topologically associating domain (TAD) calls from published
-Hi-C experiments in human embryonic stem cells (hESC) <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>)</span> and contact
-domains from published <em>in situ</em> Hi-C experiments in human GM12878 cells
-<span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span>. Genomic coordinates of hESC TADs were converted from hg18 to
-hg19 genome assembly using the UCSC liftOver tool <span class="citation">(Hinrichs et al. <a href="#ref-Hinrichs2006">2006</a>)</span>.</p>
+<p>We obtained topologically associating domain (TAD) calls from published Hi-C experiments in human embryonic stem cells (hESC) <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>)</span> and contact domains from published <em>in situ</em> Hi-C experiments in human GM12878 cells <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span>. Genomic coordinates of hESC TADs were converted from hg18 to hg19 genome assembly using the UCSC liftOver tool <span class="citation">(Hinrichs et al. <a href="#ref-Hinrichs2006">2006</a>)</span>.</p>
 </div>
 <div id="breakpoint-distributions-at-tads" class="section level3">
 <h3><span class="header-section-number">3.5.3</span> Breakpoint distributions at TADs</h3>
-<p>To quantify the number of breakpoints around TADs and TAD boundaries we
-enlarged TAD regions by 50% of their total length on each side. The
-range was then subdivided into 20 equal sized bins and the number of
-overlapping breakpoints computed. This results in a matrix in which rows
-represent individual TADs and columns represent bins along TAD regions.
-The sum of each column indicates the number of breakpoints for
-corresponding bins and therefore the same relative location around TADs.
-For comparable visualization between different data sets, the
-column-wise summed breakpoint counts were further normalized as percent
-values of the total breakpoint number in the matrix.</p>
+<p>To quantify the number of breakpoints around TADs and TAD boundaries we enlarged TAD regions by 50% of their total length on each side. The range was then subdivided into 20 equal sized bins and the number of overlapping breakpoints computed. This results in a matrix in which rows represent individual TADs and columns represent bins along TAD regions. The sum of each column indicates the number of breakpoints for corresponding bins and therefore the same relative location around TADs. For comparable visualization between different data sets, the column-wise summed breakpoint counts were further normalized as percent values of the total breakpoint number in the matrix.</p>
 </div>
 <div id="quantification-of-breakpoint-enrichment" class="section level3">
 <h3><span class="header-section-number">3.5.4</span> Quantification of breakpoint enrichment</h3>
-<p>To quantify the enrichment of breakpoints at domain boundaries, we
-generated random breakpoints as background control. For each chromosome,
-we placed the same number of actual breakpoints at a random position of
-the chromosome. For each breakpoint data set we simulated 100 times the
-same number of random breakpoints. We then computed the distribution of
-random breakpoints around TADs in the same way as described above for
-actual breakpoints. To compute enrichment of actual breakpoints compared
-to simulated controls, we classified each breakpoint located in a window
-of 400 kb around TAD borders in either close to a TAD boundary, if
-distance between breakpoint and TAD boundary was smaller or equal to 40
-kb or as distant, when distance was larger than 40 kb. This results in a
-contingency table of actual and random breakpoints that are either close
-or distal to TAD boundaries. We computed log odds ratios as effect size
-of enrichment and p-values according to Fishers two-sided exact test.
-Additionally, we compared the distance of all actual and random
-breakpoints to their nearest TAD boundary using the Wilcoxon’s rank-sum
-test.</p>
+<p>To quantify the enrichment of breakpoints at domain boundaries, we generated random breakpoints as background control. For each chromosome, we placed the same number of actual breakpoints at a random position of the chromosome. For each breakpoint data set we simulated 100 times the same number of random breakpoints. We then computed the distribution of random breakpoints around TADs in the same way as described above for actual breakpoints. To compute enrichment of actual breakpoints compared to simulated controls, we classified each breakpoint located in a window of 400 kb around TAD borders in either close to a TAD boundary, if distance between breakpoint and TAD boundary was smaller or equal to 40 kb or as distant, when distance was larger than 40 kb. This results in a contingency table of actual and random breakpoints that are either close or distal to TAD boundaries. We computed log odds ratios as effect size of enrichment and p-values according to Fishers two-sided exact test. Additionally, we compared the distance of all actual and random breakpoints to their nearest TAD boundary using the Wilcoxon’s rank-sum test.</p>
 </div>
 <div id="expression-data-for-mouse-and-human-orthologs" class="section level3">
 <h3><span class="header-section-number">3.5.5</span> Expression data for mouse and human orthologs</h3>
-<p>Promoter based expression data from CAGE analysis in human and mouse
-tissues from the FANTOM5 project <span class="citation">(Forrest et al. <a href="#ref-Forrest2014">2014</a>)</span> were retrieved from the EBI
-Expression Atlas <span class="citation">(Hinrichs et al. <a href="#ref-Hinrichs2006">2006</a>)</span> as baseline expression values per gene and
-tissue. The meta data of samples contains tissue annotations as term IDs
-from Uberon, an integrated cross-species ontology covering anatomical
-structures in animals <span class="citation">(Herrero et al. <a href="#ref-Herrero2016">2016</a>)</span>. Human and mouse samples were assigned to
-each other if they had the same developmental stage and matching Uberon
-term IDs. This resulted in 19 samples for each organism with
-corresponding tissues.</p>
-<p>We used the R package biomaRt to retrieve all human genes in the Ensembl
-database (version grch37.ensembl.org) and could assign 13,065 to
-ortholog genes in mouse by allowing only the one-to-one orthology type
-<span class="citation">(Herrero et al. <a href="#ref-Herrero2016">2016</a>)</span>. Of these ortholog pairs, 12,696 are contained in the expression
-data described above. For each pair of orthologs we computed the
-correlation of expression values across matching tissues as Pearson’s
-correlation coefficient.</p>
+<p>Promoter based expression data from CAGE analysis in human and mouse tissues from the FANTOM5 project <span class="citation">(Forrest et al. <a href="#ref-Forrest2014">2014</a>)</span> were retrieved from the EBI Expression Atlas <span class="citation">(Hinrichs et al. <a href="#ref-Hinrichs2006">2006</a>)</span> as baseline expression values per gene and tissue. The meta data of samples contains tissue annotations as term IDs from Uberon, an integrated cross-species ontology covering anatomical structures in animals <span class="citation">(Herrero et al. <a href="#ref-Herrero2016">2016</a>)</span>. Human and mouse samples were assigned to each other if they had the same developmental stage and matching Uberon term IDs. This resulted in 19 samples for each organism with corresponding tissues.</p>
+<p>We used the R package biomaRt to retrieve all human genes in the Ensembl database (version grch37.ensembl.org) and could assign 13,065 to ortholog genes in mouse by allowing only the one-to-one orthology type <span class="citation">(Herrero et al. <a href="#ref-Herrero2016">2016</a>)</span>. Of these ortholog pairs, 12,696 are contained in the expression data described above. For each pair of orthologs we computed the correlation of expression values across matching tissues as Pearson’s correlation coefficient.</p>
 </div>
 <div id="classification-of-tads-and-genes-according-to-rearrangements-and-grbs" class="section level3">
 <h3><span class="header-section-number">3.5.6</span> Classification of TADs and genes according to rearrangements and GRBs</h3>
-<p>We classified hESC TADs according to rearrangements between human and
-mouse genomes. We define a TAD as conserved if it is completely enclosed
-within a fill in the net file and no rearrangement breakpoint from any
-size threshold is located in the TAD region with a distance larger than
-80 kb from the TAD boundary. A TAD is defined as rearranged, if the TAD
-is not enclosed completely by any fill in the net file, overlaps at
-least one breakpoint inferred using a 1000 kb fill size threshold, and
-this breakpoint is further than 80 kb away from each TAD boundary. TADs
-were also classified according to their overlap with GRBs as in <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>)</span>.
-A given TAD is a GRB-TAD if it overlaps with more than 80% of the TAD
-size with a GRB. A TAD is classified as non-GRB if it has less than 20%
-overlap with GRBs. The 12,696 human genes with mouse ortholog and
-expression data were grouped according to their location with respect to
-hESC TADs. We used the transcription start site (TSS) of the longest
-transcript per gene to group each gene as within TAD if the TSS overlaps
-a hESC TAD or as outside TADs, if not. Furthermore, we grouped genes in
-TADs according to conserved or rearranged TADs and separately according
-to GRB and non-GRB TADs.</p>
+<p>We classified hESC TADs according to rearrangements between human and mouse genomes. We define a TAD as conserved if it is completely enclosed within a fill in the net file and no rearrangement breakpoint from any size threshold is located in the TAD region with a distance larger than 80 kb from the TAD boundary. A TAD is defined as rearranged, if the TAD is not enclosed completely by any fill in the net file, overlaps at least one breakpoint inferred using a 1000 kb fill size threshold, and this breakpoint is further than 80 kb away from each TAD boundary. TADs were also classified according to their overlap with GRBs as in <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>)</span>. A given TAD is a GRB-TAD if it overlaps with more than 80% of the TAD size with a GRB. A TAD is classified as non-GRB if it has less than 20% overlap with GRBs. The 12,696 human genes with mouse ortholog and expression data were grouped according to their location with respect to hESC TADs. We used the transcription start site (TSS) of the longest transcript per gene to group each gene as within TAD if the TSS overlaps a hESC TAD or as outside TADs, if not. Furthermore, we grouped genes in TADs according to conserved or rearranged TADs and separately according to GRB and non-GRB TADs.</p>
 </div>
 <div id="source-code-and-implementation-details" class="section level3">
 <h3><span class="header-section-number">3.5.7</span> Source code and implementation details</h3>
-<p>The source code of the entire analysis described here is available on
-GitHub:
-<a href="https://github.com/Juppen/TAD-Evolution"><em>https://github.com/Juppen/TAD-Evolution</em></a>.
-The identification of breakpoints and extraction of fills from
-whole-genome alignment data was implemented in Python scripts. Reading
-of BED files and overlap calculations with TADs and TAD bins were
-computed in R with Bioconductor <span class="citation">(Huber et al. <a href="#ref-Huber2015">2015</a>)</span> packages rtracklayer <span class="citation">(Lawrence et al. <a href="#ref-Lawrence2009">2009</a>)</span> and
-GenomicRanges <span class="citation">(Lawrence et al. <a href="#ref-Lawrence2013">2013</a>)</span>. Gene coordinates and ortholog assignments were
-retrieved from Ensemble data base (version grch37.ensembl.org) using the
-package biomaRt <span class="citation">(Durinck et al. <a href="#ref-Durinck2009">2009</a><a href="#ref-Durinck2009">a</a>)</span>. For data integration and visualization we used R
-packages from tidyverse <span class="citation">(Wickham and Grolemund)</span>.</p>
+<p>The source code of the entire analysis described here is available on GitHub: <a href="https://github.com/Juppen/TAD-Evolution"><em>https://github.com/Juppen/TAD-Evolution</em></a>. The identification of breakpoints and extraction of fills from whole-genome alignment data was implemented in Python scripts. Reading of BED files and overlap calculations with TADs and TAD bins were computed in R with Bioconductor <span class="citation">(Huber et al. <a href="#ref-Huber2015">2015</a>)</span> packages rtracklayer <span class="citation">(Lawrence et al. <a href="#ref-Lawrence2009">2009</a>)</span> and GenomicRanges <span class="citation">(Lawrence et al. <a href="#ref-Lawrence2013">2013</a>)</span>. Gene coordinates and ortholog assignments were retrieved from Ensemble data base (version grch37.ensembl.org) using the package biomaRt <span class="citation">(Durinck et al. <a href="#ref-Durinck2009">2009</a><a href="#ref-Durinck2009">a</a>)</span>. For data integration and visualization we used R packages from tidyverse <span class="citation">(Wickham and Grolemund)</span>.</p>
 </div>
 </div>
 <h3>References</h3>
@@ -471,7 +379,7 @@ packages from tidyverse <span class="citation">(Wickham and Grolemund)</span>.</
 <p>Kent WJ, Baertsch R, Hinrichs A, Miller W, Haussler D. 2003. Evolution’s cauldron: Duplication, deletion, and rearrangement in the mouse and human genomes. <em>Proceedings of the National Academy of Sciences of the United States of America</em> <strong>100</strong>: 11484–11489.</p>
 </div>
 <div id="ref-Hinrichs2006">
-<p>Hinrichs AS, Karolchik D, Baertsch R, Barber GP, Bejerano G, Clawson H, Diekhans M, Furey TS, Harte RA, Hsu F, et al. 2006. The ucsc genome browser database: Update 2006. <em>Nucleic Acids Res</em> <strong>34</strong>: D590—–D598.</p>
+<p>Hinrichs AS, Karolchik D, Baertsch R, Barber GP, Bejerano G, Clawson H, Diekhans M, Furey TS, Harte RA, Hsu F, et al. 2006. The uCSC genome browser database: Update 2006. <em>Nucleic Acids Res</em> <strong>34</strong>: D590—–D598.</p>
 </div>
 <div id="ref-Dixon2012">
 <p>Dixon JR, Selvaraj S, Yue F, Kim A, Li Y, Shen Y, Hu M, Liu JS, Ren B. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. <em>Nature</em> <strong>485</strong>: 376–380.</p>
@@ -498,7 +406,7 @@ packages from tidyverse <span class="citation">(Wickham and Grolemund)</span>.</
 <p>Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan MT, Carey VJ. 2013. Software for computing and annotating genomic ranges. <em>PLoS computational biology</em> <strong>9</strong>: e1003118.</p>
 </div>
 <div id="ref-Durinck2009">
-<p>Durinck S, Spellman PT, Birney E, Huber W. 2009a. Mapping identifiers for the integration of genomic datasets with the r/bioconductor package biomaRt. <em>Nature Protocols</em> <strong>4</strong>: 1184–1191.</p>
+<p>Durinck S, Spellman PT, Birney E, Huber W. 2009a. Mapping identifiers for the integration of genomic datasets with the r/Bioconductor package biomaRt. <em>Nature Protocols</em> <strong>4</strong>: 1184–1191.</p>
 </div>
 </div>
             </section>
@@ -521,8 +429,8 @@ packages from tidyverse <span class="citation">(Wickham and Grolemund)</span>.</
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -553,7 +461,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

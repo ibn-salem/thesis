@@ -6,26 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Genome folding in evolution and disease</title>
-  <meta name="description" content="This is a draft PhD thesis.">
+  <meta name="description" content="A draft PhD thesis on genome folding in evoultion and disease.">
   <meta name="generator" content="bookdown 0.6.2 and GitBook 2.6.7">
 
   <meta property="og:title" content="Genome folding in evolution and disease" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ibn-salem.github.io/thesis/" />
   
-  
-  <meta property="og:description" content="This is a draft PhD thesis." />
+  <meta property="og:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   <meta name="github-repo" content="ibn-salem/thesis" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Genome folding in evolution and disease" />
   
-  <meta name="twitter:description" content="This is a draft PhD thesis." />
+  <meta name="twitter:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   
 
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-15">
+<meta name="date" content="2018-02-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -257,93 +257,12 @@
             <section class="normal" id="section-">
 <div id="discussion-2" class="section level2">
 <h2><span class="header-section-number">5.3</span> Discussion</h2>
-<p>We have developed 7C to reuse ChIP-seq data, profiling the interactions
-of proteins with genomes, for the prediction of chromatin looping
-interactions. We present this method as an alternative to dedicated
-techniques like Hi-C that directly measure genomic contacts. Since the
-results of ChIP-seq experiments are increasingly available for a large
-number of proteins, species, tissues, cell types, and conditions, our
-method offers a valid alternative when Hi-C data is not available, or
-cannot be produced due to cost or material limitations. Another major
-advantage of our method over Hi-C is that the predictions are at a base
-pair resolution, while Hi-C only reaches resolutions of at best kilo
-base pairs at a high cost.</p>
-<p>Other computational approaches were developed to predict genomic
-contacts or assign regulatory regions to target genes. A commonly used
-approach is to compare activity signals at enhancers and promoters
-across many different conditions or tissues <span class="citation">(Sheffield et al. <a href="#ref-Sheffield2013">2013</a>; Fishilevich et al. <a href="#ref-Fishilevich2017">2017</a>; Andersson et al. <a href="#ref-Andersson2014">2014</a>; O’Connor and Bailey <a href="#ref-OConnor2014">2014</a>)</span>: high correlation
-indicates association and potential physical interactions between
-enhancers and genes. However, these approaches lose the tissue
-specificity of the interactions. Other approaches integrate many diverse
-chromatin signals such as post-translational histone modifications,
-chromatin accessibility, or transcriptional activity <span class="citation">(Roy et al. <a href="#ref-Roy2015">2015</a>; Whalen et al. <a href="#ref-Whalen2016">2015</a>; Zhu et al. <a href="#ref-Zhu2016">2016</a>; Schreiber et al. <a href="#ref-Schreiber2017">2017</a>; Dzida et al. <a href="#ref-Dzida2017">2017</a>)</span>, and
-combine them with sequence features <span class="citation">(Zhao et al. <a href="#ref-Zhao2016">2016</a>)</span>, or evolutionary constrains
-<span class="citation">(Naville et al. <a href="#ref-Naville2015">2015</a>)</span>. While these methods predict enhancer-gene association with good
-performance, they require for each specific condition of interest a
-multiplicity of input datasets, which are often not available.</p>
-<p>Further computational approaches try to directly predict chromatin
-interactions by using diverse sequence features <span class="citation">(Nikumbh and Pfeifer <a href="#ref-Nikumbh2017">2017</a>)</span> or multiple
-chromatin features such as histone modifications <span class="citation">(Brackley et al. <a href="#ref-Brackley2016">2016</a>; Chen et al. <a href="#ref-Chen2016">2016</a>)</span> or
-transcription <span class="citation">(Rowley et al. <a href="#ref-Rowley2017">2017</a>)</span>. One study makes use of the more recently
-discovered CTCF motif directionality to predict loop interactions from
-CTCF ChIP-seq peak locations <span class="citation">(Oti et al. <a href="#ref-Oti2016">2016</a>)</span>. Another study combines CTCF binding
-locations and motif orientation with polymer modeling to predict Hi-C
-interaction maps <span class="citation">(Sanborn et al. <a href="#ref-Sanborn2015">2015</a>)</span>. However, none of these studies predicts
-chromatin loops from ChIP-seq signals of TFs different from CTCF by
-taking the CTCF motif orientation into account. Furthermore, CTCF
-binding sites are often only considered, when the signal is strong
-enough for peak calling algorithms to identify binding sites. In
-contrast, 7C takes the distribution of ChIP-seq signals from all TFs
-into account without a peak-calling step. Furthermore, the other studies
-do not provide a tool for the direct prediction of pairwise interactions
-from single ChIP-seq experiments. Interestingly, shadow peaks in
-ChIP-seq data of insulator proteins in <em>Drosophila</em> were previously
-associated to long-range interactions <span class="citation">(Liang et al. <a href="#ref-Liang2014">2014</a>)</span> and used to study the
-contribution of sequence motifs and co-factors in loop formation <span class="citation">(Mourad et al. <a href="#ref-Mourad2017">2017</a>)</span>,
-but not to directly predict chromatin loop interactions.</p>
-<p>Compared to the predictive methods mentioned above, our approach has the
-clear advantage to directly predict chromatin looping interactions, and
-not enhancer-promoter associations, by making use of ChIP-seq signals
-from a single experiment with respect to CTCF motifs. This gives the
-prediction a base pair resolution since it relies in the alignment of a
-pair of CTCF motifs. In fact, given several CTCF motifs within a 1kb
-genomic bin, our looping prediction approach can be used to decide which
-of the CTCF sites is actually involved in the measured interactions and
-thus increase resolution even when Hi-C data is available. We showed
-that our approach, 7C, can work with just a single ChIP-seq experiment
-for many different TFs, making it usable for many diverse conditions of
-interest. Therefore, 7C can be used complementary to existing
-enhancer-promoter association tools or can be integrated in such
-predictive models to improve them.</p>
-<p>Association of distal cis-regulatory elements, such as TF binding sites
-or enhancers, to their regulated target gene is a common problem in
-genomic studies <span class="citation">(Mora et al. <a href="#ref-Mora2015">2015</a>)</span>, and this can be addressed by methods mapping
-contacts at a base pair resolution. While Hi-C measures pairwise
-contacts genome-wide in an unbiased manner and experimentally measuring
-genomic interactions is now becoming feasible due to the recent advances
-in 3C based technologies <span class="citation">(Sati and Cavalli <a href="#ref-Sati2016">2016</a>)</span>, a main drawback of the Hi-C method is
-the limitation of resolution. While the first Hi-C study analyzed
-chromatin interactions at bin sizes of 1Mb <span class="citation">(Lieberman-Aiden et al. <a href="#ref-Lieberman-Aiden2009">2009</a>)</span>, structural features
-such as topologically associating domains (TADs) were later called at
-40kb bin resolution <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>)</span>, and the highest resolution for the human
-genome, reached only recently, is 1kb <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span>. This higher resolution
-requires largely increased sequencing depths <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>; Bonev et al. <a href="#ref-Bonev2017">2017</a>)</span>. Capture Hi-C
-identifies only the interactions of per-defined target regions such as
-promoters <span class="citation">(Dryden et al. <a href="#ref-Dryden2014">2014</a>; Mifsud et al. <a href="#ref-Mifsud2015">2015</a>)</span>. ChIA-PET restricts the interactions to those where
-a specific protein of interested is involved <span class="citation">(Heidari et al. <a href="#ref-Heidari2014">2014</a>; Fullwood et al. <a href="#ref-Fullwood2009">2009</a>; Tang et al. <a href="#ref-Tang2015">2015</a>)</span>. Therefore
-these experiments are not always applicable and require a large amount
-of sample material. Ultimately, even in high resolution Hi-C it is not
-trivial to connect enhancers to interacting genes in a unique way, since
-enhancers are often found in clusters within short distances in the
-genome <span class="citation">(Whyte et al. <a href="#ref-Whyte2013">2013</a>; Parker et al. <a href="#ref-Parker2013">2013</a>)</span>.</p>
-<p>Currently, our method, by using CTCF motifs, focuses on CTCF mediated
-chromatin loops. It is very likely that other DNA binding proteins
-mediate loops: for example, recent studies suggest that other TFs are
-involved in enhancer promoter interactions during differentiation <span class="citation">(Bonev et al. <a href="#ref-Bonev2017">2017</a>)</span>
-and knockout of transcriptional repressor YY1 and other candidate
-factors result in loss of chromatin loops <span class="citation">(Weintraub et al. <a href="#ref-Weintraub2018">2018</a>)</span>. Using motifs predicted
-for these different transcription factors, or combinations thereof, are
-open avenues for the future extension of our method.</p>
+<p>We have developed 7C to reuse ChIP-seq data, profiling the interactions of proteins with genomes, for the prediction of chromatin looping interactions. We present this method as an alternative to dedicated techniques like Hi-C that directly measure genomic contacts. Since the results of ChIP-seq experiments are increasingly available for a large number of proteins, species, tissues, cell types, and conditions, our method offers a valid alternative when Hi-C data is not available, or cannot be produced due to cost or material limitations. Another major advantage of our method over Hi-C is that the predictions are at a base pair resolution, while Hi-C only reaches resolutions of at best kilo base pairs at a high cost.</p>
+<p>Other computational approaches were developed to predict genomic contacts or assign regulatory regions to target genes. A commonly used approach is to compare activity signals at enhancers and promoters across many different conditions or tissues <span class="citation">(Sheffield et al. <a href="#ref-Sheffield2013">2013</a>; Fishilevich et al. <a href="#ref-Fishilevich2017">2017</a>; Andersson et al. <a href="#ref-Andersson2014">2014</a>; O’Connor and Bailey <a href="#ref-OConnor2014">2014</a>)</span>: high correlation indicates association and potential physical interactions between enhancers and genes. However, these approaches lose the tissue specificity of the interactions. Other approaches integrate many diverse chromatin signals such as post-translational histone modifications, chromatin accessibility, or transcriptional activity <span class="citation">(Roy et al. <a href="#ref-Roy2015">2015</a>; Whalen et al. <a href="#ref-Whalen2016">2015</a>; Zhu et al. <a href="#ref-Zhu2016">2016</a>; Schreiber et al. <a href="#ref-Schreiber2017">2017</a>; Dzida et al. <a href="#ref-Dzida2017">2017</a>)</span>, and combine them with sequence features <span class="citation">(Zhao et al. <a href="#ref-Zhao2016">2016</a>)</span>, or evolutionary constrains <span class="citation">(Naville et al. <a href="#ref-Naville2015">2015</a>)</span>. While these methods predict enhancer-gene association with good performance, they require for each specific condition of interest a multiplicity of input datasets, which are often not available.</p>
+<p>Further computational approaches try to directly predict chromatin interactions by using diverse sequence features <span class="citation">(Nikumbh and Pfeifer <a href="#ref-Nikumbh2017">2017</a>)</span> or multiple chromatin features such as histone modifications <span class="citation">(Brackley et al. <a href="#ref-Brackley2016">2016</a>; Chen et al. <a href="#ref-Chen2016">2016</a>)</span> or transcription <span class="citation">(Rowley et al. <a href="#ref-Rowley2017">2017</a>)</span>. One study makes use of the more recently discovered CTCF motif directionality to predict loop interactions from CTCF ChIP-seq peak locations <span class="citation">(Oti et al. <a href="#ref-Oti2016">2016</a>)</span>. Another study combines CTCF binding locations and motif orientation with polymer modeling to predict Hi-C interaction maps <span class="citation">(Sanborn et al. <a href="#ref-Sanborn2015">2015</a>)</span>. However, none of these studies predicts chromatin loops from ChIP-seq signals of TFs different from CTCF by taking the CTCF motif orientation into account. Furthermore, CTCF binding sites are often only considered, when the signal is strong enough for peak calling algorithms to identify binding sites. In contrast, 7C takes the distribution of ChIP-seq signals from all TFs into account without a peak-calling step. Furthermore, the other studies do not provide a tool for the direct prediction of pairwise interactions from single ChIP-seq experiments. Interestingly, shadow peaks in ChIP-seq data of insulator proteins in <em>Drosophila</em> were previously associated to long-range interactions <span class="citation">(Liang et al. <a href="#ref-Liang2014">2014</a>)</span> and used to study the contribution of sequence motifs and co-factors in loop formation <span class="citation">(Mourad et al. <a href="#ref-Mourad2017">2017</a>)</span>, but not to directly predict chromatin loop interactions.</p>
+<p>Compared to the predictive methods mentioned above, our approach has the clear advantage to directly predict chromatin looping interactions, and not enhancer-promoter associations, by making use of ChIP-seq signals from a single experiment with respect to CTCF motifs. This gives the prediction a base pair resolution since it relies in the alignment of a pair of CTCF motifs. In fact, given several CTCF motifs within a 1kb genomic bin, our looping prediction approach can be used to decide which of the CTCF sites is actually involved in the measured interactions and thus increase resolution even when Hi-C data is available. We showed that our approach, 7C, can work with just a single ChIP-seq experiment for many different TFs, making it usable for many diverse conditions of interest. Therefore, 7C can be used complementary to existing enhancer-promoter association tools or can be integrated in such predictive models to improve them.</p>
+<p>Association of distal cis-regulatory elements, such as TF binding sites or enhancers, to their regulated target gene is a common problem in genomic studies <span class="citation">(Mora et al. <a href="#ref-Mora2015">2015</a>)</span>, and this can be addressed by methods mapping contacts at a base pair resolution. While Hi-C measures pairwise contacts genome-wide in an unbiased manner and experimentally measuring genomic interactions is now becoming feasible due to the recent advances in 3C based technologies <span class="citation">(Sati and Cavalli <a href="#ref-Sati2016">2016</a>)</span>, a main drawback of the Hi-C method is the limitation of resolution. While the first Hi-C study analyzed chromatin interactions at bin sizes of 1Mb <span class="citation">(Lieberman-Aiden et al. <a href="#ref-Lieberman-Aiden2009">2009</a>)</span>, structural features such as topologically associating domains (TADs) were later called at 40kb bin resolution <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>)</span>, and the highest resolution for the human genome, reached only recently, is 1kb <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span>. This higher resolution requires largely increased sequencing depths <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>; Bonev et al. <a href="#ref-Bonev2017">2017</a>)</span>. Capture Hi-C identifies only the interactions of per-defined target regions such as promoters <span class="citation">(Dryden et al. <a href="#ref-Dryden2014">2014</a>; Mifsud et al. <a href="#ref-Mifsud2015">2015</a>)</span>. ChIA-PET restricts the interactions to those where a specific protein of interested is involved <span class="citation">(Heidari et al. <a href="#ref-Heidari2014">2014</a>; Fullwood et al. <a href="#ref-Fullwood2009">2009</a>; Tang et al. <a href="#ref-Tang2015">2015</a>)</span>. Therefore these experiments are not always applicable and require a large amount of sample material. Ultimately, even in high resolution Hi-C it is not trivial to connect enhancers to interacting genes in a unique way, since enhancers are often found in clusters within short distances in the genome <span class="citation">(Whyte et al. <a href="#ref-Whyte2013">2013</a>; Parker et al. <a href="#ref-Parker2013">2013</a>)</span>.</p>
+<p>Currently, our method, by using CTCF motifs, focuses on CTCF mediated chromatin loops. It is very likely that other DNA binding proteins mediate loops: for example, recent studies suggest that other TFs are involved in enhancer promoter interactions during differentiation <span class="citation">(Bonev et al. <a href="#ref-Bonev2017">2017</a>)</span> and knockout of transcriptional repressor YY1 and other candidate factors result in loss of chromatin loops <span class="citation">(Weintraub et al. <a href="#ref-Weintraub2018">2018</a>)</span>. Using motifs predicted for these different transcription factors, or combinations thereof, are open avenues for the future extension of our method.</p>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
@@ -351,7 +270,7 @@ open avenues for the future extension of our method.</p>
 <p>Sheffield NC, Thurman RE, Song L, Safi A, Stamatoyannopoulos J a, Lenhard B, Crawford GE, Furey TS. 2013. Patterns of regulatory activity across diverse human cell types predict tissue identity , transcription factor binding , and long-range interactions predict tissue identity , transcription factor binding , and long-range interactions. <em>Genome Research</em> <strong>23</strong>: 777–788.</p>
 </div>
 <div id="ref-Fishilevich2017">
-<p>Fishilevich S, Nudel R, Rappaport N, Hadar R, Plaschkes I, Iny Stein T, Rosen N, Kohn A, Twik M, Safran M, et al. 2017. GeneHancer: Genome-wide integration of enhancers and target genes in genecards. <em>Database</em> <strong>2017</strong>: 1665–1680.</p>
+<p>Fishilevich S, Nudel R, Rappaport N, Hadar R, Plaschkes I, Iny Stein T, Rosen N, Kohn A, Twik M, Safran M, et al. 2017. GeneHancer: Genome-wide integration of enhancers and target genes in geneCards. <em>Database</em> <strong>2017</strong>: 1665–1680.</p>
 </div>
 <div id="ref-Andersson2014">
 <p>Andersson R, Gebhard C, Miguel-Escalada I, Hoof I, Bornholdt J, Boyd M, Chen Y, Zhao X, Schmidl C, Suzuki T, et al. 2014. An atlas of active enhancers across human cell types and tissues. <em>Nature</em> <strong>507</strong>: 455–61.</p>
@@ -369,10 +288,10 @@ open avenues for the future extension of our method.</p>
 <p>Zhu Y, Chen Z, Zhang K, Wang M, Medovoy D, Whitaker JW, Ding B, Li N, Zheng L, Wang W. 2016. Constructing 3D interaction maps from 1D epigenomes. <em>Nature Communications</em> <strong>7</strong>: 10812.</p>
 </div>
 <div id="ref-Schreiber2017">
-<p>Schreiber J, Libbrecht M, Bilmes J, Noble W. 2017. Nucleotide sequence and dnasei sensitivity are predictive of 3D chromatin architecture. <em>bioRxiv</em> 1–15.</p>
+<p>Schreiber J, Libbrecht M, Bilmes J, Noble W. 2017. Nucleotide sequence and dNaseI sensitivity are predictive of 3D chromatin architecture. <em>bioRxiv</em> 1–15.</p>
 </div>
 <div id="ref-Dzida2017">
-<p>Dzida T, Iqbal M, Charapitsa I, Reid G, Stunnenberg H, Matarese F, Grote K, Honkela A, Rattray M. 2017. Predicting stimulation-dependent enhancer-promoter interactions from chip-seq time course data. <em>PeerJ</em> <strong>5</strong>: e3742.</p>
+<p>Dzida T, Iqbal M, Charapitsa I, Reid G, Stunnenberg H, Matarese F, Grote K, Honkela A, Rattray M. 2017. Predicting stimulation-dependent enhancer-promoter interactions from chIP-seq time course data. <em>PeerJ</em> <strong>5</strong>: e3742.</p>
 </div>
 <div id="ref-Zhao2016">
 <p>Zhao C, Li X, Hu H. 2016. PETModule: A motif module based approach for enhancer target gene prediction. <em>Scientific Reports</em> <strong>6</strong>: 30043.</p>
@@ -399,7 +318,7 @@ open avenues for the future extension of our method.</p>
 <p>Sanborn AL, Rao SSP, Huang S-C, Durand NC, Huntley MH, Jewett AI, Bochkov ID, Chinnappan D, Cutkosky A, Li J, et al. 2015. Chromatin extrusion explains key features of loop and domain formation in wild-type and engineered genomes. <em>Proceedings of the National Academy of Sciences</em> <strong>112</strong>: 201518552.</p>
 </div>
 <div id="ref-Liang2014">
-<p>Liang J, Lacroix L, Gamot A, Cuddapah S, Queille S, Lhoumaud P, Lepetit P, Martin PGP, Vogelmann J, Court F, et al. 2014. Chromatin immunoprecipitation indirect peaks highlight long-range interactions of insulator proteins and pol ii pausing. <em>Molecular Cell</em> <strong>53</strong>: 672–681.</p>
+<p>Liang J, Lacroix L, Gamot A, Cuddapah S, Queille S, Lhoumaud P, Lepetit P, Martin PGP, Vogelmann J, Court F, et al. 2014. Chromatin immunoprecipitation indirect peaks highlight long-range interactions of insulator proteins and pol iI pausing. <em>Molecular Cell</em> <strong>53</strong>: 672–681.</p>
 </div>
 <div id="ref-Mourad2017">
 <p>Mourad R, Li L, Cuvier O. 2017. Uncovering direct and indirect molecular determinants of chromatin loops using a computational integrative approach. <em>PLOS Computational Biology</em> <strong>13</strong>: e1005538.</p>
@@ -467,8 +386,8 @@ open avenues for the future extension of our method.</p>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -499,7 +418,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

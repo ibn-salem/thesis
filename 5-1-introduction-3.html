@@ -6,26 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Genome folding in evolution and disease</title>
-  <meta name="description" content="This is a draft PhD thesis.">
+  <meta name="description" content="A draft PhD thesis on genome folding in evoultion and disease.">
   <meta name="generator" content="bookdown 0.6.2 and GitBook 2.6.7">
 
   <meta property="og:title" content="Genome folding in evolution and disease" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ibn-salem.github.io/thesis/" />
   
-  
-  <meta property="og:description" content="This is a draft PhD thesis." />
+  <meta property="og:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   <meta name="github-repo" content="ibn-salem/thesis" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Genome folding in evolution and disease" />
   
-  <meta name="twitter:description" content="This is a draft PhD thesis." />
+  <meta name="twitter:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   
 
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-15">
+<meta name="date" content="2018-02-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -257,58 +257,11 @@
             <section class="normal" id="section-">
 <div id="introduction-3" class="section level2">
 <h2><span class="header-section-number">5.1</span> Introduction</h2>
-<p>The three-dimensional folding structure of the genome and its dynamic
-changes play a very important role in the regulation of gene expression
-<span class="citation">(Merkenschlager and Nora <a href="#ref-Merkenschlager2016">2016</a>; Krijger and Laat <a href="#ref-Krijger2016">2016</a>)</span>. For example, while it was well known that transcription factors
-(TFs) can regulate genes by binding to their adjacent promoters, many TF
-binding sites are in distal regulatory regions, such as enhancers, that
-are hundreds of kilo bases far from gene promoters <span class="citation">(Spitz and Furlong <a href="#ref-Spitz2012">2012</a>)</span>. These distal
-regulatory regions can physically interact with promoters of regulated
-genes by chromatin looping interactions <span class="citation">(Tolhuis et al. <a href="#ref-Tolhuis2002">2002</a>; Sanyal et al. <a href="#ref-Sanyal2012">2012</a>)</span>, thus it is not trivial
-to associate TFs to regulated genes without information of the genome
-structure <span class="citation">(Mora et al. <a href="#ref-Mora2015">2015</a>)</span>. Such looping interactions can be measured by chromosome
-conformation capture (3C) experiments <span class="citation">(Dekker et al. <a href="#ref-Dekker2002">2002</a>)</span> and its variations to either
-study all interactions from single targeted regions (4C) <span class="citation">(Simonis et al. <a href="#ref-Simonis2006">2006</a>)</span> or
-multiple target regions (5C) <span class="citation">(Dostie et al. <a href="#ref-Dostie2006">2006</a>)</span>, interactions between all regions
-genome-wide (Hi-C) <span class="citation">(Lieberman-Aiden et al. <a href="#ref-Lieberman-Aiden2009">2009</a>; Rao et al. <a href="#ref-Rao2014">2014</a>)</span> or interactions mediated by specific
-proteins (6C <span class="citation">(Tiwari et al. <a href="#ref-Tiwari2008">2008</a>)</span> and ChIA-PET <span class="citation">(Fullwood et al. <a href="#ref-Fullwood2009">2009</a>; Tang et al. <a href="#ref-Tang2015">2015</a>)</span>).</p>
-<p>While these experimental methods have brought many exciting insights
-into the three-dimensional organization of genomes <span class="citation">(Merkenschlager and Nora <a href="#ref-Merkenschlager2016">2016</a>; Krijger and Laat <a href="#ref-Krijger2016">2016</a>; Bonev and Cavalli <a href="#ref-Bonev2016">2016</a>)</span>, these
-methods are not only elaborate and expensive but also require large
-amounts of sample material or have limited resolution <span class="citation">(Sati and Cavalli <a href="#ref-Sati2016">2016</a>; Schmitt et al. <a href="#ref-Schmitt2016">2016</a>)</span>. As a
-consequence, genome-wide chromatin interaction maps are only available
-for a limited number of cell types and conditions.</p>
-<p>In contrast, the binding sites of TFs can be detected genome-wide by
-ChIP-seq experiments, and are available for hundreds of TFs in many cell
-types and conditions <span class="citation">(Dunham et al. <a href="#ref-Dunham2012">2012</a>; Davis et al. <a href="#ref-Davis2017">2017</a>)</span>. Here, we propose that it is possible to
-use these data to detect chromatin loops.</p>
-<p>Recent studies provide functional insights about how chromatin loops are
-formed and highlight the role of architectural proteins such as CTCF and
-cohesin <span class="citation">(Merkenschlager and Nora <a href="#ref-Merkenschlager2016">2016</a>)</span>. CTCF recognizes a specific sequence motif, to which it
-binds with high affinity <span class="citation">(Kim et al. <a href="#ref-Kim2007">2007</a>; Nagy et al. <a href="#ref-Nagy2016">2016</a>)</span>. Interestingly, CTCF motifs are
-present in convergent orientation at chromatin loop anchors
-<span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>; Tang et al. <a href="#ref-Tang2015">2015</a>; Vietri Rudan et al. <a href="#ref-VietriRudan2015">2015</a>)</span>. Furthermore, experimental inversion of the motif results
-in changes of loop formation and altered gene expression <span class="citation">(Guo et al. <a href="#ref-Guo2015">2015</a>; Wit et al. <a href="#ref-deWit2015">2015</a>)</span>.
-Polymer simulations and experimental perturbations led to a model of
-loop extrusion, in which loop-extruding factors, such as cohesin, form
-progressively larger loops but stall at CTCF binding sites in convergent
-orientation <span class="citation">(Sanborn et al. <a href="#ref-Sanborn2015">2015</a>; Fudenberg et al. <a href="#ref-Fudenberg2016">2016</a>)</span>. According to these models, CTCF binding sites can
-function as anchors of chromatin loops.</p>
-<p>Our hypothesis is, that we can use convergently aligned CTCF motifs to
-search for similar ChIP-seq signals at both sites of chromatin loops to
-predict looping interactions from the largely available ChIP-seq data in
-many diverse cell-types and conditions (Fig. <a href="5-1-introduction-3.html#fig:LoopPred1">5.1</a>A). We then developed and
-tested a computational method to predict chromatin looping interactions
-from only genomic sequence features and TF binding data from ChIP-seq
-experiments. We show that our method has high prediction performance
-when compared to Hi-C and ChIA-PET loops and that prediction performance
-depends on the ChIP-seq target, which allows screening for TFs with
-potential novel functions in chromatin loop formation. The predicted
-looping interactions can be used to (i) associate TF binding sites or
-enhancers to regulated genes for conditions where Hi-C like data is not
-available, and (ii) to increase the resolution of interaction maps,
-where low resolution Hi-C data is available. We implemented our method
-as the R package <em>sevenC</em>.</p>
+<p>The three-dimensional folding structure of the genome and its dynamic changes play a very important role in the regulation of gene expression <span class="citation">(Merkenschlager and Nora <a href="#ref-Merkenschlager2016">2016</a>; Krijger and Laat <a href="#ref-Krijger2016">2016</a>)</span>. For example, while it was well known that transcription factors (TFs) can regulate genes by binding to their adjacent promoters, many TF binding sites are in distal regulatory regions, such as enhancers, that are hundreds of kilo bases far from gene promoters <span class="citation">(Spitz and Furlong <a href="#ref-Spitz2012">2012</a>)</span>. These distal regulatory regions can physically interact with promoters of regulated genes by chromatin looping interactions <span class="citation">(Tolhuis et al. <a href="#ref-Tolhuis2002">2002</a>; Sanyal et al. <a href="#ref-Sanyal2012">2012</a>)</span>, thus it is not trivial to associate TFs to regulated genes without information of the genome structure <span class="citation">(Mora et al. <a href="#ref-Mora2015">2015</a>)</span>. Such looping interactions can be measured by chromosome conformation capture (3C) experiments <span class="citation">(Dekker et al. <a href="#ref-Dekker2002">2002</a>)</span> and its variations to either study all interactions from single targeted regions (4C) <span class="citation">(Simonis et al. <a href="#ref-Simonis2006">2006</a>)</span> or multiple target regions (5C) <span class="citation">(Dostie et al. <a href="#ref-Dostie2006">2006</a>)</span>, interactions between all regions genome-wide (Hi-C) <span class="citation">(Lieberman-Aiden et al. <a href="#ref-Lieberman-Aiden2009">2009</a>; Rao et al. <a href="#ref-Rao2014">2014</a>)</span> or interactions mediated by specific proteins (6C <span class="citation">(Tiwari et al. <a href="#ref-Tiwari2008">2008</a>)</span> and ChIA-PET <span class="citation">(Fullwood et al. <a href="#ref-Fullwood2009">2009</a>; Tang et al. <a href="#ref-Tang2015">2015</a>)</span>).</p>
+<p>While these experimental methods have brought many exciting insights into the three-dimensional organization of genomes <span class="citation">(Merkenschlager and Nora <a href="#ref-Merkenschlager2016">2016</a>; Krijger and Laat <a href="#ref-Krijger2016">2016</a>; Bonev and Cavalli <a href="#ref-Bonev2016">2016</a>)</span>, these methods are not only elaborate and expensive but also require large amounts of sample material or have limited resolution <span class="citation">(Sati and Cavalli <a href="#ref-Sati2016">2016</a>; Schmitt et al. <a href="#ref-Schmitt2016">2016</a>)</span>. As a consequence, genome-wide chromatin interaction maps are only available for a limited number of cell types and conditions.</p>
+<p>In contrast, the binding sites of TFs can be detected genome-wide by ChIP-seq experiments, and are available for hundreds of TFs in many cell types and conditions <span class="citation">(Dunham et al. <a href="#ref-Dunham2012">2012</a>; Davis et al. <a href="#ref-Davis2017">2017</a>)</span>. Here, we propose that it is possible to use these data to detect chromatin loops.</p>
+<p>Recent studies provide functional insights about how chromatin loops are formed and highlight the role of architectural proteins such as CTCF and cohesin <span class="citation">(Merkenschlager and Nora <a href="#ref-Merkenschlager2016">2016</a>)</span>. CTCF recognizes a specific sequence motif, to which it binds with high affinity <span class="citation">(Kim et al. <a href="#ref-Kim2007">2007</a>; Nagy et al. <a href="#ref-Nagy2016">2016</a>)</span>. Interestingly, CTCF motifs are present in convergent orientation at chromatin loop anchors <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>; Tang et al. <a href="#ref-Tang2015">2015</a>; Vietri Rudan et al. <a href="#ref-VietriRudan2015">2015</a>)</span>. Furthermore, experimental inversion of the motif results in changes of loop formation and altered gene expression <span class="citation">(Guo et al. <a href="#ref-Guo2015">2015</a>; Wit et al. <a href="#ref-deWit2015">2015</a>)</span>. Polymer simulations and experimental perturbations led to a model of loop extrusion, in which loop-extruding factors, such as cohesin, form progressively larger loops but stall at CTCF binding sites in convergent orientation <span class="citation">(Sanborn et al. <a href="#ref-Sanborn2015">2015</a>; Fudenberg et al. <a href="#ref-Fudenberg2016">2016</a>)</span>. According to these models, CTCF binding sites can function as anchors of chromatin loops.</p>
+<p>Our hypothesis is, that we can use convergently aligned CTCF motifs to search for similar ChIP-seq signals at both sites of chromatin loops to predict looping interactions from the largely available ChIP-seq data in many diverse cell-types and conditions (Fig. <a href="5-1-introduction-3.html#fig:LoopPred1">5.1</a>A). We then developed and tested a computational method to predict chromatin looping interactions from only genomic sequence features and TF binding data from ChIP-seq experiments. We show that our method has high prediction performance when compared to Hi-C and ChIA-PET loops and that prediction performance depends on the ChIP-seq target, which allows screening for TFs with potential novel functions in chromatin loop formation. The predicted looping interactions can be used to (i) associate TF binding sites or enhancers to regulated genes for conditions where Hi-C like data is not available, and (ii) to increase the resolution of interaction maps, where low resolution Hi-C data is available. We implemented our method as the R package <em>sevenC</em>.</p>
 <!-- ---------------------------------------------------------------- -->
 <div class="figure" style="text-align: center"><span id="fig:LoopPred1"></span>
 <img src="figures/loop_prediction/fig1_v06.png" alt="Chromatin looping interactions result in ChIP-seq coverage signals at direct and indirect bound loop anchors. (A) Schematic illustration of a chromatin loop with CTCF motifs at the loop anchors (top right). A TF binds directly at the right loop anchor close to the CTCF motif. This results in a ChIP-seq coverage peak at the directly bound locus (bottom right) and in a minor signal at the other loop anchor (bottom left), both at the same distance to each CTCF motif. (B) Znf143 ChIP-seq coverage at six selected example CTCF motif pairs of which the ones in the left panel interact via loops according to Hi-C and ChIA-PET data and the ones in the right panel do not interact. The ChIP-seq coverage signal for each loci pair is shown in red for the left anchor region and in blue for the right anchor region, according to the distance to the CTCF motif (x-axis). Interacting CTCF motif pairs show more similar ChIP-seq coverage signals, which are often enriched at similar distances to the CTCF motif pairs, while the profiles of non-interacting pairs are less similar. (C) The similarity of ChIP-seq profiles by correlation of the ChIP-seq coverage signals of the selected motif pairs in (B). For each pair, the coverage at the right anchor is plotted versus the coverage at the left anchor at the same distance (color coded) from each CTCF motif. The Pearson correlation coefficient (R) of the dots is higher for interacting loci pairs. (D) Example loci on chromosome 1 shown in the genome-browser with six ChIP-seq tracks. Red and blue bars indicate CTCF recognition motifs on the forward and reverse strand, respectively. The bottom panel shows CTCF motif pairs in gray (candidates) and actually interacting pairs in green, according to ChIA-PET and Hi-C data." width="90%" />
@@ -373,22 +326,22 @@ Figure 5.1: <strong>Chromatin looping interactions result in ChIP-seq coverage s
 <p>Schmitt AD, Hu M, Ren B. 2016. Genome-wide mapping and analysis of chromosome architecture. <em>Nature Reviews Molecular Cell Biology</em>.</p>
 </div>
 <div id="ref-Dunham2012">
-<p>Dunham I, Kundaje A, Aldred SF, Collins PJ, Davis C a, Doyle F, Epstein CB, Frietze S, Harrow J, Kaul R, et al. 2012. An integrated encyclopedia of dna elements in the human genome. <em>Nature</em> <strong>489</strong>: 57–74.</p>
+<p>Dunham I, Kundaje A, Aldred SF, Collins PJ, Davis C a, Doyle F, Epstein CB, Frietze S, Harrow J, Kaul R, et al. 2012. An integrated encyclopedia of dNA elements in the human genome. <em>Nature</em> <strong>489</strong>: 57–74.</p>
 </div>
 <div id="ref-Davis2017">
 <p>Davis AP, Grondin CJ, Johnson RJ, Sciaky D, King BL, McMorran R, Wiegers J, Wiegers TC, Mattingly CJ. 2017. The comparative toxicogenomics database: Update 2017. <em>Nucleic Acids Research</em> <strong>45</strong>: D972–D978.</p>
 </div>
 <div id="ref-Kim2007">
-<p>Kim TH, Abdullaev ZK, Smith AD, Ching KA, Loukinov DI, Green RD, Zhang MQ, Lobanenkov VV, Ren B. 2007. Analysis of the vertebrate insulator protein ctcf-binding sites in the human genome. <em>Cell</em> <strong>128</strong>: 1231–1245.</p>
+<p>Kim TH, Abdullaev ZK, Smith AD, Ching KA, Loukinov DI, Green RD, Zhang MQ, Lobanenkov VV, Ren B. 2007. Analysis of the vertebrate insulator protein cTCF-binding sites in the human genome. <em>Cell</em> <strong>128</strong>: 1231–1245.</p>
 </div>
 <div id="ref-Nagy2016">
-<p>Nagy G, Czipa E, Steiner L, Nagy T, Pongor S, Nagy L, Barta E. 2016. Motif oriented high-resolution analysis of chip-seq data reveals the topological order of ctcf and cohesin proteins on dna. <em>BMC Genomics</em> <strong>17</strong>: 637.</p>
+<p>Nagy G, Czipa E, Steiner L, Nagy T, Pongor S, Nagy L, Barta E. 2016. Motif oriented high-resolution analysis of chIP-seq data reveals the topological order of cTCF and cohesin proteins on dNA. <em>BMC Genomics</em> <strong>17</strong>: 637.</p>
 </div>
 <div id="ref-VietriRudan2015">
-<p>Vietri Rudan M, Barrington C, Henderson S, Ernst C, Odom DT, Tanay A, Hadjur S. 2015. Comparative hi-c reveals that ctcf underlies evolution of chromosomal domain architecture. <em>Cell reports</em> <strong>10</strong>: 1297–309.</p>
+<p>Vietri Rudan M, Barrington C, Henderson S, Ernst C, Odom DT, Tanay A, Hadjur S. 2015. Comparative hi-c reveals that cTCF underlies evolution of chromosomal domain architecture. <em>Cell reports</em> <strong>10</strong>: 1297–309.</p>
 </div>
 <div id="ref-Guo2015">
-<p>Guo Y, Xu Q, Canzio D, Shou J, Li J, Gorkin DU, Jung I, Wu H, Zhai Y, Tang Y, et al. 2015. CRISPR inversion of ctcf sites alters genome topology and enhancer/promoter function. <em>Cell</em> <strong>162</strong>: 900–910.</p>
+<p>Guo Y, Xu Q, Canzio D, Shou J, Li J, Gorkin DU, Jung I, Wu H, Zhai Y, Tang Y, et al. 2015. CRISPR inversion of cTCF sites alters genome topology and enhancer/Promoter function. <em>Cell</em> <strong>162</strong>: 900–910.</p>
 </div>
 <div id="ref-deWit2015">
 <p>Wit E de, Vos ESM, Holwerda SJB, Valdes-Quezada C, Verstegen MJAM, Teunissen H, Splinter E, Wijchers PJ, Krijger PHL, Laat W de. 2015. CTCF binding polarity determines chromatin looping. <em>Molecular Cell</em> <strong>60</strong>: 676–684.</p>
@@ -420,8 +373,8 @@ Figure 5.1: <strong>Chromatin looping interactions result in ChIP-seq coverage s
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -452,7 +405,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

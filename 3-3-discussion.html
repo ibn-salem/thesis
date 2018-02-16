@@ -6,26 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Genome folding in evolution and disease</title>
-  <meta name="description" content="This is a draft PhD thesis.">
+  <meta name="description" content="A draft PhD thesis on genome folding in evoultion and disease.">
   <meta name="generator" content="bookdown 0.6.2 and GitBook 2.6.7">
 
   <meta property="og:title" content="Genome folding in evolution and disease" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ibn-salem.github.io/thesis/" />
   
-  
-  <meta property="og:description" content="This is a draft PhD thesis." />
+  <meta property="og:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   <meta name="github-repo" content="ibn-salem/thesis" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Genome folding in evolution and disease" />
   
-  <meta name="twitter:description" content="This is a draft PhD thesis." />
+  <meta name="twitter:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   
 
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-15">
+<meta name="date" content="2018-02-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -257,112 +257,15 @@
             <section class="normal" id="section-">
 <div id="discussion" class="section level2">
 <h2><span class="header-section-number">3.3</span> Discussion</h2>
-<p>Our analysis of rearrangements between human and 12 diverse species
-shows that TADs are largely stable units of genomes, which are often
-reshuffled as a whole instead of disrupted by rearrangements.
-Furthermore, the decreased expression correlation with orthologs in
-mouse and human in rearranged TADs shows that disruptions of TADs are
-associated with changes in gene regulation over large evolutionary time
-scales.</p>
-<p>TADs exert their influence on gene expression regulation by determining
-the set of possible interactions of cis-regulatory sequences with their
-target promoters <span class="citation">(Nora et al. <a href="#ref-Nora2012">2012</a>; Symmons et al. <a href="#ref-Symmons2014">2014</a>; Schoenfelder et al. <a href="#ref-Schoenfelder2015">2015</a>)</span>. This might facilitate the cooperation of
-several sequences that is often needed for the complex spatiotemporal
-regulation of transcription <span class="citation">(Andrey and Mundlos <a href="#ref-Andrey2017">2017</a>)</span>. The disruption of these enclosed
-regulatory environments enables the recruitment of other cis-regulatory
-sequences and might prevent formerly established interactions <span class="citation">(Montavon et al. <a href="#ref-Montavon2012">2012</a>)</span>.
-The detrimental effects of such events have been shown in the study of
-diseases <span class="citation">(Redin et al. <a href="#ref-Redin2017">2017</a>; Zepeda-Mendoza et al. <a href="#ref-Zepeda-Mendoza2017">2017</a>)</span>. There are also incidences where pathogenic
-phenotypes could be specifically attributed to enhancers establishing
-contacts to promoters that were formerly out of reach because of
-intervening TAD boundaries <span class="citation">(Ibn-Salem et al. <a href="#ref-Ibn-Salem2014">2014</a>; Lupiáñez et al. <a href="#ref-Lupianez2015">2015</a>; Spielmann et al. <a href="#ref-Spielmann2012">2012</a>)</span>.
-This would explain the selective
-pressure to maintain TAD integrity over large evolutionary distances and
-why we observe higher gene expression conservation for human genes
-within TADs compared to genes outside TADs.</p>
-<p>Disruptions of TADs by large-scale rearrangements change expression
-patterns of orthologs across tissues and these changes might be
-explained by the altered regulatory environment which genes are exposed
-to after rearrangement <span class="citation">(Farré et al. <a href="#ref-Farre2015">2015</a>)</span>.</p>
-<p>Our results are largely consistent with the reported finding that many
-TADs correspond to clusters of conserved non-coding elements (GRBs)
-<span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>)</span>. We observe a strong depletion of evolutionary rearrangements in
-GRBs and enrichment at GRB boundaries. This is consistent with
-comparative genome analysis revealing that GRBs largely overlap with
-micro-syntenic blocks in <em>Drosophila</em> <span class="citation">(Engström et al. <a href="#ref-Engstrom2007">2007</a>)</span> and fish genomes <span class="citation">(Dimitrieva and Bucher <a href="#ref-Dimitrieva2013">2013</a>)</span>.
-However, over 60% of human hESC TADs do not overlap GRBs <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>)</span>, raising
-the question of whether only a small subset of TADs are conserved.
-Interestingly, we find also depletion of rearrangements in non-GRB-TADs.
-This indicates that our rearrangement analysis identifies conservation
-also for TADs that are not enriched for CNEs. High expression
-correlation of orthologs in conserved TADs suggestss that the
-maintenance of expression regulation is important for most genes and
-probably even more crucial for developmental genes which are frequently
-found in GRBs.</p>
-<p>Previous work using comparative Hi-C analysis in four mammals revealed
-that insulation of TAD boundaries is robustly conserved at syntenic
-regions, illustrating this with a few examples of rearrangements between
-mouse and dog genomes, which were located in both species at TAD
-boundaries <span class="citation">(Vietri Rudan et al. <a href="#ref-VietriRudan2015">2015</a>)</span>. The results of our analysis of thousands of
-rearrangements between human and 12 other species confirmed and expanded
-these earlier observations.</p>
-<p>The reliable identification of evolutionary genomic rearrangements is
-difficult. Especially for non-coding genomic features like TAD
-boundaries, it is important to use approaches that are unbiased towards
-coding sequence. Previous studies identified rearrangements by
-interrupted adjacency of ortholog genes between two organisms <span class="citation">(Vietri Rudan et al. <a href="#ref-VietriRudan2015">2015</a>; Pevzner and Tesler <a href="#ref-Pevzner2003">2003</a>)</span>.
-However, such an approach assumes equal inter-genic distances, which is
-violated at TAD boundaries, which have in general higher gene density
-<span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>; Hou et al. <a href="#ref-Hou2012">2012</a>)</span>. To avoid this bias we used whole-genome-alignments. However,
-low quality of the genome assembly of some species might introduce
-alignment problems and potentially false positive rearrangement
-breakpoints.</p>
-<p>Rearrangements are created by DNA double strand breaks (DSBs), which are
-not uniquely distributed in the genome. Certain genomic features, such
-as open chromatin, active transcription and certain histone marks are
-shown to be enriched at DSBs in somatic translocation sites <span class="citation">(Roukos and Misteli <a href="#ref-Roukos2014">2014</a>)</span> and
-evolutionary rearrangements <span class="citation">(Murphy et al. <a href="#ref-Murphy2005">2005</a>; Hinsch and Hannenhalli <a href="#ref-Hinsch2006">2006</a>)</span>. Furthermore, induced DSBs and
-somatic translocation breakpoints are enriched at chromatin loop anchors
-<span class="citation">(Canela et al. <a href="#ref-Canela2017">2017</a>)</span>. This opens the question of whether our finding of significantly
-enriched evolutionary rearrangement breakpoints at TAD boundaries could
-be explained by the molecular properties of the chromatin at TAD
-boundaries, rather than by the selective pressure to keep TAD function.
-Although, we cannot distinguish the two explanations entirely, our gene
-expression analysis indicates stronger conservation of gene expression
-in conserved TADs and more divergent expression patterns in rearranged
-TADs. This supports a model in which disruption of TADs are most often
-disadvantageous for an organism. Structural variations disrupting TADs
-can lead to miss regulation of neighboring genes as shown for genetic
-diseases <span class="citation">(Ibn-Salem et al. <a href="#ref-Ibn-Salem2014">2014</a>; Lupiáñez et al. <a href="#ref-Lupianez2015">2015</a>; Redin et al. <a href="#ref-Redin2017">2017</a>; Franke et al. <a href="#ref-Franke2016">2016</a>)</span> and cancers <span class="citation">(Hnisz et al. <a href="#ref-Hnisz2016">2016</a><a href="#ref-Hnisz2016">b</a>; Northcott et al. <a href="#ref-Northcott2014">2014</a>; Weischenfeldt et al. <a href="#ref-Weischenfeldt2016">2016</a>)</span>.</p>
-<p>Interestingly, we observed higher gene expression conservation for human
-genes within TADs compared to genes outside TADs. The larger syntenic
-structure of TADs might conserve the regulation likely by maintaining
-the proximity of promoters and cis-regulatory sequences while genes
-outside such frameworks are more exposed to changing genomic landscapes,
-presumably resulting in a greater susceptibility to the recruitment of
-regulatory sequences.</p>
-<p>Apart from the described detrimental effects, our results suggest that
-TAD rearrangements occurred between genomes of human and mouse and led
-to changes in expression patterns of many orthologous genes. Since this
-is likely attributed to changing regulatory environments, it is also
-conceivable that some rearrangements led to a gain of function. Hence,
-TAD rearrangements might also provide a vehicle for evolutionary
-innovation. A single TAD reorganization has the potential to affect the
-regulation of a whole set of genes in contrast to the more confined
-consequences of other types of mutations <span class="citation">(Acemel et al. <a href="#ref-Acemel2017">2017</a>)</span>. Since it is also
-believed that changes in cis-regulatory sequences of developmental genes
-play a big part in evolutionary innovation <span class="citation">(Carroll <a href="#ref-Carroll2008">2008</a>)</span>, the development of
-the enormous diversity of animal traits in evolution might have been
-promoted by the rearrangement of structural domains. This is consistent
-with a model in which new genes can arise by tandem-duplication and
-during evolution are then re-located to other environments <span class="citation">(Ibn-Salem et al. <a href="#ref-Ibn-Salem2017">2017</a>)</span>. These
-changes might have facilitated significant leaps in morphological
-evolution explaining the emergence of features that could not appear in
-small gradual steps. Following this hypothesis, TADs would not only
-constitute structural entities that perform the function of maintaining
-an enclosed regulatory landscape but could also be a driving force for
-change by exposing many genes at once to different genomic environments
-following single events of genomic rearrangement.</p>
+<p>Our analysis of rearrangements between human and 12 diverse species shows that TADs are largely stable units of genomes, which are often reshuffled as a whole instead of disrupted by rearrangements. Furthermore, the decreased expression correlation with orthologs in mouse and human in rearranged TADs shows that disruptions of TADs are associated with changes in gene regulation over large evolutionary time scales.</p>
+<p>TADs exert their influence on gene expression regulation by determining the set of possible interactions of cis-regulatory sequences with their target promoters <span class="citation">(Nora et al. <a href="#ref-Nora2012">2012</a>; Symmons et al. <a href="#ref-Symmons2014">2014</a>; Schoenfelder et al. <a href="#ref-Schoenfelder2015">2015</a>)</span>. This might facilitate the cooperation of several sequences that is often needed for the complex spatiotemporal regulation of transcription <span class="citation">(Andrey and Mundlos <a href="#ref-Andrey2017">2017</a>)</span>. The disruption of these enclosed regulatory environments enables the recruitment of other cis-regulatory sequences and might prevent formerly established interactions <span class="citation">(Montavon et al. <a href="#ref-Montavon2012">2012</a>)</span>. The detrimental effects of such events have been shown in the study of diseases <span class="citation">(Redin et al. <a href="#ref-Redin2017">2017</a>; Zepeda-Mendoza et al. <a href="#ref-Zepeda-Mendoza2017">2017</a>)</span>. There are also incidences where pathogenic phenotypes could be specifically attributed to enhancers establishing contacts to promoters that were formerly out of reach because of intervening TAD boundaries <span class="citation">(Ibn-Salem et al. <a href="#ref-Ibn-Salem2014">2014</a>; Lupiáñez et al. <a href="#ref-Lupianez2015">2015</a>; Spielmann et al. <a href="#ref-Spielmann2012">2012</a>)</span>. This would explain the selective pressure to maintain TAD integrity over large evolutionary distances and why we observe higher gene expression conservation for human genes within TADs compared to genes outside TADs.</p>
+<p>Disruptions of TADs by large-scale rearrangements change expression patterns of orthologs across tissues and these changes might be explained by the altered regulatory environment which genes are exposed to after rearrangement <span class="citation">(Farré et al. <a href="#ref-Farre2015">2015</a>)</span>.</p>
+<p>Our results are largely consistent with the reported finding that many TADs correspond to clusters of conserved non-coding elements (GRBs) <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>)</span>. We observe a strong depletion of evolutionary rearrangements in GRBs and enrichment at GRB boundaries. This is consistent with comparative genome analysis revealing that GRBs largely overlap with micro-syntenic blocks in <em>Drosophila</em> <span class="citation">(Engström et al. <a href="#ref-Engstrom2007">2007</a>)</span> and fish genomes <span class="citation">(Dimitrieva and Bucher <a href="#ref-Dimitrieva2013">2013</a>)</span>. However, over 60% of human hESC TADs do not overlap GRBs <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>)</span>, raising the question of whether only a small subset of TADs are conserved. Interestingly, we find also depletion of rearrangements in non-GRB-TADs. This indicates that our rearrangement analysis identifies conservation also for TADs that are not enriched for CNEs. High expression correlation of orthologs in conserved TADs suggestss that the maintenance of expression regulation is important for most genes and probably even more crucial for developmental genes which are frequently found in GRBs.</p>
+<p>Previous work using comparative Hi-C analysis in four mammals revealed that insulation of TAD boundaries is robustly conserved at syntenic regions, illustrating this with a few examples of rearrangements between mouse and dog genomes, which were located in both species at TAD boundaries <span class="citation">(Vietri Rudan et al. <a href="#ref-VietriRudan2015">2015</a>)</span>. The results of our analysis of thousands of rearrangements between human and 12 other species confirmed and expanded these earlier observations.</p>
+<p>The reliable identification of evolutionary genomic rearrangements is difficult. Especially for non-coding genomic features like TAD boundaries, it is important to use approaches that are unbiased towards coding sequence. Previous studies identified rearrangements by interrupted adjacency of ortholog genes between two organisms <span class="citation">(Vietri Rudan et al. <a href="#ref-VietriRudan2015">2015</a>; Pevzner and Tesler <a href="#ref-Pevzner2003">2003</a>)</span>. However, such an approach assumes equal inter-genic distances, which is violated at TAD boundaries, which have in general higher gene density <span class="citation">(Dixon et al. <a href="#ref-Dixon2012">2012</a>; Hou et al. <a href="#ref-Hou2012">2012</a>)</span>. To avoid this bias we used whole-genome-alignments. However, low quality of the genome assembly of some species might introduce alignment problems and potentially false positive rearrangement breakpoints.</p>
+<p>Rearrangements are created by DNA double strand breaks (DSBs), which are not uniquely distributed in the genome. Certain genomic features, such as open chromatin, active transcription and certain histone marks are shown to be enriched at DSBs in somatic translocation sites <span class="citation">(Roukos and Misteli <a href="#ref-Roukos2014">2014</a>)</span> and evolutionary rearrangements <span class="citation">(Murphy et al. <a href="#ref-Murphy2005">2005</a>; Hinsch and Hannenhalli <a href="#ref-Hinsch2006">2006</a>)</span>. Furthermore, induced DSBs and somatic translocation breakpoints are enriched at chromatin loop anchors <span class="citation">(Canela et al. <a href="#ref-Canela2017">2017</a>)</span>. This opens the question of whether our finding of significantly enriched evolutionary rearrangement breakpoints at TAD boundaries could be explained by the molecular properties of the chromatin at TAD boundaries, rather than by the selective pressure to keep TAD function. Although, we cannot distinguish the two explanations entirely, our gene expression analysis indicates stronger conservation of gene expression in conserved TADs and more divergent expression patterns in rearranged TADs. This supports a model in which disruption of TADs are most often disadvantageous for an organism. Structural variations disrupting TADs can lead to miss regulation of neighboring genes as shown for genetic diseases <span class="citation">(Ibn-Salem et al. <a href="#ref-Ibn-Salem2014">2014</a>; Lupiáñez et al. <a href="#ref-Lupianez2015">2015</a>; Redin et al. <a href="#ref-Redin2017">2017</a>; Franke et al. <a href="#ref-Franke2016">2016</a>)</span> and cancers <span class="citation">(Hnisz et al. <a href="#ref-Hnisz2016">2016</a><a href="#ref-Hnisz2016">b</a>; Northcott et al. <a href="#ref-Northcott2014">2014</a>; Weischenfeldt et al. <a href="#ref-Weischenfeldt2016">2016</a>)</span>.</p>
+<p>Interestingly, we observed higher gene expression conservation for human genes within TADs compared to genes outside TADs. The larger syntenic structure of TADs might conserve the regulation likely by maintaining the proximity of promoters and cis-regulatory sequences while genes outside such frameworks are more exposed to changing genomic landscapes, presumably resulting in a greater susceptibility to the recruitment of regulatory sequences.</p>
+<p>Apart from the described detrimental effects, our results suggest that TAD rearrangements occurred between genomes of human and mouse and led to changes in expression patterns of many orthologous genes. Since this is likely attributed to changing regulatory environments, it is also conceivable that some rearrangements led to a gain of function. Hence, TAD rearrangements might also provide a vehicle for evolutionary innovation. A single TAD reorganization has the potential to affect the regulation of a whole set of genes in contrast to the more confined consequences of other types of mutations <span class="citation">(Acemel et al. <a href="#ref-Acemel2017">2017</a>)</span>. Since it is also believed that changes in cis-regulatory sequences of developmental genes play a big part in evolutionary innovation <span class="citation">(Carroll <a href="#ref-Carroll2008">2008</a>)</span>, the development of the enormous diversity of animal traits in evolution might have been promoted by the rearrangement of structural domains. This is consistent with a model in which new genes can arise by tandem-duplication and during evolution are then re-located to other environments <span class="citation">(Ibn-Salem et al. <a href="#ref-Ibn-Salem2017">2017</a>)</span>. These changes might have facilitated significant leaps in morphological evolution explaining the emergence of features that could not appear in small gradual steps. Following this hypothesis, TADs would not only constitute structural entities that perform the function of maintaining an enclosed regulatory landscape but could also be a driving force for change by exposing many genes at once to different genomic environments following single events of genomic rearrangement.</p>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
@@ -379,7 +282,7 @@ following single events of genomic rearrangement.</p>
 <p>Andrey G, Mundlos S. 2017. The three-dimensional genome: Regulating gene expression during pluripotency and development. <em>Development</em> <strong>144</strong>: 3646–3658.</p>
 </div>
 <div id="ref-Montavon2012">
-<p>Montavon T, Thevenet L, Duboule D. 2012. Impact of copy number variations (cnvs) on long-range gene regulation at the hoxd locus. <em>Proceedings of the National Academy of Sciences of the United States of America</em> <strong>109</strong>: 20204–11.</p>
+<p>Montavon T, Thevenet L, Duboule D. 2012. Impact of copy number variations (cNVs) on long-range gene regulation at the hoxD locus. <em>Proceedings of the National Academy of Sciences of the United States of America</em> <strong>109</strong>: 20204–11.</p>
 </div>
 <div id="ref-Redin2017">
 <p>Redin C, Brand H, Collins RL, Kammin T, Mitchell E, Hodge JC, Hanscom C, Pillalamarri V, Seabra CM, Abbott M-A, et al. 2017. The genomic landscape of balanced cytogenetic abnormalities associated with human congenital anomalies. <em>Nature Genetics</em> <strong>49</strong>: 36–45.</p>
@@ -394,7 +297,7 @@ following single events of genomic rearrangement.</p>
 <p>Lupiáñez DG, Kraft K, Heinrich V, Krawitz P, Brancati F, Klopocki E, Horn D, Kayserili H, Opitz JM, Laxova R, et al. 2015. Disruptions of topological chromatin domains cause pathogenic rewiring of gene-enhancer interactions. <em>Cell</em> <strong>161</strong>: 1012–1025.</p>
 </div>
 <div id="ref-Spielmann2012">
-<p>Spielmann M, Brancati F, Krawitz PM, Robinson PN, Ibrahim DM, Franke M, Hecht J, Lohan S, Dathe K, Nardone AM, et al. 2012. Homeotic arm-to-leg transformation associated with genomic rearrangements at the pitx1 locus. <em>American journal of human genetics</em> <strong>91</strong>: 629–35.</p>
+<p>Spielmann M, Brancati F, Krawitz PM, Robinson PN, Ibrahim DM, Franke M, Hecht J, Lohan S, Dathe K, Nardone AM, et al. 2012. Homeotic arm-to-leg transformation associated with genomic rearrangements at the pITX1 locus. <em>American journal of human genetics</em> <strong>91</strong>: 629–35.</p>
 </div>
 <div id="ref-Farre2015">
 <p>Farré M, Robinson TJ, Ruiz-Herrera A. 2015. An integrative breakage model of genome architecture, reshuffling and evolution. <em>BioEssays</em> n/a–n/a.</p>
@@ -409,7 +312,7 @@ following single events of genomic rearrangement.</p>
 <p>Dimitrieva S, Bucher P. 2013. UCNEbase—a database of ultraconserved non-coding elements and genomic regulatory blocks. <em>Nucleic Acids Research</em> <strong>41</strong>: D101–D109.</p>
 </div>
 <div id="ref-VietriRudan2015">
-<p>Vietri Rudan M, Barrington C, Henderson S, Ernst C, Odom DT, Tanay A, Hadjur S. 2015. Comparative hi-c reveals that ctcf underlies evolution of chromosomal domain architecture. <em>Cell reports</em> <strong>10</strong>: 1297–309.</p>
+<p>Vietri Rudan M, Barrington C, Henderson S, Ernst C, Odom DT, Tanay A, Hadjur S. 2015. Comparative hi-c reveals that cTCF underlies evolution of chromosomal domain architecture. <em>Cell reports</em> <strong>10</strong>: 1297–309.</p>
 </div>
 <div id="ref-Pevzner2003">
 <p>Pevzner P, Tesler G. 2003. Human and mouse genomic sequences reveal extensive breakpoint reuse in mammalian evolution. <em>Proceedings of the National Academy of Sciences of the United States of America</em> <strong>100</strong>: 7672–7.</p>
@@ -439,10 +342,10 @@ following single events of genomic rearrangement.</p>
 <p>Hnisz D, Weintraub AS, Day DS, Valton A-l, Bak RO, Li CH, Goldmann J, Lajoie BR, Fan ZP, Sigova AA, et al. 2016b. Activation of proto-oncogenes by disruption of chromosome neighborhoods. <em>Science (New York, NY)</em> <strong>351</strong>: 1454–8.</p>
 </div>
 <div id="ref-Northcott2014">
-<p>Northcott Pa, Lee C, Zichner T, Stütz AM, Erkek S, Kawauchi D, Shih DJH, Hovestadt V, Zapatka M, Sturm D, et al. 2014. Enhancer hijacking activates gfi1 family oncogenes in medulloblastoma. <em>Nature</em>.</p>
+<p>Northcott Pa, Lee C, Zichner T, Stütz AM, Erkek S, Kawauchi D, Shih DJH, Hovestadt V, Zapatka M, Sturm D, et al. 2014. Enhancer hijacking activates gFI1 family oncogenes in medulloblastoma. <em>Nature</em>.</p>
 </div>
 <div id="ref-Weischenfeldt2016">
-<p>Weischenfeldt J, Dubash T, Drainas AP, Mardin BR, Chen Y, Stütz AM, Waszak SM, Bosco G, Halvorsen AR, Raeder B, et al. 2016. Pan-cancer analysis of somatic copy-number alterations implicates irs4 and igf2 in enhancer hijacking. <em>Nature Genetics</em>.</p>
+<p>Weischenfeldt J, Dubash T, Drainas AP, Mardin BR, Chen Y, Stütz AM, Waszak SM, Bosco G, Halvorsen AR, Raeder B, et al. 2016. Pan-cancer analysis of somatic copy-number alterations implicates iRS4 and iGF2 in enhancer hijacking. <em>Nature Genetics</em>.</p>
 </div>
 <div id="ref-Acemel2017">
 <p>Acemel RD, Maeso I, Gómez‐Skarmeta JL. 2017. Topologically associated domains: A successful scaffold for the evolution of gene regulation in animals. <em>Wiley Interdisciplinary Reviews: Developmental Biology</em> 1–19.</p>
@@ -474,8 +377,8 @@ following single events of genomic rearrangement.</p>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -506,7 +409,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

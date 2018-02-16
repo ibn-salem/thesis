@@ -6,26 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Genome folding in evolution and disease</title>
-  <meta name="description" content="This is a draft PhD thesis.">
+  <meta name="description" content="A draft PhD thesis on genome folding in evoultion and disease.">
   <meta name="generator" content="bookdown 0.6.2 and GitBook 2.6.7">
 
   <meta property="og:title" content="Genome folding in evolution and disease" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ibn-salem.github.io/thesis/" />
   
-  
-  <meta property="og:description" content="This is a draft PhD thesis." />
+  <meta property="og:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   <meta name="github-repo" content="ibn-salem/thesis" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Genome folding in evolution and disease" />
   
-  <meta name="twitter:description" content="This is a draft PhD thesis." />
+  <meta name="twitter:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   
 
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-15">
+<meta name="date" content="2018-02-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -259,167 +259,54 @@
 <h2><span class="header-section-number">5.5</span> Methods</h2>
 <div id="ctcf-motifs-in-the-human-genome" class="section level3">
 <h3><span class="header-section-number">5.5.1</span> CTCF motifs in the human genome</h3>
-<p>The recognition motif of CTCF is well defined and available from the
-JASPAR database (MA0139.1) <span class="citation">(Mathelier et al. <a href="#ref-Mathelier2015">2015</a>)</span>. We downloaded TF binding site
-predictions with the CTCF motif (MA0139.1) in the human genome hg19 from
-the JASPAR database
-(<a href="http://expdata.cmmt.ubc.ca/JASPAR/downloads/UCSC_tracks/2018/hg19/tsv/MA0139.1.tsv.gz"><em>http://expdata.cmmt.ubc.ca/JASPAR/downloads/UCSC_tracks/2018/hg19/tsv/MA0139.1.tsv.gz</em></a>).
-Motif hits were filtered for p-value ≤ 2.5 x 10<sup>-6</sup>, resulting in 38,316
-highly significant CTCF motif hits genome-wide and 717,137 motif pairs
-within 1 Mb genomic distance that are considered as potential loop
-interaction anchors in this study.</p>
+<p>The recognition motif of CTCF is well defined and available from the JASPAR database (MA0139.1) <span class="citation">(Mathelier et al. <a href="#ref-Mathelier2015">2015</a>)</span>. We downloaded TF binding site predictions with the CTCF motif (MA0139.1) in the human genome hg19 from the JASPAR database (<a href="http://expdata.cmmt.ubc.ca/JASPAR/downloads/UCSC_tracks/2018/hg19/tsv/MA0139.1.tsv.gz"><em>http://expdata.cmmt.ubc.ca/JASPAR/downloads/UCSC_tracks/2018/hg19/tsv/MA0139.1.tsv.gz</em></a>). Motif hits were filtered for p-value ≤ 2.5 x 10<sup>-6</sup>, resulting in 38,316 highly significant CTCF motif hits genome-wide and 717,137 motif pairs within 1 Mb genomic distance that are considered as potential loop interaction anchors in this study.</p>
 </div>
 <div id="loop-interaction-data-for-training-and-validation" class="section level3">
 <h3><span class="header-section-number">5.5.2</span> Loop interaction data for training and validation</h3>
-<p>For training and validating the prediction model we used 9,448 published
-loops derived from high-resolution <em>in-situ</em> Hi-C experiments <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span> and
-206,399 CTCF and Pol2 ChIA-PET interactions <span class="citation">(Tang et al. <a href="#ref-Tang2015">2015</a>)</span> in human GM12878
-cells. We considered each CTCF motif pair as positive (true looping
-interaction) if there was at least one measured looping interaction for
-which each loop anchor overlapped one of the CTCF motifs. Overlaps were
-calculated using the R package <em>InteractionSet</em> <span class="citation">(Lun et al. <a href="#ref-Lun2016">2016</a>)</span>. This resulted in
-30,025 (4.2%) of 717,137 candidate motif pairs that were labeled as true
-looping interactions in GM12878. For the prediction validation in HeLa
-cells we used the 3,094 Hi-C loops and 402,722 ChIA-PET interactions for
-CTCF and Pol2 in HeLa from the same studies <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>; Tang et al. <a href="#ref-Tang2015">2015</a>)</span> and labeled 12,480
-(1.7 %) of motif pairs as true loops in HeLa cells.</p>
+<p>For training and validating the prediction model we used 9,448 published loops derived from high-resolution <em>in-situ</em> Hi-C experiments <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>)</span> and 206,399 CTCF and Pol2 ChIA-PET interactions <span class="citation">(Tang et al. <a href="#ref-Tang2015">2015</a>)</span> in human GM12878 cells. We considered each CTCF motif pair as positive (true looping interaction) if there was at least one measured looping interaction for which each loop anchor overlapped one of the CTCF motifs. Overlaps were calculated using the R package <em>InteractionSet</em> <span class="citation">(Lun et al. <a href="#ref-Lun2016">2016</a>)</span>. This resulted in 30,025 (4.2%) of 717,137 candidate motif pairs that were labeled as true looping interactions in GM12878. For the prediction validation in HeLa cells we used the 3,094 Hi-C loops and 402,722 ChIA-PET interactions for CTCF and Pol2 in HeLa from the same studies <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>; Tang et al. <a href="#ref-Tang2015">2015</a>)</span> and labeled 12,480 (1.7 %) of motif pairs as true loops in HeLa cells.</p>
 </div>
 <div id="chip-seq-datasets-in-gm12878-cells" class="section level3">
 <h3><span class="header-section-number">5.5.3</span> ChIP-seq datasets in GM12878 cells</h3>
-<p>We downloaded publicly available ChIP-seq data from the ENCODE data
-portal <span class="citation">(Dunham et al. <a href="#ref-Dunham2012">2012</a>; Davis et al. <a href="#ref-Davis2017">2017</a>)</span> by requiring the assay to be ChIP-seq, the target to be
-a transcription factor, the biosample term name to be GM12878, the
-genome assembly to be hg19, and the file-type to be bigWig. Furthermore,
-we filtered the data to have output type ‘fold change over control’ or
-‘signal’ and to be built from two replicates. Then we selected for each
-TF only one unique experiment as bigWig file with either output type
-‘fold change over control’ or, if unavailable, output type ‘signal’.
-This resulted in 124 ChIP-seq experiments for different TFs (<a href="D-1-LoopPredSupTab.html#LoopPredSupTab">Table S1</a>).
-ChIP-seq data for HeLa were retrieved analogously and filtered for the
-selected targets: RAD21, CTCF, ZNF143, STAT1, EP300, and ZNF143 (<a href="D-1-LoopPredSupTab.html#LoopPredSupTab">Table S2</a>).</p>
+<p>We downloaded publicly available ChIP-seq data from the ENCODE data portal <span class="citation">(Dunham et al. <a href="#ref-Dunham2012">2012</a>; Davis et al. <a href="#ref-Davis2017">2017</a>)</span> by requiring the assay to be ChIP-seq, the target to be a transcription factor, the biosample term name to be GM12878, the genome assembly to be hg19, and the file-type to be bigWig. Furthermore, we filtered the data to have output type ‘fold change over control’ or ‘signal’ and to be built from two replicates. Then we selected for each TF only one unique experiment as bigWig file with either output type ‘fold change over control’ or, if unavailable, output type ‘signal’. This resulted in 124 ChIP-seq experiments for different TFs (<a href="D-1-LoopPredSupTab.html#LoopPredSupTab">Table S1</a>). ChIP-seq data for HeLa were retrieved analogously and filtered for the selected targets: RAD21, CTCF, ZNF143, STAT1, EP300, and ZNF143 (<a href="D-1-LoopPredSupTab.html#LoopPredSupTab">Table S2</a>).</p>
 </div>
 <div id="chip-seq-data-types" class="section level3">
 <h3><span class="header-section-number">5.5.4</span> ChIP-seq data types</h3>
-<p>To analyze the effect of different ChIP-seq signal types and other
-genomic assays on loop prediction performance, we selected five TFs
-(ZNF143, STAT1, SMC3, RAD21, and CTCF) and downloaded the mapped reads
-of ChIP-seq experiments as BAM files from the ENCODE data portal <span class="citation">(Davis et al. <a href="#ref-Davis2017">2017</a>)</span>
-and from the UCSC Genome Browser <span class="citation">(Hinrichs et al. <a href="#ref-Hinrichs2006">2006</a>)</span>. Furthermore, we downloaded
-signal tracks as bigWig files for ChIP-seq input control experiment and
-DNase-seq experiments in GM12878 cells. File accession identifiers and
-download links are provided in <a href="D-1-LoopPredSupTab.html#LoopPredSupTab">Table S3</a>. We used the ChIP-seq peak
-caller <em>Q</em> <span class="citation">(Hansen et al. <a href="#ref-Hansen2015">2015</a>)</span> with option ‘-w’ for each human chromosome to generate
-signal tracks in BED format of shifted reads and qfrags. ‘Shifted reads’
-are counts of mapped reads that are shifted in 5’ direction by half of
-the estimated fragment size. ‘qfrags’ are pairs of forward and reverse
-mapped reads within a given distance <span class="citation">(Hansen et al. <a href="#ref-Hansen2015">2015</a>)</span> and are shown to improve
-signal to noise ratio in ChIP-seq peak calling <span class="citation">(Hansen et al. <a href="#ref-Hansen2015">2015</a>)</span>. We then combined
-resulting BED files from all chromosomes and converted them to the
-bedGraph and bigWig formats using the <em>bedtools</em> <span class="citation">(Quinlan and Hall <a href="#ref-Quinlan2010">2010</a>)</span> and
-<em>bedGrpahtoBigWig</em> tools from the UCSC Genome Browser <span class="citation">(Kent et al. <a href="#ref-Kent2010">2010</a>)</span>.</p>
+<p>To analyze the effect of different ChIP-seq signal types and other genomic assays on loop prediction performance, we selected five TFs (ZNF143, STAT1, SMC3, RAD21, and CTCF) and downloaded the mapped reads of ChIP-seq experiments as BAM files from the ENCODE data portal <span class="citation">(Davis et al. <a href="#ref-Davis2017">2017</a>)</span> and from the UCSC Genome Browser <span class="citation">(Hinrichs et al. <a href="#ref-Hinrichs2006">2006</a>)</span>. Furthermore, we downloaded signal tracks as bigWig files for ChIP-seq input control experiment and DNase-seq experiments in GM12878 cells. File accession identifiers and download links are provided in <a href="D-1-LoopPredSupTab.html#LoopPredSupTab">Table S3</a>. We used the ChIP-seq peak caller <em>Q</em> <span class="citation">(Hansen et al. <a href="#ref-Hansen2015">2015</a>)</span> with option ‘-w’ for each human chromosome to generate signal tracks in BED format of shifted reads and qfrags. ‘Shifted reads’ are counts of mapped reads that are shifted in 5’ direction by half of the estimated fragment size. ‘qfrags’ are pairs of forward and reverse mapped reads within a given distance <span class="citation">(Hansen et al. <a href="#ref-Hansen2015">2015</a>)</span> and are shown to improve signal to noise ratio in ChIP-seq peak calling <span class="citation">(Hansen et al. <a href="#ref-Hansen2015">2015</a>)</span>. We then combined resulting BED files from all chromosomes and converted them to the bedGraph and bigWig formats using the <em>bedtools</em> <span class="citation">(Quinlan and Hall <a href="#ref-Quinlan2010">2010</a>)</span> and <em>bedGrpahtoBigWig</em> tools from the UCSC Genome Browser <span class="citation">(Kent et al. <a href="#ref-Kent2010">2010</a>)</span>.</p>
 </div>
 <div id="chip-nexus-data-processing-for-rad21-and-scm3" class="section level3">
 <h3><span class="header-section-number">5.5.5</span> ChIP-nexus data processing for RAD21 and SCM3</h3>
-<p>ChIP-nexus data for RAD21 and SMC3 in GM12878 cells were published
-recently <span class="citation">(Tang et al. <a href="#ref-Tang2015">2015</a>)</span>. We downloaded the corresponding raw reads from the
-Sequence Read Archive (SRA) (Run IDs SRR2312570 and SRR2312571).
-Reads were processed using <em>felxcut</em> for barcode removal and adapter
-trimming as recommended in the user guide of the <em>Q-nexus</em> tool
-<span class="citation">(Hansen et al. <a href="#ref-Hansen2016">2016</a>)</span>. Reads were than mapped to human genome hg19 using <em>Bowtie</em>
-version 2.3.2 with default settings. Duplicate reads were removed
-using <em>nexcat</em> <span class="citation">(Hansen et al. <a href="#ref-Hansen2016">2016</a>)</span>. Finally, we created shifted-reads and qfraq
-profiles using <em>Q-nexus</em> <span class="citation">(Hansen et al. <a href="#ref-Hansen2016">2016</a>)</span> with options ‘–nexus-mode’ and ‘-w’
-for each chromosome and combined them to bigWig files as described
-above.</p>
+<p>ChIP-nexus data for RAD21 and SMC3 in GM12878 cells were published recently <span class="citation">(Tang et al. <a href="#ref-Tang2015">2015</a>)</span>. We downloaded the corresponding raw reads from the Sequence Read Archive (SRA) (Run IDs SRR2312570 and SRR2312571). Reads were processed using <em>felxcut</em> for barcode removal and adapter trimming as recommended in the user guide of the <em>Q-nexus</em> tool <span class="citation">(Hansen et al. <a href="#ref-Hansen2016">2016</a>)</span>. Reads were than mapped to human genome hg19 using <em>Bowtie</em> version 2.3.2 with default settings. Duplicate reads were removed using <em>nexcat</em> <span class="citation">(Hansen et al. <a href="#ref-Hansen2016">2016</a>)</span>. Finally, we created shifted-reads and qfraq profiles using <em>Q-nexus</em> <span class="citation">(Hansen et al. <a href="#ref-Hansen2016">2016</a>)</span> with options ‘–nexus-mode’ and ‘-w’ for each chromosome and combined them to bigWig files as described above.</p>
 </div>
 <div id="similarity-of-chip-seq-profiles-as-correlation-of-coverage-around-motifs" class="section level3">
 <h3><span class="header-section-number">5.5.6</span> Similarity of ChIP-seq profiles as correlation of coverage around motifs</h3>
-<p>For each CTCF sequence motif in the human genome, we quantified the
-number of reads overlapping each base within +/- 500 bp around the motif
-center. This results in a vector <span class="math inline">\(x_i = (x_{i,1}, x_{i,2}, ..., x_{i,n})\)</span> where <span class="math inline">\(x_{i,k}\)</span> is the coverage signal at position
-<span class="math inline">\(k\)</span> around CTCF motif <span class="math inline">\(i\)</span>. Coverage vectors for motif hits reported on
-the minus strand were reversed because CTCF motif sites are assumed to
-be symmetrically aligned to each other when cooperating at loop anchors
-(Fig. <a href="5-1-introduction-3.html#fig:LoopPred1">5.1</a>A) <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>; Tang et al. <a href="#ref-Tang2015">2015</a>; Guo et al. <a href="#ref-Guo2015">2015</a>; Wit et al. <a href="#ref-deWit2015">2015</a>; Sanborn et al. <a href="#ref-Sanborn2015">2015</a>)</span>.
-For all considered pairs of CTCF motifs <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>,
-we calculated the ChIP-seq profile similarity as Pearson correlation
-coefficient <span class="math inline">\(r_{i,j}\)</span> of the corresponding coverage vectors <span class="math inline">\(x_i\)</span> and <span class="math inline">\(x_j\)</span>.</p>
+<p>For each CTCF sequence motif in the human genome, we quantified the number of reads overlapping each base within +/- 500 bp around the motif center. This results in a vector <span class="math inline">\(x_i = (x_{i,1}, x_{i,2}, ..., x_{i,n})\)</span> where <span class="math inline">\(x_{i,k}\)</span> is the coverage signal at position <span class="math inline">\(k\)</span> around CTCF motif <span class="math inline">\(i\)</span>. Coverage vectors for motif hits reported on the minus strand were reversed because CTCF motif sites are assumed to be symmetrically aligned to each other when cooperating at loop anchors (Fig. <a href="5-1-introduction-3.html#fig:LoopPred1">5.1</a>A) <span class="citation">(Rao et al. <a href="#ref-Rao2014">2014</a>; Tang et al. <a href="#ref-Tang2015">2015</a>; Guo et al. <a href="#ref-Guo2015">2015</a>; Wit et al. <a href="#ref-deWit2015">2015</a>; Sanborn et al. <a href="#ref-Sanborn2015">2015</a>)</span>. For all considered pairs of CTCF motifs <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, we calculated the ChIP-seq profile similarity as Pearson correlation coefficient <span class="math inline">\(r_{i,j}\)</span> of the corresponding coverage vectors <span class="math inline">\(x_i\)</span> and <span class="math inline">\(x_j\)</span>.</p>
 </div>
 <div id="genomic-sequence-features-of-chromatin-loops" class="section level3">
 <h3><span class="header-section-number">5.5.7</span> Genomic sequence features of chromatin loops</h3>
-<p>Besides the correlation of ChIP-seq profiles, we used genomic features
-of motif pairs as features to predict interactions. The distance <em>d</em> is
-the number of bp between the two motif centers. The categorical variable
-orientation <em>o</em> is either, <em>convergent</em>, <em>forward</em>, <em>reverse</em>, or
-<em>divergent</em>, depending on the orientation of CTCF motifs in the pair
-(+-, ++, –, and -+, respectively). The motif hit similarity <em>s</em> is the
-minimum of the two motif hit scores in each pair; we derived these motif
-scores from the JASPAR motif hit tracks as <span class="math inline">\(-\log_{10}\)</span> transformed p-values
-<span class="citation">(Khan et al. <a href="#ref-Khan2018">2018</a>)</span>.</p>
+<p>Besides the correlation of ChIP-seq profiles, we used genomic features of motif pairs as features to predict interactions. The distance <em>d</em> is the number of bp between the two motif centers. The categorical variable orientation <em>o</em> is either, <em>convergent</em>, <em>forward</em>, <em>reverse</em>, or <em>divergent</em>, depending on the orientation of CTCF motifs in the pair (+-, ++, –, and -+, respectively). The motif hit similarity <em>s</em> is the minimum of the two motif hit scores in each pair; we derived these motif scores from the JASPAR motif hit tracks as <span class="math inline">\(-\log_{10}\)</span> transformed p-values <span class="citation">(Khan et al. <a href="#ref-Khan2018">2018</a>)</span>.</p>
 </div>
 <div id="chromatin-loop-prediction-model" class="section level3">
 <h3><span class="header-section-number">5.5.8</span> Chromatin Loop prediction model</h3>
-<p>We used a logistic regression model to predict the log-likelihood
-probability of CTCF motif pairs to perform chromatin looping
-interactions. The probability <span class="math inline">\(p\)</span> that two sites interact is modeled as:
-<span class="math display">\[
+<p>We used a logistic regression model to predict the log-likelihood probability of CTCF motif pairs to perform chromatin looping interactions. The probability <span class="math inline">\(p\)</span> that two sites interact is modeled as: <span class="math display">\[
 \ln (\frac{p}{1-p}) = \beta_0 + \beta_1 x_1, + ... + \beta_k x_k
-\]</span>
-where <span class="math inline">\(\beta\)</span> are the unknown model parameters and <span class="math inline">\(x_1, ..., x_k\)</span> the features.</p>
-<p>More specifically, for the 7C model with a single ChIP-seq experiment as
-input, the logistic regression model for the interaction probability <em>p</em>
-is:
-<span class="math display">\[
+\]</span> where <span class="math inline">\(\beta\)</span> are the unknown model parameters and <span class="math inline">\(x_1, ..., x_k\)</span> the features.</p>
+<p>More specifically, for the 7C model with a single ChIP-seq experiment as input, the logistic regression model for the interaction probability <em>p</em> is: <span class="math display">\[
 \ln (\frac{p}{1-p}) = \beta_0 + \beta_1 d, + \beta_2 o + \beta_3 s + \beta_4 r
 \]</span></p>
-<p>Parameters were estimated using the function ‘glm()’ with option
-‘family=binomial()’ in R during model training as described below.</p>
+<p>Parameters were estimated using the function ‘glm()’ with option ‘family=binomial()’ in R during model training as described below.</p>
 </div>
 <div id="training-and-validation-of-prediction-model" class="section level3">
 <h3><span class="header-section-number">5.5.9</span> Training and validation of prediction model</h3>
-<p>We used the R package <em>rsample</em> for 10-fold cross-validation. Thereby,
-we randomly split the dataset of CTCF motif pairs into ten equal sized
-subsets. For each round of cross-validation one subset is held out (test
-dataset) and the model parameters are trained on the remaining 90% of
-the samples (training dataset). The model parameters are shown for six
-selected TFs and combined models in Figure S1A. For each split, the
-performance of the model is than evaluated on the test dataset. For
-prediction performance in HeLa cells, we trained on all motif pairs
-using ChIP-seq and true loops from GM12878 cells and evaluated
-performance on all motif pairs using the true loop data in HeLa.</p>
+<p>We used the R package <em>rsample</em> for 10-fold cross-validation. Thereby, we randomly split the dataset of CTCF motif pairs into ten equal sized subsets. For each round of cross-validation one subset is held out (test dataset) and the model parameters are trained on the remaining 90% of the samples (training dataset). The model parameters are shown for six selected TFs and combined models in Figure S1A. For each split, the performance of the model is than evaluated on the test dataset. For prediction performance in HeLa cells, we trained on all motif pairs using ChIP-seq and true loops from GM12878 cells and evaluated performance on all motif pairs using the true loop data in HeLa.</p>
 </div>
 <div id="analysis-of-prediction-performance" class="section level3">
 <h3><span class="header-section-number">5.5.10</span> Analysis of prediction performance</h3>
-<p>We quantified prediction performance using the receiver operating
-characteristic (ROC) and precision recall curves (PRC) as implemented in
-the R package <em>precrec</em> <span class="citation">(Saito and Rehmsmeier <a href="#ref-Saito2017">2016</a>)</span>.</p>
-<p>Given the number of true positives (TP), true negatives (TN), false
-positives (FP), and false negatives (FN), the sensitivity is defined as
-TP/(TP+FN), specificity as TN/(TN+FP), precision as TP/(TP+FP), and
-recall as TP/(TP+FN). For each cross-validation split, the area under
-the curve is computed separately, and the mean across splits together
-with the standard deviation reported. To get binary prediction outputs,
-we computed the f1-score as harmonic mean of precision and recall for
-all prediction scores on all cross-validation folds using the R package
-<em>ROCR</em> <span class="citation">(Sing et al. <a href="#ref-Sing2005">2005</a>)</span>. Then we computed the prediction score that maximizes the
-f1-score as default cutoff for binary prediction output (Fig. <a href="D-2-supplementary-figures-1.html#fig:LoopPredS1">C.2</a>B).</p>
+<p>We quantified prediction performance using the receiver operating characteristic (ROC) and precision recall curves (PRC) as implemented in the R package <em>precrec</em> <span class="citation">(Saito and Rehmsmeier <a href="#ref-Saito2017">2016</a>)</span>.</p>
+<p>Given the number of true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN), the sensitivity is defined as TP/(TP+FN), specificity as TN/(TN+FP), precision as TP/(TP+FP), and recall as TP/(TP+FN). For each cross-validation split, the area under the curve is computed separately, and the mean across splits together with the standard deviation reported. To get binary prediction outputs, we computed the f1-score as harmonic mean of precision and recall for all prediction scores on all cross-validation folds using the R package <em>ROCR</em> <span class="citation">(Sing et al. <a href="#ref-Sing2005">2005</a>)</span>. Then we computed the prediction score that maximizes the f1-score as default cutoff for binary prediction output (Fig. <a href="D-2-supplementary-figures-1.html#fig:LoopPredS1">C.2</a>B).</p>
 </div>
 <div id="implementation-of-7c-and-compatibility-to-other-tools" class="section level3">
 <h3><span class="header-section-number">5.5.11</span> Implementation of 7C and compatibility to other tools</h3>
-<p>We implemented 7C as R package, termed <em>sevenC</em>, by using existing
-infrastructure for chromatin interaction data from the <em>interactionSet</em>
-package <span class="citation">(Lun et al. <a href="#ref-Lun2016">2016</a>)</span> and functionality for reading bigWig files from the
-<em>rtracklayer</em> package <span class="citation">(Lawrence et al. <a href="#ref-Lawrence2009">2009</a>)</span> from the Bioconductor project <span class="citation">(Huber et al. <a href="#ref-Huber2015">2015</a>)</span>.
-Predicted loops can be written as interaction tracks for visualization
-in the WashU Epigenome Browser <span class="citation">(Zhou et al. <a href="#ref-Zhou2013">2013</a>)</span> or as BEDPE format using the
-<em>GenomicInteractions</em> package <span class="citation">(Harmston et al. <a href="#ref-Harmston2015">2015</a>)</span> for visualization in the Juicebox
-tool <span class="citation">(Durand et al. <a href="#ref-Durand2016">2016</a>)</span>. The package is freely available and easy to install from
-GitHub under
-<a href="https://ibn-salem.github.io/sevenC/"><em>https://ibn-salem.github.io/sevenC/</em></a>
-and has been submitted to the Bioconductor project <span class="citation">(Huber et al. <a href="#ref-Huber2015">2015</a>)</span>. All analysis
-presented in this work were implemented in R and all scripts used have
-been made available in a separate GitHub repository:
-<a href="https://github.com/ibn-salem/chromloop_analysis"><em>https://github.com/ibn-salem/sevenC_analysis</em></a>.</p>
+<p>We implemented 7C as R package, termed <em>sevenC</em>, by using existing infrastructure for chromatin interaction data from the <em>interactionSet</em> package <span class="citation">(Lun et al. <a href="#ref-Lun2016">2016</a>)</span> and functionality for reading bigWig files from the <em>rtracklayer</em> package <span class="citation">(Lawrence et al. <a href="#ref-Lawrence2009">2009</a>)</span> from the Bioconductor project <span class="citation">(Huber et al. <a href="#ref-Huber2015">2015</a>)</span>. Predicted loops can be written as interaction tracks for visualization in the WashU Epigenome Browser <span class="citation">(Zhou et al. <a href="#ref-Zhou2013">2013</a>)</span> or as BEDPE format using the <em>GenomicInteractions</em> package <span class="citation">(Harmston et al. <a href="#ref-Harmston2015">2015</a>)</span> for visualization in the Juicebox tool <span class="citation">(Durand et al. <a href="#ref-Durand2016">2016</a>)</span>. The package is freely available and easy to install from GitHub under <a href="https://ibn-salem.github.io/sevenC/"><em>https://ibn-salem.github.io/sevenC/</em></a> and has been submitted to the Bioconductor project <span class="citation">(Huber et al. <a href="#ref-Huber2015">2015</a>)</span>. All analysis presented in this work were implemented in R and all scripts used have been made available in a separate GitHub repository: <a href="https://github.com/ibn-salem/chromloop_analysis"><em>https://github.com/ibn-salem/sevenC_analysis</em></a>.</p>
 </div>
 </div>
 <h3>References</h3>
@@ -434,31 +321,31 @@ been made available in a separate GitHub repository:
 <p>Tang Z, Luo OJ, Li X, Zheng M, Zhu JJ, Szalaj P, Trzaskoma P, Magalska A, Wlodarczyk J, Ruszczycki B, et al. 2015. CTCF-mediated human 3D genome architecture reveals chromatin topology for transcription. <em>Cell</em> 1–17.</p>
 </div>
 <div id="ref-Lun2016">
-<p>Lun ATL, Perry M, Ing-Simmons E. 2016. Infrastructure for genomic interactions : Bioconductor classes for hi-c , chia-pet and related experiments [version 1; referees: 2 approved]. <em>F1000Research</em> <strong>5</strong>: 1–6.</p>
+<p>Lun ATL, Perry M, Ing-Simmons E. 2016. Infrastructure for genomic interactions : Bioconductor classes for hi-c , chIA-pET and related experiments [version 1; referees: 2 approved]. <em>F1000Research</em> <strong>5</strong>: 1–6.</p>
 </div>
 <div id="ref-Dunham2012">
-<p>Dunham I, Kundaje A, Aldred SF, Collins PJ, Davis C a, Doyle F, Epstein CB, Frietze S, Harrow J, Kaul R, et al. 2012. An integrated encyclopedia of dna elements in the human genome. <em>Nature</em> <strong>489</strong>: 57–74.</p>
+<p>Dunham I, Kundaje A, Aldred SF, Collins PJ, Davis C a, Doyle F, Epstein CB, Frietze S, Harrow J, Kaul R, et al. 2012. An integrated encyclopedia of dNA elements in the human genome. <em>Nature</em> <strong>489</strong>: 57–74.</p>
 </div>
 <div id="ref-Davis2017">
 <p>Davis AP, Grondin CJ, Johnson RJ, Sciaky D, King BL, McMorran R, Wiegers J, Wiegers TC, Mattingly CJ. 2017. The comparative toxicogenomics database: Update 2017. <em>Nucleic Acids Research</em> <strong>45</strong>: D972–D978.</p>
 </div>
 <div id="ref-Hinrichs2006">
-<p>Hinrichs AS, Karolchik D, Baertsch R, Barber GP, Bejerano G, Clawson H, Diekhans M, Furey TS, Harte RA, Hsu F, et al. 2006. The ucsc genome browser database: Update 2006. <em>Nucleic Acids Res</em> <strong>34</strong>: D590—–D598.</p>
+<p>Hinrichs AS, Karolchik D, Baertsch R, Barber GP, Bejerano G, Clawson H, Diekhans M, Furey TS, Harte RA, Hsu F, et al. 2006. The uCSC genome browser database: Update 2006. <em>Nucleic Acids Res</em> <strong>34</strong>: D590—–D598.</p>
 </div>
 <div id="ref-Hansen2015">
-<p>Hansen P, Hecht J, Ibrahim DM, Krannich A, Truss M, Robinson PN. 2015. Saturation analysis of chip-seq data for reproducible identification of binding peaks. <em>Genome research</em> <strong>25</strong>: 1391–400.</p>
+<p>Hansen P, Hecht J, Ibrahim DM, Krannich A, Truss M, Robinson PN. 2015. Saturation analysis of chIP-seq data for reproducible identification of binding peaks. <em>Genome research</em> <strong>25</strong>: 1391–400.</p>
 </div>
 <div id="ref-Quinlan2010">
 <p>Quinlan AR, Hall IM. 2010. BEDTools: A flexible suite of utilities for comparing genomic features. <em>Bioinformatics</em> <strong>26</strong>: 841–842.</p>
 </div>
 <div id="ref-Kent2010">
-<p>Kent WJ, Zweig AS, Barber G, Hinrichs AS, Karolchik D. 2010. BigWig and bigbed: Enabling browsing of large distributed datasets. <em>Bioinformatics</em> <strong>26</strong>: 2204–2207.</p>
+<p>Kent WJ, Zweig AS, Barber G, Hinrichs AS, Karolchik D. 2010. BigWig and bigBed: Enabling browsing of large distributed datasets. <em>Bioinformatics</em> <strong>26</strong>: 2204–2207.</p>
 </div>
 <div id="ref-Hansen2016">
-<p>Hansen P, Hecht J, Ibn-Salem J, Menkuec BS, Roskosch S, Truss M, Robinson PN. 2016. Q-nexus: A comprehensive and efficient analysis pipeline designed for chip-nexus. <em>BMC Genomics</em> <strong>17</strong>: 873.</p>
+<p>Hansen P, Hecht J, Ibn-Salem J, Menkuec BS, Roskosch S, Truss M, Robinson PN. 2016. Q-nexus: A comprehensive and efficient analysis pipeline designed for chIP-nexus. <em>BMC Genomics</em> <strong>17</strong>: 873.</p>
 </div>
 <div id="ref-Guo2015">
-<p>Guo Y, Xu Q, Canzio D, Shou J, Li J, Gorkin DU, Jung I, Wu H, Zhai Y, Tang Y, et al. 2015. CRISPR inversion of ctcf sites alters genome topology and enhancer/promoter function. <em>Cell</em> <strong>162</strong>: 900–910.</p>
+<p>Guo Y, Xu Q, Canzio D, Shou J, Li J, Gorkin DU, Jung I, Wu H, Zhai Y, Tang Y, et al. 2015. CRISPR inversion of cTCF sites alters genome topology and enhancer/Promoter function. <em>Cell</em> <strong>162</strong>: 900–910.</p>
 </div>
 <div id="ref-deWit2015">
 <p>Wit E de, Vos ESM, Holwerda SJB, Valdes-Quezada C, Verstegen MJAM, Teunissen H, Splinter E, Wijchers PJ, Krijger PHL, Laat W de. 2015. CTCF binding polarity determines chromatin looping. <em>Molecular Cell</em> <strong>60</strong>: 676–684.</p>
@@ -470,7 +357,7 @@ been made available in a separate GitHub repository:
 <p>Khan A, Fornes O, Stigliani A. 2018. JASPAR 2018: Update of the open-access database of transcription factor binding profiles and its web framework. <em>Nucleic Acids Research</em> <strong>(In print)</strong>: 1–7.</p>
 </div>
 <div id="ref-Saito2017">
-<p>Saito T, Rehmsmeier M. 2016. Precrec: Fast and accurate precision-recall and roc curve calculations in r. <em>Bioinformatics</em> <strong>33</strong>: btw570.</p>
+<p>Saito T, Rehmsmeier M. 2016. Precrec: Fast and accurate precision-recall and rOC curve calculations in r. <em>Bioinformatics</em> <strong>33</strong>: btw570.</p>
 </div>
 <div id="ref-Sing2005">
 <p>Sing T, Sander O, Beerenwinkel N, Lengauer T. 2005. ROCR: Visualizing classifier performance in r. <em>Bioinformatics</em> <strong>21</strong>: 3940–3941.</p>
@@ -482,10 +369,10 @@ been made available in a separate GitHub repository:
 <p>Huber W, Carey VJ, Gentleman R, Anders S, Carlson M, Carvalho BS, Bravo HC, Davis S, Gatto L, Girke T, et al. 2015. Orchestrating high-throughput genomic analysis with bioconductor. <em>Nature Methods</em> <strong>12</strong>: 115–121.</p>
 </div>
 <div id="ref-Zhou2013">
-<p>Zhou X, Lowdon RF, Li D, Lawson H a, Madden P a F, Costello JF, Wang T. 2013. Exploring long-range genome interactions using the washu epigenome browser. <em>Nature methods</em> <strong>10</strong>: 375–6.</p>
+<p>Zhou X, Lowdon RF, Li D, Lawson H a, Madden P a F, Costello JF, Wang T. 2013. Exploring long-range genome interactions using the washU epigenome browser. <em>Nature methods</em> <strong>10</strong>: 375–6.</p>
 </div>
 <div id="ref-Harmston2015">
-<p>Harmston N, Ing-Simmons E, Perry M, Barešić A, Lenhard B. 2015. GenomicInteractions: An r/bioconductor package for manipulating and investigating chromatin interaction data. <em>BMC Genomics</em> <strong>16</strong>: 963.</p>
+<p>Harmston N, Ing-Simmons E, Perry M, Barešić A, Lenhard B. 2015. GenomicInteractions: An r/Bioconductor package for manipulating and investigating chromatin interaction data. <em>BMC Genomics</em> <strong>16</strong>: 963.</p>
 </div>
 <div id="ref-Durand2016">
 <p>Durand NC, Shamim MS, Machol I, Rao SS, Huntley MH, Lander ES, Aiden EL. 2016. Juicer provides a one-click system for analyzing loop-resolution hi-c experiments. <em>Cell Systems</em> <strong>3</strong>: 95–98.</p>
@@ -511,8 +398,8 @@ been made available in a separate GitHub repository:
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -543,7 +430,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

@@ -6,26 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Genome folding in evolution and disease</title>
-  <meta name="description" content="This is a draft PhD thesis.">
+  <meta name="description" content="A draft PhD thesis on genome folding in evoultion and disease.">
   <meta name="generator" content="bookdown 0.6.2 and GitBook 2.6.7">
 
   <meta property="og:title" content="Genome folding in evolution and disease" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ibn-salem.github.io/thesis/" />
   
-  
-  <meta property="og:description" content="This is a draft PhD thesis." />
+  <meta property="og:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   <meta name="github-repo" content="ibn-salem/thesis" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Genome folding in evolution and disease" />
   
-  <meta name="twitter:description" content="This is a draft PhD thesis." />
+  <meta name="twitter:description" content="A draft PhD thesis on genome folding in evoultion and disease." />
   
 
 <meta name="author" content="Jonas Ibn-Salem">
 
 
-<meta name="date" content="2018-02-15">
+<meta name="date" content="2018-02-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -264,46 +264,19 @@
 <p>Ibn-Salem J, Andrade-Navarro MA. Computational Chromosome Conformation Capture by Correlation of ChIP-seq at CTCF motifs. bioRxiv. 2018. <a href="https://doi.org/10.1101/257584">doi:10.1101/257584</a>.</p>
 </blockquote>
 <blockquote>
-<p>The preprint is availible online: <a href="https://www.biorxiv.org/content/early/2018/02/01/257584" class="uri">https://www.biorxiv.org/content/early/2018/02/01/257584</a>.
-My contributions to this publication is indicated in Table <a href="E-contribution-to-individual-publications.html#tab:contribution">E.1</a>.
-The source code of the complete analysis is available at GitHub: <a href="https://github.com/Juppen/sevenC" class="uri">https://github.com/Juppen/sevenC</a> and <a href="https://github.com/Juppen/sevenC_analysis" class="uri">https://github.com/Juppen/sevenC_analysis</a>.
-Supplementary figures and links to supplementary tables are shown in Appendix <a href="D-sup-loop.html#sup-loop"><strong>??</strong></a>.</p>
+<p>The preprint is availible online: <a href="https://www.biorxiv.org/content/early/2018/02/01/257584" class="uri">https://www.biorxiv.org/content/early/2018/02/01/257584</a>. My contributions to this publication is indicated in Table <a href="E-contribution-to-individual-publications.html#tab:contribution">E.1</a>. The source code of the complete analysis is available at GitHub: <a href="https://github.com/Juppen/sevenC" class="uri">https://github.com/Juppen/sevenC</a> and <a href="https://github.com/Juppen/sevenC_analysis" class="uri">https://github.com/Juppen/sevenC_analysis</a>. Supplementary figures and links to supplementary tables are shown in Appendix <a href="D-sup-loop.html#sup-loop"><strong>??</strong></a>.</p>
 </blockquote>
 </div>
 <div id="abstract-4" class="section level3 unnumbered">
 <h3>Abstract</h3>
-<p><strong>Background:</strong> Knowledge of the three-dimensional structure of the
-genome is necessary to understand how gene expression is regulated.
-Recent experimental techniques such as Hi-C or ChIA-PET measure
-long-range interactions genome-wide but are experimentally elaborate and
-have limited resolution. Here, we present Computational Chromosome
-Conformation Capture by Correlation of ChIP-seq at CTCF motifs (7C).</p>
-<p><strong>Results:</strong> While ChIP-seq was not designed to detect contacts, the
-formaldehyde treatment in the ChIP-seq protocol cross-links proteins
-with each other and with DNA. Consequently, also regions that are not
-directly bound by the targeted TF but interact with the binding site via
-chromatin looping are co-immunoprecipitated and sequenced. This produces
-minor ChIP-seq signals at loop anchor regions close to the directly
-bound site. We use the position and shape of ChIP-seq signals around
-CTCF motif pairs to predict whether they interact or not.</p>
-<p>We applied 7C to all CTCF motif pairs within 1 MB in the human genome
-and validated predicted interactions with high-resolution Hi-C and
-ChIA-PET. A single ChIP-seq experiment from known architectural proteins
-(CTCF, Rad21, Znf143) but also from other TFs (like TRIM22 or RUNX3)
-predicts loops accurately. Importantly, 7C predicts loops in cell types
-and for TF ChIP-seq datasets not used in training.</p>
-<p><strong>Conclusion:</strong> 7C predicts chromatin loops with base-pair resolution
-and can be used to associate TF binding sites to regulated genes in a
-condition-specific manner. Furthermore, profiling of hundreds of
-ChIP-seq datasets results in novel candidate factors functionally
-involved in chromatin looping. Our method is available as an R package:
-<a href="https://ibn-salem.github.io/sevenC/" class="uri">https://ibn-salem.github.io/sevenC/</a></p>
+<p><strong>Background:</strong> Knowledge of the three-dimensional structure of the genome is necessary to understand how gene expression is regulated. Recent experimental techniques such as Hi-C or ChIA-PET measure long-range interactions genome-wide but are experimentally elaborate and have limited resolution. Here, we present Computational Chromosome Conformation Capture by Correlation of ChIP-seq at CTCF motifs (7C).</p>
+<p><strong>Results:</strong> While ChIP-seq was not designed to detect contacts, the formaldehyde treatment in the ChIP-seq protocol cross-links proteins with each other and with DNA. Consequently, also regions that are not directly bound by the targeted TF but interact with the binding site via chromatin looping are co-immunoprecipitated and sequenced. This produces minor ChIP-seq signals at loop anchor regions close to the directly bound site. We use the position and shape of ChIP-seq signals around CTCF motif pairs to predict whether they interact or not.</p>
+<p>We applied 7C to all CTCF motif pairs within 1 MB in the human genome and validated predicted interactions with high-resolution Hi-C and ChIA-PET. A single ChIP-seq experiment from known architectural proteins (CTCF, Rad21, Znf143) but also from other TFs (like TRIM22 or RUNX3) predicts loops accurately. Importantly, 7C predicts loops in cell types and for TF ChIP-seq datasets not used in training.</p>
+<p><strong>Conclusion:</strong> 7C predicts chromatin loops with base-pair resolution and can be used to associate TF binding sites to regulated genes in a condition-specific manner. Furthermore, profiling of hundreds of ChIP-seq datasets results in novel candidate factors functionally involved in chromatin looping. Our method is available as an R package: <a href="https://ibn-salem.github.io/sevenC/" class="uri">https://ibn-salem.github.io/sevenC/</a></p>
 </div>
 <div id="keywords-1" class="section level3 unnumbered">
 <h3>Keywords</h3>
-<p>Chromatin interactions, three-dimensional genome architecture,
-transcription factors, ChIP-seq, 3C, 4C, 5C, Hi-C, 6C, ChIA-PET, 7C,
-prediction, chromatin loops</p>
+<p>Chromatin interactions, three-dimensional genome architecture, transcription factors, ChIP-seq, 3C, 4C, 5C, Hi-C, 6C, ChIA-PET, 7C, prediction, chromatin loops</p>
 </div> 
 </div>
             </section>
@@ -326,8 +299,8 @@ prediction, chromatin loops</p>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -358,7 +331,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
