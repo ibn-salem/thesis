@@ -143,7 +143,9 @@ knitr::include_graphics("figures/TAD_evolution/fig_S2_v01.png")
 
 <!-- Supplemental Data include a Supplemental Note detailing clinical case reports, a Supplemental Note detailing the karyotypes of DGAP subjects, 1 figure, and 22 tables and can be found with this article online at http://dx.doi.org/10.1016/j.ajhg.2017.06.011. -->
 
-## Supplemental Note: Case Reports
+## Supplemental Note 
+
+### Case Reports
 
 **DGAP017**
 
@@ -377,7 +379,7 @@ commands. She had a reported normal clinical CytoSure ISCA 8x60K v2.0
 microarray, although a paternally inherited 150 Kb deletion at 18q22.3
 from her phenotypically normal father was detected.
 
-## Supplemental Note: Nucleotide Level Nomenclature for DGAP karyotypes
+### Nucleotide Level Nomenclature for DGAP karyotypes
 
 Karyotypes of DGAP cases are described using a revised nomenclature that
 incorporates next-generation sequencing positions from Ordulu *et al*.,
@@ -702,7 +704,7 @@ HGVS\_ng, HGVS\_p, Condition, Most severe clinical significance,
 Submitters, Highest review status and Last evaluated are provided for
 each overlap.
 
-# Loop prediction: Supplemental Information {#sup-loop}
+# Loop prediction: Supplemental Information {#loop-support}
 
 ## Supplementary Tables {#LoopPredSupTab}
 

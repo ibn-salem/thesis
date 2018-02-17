@@ -90,10 +90,10 @@ and is reviewed comprehensively by leading experts in the field [@Pombo2015; @Se
 
 <!-- ---------------------------------------------------------------- -->
 ```{r GenomeHierarchy, fig.cap='(ref:GenomeHierarchy)', out.width='100%', fig.align='center'}
-knitr::include_graphics("figures/Bonev2016Fig2.png")
+knitr::include_graphics("figures/Bonev2016Fig2_reordered.png")
 ```
 
-(ref:GenomeHierarchy) **Hierarchical organization of chromatin three-dimensional chromatin architecture** **(A)**  Figure source [@Bonev2016] [https://www.nature.com/articles/nrg.2016.112/figures/2](https://www.nature.com/articles/nrg.2016.112/figures/2).
+(ref:GenomeHierarchy) **Hierarchical organization of chromatin three-dimensional chromatin architecture** **(A)**  Figure adopted from [@Bonev2016]. 
 
 <!-- ---------------------------------------------------------------- -->
 

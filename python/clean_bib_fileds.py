@@ -27,7 +27,7 @@ def customizations(record):
     # record = page_double_hyphen(record)
     # record = convert_to_unicode(record)
 
-    maxAuthor = 30
+    maxAuthor = 20
 
     ## delete the following keys.
     # unwanted = ["doi", "url", "abstract", "file", "gobbledegook", "isbn", "link", "keyword", "mendeley-tags", "annote", "pmid", "chapter", "institution", "issn", "month"]

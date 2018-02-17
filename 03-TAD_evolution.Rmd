@@ -2,14 +2,15 @@
 
 ###  Preamble {-}
 > 
-> This chapter is submitted as a corresponding-author paper to BMC Biology and is currently under review. A preprint is published at bioRxiv:
+> This chapter is submitted for publication to BMC Biology and currently under peer-review. A preprint is availible from bioRxiv:
 >
-> Krefting J, Andrade-Navarro MA, **Ibn-Salem J**. **_Evolutionary stability of topologically associating domains is associated with conserved gene regulation_**. bioRxiv. 2017. [doi:doi.org/10.1101/231431](https://doi.org/10.1101/231431).
+> Krefting J, Andrade-Navarro MA, **Ibn-Salem J**^#^. **_Evolutionary stability of topologically associating domains is associated with conserved gene regulation_**. bioRxiv. 2017. [doi:doi.org/10.1101/231431](https://doi.org/10.1101/231431).
 > 
-> The preprint is availible online: https://doi.org/10.1101/231431.
 > My contributions to this publication is indicated in Table \@ref(tab:contribution). 
 > The source code of the complete analysis is available at GitHub: https://github.com/Juppen/TAD-Evolution.
 > Supplementary figures and links to supplementary tables are shown in Appendix \@ref(sup-tad-evolution).
+> 
+>^#^corresponding author
 > 
 
 

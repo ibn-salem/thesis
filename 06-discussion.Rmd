@@ -36,7 +36,7 @@ Because of their homology and resulting sequence similarity, paralogs genes enco
 Indeed, gene expression data from various sources across different cell types and tissues show 
 have significantly increased expression correlation compared to other close genes.
 
-Most duplications appear to be created by tandem duplications in direct orientation [@Newman], which explains the clustering of paralogs in the genome with short genomic distances and often the same transcription senes (Fig. \@ref(fig:paraData)). 
+Most duplications appear to be created by tandem duplications in direct orientation [@Newman2015], which explains the clustering of paralogs in the genome with short genomic distances and often the same transcription senes (Fig. \@ref(fig:paraData)). 
 The resulting properties of paralog pairs complicated our analysis by the need for an adequately sampled control set of gene pairs. 
 However, the development of careful sampling techniques results in control gene pairs that have similar properties regarding genomic distance, transcription strand, number of enhancers per gene, and the distance of enhancers to genes. This sampling approach allowed us to compare properties of paralog gene pairs to background distribution that model expectations by chance. 
 
@@ -113,12 +113,24 @@ Therefore, we interpret the depletion of evolutionary rearrangements in TADs and
 Therefore selective pressure is likely to act on TAD structures.
 
 ## The genome folding structure explains pathomechanism of structural variants
+
 - Introduce from the evolutionary perspective
 - Check discussion of position effect section
 - Discuss and review TAD disease studies (see intro).
 - Need for contact maps in clinical practice
 - Limitation of non-tissue-specific interaction data in this project
 - Tissue-specific interactions needed
+
+
+<!-- ---------------------------------------------------------------- -->
+```{r TadDisruptions, fig.cap='(ref:TadDisruptions)', out.width='80%', fig.align='center'}
+knitr::include_graphics("figures/Andrey2017_Fig5.png")
+```
+
+(ref:TadDisruptions) **Structural variants affect TAD structure and enhancer-promoter interactions.** Structural variants (SVs) can induce ectopic or loss of gene expression leading to disease. Here, topologically associating domains (TADs) are represented by shaded triangles, genes by gray blocks, and enhancers by colored ovals. Gene expression patterns driven by enhancers in E10.5 mouse embryos are shown. A representative looped chromatin configuration is shown above the TADs. **(A)** In the wild-type chromatin conformation, Enhancer C (E-C) controls Gene 3 (G-3) in the neural tube. **(B)** The deletion of a boundary element between the two TADs leads to ectopic contact between Enhancer C (E-C) and Gene 1 (G-1) (red arrow), which results in the ectopic expression of Gene 1 in the neural tube. **(C)** In the case of a rearragment through an inversion (blue arrows) or translocation that leads to the repositioning of functional elements, Enhancer C (E-C) from a neighboring TAD is free to activate Gene 1 (G-1), resulting in the ectopic expression of Gene 1 in the neural tube. The inversion also leaves Enhancer C insulated from its native target Gene 3 (G-3) by a boundary, resulting in the loss of Gene 3 expression in the neural tube. **(D)** The duplication of a region allows a new chromatin domain (a neo-TAD; green triangle) to form that contains regulatory region(s) and gene(s), which produce new expression patterns. Here, the duplicated Enhancer C′ (E-C′) and Gene 2′ (G-2′), which both locate to the insulated neo-TAD, produce the ectopic expression of Gene 2′ in the neural tube. Figure adpated from [@Andrey2017].
+
+<!-- ---------------------------------------------------------------- -->
+
 
 The crucial implications of genome folding structure on the effect of genetic variants highlight the importance of taking genome folding into account. 
 However, although genome-wide contact maps become increasingly available in recent years,

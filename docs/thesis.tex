@@ -464,16 +464,14 @@ experts in the field
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{figures/Bonev2016Fig2} 
+{\centering \includegraphics[width=1\linewidth]{figures/Bonev2016Fig2_reordered} 
 
 }
 
 \caption{\textbf{Hierarchical organization of chromatin
-three-dimensional chromatin architecture} \textbf{(A)} Figure source
-\citep{Bonev2016}
-\url{https://www.nature.com/articles/nrg.2016.112/figures/2}.}\label{fig:GenomeHierarchy}
+three-dimensional chromatin architecture} \textbf{(A)} Figure adopted
+from \citep{Bonev2016}.}\label{fig:GenomeHierarchy}
 \end{figure}
-
 
 
 
@@ -2143,20 +2141,22 @@ discussions.
 \addcontentsline{toc}{subsection}{Preamble}
 
 \begin{quote}
-This chapter is submitted as a corresponding-author paper to BMC Biology
-and is currently under review. A preprint is published at bioRxiv:
+This chapter is submitted for publication to BMC Biology and currently
+under peer-review. A preprint is availible from bioRxiv:
 
-Krefting J, Andrade-Navarro MA, \textbf{Ibn-Salem J}.
-\textbf{\emph{Evolutionary stability of topologically associating
-domains is associated with conserved gene regulation}}. bioRxiv. 2017.
+Krefting J, Andrade-Navarro MA, \textbf{Ibn-Salem
+J}\textsuperscript{\#}. \textbf{\emph{Evolutionary stability of
+topologically associating domains is associated with conserved gene
+regulation}}. bioRxiv. 2017.
 \href{https://doi.org/10.1101/231431}{doi:doi.org/10.1101/231431}.
 
-The preprint is availible online: \url{https://doi.org/10.1101/231431}.
 My contributions to this publication is indicated in Table
 \ref{tab:contribution}. The source code of the complete analysis is
 available at GitHub: \url{https://github.com/Juppen/TAD-Evolution}.
 Supplementary figures and links to supplementary tables are shown in
 Appendix \ref{sup-tad-evolution}.
+
+\textsuperscript{\#}corresponding author
 \end{quote}
 
 \hypertarget{abstract-2}{%
@@ -4071,19 +4071,21 @@ GTEx portal,
 This chapter is submitted as a first-author paper to Genome Biology. A
 preprint is published at bioRxiv:
 
-Ibn-Salem J, Andrade-Navarro MA. Computational Chromosome Conformation
-Capture by Correlation of ChIP-seq at CTCF motifs. bioRxiv. 2018.
+Ibn-Salem J\textsuperscript{\#}, Andrade-Navarro MA. Computational
+Chromosome Conformation Capture by Correlation of ChIP-seq at CTCF
+motifs. bioRxiv. 2018.
 \href{https://doi.org/10.1101/257584}{doi:10.1101/257584}.
-\end{quote}
 
-\begin{quote}
 The preprint is availible online:
 \url{https://www.biorxiv.org/content/early/2018/02/01/257584}. My
 contributions to this publication is indicated in Table
 \ref{tab:contribution}. The source code of the complete analysis is
 available at GitHub: \url{https://github.com/Juppen/sevenC} and
 \url{https://github.com/Juppen/sevenC_analysis}. Supplementary figures
-and links to supplementary tables are shown in Appendix \ref{sup-loop}.
+and links to supplementary tables are shown in Appendix
+\protect\hyperlink{loop-support}{D}.
+
+\textsuperscript{\#}corresponding author
 \end{quote}
 
 \hypertarget{abstract-4}{%
@@ -5198,16 +5200,16 @@ across different cell types and tissues show have significantly
 increased expression correlation compared to other close genes.
 
 Most duplications appear to be created by tandem duplications in direct
-orientation \citep{Newman}, which explains the clustering of paralogs in
-the genome with short genomic distances and often the same transcription
-senes (Fig. \ref{fig:paraData}). The resulting properties of paralog
-pairs complicated our analysis by the need for an adequately sampled
-control set of gene pairs. However, the development of careful sampling
-techniques results in control gene pairs that have similar properties
-regarding genomic distance, transcription strand, number of enhancers
-per gene, and the distance of enhancers to genes. This sampling approach
-allowed us to compare properties of paralog gene pairs to background
-distribution that model expectations by chance.
+orientation \citep{Newman2015}, which explains the clustering of
+paralogs in the genome with short genomic distances and often the same
+transcription senes (Fig. \ref{fig:paraData}). The resulting properties
+of paralog pairs complicated our analysis by the need for an adequately
+sampled control set of gene pairs. However, the development of careful
+sampling techniques results in control gene pairs that have similar
+properties regarding genomic distance, transcription strand, number of
+enhancers per gene, and the distance of enhancers to genes. This
+sampling approach allowed us to compare properties of paralog gene pairs
+to background distribution that model expectations by chance.
 
 Our analysis shows that paralogs are significantly enriched in TADs,
 frequently share the same regulatory enhancer and have increased Hi-C
@@ -5395,6 +5397,65 @@ variants}\label{the-genome-folding-structure-explains-pathomechanism-of-structur
 \item
   Tissue-specific interactions needed
 \end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figures/Andrey2017_Fig5} 
+
+}
+
+\caption{\textbf{Structural variants affect TAD structure
+and enhancer-promoter interactions.} Structural variants (SVs) can
+induce ectopic or loss of gene expression leading to disease. Here,
+topologically associating domains (TADs) are represented by shaded
+triangles, genes by gray blocks, and enhancers by colored ovals. Gene
+expression patterns driven by enhancers in E10.5 mouse embryos are
+shown. A representative looped chromatin configuration is shown above
+the TADs. \textbf{(A)} In the wild-type chromatin conformation, Enhancer
+C (E-C) controls Gene 3 (G-3) in the neural tube. \textbf{(B)} The
+deletion of a boundary element between the two TADs leads to ectopic
+contact between Enhancer C (E-C) and Gene 1 (G-1) (red arrow), which
+results in the ectopic expression of Gene 1 in the neural tube.
+\textbf{(C)} In the case of a rearragment through an inversion (blue
+arrows) or translocation that leads to the repositioning of functional
+elements, Enhancer C (E-C) from a neighboring TAD is free to activate
+Gene 1 (G-1), resulting in the ectopic expression of Gene 1 in the
+neural tube. The inversion also leaves Enhancer C insulated from its
+native target Gene 3 (G-3) by a boundary, resulting in the loss of Gene
+3 expression in the neural tube. \textbf{(D)} The duplication of a
+region allows a new chromatin domain (a neo-TAD; green triangle) to form
+that contains regulatory region(s) and gene(s), which produce new
+expression patterns. Here, the duplicated Enhancer C′ (E-C′) and Gene 2′
+(G-2′), which both locate to the insulated neo-TAD, produce the ectopic
+expression of Gene 2′ in the neural tube. Figure adpated from
+\citep{Andrey2017}.}\label{fig:TadDisruptions}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 The crucial implications of genome folding structure on the effect of
 genetic variants highlight the importance of taking genome folding into
@@ -6013,9 +6074,11 @@ domain boundary. P-values according to Wilcoxon's rank-sum test.}\label{fig:TadE
 \hypertarget{sup-position-effect}{%
 \chapter{Position Effect: Supplemental Data}\label{sup-position-effect}}
 
-\hypertarget{supplemental-note-case-reports}{%
-\section{Supplemental Note: Case
-Reports}\label{supplemental-note-case-reports}}
+\hypertarget{supplemental-note}{%
+\section{Supplemental Note}\label{supplemental-note}}
+
+\hypertarget{case-reports}{%
+\subsection{Case Reports}\label{case-reports}}
 
 \textbf{DGAP017}
 
@@ -6254,9 +6317,9 @@ commands. She had a reported normal clinical CytoSure ISCA 8x60K v2.0
 microarray, although a paternally inherited 150 Kb deletion at 18q22.3
 from her phenotypically normal father was detected.
 
-\hypertarget{supplemental-note-nucleotide-level-nomenclature-for-dgap-karyotypes}{%
-\section{Supplemental Note: Nucleotide Level Nomenclature for DGAP
-karyotypes}\label{supplemental-note-nucleotide-level-nomenclature-for-dgap-karyotypes}}
+\hypertarget{nucleotide-level-nomenclature-for-dgap-karyotypes}{%
+\subsection{Nucleotide Level Nomenclature for DGAP
+karyotypes}\label{nucleotide-level-nomenclature-for-dgap-karyotypes}}
 
 Karyotypes of DGAP cases are described using a revised nomenclature that
 incorporates next-generation sequencing positions from Ordulu \emph{et
@@ -6598,8 +6661,8 @@ HGVS\_ng, HGVS\_p, Condition, Most severe clinical significance,
 Submitters, Highest review status and Last evaluated are provided for
 each overlap.
 
-\hypertarget{sup-loop}{%
-\chapter{Loop prediction: Supplemental Information}\label{sup-loop}}
+\hypertarget{loop-support}{%
+\chapter{Loop prediction: Supplemental Information}\label{loop-support}}
 
 \hypertarget{LoopPredSupTab}{%
 \section{Supplementary Tables}\label{LoopPredSupTab}}

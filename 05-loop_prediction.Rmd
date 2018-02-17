@@ -4,12 +4,14 @@
 > 
 > This chapter is submitted as a first-author paper to Genome Biology. A preprint is published at bioRxiv:
 > 
-> Ibn-Salem J, Andrade-Navarro MA. Computational Chromosome Conformation Capture by Correlation of ChIP-seq at CTCF motifs. bioRxiv. 2018. [doi:10.1101/257584](https://doi.org/10.1101/257584).
-
+> Ibn-Salem J^#^, Andrade-Navarro MA. Computational Chromosome Conformation Capture by Correlation of ChIP-seq at CTCF motifs. bioRxiv. 2018. [doi:10.1101/257584](https://doi.org/10.1101/257584).
+>
 > The preprint is availible online: https://www.biorxiv.org/content/early/2018/02/01/257584.
 > My contributions to this publication is indicated in Table \@ref(tab:contribution). 
 > The source code of the complete analysis is available at GitHub: https://github.com/Juppen/sevenC and https://github.com/Juppen/sevenC_analysis.
-> Supplementary figures and links to supplementary tables are shown in Appendix \@ref(sup-loop).
+> Supplementary figures and links to supplementary tables are shown in Appendix [D](#loop-support).
+> 
+>^#^corresponding author
 > 
 
 ### Abstract {-}
