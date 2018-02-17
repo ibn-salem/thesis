@@ -1,3 +1,18 @@
+################################################################################
+# Filter .bib file for only contained references
+################################################################################
+
+# filter for used citations
+python python/clean_bib.py \
+  -i bib/PhD.bib \
+  -rmd *.Rmd \
+  -o bib/PhDflt.bib
+
+python3 python/clean_bib_fileds.py
+
+# convert .bib to .json
+# pandoc-citeproc --bib2json bib/PhDclean.bib > bib/PhDclean.json
+# pandoc-citeproc --bib2yaml bib/PhDclean.bib > bib/PhDclean.yaml
 
 #===============================================================================
 # convert figues from .pdf to .png
@@ -6,6 +21,7 @@ for PDFFILE in figures/*.pdf ; do
   # echo $PDFFILE
   convert -density 600 "${PDFFILE}" "${PDFFILE%.*}".png
 done
+
 
 ################################################################################
 # convert TAC report from .text to markdown
@@ -136,22 +152,6 @@ for PDFFILE in figures/TAD_evolution/fig*.pdf ; do
   # ls -lht $PDFFILE
   convert -density 600 "${PDFFILE}" "${PDFFILE%.*}".png
 done
-
-################################################################################
-# Filter .bib file for only contained references
-################################################################################
-
-# filter for used citations
-python python/clean_bib.py \
-  -i bib/PhD.bib \
-  -rmd *.Rmd \
-  -o bib/PhDflt.bib
-
-python3 python/clean_bib_fileds.py
-
-# convert .bib to .json
-# pandoc-citeproc --bib2json bib/PhDclean.bib > bib/PhDclean.json
-# pandoc-citeproc --bib2yaml bib/PhDclean.bib > bib/PhDclean.yaml
 
 
 
