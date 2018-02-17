@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="1-8-aims-of-this-thesis.html">
-<link rel="next" href="2-paralog-regulation.html">
+<link rel="prev" href="6-3-creation-of-new-genes-in-shared-regulatory-environments.html">
+<link rel="next" href="6-5-the-genome-folding-structure-explains-pathomechanism-of-structural-variants.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -262,32 +262,65 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="structure-of-this-thesis" class="section level2">
-<h2><span class="header-section-number">1.9</span> Structure of this thesis</h2>
-<p>The following four chapters address and discuss the questions raised above.
-First, the focus is on duplicated genes in the human genome. Because of
-their related sequences and functions, a shared evolutionary history, and
-close colocalization in the genome they represent an interesting model
-to study how genome folding is related to regulation of gene expression
-during evolution (Chapter <a href="2-paralog-regulation.html#paralog-regulation">2</a>).
-Next, whole-genome alignment between human and other vertebrate genomes are used to systematically investigate whether TADs represent conserved building blocks of genomes and whether rearrangements of TADs lead to altered gene expression programs (Chapter <a href="3-TAD-evolution.html#TAD-evolution">3</a>).
-The next chapter address disruptions of
-chromatin organization by analyzing disease associated rearrangement
-breakpoints from whole-genome sequenced patients of various genetic
-diseases to explain their phenotypes by miss-regulation of genes in disrupted TADs (Chapter <a href="4-position-effect.html#position-effect">4</a>).
-Finally, I make use of recent insights in chromatin loop formation to provide a computational tool for predicting long-range chromatin contacts from largely available ChIP-seq data, with the aim to facilitate three-dimensional folding analysis in diverse tissues and conditions for which Hi-C like data is not available (Chapter <a href="5-loop.html#loop">5</a>).
-The overall findings are then discussed together with further research perspectives (Chapter <a href="6-thesis-discussion.html#thesis-discussion">6</a>).</p>
-
-<!-- # Co-regulation of paralog genes in the three-dimensional chromatin architecture {#ch:paralog} -->
+<div id="tads-are-stable-across-large-evolutionary-time-scales" class="section level2">
+<h2><span class="header-section-number">6.4</span> TADs are stable across large evolutionary time-scales</h2>
+<p>As consequence of these association of TADs with co-regulation, enhancer sharing, and co-expression, we hypothesized TADs provide regulatory environments for genes and are therefore conserved during evolution.
+More specifically, we asked whether genomic rearrangement between distantly related species would more frequently occur at TAD boundaries or within TAD regions.
+Furthermore, we hypothesized that disruption of TADs during evolution might be associated with changes in gene expression programs between the species.</p>
+<ul>
+<li>Discussion on findings
+<ul>
+<li>Relate to GRBs and CNE clusters <span class="citation">(Harmston et al. <a href="#ref-Harmston2017">2017</a>; Polychronopoulos et al. <a href="#ref-Polychronopoulos2017">2017</a>)</span></li>
+<li>Follow up studies might experimentally support the functional importance of TADs that are evolutionary conserved.</li>
+</ul></li>
+</ul>
+<p>Interestingly, also regions in the same TAD have a reduced recombination rate,
+indicating functional interactions between alleles in such regulatory domains <span class="citation">(Liu et al. <a href="#ref-Liu2016b">2017</a>)</span>. The relation of variant co-transmission in population, in general, measured as linkage disequilibrium (LD) correlates with Hi-C interaction frequencies <span class="citation">(Gerber et al. <a href="#ref-Gerber2018">2018</a>)</span>.</p>
+<p>A very recent study investigated the requirement of the ultra-conserved non-coding region containing enhancers by knock-out experiments in mice <span class="citation">(Dickel et al. <a href="#ref-Dickel2018">2018</a>)</span>. Knock-out mice that lack individual or combination of enhancers were viable but showed strong neurological phenotypes.
+These effects indicate that the remarkably strong sequence conservation likely results from fitness deficit that appear subtle in a laboratory setting <span class="citation">(Dickel et al. <a href="#ref-Dickel2018">2018</a>)</span>.
+This effect could be similar for targeted deletions of conserved TAD boundaries.</p>
+<p>The increased expression conservation of genes within TADs is somewhat consistent with a very recent study, analyzing promoter and enhancer activity in liver samples from 15 species <span class="citation">(Berthelot et al. <a href="#ref-Berthelot2017">2017</a>)</span>. In this study gene expression conservation could best be explained by the number and conservation of surrounding enhancers and promoters.</p>
+<!-- Connection from TAD-evolution to position effect -->
+<p>The analysis of genomic rearrangements between human and other species during evolution lead to the conclusion that TADs are essential regulatory building blocks of genomes.
+Indeed the changes of expression profiles are associated with the disruption of TADs during evolution.
+Altered gene regulation likely lead to severe disadvantages to the organism, as was observed for example in genetic diseases <span class="citation">(Ibn-Salem et al. <a href="#ref-Ibn-Salem2014">2014</a>; Lupiáñez et al. <a href="#ref-Lupianez2015">2015</a>)</span> and cancers.
+Therefore, we interpret the depletion of evolutionary rearrangements in TADs and the expression change associated with TAD disruption to be a consequence of selective pressure on TAD structure.
+Therefore selective pressure is likely to act on TAD structures.</p>
 </div>
-<!-- </div> -->
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Harmston2017">
+<p>Harmston N, Ing-Simmons E, Tan G, Perry M, Merkenschlager M, Lenhard B. 2017. Topologically associating domains are ancient features that coincide with metazoan clusters of extreme noncoding conservation. <em>Nature Communications</em> <strong>8</strong>: 441.</p>
+</div>
+<div id="ref-Polychronopoulos2017">
+<p>Polychronopoulos D, King JWD, Nash AJ, Tan G, Lenhard B. 2017. Conserved non-coding elements: Developmental gene regulation meets genome organization. <em>Nucleic Acids Research</em> 1–14.</p>
+</div>
+<div id="ref-Liu2016b">
+<p>Liu Y, Sarkar A, Kheradpour P, Ernst J, Kellis M. 2017. Evidence of reduced recombination rate in human regulatory domains. <em>Genome Biology</em> <strong>18</strong>: 193.</p>
+</div>
+<div id="ref-Gerber2018">
+<p>Gerber S, Fournier D, Hewel C, Horenko I. 2018. Imputation of posterior linkage probability relations reveals a significant influence of structural 3D constraints on linkage disequilibrium. <em>bioRxiv</em> 255315.</p>
+</div>
+<div id="ref-Dickel2018">
+<p>Dickel DE, Ypsilanti AR, Pla R, Zhu Y, Barozzi I, Mannion BJ, Khin YS, Fukuda-Yuzawa Y, Plajzer-Frick I, Pickle CS, et al. 2018. Ultraconserved enhancers are required for normal development. <em>Cell</em> <strong>172</strong>: 491–499.e15.</p>
+</div>
+<div id="ref-Berthelot2017">
+<p>Berthelot C, Villar D, Horvath JE, Odom DT, Flicek P. 2017. Complexity and conservation of regulatory landscapes underlie evolutionary resilience of mammalian gene expression. <em>Nature Ecology &amp; Evolution</em> 1–31.</p>
+</div>
+<div id="ref-Ibn-Salem2014">
+<p>Ibn-Salem J, Köhler S, Love MI, Chung H-R, Huang N, Hurles ME, Haendel M, Washington NL, Smedley D, Mungall CJ, et al. 2014. Deletions of chromosomal regulatory boundaries are associated with congenital disease. <em>Genome Biology</em> <strong>15</strong>: 423.</p>
+</div>
+<div id="ref-Lupianez2015">
+<p>Lupiáñez DG, Kraft K, Heinrich V, Krawitz P, Brancati F, Klopocki E, Horn D, Kayserili H, Opitz JM, Laxova R, et al. 2015. Disruptions of topological chromatin domains cause pathogenic rewiring of gene-enhancer interactions. <em>Cell</em> <strong>161</strong>: 1012–1025.</p>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="1-8-aims-of-this-thesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="2-paralog-regulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="6-3-creation-of-new-genes-in-shared-regulatory-environments.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="6-5-the-genome-folding-structure-explains-pathomechanism-of-structural-variants.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +349,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ibn-salem/thesis/edit/master/01-intro.Rmd",
+"link": "https://github.com/ibn-salem/thesis/edit/master/06-discussion.Rmd",
 "text": "Edit"
 },
 "download": ["thesis.pdf", "thesis.epub"],

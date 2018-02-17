@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="1-8-aims-of-this-thesis.html">
-<link rel="next" href="2-paralog-regulation.html">
+<link rel="prev" href="6-5-the-genome-folding-structure-explains-pathomechanism-of-structural-variants.html">
+<link rel="next" href="6-7-conclusions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -262,32 +262,54 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="structure-of-this-thesis" class="section level2">
-<h2><span class="header-section-number">1.9</span> Structure of this thesis</h2>
-<p>The following four chapters address and discuss the questions raised above.
-First, the focus is on duplicated genes in the human genome. Because of
-their related sequences and functions, a shared evolutionary history, and
-close colocalization in the genome they represent an interesting model
-to study how genome folding is related to regulation of gene expression
-during evolution (Chapter <a href="2-paralog-regulation.html#paralog-regulation">2</a>).
-Next, whole-genome alignment between human and other vertebrate genomes are used to systematically investigate whether TADs represent conserved building blocks of genomes and whether rearrangements of TADs lead to altered gene expression programs (Chapter <a href="3-TAD-evolution.html#TAD-evolution">3</a>).
-The next chapter address disruptions of
-chromatin organization by analyzing disease associated rearrangement
-breakpoints from whole-genome sequenced patients of various genetic
-diseases to explain their phenotypes by miss-regulation of genes in disrupted TADs (Chapter <a href="4-position-effect.html#position-effect">4</a>).
-Finally, I make use of recent insights in chromatin loop formation to provide a computational tool for predicting long-range chromatin contacts from largely available ChIP-seq data, with the aim to facilitate three-dimensional folding analysis in diverse tissues and conditions for which Hi-C like data is not available (Chapter <a href="5-loop.html#loop">5</a>).
-The overall findings are then discussed together with further research perspectives (Chapter <a href="6-thesis-discussion.html#thesis-discussion">6</a>).</p>
-
-<!-- # Co-regulation of paralog genes in the three-dimensional chromatin architecture {#ch:paralog} -->
+<div id="prediction-of-chromatin-interactions" class="section level2">
+<h2><span class="header-section-number">6.6</span> Prediction of chromatin interactions</h2>
+<ul>
+<li>Discuss need for both
+<ul>
+<li>condition specific interaction maps</li>
+<li>Which factors mediated long-range interactions.</li>
+<li>Plasticity and dynamics of chromatin interactions</li>
+</ul></li>
+<li>See discussion of seven C manuscript.</li>
+<li>The screening of hundreds of TF for their predictive value in loop formation lead to several known and novel factors in chromatin loop formation
+<ul>
+<li>Discuss loop and TAD were abolishing upon CTCF and cohesin KO.</li>
+</ul></li>
+<li>Discuss C-technologies and their specific limitation.</li>
+<li>However, from very recent work it becomes clear, that there will be a continously increasing development of further methods to probe interactions in a more efficient and targeted way.</li>
+</ul>
+<!-- Discussing loop prediction for association of variants to disease target genes -->
+<p>The majority of disease-associated variants uncovered by genome-wide association studies (GWAS) reside in noncoding sequences. Many variants are located near cis-regulatory sequences and enhancers and could, therefore, contribute to pathogenesis by affecting transcription of specific genes <span class="citation">(Hindorff et al. <a href="#ref-Hindorff2009">2009</a>)</span>.
+The ability to measure long-range chromatin interactions makes it possible to understand the role of non-coding variants by predicting its interacting target gene <span class="citation">(Smemo et al. <a href="#ref-Smemo2014">2014</a>; Visser et al. <a href="#ref-Visser2012">2012</a>)</span>.
+This has been shown by measuring the interactions of promoters in 17 human primary hematopoietic cells types revealing more than 2,400 potential disease-associated genes liked to thousands of GWAS SNPs <span class="citation">(Javierre et al. <a href="#ref-Javierre2016">2016</a>)</span>.
+In another study, the noncoding variants associated with schizophrenia could be annotated using Hi-C contact maps from human cerebral cortex <span class="citation">(Won et al. <a href="#ref-Won2016">2016</a>)</span>.</p>
 </div>
-<!-- </div> -->
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Hindorff2009">
+<p>Hindorff LA, Sethupathy P, Junkins HA, Ramos EM, Mehta JP, Collins FS, Manolio TA. 2009. Potential etiologic and functional implications of genome-wide association loci for human diseases and traits. <em>Proceedings of the National Academy of Sciences of the United States of America</em> <strong>106</strong>: 9362–7.</p>
+</div>
+<div id="ref-Smemo2014">
+<p>Smemo S, Tena JJ, Kim K-H, Gamazon ER, Sakabe NJ, Gómez-Marín C, Aneas I, Credidio FL, Sobreira DR, Wasserman NF, et al. 2014. Obesity-associated variants within fto form long-range functional connections with irx3. <em>Nature</em> <strong>507</strong>: 371–375.</p>
+</div>
+<div id="ref-Visser2012">
+<p>Visser M, Kayser M, Palstra R-J. 2012. HERC2 rs12913832 modulates human pigmentation by attenuating chromatin-loop formation between a long-range enhancer and the oca2 promoter. <em>Genome research</em> <strong>22</strong>: 446–55.</p>
+</div>
+<div id="ref-Javierre2016">
+<p>Javierre BM, Burren OS, Wilder SP, Kreuzhuber R, Hill SM, Sewitz S, Cairns J, Wingett SW, Várnai C, Thiecke MJ, et al. 2016. Lineage-specific genome architecture links enhancers and non-coding disease variants to target gene promoters. <em>Cell</em> <strong>167</strong>: 1369–1384.e19.</p>
+</div>
+<div id="ref-Won2016">
+<p>Won H, Torre-Ubieta L de la, Stein JL, Parikshak NN, Huang J, Opland CK, Gandal MJ, Sutton GJ, Hormozdiari F, Lu D, et al. 2016. Chromosome conformation elucidates regulatory relationships in developing human brain. <em>Nature</em> 1–20.</p>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="1-8-aims-of-this-thesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="2-paralog-regulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="6-5-the-genome-folding-structure-explains-pathomechanism-of-structural-variants.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="6-7-conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +338,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ibn-salem/thesis/edit/master/01-intro.Rmd",
+"link": "https://github.com/ibn-salem/thesis/edit/master/06-discussion.Rmd",
 "text": "Edit"
 },
 "download": ["thesis.pdf", "thesis.epub"],

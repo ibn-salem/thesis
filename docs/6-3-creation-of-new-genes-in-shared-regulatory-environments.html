@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="1-8-aims-of-this-thesis.html">
-<link rel="next" href="2-paralog-regulation.html">
+<link rel="prev" href="6-2-co-regulation-of-functionally-related-genes-in-tads.html">
+<link rel="next" href="6-4-tads-are-stable-across-large-evolutionary-time-scales.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -262,32 +262,67 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="structure-of-this-thesis" class="section level2">
-<h2><span class="header-section-number">1.9</span> Structure of this thesis</h2>
-<p>The following four chapters address and discuss the questions raised above.
-First, the focus is on duplicated genes in the human genome. Because of
-their related sequences and functions, a shared evolutionary history, and
-close colocalization in the genome they represent an interesting model
-to study how genome folding is related to regulation of gene expression
-during evolution (Chapter <a href="2-paralog-regulation.html#paralog-regulation">2</a>).
-Next, whole-genome alignment between human and other vertebrate genomes are used to systematically investigate whether TADs represent conserved building blocks of genomes and whether rearrangements of TADs lead to altered gene expression programs (Chapter <a href="3-TAD-evolution.html#TAD-evolution">3</a>).
-The next chapter address disruptions of
-chromatin organization by analyzing disease associated rearrangement
-breakpoints from whole-genome sequenced patients of various genetic
-diseases to explain their phenotypes by miss-regulation of genes in disrupted TADs (Chapter <a href="4-position-effect.html#position-effect">4</a>).
-Finally, I make use of recent insights in chromatin loop formation to provide a computational tool for predicting long-range chromatin contacts from largely available ChIP-seq data, with the aim to facilitate three-dimensional folding analysis in diverse tissues and conditions for which Hi-C like data is not available (Chapter <a href="5-loop.html#loop">5</a>).
-The overall findings are then discussed together with further research perspectives (Chapter <a href="6-thesis-discussion.html#thesis-discussion">6</a>).</p>
-
-<!-- # Co-regulation of paralog genes in the three-dimensional chromatin architecture {#ch:paralog} -->
+<div id="creation-of-new-genes-in-shared-regulatory-environments" class="section level2">
+<h2><span class="header-section-number">6.3</span> Creation of new genes in shared regulatory environments</h2>
+<p>However, the analysis of paralogs with respect to three-dimensional genome folding allows further conclusions about the evolutionary history of genes and how new functionality by novel genes is most efficient created during evolution.
+Loss-of-function mutations degrade most young duplicated genes into pseudogenes <span class="citation">(Lynch and Conery <a href="#ref-Lynch2003">2003</a>)</span>.
+These observations raise the question of which mechanisms led to the survival and expression of the many paralog genes. Some models explain paralog genes by sub- or neo-functionalization or sharing of gene dosage <span class="citation">(Lan and Pritchard <a href="#ref-Lan2016">2016</a>)</span>.
+Our observation of co-regulated paralogs in the regulatory environments of TADs is consistent with a very recent analysis of expression pattern between young and old paralogs <span class="citation">(Lan and Pritchard <a href="#ref-Lan2016">2016</a>)</span>.
+This study often finds one copy of young paralogs to be downregulated indicating that dosage-sharing allows for initial survival of duplicated genes a slower functional adaption <span class="citation">(Lan and Pritchard <a href="#ref-Lan2016">2016</a>)</span>.</p>
+<p>The creation of paralogs by tandem duplication might also be an efficient evolutionary mechanism to introduce additional functionality to a gene by keeping the original gene unaffected.
+We observe that very close paralogs seems to have decreased Hi-C contacts between their promoters when located in the same TAD, but show enriched association to the same regulatory elements.
+This somewhat unexpected phenomenon can be explained by a subset of paralogs that functionally replace each other, for example as alternative units in protein complexes.
+This replacing functionality would require actively regulated exclusive expression of paralogs.
+Interestingly, a similar mechanism was reported for olfactory receptor genes that contact each other even across different chromosomes to facilitate particular expression of only a single receptor gene per cell <span class="citation">(Monahan and Lomvardas <a href="#ref-Monahan2015">2015</a>; Monahan et al. <a href="#ref-Monahan2017">2017</a>)</span>.</p>
+<p>The results of our analysis together with recent literature suggest a many-step mechanism of paralog evolution (Fig. <a href="6-3-creation-of-new-genes-in-shared-regulatory-environments.html#fig:ParalogSeparation">6.1</a>).
+First, tandem duplications generate paralog genes, which start their life coregulated within TADs.
+Then subsequent chromosomal rearrangements relocate paralogs to larger distances to their homologs but retaining increased contacts.
+Further, eventual reorganization of regulatory control allows their increased independence being eventually placed even on different chromosomes where contact is no longer necessary.
+An exception would be genes that precise to be strongly co-regulated with the original copy, for example, to produce a replacement protein.</p>
+<!-- ---------------------------------------------------------------- -->
+<div class="figure" style="text-align: center"><span id="fig:ParalogSeparation"></span>
+<img src="figures/model_paralog_expansion.png" alt="Model of paralog gene creation in TADs and evolving regulatory context and TADs over time. Tandem-duplication accounts for the creation of most paralogs. Duplication within a TAD allows the new copy of the gene to be regulated by the same environment (top left). Over evolutionary time, the interactions pattern and regulatory input might change to allow for more independent expression regulation (top center). Evolutionary rearrangements might even relocate the genes to different chromosomes (top right). Alternatively, the two copies might stay in the same TAD to enable them to be coordinately regulated (bottom)." width="80%" />
+<p class="caption">
+Figure 6.1: <strong>Model of paralog gene creation in TADs and evolving regulatory context and TADs over time.</strong> Tandem-duplication accounts for the creation of most paralogs. Duplication within a TAD allows the new copy of the gene to be regulated by the same environment (top left). Over evolutionary time, the interactions pattern and regulatory input might change to allow for more independent expression regulation (top center). Evolutionary rearrangements might even relocate the genes to different chromosomes (top right). Alternatively, the two copies might stay in the same TAD to enable them to be coordinately regulated (bottom).
+</p>
 </div>
-<!-- </div> -->
+
+<!-- ---------------------------------------------------------------- -->
+<p>Several mechanisms can explain the creation of new functionality and morphological diversity between species across evolution.
+A key component and driver for new gene function in evolution or neo-functionalization can be the birth of new enhancers through the acquisition of transcription factor binding and subsequent novel regulatory functions <span class="citation">(Long et al. <a href="#ref-Long2016">2016</a>)</span>.
+Similarly, deletion or duplication of TAD boundaries could change the folding structure of genomic regions and enable regulatory contacts with previously insulated regulatory elements <span class="citation">(Franke <a href="#ref-Franke2017">2017</a>)</span>.
+However, our data suggest that TADs act as protective nests for evolving newcomer genes.
+This seems to be a reasonable evolutionary mechanism, much more straightforward than creating from nothing an entirely new regulatory environment for a new gene.</p>
+<!-- Connection to TAD evolution -->
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Lynch2003">
+<p>Lynch M, Conery JS. 2003. The evolutionary demography of duplicate genes. In <em>Genome evolution</em>, pp. 35–44, Springer Netherlands, Dordrecht.</p>
+</div>
+<div id="ref-Lan2016">
+<p>Lan X, Pritchard JK. 2016. Coregulation of tandem duplicate genes slows evolution of subfunctionalization in mammals. <em>Science (New York, NY)</em> <strong>352</strong>: 1009–13.</p>
+</div>
+<div id="ref-Monahan2015">
+<p>Monahan K, Lomvardas S. 2015. Monoallelic expression of olfactory receptors. <em>Annual Review of Cell and Developmental Biology</em> <strong>31</strong>: annurev–cellbio–100814–125308.</p>
+</div>
+<div id="ref-Monahan2017">
+<p>Monahan K, Schieren I, Cheung J, Mumbey-Wafula A, Monuki ES, Lomvardas S. 2017. Cooperative interactions enable singular olfactory receptor expression in mouse olfactory neurons. <em>eLife</em> <strong>6</strong>: 1–32.</p>
+</div>
+<div id="ref-Long2016">
+<p>Long HK, Prescott SL, Wysocka J. 2016. Ever-changing landscapes: Transcriptional enhancers in development and evolution. <em>Cell</em> <strong>167</strong>: 1170–1187.</p>
+</div>
+<div id="ref-Franke2017">
+<p>Franke M. 2017. The role of higher-order chromatin organization at the sox9 locus in gene regulation and disease dissertation. PhD thesis, Freien Universität Berlin.</p>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="1-8-aims-of-this-thesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="2-paralog-regulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="6-2-co-regulation-of-functionally-related-genes-in-tads.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="6-4-tads-are-stable-across-large-evolutionary-time-scales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +351,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ibn-salem/thesis/edit/master/01-intro.Rmd",
+"link": "https://github.com/ibn-salem/thesis/edit/master/06-discussion.Rmd",
 "text": "Edit"
 },
 "download": ["thesis.pdf", "thesis.epub"],
