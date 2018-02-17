@@ -161,7 +161,7 @@
 
 \title{Genome folding in evolution and disease}
 \author{Jonas Ibn-Salem}
-\date{2018-02-16}
+\date{2018-02-17}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -5100,89 +5100,204 @@ anchors.
 \chapter{Discussion}\label{thesis-discussion}}
 
 \begin{itemize}
-\item
-  Limitations of 3C based methods
-\item
-  Plasticity and dynamics of chromatin interactions
-\item
-  Single cell resolution
-\item
-  Functional mechanism
-\item
-  Establishment of compartments / TADs / loops
-\item
-  Regulation of compartments / TADs / loops
+\tightlist
 \item
   Notes
 
   \begin{itemize}
-  \tightlist
   \item
-    Neo-TADs by tandem-duplication in evolution \citep{Franke2016}
-  \item
-    A key component and driver for new gene function in evolution or
-    neo-functionalization can be the birth of new enhancers through
-    acquisition of transcription factor binding and subsequent novel
-    regulatory functions \citep{Long2016}.
-  \item
-    This data can be computationally integrated with one-dimensional
-    measurements along the genome and lead to exciting findings of
-    higher order organisation.
-  \item
-    TADs are not only structural units of chromosomes, but also
-    functional building blocks of genomes.
-  \item
-    Discuss \citep{Liu2016b} Evidence of reduced recombination rate in
-    human regulatory domains
-  \item
-    Discuss loop and TAD abolishing upon CTCF and cohesin KO.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{discussion-paralog-co-regulation-in-tads}{%
-\section{Discussion paralog co-regulation in
-TADs}\label{discussion-paralog-co-regulation-in-tads}}
+\hypertarget{introduction-to-discussion}{%
+\section{(Introduction to
+discussion)}\label{introduction-to-discussion}}
 
-The association of gene expression with gene localizing in TADs is
-consistent with a recent computational study with the aim to separate
-the proportion of expression associated with genome organization from
-independent sources. A large fraction of expression can be attributed to
-positioning of genes in genome architecture and hihgly informative for
-TAD activity and organization \citep{Rennie2018}.
+\begin{itemize}
+\tightlist
+\item
+  summarize current knowledge of genome folding and gene-regulation
+  (from the introduction)
+\item
+  This leads to many fundamental questions of how genome folding
+  contributes to the functional organization of genomes regarding gene
+  regulation.
+\item
+  This data can be computationally integrated with one-dimensional
+  measurements along the genome and lead to exciting findings of a
+  higher-order organization.
+\item
+  In this thesis, I analysed the functions of TADs for gene regulation
+  and highlight their stability in evolution as well as their
+  consideration when analyzing genomic variations in patient genomes.
+\item
+  Summarize main findings from chapters 2-5
+\item
+  In this section the results of this theses from chapters are discussed
+  and related to the most recent literature.
+\end{itemize}
+
+\hypertarget{limitation-of-the-analysis}{%
+\subsection{Limitation of the
+analysis}\label{limitation-of-the-analysis}}
+
+\begin{itemize}
+\tightlist
+\item
+  Limitations of 3C based methods
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Resolution
+  \item
+    Discuss GAM \citep{Beagrie2017}.
+  \item
+    Interacinots quantification over population of cells (bulk Hi-C)
+  \item
+    Discuss single cell Hi-C
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{co-regulation-of-functionally-related-genes-in-tads}{%
+\section{Co-regulation of functionally related genes in
+TADs}\label{co-regulation-of-functionally-related-genes-in-tads}}
+
+\begin{itemize}
+\item
+  Paralog genes as model for co-regulation in TADs
+\item
+  enhancer sharing
+\item
+  co-expression
+\item
+  Co-regulation of paralogs show a functional organization of the
+  three-dimensional nucleus.
+\item
+  The association of gene expression with gene localizing in TADs is
+  consistent with a recent computational study with the aim to separate
+  the proportion of expression associated with genome organization from
+  independent sources. A large fraction of expression can be attributed
+  to the positioning of genes in genome architecture and highly
+  informative for TAD activity and organization \citep{Rennie2018}.
+\item
+  From these data we can learn about the history of genes.
+\item
+  Creation of new genes by tandem duplication.
+\item
+  Neo-functionalization over time
+\item
+  Discuss paralog co-regulation in context of \citep{Lan2016}.
+\item
+  However, the creation of paralogs by tandem duplication might also be
+  an efficient evolutionary mechanism to introduce additional
+  functionality to a gene by keeping the original gene unaffected.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    See discussion in paralogs on increased interactions within TADs.
+  \item
+    Add protein complex figure
+  \end{itemize}
+\item
+  Rearrangements of TADs might entangle duplicated genes and enable them
+  to be transcribed in a different context.
+\item
+  Add paralog separation figure.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figures/model_paralog_expansion} 
+
+}
+
+\caption{\textbf{Model of paralog gene creation in TADs
+and evolving regulatory context and TADs over time.} Most paralogs are
+created by tandem-duplication. Duplication within a TAD allows the new
+copy of the gene to be regulated by the same environment (top left).
+Over evolutionary time, the interactions pattern and regulatory input
+might change to allow for more independent expression regulation (top
+center). Evolutionary rearrangements might even relocate the genes to
+different chromosomes (top right). Alternatively, the two copies might
+stay in the same TAD to enable them to be coordinately regulated
+(bottom).}\label{fig:ParalogSeparation}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{itemize}
+\tightlist
+\item
+  A key component and driver for new gene function in evolution or
+  neo-functionalization can be the birth of new enhancers through
+  acquisition of transcription factor binding and subsequent novel
+  regulatory functions \citep{Long2016}
+\end{itemize}
+
+As consequence of these association of TADs with co-regulation, enhancer
+sharing, and co-expression, we hypothesized TADs provide regulatory
+environments for genes and therefore be conserved during evolution. More
+specifically, we asked whether genomic rearrangement between related
+species would more frequently occur at TAD boundaries. Furthermore, we
+hypothesized that disruption of TADs during evolution might be
+associated with changes in gene expression programs between the species.
 
 \hypertarget{discussion-on-tad-evolution}{%
 \section{Discussion on TAD
 evolution}\label{discussion-on-tad-evolution}}
 
-Follow up studes might experimentally support the functional importance
-of evolutionary conserved TADs. A very recent study investigated the
-requirenment of ultra-conserved non-coding region containing enhancers
-by knock-out experiments in mice \citep{Dickel2018}. Knowck-out mice
-that lack individual or combination of enhancers were viable but showed
-strong neurological phenotypes. Indicating that the remarkably strong
-sequence conservation likely results from fitness deficit that appear
-subtle in a laboratory setting \citep{Dickel2018}. This could be similar
-for targeted deletions of conserved TAD boundaries.
+\begin{itemize}
+\tightlist
+\item
+  Introdcue main questios in TAD evolution project
+\item
+  Discussion on findings
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Relate to GRBs and CNE clusters
+    \citep{Harmston2017, Polychronopoulos2017}
+  \end{itemize}
+\item
+  Discuss \citep{Liu2016b} Evidence of reduced recombination rate in
+  human regulatory domains.
+\item
+  The relation of variant co-transmission in population, in general,
+  measured as linkage disequilibrium (LD) correlates with Hi-C
+  interaction frequencies \citep{Gerber2018}.
+\item
+  Follow up studies might experimentally support the functional
+  importance of evolutionary conserved TADs.
+\item
+  Neo-TADs by tandem-duplication in evolution \citep{Franke2016}
+\end{itemize}
+
+A very recent study investigated the requirement of the ultra-conserved
+non-coding region containing enhancers by knock-out experiments in mice
+\citep{Dickel2018}. Knock-out mice that lack individual or combination
+of enhancers were viable but showed strong neurological phenotypes. This
+indicates that the remarkably strong sequence conservation likely
+results from fitness deficit that appear subtle in a laboratory setting
+\citep{Dickel2018}. This effect could be similar for targeted deletions
+of conserved TAD boundaries.
 
 The increased expression conservation of genes within TADs is somewhat
-consistent with a very recent study, in which promoter and enhancer
-activity was measured in liver samples from 15 species
-\citep{Berthelot2017}. In this study gene expression conservation could
-best be explained by the number and conservation of surrounding
-enhancers and promoters.
-
-In this thesis, I analysed the functions of TADs for gene regulation and
-highlight their stability in evolution as well as their consideration
-when analyzing genomic variations in patient genomes. - Paralog genes as
-model for co-regulation in TADs - enhancer sharing - co-expression
-
-As consequence of these association of TADs with co-regulation, enhancer
-sharing and co-expression, we hypothesized TADs provide regulatory
-environments for genes and therefore be conserved during evolution. More
-specifically, we asked whether genomic rearrangement between related
-species would more frequently occur at TAD boundaries. Furthermore, we
-hypothesized that disruption of TADs during evolution might be
-associated with changes of gene expression programs between the species.
+consistent with a very recent study, analyzing promoter and enhancer
+activity in liver samples from 15 species \citep{Berthelot2017}. In this
+study gene expression conservation could best be explained by the number
+and conservation of surrounding enhancers and promoters.
 
 The analysis of genomic rearrangements between human and other species
 during evolution lead to the conclusion that TADs are important
@@ -5194,13 +5309,64 @@ observed for example in genetic diseases
 the depletion of evolutionary rearrangements in TADs and the expression
 change associated with TAD disruption to be a consequence of selective
 pressure on TAD structure. Therefore selective pressure is likely to act
-on TAD structures. While in neutral selection
+on TAD structures.
+
+\hypertarget{clinical-phenotypes-can-be-explained-by-tad-disruptions}{%
+\section{Clinical phenotypes can be explained by TAD
+disruptions}\label{clinical-phenotypes-can-be-explained-by-tad-disruptions}}
 
 \begin{itemize}
 \tightlist
 \item
-  Relate to GRBs and CNE clusters
-  \citep{Harmston2017, Polychronopoulos2017}
+  Introduce from the evolutionary perspective
+\item
+  Check discussion of position effect section
+\item
+  Discuss and review TAD disease studies (see intro).
+\item
+  Need for contact maps in clinical practice
+\item
+  Limitation of non-tissue-specific interaction data in this project
+\item
+  Tissue-specific interactions needed
+\end{itemize}
+
+\hypertarget{prediction-of-chromatin-interactions}{%
+\section{Prediction of chromatin
+interactions}\label{prediction-of-chromatin-interactions}}
+
+\begin{itemize}
+\tightlist
+\item
+  Discuss need for both
+
+  \begin{itemize}
+  \tightlist
+  \item
+    condition specific interaction maps
+  \item
+    Which factors mediated long-range interactions.
+  \item
+    Plasticity and dynamics of chromatin interactions
+  \end{itemize}
+\item
+  See discussion of seven C manuscript.
+\item
+  The screening of hundreds of TF for their predictive value in loop
+  formation lead to several known and novel factors in chromatin loop
+  formation
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Discuss loop and TAD were abolishing upon CTCF and cohesin KO.
+  \end{itemize}
+\item
+  Discuss C-technologies and their specific limitation.
+\item
+  However, from very recent work it becomes clear, that there will be a
+  continously increasing development of further methods to probe
+  interactions in a more efficient and targeted way.
 \end{itemize}
 
 The majority of disease-associated variants uncovered by genome-wide
@@ -5208,8 +5374,8 @@ association studies (GWAS) reside in noncoding sequences. Many variants
 are located near cis-regulatory sequences and enhancers and could,
 therefore, contribute to pathogenesis by affecting transcription of
 specific genes \citep{Hindorff2009}. The ability to measure long-range
-chromatin interactions makes it possible to assign understand the role
-of non-coding variants by predicting its interacting target gene
+chromatin interactions makes it possible to understand the role of
+non-coding variants by predicting its interacting target gene
 \citep{Smemo2014, Visser2012}. This has been shown by measuring the
 interactions of promoters in 17 human primary hematopoietic cells types
 revealing more than 2,400 potential disease-associated genes liked to
@@ -5217,76 +5383,100 @@ thousands of GWAS SNPs \citep{Javierre2016}. In another study, the
 noncoding variants associated with schizophrenia could be annotated
 using Hi-C contact maps from human cerebral cortex \citep{Won2016}.
 
+\hypertarget{conclusions}{%
+\section{Conclusions}\label{conclusions}}
+
+Recent methodological advances in chromatin conformation capture
+experiments resulted in genome-wide contact maps of genomes. These data
+lead to many fascinating insights into the folding structures of
+genomes. One important discovery was that chromosomes fold locally into
+discreet genomic domains, called TADs.
+
+The work described in this thesis shows that TADs are not only
+structural units of genomes but that they are also functionally
+essential for the correct regulation of gene expression. TADs represent
+a regulatory environment that restricts the interaction landscape of
+enhancers. Indeed, functionally related genes, such as paralogs, are
+co-regulated within TADs. During evolution, new genes can emerge by
+duplication and find established regulatory environments within TADs.
+Therefore, TADs represent productive nests for novel genes in evolution.
+Their stability further stressed the functional importance of TADs
+during hundred million years of evolution. Indeed stable TADs are
+associated with conserved expression profiles of genes.
+
+Disruption of TADs by rearrangements is associated with changes in gene
+expression profiles during evolution as well as in genomes of subjects
+with developmental diseases. While these disruptions of TADs might be
+beneficial for an organism and lead to evolutionary leaps in some cases,
+I show in disease genomes, that disruptions of TADs can result in severe
+phenotypes like mental retardation. Therefore, the three-dimensional
+folding structure of genomes, including TADs and enhancer-promoter
+interactions have to be considered for the interpretation of genomic
+variants of patient genomes.
+
+While continually decreasing costs of sequencing will further enable the
+analysis of individual genomes in many genetic syndromes or cancers, it
+will be increasingly important to interpret these variants within their
+functional genomic context correctly. To this end, we need a deeper
+understanding of the functional role of genome folding including its
+dynamics between single cells as well as its changes in specific cell
+types and conditions. To integrate diverse types of functional data that
+is measured along the genomes with the chromatin folding patterns and
+their interplay, we need carefully designed computational models. This
+will address not only fundamental questions such as the evolution of
+genomes, mechanisms of gene regulation in differentiation and
+development but also solve practical problems such as the interpretation
+of genetic variants in disease genomes for better developments of
+diagnosis and treatments.
+
 \hypertarget{further-directions}{%
 \section{Further directions}\label{further-directions}}
 
 \begin{itemize}
 \tightlist
 \item
+  Many open questions in the field of three-dimensional genome folding.
+\item
+  Neo-TADs by tandem-duplication in evolution \citep{Franke2016}
+\item
   Plasticity and dynamics of chromatin interactions
 \item
-  Single cell resolution
+  Single-cell resolution
 
   \begin{itemize}
   \tightlist
   \item
     Single cell Hi-C studies: \citep{Nagano2017, Stevens2017}
   \item
-    Computational modelling of single cells \citep{Sekelja2016}.
+    Computational modeling of single cells \citep{Sekelja2016}.
   \end{itemize}
 \item
   Functional mechanism
-\item
-  Establishment of compartments / TADs / loops
-\item
-  Regulation of compartment / TADs / loops
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Loop extrusion
+  \item
+    CTCF and cohesin depletion experiments
+  \item
+    Establishment of compartments / TADs / loops
+  \item
+    Independent mechanism for loops and domains on the one hand and
+    compartments on the other hand.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Compartmental segregation was increased on CTCF (or cohesin?)
+      knock out.
+    \item
+      Phase-separation model \citep{DiPierro2017, Strom2017, Hnisz2017}.
+    \end{itemize}
+  \item
+    How are loop formation and domain organization regulated?
+  \end{itemize}
 \end{itemize}
-
-\hypertarget{conclusions}{%
-\section{Conclusions}\label{conclusions}}
-
-Recent methodological advances in chromatin conformation capture
-experiments resulted in genome-wide contact maps of genomes. These data
-lead to many interesting insights in the folding structures of genomes.
-One important discovery was that chromosomes fold locally into discreet
-genomic domains, called TADs.
-
-In this thesis, I showed that TADs are not only structural units of
-genomes, but that they are also functionally important for the correct
-regulation of gene expression. TADs represent regulatory environment
-that restrict the interaction landscape of enhancers. Indeed,
-functionally related genes, such as paralogs, are co-regulated within
-TADs. During evolution, new genes can emerge by duplication and find
-established regulatory environments within TADs. Therefore, TADs
-represent productive nests for novel genes in evolution. The functional
-important of TADs was further stressed by their stability during hundred
-million years of evolution. Indeed stable TADs are associated with
-conserved expression profiles of genes.
-
-Disruption of TADs by rearrangements is associated to changes of gene
-expression profiles during evolution as well as in genomes of subjects
-with developmental diseases. While these disruptions of TADs might be
-beneficial for an organism and lead to evolutionary leaps in some cases,
-I showed in disease genomes, that disruption of TADs can result in
-severe phenotypes like mental retardation. Therefore, the
-three-dimensonal folding structure of genomes, including TADs and
-enhancer-promoter interactions have to be considered for the
-interpretation of genomic variants of patient genomes.
-
-While constantly decreasing costs of sequencing will further enable the
-analysis of individual genomes in many genetic syndromes or cancers, it
-will be increasingly important to correctly interpret these variants
-within their functional genomic context. To this end, we need a deeper
-understanding of the functional role of genome folding including its
-dynamics between single cells as well as its changes in specific cell
-types and conditions. To integrate diverse types of functional data that
-is measured along the genomes with the chromatin folding patterns and
-their interplay, we need carefully designed computational models. This
-will address not only fundamental questions such as evolution of
-genomes, mechanisms of gene regulation in differentiation and
-development, but also solve practical problems such as the
-interpretation of genetic variants in disease genomes for better
-developments of diagnosis and treatments.
 
 \hypertarget{appendix-appendix}{%
 \appendix}
