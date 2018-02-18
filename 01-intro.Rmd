@@ -1,7 +1,7 @@
 
-# Introduction {#thesis-intro}
+# Introduction {#intro}
 
-## Regulation of gene expression
+## Regulation of gene expression {#regulation-of-expression}
 
 Each cell in our body originate from the same fertilized stem cell and has therefore virtually the same genome. However, different cell types have distinct morphologies and fulfill diverse functions. This diversity is archived by expressing only a subset of genes to a specific extent for any cell type, developmental state, and environmental condition. Gene expression is therefore complex and controlled on many molecular levels [@Lelli2012]. 
 
