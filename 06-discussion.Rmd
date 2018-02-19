@@ -76,13 +76,11 @@ Similarly, deletion or duplication of TAD boundaries could change the folding st
 In agreement with these mechanisms observed in genetic diseases, we find that evolutionary rearrangements disrupting TADs are associated with divergent gene expression patterns between mouse and human. 
 These findings indicate an evolutionary mechanism by which structural variations lead to altered domain organization with associated expression changes which might enable novel functions and morphologies.
 One example of altered physiological morphologies upon structural variations is the Liebenberg Syndrom that is characterized by malformation of upper limbs, showing the characteristic bone morphology of hind-limbs [@Spielmann2012]. This syndrome is caused by deletions or translocations that disrupt a TAD boundary element which exposes the *PITX1* gene to the activation by an enhancer with specific lower-limb activity [@Spielmann2013a]. 
-This example and other phenotypes caused by TAD disruptions [@Lupianez2015; @Franke2016; @Flottmann2017] show that altered genome folding upon TAD disruption can lead to morphological novelties.
+This example and other pathogenic phenotypes caused by TAD disruptions [@Lupianez2015; @Franke2016; @Flottmann2017] show that altered genome folding upon TAD disruption can ptentially also lead to physiological and morphological novelties during evolution.
 
 Together, our data suggest that TADs act as protective nests for evolving newcomer genes. 
 Duplicating genes within TADs seems to be a reasonable evolutionary mechanism, much more straightforward than creating from nothing an entirely new regulatory environment for a new gene. 
 Genetic variations that alter genome folding and expose genes to new regulatory environments can then create new functions of the gene by expression in different contexts leading to physiological or morphological novelties.
-
-<!-- Connection to TAD evolution -->
 
 ## TADs are stable across large evolutionary time-scales
 
@@ -116,7 +114,7 @@ Therefore, we interpret the depletion of evolutionary rearrangements in TADs and
 <!-- Connection from TAD-evolution to position effect -->
 <!-- While miss-regulation upon TAD disruption might be beneficial for an organism and allow evolutionary leaps (as discussed above), in most cases TAD disruptions might be detrimental for an organism, as can be seen in genetic diseases and cancers (as discussed below).  -->
 
-## Gene dysregulation by altered TAD structure in disease
+## Gene miss-expression by altered TADs in disease {#TAD-disease}
 
 Their conservation during evolution supports the functional importance of TADs.
 However, if TADs are indeed crucial for proper gene regulation during development, one would expect that TAD disruptions are associated with disease and lead to phenotypes by miss-regulation of phenotypically relevant genes.
@@ -127,7 +125,7 @@ Furthermore, we reported disruption of long-range chromatin interactions between
 For some candidate genes, we confirm gene expression changes in cell lines derived from subjects with such rearrangements (Chapter \@ref(position-effect)). 
 Importantly, these effects of rearrangements in disease genomes are consistent with the comparative genomic analysis finding selective pressure on TAD disruptions.
 
-The causal relationship between TAD disruption, miss-expression and pathogenic phenotypes has been studied recently in more detail (revied for example in [@Krijger2015; @Achinger-Kawecka2017; @Yu2017; @Andrey2017]). 
+The causal relationship between TAD disruption, miss-expression and pathogenic phenotypes has been studied recently in more detail (revied for example in [@Krijger2016; @Achinger-Kawecka2017; @Yu2017; @Andrey2017]). 
 In these studies, the authors linked observed pathogenic phenotypes of congenital diseases and cancers to structural variations identified in the subjects genomes. 
 The observed phenotypes could not be explained, when only the disruption of protein-coding sequence or gene dosage was considered. However, when considering the genome folding structure and TADs together with enhancer activity, the pathogenic effect mechanism became apparent. 
 
@@ -179,25 +177,43 @@ Together, these studies confirm our findings of computationally predicted pathom
 TAD disruptions can lead to miss-expression not only during evolution but also in disease manifestation. 
 Therefore, it will be increasingly important to take the three-dimensional genome folding structure into account to interpret the effect of genetic variants. 
 
-## Integrating genome folding data can explain the pathomechanism non-coding variants
+## Integrating genome folding data can explain the pathomechanism structural variants
 
-- Out line pipeline and computational integration of publicy availible data
-- Need for contact maps in clinical practice
-- Tissue-specific interactions needed
-- Limitation of non-tissue-specific interaction data in this project
+Structural variation, either inherited or arising from de novo germline or somatic mutations, make up the majority of different nucleotides among human genomes [@Sudmant2015; @Auton2015].
+By their ability to alter gene dosage, promote gene fusions, unmask recessive alleles, or disrupt associations between genes and their regulatory elements, structural variants are involved in numerous congenital syndromes and cancers [@Stankiewicz2010].
+However, many structural variants affect only non-coding regions in the genome and are therefore difficult to interpret in modern molecular diagnoses. 
 
-(from position effect discussion:) We tested the possibility of utilizing chromatin contact information to dissect chromosome rearrangements which disrupt non-coding chromosome regions in clinical cases. We focused on 17 subjects from DGAP, 12 with available clinical microarray information, with different rare presentations and de novo non-coding BCAs classified as VUS. Of these, 15 corresponded to translocations and two were inversions. These cases represent ~11% of the total number of sequenced DGAP cases, which makes our predictions even more significant for future potential treatment or management of subjects who would not otherwise obtain a clinical diagnosis. Utilizing publicly available annotated genomic and regulatory elements, chromatin conformation capture information, predicted enhancer-promoter interactions, phenomatch scores, as well as haploinsufficiency and triplosensitivity information for all genes surrounding the BCA breakpoints at different window sizes (±3 and ±1 Mb as well as BCA-containing TAD positions), we discovered 16 genes for 11 DGAP cases that are top-ranking position effect candidates for the subjects’ clinical phenotypes (Table 4.1).
+In several syndromes, structural variants disrupt TADs and rewire regulatory interactions between enhancers and genes (Section TAD-disease). 
+These effects suggest that molecular diagnoses can benefit from taking the genome folding structure into account to identify the underlying pathogenic effect mechanism. 
 
-Overall our results suggest that the integration of phenomatch scores, altered chromatin contacts, and other clinical gene annotations provide valuable interpretation to many variants of uncertain significance through long-range position effects. The correct prediction of 52 out of 57 known pathogenic genes in DGAP cases used as positive controls supports such integration. Our computational analysis is rapid and can provide additional information to benefit the clinical assessment of both coding and non-coding genome variants. The latter is an important step towards prediction of pathogenic consequences of non-coding variantion observed in prenatal samples. 
+In previous work [@Ibn-Salem2014] and Chapter \@ref(position-effect), we demonstrate how publicly available chromatin interaction data can be used together with diverse genomic and structured phenotype data to predict regulatory effect mechanism and candidate genes. 
+Utilizing such publicly available data, we discovered 16 genes for 11 DGAP cases that are top-ranking position effect candidates for the subjects’ clinical phenotypes. 
+Importantly, we also applied our computational pipeline to cases with known pathogenic genes from the DGAP cohort, and correctly prediction 52 out of 57 genes, indicating a high sensitivity of this approach.
+Compared to more elaborate experimental screenings, our computational analysis is rapid and can provide additional information to benefit the clinical assessment of both coding and non-coding genome variants. 
 
-- While the existence of other subjects with related phenotypes to the DGAP cases does not prove the involvement of neighboring genes in the etiology of these phenotypes, it is a step forward towards prediction of pathogenic effects starting from a simple computational analysis, pointing to a better phenotypic categorization when clinically examining affected individuals. 
-- By making our position effect prediction method available to the human genetics community, we hope to study additional cases with complete phenotypic information and be able to refine better the rules for the prediction of position effects on gene expression and discover new mechanisms of pathogenicity.
+While the existence of other subjects with related phenotypes to the DGAP cases does not prove the involvement of neighboring genes in the etiology of these phenotypes, it is a step forward towards prediction of pathogenic effects starting from a simple computational analysis, pointing to a better phenotypic categorization when clinically examining affected individuals. 
+Therefore, computational integration of genomic and phenotypic data is a crucial step towards prediction of pathogenic consequences of non-coding variation observed in prenatal samples.
 
+However, the here presented computational prediction method is limited by the quality of genomic and phenotypic data. 
+An essential step in our analysis was the quantification of phenotype similarities between phenotypes annotated to genes, on the one hand, and phenotypes observed in the subject, on the other hand. 
+This gene prioritization was only possible by detailed phenotypic annotation data of subjects using the Human Phenotype Ontology (HPO). 
+The HPO provides a standardized vocabulary of phenotypic abnormalities encountered in human disease and relations between them. Furthermore, phenotypes are associations to disease by mono-genic diseases [@Kohler2014]. 
+The brought application of such deeply structured phenotypic information will be essential for correctly interpreting genomic variants causing individual abnormalities observed in heterogeneous patient cohorts [@Brookes2015]. 
+While the continuously decreasing sequencing costs allow variant detection at high-resolution in large cohorts and populations, the detailed and precise phenotypical annotation using standardized vocabularies is lacking often behind.  
 
+The crucial implications of genome folding structure on the influence of genetic variants highlight the importance of taking genome folding data into account in clinical practice. 
+However, an apparent limitation in predicting the effect of genetic variants on genome folding is the lack of high-resolution chromatin interaction data that is specific for the tissue of interest. 
+While TAD boundaries are mostly stable between cell-types [@Dixon2012; @Rao2014; @Schmitt2016] and during differentiation [@Dixon2015], many regulatory interactions are cell type-specific [@LeDily2014; @Dixon2015].
+This tissue-specificity raises the question of whether chromatin interaction data from different tissues can be used to predict regulatory interactions changes in the cell-types and tissues relevant for pathogenesis.
+Although genome-wide contact maps become increasingly available in recent years, high heterogeneity between proximity-ligation methods makes it challenging to train prediction methods on data across different studies.
+Therefore, it will be crucial to computationally predict long-range interaction in the tissue of interest from other tissue-specific genomic data that is measured along the linear genome. 
+Another critical challenge is to predict chromatin not only the disrupted chromatin interactions but also gained interactions and resulting domain organization. 
+Similar to the creation of neo-TADs by tandem-duplication of TAD boundaries, inversion and translocations can create novel folding structures by connecting loci that were before separated by TAD boundaries or even on different chromosomes. However, which regions in such fused TADs interact across rearrangement breakpoints is not clear and can only be measured experimentally in transgenic mouse models.
+Computational models that predict long-range interactions from genomic sequence could help here. A prediction model could be trained on the unaffected genome to predict chromatin interactions from sequence features. The model can then be applied to the altered sequence uppon structural variations to predict the folding structure in disease genomes. Such prediction models can help to understand better if and how new TADs are formed and which regulatory interactions are gained upon structural variations.
 
-The crucial implications of genome folding structure on the effect of genetic variants highlight the importance of taking genome folding into account. 
-However, although genome-wide contact maps become increasingly available in recent years,
-to interpret regulatory variants one needs to the folding structure of the genome in the specific cell-type or tissue in which the subject's phenotype manifests. 
+We provide initial support for such an approach by developing 7C to predict chromatin looping interactions from protein binding data and sequence motifs (Chapter \@ref(loop)). 
+Approaches, like 7C, allows predicting genome folding by taking into account both, tissue specificity and potentially altered genomic sequence. 
+However, the application on predicting folding in rearranged genomes needs to be demonstrated. 
 
 ## Condition specific genome folding by 7C
 
@@ -219,7 +235,6 @@ In another study, the noncoding variants associated with schizophrenia could be 
 
 The screening of hundreds of TF for their predictive value in loop formation lead to several known and novel factors in chromatin loop formation.
    - Discuss loop and TAD were abolishing upon CTCF and cohesin KO.
-
 
 ## Further directions
 - Many open questions in the field of three-dimensional genome folding.
