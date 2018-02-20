@@ -273,10 +273,38 @@ or T2C [@Kolovos2018].
 These methodological advances together will enable analysis of the plasticity and dynamics of chromatin interactions across diverse conditions.
 
 ## Architectural proteins mediate chromatin looping
-  - Which factors mediated long-range interactions.
 
-The screening of hundreds of TF for their predictive value in loop formation lead to several known and novel factors in chromatin loop formation.
-   - Discuss loop and TAD were abolishing upon CTCF and cohesin KO.
+A strong focus of current research in the field of three-dimensional chromatin architecture is to understand the molecular mechanism behind the formation of chromatin loops and TADs.
+It is not clear how molecular interactions between proteins at the nanometer scale organize micron-long protein-bound DNA molecules.
+TAD formation leads to insulating or facilitating interactions between specific genomic elements?
+
+Enrichment of CTCF at TAD boundaries, the convergent orientation of CTCF motifs in chromatin loops, as well as extensive polymer modeling result in the loop extrusion model (Section \@ref(loop-mechanism)).
+According to this model, loops and TADs are formed by active extrusion of chromatin through a loop-extruding factor. Thereby, barrier elements, such as CTCF can arrest the extrusion and lead to stable loops. Multiple further extrusion processes within such a loop can explain TAD like structures in Hi-C [@Fudenberg2018]. 
+
+However, it is not clear which factors drive loop formation. 
+Using our loop prediction tool 7C, we could screen ChIP-seq datasets from 124 different TF to quantify the ability of the TF binding signals to predict chromatin looping events.
+Interestingly, we could confirm many known architectural proteins, such as cohesin, CTCF, and ZNF143. 
+
+These findings are largely consistent with recent perturbation studies that analyze the effect of cohesin or CTCF depletion or knock-out on genome folding. 
+
+Cohesin knockout studies reveal that cohesin is not required for the segregation of chromatin into A/B compartments. On the contrary, compartmentalization increased upon cohesin depletion.
+
+
+<!-- - How loops and TADs are formed.  -->
+<!-- - Analysis of features -> screening of TFs  -->
+
+<!-- The screening of hundreds of TF for their predictive value in loop formation lead to several known and novel factors in chromatin loop formation. -->
+
+<!-- - Which factors mediated long-range interactions. -->
+
+<!-- - Consistent with very recent perturbation studies.  -->
+<!-- - CTCF knockout  -->
+<!-- - Rad21 Knockout and perturbation -->
+
+<!-- - leads to loop-extrustion model  -->
+
+
+
 
 ## Further directions
 - Many open questions in the field of three-dimensional genome folding.

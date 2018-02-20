@@ -177,7 +177,7 @@ Notably, such regulatory interactions appear mostly within TADs or consecutive l
 
 For example, the enhancers of the $\beta$-globin gene interact strongly with its target gene via long-range chromatin contacts in erythroid cells where the $\beta$-globin gene is active but shows little or no interactions in cells from different lineages [@Palstra2003].
 
-### TAD and loop formation by architectural proteins
+### TAD and loop formation by architectural proteins {#loop-mechanism}
 
 An important question in current research efforts is to understand how the TADs and chromatin loops are established on a molecular level. 
 These mechanisms might differ between species. 
