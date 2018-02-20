@@ -51,7 +51,7 @@ However, despite spectacular technical progress, microscopy-based approaches are
 Furthermore, the specific folding patterns observed in microscopy cannot be mapped to genomic coordinates, substantially limiting the integration with other genomic data. 
 However, a future combination of imaging-based techniques with proximity-ligation experiments together with integrative computational models might enable to study the real-time dynamics of chromatin organization with high resolution on the single cell level [@Stevens2017, @Flyamer2017]. 
 
-### Proximity-ligation based method to quantify chromatin interactions
+### Proximity-ligation based method to quantify chromatin interactions {#proximity-ligation}
 
 The frequency of interactions between different loci in the genome can be
 measured experimentally by proximity ligation techniques [@Sati2017; @Schmitt2016]. These protocols are variations of the chromosome conformation capture (3C) experiment [@Dekker2002]. 
@@ -360,7 +360,6 @@ By computationally integrating genome-wide chromatin interaction maps with diver
 - Which transcription factors are most predictive and eventually functionally involved in chromatin looping?
 
 
-
 ## Structure of this thesis
 
 The following four chapters address and discuss the questions raised above. 
@@ -373,6 +372,6 @@ Next, whole-genome alignment between human and other vertebrate genomes are used
 The next chapter address disruptions of
 chromatin organization by analyzing disease associated rearrangement
 breakpoints from whole-genome sequenced patients of various genetic
-diseases to explain their phenotypes by miss-regulation of genes in disrupted TADs (Chapter \@ref(position-effect)). 
+disorders to explain their phenotypes by miss-regulation of genes in disrupted TADs (Chapter \@ref(position-effect)). 
 Finally, I make use of recent insights in chromatin loop formation to provide a computational tool for predicting long-range chromatin contacts from largely available ChIP-seq data, with the aim to facilitate three-dimensional folding analysis in diverse tissues and conditions for which Hi-C like data is not available (Chapter \@ref(loop)).
-The overall findings are then discussed together with further research perspectives (Chapter \@ref(thesis-discussion)).
+The overall findings are then discussed in the context of most recent literature and future research perspectives (Chapter \@ref(thesis-discussion)).
