@@ -80,7 +80,7 @@
 <li class="chapter" data-level="1.4.3" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#topologically-associating-domains-tads"><i class="fa fa-check"></i><b>1.4.3</b> Topologically associating domains (TADs)</a></li>
 <li class="chapter" data-level="1.4.4" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#hierarchy-of-domain-like-structures-across-genomic-length-scales"><i class="fa fa-check"></i><b>1.4.4</b> Hierarchy of domain-like structures across genomic-length scales</a></li>
 <li class="chapter" data-level="1.4.5" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#chromatin-looping-interactions"><i class="fa fa-check"></i><b>1.4.5</b> Chromatin looping interactions</a></li>
-<li class="chapter" data-level="1.4.6" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#tad-and-loop-formation-by-architectural-proteins"><i class="fa fa-check"></i><b>1.4.6</b> TAD and loop formation by architectural proteins</a></li>
+<li class="chapter" data-level="1.4.6" data-path="1-4-hierarchy-of-chromatin-3d-structure.html"><a href="1-4-hierarchy-of-chromatin-3d-structure.html#loop-mechanism"><i class="fa fa-check"></i><b>1.4.6</b> TAD and loop formation by architectural proteins</a></li>
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="1-5-dynamics-of-chromatin-structure.html"><a href="1-5-dynamics-of-chromatin-structure.html"><i class="fa fa-check"></i><b>1.5</b> Dynamics of chromatin structure</a><ul>
 <li class="chapter" data-level="1.5.1" data-path="1-5-dynamics-of-chromatin-structure.html"><a href="1-5-dynamics-of-chromatin-structure.html#variation-of-chromatin-structure-across-cell-types"><i class="fa fa-check"></i><b>1.5.1</b> Variation of chromatin structure across cell types</a></li>
@@ -273,11 +273,30 @@
             <section class="normal" id="section-">
 <div id="architectural-proteins-mediate-chromatin-looping" class="section level2">
 <h2><span class="header-section-number">6.7</span> Architectural proteins mediate chromatin looping</h2>
-<ul>
-<li>Which factors mediated long-range interactions.</li>
-</ul>
-<p>The screening of hundreds of TF for their predictive value in loop formation lead to several known and novel factors in chromatin loop formation.
-- Discuss loop and TAD were abolishing upon CTCF and cohesin KO.</p>
+<p>A strong focus of current research in the field of three-dimensional chromatin architecture is to understand the molecular mechanism behind the formation of chromatin loops and TADs.
+It is not clear how molecular interactions between proteins at the nanometer scale organize micron-long protein-bound DNA molecules.
+TAD formation leads to insulating or facilitating interactions between specific genomic elements?</p>
+<p>Enrichment of CTCF at TAD boundaries, the convergent orientation of CTCF motifs in chromatin loops, as well as extensive polymer modeling result in the loop extrusion model (Section <a href="1-4-hierarchy-of-chromatin-3d-structure.html#loop-mechanism">1.4.6</a>).
+According to this model, loops and TADs are formed by active extrusion of chromatin through a loop-extruding factor. Thereby, barrier elements, such as CTCF can arrest the extrusion and lead to stable loops. Multiple further extrusion processes within such a loop can explain TAD like structures in Hi-C <span class="citation">(Fudenberg et al. <a href="#ref-Fudenberg2018">2018</a>)</span>.</p>
+<p>However, it is not clear which factors drive loop formation.
+Using our loop prediction tool 7C, we could screen ChIP-seq datasets from 124 different TF to quantify the ability of the TF binding signals to predict chromatin looping events.
+Interestingly, we could confirm many known architectural proteins, such as cohesin, CTCF, and ZNF143.</p>
+<p>These findings are largely consistent with recent perturbation studies that analyze the effect of cohesin or CTCF depletion or knock-out on genome folding.</p>
+<p>Cohesin knockout studies reveal that cohesin is not required for the segregation of chromatin into A/B compartments. On the contrary, compartmentalization increased upon cohesin depletion.</p>
+<!-- - How loops and TADs are formed.  -->
+<!-- - Analysis of features -> screening of TFs  -->
+<!-- The screening of hundreds of TF for their predictive value in loop formation lead to several known and novel factors in chromatin loop formation. -->
+<!-- - Which factors mediated long-range interactions. -->
+<!-- - Consistent with very recent perturbation studies.  -->
+<!-- - CTCF knockout  -->
+<!-- - Rad21 Knockout and perturbation -->
+<!-- - leads to loop-extrustion model  -->
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Fudenberg2018">
+<p>Fudenberg G, Abdennur N, Imakaev M, Goloborodko A, Mirny L. 2018. Emerging evidence of chromosome folding by loop extrusion. <em>bioRxiv</em> 264648.</p>
+</div>
 </div>
             </section>
 
