@@ -207,28 +207,70 @@ While TAD boundaries are mostly stable between cell-types [@Dixon2012; @Rao2014;
 This tissue-specificity raises the question of whether chromatin interaction data from different tissues can be used to predict regulatory interactions changes in the cell-types and tissues relevant for pathogenesis.
 Although genome-wide contact maps become increasingly available in recent years, high heterogeneity between proximity-ligation methods makes it challenging to train prediction methods on data across different studies.
 Therefore, it will be crucial to computationally predict long-range interaction in the tissue of interest from other tissue-specific genomic data that is measured along the linear genome. 
-Another critical challenge is to predict chromatin not only the disrupted chromatin interactions but also gained interactions and resulting domain organization. 
-Similar to the creation of neo-TADs by tandem-duplication of TAD boundaries, inversion and translocations can create novel folding structures by connecting loci that were before separated by TAD boundaries or even on different chromosomes. However, which regions in such fused TADs interact across rearrangement breakpoints is not clear and can only be measured experimentally in transgenic mouse models.
-Computational models that predict long-range interactions from genomic sequence could help here. A prediction model could be trained on the unaffected genome to predict chromatin interactions from sequence features. The model can then be applied to the altered sequence uppon structural variations to predict the folding structure in disease genomes. Such prediction models can help to understand better if and how new TADs are formed and which regulatory interactions are gained upon structural variations.
+
+Another critical challenge is to predict not only the disrupted chromatin interactions but also gained interactions and resulting domain organization. Similar to the creation of neo-TADs by tandem-duplication of TAD boundaries, inversion and translocations can create novel folding structures by connecting loci that were before separated by TAD boundaries or even on different chromosomes. However, which regions in such fused TADs interact across rearrangement breakpoints is not clear and is can currently only be measured experimentally in transgenic mouse models.
+Computational models that predict long-range interactions from genomic sequence could help here. A prediction model could be trained on the unaffected genome to learn sequence features that predict chromatin interactions. The model can then be applied to the genome sequence that is altered by structural variations to predict the resulting folding structure. Such prediction models can help to understand better if and how new TADs are formed and which regulatory interactions are gained upon structural variations.
 
 We provide initial support for such an approach by developing 7C to predict chromatin looping interactions from protein binding data and sequence motifs (Chapter \@ref(loop)). 
-Approaches, like 7C, allows predicting genome folding by taking into account both, tissue specificity and potentially altered genomic sequence. 
+Approaches, like 7C, allows predicting genome folding by taking into account both, the tissue specificity and potentially altered genomic sequence. 
 However, the application on predicting folding in rearranged genomes needs to be demonstrated. 
 
-## Condition specific genome folding by 7C
+## Condition specific genome folding
 
-<!-- Discussing loop prediction for association of variants to disease target genes -->
+Understanding the variability of genome folding is a key challenge faced by ongoing and future genomic research. 
+It becomes increasingly clear that condition-specific long-range interaction data is needed to (i) associate genetic variants to affected target genes, (ii) associate TF binding sites and enhancers to genes, (iii) understand the variability of long-range contacts across individuals and (iv) reveal the contribution of single cells to folding structures observed for cell populations. 
+
+### Interpretation of genetic variants by interacting genes
 The majority of disease-associated variants uncovered by genome-wide association studies (GWAS) reside in noncoding sequences. Many variants are located near cis-regulatory sequences and enhancers and could, therefore, contribute to pathogenesis by affecting transcription of specific genes [@Hindorff2009]. 
-The ability to measure long-range chromatin interactions makes it possible to understand the role of non-coding variants by predicting its interacting target gene [@Smemo2014; @Visser2012]. 
+The ability to measure long-range chromatin interactions allows understanding the role of non-coding variants by predicting its interacting target gene [@Smemo2014; @Visser2012]. 
 This has been shown by measuring the interactions of promoters in 17 human primary hematopoietic cells types revealing more than 2,400 potential disease-associated genes liked to thousands of GWAS SNPs [@Javierre2016].
 In another study, the noncoding variants associated with schizophrenia could be annotated using Hi-C contact maps from human cerebral cortex [@Won2016].
+These studies demonstrate how genome folding information can help to interpret not only structural variants but also single nucleotide variants. Furthermore, these examples highlight the need for tissue-specific interaction maps. 
 
-- Discuss need for both
-  - condition specific interaction maps
-  - Plasticity and dynamics of chromatin interactions
-- See discussion of seven C manuscript. 
-- Discuss C-technologies and their specific limitation. 
-- However, from very recent work it becomes clear, that there will be a continously increasing development of further methods to probe interactions in a more efficient and targeted way. 
+While proximity-ligation experiments are still costly and time-intensive to produce for each tissue or individual of interest, computational predictions of such interactions from ChIP-seq and motif data, as we provide with the 7C too, will likely become and fast and accurate alternative for such studies. 
+
+### Cell type-specific regulatory interactions between enhancers and genes
+
+While TADs seems to be mostly stable across different cell types [@Dixon2012] and during differentiation [@Dixon2015], individual interactions distal TF binding sites or enhancers with their regulated target gene occur in cell-type or condition-specific manner [@Bonev2016; @Andrey2017]. 
+Enhancers are often located several hundred kb apart from their gene promoter, and most enhancers do not regulate the nearest gene [@Sanyal2012].
+Therefore, tissue and condition-specific interactions of regulatory elements with genes are essential to predict gene-regulatory events correctly. 
+Since many enhancer-gene interactions appear to be in enclosed CTCF loops [@Hnisz2016a], our prediction tool 7C can be used to predict such interactions by taking condition specific signals such as ChIP-seq as input.
+
+### Variability of long-range interactions across individuals
+
+Interestingly, initial studies start to analyze ChIP-seq data of histone modifications across populations [@Grubert2015].  The variability of histone marks correlates with single nucleotide variants.  Interestingly, these histone quantitative trait loci (hQTLs) cluster in TADs. However, it is not clear yet, how TADs or individual loops vary across individuals. Therefore, predictive modeling approaches like 7C could fill this gap to analyze the variability of chromatin looping contacts cross individuals. 
+When combined with SNP data from the same individuals, one could potentially correlate genetic variants and loop variations across individuals to find loop quantitative trait loci (loopQTLs).
+
+### Genome folding in single cells
+
+In contrast to imaging-based methods, genome-wide proximity-ligation experiments such as Hi-C and ChIA-PET measure chromatin contacts in cell populations. 
+This raises the question whether observed structures like A/B compartments, TADs, or loops appear only in a subset of cells or appear from variable contacts in every single cell. 
+Recently the Hi-C protocol has been adapted to measure contacts in single cells [@Sekelja2016; @Ulianov2017]. 
+A/B compartment structure has been by FISH experiments [@Wang2016d]. TADs were also observed in single-cell Hi-C data [@Nagano2013].
+Imaging and single-cell Hi-C studies have illustrated significant cell-to-cell variability regarding 3D genome organization [@Nagano2013; @Ramani2016; @Flyamer2017; @Stevens2017].
+Accordingly, TADs seems to emerge from cell population averages and do not exist as static structures in individual cells.
+However, it is unclear how this variability relates to gene regulation in single cells. 
+It will be an exciting challenge to improve single-cell protocols in a way to separate RNA from chromatin to measure from the same cell both, gene expression and genome folding by single-cell RNA-seq and single-cell Hi-C, respectively. 
+
+Given the sparsity of coverage in current single-cell protocols [@Nagano2013; @Flyamer2017; @Stevens2017], it would be interesting to computationally predict single cell structures from other genomic data measured along the linear genome in individual cells.
+Although single-cell ChIP-seq is published [@Rotem2015], ChIP-seq needs a lot of sample material as input. Therefore,  it will be challenging to produce TF binding profiles in single cells with high coverage.
+However, thanks to single-cell ATAC-seq [@Buenrostro2015], prediction approaches like 7C could use chromatin accessibility data from single cells to predict variability in looping interactions across single cells.
+
+### Constantly improving targeted experimental methods. 
+
+While 7C archives high prediction accuracy (Chapter \@ref(loop)), it can only be as good as current experimental methods. 
+Currently, high-resolution Hi-C and ChIA-PET can be considered as gold standard for CTCF mediated long-range interactions [@Rao2014; @Tang2015]. 
+However, from the recent literature, it becomes clear, that there will be a continuously increasing development of experimental methods to probe interactions in a more efficient and targeted way [@Denker2016; @Schmitt2016; @Davies2017]. 
+Beside the first generation of genome-wide 3C methods, like Hi-C and ChIA-PET (see section \@ref(proximity-ligation)), more recent experimental developments improve resolution and efficiency by often capturing only a specific subset of interest among all interactions. 
+These methods include, for example, 
+TCC [@Kalhor2011],
+Capture-Hi-C [@Dryden2014],
+Capture-C [@Hughes2014],
+HiCap [@Sahlen2015],
+NG Capture-C [@Davies2016],
+HiChIP [@Mumbach2016],
+or T2C [@Kolovos2018].
+These methodological advances together will enable analysis of the plasticity and dynamics of chromatin interactions across diverse conditions.
 
 ## Architectural proteins mediate chromatin looping
   - Which factors mediated long-range interactions.
