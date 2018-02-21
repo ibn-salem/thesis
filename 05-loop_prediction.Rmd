@@ -2,7 +2,7 @@
 
 ### Preamble {-}
 > 
-> This chapter is submitted as a first-author paper to Genome Biology. A preprint is published at bioRxiv:
+> This chapter is submitted for publication. A preprint is published at bioRxiv:
 > 
 > Ibn-Salem J^#^, Andrade-Navarro MA. Computational Chromosome Conformation Capture by Correlation of ChIP-seq at CTCF motifs. bioRxiv. 2018. [doi:10.1101/257584](https://doi.org/10.1101/257584).
 >

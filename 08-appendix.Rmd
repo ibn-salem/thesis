@@ -1,7 +1,13 @@
 
 # (APPENDIX) Appendix {-} 
 
-# Co-regulation of paralog genes: Supporting Information {#sup-paralog-regulation}
+<!-- Ugly hack to put content before sub-section ------------------- -->
+`r if (knitr:::is_html_output()) ' '`
+<!-- ---------------------------------------------------------------- -->
+
+<!-- # Co-regulation of paralog genes: Supporting Information {#sup-paralog-regulation} -->
+# Supporting Information: Co-regulation of paralog genes {#sup-paralog-regulation}
+
 
 <!-- FIGURE S1 ---------------------------------------------------------------->
 ```{r paraVSnonPara, fig.cap='(ref:paraVSnonPara)', out.width='80%', fig.align='center'}
@@ -103,8 +109,13 @@ knitr::include_graphics("figures/paralog/SI/figS14.png")
 
 <!-- =========================================================================== -->
 
-# TAD evolution: Supporting Information {#sup-tad-evolution}
 <!-- # Supplementary Data: Evolutionary stability of TADs {#sup-tad-evolution} -->
+<!-- # TAD evolution: Supporting Information {#sup-tad-evolution} -->
+# Supplementary Data: Stability of TADs in evolution {#sup-tad-evolution}
+
+<!-- Ugly hack to put content before sub-section ------------------- -->
+`r if (knitr:::is_html_output()) ' '`
+<!-- ---------------------------------------------------------------- -->
 
 ## Supplementary Tables {#TadEvoSupTab}
 
@@ -139,7 +150,12 @@ knitr::include_graphics("figures/TAD_evolution/fig_S2_v01.png")
 
 <!-- ======================================================================= -->
 <!-- # Supplemental Data: Computational Prediction of Position Effects of Apparently Balanced Human Chromosomal Rearrangements {#sup-position-effect} -->
-# Position Effect: Supplemental Data {#sup-position-effect}
+<!-- # Position Effect: Supplemental Data {#sup-position-effect} -->
+# Supplemental Data: Position effects of rearrangements in disease genomes  {#sup-position-effect}
+
+<!-- Ugly hack to put content before sub-section ------------------- -->
+`r if (knitr:::is_html_output()) ' '`
+<!-- ---------------------------------------------------------------- -->
 
 <!-- Supplemental Data include a Supplemental Note detailing clinical case reports, a Supplemental Note detailing the karyotypes of DGAP subjects, 1 figure, and 22 tables and can be found with this article online at http://dx.doi.org/10.1016/j.ajhg.2017.06.011. -->
 
@@ -704,7 +720,12 @@ HGVS\_ng, HGVS\_p, Condition, Most severe clinical significance,
 Submitters, Highest review status and Last evaluated are provided for
 each overlap.
 
-# Loop prediction: Supplemental Information {#loop-support}
+<!-- # Loop prediction: Supplemental Information {#loop-support} -->
+# Supplemental Information: Prediction of chromatin looping interactions {#loop-support}
+
+<!-- Ugly hack to put content before sub-section ------------------- -->
+`r if (knitr:::is_html_output()) ' '`
+<!-- ---------------------------------------------------------------- -->
 
 ## Supplementary Tables {#LoopPredSupTab}
 
