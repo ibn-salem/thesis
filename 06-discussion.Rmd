@@ -335,23 +335,24 @@ These methodological advances together with appropriate computational analysis w
 
 ## Conclusions
 
-Recent methodological advances in chromatin conformation capture experiments resulted in genome-wide contact maps of genomes. 
+Recent methodological advances in capturing the conformation of chromosomes resulted in genome-wide chromatin contact maps. 
 These data lead to many fascinating insights into the folding structures of genomes.
 One important discovery was that chromosomes fold locally into discreet genomic domains, called TADs. 
 
-The work described in this thesis shows that TADs are not only structural units of genomes but that they are also functionally essential for the correct regulation of gene expression. 
-TADs represent a regulatory environment that restricts the interaction landscape of enhancers.
+The work described in this thesis shows that TADs are not only structural units of genomes but that they are also functionally important for the correct regulation of gene expression. 
+TADs represent a regulatory environment that restricts the interaction landscape of enhancers and genes.
 Indeed, functionally related genes, such as paralogs, are co-regulated within TADs. 
 During evolution, new genes can emerge by duplication and find established regulatory environments within TADs. 
 Therefore, TADs represent productive nests for novel genes in evolution.
-Their stability further stressed the functional importance of TADs during million years of evolution. Indeed stable TADs are associated with conserved expression profiles of genes. 
+Consistently, TADs are conserved across million years of evolution. 
+Furthermore, stable TADs are associated with conserved expression profiles of genes. 
 
 Disruption of TADs by rearrangements is associated with changes in gene expression profiles during evolution as well as in genomes of subjects with developmental diseases. 
-While these disruptions of TADs might be beneficial for an organism and lead to evolutionary leaps in some cases, I show in disease genomes, that disruptions of TADs can result in severe phenotypes like mental retardation. 
-Therefore, the three-dimensional folding structure of genomes, including TADs and enhancer-promoter interactions have to be considered for the interpretation of genomic variants of patient genomes.  
+While these disruptions of TADs might be beneficial for an organism and lead to evolutionary leaps in some cases, we show in disease genomes, that disruptions of TADs can result in pathological phenotypes. 
+Therefore, the three-dimensional folding structure of genomes, including TADs and enhancer-promoter interactions has to be considered for the interpretation of genomic variants of patient genomes.  
 
 While continually decreasing costs of sequencing will further enable the analysis of individual genomes in many genetic syndromes or cancers, it will be increasingly important to interpret these variants within their functional genomic context correctly. 
 To this end, we need a deeper understanding of the functional role of genome folding including its dynamics between single cells as well as its changes in specific cell types and conditions. 
-To integrate diverse types of functional data that is measured along the genomes with the chromatin folding patterns and their interplay, we need carefully designed computational models. 
-This will address not only fundamental questions such as the evolution of genomes, mechanisms of gene regulation in differentiation and development but also solve practical problems such as the interpretation of genetic variants in disease genomes for better developments of diagnosis and treatments.
+To integrate diverse types of functional data that is measured along the linear genomes with three-dimensional chromatin folding patterns and their interplay, we need carefully designed computational methods. 
+These approaches will address not only fundamental questions such as the evolution of genomes, mechanisms of gene regulation in differentiation and development but also solve practical problems such as the interpretation of genetic variants in disease genomes for better molecular diagnosis and treatment developments
 
