@@ -39,7 +39,7 @@ knitr::include_graphics("figures/Dixon2016_Fig3ab.png")
 
 The association of gene expression with gene localizing in TADs is consistent with a very recent computational study with the aim to separate the proportion of expression associated with genome organization from independent sources. A large fraction of expression variance can be attributed to the positioning of genes in genome architecture and is highly informative for TAD activity and organization [@Rennie2018].
 
-Together, with results from many other studies [@Bonnev2016; @Andrey2017; @Hnisz2016a], our results support the notion of TADs as functional units of chromosomes in which related genes are co-regulated. 
+Together, with results from many other studies [@Bonev2016; @Andrey2017; @Hnisz2016a], our results support the notion of TADs as functional units of chromosomes in which related genes are co-regulated. 
 
 
 ## Evolution by gene duplications and altered regulatory environments
@@ -256,7 +256,7 @@ However, thanks to single-cell ATAC-seq [@Buenrostro2015], prediction approaches
 
 ### Constantly improving targeted experimental methods. 
 
-While 7C archives high prediction accuracy (Chapter \@ref(loop)), it can only be as good as current experimental methods. 
+While 7C archives high prediction performance (Chapter \@ref(loop)), due to its need for parameter training, it can only be as good as the quality of experimental methods. 
 Currently, high-resolution Hi-C and ChIA-PET can be considered as gold standard for CTCF mediated long-range interactions [@Rao2014; @Tang2015]. 
 However, from the recent literature, it becomes clear, that there will be a continuously increasing development of experimental methods to probe interactions in a more efficient and targeted way [@Denker2016; @Schmitt2016; @Davies2017]. 
 Beside the first generation of genome-wide 3C methods, like Hi-C and ChIA-PET (see section \@ref(proximity-ligation)), more recent experimental developments improve resolution and efficiency by often capturing only a specific subset of interest among all interactions. 
@@ -269,6 +269,7 @@ NG Capture-C [@Davies2016],
 HiChIP [@Mumbach2016],
 or T2C [@Kolovos2018].
 These methodological advances together with appropriate computational analysis will enable analysis of the plasticity and dynamics of chromatin interactions across diverse conditions.
+
 
 ## Molecular mechanisms driving genome folding
 
@@ -286,14 +287,16 @@ Interestingly, we could confirm the implication of many known architectural prot
 These findings are largely consistent with recent perturbation studies that analyze the effect of cohesin or CTCF depletion or knock-out on genome folding. 
 Removal of cohesin and deletion of the cohesin-loading factor Nipbl lead to global loss of loops and TADs [@Rao2017; @Schwarzer2017].
 Also, depletion of CTCF in embryonal stem cells leads to loss of loops and TADs and impacts transcriptional regulation [@Nora2017]. 
-Interestingly, the formation of A/B compartments seems not to be affected by CTCF depletion [@Nora2017] and even increase upon cohesin knock out [@Schwarzer2017], indicating an independent mechanism for loop formation and compartmentalization. 
-Since A/B compartments correlation strongly with epigenetic marks [@Fortin2015; @Prakash2017], a mechanism similar to phase separation might drive compartmentalization. 
+Interestingly, the formation of A/B compartments seems not to be affected by CTCF depletion [@Nora2017] and even increased upon cohesin knock out [@Schwarzer2017], indicating an independent mechanism for loop formation and compartmentalization. 
+Since A/B compartments correlation strongly with epigenetic marks [@Fortin2015; @DiPierro2017; @Prakash2017], a mechanism similar to phase separation might drive compartmentalization. 
 Also, imaging-based data from *Drosophila* suggest the formation of heterochromatin domains by phase separation [@Strom2017].
 Polymer modeling and Hi-C data in rod photoreceptor neurons, which have inverted nuclei, confirm that heterochromatin drives the compartmental organization in both, inverted and conventional, nuclei [@Falk2018].
+
 Together, these studies point to an essential role of architectural proteins, such as CTCF and cohesin, in forming loops and domains, while clustering of epigenetic marks by a process similar to phase-separation might case the A/B compartment formation. 
 Future studies are needed to confirm the role of other architectural proteins as well as the causal relationship between heterochromatin and compartmentalization. 
 
-These methodological advances together with appropriate computational analysis will enable analysis of the plasticity and dynamics of chromatin interactions across diverse conditions.
+Multidisciplinary studies combing imaging and genome-wide proximity-ligation methods with computational modeling are needed to better understand the complexity of three-dimensional genome folding and gene regulation. Large collaborative projects, such as the 4D Nucleosome projects [@Dekker2017a], will provide new standards and improved methods. These efforts, as well as many independent studies, are promising to improve our understanding of three-dimensional genome folding in different species as well as its regulation and dynamics during cell-cycle, evolution, in development and disease.
+
 
 <!-- - How loops and TADs are formed.  -->
 <!-- - Analysis of features -> screening of TFs  -->
@@ -310,20 +313,20 @@ These methodological advances together with appropriate computational analysis w
 
 
 <!-- ## Further directions -->
-<!-- - Many open questions in the field of three-dimensional genome folding. -->
-<!-- - Neo-TADs by tandem-duplication in evolution [@Franke2016] -->
-<!-- - Plasticity and dynamics of chromatin interactions -->
-<!-- - Single-cell resolution  -->
-<!--     - Single cell Hi-C studies: [@Nagano2017; @Stevens2017] -->
-<!--     - Computational modeling of single cells [@Sekelja2016]. -->
-<!-- - Functional mechanism -->
-<!--   - Loop extrusion -->
-<!--   - CTCF and cohesin depletion experiments -->
-<!--   - Establishment of compartments / TADs / loops -->
-<!--   - Independent mechanism for loops and domains on the one hand and compartments on the other hand.  -->
-<!--     - Compartmental segregation was increased on CTCF (or cohesin?) knock out.  -->
-<!--     - Phase-separation model [@DiPierro2017; @Strom2017; @Hnisz2017]. -->
-<!--   - How are loop formation and domain organization regulated? -->
+<!-- - x Many open questions in the field of three-dimensional genome folding. -->
+<!-- - x Neo-TADs by tandem-duplication in evolution [@Franke2016] -->
+<!-- - x Plasticity and dynamics of chromatin interactions -->
+<!-- - x Single-cell resolution  -->
+<!--     - x Single cell Hi-C studies: [@Nagano2017; @Stevens2017] -->
+<!--     - x Computational modeling of single cells [@Sekelja2016]. -->
+<!-- - x Functional mechanism -->
+<!--   - x Loop extrusion -->
+<!--   - x CTCF and cohesin depletion experiments -->
+<!--   - x Establishment of compartments / TADs / loops -->
+<!--   - x Independent mechanism for loops and domains on the one hand and compartments on the other hand.  -->
+<!--     - x Compartmental segregation was increased on CTCF (or cohesin?) knock out.  -->
+<!--     - x Phase-separation model [@DiPierro2017; @Strom2017; @Hnisz2017]. -->
+<!--   - x How are loop formation and domain organization regulated? -->
 <!-- - 4D Nucleosome initiative  -->
 
 <!-- ### Limitation of the analysis -->
