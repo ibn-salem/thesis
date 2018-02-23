@@ -7,16 +7,18 @@
 
 ## Regulation of gene expression {#regulation-of-expression}
 
+
 Each cell in our body originate from the same fertilized stem cell and has therefore virtually the same genome. However, different cell types have distinct morphologies and fulfill diverse functions. This diversity is achieved by expressing only a subset of genes to a specific extent for any cell type, developmental state, and environmental condition. Gene expression is therefore complex and controlled on many molecular levels [@Lelli2012]. 
 
-The initial sequencing of the human genome reviled a tremendous resource of information on the genetic sequence. However, we are still far from complete understanding of the sequence information itself. While functional knowledge of individual genes and its activity, evolution, and associations to diseases accumulates over the last years, the non-coding parts of the genome are only very recently annotated in large collaborative efforts [@Dunham2012; @Kundaje2015; @Andersson2014]. These projects lead to an increased understanding of the regulatory potential of non-coding regions and its dynamics across conditions. 
+The initial sequencing of the human genome reviled a tremendous resource of information encoded in the DNA sequence [@Lander2001]. However, we are still far from completely understanding the sequence information itself [@Lander2011]. While functional knowledge of individual genes and its activity, evolution, and associations to diseases accumulates over the last decates, the non-coding parts of the genome are only recently annotated in massive collaborative efforts [@Dunham2012; @Kundaje2015; @Andersson2014]. These projects provide various functional data along the genome and together with many independent studies lead to an increased understanding of the regulatory potential of non-coding regions and its dynamic activity across conditions. 
 
-The genomic DNA sequence itself encodes cis-regulatory modules (CRMs) to which transcription factors (TFs) bind by recognizing specific DNA sequence motifs. TFs often form complexes with other proteins and DNA. However, TF binding and CRM assembly require often specific epigenetic states of chromatin. Epigenetic modifications of DNA, such as methylation, influence the ability of TF to bind DNA. 
+It becomes clear that gene regulation occurs on many levels. The genomic sequence itself encodes cis-regulatory modules (CRMs) to which transcription factors (TFs) bind by recognizing specific DNA sequence motifs. TFs often form complexes with other proteins and DNA. However, TF binding and CRM assembly at promoter regions of genes or distal enhancer elements require often specific epigenetic states of chromatin. Epigenetic modifications of DNA, such as methylation, influence the ability of TF to bind DNA. 
 Also, the chromatin structure and accessibility itself determines if a gene can be transcribed. 
-So-called pioneering factors can bind closed chromatin that is wrapped around nucleosomes and remodel it to make it accessible for other TFs that require open chromatin and specific post-translational histone modifications to bind cis-regulatory regions and activate target gene expression. 
+So-called pioneering factors can bind closed chromatin that is wrapped around nucleosomes and remodel it to make it accessible for other TFs that require open chromatin and specific environments of post-translational histone modifications to bind cis-regulatory regions and activate target gene expression. 
 
 Another layer in gene regulation is the three-dimensional folding structure of chromatin in the nucleus. 
-However, most of the cell-type specific gene regulation that accounts for cell differentiation in development and morphological diversification in evolution, are driven by activation changes of enhancers [@Long2016].
+However, most of the cell-type specific gene regulation that accounts for cell differentiation in development and morphological diversification in evolution are driven by activation changes of non-coding regulatory regions, described as enhancers [@Long2016].
+
 
 <!-- However, the genome is still largely considered as  -->
 <!-- - From 1D to 3D -->
