@@ -10,7 +10,7 @@
 
 ### Preamble {-}
 > 
-> This chapter was published as a co-first-author paper in the American Journal of Human Genetics:
+> This chapter is published in the American Journal of Human Genetics:
 > 
 > Cinthya J. Zepeda-Mendoza^\*^, **Jonas Ibn-Salem^\*^**, Tammy
 Kammin, David J. Harris, Debra Rita, Karen W. Gripp,
@@ -21,8 +21,8 @@ Spiegel, Rebecca L. Sparkes, Zehra Ordulu, Michael E.
 Talkowski, Miguel A. Andrade-Navarro, Peter N. Robinson,
 Cynthia C. Morton^#^. **_Computational Prediction of Position Effects of Apparently Balanced Human Chromosomal Rearrangements_**. Am J Hum Genet. 2017;101(2):206-217. [doi:10.1016/j.ajhg.2017.06.011](https://doi.org/10.1016/j.ajhg.2017.06.011).
 > 
-> The publication is availible online: https://doi.org/10.1016/j.ajhg.2017.06.011.
-> My contributions to this publication is indicated in Table \@ref(tab:contribution). 
+> The publication is available online: https://doi.org/10.1016/j.ajhg.2017.06.011.
+> My contributions to this publication are indicated in Table \@ref(tab:contribution). 
 > The source code of the complete analysis is available at GitHub:
 > [https://github.com/ibn-salem/position_effect](https://github.com/ibn-salem/position_effect). 
 > Supplementary information is shown in Appendix \@ref(sup-position-effect).

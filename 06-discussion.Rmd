@@ -137,7 +137,7 @@ Deletion of a TAD boundary upstream of *LMNB1* result in ectopic contact of enha
 This pathomechanism leads to autosomal dominant adult-onset demyelinating leukodystrophy [@Giorgio2015].
 
 <!-- ---------------------------------------------------------------- -->
-```{r TadDisruptions, fig.cap='(ref:TadDisruptionsCap)', out.width='80%', fig.align='center'}
+```{r TadDisruptions, fig.cap='(ref:TadDisruptionsCap)', out.width='100%', fig.align='center'}
 knitr::include_graphics("figures/Andrey2017_Fig5.png")
 ```
 

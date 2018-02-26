@@ -2,11 +2,11 @@
 
 ###  Preamble {-}
 > 
-> This chapter is submitted for publication and currently under peer-review. A preprint is availible from bioRxiv:
+> This chapter is submitted for publication and currently under peer-review. A preprint is available on bioRxiv:
 >
 > Krefting J, Andrade-Navarro MA, **Ibn-Salem J**^#^. **_Evolutionary stability of topologically associating domains is associated with conserved gene regulation_**. bioRxiv. 2017. [doi:doi.org/10.1101/231431](https://doi.org/10.1101/231431).
 > 
-> My contributions to this publication is indicated in Table \@ref(tab:contribution). 
+> My contributions to this publication are indicated in Table \@ref(tab:contribution). 
 > The source code of the complete analysis is available at GitHub: https://github.com/Juppen/TAD-Evolution.
 > Supplementary figures and links to supplementary tables are shown in Appendix \@ref(sup-tad-evolution).
 > 
@@ -44,11 +44,11 @@ conserved building blocks of genomes with regulatory functions that are
 often reshuffled as a whole instead of being disrupted by
 rearrangements.
 
-###  Keywords {-}
+<!-- ###  Keywords {-} -->
 
-Genome rearrangements; Topologically associating domains; TAD; Chromatin
-interactions; 3D genome architecture; Hi-C; Evolution; Selection; Gene
-regulation; Structural variants
+<!-- Genome rearrangements; Topologically associating domains; TAD; Chromatin -->
+<!-- interactions; 3D genome architecture; Hi-C; Evolution; Selection; Gene -->
+<!-- regulation; Structural variants -->
 
 ## Introduction
 

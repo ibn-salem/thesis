@@ -3,12 +3,12 @@
 
 ### Preamble {-}
 > 
-> This chapter was published as a first-author paper in the journal Nucleic Acids Research:
+> This chapter is published in the journal Nucleic Acids Research:
 > 
 > **Ibn-Salem J**, Muro EM, Andrade-Navarro MA. **_Co-regulation of paralog genes in the three-dimensional chromatin architecture_**. Nucleic Acids Res. 2017;45(1):81-91. [doi:10.1093/nar/gkw813](https://doi.org/10.1093/nar/gkw813).
 > 
-> The publication is availible online: https://doi.org/10.1093/nar/gkw813.
-> My contributions to this publication is indicated in Table \@ref(tab:contribution). 
+> The publication is available online: https://doi.org/10.1093/nar/gkw813.
+> My contributions to this publication are indicated in Table \@ref(tab:contribution). 
 > The source code of the complete analysis is available at GitHub:
 > [https://github.com/ibn-salem/paralog_regulation](https://github.com/ibn-salem/paralog_regulation). 
 > Supplementary figures are shown in Appendix \@ref(sup-paralog-regulation).
