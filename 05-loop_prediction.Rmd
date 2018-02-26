@@ -46,11 +46,11 @@ ChIP-seq datasets results in novel candidate factors functionally
 involved in chromatin looping. Our method is available as an R package:
 https://ibn-salem.github.io/sevenC/
 
-### Keywords {-}
+<!-- ### Keywords {-} -->
 
-Chromatin interactions, three-dimensional genome architecture,
-transcription factors, ChIP-seq, 3C, 4C, 5C, Hi-C, 6C, ChIA-PET, 7C,
-prediction, chromatin loops
+<!-- Chromatin interactions, three-dimensional genome architecture, -->
+<!-- transcription factors, ChIP-seq, 3C, 4C, 5C, Hi-C, 6C, ChIA-PET, 7C, -->
+<!-- prediction, chromatin loops -->
 
 ## Introduction
 
