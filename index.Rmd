@@ -41,5 +41,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 The human genome is hierarchically folded in the three-dimensional nucleus. Pairwise chromatin contacts cluster in discrete chromosomal regions, termed topologically associating domains (TADs). 
 Whether TADs play an essential role in gene expression regulation in evolution and genetic diseases, is analyzed in this thesis by computationally integrating genome-wide contact maps with various data along the linear genome.  
+
 Thereby, functionally related genes cluster in TADs and share distal regulatory elements to enable coordinated gene expression. TADs are primarily stable during evolution and associate with conserved expression profiles. Disruptions of TADs by genomic rearrangements during evolution or in genetic diseases are associated with expression changes. Chromatin contact data and TADs can be used to interpret gene regulatory effects of structural variations, as demonstrated for subjects with diverse clinical phenotypes. Furthermore, a computational method is developed, which uses genomic sequence features and tissue-specific protein binding signals to predict genome-wide chromatin contacts with high accuracy.  
+
 This work shows that TADs are not only structural units of chromosomes but also crucial functional building blocks of genomes, which represent regulatory environments for genes. Therefore, it will be increasingly important to consider genome folding in both, genomic research and clinical practice. 

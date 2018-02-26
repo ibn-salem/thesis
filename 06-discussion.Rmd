@@ -239,7 +239,7 @@ Since many enhancer-gene interactions appear to be in enclosed CTCF loops [@Hnis
 Interestingly, initial studies start to analyze the variability of epigenetic marks by ChIP-seq of histone modifications across individuals [@Grubert2015; @Waszak2015]. The variability of histone marks correlates with single nucleotide variants. These histone quantitative trait loci (hQTLs) cluster in TADs. However, it is not clear yet, how TADs or individual loops vary across individuals. Therefore, predictive modeling approaches like 7C could fill this gap to analyze the variability of chromatin looping contacts cross individuals. 
 When combined with SNP data from the same individuals, one could potentially correlate genetic variants and loop variations across individuals to find loop quantitative trait loci (lQTLs).
 
-### Genome folding in single cells
+### Genome folding in single cells {#single-cell}
 
 In contrast to imaging-based methods, genome-wide proximity-ligation experiments such as Hi-C and ChIA-PET measure chromatin contacts in cell populations. 
 This limitation raises the question whether observed structures like A/B compartments, TADs, or loops appear only stable in a subset of cells or appear from variable contacts in every single cell. 
