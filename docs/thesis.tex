@@ -161,7 +161,7 @@
 
 \title{Genome folding in evolution and disease}
 \author{Jonas Ibn-Salem}
-\date{2018-02-22}
+\date{2018-02-26}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -224,45 +224,29 @@
 \chapter*{Abstract}\label{abstract}}
 \addcontentsline{toc}{chapter}{Abstract}
 
-The human genome is folded non-randomly in the nucleus. Proximity
-ligation methods probe the three-dimensional genome architecture and
-produce genome-wide maps of pairwise chromatin contacts. Enrichment of
-these contacts in discrete regions of several hundred kilo-bases reveals
-local folding of chromosomes into so-called topologically associating
-domains (TADs). TADs restrict contacts of distal regulatory sequences,
-such as enhancers, with their target genes and might, therefore,
-represent important functional units of genomes.
-
-This thesis describes the computational integration of genome-wide
-chromatin interaction maps with diverse genomic datasets to analyze the
-function of TADs for gene regulation during evolution and in diseases.
-More specifically, pairs of functionally related genes, such as
-paralogs, are enriched for colocalization in the same TAD, share more
-often common enhancers than expected by chance, and have increased
-long-range contact frequencies. The clustering of related genes within
-TADs enables concerted gene expression and indicates evolutionary
-constraints in functional genome organization. Indeed, comparative
-genomic analysis of evolutionary rearrangements between human and
-diverse mammal species shows that TADs are highly conserved building
-blocks of genomes across millions of years of evolution. While TADs, in
-general, conserve expression profiles between mouse and human orthologs,
-genes in rearranged TADs show divergent expression profiles.
-Furthermore, a computational pipeline predicts disruption of TADs in
-whole-genome sequenced subjects with diverse neurodevelopmental
-phenotypes. While altered protein-coding sequences cannot explain the
-phenotypes, balanced chromosomal rearrangements disrupt TADs and
-promoter-enhancer interactions of phenotypically matching genes leading
-to miss-regulation in patient-derived cell lines. Finally, a
-computational tool, 7C, is presented to predict chromatin looping
-interactions by broadly available ChIP-seq data. This tool enables to
-study genome folding in many diverse tissues and conditions.
-
-Together, these results show that TAD disruptions cause altered gene
-regulation during evolution and in diseases. TADs are not only
-structural units of genomes but also crucial functional building blocks
-and represent regulatory environments for genes. Therefore, it will be
-increasingly important to take genome structure into account, not only
-in genomic research but also in clinical practice.
+The human genome is hierarchically folded in the three-dimensional
+nucleus. Pairwise chromatin contacts cluster in discrete chromosomal
+regions, termed topologically associating domains (TADs). Whether TADs
+play an essential role in gene expression regulation in evolution and
+genetic diseases, is analyzed in this thesis by computationally
+integrating genome-wide contact maps with various data along the linear
+genome.\\
+Thereby, functionally related genes cluster in TADs and share distal
+regulatory elements to enable coordinated gene expression. TADs are
+primarily stable during evolution and associate with conserved
+expression profiles. Disruptions of TADs by genomic rearrangements
+during evolution or in genetic diseases are associated with expression
+changes. Chromatin contact data and TADs can be used to interpret gene
+regulatory effects of structural variations, as demonstrated for
+subjects with diverse clinical phenotypes. Furthermore, a computational
+method is developed, which uses genomic sequence features and
+tissue-specific protein binding signals to predict genome-wide chromatin
+contacts with high accuracy.\\
+This work shows that TADs are not only structural units of chromosomes
+but also crucial functional building blocks of genomes, which represent
+regulatory environments for genes. Therefore, it will be increasingly
+important to consider genome folding in both, genomic research and
+clinical practice.
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
@@ -279,33 +263,39 @@ Gene expression is therefore complex and controlled on many molecular
 levels \citep{Lelli2012}.
 
 The initial sequencing of the human genome reviled a tremendous resource
-of information on the genetic sequence. However, we are still far from
-complete understanding of the sequence information itself. While
-functional knowledge of individual genes and its activity, evolution,
-and associations to diseases accumulates over the last years, the
-non-coding parts of the genome are only very recently annotated in large
-collaborative efforts \citep{Dunham2012, Kundaje2015, Andersson2014}.
-These projects lead to an increased understanding of the regulatory
-potential of non-coding regions and its dynamics across conditions.
+of information encoded in the DNA sequence \citep{Lander2001}. However,
+we are still far from completely understanding the sequence information
+itself \citep{Lander2011}. While functional knowledge of individual
+genes and its activity, evolution, and associations to diseases
+accumulates over the last decates, the non-coding parts of the genome
+are only recently annotated in massive collaborative efforts
+\citep{Dunham2012, Kundaje2015, Andersson2014}. These projects provide
+various functional data along the genome and together with many
+independent studies lead to an increased understanding of the regulatory
+potential of non-coding regions and its dynamic activity across
+conditions.
 
-The genomic DNA sequence itself encodes cis-regulatory modules (CRMs) to
-which transcription factors (TFs) bind by recognizing specific DNA
-sequence motifs. TFs often form complexes with other proteins and DNA.
-However, TF binding and CRM assembly require often specific epigenetic
-states of chromatin. Epigenetic modifications of DNA, such as
-methylation, influence the ability of TF to bind DNA. Also, the
-chromatin structure and accessibility itself determines if a gene can be
-transcribed. So-called pioneering factors can bind closed chromatin that
-is wrapped around nucleosomes and remodel it to make it accessible for
-other TFs that require open chromatin and specific post-translational
+It becomes clear that gene regulation occurs on many levels. The genomic
+sequence itself encodes cis-regulatory modules (CRMs) to which
+transcription factors (TFs) bind by recognizing specific DNA sequence
+motifs. TFs often form complexes with other proteins and DNA. However,
+TF binding and CRM assembly at promoter regions of genes or distal
+enhancer elements require often specific epigenetic states of chromatin.
+Epigenetic modifications of DNA, such as methylation, influence the
+ability of TF to bind DNA. Also, the chromatin structure and
+accessibility itself determines if a gene can be transcribed. So-called
+pioneering factors can bind closed chromatin that is wrapped around
+nucleosomes and remodel it to make it accessible for other TFs that
+require open chromatin and specific environments of post-translational
 histone modifications to bind cis-regulatory regions and activate target
 gene expression.
 
 Another layer in gene regulation is the three-dimensional folding
 structure of chromatin in the nucleus. However, most of the cell-type
 specific gene regulation that accounts for cell differentiation in
-development and morphological diversification in evolution, are driven
-by activation changes of enhancers \citep{Long2016}.
+development and morphological diversification in evolution are driven by
+activation changes of non-coding regulatory regions, described as
+enhancers \citep{Long2016}.
 
 --\textgreater{}
 

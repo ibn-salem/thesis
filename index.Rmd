@@ -38,20 +38,8 @@ description: "A draft PhD thesis on genome folding in evoultion and disease."
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-<!-- - different cell types with same genome -->
-<!-- - enhancer-promoter interactions -->
-<!-- - Hierarchy of foling and TADs -->
-<!-- - example of paralog genes for co-regulation -->
-<!-- - Stability in evolution and conserved gene expression -->
-<!-- - Dirsuption of TADs by rearragements in diease lead to altered gene expression  -->
-<!-- - Computational appraoch for using interaction and TADs to interpret variants -->
-<!-- - To improve analysis of genome folding in diverse conditions, we develped 7C. -->
 
-<!-- Chromosome conformation capture experiments coupled with high-throughput sequencing (Hi-C) allow to measure DNA-DNA contacts genome-wide and reviled a highly organized hierarchy of three-dimensional genome organization. -->
-
-The human genome is folded non-randomly in the nucleus. Proximity ligation methods probe the three-dimensional genome architecture and produce genome-wide maps of pairwise chromatin contact frequencies. Enrichment of these contacts in discrete intervals reveals local folding of chromosomes into so-called topologically associating domains (TADs). TADs restrict interactions between distal regulatory sequences, such as enhancers, with their target genes and might represent essential functional units of genome regulation.  
-This thesis describes the computational integration of genome-wide contact maps with diverse genomic datasets to relate TADs to gene regulation during evolution and in diseases. 
-More specifically, pairs of functionally related genes, such as paralogs, are enriched to be regulated with shared enhancers in the same TAD and have increased long-range contacts.  This clustering of related genes in TADs enables concerted gene expression and indicates evolutionary constraints in functional genome organization.
-Analysis of genomic rearrangements between human and diverse mammal species shows that TADs are conserved building blocks of genomes during evolution. While this conservation of TADs is associated with conserved gene expression, genes in rearranged TADs have divergent expression profiles. Consistently, we find disruption of TADs in whole-genome sequenced subjects with diverse neurodevelopmental phenotypes. While altered protein-coding sequences cannot explain these phenotypes, balanced chromosomal rearrangements disrupt TADs and promoter-enhancer interactions of phenotypically matching genes, leading to miss-expression in patient-derived cell lines.
-Finally, a computational tool, 7C, is presented to predict chromatin looping interactions by broadly available ChIP-seq data. 7C enables to study genome folding in many diverse tissues and conditions.  
-Together, these results show that TAD disruptions cause altered gene regulation during evolution and in diseases. TADs are not only structural units of genomes but also crucial functional building blocks and represent regulatory environments for genes. Therefore, it will be increasingly important to take genome structure into account, not only in genomic research but also in clinical practice.
+The human genome is hierarchically folded in the three-dimensional nucleus. Pairwise chromatin contacts cluster in discrete chromosomal regions, termed topologically associating domains (TADs). 
+Whether TADs play an essential role in gene expression regulation in evolution and genetic diseases, is analyzed in this thesis by computationally integrating genome-wide contact maps with various data along the linear genome.  
+Thereby, functionally related genes cluster in TADs and share distal regulatory elements to enable coordinated gene expression. TADs are primarily stable during evolution and associate with conserved expression profiles. Disruptions of TADs by genomic rearrangements during evolution or in genetic diseases are associated with expression changes. Chromatin contact data and TADs can be used to interpret gene regulatory effects of structural variations, as demonstrated for subjects with diverse clinical phenotypes. Furthermore, a computational method is developed, which uses genomic sequence features and tissue-specific protein binding signals to predict genome-wide chromatin contacts with high accuracy.  
+This work shows that TADs are not only structural units of chromosomes but also crucial functional building blocks of genomes, which represent regulatory environments for genes. Therefore, it will be increasingly important to consider genome folding in both, genomic research and clinical practice. 
