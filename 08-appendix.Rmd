@@ -794,6 +794,193 @@ Table: (\#tab:contribution) **Contributions to individual publications**. Contri
 **Writing – Review & Editing:**            Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages.                                                          30                                             50                                                 20                                      50
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Curriculum vitae {-}
+
+**Jonas Ibn-Salem**
+
+---
+
+**Personal data **
+
+Date of birth
+
+:   24.07.1987
+
+Place of birth
+
+:   Mamers (France)
+
+Nationality
+
+:   German
+
+---
+
+**Education**
+
+2014-2018
+
+:   PhD in Computational Biology, *Johannes Gutenberg University Mainz and Institute of Molecular Biology (IMB)*, Mainz, Germany
+
+
+2011--2014
+
+:   MSc Bioinformatics, *Freie Universität Berlin*, Germany
+
+2008--2011
+
+:   BSc Bioinformatics, *Freie Universität Berlin*, Germany
+
+1994--2007
+
+:   Abitur (A level), *Rudolf-Steiner-Schule Loheland*, Fulda, Germany
+
+
+---
+
+**Publications**
+
+-   Zepeda-Mendoza CJ\*, **Ibn-Salem J\***, Kammin T, Harris DJ, Rita D,
+    Gripp KW, MacKenzie JJ, Gropman A, Graham B, Shaheen R, Alkuraya FS,
+    Brasington CK, Spence EJ, Masser-Frye D, Bird LM, Spiegel E, Sparkes
+    RL, Ordulu Z, Talkowski ME, Andrade-Navarro MA, Robinson PN, Morton
+    CC.\
+    **Computational Prediction of Position Effects of Apparently
+    Balanced Human Chromosomal Rearrangements.**\
+    *Am J Hum Genet.* 2017 Aug 3;101(2):206-217. [doi:
+    10.1016/j.ajhg.2017.06.011](https://doi.org/10.1016/j.ajhg.2017.06.011).
+
+-   **Ibn-Salem J**, Muro EM, Andrade-Navarro MA.\
+    **Co-regulation of paralog genes in the three-dimensional chromatin
+    architecture.**\
+    *Nucleic Acids Research* 2017 Jan 9;45(1):81-91. [doi:
+    10.1093/nar/gkw813](https://doi.org/10.1093/nar/gkw813). \
+
+-   **Ibn-Salem, J**., Meiers, S., Eigenbrod, O., Sehlke, R., Talyan,
+    S., Schwahn, K., Otto, R., Pataskar, A., Metge, F., & Angerer, P.\
+    **Highlights of the 1st Student Symposium on Computational
+    Genomics.**\
+    *Genomics And Computational Biology*. 2017 2(1), e59.
+    [doi:10.18547/gcb.2016.vol2.iss1.e59](https://doi.org/10.18547/gcb.2016.vol2.iss1.e59)
+
+-   Hansen P, Hecht J, **Ibn-Salem J**, Menkuec BS, Roskosch S, Truss M,
+    Robinson PN.\
+    **Q-nexus: a comprehensive and efficient analysis pipeline designed
+    for ChIP-nexus.**\
+    *BMC Genomics*. 2016 Nov 4;17(1):873.
+    <https://doi.org/10.1186/s12864-016-3164-6>  \
+
+-   Piacentino ML, Zuch DT, Fishman J, Rose S, Speranza EE, Li C, Yu J,
+    Chung O, Ramachandran J, Ferrell P, Patel V, Reyna A, Hameeduddin H,
+    Chaves J, Hewitt FB, Bardot E, Lee D, Core AB, Hogan JD, Keenan JL,
+    Luo L, Coulombe-Huntington J, Blute TA, Oleinik E, **Ibn-Salem J**,
+    Poustka AJ, Bradham CA.\
+    **RNA-Seq identifies SPGs as a ventral skeletal patterning cue in
+    sea urchins.**\
+    *Development*. 2016 Jan 11. [doi:
+    10.1242/dev.129312](https://doi.org/10.1242/dev.129312)  \
+
+-   Starick SR\*, **Ibn-Salem J\***, Jurk M, Hernandez C, Love MI, Chung
+    HR, Vingron M, Thomas-Chollier M, Meijsing SH.\
+    **ChIP-exo signal associated with DNA-binding motifs provides
+    insight into the genomic binding of the glucocorticoid receptor and
+    cooperating transcription factors**.\
+    *Genome Research*. 2015 Jun;25(6):825-35.
+    [doi:10.1101/gr.185157.114](https://doi.org/10.1101/gr.185157.114)
+
+-   Köhler S, Schoeneberg U, Czeschik JC, Doelken SC, Hehir-Kwa JY,
+    **Ibn-Salem J**, Mungall CJ, Smedley D, Haendel MA, Robinson PN.\
+    **Clinical interpretation of CNVs with cross-species phenotype
+    data**.\
+    *J Med Genet*. 2014 Nov;51(11):766-772. [doi:
+    10.1136/jmedgenet-2014-102633](https://doi.org/10.1136/jmedgenet-2014-102633).
+
+-   **Ibn-Salem J\***, Köhler S\*, Love MI, Chung HR, Huang N, Hurles
+    ME, Haendel M, Washington NL, Smedley D, Mungall CJ, Lewis SE, Ott
+    CE, Bauer S, Schofield PN, Mundlos S, Spielmann M, Robinson PN.\
+    **Deletions of chromosomal regulatory boundaries are associated with
+    congenital disease.**\
+    *Genome Biology*. 2014 Sep 4;15(9):423. [doi:
+    10.1186/s13059-014-0423-1](https://doi.org/10.1186/s13059-014-0423-1).
+
+<!-- --- -->
+
+<!-- **Invited Talks** -->
+
+<!-- -   **Imperial College London, MRC London Institute of Medical -->
+<!--     Sciences**, 19 May. 2017, London, UK Title: *Evolution of TADs and -->
+<!--     prediction of chromatin looping* -->
+
+<!-- -   **Humboldt University Berlin, Humboldt University Berlin**, 19 Dez. -->
+<!--     2016, Berlin, Germany Title: *ChIP-seq and related techniques to -->
+<!--     analyze protein-DNA interactions and predict chromatin looping -->
+<!--     interactions.* -->
+
+<!-- -   **Max-Planck-Institute for Molecular Genetics**, 04 Dez. 2015, -->
+<!--     Berlin, Germany Title: *Co-regulation of paralog genes in the 3D -->
+<!--     chromatin architecture* -->
+
+<!-- --- -->
+<!-- **Conference Presentations** -->
+
+<!-- -   **Basel Computational Biology Conference \[BC2\]$^{2}$**, 12-15 Sept -->
+<!--     2017, Basel, Switzerland Title: *Prediction of chromatin looping -->
+<!--     interactions from ChIP-seq profiles at CTCF motifs* -->
+
+<!-- -   **ISCB European Student Council Symposium 2016**, 3 Sept 2016, The -->
+<!--     Hauge, Netherlands Title: *Prediction of Chromatin Looping Events* -->
+
+<!-- -   **ISCB Student Council Symposium 2015**, 10 July 2015, Dublin, -->
+<!--     Ireland Title: *Co-regulation of human paralog genes in the -->
+<!--     three-dimensional chromatin architecture* -->
+
+<!-- --- -->
+<!-- **Poster Presentations** -->
+
+<!-- -   **2017 IMB Conference: Gene Regulation by The Numbers**, 19 - 21 -->
+<!--     June, 2017, Mainz, Germany Title: *Prediction of chromatin looping -->
+<!--     interactions from ChIP-seq profiles at CTCF motifs* -->
+
+<!-- -   **15th European Conference on Computational Biology**, 4-7 Sept -->
+<!--     2016, The Hauge, Netherlands Title: *Co-regulation of paralog genes -->
+<!--     in the three-dimensional chromatin architecture* -->
+
+<!-- -   **German Conference on Bioinformatics 2016**, 12-15 Sept 2016, -->
+<!--     Berlin, Germany Title: *Prediction of three-dimensional chromatin -->
+<!--     looping from sequence motifs and protein binding signals* -->
+
+<!-- -   **EMBO Conference: From Functional Genomics to Systems Biology**, -->
+<!--     12-15 Nov 2016, Heidelberg, Germany Title: *Three-dimensional -->
+<!--     chromatin looping predicted by CTCF motifs and ChIP-seq signals* -->
+
+<!-- -   **RECOMB Comparative Genomics 2015**, 04-07 Oct. 2015, Frankfurt, -->
+<!--     Germany Title: *Co-regulation of paralog genes in the -->
+<!--     three-dimensional chromatin architecture* -->
+
+<!-- -   **ISMB/ECCB Conference 2015**, 12-14 July, Dublin, Ireland Title: -->
+<!--     *Co-regulation of human paralog genes in the thre-dimensional -->
+<!--     chromatin architecture* -->
+
+<!-- -   **Regulatory Genomics Special Interest Group**, 11 July 2015, -->
+<!--     Dublin, Ireland Title: *Co-regulation of human paralog genes in the -->
+<!--     three-dimensional chromatin architecture* -->
+
+<!-- -   **ISCB Student Council Symposium 2015**, 10 July 2015, Dublin, -->
+<!--     Ireland Title: *Co-regulation of human paralog genes in the -->
+<!--     three-dimensional chromatin architecture* -->
+
+<!-- -   **Genome Regulation in 3D Conference**, June 28-30, 2015, Rehovot, -->
+<!--     Israel Title: *Co-regulation of human paralog genes in the -->
+<!--     three-dimensional chromatin architecture* -->
+
+<!-- -   **German Conference on Bioinformatics 2014**, Sept. 29 - Oct. 1, -->
+<!--     2014, Bielefeld, Germany Title: *Deletions of chromosomal regulatory -->
+<!--     boundaries are associated with congenital disease* -->
+
+<!-- -   **Annual Meeting of the AGD 2014**, Oct 10-11, Potsdam, Germany -->
+<!--     Title: *Deletions of chromosomal regulatory boundaries are -->
+<!--     associated with congenital disease* -->
+
 
 # Acknowledgements {-}
 
