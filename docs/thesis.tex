@@ -94,7 +94,7 @@
 \newcommand{\thesisSecondReviewerUniversity}{\protect{Johannes Gutenberg University Mainz}}
 \newcommand{\thesisSecondReviewerDepartment}{Faculty of Biology and Center for Computational Sciences in Mainz}
 
-\newcommand{\thesisFirstSupervisor}{Miguel Andrade}
+\newcommand{\thesisFirstSupervisor}{Prof. Dr. Miguel Andrade-Navarro}
 \newcommand{\thesisSecondSupervisor}{}
 
 \newcommand{\thesisUniversity}{\protect{Johannes Gutenberg University Mainz}}
@@ -161,7 +161,7 @@
 
 \title{Genome folding in evolution and disease}
 \author{Jonas Ibn-Salem}
-\date{2018-02-26}
+\date{2018-02-27}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -2197,7 +2197,8 @@ creating from nothing a complete new regulatory environment for a new
 gene.
 
 \hypertarget{acknowledgements}{%
-\section{Acknowledgements}\label{acknowledgements}}
+\section*{Acknowledgements}\label{acknowledgements}}
+\addcontentsline{toc}{section}{Acknowledgements}
 
 The authors thank all members of the CBDM group for fruitful
 discussions.
@@ -2982,22 +2983,13 @@ base (version grch37.ensembl.org) using the package biomaRt
 packages from tidyverse \citep{Wickham2017}.
 
 \hypertarget{declarations}{%
-\section{Declarations}\label{declarations}}
-
-\hypertarget{ethics-approval-and-consent-to-participate}{%
-\subsection{Ethics approval and consent to
-participate}\label{ethics-approval-and-consent-to-participate}}
-
-Not applicable
-
-\hypertarget{consent-for-publication}{%
-\subsection{Consent for publication}\label{consent-for-publication}}
-
-Not applicable
+\section*{Declarations}\label{declarations}}
+\addcontentsline{toc}{section}{Declarations}
 
 \hypertarget{availability-of-data-and-material}{%
-\subsection{Availability of data and
+\subsection*{Availability of data and
 material}\label{availability-of-data-and-material}}
+\addcontentsline{toc}{subsection}{Availability of data and material}
 
 The source code of all analysis is available on GitHub:
 \href{https://github.com/Juppen/TAD-Evolution}{\emph{https://github.com/Juppen/TAD-Evolution}}.
@@ -3007,24 +2999,22 @@ identifiers listed in Table \ref{tab:TadEvoSpecies} and
 \protect\hyperlink{TadEvoSupTab}{Table S1}.
 
 \hypertarget{competing-interests}{%
-\subsection{Competing interests}\label{competing-interests}}
+\subsection*{Competing interests}\label{competing-interests}}
+\addcontentsline{toc}{subsection}{Competing interests}
 
 The authors declare that they have no competing interests.
 
-\hypertarget{funding}{%
-\subsection{Funding}\label{funding}}
-
-Not applicable.
-
 \hypertarget{authors-contributions}{%
-\subsection{Authors` contributions}\label{authors-contributions}}
+\subsection*{Authors` contributions}\label{authors-contributions}}
+\addcontentsline{toc}{subsection}{Authors` contributions}
 
 JK and JI developed and implemented the methods and performed the
 analysis. JI conceived the study. JK wrote the first draft of the
 manuscript. JK, MA and JI wrote the manuscript. MA supervised the study.
 
 \hypertarget{acknowledgments}{%
-\subsection{Acknowledgments}\label{acknowledgments}}
+\subsection*{Acknowledgments}\label{acknowledgments}}
+\addcontentsline{toc}{subsection}{Acknowledgments}
 
 The authors thank all members of the CBDM group for fruitful
 discussions.
@@ -3217,7 +3207,7 @@ karyotypes are reported, with overlap of breakpoints with regulatory
 elements (E = enhancer, DHS = DNaseI hypersensitive sites, CTCF = CTCF
 binding sites), and TADs from H1-hESC, IMR90, and GM12878 (1= one
 breakpoint within TAD, 2=both BCA breakpoints are located within TAD).
-Top-ranking position effect genes are provided for the ±1 Mb windows
+Top-ranking position effect genes are provided for the +-1 Mb windows
 surrounding the BCA breakpoints; each gene is highlighted with different
 evidence supporting its inclusion (a = ClinGen known recessive genes, b=
 ClinGen genes with emerging and sufficient evidence suggesting
@@ -3232,7 +3222,7 @@ interactions).}\tabularnewline
 \end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\raggedright
 \textbf{Breakpoints within TADs (hESC / IMR90 / GM12878)}\strut
 \end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedleft
-\textbf{Top-ranking Candidates +/-1 Mb }\strut
+\textbf{Top-ranking Candidates +-1 Mb }\strut
 \end{minipage}\tabularnewline
 \midrule
 \endfirsthead
@@ -3244,7 +3234,7 @@ interactions).}\tabularnewline
 \end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\raggedright
 \textbf{Breakpoints within TADs (hESC / IMR90 / GM12878)}\strut
 \end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedleft
-\textbf{Top-ranking Candidates +/-1 Mb }\strut
+\textbf{Top-ranking Candidates +-1 Mb }\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
@@ -3409,8 +3399,8 @@ DHS\strut
 breakpoints}\label{analysis-of-genes-bordering-the-rearrangement-breakpoints}}
 
 The presence of annotated genes or pseudogenes and lincRNAs was assessed
-in windows of ±3 and ±1 Mb neighboring each subject's translocation and
-inversion breakpoints, and within reported H1-hESC topologically
+in windows of +-3 and +-1 Mb neighboring each subject's translocation
+and inversion breakpoints, and within reported H1-hESC topologically
 associated domains (TADs)\citep{Dixon2012} where the breakpoints were
 located. The gene annotation file was obtained from Ensembl GRCh37
 archive,\citep{Flicek2014} and we used the Human Body Map lincRNAs
@@ -3474,7 +3464,7 @@ information content of the most speciﬁc HPO term that is part of or a
 common ancestor (more general term) of a set of phenotypes. Our set of
 phenotypes is constituted by the HPO terms associated to DGAP cases and
 the ones annotated to candidate position effect genes within windows of
-±3 and ±1 Mb of sequence in proximity to the breakpoints. We used two
++-3 and +-1 Mb of sequence in proximity to the breakpoints. We used two
 background models to assess signiﬁcance of this similarity. The ﬁrst is
 based on randomly permuting the associations of phenotypes to genes; to
 this effect, the phenotype-gene associations are shuffled 100 times
@@ -3637,11 +3627,11 @@ effects}\label{identification-of-genes-with-potential-position-effects}}
 
 To identify genes which could be generating the complex DGAP phenotypes
 via position effects from chromosome rearrangements, we analyzed all
-annotated genes within windows of ±3 and ±1 Mb proximal and distal to
+annotated genes within windows of +-3 and +-1 Mb proximal and distal to
 the breakpoints, and within the BCA-containing H1-hESC reported TAD
-positions. A total of 3081 genes were contained within the ±3 and ±1 Mb
-windows for all cases; 106 of these genes (\textasciitilde{}3.4\%) have
-an HI score of \textless{}10\%, which is a predictor of
+positions. A total of 3081 genes were contained within the +-3 and +-1
+Mb windows for all cases; 106 of these genes (\textasciitilde{}3.4\%)
+have an HI score of \textless{}10\%, which is a predictor of
 haploinsufficiency,\citep{Huang2010} and 55 and two genes have ClinGen
 emerging evidence suggesting that dosage haplo/triplo-sensitivity,
 respectively, is associated with clinical phenotype
@@ -3665,7 +3655,7 @@ neighboring gene phenotypes. The similarity significance is then
 calculated based on randomly permuting the associations of phenotypes to
 genes, and in shifting the DGAP translocation and inversion breakpoint
 positions along the chromosome. We obtained phenomatch scores ranging
-from 0.003 to 91.48 for 179 genes within the ±3 and ±1 Mb windows, as
+from 0.003 to 91.48 for 179 genes within the +-3 and +-1 Mb windows, as
 well as within the TAD positions
 (\protect\hyperlink{position-effect-sub-tab}{Table S}15).
 
@@ -3679,7 +3669,7 @@ genes and enhancers included in predicted enhancer-promoter interactions
 would be strong position effect candidates. We used the ENCODE distal
 DHS/enhancer--promoter connections\citep{Thurman2012} to assess
 disrupted predicted \emph{cis}-regulatory interactions by the DGAP
-breakpoints within a ±500 Kb window. The analysis revealed 193 genes
+breakpoints within a +-500 Kb window. The analysis revealed 193 genes
 that were separated from their predicted candidate enhancers,
 potentially altering gene expression
 (\protect\hyperlink{position-effect-sub-tab}{Table S}13). A total of 133
@@ -3691,7 +3681,7 @@ interactions with 10 or up to 91 enhancers
 For the 17 analyzed DGAP BCAs, there are a total of 645 genes with
 either evidence of dosage sensitivity, disrupted enhancer-promoter
 interactions, or significant phenotypic similarity. This represents
-\textasciitilde{}21\% of the genes contained within the ±3 Mb windows,
+\textasciitilde{}21\% of the genes contained within the +-3 Mb windows,
 clearly an undesirable number for timely clinical interpretation and
 functional analyses. To filter the most promising candidates, we ranked
 them using their reported dosage sensitivity, disrupted regulatory
@@ -3703,7 +3693,7 @@ per case and adding up their dosage sensitivity and disrupted regulatory
 interaction data, we consistently ranked the reported pathogenic and
 likely pathogenic genes in the upper decile for 52 out of the 57 control
 DGAP cases (\textasciitilde{}91\%) when considering candidates within
-the TAD and ±1 Mb analysis windows (Table S17). 32 of these genes were
+the TAD and +-1 Mb analysis windows (Table S17). 32 of these genes were
 the top-ranking candidates in their corresponding DGAP case, while 19 of
 them were positioned in the second-tier rank. Only five genes could not
 be found in the top decile ranking positions as they had one or no lines
@@ -3711,11 +3701,11 @@ of evidence supporting their inclusion.
 
 Applying this ranking strategy to the 17 non-coding BCAs, we predict 16
 top-ranking candidates for 11 DGAP cases and 102 second-tier candidates
-for the 17 analyzed DGAP cases within ±1 Mb analysis windows (Table
+for the 17 analyzed DGAP cases within +-1 Mb analysis windows (Table
 \ref{tab:position-effect-subjects} and
 \protect\hyperlink{position-effect-sub-tab}{Table S}15). This is a
 significant reduction compared to the initial 645 possible candidates
-(\textasciitilde{}3.8\% of the neighboring genes in the ±3 Mb windows
+(\textasciitilde{}3.8\% of the neighboring genes in the +-3 Mb windows
 considering top and second-tier candidates, and only 0.05\% considering
 top candidates only). Of note, only nine of the 16 top-ranking
 candidates are included within the same TAD as the BCA breakpoint
@@ -3903,9 +3893,9 @@ genomic and regulatory elements, chromatin conformation capture
 information, predicted enhancer-promoter interactions, phenomatch
 scores, as well as haploinsufficiency and triplosensitivity information
 for all genes surrounding the BCA breakpoints at different window sizes
-(±3 and ±1 Mb as well as BCA-containing TAD positions), we discovered 16
-genes for 11 DGAP cases that are top-ranking position effect candidates
-for the subjects' clinical phenotypes (Table
+(+-3 and +-1 Mb as well as BCA-containing TAD positions), we discovered
+16 genes for 11 DGAP cases that are top-ranking position effect
+candidates for the subjects' clinical phenotypes (Table
 \ref{tab:position-effect-subjects}).
 
 We observed that eight of the sequenced DGAP BCA breakpoints,
@@ -3999,7 +3989,7 @@ well as HI scores build upon this selection, and can help laboratories
 and clinicians focus in subsequent analyses on candidates of their
 interest. As of now, the ``top-ranking'' candidates have the highest
 number of evidence supporting their selection; however, there are also
-102 second-tier candidates for the 17 analyzed DGAP cases within ±1 Mb
+102 second-tier candidates for the 17 analyzed DGAP cases within +-1 Mb
 analysis windows which may well play a functional role. Presently, we
 are unable to give ``weights'' to any of these selection criteria
 (\emph{i.e}., a gene with a high phenomatch score and no evidence of HI
@@ -4064,6 +4054,10 @@ hope to study additional cases with complete phenotypic information and
 be able to refine better the rules for the prediction of position
 effects on gene expression and discover new mechanisms of pathogenicity.
 
+\hypertarget{declarations-1}{%
+\section*{Declarations}\label{declarations-1}}
+\addcontentsline{toc}{section}{Declarations}
+
 \hypertarget{acknowledgements-1}{%
 \subsection*{Acknowledgements}\label{acknowledgements-1}}
 \addcontentsline{toc}{subsection}{Acknowledgements}
@@ -4076,7 +4070,8 @@ Institutes of Health (GM061354 to CCM and MET). The authors declare no
 conflicts of interest.
 
 \hypertarget{web-resources}{%
-\subsection{Web Resources}\label{web-resources}}
+\subsection*{Web Resources}\label{web-resources}}
+\addcontentsline{toc}{subsection}{Web Resources}
 
 The scripts used in this study to predict position effects can be
 downloaded from:
@@ -5094,23 +5089,14 @@ All analysis presented in this work were implemented in R and all
 scripts used have been made available in a separate GitHub repository:
 \href{https://github.com/ibn-salem/chromloop_analysis}{\emph{https://github.com/ibn-salem/sevenC\_analysis}}.
 
-\hypertarget{declarations-1}{%
-\section{Declarations}\label{declarations-1}}
-
-\hypertarget{ethics-approval-and-consent-to-participate-1}{%
-\subsection{Ethics approval and consent to
-participate}\label{ethics-approval-and-consent-to-participate-1}}
-
-Not applicable
-
-\hypertarget{consent-for-publication-1}{%
-\subsection{Consent for publication}\label{consent-for-publication-1}}
-
-Not applicable
+\hypertarget{declarations-2}{%
+\section*{Declarations}\label{declarations-2}}
+\addcontentsline{toc}{section}{Declarations}
 
 \hypertarget{availability-of-data-and-material-1}{%
-\subsection{Availability of data and
+\subsection*{Availability of data and
 material}\label{availability-of-data-and-material-1}}
+\addcontentsline{toc}{subsection}{Availability of data and material}
 
 The source code for the \emph{sevenC} package is available on GitHub:
 \href{https://github.com/ibn-salem/sevenC}{\emph{https://github.com/ibn-salem/sevenC}}.
@@ -5122,24 +5108,22 @@ downloaded from the GEO repository or ENCODE as described in the methods
 section.
 
 \hypertarget{competing-interests-1}{%
-\subsection{Competing interests}\label{competing-interests-1}}
+\subsection*{Competing interests}\label{competing-interests-1}}
+\addcontentsline{toc}{subsection}{Competing interests}
 
 The authors declare that they have no competing interests.
 
-\hypertarget{funding-1}{%
-\subsection{Funding}\label{funding-1}}
-
-Not applicable.
-
 \hypertarget{authors-contributions-1}{%
-\subsection{Authors` contributions}\label{authors-contributions-1}}
+\subsection*{Authors` contributions}\label{authors-contributions-1}}
+\addcontentsline{toc}{subsection}{Authors` contributions}
 
 JI developed and implemented the method, conceived the study and
 performed all analyses. MA supervised the study. JI and MA wrote the
 manuscript.
 
 \hypertarget{acknowledgments-1}{%
-\subsection{Acknowledgments}\label{acknowledgments-1}}
+\subsection*{Acknowledgments}\label{acknowledgments-1}}
+\addcontentsline{toc}{subsection}{Acknowledgments}
 
 The authors thank all members of the CBDM group for fruitful
 discussions, especially Katerina Taškova for ideas on modeling and
@@ -5163,7 +5147,7 @@ of interphase chromosomes to fold into frequently interacting domains,
 called TADs. This non-random organization lead to many fundamental
 questions of how genome folding contributes to functional segregation in
 genomes and how domain organization ensures precise regulation of gene
-expression (see chapter \protect\hyperlink{intro}{1}).
+expression (Chapter \protect\hyperlink{intro}{1}).
 
 Chromatin interaction data can be integrated computationally with
 one-dimensional measurements along the genome. This allows to annotate
@@ -5948,10 +5932,10 @@ expression profiles of genes.
 
 Disruption of TADs by rearrangements is associated with changes in gene
 expression profiles during evolution as well as in genomes of subjects
-with developmental diseases. While these disruptions of TADs might be
-beneficial for an organism and lead to evolutionary leaps in some cases,
-we show in disease genomes, that disruptions of TADs can result in
-pathological phenotypes. Therefore, the three-dimensional folding
+with neurodevelopmental syndromes. While these disruptions of TADs might
+be beneficial for an organism and lead to evolutionary leaps in some
+cases, we show in disease genomes, that disruptions of TADs can result
+in pathological phenotypes. Therefore, the three-dimensional folding
 structure of genomes, including TADs and enhancer-promoter interactions
 has to be considered for the interpretation of genomic variants of
 patient genomes.
@@ -5971,6 +5955,8 @@ gene regulation in differentiation and development but also solve
 practical problems such as the interpretation of genetic variants in
 disease genomes for better molecular diagnosis and treatment
 developments
+
+\hypertarget{refs}{}
 
 \hypertarget{appendix-appendix}{%
 \appendix}
@@ -7094,33 +7080,264 @@ best performing models.}\label{fig:LoopPredS1}
 \chapter{Contribution to individual
 publications}\label{contribution-to-individual-publications}}
 
-\begin{table}
-
-\caption{\label{tab:contribution}Contribution to individual publications. Contributions in percent from all authors for each contribution role and publication. Author contribution definitions according to the CRediT Taxonomy (http://journals.plos.org/plosone/s/authorship).}
-\centering
-\begin{tabular}[t]{llrrrr}
+\begin{longtable}[]{@{}lllll@{}}
+\caption{\label{tab:contribution} \textbf{Contributions to individual
+publications}. Contributions in percent from all authors for each
+contribution role and publication. Author contribution definitions
+according to the CRediT Taxonomy
+(\url{http://journals.plos.org/plosone/s/authorship}).}\tabularnewline
 \toprule
-Contributor Role & Role Definition (according to CRediT Taxonomy) & Paralog regulation (Chapter \textbackslash{}@ref(paralog-regulation)) & TAD evolution (Chapter \textbackslash{}@ref(TAD-evolution)) & Position effect (Chapter \textbackslash{}@ref(position-effect)) & Loop prediction (Chapter \textbackslash{}@ref(loop))\\
+\begin{minipage}[b]{0.49\columnwidth}\raggedright
+\textbf{Contributor Role:} Role Definition (according to CRediT
+Taxonomy)\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright
+Chapter \ref{paralog-regulation}\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright
+Chapter \ref{TAD-evolution}\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright
+Chapter \ref{position-effect}\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
+Chapter \ref{loop}\strut
+\end{minipage}\tabularnewline
 \midrule
-Conceptualization & Ideas; formulation or evolution of overarching research goals and aims. & 80 & 90 & 10 & 90\\
-Data Curation & Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later reuse. & 100 & 80 & 50 & 100\\
-Formal Analysis & Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data. & 100 & 50 & 40 & 100\\
-Funding Acquisition & Acquisition of the financial support for the project leading to this publication. & 0 & 0 & 0 & 0\\
-Investigation & Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection. & 100 & 80 & 20 & 100\\
-\addlinespace
-Methodology & Development or design of methodology; creation of models & 90 & 80 & 30 & 100\\
-Project Administration & Management and coordination responsibility for the research activity planning and execution. & 0 & 0 & 0 & 0\\
-Resources & Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools. & 0 & 0 & 0 & 0\\
-Software & Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components. & 100 & 50 & 50 & 100\\
-Supervision & Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team. & 0 & 80 & 0 & 0\\
-\addlinespace
-Validation & Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs. & 100 & 80 & 20 & 100\\
-Visualization & Preparation, creation and/or presentation of the published work, specifically visualization/data presentation. & 100 & 50 & 0 & 100\\
-Writing – Original Draft Preparation & Creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation). & 100 & 70 & 10 & 100\\
-Writing – Review \& Editing & Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages. & 30 & 50 & 20 & 50\\
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.49\columnwidth}\raggedright
+\textbf{Contributor Role:} Role Definition (according to CRediT
+Taxonomy)\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright
+Chapter \ref{paralog-regulation}\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright
+Chapter \ref{TAD-evolution}\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright
+Chapter \ref{position-effect}\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
+Chapter \ref{loop}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Conceptualization:} Ideas; formulation or evolution of
+overarching research goals and aims.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+90\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+90\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Data Curation:} Management activities to annotate (produce
+metadata), scrub data and maintain research data (including software
+code, where it is necessary for interpreting the data itself) for
+initial use and later reuse.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Formal Analysis:} Application of statistical, mathematical,
+computational, or other formal techniques to analyze or synthesize study
+data.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Funding Acquisition:} Acquisition of the financial support for
+the project leading to this publication.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Investigation:} Conducting a research and investigation process,
+specifically performing the experiments, or data/evidence
+collection.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Methodology:} Development or design of methodology; creation of
+models\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+90\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Project Administration:} Management and coordination
+responsibility for the research activity planning and execution.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Resources:} Provision of study materials, reagents, materials,
+patients, laboratory samples, animals, instrumentation, computing
+resources, or other analysis tools.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Software:} Programming, software development; designing computer
+programs; implementation of the computer code and supporting algorithms;
+testing of existing code components.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Supervision:} Oversight and leadership responsibility for the
+research activity planning and execution, including mentorship external
+to the core team.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Validation:} Verification, whether as a part of the activity or
+separate, of the overall replication/reproducibility of
+results/experiments and other research outputs.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Visualization:} Preparation, creation and/or presentation of the
+published work, specifically visualization/data presentation.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Writing -- Original Draft Preparation:} Creation and/or
+presentation of the published work, specifically writing the initial
+draft (including substantive translation).\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+70\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Writing -- Review \& Editing:} Preparation, creation and/or
+presentation of the published work by those from the original research
+group, specifically critical review, commentary or revision -- including
+pre- or post-publication stages.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+50\strut
+\end{minipage}\tabularnewline
 \bottomrule
-\end{tabular}
-\end{table}
+\end{longtable}
+
+\hypertarget{acknowledgements-2}{%
+\chapter*{Acknowledgements}\label{acknowledgements-2}}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+This work would not have been possible without the input from many
+wonderful colleagues and collaborators. First of all, I would like to
+thanks my supervisor Miguel Andrade. Miguel not only let me work on this
+exciting topic and was always open to my ideas, but he also had constant
+trust and interest in my work. He provided useful feedback and brilliant
+ideas. I highly appreciate his contributions and writing in all the here
+presented publications.
+
+All publications making up this thesis were collaborative efforts with
+significant contributions from other authors. I thank all of them for
+their contributions. I thank especially Jan Krefting for his
+comprehensive and detailed analysis of TADs in evolution. It was always
+a pleasure to discuss and work with him. I would like to thank
+especially Cinthya Zepeda-Mendoza who did most of the analysis and
+writing in the position effect project. It was always a pleasure and
+great experience to work with her. I also thank Cynthia C. Morton and
+Nick Robinson for initializing this collaboration and their input. I
+appreciate the contribution of all DGAP subjects and their families to
+this and other research by providing their data.
+
+I thank the entire CBDM group at IMB and JGU Mainz, consisting of Miguel
+Andrade, Enrique Muro, Jean-Fred Fontaine, Katerina Taškova, Sweta
+Talyan, Pablo Mier Muñoz, Gregorio Alanís Lobato, Tommaso Andreani,
+Steffen Albrecht, Susanne Klingens, and Birgit Reubert. I thank them for
+a great time in this exciting group.
+
+I met regularly with my thesis advisory committee, consisting of Miguel,
+Vijay Tiwari, Christoph Cremer, and Peter Nick Robinson. I appreciate
+the insightful discussions and useful feedback during these meetings.
+Furthermore, I thank Susanne Gerber for her interest and time to review
+my thesis. I thank David Fournier for reading, correcting and commenting
+the thesis draft. Moreover, I thank Dimitris Polychronopoulos for a
+great and inspiring time during a research-stay at MRC London. Last but
+not least, I would like to thank my partner in life, Marlien, for her
+motivation, her understanding, her patience, her endless support and her
+love. This work would have never finished without her.
 
 \bibliography{bib/PhDfltClean.bib}
 

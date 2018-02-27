@@ -611,17 +611,17 @@ retrieved from Ensemble data base (version grch37.ensembl.org) using the
 package biomaRt [@Durinck2009]. For data integration and visualization we used R
 packages from tidyverse [@Wickham2017].
 
-## Declarations
+## Declarations {-}
 
-###  Ethics approval and consent to participate
+<!-- ###  Ethics approval and consent to participate -->
 
-Not applicable
+<!-- Not applicable -->
 
-###  Consent for publication
+<!-- ###  Consent for publication -->
 
-Not applicable
+<!-- Not applicable -->
 
-### Availability of data and material
+### Availability of data and material {-}
 
 The source code of all analysis is available on GitHub:
 [*https://github.com/Juppen/TAD-Evolution*](https://github.com/Juppen/TAD-Evolution).
@@ -629,22 +629,17 @@ All the genomic data used for analyses are freely available to be
 downloaded from the UCSC Genome Browser and EBI Expression Atlas with
 identifiers listed in Table \@ref(tab:TadEvoSpecies) and [Table S1](#TadEvoSupTab).
 
-### Competing interests
+### Competing interests {-}
 
 The authors declare that they have no competing interests.
 
-### Funding
-
-Not applicable.
-
-### Authors‘ contributions
+### Authors‘ contributions {-}
 
 JK and JI developed and implemented the methods and performed the
 analysis. JI conceived the study. JK wrote the first draft of the
 manuscript. JK, MA and JI wrote the manuscript. MA supervised the study.
 
-### Acknowledgments
+### Acknowledgments {-}
 
 The authors thank all members of the CBDM group for fruitful
 discussions.
-

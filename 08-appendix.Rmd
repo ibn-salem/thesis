@@ -755,14 +755,72 @@ knitr::include_graphics("figures/loop_prediction/fig_S1_v02.png")
 <!-- ======================================================================= -->
 # Contribution to individual publications
 
-```{r contribution, message=FALSE, echo=FALSE}
-require(readr)
-# read table from attached file
-contrib <- read_tsv("data/contributions.tsv", col_types = "cciiii")
-# build table output
-knitr::kable(
-  contrib, booktabs = TRUE,
-  caption = 'Contribution to individual publications. Contributions in percent from all authors for each contribution role and publication. Author contribution definitions according to the CRediT Taxonomy (http://journals.plos.org/plosone/s/authorship).'
-)
-```
+<!-- Ugly hack to put content before sub-section ------------------- -->
+`r if (knitr:::is_html_output()) ' '`
+<!-- ---------------------------------------------------------------- -->
+
+
+Table: (\#tab:contribution) **Contributions to individual publications**. Contributions in percent from all authors for each contribution role and publication. Author contribution definitions according to the CRediT Taxonomy (http://journals.plos.org/plosone/s/authorship).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Contributor Role:**                      Role Definition (according to CRediT Taxonomy)                                                                                                                                                                    Chapter \@ref(paralog-regulation)   					 Chapter \@ref(TAD-evolution)   				Chapter \@ref(position-effect)   				   Chapter \@ref(loop)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   ------------------------------------------------------  ---------------------------------------------  -------------------------------------------------  --------------------------------------
+**Conceptualization:**                     Ideas; formulation or evolution of overarching research goals and aims.                                                                                                                                                                                               80                                             90                                                 10                                      90
+
+**Data Curation:**                         Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later reuse.                                                       100                                             80                                                 50                                     100
+
+**Formal Analysis:**                       Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data.                                                                                                                                             100                                             50                                                 40                                     100
+
+**Funding Acquisition:**                   Acquisition of the financial support for the project leading to this publication.                                                                                                                                                                                      0                                              0                                                  0                                       0
+
+**Investigation:**                         Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection.                                                                                                                                               100                                             80                                                 20                                     100
+
+**Methodology:**                           Development or design of methodology; creation of models                                                                                                                                                                                                              90                                             80                                                 30                                     100
+
+**Project Administration:**                Management and coordination responsibility for the research activity planning and execution.                                                                                                                                                                           0                                              0                                                  0                                       0
+
+**Resources:**                             Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools.                                                                                                               0                                              0                                                  0                                       0
+
+**Software:**                              Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.                                                                                                  100                                             50                                                 50                                     100
+
+**Supervision:**                           Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team.                                                                                                                              0                                             80                                                  0                                       0
+
+**Validation:**                            Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs.                                                                                                           100                                             80                                                 20                                     100
+
+**Visualization:**                         Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.                                                                                                                                                       100                                             50                                                  0                                     100
+
+**Writing – Original Draft Preparation:**  Creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).                                                                                                                                      100                                             70                                                 10                                     100
+
+**Writing – Review & Editing:**            Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages.                                                          30                                             50                                                 20                                      50
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Acknowledgements {-}
+
+This work would not have been possible without the input from many wonderful colleagues and collaborators. 
+First of all, I would like to thanks my supervisor Miguel Andrade. 
+Miguel not only let me work on this exciting topic and was always open to my ideas, but he also had constant trust and interest in my work. He provided useful feedback and brilliant ideas. I highly appreciate his contributions and writing in all the here presented publications. 
+
+All publications making up this thesis were collaborative efforts with significant contributions from other authors. I thank all of them for their contributions. I thank especially Jan Krefting for his comprehensive and detailed analysis of TADs in evolution. It was always a pleasure to discuss and work with him. 
+I would like to thank especially Cinthya Zepeda-Mendoza who did most of the analysis and writing in the position effect project. It was always a pleasure and great experience to work with her. I also thank Cynthia C. Morton and Nick Robinson for initializing this collaboration and their input. I appreciate the contribution of all DGAP subjects and their families to this and other research by providing their data.
+
+I thank the entire CBDM group at IMB and JGU Mainz, consisting of 
+Miguel Andrade,
+Enrique Muro, 
+Jean-Fred Fontaine,
+Katerina Taškova,
+Sweta Talyan,
+Pablo Mier Muñoz,
+Gregorio Alanís Lobato,
+Tommaso Andreani,
+Steffen Albrecht,
+Susanne Klingens,
+and Birgit Reubert.
+I thank them for a great time in this exciting group. 
+
+I met regularly with my thesis advisory committee, consisting of Miguel, Vijay Tiwari, Christoph Cremer, and Peter Nick Robinson. 
+I appreciate the insightful discussions and useful feedback during these meetings.
+Furthermore, I thank Susanne Gerber for her interest and time to review my thesis. 
+I thank David Fournier for reading, correcting and commenting the thesis draft. 
+Moreover, I thank Dimitris Polychronopoulos for a great and inspiring time during a research-stay at MRC London.
+Last but not least, I would like to thank my partner in life, Marlien, for her motivation, her understanding, her patience, her endless support and her love. This work would have never finished without her. 
 

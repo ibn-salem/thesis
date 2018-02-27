@@ -712,17 +712,17 @@ presented in this work were implemented in R and all scripts used have
 been made available in a separate GitHub repository:
 [*https://github.com/ibn-salem/sevenC\_analysis*](https://github.com/ibn-salem/chromloop_analysis).
 
-## Declarations
+## Declarations {-}
 
-### Ethics approval and consent to participate
+<!-- ### Ethics approval and consent to participate -->
 
-Not applicable
+<!-- Not applicable -->
 
-### Consent for publication
+<!-- ### Consent for publication -->
 
-Not applicable
+<!-- Not applicable -->
 
-### Availability of data and material
+### Availability of data and material  {-}
 
 The source code for the *sevenC* package is available on GitHub:
 [*https://github.com/ibn-salem/sevenC*](https://github.com/ibn-salem/sevenC).
@@ -733,21 +733,21 @@ All the genomic data used for analyses are freely available to be
 downloaded from the GEO repository or ENCODE as described in the methods
 section.
 
-### Competing interests
+### Competing interests  {-}
 
 The authors declare that they have no competing interests.
 
-### Funding
+<!-- ### Funding -->
 
-Not applicable.
+<!-- Not applicable. -->
 
-### Authors‘ contributions
+### Authors‘ contributions {-}
 
 JI developed and implemented the method, conceived the study and
 performed all analyses. MA supervised the study. JI and MA wrote the
 manuscript.
 
-### Acknowledgments
+### Acknowledgments {-}
 
 The authors thank all members of the CBDM group for fruitful
 discussions, especially Katerina Taškova for ideas on modeling and

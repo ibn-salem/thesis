@@ -736,8 +736,7 @@ This seems to be a reasonable evolutionary mechanism, much simpler than
 creating from nothing a complete new regulatory environment for a new
 gene.
 
-Acknowledgements
-----------------
+## Acknowledgements {-}
 
 The authors thank all members of the CBDM group for fruitful
 discussions.
