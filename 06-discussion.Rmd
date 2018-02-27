@@ -1,28 +1,27 @@
 # Discussion {#thesis-discussion}
 
-Recent developments in proximity-ligation methods allow to measure pairwise chromatin interactions genome-wide. Resulting interaction maps revealed a hierarchical organization of genome folding with the property of interphase chromosomes to fold into frequently interacting domains, called TADs. 
+Recent developments in proximity-ligation methods allow measuring of pairwise chromatin interactions genome-wide. Resulting interaction maps revealed a hierarchical organization of genome folding with the property of interphase chromosomes to fold into frequently interacting domains, called TADs. 
 This non-random organization lead to many fundamental questions of how genome folding contributes to functional segregation in genomes and how domain organization ensures precise regulation of gene expression (Chapter [1](#intro)).
 
-Chromatin interaction data can be integrated computationally with one-dimensional measurements along the genome. This allows to annotate folding structures with diverse functional data such as epigenetic marks, protein binding signals, tissue-specific gene expression, or sequence conservation across genomes. Work in this thesis applied such approaches to analyze the function of TADs for gene regulation in the contexts of evolution and diseases. The results highlight the role of TADs as regulatory environments for gene expression, their stability during millions of years of evolution as well as their disruptions by disease-associated genetic variants. Furthermore, recent insights into molecular mechanisms of chromatin loop formation are used to predict long-range interactions genome-wide from protein binding data. 
+Chromatin interaction data can be integrated computationally with one-dimensional measurements along the genome. This allows annotating folding structures with diverse functional data such as epigenetic marks, protein binding signals, tissue-specific gene expression, or sequence conservation across genomes. Work in this thesis applied such approaches to analyze the function of TADs for gene regulation in the contexts of evolution and diseases. The results highlight the role of TADs as regulatory environments for gene expression, their stability during millions of years of evolution as well as their disruptions by disease-associated genetic variants. Furthermore, recent insights into molecular mechanisms of chromatin loop formation are used to predict long-range interactions genome-wide from protein binding data. 
 
-This section discusses the results of chapters \@ref(paralog-regulation), \@ref(TAD-evolution), \@ref(position-effect), and \@ref(loop) in light of the most recent literature and suggest further research perspectives.
+This section discusses the results of chapters \@ref(paralog-regulation), \@ref(TAD-evolution), \@ref(position-effect), and \@ref(loop) in light of the most recent literature and suggests further research perspectives.
 
 ## Co-regulation of functionally related genes in TADs
 
-The ability to measure gene expression genome-wide in many different tissues and conditions
-allowed the observation of clusters of co-expressed genes in higher eukaryotes [@Boutanaev2002; @Purmann2007]. It was previously speculated that the structure of the chromatin and cis-acting units might be responsible for the observed co-expression [@Sproul2005; @Purmann2007]. 
+The ability to measure gene expression genome-wide in many different tissues and conditions allowed the observation of clusters of co-expressed genes in higher eukaryotes [@Boutanaev2002; @Purmann2007]. It was previously speculated that the structure of the chromatin and cis-acting units might be responsible for the observed co-expression [@Sproul2005; @Purmann2007]. 
 The ability to measure chromatin interactions leads to the discovery and characterization of TADs and enforces the question whether TADs insulate regulatory units in the genome to allow co-regulation of functionally similar genes.
 
 To study the interplay between TADs, gene co-regulation, and evolution, we decided to focus on pairs of paralog genes. 
 Paralogs arise from gene duplication events during evolution. 
-Because of their homology and resulting sequence similarity, paralog genes often encode proteins with related functions. This makes them an interesting model for functionally related and co-regulated genes. 
+Because of their homology and resulting sequence similarity, paralog genes often encode proteins with related functions. This makes them an exceptional model for functionally related and co-regulated genes. 
 Indeed, in gene expression data from various sources across different cell types and tissues, paralogs have significantly increased expression correlation compared to other close genes (Chapter \@ref(paralog-regulation)).
 
-A main challange in statstically analysing paralog gene pairs was their bias for short genomic distances. 
-Most duplications appear to be created by tandem duplications in direct orientation [@Newman2015], which explains the clustering of paralogs in the genome and enrichment for beeing transcibed from the same DNA strand. 
+The main challenge in statistically analyzing paralog gene pairs was their bias for short genomic distances. 
+Most duplications appear to be created by tandem duplications in direct orientation [@Newman2015], which explains the clustering of paralogs in the genome and enrichment for being transcribed from the same DNA strand. 
 These properties complicated our analysis by the need for an adequately sampled control set of gene pairs. 
 
-However, the development of careful sampling techniques results in control gene pairs that have similar properties regarding genomic distance, transcription strand, number of enhancers per gene, and the distance of enhancers to genes. These approaches allowed us to compare properties of paralog gene pairs to random expectations in a statistically robust manner.
+However, the development of careful sampling techniques results in control gene pairs that have similar properties regarding genomic distance, transcription strand, number of enhancers per gene, and the distance of enhancers to genes. These approaches allowed us to compare features of paralog gene pairs to random expectations in a statistically robust manner.
 
 Our results show that paralogs are significantly enriched in TADs, frequently share the same regulatory enhancer and have increased Hi-C contacts, even when they are more than 1 Mb apart in the linear genome. 
 These results show that evolutionary and functionally related genes tend to be co-regulated within TADs. Importantly, this highlights a functional organization of the three-dimensional genome, in which domain organization segregates distinct regulatory environments (Fig. \@ref(fig:CoRegTAD)).
@@ -32,7 +31,7 @@ These results show that evolutionary and functionally related genes tend to be c
 knitr::include_graphics("figures/Dixon2016_Fig3ab.png")
 ```
 
-(ref:CoRegTAD) **Co-regualtion by shared enhancers in TADs.** **(A)** Example diagram showing the co-regulation of multiple genes by a single regulatory element within a TAD. **(B)** Diagram of the potential for TAD boundaries to serve an enhancer blocking role that restricts enhancers to target genes within the same TAD. Figure adapted from [@Dixon2016].
+(ref:CoRegTAD) **Co-regulation by shared enhancers in TADs.** **(A)** Example diagram showing the co-regulation of multiple genes by a single regulatory element within a TAD. **(B)** Diagram of the potential for TAD boundaries to serve an enhancer blocking role that restricts enhancers to target genes within the same TAD. Figure adapted from [@Dixon2016].
 
 <!-- ---------------------------------------------------------------- -->
 
@@ -49,7 +48,7 @@ However, the analysis of paralog regulation with respect to three-dimensional ge
 Loss-of-function mutations degrade most young duplicated genes into pseudogenes [@Lynch2003].
 These observations raise the question of which mechanisms led to the survival and expression of the many paralog genes present in the human genome. Some models explain the survival of paralogs by sub-functionalization, neo-functionalization or sharing of gene dosage [@Innan2010].
 Our observation of co-regulated paralogs in the regulatory environments of TADs is consistent with a recent study of expression patterns between young and old paralogs [@Lan2016].
-This study finds often one copy of young paralogs to be downregulated, indicating that dosage-sharing allows for initial survival of duplicated genes and slow functional adaption later on [@Lan2016].
+This study often finds one copy of young paralogs to be downregulated, indicating that dosage-sharing allows for initial survival of duplicated genes and slow functional adaption later on [@Lan2016].
 
 The creation of paralogs by tandem duplication is an efficient evolutionary mechanism to introduce additional functionality to a genome by keeping the original gene unaffected.
 We observe that very close paralogs seems to have decreased Hi-C contacts between their promoters when located in the same TAD, but show enriched association to the same regulatory elements. 
@@ -59,9 +58,9 @@ Interestingly, a similar mechanism was reported for olfactory receptor genes tha
 
 The results of our analysis together with recent literature suggest a many-step mechanism of paralog evolution (Fig. \@ref(fig:ParalogSeparation)).
 First, tandem duplications generate paralog genes, initially coregulated within TADs.
-Then subsequent chromosomal rearrangements might relocate paralogs to loci distant from their homologs but retaining increased chromatin contacts.
+Then subsequent chromosomal rearrangements might relocate paralogs to loci distant from their homologs but retain increased chromatin contacts.
 Further, reorganization of the regulatory environment allows their increased independence being eventually placed even on different chromosomes where contact is no longer necessary. 
-An exception would be genes that precise to be strongly co-regulated with the original copy, for example, to produce a replacement proteins.
+An exception would be genes that precise to be strongly co-regulated with the original copy, for example, to produce replacement proteins.
 
 <!-- ---------------------------------------------------------------- -->
 ```{r ParalogSeparation, fig.cap='(ref:ParalogSeparation)', out.width='80%', fig.align='center'}
@@ -76,8 +75,8 @@ Several mechanisms can explain the creation of new functionality and morphologic
 A key component and driver for new gene function in evolution or neo-functionalization can be the birth of new enhancers through the acquisition of transcription factor binding and subsequent novel regulatory functions [@Long2016]. 
 Similarly, deletion or duplication of TAD boundaries could change the folding structure of genomic regions and enable regulatory contacts with previously insulated regulatory elements [@Ibn-Salem2014; @Lupianez2015; @Franke2017].
 In agreement with these mechanisms observed in genetic diseases, we find that evolutionary rearrangements disrupting TADs are associated with divergent gene expression patterns between mouse and human. 
-These findings indicate an evolutionary mechanism by which structural variations lead to altered domain organization with associated expression changes. Expression in differnt tissues or developmental time points might enable novel functions and morphologies.
-One example of altered physiological morphologies upon structural variations is the Liebenberg Syndrom that is characterized by malformation of upper limbs, showing the characteristic bone morphology of hind-limbs [@Spielmann2012]. This syndrome is caused by either deletions that disrupt a TAD boundary element or translocations. Bothe alternations expose the *PITX1* gene to an enhancers with specific lower-limb activity [@Spielmann2013a]. 
+These findings indicate an evolutionary mechanism by which structural variations lead to altered domain organization with associated expression changes. Expression in different tissues or developmental time points might enable novel functions and morphologies.
+One example of altered physiological morphologies upon structural variations is the Liebenberg Syndrom that is characterized by malformation of upper limbs, showing the characteristic bone morphology of hind-limbs [@Spielmann2012]. This syndrome is caused by deletions that disrupt a TAD boundary element or translocations. Bothe alternations expose the *PITX1* gene to enhancers with specific lower-limb activity [@Spielmann2013a]. 
 This example, together with other pathogenic phenotypes caused by TAD disruptions [@Lupianez2015; @Franke2016; @Flottmann2017], shows that altered genome folding upon TAD disruption can potentially lead to physiological and morphological novelties during evolution.
 
 Together, our data suggest that TADs act as protective nests for evolving newcomer genes. 
@@ -86,14 +85,14 @@ Genetic variations that alter genome folding and expose genes to new regulatory 
 
 ## TADs are stable across large evolutionary time-scales
 
-In light of the regulaory functions of TADs, such as enhancer sharing and co-expression, we hypothesized that TADs provide essential regulatory environments for genes and are therefore conserved during evolution.
+In light of the regulatory functions of TADs, such as enhancer sharing and co-expression, we hypothesized that TADs provide essential regulatory environments for genes and are therefore conserved during evolution.
 More specifically, we asked whether genomic rearrangement between distantly related species would more frequently occur at TAD boundaries or within TAD regions. 
 Furthermore, we hypothesized that disruption of TADs during evolution might be associated with changes in gene expression programs between the species.
 
 We find evolutionary rearrangements between distant vertebrate species highly enriched at TAD boundaries and depleted within TADs (Chapter \@ref(TAD-evolution)).
 This is consistent with the enrichment of non-coding sequence conservation in TADs [@Harmston2017; @Polychronopoulos2017]. 
-Interstingly, another study investigated the requirement of the ultra-conserved non-coding regions containing enhancers by knock-out experiments in mice [@Dickel2018]. Knock-out mice that lack individual or combination of enhancers were viable but showed strong neurological phenotypes.
-These effects indicate that the remarkably strong sequence conservation, which is also found in TADs, likely results from fitness deficit upon mutations although they appear subtle in a laboratory setting [@Dickel2018]. A targeted deletions of strongly conserved TAD boundaries could result in a similar effect, but has to be demostrated.
+Interestingly, another study investigated the requirement of the ultra-conserved non-coding regions containing enhancers by knock-out experiments in mice [@Dickel2018]. Knock-out mice that lack individual or combination of enhancers were viable but showed strong neurological phenotypes.
+These effects indicate that the remarkably strong sequence conservation, which is also found in TADs, likely results from fitness deficit upon mutations although they appear subtle in a laboratory setting [@Dickel2018]. Targeted deletions of strongly conserved TAD boundaries could result in similar effects, but this has to be demonstrated.
 
 Interestingly, genetic variation data across human populations revealed that loci in the same TAD have a reduced recombination rate [@Liu2016b]. 
 Consistent with this finding, the linkage disequilibrium, which measures co-transmission of genetic variants in populations, correlates with Hi-C interaction frequencies [@Gerber2018].
@@ -107,7 +106,7 @@ In summary, our analysis of genomic rearrangements between human and other speci
 This is supported by strong enrichment for non-coding conservation in TADs [@Harmston2017].
 Furthermore, changes of expression profiles are associated with the disruption of TADs during evolution. 
 This altered regulation upon TAD disruption might be beneficial for an organism and allow evolutionary leaps (as discussed above).
-However, in most cases, these gene miss-expressions might be detrimental for an organism, as was observed in genetic diseases and cancers (as discussed below).
+However, in most cases, these gene miss-expressions might be detrimental to an organism, as was observed in genetic diseases and cancers (as discussed below).
 Therefore, we interpret the depletion of evolutionary rearrangements in TADs and the expression change associated with TAD disruption to be a consequence of selective pressure on TAD structures.
 
 ## Gene expression changes by altered TADs in disease {#TAD-disease}
@@ -127,9 +126,9 @@ The observed phenotypes could not be explained, when only the disruption of prot
 
 Deletions of TAD boundaries can lead to ectopic activation of genes by enhancers in neighboring TADs (Fig. \@ref(fig:TadDisruptions)A). 
 This effect mechanism was first shown to be relevant by computationally integrating hundreds of deletions with tissue-specific enhancers, phenotype-gene associations, and TAD positions [@Ibn-Salem2014].
-A significant proportion of deletion cases could be best explained by such an enhancer adaption mechanism.
+Such an enhancer adaption mechanism could best explain a significant proportion of deletion cases.
 
-The development of CRISPR-derived methodologies allow to validate miss-expression due to ectopic contacts by experimentally induced structural variants in mice [@Kraft2015; @Andrey2017]. 
+The development of CRISPR-derived methodologies allows validating miss-expression due to ectopic contacts by experimentally induced structural variants in mice [@Kraft2015; @Andrey2017]. 
 These approaches could experimentally validate that deletion of the centromeric or telomeric boundary of a TAD containing the *EPHA4* gene causes activation of *IHH* or *PAX*, leading to brachydactyly or polydactyly, respectively [@Lupianez2015].
 Interestingly and in line with the insulating function of TAD boundaries, introducing a slightly shorter deletion, that did not overlap the TAD boundary, did not cause up-regulation [@Lupianez2015]. 
 Other examples include the locus of the *LMNB1* gene [@Giorgio2015].
@@ -141,7 +140,7 @@ This pathomechanism leads to autosomal dominant adult-onset demyelinating leukod
 knitr::include_graphics("figures/Andrey2017_Fig5.png")
 ```
 
-(ref:TadDisruptionsCap) **Structural variants can affect TAD structure and enhancer-promoter interactions.** Structural variants can induce ectopic increase or loss of gene expression leading to disease. Here, topologically associating domains (TADs) are represented by shaded triangles, genes by gray blocks, and enhancers by colored ovals. Gene expression patterns driven by enhancers in ebrioinc day 10.5 mouse embryos are shown. A representative chromatin configuration is shown above the TADs. **(A)** In the wild-type chromatin conformation, Enhancer C (E-C) controls Gene 3 (G-3) in the neural tube. **(B)** The deletion of a TAD boundary element leads to ectopic contact between Enhancer C (E-C) and gene 1 (G-1) (red arrow), which results in the ectopic expression of Gene 1 in the neural tube. **(C)** In the case of a rearrangment  through an inversion (blue arrows) or translocation that leads to the repositioning of functional elements, Enhancer C (E-C) from a neighboring TAD is free to activate Gene 1 (G-1), resulting in the ectopic expression of Gene 1 in the neural tube. The inversion also leaves Enhancer C insulated from its native target Gene 3 (G-3) by a boundary, resulting in the loss of Gene 3 expression in the neural tube. **(D)** The duplication of a region allows a new chromatin domain (a neo-TAD; green triangle) to form that contains regulatory region(s) and gene(s), which produce new expression patterns. Here, the duplicated Enhancer C′ (E-C′) and Gene 2′ (G-2′), which both locate to the insulated neo-TAD, produce the ectopic expression of Gene 2′ in the neural tube. Figure and figure caption adpated from [@Andrey2017].
+(ref:TadDisruptionsCap) **Structural variants can affect TAD structure and enhancer-promoter interactions.** Structural variants can induce ectopic increase or loss of gene expression leading to disease. Here, topologically associating domains (TADs) are represented by shaded triangles, genes by gray blocks, and enhancers by colored ovals. Gene expression patterns are driven by enhancers in E10.5 mouse embryos are shown. A representative chromatin configuration is shown above the TADs. **(A)** In the wild-type chromatin conformation, Enhancer C (E-C) controls Gene 3 (G-3) in the neural tube. **(B)** The deletion of a TAD boundary element leads to ectopic contact between Enhancer C (E-C) and gene 1 (G-1) (red arrow), which results in the ectopic expression of Gene 1 in the neural tube. **(C)** In the case of a rearrangement through an inversion (blue arrows) or translocation that leads to the repositioning of functional elements, Enhancer C (E-C) from a neighboring TAD is free to activate Gene 1 (G-1), resulting in the ectopic expression of Gene 1 in the neural tube. The inversion also leaves Enhancer C insulated from its native target Gene 3 (G-3) by a boundary, resulting in the loss of Gene 3 expression in the neural tube. **(D)** The duplication of a region allows a new chromatin domain (a neo-TAD; green triangle) to form that contains regulatory region(s) and gene(s), which produce new expression patterns. Here, the duplicated Enhancer C′ (E-C′) and Gene 2′ (G-2′), which both locate to the insulated neo-TAD, produce the ectopic expression of Gene 2′ in the neural tube. Figure and figure caption adapted from [@Andrey2017].
 
 <!-- ---------------------------------------------------------------- -->
 
@@ -154,7 +153,7 @@ However, further extension of the duplication at the *SOX9* locus, encompassing 
 Since both, *SOX9* enhancers and the *KCN72* gene are included in the duplicated regions, *KCN72* gets activated by the *SOX9* enhancers leading to Cooks syndrome [@Franke2016].
 
 Beside deletions and duplications, balanced chromosomal abnormalities (BCA) like inversion or translocation can disrupt TADs and lead to similar effect mechanism without gain or loss of genetic material.
-Inversions of TAD boundaries can bring promoters under the control of enhancers, that were before in different TADs (Fig. \@ref(fig:TadDisruptions)C).
+Inversions of TAD boundaries can bring promoters under the control of an enhancer, that was before in different TADs (Fig. \@ref(fig:TadDisruptions)C).
 Such a mechanism leads for example to F-syndrome, where inversion of the centromeric boundary of the *EPHA4* TAD cause activation of the *WNT6* gene [@Lupianez2015].
 Another recent study analyzed BCAs in 273 subjects with a spectrum of congenital abnormalities and find 7.3% of them disrupting TADs encompassing known syndromic loci. 
 Eight rearrangement breakpoints were localized in a single TAD containing the *MEF2C* gene and resulted in decreased expression of *MEF2C* in these subjects [@Redin2017]. 
@@ -209,7 +208,6 @@ We provide initial support for such an approach by developing 7C to predict chro
 Approaches like these, allow predicting genome folding by taking into account, both, the tissue specificity and the potentially altered genomic sequence. 
 However, the application in predicting folding of rearranged genomes needs to be demonstrated. 
 
-
 ## Towards studying genome folding in specific conditions 
 
 Understanding the variability of genome folding across cell-types and conditions is a key challenge faced by ongoing and future genomic research [@Yu2017]. 
@@ -219,10 +217,10 @@ How computational modeling and targeted experimental approaches can address thes
 ### Interpretation of non-coding variants by interacting genes
 
 The majority of disease-associated single nucleotide variants uncovered by genome-wide association studies (GWAS) reside in non-coding sequences. Many variants are located near cis-regulatory sequences and enhancers and could, therefore, contribute to pathogenesis by affecting transcription of specific genes [@Hindorff2009]. 
-The ability to measure long-range chromatin interactions allows to understand the role of non-coding variants by predicting its interacting target gene [@Smemo2014; @Visser2012]. 
+The ability to measure long-range chromatin interactions allows understanding the role of non-coding variants by predicting its interacting target gene [@Smemo2014; @Visser2012]. 
 This has been demonstrated by measuring the interactions of promoters in 17 human primary hematopoietic cells types, revealing more than 2,400 potential disease-associated genes liked to thousands of GWAS variants [@Javierre2016].
 In another study, the non-coding variants associated with schizophrenia could be annotated using Hi-C contact maps from human cerebral cortex [@Won2016].
-These studies demonstrate how tissue-specific genome folding information can help to interpret not only structural variants but also single nucleotide variants. Furthermore, these examples highlight the need for tissue-specific interaction maps.  
+These studies demonstrate how tissue-specific genome folding information can help to interpret not only structural variants but also single nucleotide variants. Furthermore, these examples highlight the need for tissue-specific interaction maps. 
 While proximity-ligation experiments are still costly and time-intensive to produce for each tissue or individual of interest, computational predictions of such interactions from ChIP-seq and motif data will likely become and fast and accurate alternative in such studies. 
 
 ### Cell type-specific regulatory interactions between enhancers and genes
@@ -231,8 +229,8 @@ Studying the function of, and genes regulated by, transcription factors (TF) is 
 To link these binding sites to regulated genes requires chromatin looping information for the specific tissue of interest. 
 While TADs seems to be mostly stable across different cell types [@Dixon2012] and during differentiation [@Dixon2015], individual interactions of distal TF binding sites or enhancers with their regulated target gene occur in cell-type or condition-specific manner [@Bonev2016; @Andrey2017]. 
 Enhancers are often located several hundred kb apart from their gene promoter, and most enhancers do not regulate the nearest gene [@Sanyal2012].
-Therefore, tissue and condition-specific interactions of regulatory elements with genes are essential to predict gene-regulatory events correctly.  
-Since many enhancer-gene interactions appear to be in enclosed CTCF loops [@Hnisz2016a], our prediction tool 7C can be used to predict such interactions by taking condition specific signals such as ChIP-seq as input.  Therefore, 7C can improve condition-specific association of TF binding events to regulated target genes. 
+Therefore, tissue and condition-specific interactions of regulatory elements with genes are essential to predict gene-regulatory events correctly.
+Since many enhancer-gene interactions appear to be in enclosed CTCF loops [@Hnisz2016a], our prediction tool 7C can be used to predict such interactions by taking condition specific signals such as ChIP-seq as input. Therefore, 7C can improve condition-specific association of TF binding events to regulated target genes. 
 
 ### Variability of long-range interactions across individuals
 
@@ -248,10 +246,10 @@ A/B compartment structure has been confirmed by imaging methods on single chromo
 However, imaging and single-cell Hi-C studies have illustrated significant cell-to-cell variability regarding 3D genome organization [@Nagano2013; @Ramani2016; @Flyamer2017; @Stevens2017].
 Accordingly, TADs seem to emerge from cell population averages and do not exist as static structures in individual cells.
 However, it is unclear how this variability relates to gene regulation in single cells. 
-It will be an interesting future challenge to improve experimental protocols by separating RNA from chromatin in individual cells in a way to measure from the same cell both, gene expression and genome folding by single-cell RNA-seq and single-cell Hi-C, respectively. 
+It will be an exciting future challenge to improve experimental protocols by separating RNA from chromatin in individual cells in a way to measure from the same cell both, gene expression and genome folding by single-cell RNA-seq and single-cell Hi-C, respectively. 
 
 Given the sparsity of coverage in current single-cell protocols [@Nagano2013; @Flyamer2017; @Stevens2017], it would be interesting to computationally predict single cell structures from other genomic data measured along the linear genome in individual cells, such as transcription.
-Although single-cell ChIP-seq is published [@Rotem2015], ChIP-seq needs a lot of sample material as input. Therefore,  it will be challenging to produce TF binding profiles in single cells with high coverage.
+Although single-cell ChIP-seq is published [@Rotem2015], ChIP-seq needs a lot of sample material as input. Therefore, it will be challenging to produce TF binding profiles in single cells with high coverage.
 However, thanks to single-cell ATAC-seq [@Buenrostro2015], prediction approaches like 7C could use chromatin accessibility data from single cells to predict variability in looping interactions across single cells.
 
 ### Constantly improving targeted experimental methods. 
@@ -270,14 +268,13 @@ HiChIP [@Mumbach2016],
 or T2C [@Kolovos2018].
 These methodological advances together with appropriate computational analysis will enable analysis of the plasticity and dynamics of chromatin interactions across diverse conditions.
 
-
 ## Molecular mechanisms driving genome folding
 
 A strong focus of current research in the field of three-dimensional chromatin architecture is to understand the molecular mechanism behind the formation of chromatin loops and TADs.
 It is not clear how molecular interactions between proteins at the nanometer scale organize micron-long protein-bound DNA molecules and how TAD formation can lead to insulating or facilitating of interactions between specific genomic elements [@Fudenberg2018].
-Enrichment of CTCF at TAD boundaries, the convergent orientation of CTCF motifs in chromatin loops, as well as extensive polymer modeling result in the loop extrusion model (Section \@ref(loop-mechanism)).
+Enrichment of CTCF at TAD boundaries, the convergent orientation of CTCF motifs in chromatin loops, as well as, extensive polymer modeling result in the loop extrusion model (Section \@ref(loop-mechanism)).
 According to this model, loops and TADs are formed by active extrusion of chromatin through a loop-extruding molecule, which was suggested to be cohesin. Thereby, barrier elements, such as CTCF can arrest the extrusion and lead to stable loops. Multiple further extrusion processes within such loops can explain TAD like structures in Hi-C [@Fudenberg2016]. 
-It is however not entirely clear which molecular forces could drive these extrusion process.
+It is however not entirely clear which molecular forces could drive this extrusion process.
 Interestingly, active transcription was suggested to be involved in chromatin organization and TAD formation [@Ulianov2015; @Rowley2017].
 However, transcription and passive diffusion of cohesin might are likely to slow [@Barrington2017]. Active translocations of cohesin by some motor forces are more likely to explain the somewhat rapid formation of loops by extrusion [@Rao2017]. 
 
@@ -297,45 +294,6 @@ Future studies are needed to confirm the role of other architectural proteins as
 
 Multidisciplinary studies combing imaging and genome-wide proximity-ligation methods with computational modeling are needed to better understand the complexity of three-dimensional genome folding and gene regulation. Large collaborative projects, such as the 4D Nucleosome projects [@Dekker2017a], will provide new standards and improved methods. These efforts, as well as many independent studies, are promising to improve our understanding of three-dimensional genome folding in different species as well as its regulation and dynamics during cell-cycle, evolution, in development and disease.
 
-
-<!-- - How loops and TADs are formed.  -->
-<!-- - Analysis of features -> screening of TFs  -->
-
-<!-- The screening of hundreds of TF for their predictive value in loop formation lead to several known and novel factors in chromatin loop formation. -->
-
-<!-- - Which factors mediated long-range interactions. -->
-
-<!-- - Consistent with very recent perturbation studies.  -->
-<!-- - CTCF knockout  -->
-<!-- - Rad21 Knockout and perturbation -->
-
-<!-- - leads to loop-extrustion model  -->
-
-
-<!-- ## Further directions -->
-<!-- - x Many open questions in the field of three-dimensional genome folding. -->
-<!-- - x Neo-TADs by tandem-duplication in evolution [@Franke2016] -->
-<!-- - x Plasticity and dynamics of chromatin interactions -->
-<!-- - x Single-cell resolution  -->
-<!--     - x Single cell Hi-C studies: [@Nagano2017; @Stevens2017] -->
-<!--     - x Computational modeling of single cells [@Sekelja2016]. -->
-<!-- - x Functional mechanism -->
-<!--   - x Loop extrusion -->
-<!--   - x CTCF and cohesin depletion experiments -->
-<!--   - x Establishment of compartments / TADs / loops -->
-<!--   - x Independent mechanism for loops and domains on the one hand and compartments on the other hand.  -->
-<!--     - x Compartmental segregation was increased on CTCF (or cohesin?) knock out.  -->
-<!--     - x Phase-separation model [@DiPierro2017; @Strom2017; @Hnisz2017]. -->
-<!--   - x How are loop formation and domain organization regulated? -->
-<!-- - 4D Nucleosome initiative  -->
-
-<!-- ### Limitation of the analysis -->
-<!-- - Limitations of 3C based methods -->
-<!--    - Resolution -->
-<!--    - Discuss GAM [@Beagrie2017]. -->
-<!--    - Interacinots quantification over population of cells (bulk Hi-C) -->
-<!--    - Discuss single cell Hi-C -->
-
 ## Conclusions
 
 Recent methodological advances in capturing the conformation of chromosomes resulted in genome-wide chromatin contact maps. 
@@ -352,10 +310,10 @@ Furthermore, stable TADs are associated with conserved expression profiles of ge
 
 Disruption of TADs by rearrangements is associated with changes in gene expression profiles during evolution as well as in genomes of subjects with neurodevelopmental syndromes. 
 While these disruptions of TADs might be beneficial for an organism and lead to evolutionary leaps in some cases, we show in disease genomes, that disruptions of TADs can result in pathological phenotypes. 
-Therefore, the three-dimensional folding structure of genomes, including TADs and enhancer-promoter interactions has to be considered for the interpretation of genomic variants of patient genomes.  
+Therefore, the three-dimensional folding structure of genomes, including TADs and enhancer-promoter interactions has to be considered for the interpretation of genomic variants of patient genomes.
 
 While continually decreasing costs of sequencing will further enable the analysis of individual genomes in many genetic syndromes or cancers, it will be increasingly important to interpret these variants within their functional genomic context correctly. 
 To this end, we need a deeper understanding of the functional role of genome folding including its dynamics between single cells as well as its changes in specific cell types and conditions. 
 To integrate diverse types of functional data that is measured along the linear genomes with three-dimensional chromatin folding patterns and their interplay, we need carefully designed computational methods. 
-These approaches will address not only fundamental questions such as the evolution of genomes, mechanisms of gene regulation in differentiation and development but also solve practical problems such as the interpretation of genetic variants in disease genomes for better molecular diagnosis and treatment developments
+These approaches will address not only fundamental questions such as the evolution of genomes, mechanisms of gene regulation in differentiation and development but also solve practical problems such as the interpretation of genetic variants in disease genomes for better molecular diagnosis and treatment developments.
 
