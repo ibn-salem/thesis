@@ -158,7 +158,7 @@ Importantly, enhancer-promoter interactions seem to be mostly constrained within
 
 Altogether, there is accumulating evidence that TADs are fundamental units of chromosome organization [@Dixon2016]
 
-### Hierarchy of domain-like structures across genomic-length scales
+### Hierarchy of domain structures across genomic length scales
 
 Globally, higher-order interactions between different TADs leads to a tree-like hierarchy of TADs and meta-TADs across genomic scales up to the range of entire chromosomes [@Fraser2015].
 Similar to A/B-compartments, these tree structures correlate with epigenetic marks and expression changes during cell differentiation [@Fraser2015].
@@ -233,7 +233,7 @@ TADs form clusters by their epigenomic type into A/B compartments, and coalescen
 Proximity ligation experiments, like Hi-C, measure contact frequencies as average over millions of cells in the sample. Therefore, identified contacts might be present only in a subset of cells. Furthermore, specific contacts could be very dynamic over short time-scales in individual cells.
 While recent methodological advances allow studying of variation across individual cells (discussed in section \@ref(single-cell)), initial studies focused on the differences of genome folding across cell cycle and cell differentiation. 
 
-### Dynamics across cell cycle
+### Dynamics across the cell cycle
 
 It is important to keep in mind how chromosome folding changes during cell division. Spatial organization is generally studied in non-synchronous cells, of which interphase cells make up the biggest proportion [@Bouwman2015].
 In interphase, chromosomes are decondensed and hierarchically organized into territories, compartments, and TADs as described above. 
