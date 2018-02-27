@@ -794,6 +794,14 @@ Table: (\#tab:contribution) **Contributions to individual publications**. Contri
 **Writing – Review & Editing:**            Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages.                                                          30                                             50                                                 20                                      50
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Zusammenfassung {-}
+
+Das menschliche Genome ist hierarchisch gefaltet im drei-eindimensionalen Zellkern. Paarweise Chromatin Interaktionen kommen gebündelt in diskreten chromosomalen Regionen vor, die topologically associating domains (TADs) genannt werden. Ob TADs eine essenzielle Rolle spielen für die Regulation von Genexpression in der Evolution und in Krankheiten, wird in dieser Dissertation untersucht. Dazu werden genomweite Interaktions-Karten mit verschiedensten Daten entlang des linearen Genoms computergestützt integriert. 
+
+Dabei gruppieren sich funktional ähnliche Gene in TADs und teilen regulatorische Elemente im Genom, um eine koordinierte Expression zu ermöglichen. TADs werden mehrheitlich stabil durch die Evolution vererbt und sind mit konservierter Genexpression assoziiert. Zerstörungen von TADs durch Chromosomenmutationen während der Evolution oder in genetischen Erkrankungen sind mit Änderungen von Genexpression assoziiert. Daten über Chromatin Interaktionen und TADs können genutzt werden, um genregulatorische Effekte von strukturellen Chromosomenaberration zu interpretieren, wie hier anhand von Patienten mit diversen klinischen Phänotypen gezeigt wird. Ausserdem wurde eine Software entwickelt, um anhand von genetischen Sequenzeigenschaften und gewebespezifischen Signalen von Protein-Bindestellen, genomweite Chromatin Interaktionen mit hoher Genauigkeit vorherzusagen.
+
+Dieses Arbeit zeigt, dass TADs nicht nur strukturelle Einheiten von Chromosomen sind, sondern entscheidende funktionale Bausteine von Genomen sind, welche das regulatorische Umfeld von Genen definieren. Daher wird es zunehmend wichtig, die Faltung des Genoms zu berücksichtigen, sowohl in der genomischen Forschung, als auch in der klinischen Praxis.
+
 # Curriculum vitae {-}
 
 **Jonas Ibn-Salem**
@@ -1010,6 +1018,6 @@ I appreciate the insightful discussions and useful feedback during these meeting
 Furthermore, I thank Susanne Gerber for her interest and time to review my thesis. 
 I thank David Fournier for reading, correcting and commenting the thesis draft. 
 Moreover, I thank Dimitris Polychronopoulos for a great and inspiring time during a research-stay at MRC London.
-Last but not least, I would like to thank my partner in life, Marlien, for her motivation, her understanding, her patience, her endless support and her love. This work would have never finished without her. 
+Last but not least, I would like to thank my partner in life, Marlien, for her motivation, her understanding, her patience and her endless support. This work would have never finished without her. 
 
 
