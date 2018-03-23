@@ -1,5 +1,5 @@
-This is a work in progress thesis draft based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown) in the layout of **cleanthesis** (https://github.com/derric/cleanthesis) with some customizations. 
+This repository contains my PhD thesis. It is based on R [Markdown](https://github.com/rstudio/Rmarkdown) and [bookdown](https://github.com/rstudio/bookdown). The layout is mainly based on [cleanthesis](https://github.com/derric/cleanthesis) with some customizations. 
 
-My draft thesis is available [online](https://ibn-salem.github.io/thesis/) or as download in [PDF](https://ibn-salem.github.io/thesis/thesis.pdf) or [e-book](https://ibn-salem.github.io/thesis/thesis.epub) format.
+My thesis is available [online](https://ibn-salem.github.io/thesis/) or as download in [PDF](https://ibn-salem.github.io/thesis/thesis.pdf) or [e-book](https://ibn-salem.github.io/thesis/thesis.epub) format.
 
 Comments are welcome!
