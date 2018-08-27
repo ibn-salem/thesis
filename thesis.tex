@@ -81,10 +81,10 @@
 % **************************************************
 \newcommand{\thesisTitle}{Genome folding in evolution and disease}
 \newcommand{\thesisName}{Jonas Ibn-Salem}
-\newcommand{\thesisSubject}{PhD Thesis}
+\newcommand{\thesisSubject}{Dissertation}
 % \newcommand{\thesisDate}{January, 2018}
-\newcommand{\thesisDate}{\today}
-\newcommand{\thesisVersion}{0.0.1}
+\newcommand{\thesisDate}{February, 2018}
+\newcommand{\thesisVersion}{0.1.1}
 
 \newcommand{\thesisFirstReviewer}{Prof. Dr. Miguel Andrade-Navarro}
 \newcommand{\thesisFirstReviewerUniversity}{\protect{Johannes Gutenberg University Mainz}}
@@ -94,7 +94,7 @@
 \newcommand{\thesisSecondReviewerUniversity}{\protect{Johannes Gutenberg University Mainz}}
 \newcommand{\thesisSecondReviewerDepartment}{Faculty of Biology and Center for Computational Sciences in Mainz}
 
-\newcommand{\thesisFirstSupervisor}{Miguel Andrade}
+\newcommand{\thesisFirstSupervisor}{Prof. Dr. Miguel Andrade-Navarro}
 \newcommand{\thesisSecondSupervisor}{}
 
 \newcommand{\thesisUniversity}{\protect{Johannes Gutenberg University Mainz}}
@@ -123,6 +123,7 @@
     hangsection=true,%
     hangsubsection=true,%
     colorize=full,%
+    % colorize=bw,%
     colortheme=jgured,%
     % bibsys=bibtex,%
     % bibfile=bib-refs,%
@@ -161,7 +162,7 @@
 
 \title{Genome folding in evolution and disease}
 \author{Jonas Ibn-Salem}
-\date{2018-02-15}
+\date{2018-08-27}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -217,125 +218,159 @@
 \pagestyle{maincontentstyle} 	% fancy header and footer
 
 {
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{3}
 \tableofcontents
 }
 \hypertarget{abstract}{%
 \chapter*{Abstract}\label{abstract}}
 \addcontentsline{toc}{chapter}{Abstract}
 
-The DNA of the human genome has a total length of 2 meters and fits into
-a 10 nm nucleus. Hi-C experiments probe the three-dimensional genome
-architecture by genome-wide DNA-DNA contact maps. In these maps,
-interphase chromosomes fold locally into regions of several hundred kb,
-called topologically associating domains (TADs). TADs can restrict the
-interactions of genes with distal regulatory sequences, such as
-enhancers, and might, therefore, represent important functional units of
-genomes.
+The human genome is hierarchically folded in the three-dimensional
+nucleus. Pairwise chromatin contacts cluster in discrete chromosomal
+regions, termed topologically associating domains (TADs). Whether TADs
+play an essential role in gene expression regulation in evolution and
+genetic diseases, is analyzed in this thesis by computationally
+integrating genome-wide contact maps with various data along the linear
+genome.
 
-In this thesis, I integrate genome-wide chromatin interaction maps with
-diverse genomic datasets to analyze the function of TADs for gene
-regulation during evolution and in disease genomes. More specifically, I
-show that duplicated gene pairs are enriched for colocalization in the
-same TAD, share more often common enhancer elements than expected and
-have increased contact frequencies over large genomic distances. The
-clustering of functionally related genes within TADs enables concerted
-gene expression and indicates evolutionary constraints in functional
-genome organization. Indeed, by analyzing evolutionary rearrangements
-between human and diverse mammal species, I show that TADs are highly
-conserved building blocks of genomes across millions of years of
-evolution. While TADs seems to conserve gene expression profiles between
-mouse and human, genes in rearranged TADs show divergent expression.
-Next, I analyze disruption of TADs in whole-genome sequenced subjects
-with diverse neurodevelopmental phenotypes. While the phenotypes cannot
-be explained by variants in protein-coding sequences, balanced
-chromosomal rearrangements disrupt TADs and promoter-enhancer
-interactions of phenotypically matching genes. This effect mechanism
-leads to altered gene expression in patient-derived cell lines. Finally,
-I present a computational tool, 7C, to predict long-range chromatin
-interactions by largely available ChIP-seq data. This enables the
-analysis of three-dimensional genome folding in many diverse tissues and
-conditions.
+Thereby, functionally related genes cluster in TADs and share distal
+regulatory elements to enable coordinated gene expression. TADs are
+primarily stable during evolution and associate with conserved
+expression profiles. Disruptions of TADs by genomic rearrangements
+during evolution or in genetic diseases are associated with expression
+changes. Chromatin contact data and TADs can be used to interpret gene
+regulatory effects of structural variations, as demonstrated for
+subjects with diverse clinical phenotypes. Furthermore, a computational
+method is developed, which uses genomic sequence features and
+tissue-specific protein binding signals to predict genome-wide chromatin
+contacts with high accuracy.
 
-Together, these results show that TAD disruption is associated with
-altered gene regulation during evolution and in diseases. TADs are not
-only structural units of genomes but also important functional building
-blocks and represent regulatory environments for genes. Therefore, it
-will be increasingly important to take the three-dimensional genome
-structure into account, not only in genomic research but also in
+This work shows that TADs are not only structural units of chromosomes
+but also crucial functional building blocks of genomes, which represent
+regulatory environments for genes. Therefore, it will be increasingly
+important to consider genome folding in both, genomic research and
 clinical practice.
 
-\hypertarget{thesis-intro}{%
-\chapter{Introduction}\label{thesis-intro}}
+\hypertarget{intro}{%
+\chapter{Introduction}\label{intro}}
 
-\hypertarget{regulation-of-gene-expression}{%
-\section{Regulation of gene
-expression}\label{regulation-of-gene-expression}}
+\hypertarget{regulation-of-expression}{%
+\section{Regulation of gene expression}\label{regulation-of-expression}}
 
 Each cell in our body originate from the same fertilized stem cell and
 has therefore virtually the same genome. However, different cell types
 have distinct morphologies and fulfill diverse functions. This diversity
-is archived by expressing only a subset of genes to a specific extent
+is achieved by expressing only a subset of genes to a specific extent
 for any cell type, developmental state, and environmental condition.
 Gene expression is therefore complex and controlled on many molecular
 levels \citep{Lelli2012}.
 
 The initial sequencing of the human genome reviled a tremendous resource
-of information on the genetic sequence. However, we are still far from
-complete understanding of the sequence information itself. While
-functional knowledge of individual genes and its activity, evolution,
-and associations to diseases accumulates over the last years, the
-non-coding parts of the genome are only very recently annotated in large
-collaborative efforts \citep{Dunham2012, Kundaje2015, Andersson2014}.
-These projects lead to an increased understanding of the regulatory
-potential of non-coding regions and its dynamics across conditions.
+of information encoded in the DNA sequence \citep{Lander2001}. However,
+we are still far from completely understanding the sequence information
+itself \citep{Lander2011}. While functional knowledge of individual
+genes and its activity, evolution, and associations to diseases
+accumulates over the last decades, the non-coding parts of the genome
+are only recently annotated in massive collaborative efforts
+\citep{Dunham2012, Kundaje2015, Andersson2014}. These projects provide
+various functional data along the genome and together with many
+independent studies lead to an increased understanding of the regulatory
+potential of non-coding regions and its dynamic activity across
+conditions.
 
-The genomic DNA sequence itself encodes cis-regulatory modules (CRMs) to
-which transcription factors (TFs) bind by recognizing specific DNA
-sequence motifs. TFs often form complexes with other proteins and DNA.
-However, TF binding and CRM assembly require often specific epigenetic
-states of chromatin. Epigenetic modifications of DNA, such as
-methylation, influence the ability of TF to bind DNA. The chromatin
-structure and accessibility itself also determines if a gene can be
-transcribed. While so-called pioneering factors can bind closed
-chromatin that is wrapped around nucleosomes and remodel it to make it
-accessible for other TFs that require open chromatin and specific
-post-translational histone modifications to bind cis-regulatory regions
-and activate target gene expression.
+It becomes clear that gene regulation occurs on many levels. The genomic
+sequence itself encodes cis-regulatory modules (CRMs) to which
+transcription factors (TFs) bind by recognizing specific DNA sequence
+motifs. TFs often form complexes with other proteins and DNA. However,
+TF binding and CRM assembly at promoter regions of genes or distal
+enhancer elements require often specific epigenetic states of chromatin.
+Epigenetic modifications of DNA, such as methylation, influence the
+ability of TF to bind DNA. Also, the chromatin structure and
+accessibility itself determines if a gene can be transcribed. So-called
+pioneering factors can bind closed chromatin that is wrapped around
+nucleosomes and remodel it to make it accessible for other TFs that
+require open chromatin and specific environments of post-translational
+histone modifications to bind cis-regulatory regions and activate target
+gene expression. Another layer in gene regulation is the
+three-dimensional folding structure of chromatin in the nucleus, as
+explained in more detail below.
 
-Another layer in gene regulation is the three-dimensional folding
-structure of chromatin in the nucleus. However, most of the cell-type
-specific gene regulation that accounts for cell differentiation in
-development and morphological diversification in evolution, are driven
-by activation changes of enhancers \citep{Long2016}.
+However, most of the cell-type specific gene regulation that accounts
+for cell differentiation in development and morphological
+diversification in evolution are driven by activation changes of
+non-coding regulatory regions, described as enhancers \citep{Long2016}.
 
-However, the genome is still largely considered as - From 1D to 3D
+\hypertarget{distal-regulation-by-enhancers}{%
+\section{Distal regulation by
+enhancers}\label{distal-regulation-by-enhancers}}
 
---\textgreater{}
+Transcription factors regulate transcription of genes by binding to
+genomic DNA. However, these regulatory binding events do not occur only
+at proximal promoters of genes. In contrast, many transcription factors
+regulate genes by binding to distal regulatory elements, such as
+enhancers \citep{Spitz2012}. Physical interactions between enhancers
+their target gene promoter is facilitated by chromatin looping and
+propagated by proteins such as the mediator complex \citep{Andrey2017}.
 
-\hypertarget{enhancers}{%
-\section{Enhancers}\label{enhancers}}
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figures/Pombo2015fig1a} 
+
+}
+
+\caption{\textbf{Enhancer-promoter interactions by
+chromatin looping.} Eukaryotic genes are regulated by binding of
+transcription factors (TF) to DNA. Transcription factor binding events
+occur at proximal promoters of genes and distal regulatory elements,
+such as enhancers (left). Chromatin looping facilitates physical
+interactions of enhancers with promoters to enable distal-regulation of
+transcription. Figure adapted from \citep{Pombo2015}.}\label{fig:EnhancerLooping}
+\end{figure}
+
+
+
+
+
+
+
+
 
 Enhancers were originally defined as genomic regions that enhance the
-expression of a reporter gene, when placed experimentally in front of a
+expression of a reporter gene when placed experimentally in front of a
 minimal promoter. \citep{Banerji1981, Shlyueva2014}. Enhancer activity
-can also be detected genome-wide by specific patterns of open chromatin
-using DNase-seq \citep{Song2010}, ATAC-seq \citep{Buenrostro2013} or
-posttranslational modification of histones, such as H3K27ac by ChIP-seq
-\citep{Creyghton2010}. Complex regulation of developmental genes is
-often archived by additive effects of multiple enhancers. For example,
-the \(\alpha\)-globin gene locus is controlled by multiple enhancers,
-whereby each enhancer elements act independently and in an additive
-fashion without evidence of synergistic or higher-order effects
-\citep{Hay2016}. Also, the Indian hedgehog (Ihh) locus is regulated by
-multiple enhancers with individual combinations of tissue specificities
-that function in an additive manner \citep{Will2017}. Experimental
-variation for of the copy number of enhancers is associated with
-expression strength. Significantly reduction of the expression of the
-oncogene \emph{PIMI} could not be archived by perturbing a single
+can also be detected genome-wide by specific genomic experimental
+approaches. Thereby, patterns of open chromatin are identified using
+DNase-seq \citep{Song2010} or ATAC-seq \citep{Buenrostro2013}. Active
+enhancers show short bidirectional transcription, which can be
+identified using CAGE \citep{Andersson2014}. Enhancer associate with
+specific patterns of posttranslational histone modifications, such as
+H3K27ac and H3K4me1. These epigenetic marks, as well as TF binding
+events, can be detected genome-wide by chromatin immunoprecipitation
+coupled with sequencing (ChIP-seq) experiments \citep{Creyghton2010}.
+
+Single enhancers often regulate multiple genes. Similarly, individual
+genes can be regulated by multiple enhancers. Thereby, additive effects
+of multiple enhancers often archive complex regulation of developmental
+genes. For example, the \(\alpha\)-globin gene locus is controlled by
+multiple enhancers, whereby each act independently and in an additive
+fashion without evidence of synergistic effects \citep{Hay2016}. Also,
+the Indian hedgehog (Ihh) locus is regulated by multiple enhancers with
+individual combinations of tissue specificities that function in an
+additive manner \citep{Will2017}. Variation of the copy number of
+enhancers by experimental perturbations correlates with expression
+strength. For example, a significant reduction of the expression of the
+oncogene \emph{PIMI} could not be achieved by perturbing a single
 enhancer, but only by combinatorial repression of several weak enhancers
-\citep{Xie2017}. Enhancers are reviewed in more detail in
-\citet{Spitz2012}, \citet{Andrey2017}, and \citet{Long2016}.
+\citep{Xie2017}.
+
+While large-scale efforts provide genome-wide maps of enhancers and
+their activity in different human tissues \citep{Andersson2014}, it is
+challenging to interpret the outcome of enhancer activity to gene
+expression. Enhancers can be located several hundred kb apart from the
+promoter of regulated genes. Genome-wide studies suggest that the
+majority of enhancers do not regulate the next gene \citep{Sanyal2012}.
+Therefore, it is critical to understand long-range genome folding to
+illuminate the re-wiring between enhancers and regulated genes.
 
 \hypertarget{methods-to-probe-the-3d-chromatin-architecture}{%
 \section{Methods to probe the 3D chromatin
@@ -347,42 +382,43 @@ architecture}\label{methods-to-probe-the-3d-chromatin-architecture}}
 
 Historically, the organization of chromosomes and specific loci within
 the nucleus have mostly been studied using fluorescent \emph{in situ}
-hybridization (FISH) experiments. FISH is limited to examine a few
-pre-defined loci a few hundred cells at once and is limited in spatial
-resolution. Novel super-resolution microscopy approaches such as STORM
-and PALM have enabled direct visualization of the fine-scale structures
-of the genome at an unprecedented resolution \citep{Bonev2016}. Labeling
-of specific chromatin proteins, histone marks, or genomic loci allow to
-analyze the dynamics of chromosomes at high resolution in living cells.
-However, despite spectacular technical progress, microscopy-based
-approaches are limited to a small number of genetic loci and do not
-allow a comprehensive analysis of the nuclear architecture of the
-complete genome. Furthermore, the specific folding patterns observed in
-microscopy cannot be mapped to genomic coordinates, substantially
-limiting the integration with other genomic data. However, a future
-combination of imaging-based techniques with proximity-ligation
-experiments together with integrative computational models might enable
-to study the real-time dynamics of chromatin organization with high
-resolution on the single cell level
-\citep[\citet{Flyamer2017}]{Stevens2017}.
+hybridization (FISH) experiments. FISH is limited to visualize a few
+pre-defined loci in a few hundred cells at once and is limited in
+spatial resolution. Novel super-resolution microscopy approaches such as
+STORM and PALM have enabled direct visualization of the fine-scale
+structures of the genome at an unprecedented resolution
+\citep{Bonev2016}. Labeling of specific chromatin proteins, histone
+marks, or genomic loci allow to analyze the dynamics of chromosomes at
+high resolution in living cells. However, despite spectacular technical
+progress, microscopy-based approaches are limited to a small number of
+genetic loci and do not allow a comprehensive analysis of the nuclear
+architecture of the complete genome. Furthermore, the specific folding
+patterns observed in microscopy cannot be mapped to genomic coordinates.
+This substantially limits the computational integration with other
+genomic data. However, a combination of imaging-based techniques with
+proximity-ligation experiments together with integrative computational
+models might enable to study the real-time dynamics of chromatin
+organization with high resolution on the single cell level
+\citep{Stevens2017, Flyamer2017}.
 
-\hypertarget{proximity-ligation-based-method-to-quantify-chromatin-interactions}{%
+\hypertarget{proximity-ligation}{%
 \subsection{Proximity-ligation based method to quantify chromatin
-interactions}\label{proximity-ligation-based-method-to-quantify-chromatin-interactions}}
+interactions}\label{proximity-ligation}}
 
 The frequency of interactions between different loci in the genome can
 be measured experimentally by proximity ligation techniques
 \citep{Sati2017, Schmitt2016}. These protocols are variations of the
 chromosome conformation capture (3C) experiment \citep{Dekker2002}. 3C
 works by the ability to cross-link two genomic loci that are in close
-physical proximity in the nuclear space by treating cells with
-formaldehyde leading to covalent bonds between proteins and DNA with
-proteins \citep{Hoffman2015}. The cross-linked chromatin is then
-digested by enzymes to fragment the genomic DNA. Than, re-ligation of
-fragmented DNA result in hybrid DNA molecules of restriction fragments
-that were in close physical proximity during cross-linking but originate
-from different regions in the linear genome sequence
-\citep{Dekker2013, Andrey2017} (Fig. \ref{fig:ProximityLigation}A).
+physical proximity in the nuclear space (Fig.
+\ref{fig:ProximityLigation}A). This is achieved by treating cells with
+formaldehyde leading to covalent bonds between individual proteins and
+DNA with proteins \citep{Hoffman2015}. The cross-linked chromatin is
+then digested by restriction enzymes to fragment the genomic DNA. Then,
+re-ligation of fragmented DNA result in hybrid DNA molecules of
+restriction fragments that were in close physical proximity during
+cross-linking but originate from different regions in the linear genome
+sequence \citep{Dekker2013, Andrey2017}.
 
 \begin{figure}
 
@@ -391,14 +427,14 @@ from different regions in the linear genome sequence
 }
 
 \caption{\textbf{Proximity ligation technologies to
-measure chromatin interactions} \textbf{(A)} By treating cells with
+measure chromatin interactions.} \textbf{(A)} By treating cells with
 formaldehyde chromatin is crosslinked. After fragmentation with
 restriction enzymes, DNA from two loci in close physical proximity in
 the nucleus is ligated to a hybrid DNA molecule that is then made from
 DNA that originated from two regions distal in the linear genome
 (indicated in red and blue). \textbf{(B)} Different variants of the 3C
 experiments differ in their approaches to measure the ligation products
-or subsets of it in order to quantify chromatin interactions. Figure
+or subsets of it, in order to quantify chromatin interactions. Figure
 adapted from \citep{Dekker2013}.}\label{fig:ProximityLigation}
 \end{figure}
 
@@ -415,19 +451,19 @@ adapted from \citep{Dekker2013}.}\label{fig:ProximityLigation}
 
 There exist several 3C-based methods which differ by the way the
 ligation product, which represents and chromatin interaction, is
-measured and quantified (Fig. \ref{fig:ProximityLigation}B). The classic
-3C protocol allows quantifying hybrid DNA-product by quantitative PCR
-using specific primers to amplify the product junction
+measured and quantified (Fig. \ref{fig:ProximityLigation}B). The
+standard 3C protocol allows quantifying hybrid DNA-product by
+quantitative PCR using specific primers to amplify the product junction
 \citep{Dekker2002}. In Circular chromosome conformation capture (4C)
 experiments, a circular PCR is used to amplify all hybrid DNA products
-that are ligated with the desired restriction fragment, e.g.~a specific
-viewpoint of interest. These products are then sequences to generate an
+that are ligated with the desired restriction fragment, e.g., a specific
+viewpoint of interest. These products are then sequenced to generate an
 interaction profile measuring all interacting regions with this
 viewpoint \citep{Simonis2006, Noordermeer2011}. Another variant of 3C,
 Carbon copy chromosome conformation capture (5C), combines 3C with
 hybrid capture approaches to identify up to millions of interactions in
-parallel between two large sets of loci, for example between a set of
-promoters and a set of distal regulatory elements
+parallel between two large sets of predefined loci, for example between
+a set of promoters and a set of distal regulatory elements
 \citep{Dostie2006, Sanyal2012}. Other methods combine chromatin
 immunoprecipitation to enrich for chromatin interactions between loci
 bound by specific proteins of interest or marked by post-translational
@@ -435,7 +471,7 @@ histone modifications. One of these methods is chromatin interaction
 analysis by paired-end tag sequencing (ChIA-PET), which allows for
 genome-wide analysis of long-range interactions between sites bound by a
 protein of interest \citep{Fullwood2009}. Therefore, ChIA-PET data
-represent a selected subset of all interactions, but is an efficient
+represent a selected subset of all interactions but is an efficient
 alternative to measure interactions at high resolution \citep{Tang2015}.
 The most unbiased method to quantify all pair-wise interactions
 genome-wide is Hi-C \citep{Lieberman-Aiden2009}. After the initial
@@ -451,28 +487,57 @@ binning the genome into equal-sized regions of several kb depending on
 sequencing depth. While the first Hi-C study produced genome-wide
 interactions at a 1Mb resolution \citep{Lieberman-Aiden2009}, more
 recent studies could analyze folding patterns at 40kb \citep{Dixon2012}
-and later up to 1kb resolution \citep{Rao2014}.
+and later up to 1kb resolution \citep{Rao2014}. These methods provided
+fascinating insights into higher-order genome organization.
 
 \hypertarget{hierarchy-of-chromatin-3d-structure}{%
 \section{Hierarchy of chromatin 3D
 structure}\label{hierarchy-of-chromatin-3d-structure}}
 
 The three-dimensional organization of genome folding was studied
-extensively in recent years and is reviewed comprehensively by leading
-experts in the field
-\citep{Pombo2015, Sexton2015, Bouwman2015, Dekker2016, Dixon2016, Schmitt2016, Bonev2016, Hnisz2016a, Merkenschlager2016, Long2016, Ruiz-Velasco2017, Andrey2017}.
+extensively in recent years and is reviewed comprehensively
+\citep{Pombo2015, Sexton2015, Bouwman2015, Dekker2016, Dixon2016, Schmitt2016, Bonev2016, Hnisz2016a, Merkenschlager2016, Long2016, Rowley2016, Ruiz-Velasco2017, Andrey2017}.
+
+The genome is thought to be hierarchically organized on different
+genomic-length scales (Fig. \ref{fig:GenomeHierarchy}). Whole
+chromosomes occupy distinct territories in the nucleus. Thereby,
+chromatin clusters in two types of compartments on the Mb scale. On the
+sub-Mb scale, pair-wise interactions are enriched in discrete domains
+and sub-domains. These domains are made up of individual looping
+interactions and restrict regulatory contacts between enhancers and gene
+promoters. These hierarchical levels are described below in more detail.
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{figures/Bonev2016Fig2} 
+{\centering \includegraphics[width=1\linewidth]{figures/Bonev2016Fig2_reordered_v02} 
 
 }
 
-\caption{\textbf{Hierarchical organization of chromatin
-three-dimensional chromatin architecture} \textbf{(A)} Figure source
-\citep{Bonev2016}
-\url{https://www.nature.com/articles/nrg.2016.112/figures/2}.}\label{fig:GenomeHierarchy}
+\caption{\textbf{Hierarchical organization of
+three-dimensional chromatin architecture.} The left side shows a
+high-resolution Hi-C interaction map as a heat-map. The color intensity
+represents the interaction frequencies of orthogonally associated loci.
+The right side shows models of the individual genome structures.
+\textbf{(A)} Interactions occur mostly between loci on the same
+chromosome, indicating chromosome territories. \textbf{(B)} Alternating
+patterns of interaction clusters show the association of chromatin into
+A/B compartments. \textbf{(C)} TADs appear as triangles with enrichment
+for intra-TAD interactions. Borders of TADs insulate interactions
+between neighboring domains. \textbf{(D)} Peaks in the Hi-C heat-map
+indicate pair-wise chromatin looping interactions of the associated
+loci. Several types of loops are shown on the right side. Figure adapted
+from \citep{Bonev2016}.}\label{fig:GenomeHierarchy}
 \end{figure}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -485,230 +550,320 @@ contacts}\label{chromosomal-territories-and-inter-chromosomal-contacts}}
 
 The eukaryotic genome is highly organized in the interphase nucleus.
 Chromosomes occupy distinct spatial regions, called chromosome
-territories, and intermingle less than one would expect by chance
-\citep{Cremer2001}. This was first observed using imaging-based
-approaches and is reflected in Hi-C interaction maps, where
-inter-chromosomal contacts occur an order of magnitudes less frequent
-than intra-chromosomal contacts \citep{Lieberman-Aiden2009}. However,
-despite this spatial segregation of chromosome, an intermingling of
-chromosome occurs and is associated with chromosomal translocations
-\citep{Branco2006, Roukos2013, Roukos2014}. There are also specific gene
-regulatory interactions between different chromosomes
+territories, and intermingle less than one would expect by chance (Fig.
+\ref{fig:GenomeHierarchy}A) \citep{Cremer2001}. This was first observed
+using imaging-based approaches and is also reflected in Hi-C interaction
+maps, where inter-chromosomal contacts occur an order of magnitudes less
+frequent than intra-chromosomal contacts \citep{Lieberman-Aiden2009}.
+However, despite this spatial segregation of chromosomes, an
+intermingling of chromosome occurs and is associated with chromosomal
+translocations \citep{Branco2006, Roukos2013, Roukos2014}. There are
+also specific gene regulatory interactions between different chromosomes
 \citep{DeLaat2007}, for example, olfactory receptor genes cluster
 densely in the nucleus of olfactory neurons to facilitate mono-allelic
 expression of a single receptor gene per cell \citep{Monahan2015}.
 Together, there exists only a few, but specific inter-chromosomal
-contacts and the genome is non-randomly organized in the nucleus by
-chromosomes occupying distinct spatial territories.
+contacts and the genome is non-randomly organized in the interphase
+nucleus by chromosomes occupying distinct spatial territories.
 
 \hypertarget{ab-compartments}{%
 \subsection{A/B compartments}\label{ab-compartments}}
 
-The ability to measure genome-wide chromatin contacts using Hi-C,
+The ability to measure genome-wide chromatin contacts using Hi-C
 revealed that individual regions on chromosomes segregate by
 preferential interactions into two major clusters, referred to as
-A/B-compartments \citep{Lieberman-Aiden2009}. Interestingly, regions in
-A-compartments are associated with active histone modifications and
-active transcription, whereas B-compartment is associated with
-heterochromatin, lamina association, and repressed genes
-\citep{Bonev2016}. More recently, higher resolution Hi-C maps further
-subdivided A/B compartments into six sub-compartments with preferential
-interactions and associations with distinct chromatin features
-\citep{Rao2014}.
+A/B-compartments (Fig. \ref{fig:GenomeHierarchy}B)
+\citep{Lieberman-Aiden2009}. Interestingly, regions in A-compartments
+are associated with active histone modifications and active
+transcription, whereas B-compartment is associated with heterochromatin,
+lamina association, and repressed genes \citep{Bonev2016}. More
+recently, higher resolution Hi-C maps further subdivided A/B
+compartments into six sub-compartments with preferential interactions
+and associations with distinct chromatin features \citep{Rao2014}.
 
 \hypertarget{topologically-associating-domains-tads}{%
 \subsection{Topologically associating domains
 (TADs)}\label{topologically-associating-domains-tads}}
 
 Compartments could be identified by clustering of long-range
-interactions in Hi-C maps with bin resolution of 1 Mb. In 2012 higher
+interactions in Hi-C maps with bin resolution of 1 Mb. In 2012, higher
 resolution Hi-C maps of up to 40 kb lead to the identification of
-genomic regions with preferential interactions within them. These
-genomic regions were termed topologically associating domains (TADs)
-\citep{Dixon2012, Nora2012, Sexton2012}. They are operationally defined
-as genomic regions with frequent interactions of loci within the domain
-and decreased interactions across domain boundaries. Quantitatively,
-Hi-C contact frequencies between loci in the same TAD are approximately
-two to three times those of genomic regions outside of the TAD
-\citep{Merkenschlager2016}.
+genomic regions with preferential interactions within them (Fig.
+\ref{fig:GenomeHierarchy}C). These genomic regions were termed
+topologically associating domains (TADs)
+\citep{Dixon2012, Nora2012, Sexton2012}. Other authors describe similar
+structures as physical domains, chromatin domains, or contact domains.
+TADs are operationally defined as genomic regions with frequent
+interactions of loci within the domain and decreased interactions across
+domain boundaries. Quantitatively, Hi-C contact frequencies between loci
+in the same TAD are approximately two to three times those of genomic
+regions outside of the TAD \citep{Merkenschlager2016}.
 
 TADs can be identified from Hi-C interaction maps computationally by
-different algorithms \citep{Ay2015}. The directionality index is a score
-for each bin in the Hi-C matrix that quantifies the number of upstream
-versus downstream interactions of this bin. Using hidden Markov models
-TAD boundaries where then identified in regions where DI is changing
+different algorithms \citep{Ay2015}. The directionality index (DI) is a
+score for each bin in the Hi-C matrix that quantifies the number of
+upstream versus downstream interactions of this bin. Using hidden Markov
+models, TAD boundaries where then identified in regions where DI changes
 drastically \citep{Dixon2012}. Other algorithms compute an insulation
 score as the extent to which interactions cross potential TAD boundaries
-\citep{Crane2015}. Later the Arrowhead algorithm was introduced to find
+\citep{Crane2015}. Later, the Arrowhead algorithm was introduced to find
 ``contact domains'' as smaller nested structures along the diagonal of
 high-resolution Hi-C matrices \citep{Rao2014}. Furthermore, when
 analyzing Hi-C interactions at different length scales, hierarchies of
 TADs and sub-TADs could be identified that overlap each other
 \citep{Filippova2014, Fraser2015}. The different algorithms and
 parameters used in each study is only one source of variation in
-reliably identifying TADs. Also, the resolution of Hi-C maps, which is
-mainly defined by sequencing depths but also the Hi-C protocol itself
-\citep{Rao2014}, as well as different normalization strategies for Hi-C
-contacts introduces variability \citep{Dali2017, Forcato2017}.
-Therefore, the number and size of TADs vary between different studies,
-making it difficult to compare TADs in different conditions and species
-across studies.
+reliably identifying TADs. Othe sources of variations are (i) the
+resolution of Hi-C maps, which is mainly defined by sequencing depths,
+(ii) the individual steps in Hi-C protocols, such as the restriction
+enzyme used, \citep{Rao2014}, and (iii) different normalization
+strategies for raw Hi-C contact frequencies
+\citep{Dali2017, Forcato2017}. Therefore, the number and size of TADs
+vary between different studies, making it difficult to compare TADs in
+different conditions and species across studies.
 
 The first studies on TADs identified around 3,000 TADs with a median
 size of \textasciitilde{}800 kb in human and mouse genomes
-\citep{Dixon2012} and around 1,200 physical domains of around 100 kb in
+\citep{Dixon2012} and around 1,200 physical domains of about 100 kb in
 \emph{Drosophila} genomes \citep{Sexton2012}. Analysis of 1kb or 5kb
-resolution Hi-C matrices resulted in nested ``contact domains'' with a
+resolution Hi-C matrices resulted in nested contact domains with a
 median size of 185 kb (range 40 kb - 3 Mb) in human and mouse cells
-\citep{Rao2014}.
-
-Interestingly, TADs might be equivalent to ``chromatin domains'' of 10
-kb - 1 Mb in size detected by microscopy approaches
+\citep{Rao2014}. Interestingly, TADs might be equivalent to chromatin
+domains of 10 kb - 1 Mb in size detected by microscopy approaches
 \citep{Cremer2010, Gibcus2013}. Another connection of Hi-C derived
 interaction maps with previous microscopy observations, is that TADs in
 \emph{Drosophila} correspond to bands of polytene chromosomes
-\citep{Eagen2015}.
+\citep{Eagen2015}. Importantly, domain structures, like TADs, were also
+identified using methods that do not use chromatin cross-linking and
+proximity-ligation. Labeling approaches using oligoprobes enabled to
+trace the position of TADs along individual chromosomes
+\citep{Wang2016d}. Furthermore, domain organization in TADs was
+confirmed by a recently developed genome architecture mapping (GAM)
+approach, which relies on DNA sequencing from a collection of thin
+nuclear sections \citep{Beagrie2017}.
 
 The spatial positioning of TADs correlates with many genomic features
 measured along the linear genome \citep{Merkenschlager2016}. TAD
-boundaries are enriched for binding of ``insulator proteins'', such as
-CTCF in mammals and CP190 in Drosophila \citep{Dixon2012, Sexton2012}.
-Furthermore, TAD boundaries are associated with active chromatin, such
+boundaries are enriched for binding of insulator proteins, such as CTCF
+in mammals and CP190 in Drosophila \citep{Dixon2012, Sexton2012}.
+Furthermore, TAD boundaries are associated~ with active chromatin, such
 as H3K4me3 and H3K27me3, DNase I hypersensitivity, active transcription,
 short interspersed nuclear elements (SINEs), and house-keeping genes
 \citep{Dixon2012}. Furthermore, TADs correspond to regions of early and
 late replication timing \citep{Pope2014, Dileep2015} and
 lamina-associated domains (LADs) \citep{Dixon2012}. Importantly,
 enhancer-promoter interactions seem to be mostly constrained within TADs
-\citep{Shen2012, Ghavi-helm2014, Symmons2014} and initial studies report
-slightly increased co-expression of genes within the same TAD
+\citep{Shen2012, Ghavi-helm2014, Symmons2014}, and initial studies
+report slightly increased co-expression of genes within the same TAD
 \citep{Nora2012}.
 
 Altogether, there is accumulating evidence that TADs are fundamental
 units of chromosome organization \citep{Dixon2016}
 
-\hypertarget{sub-tad-structures-and-chromatin-loops}{%
-\subsection{Sub-TAD structures and chromatin
-loops}\label{sub-tad-structures-and-chromatin-loops}}
+\hypertarget{hierarchy-of-domain-structures-across-genomic-length-scales}{%
+\subsection{Hierarchy of domain structures across genomic length
+scales}\label{hierarchy-of-domain-structures-across-genomic-length-scales}}
 
 Globally, higher-order interactions between different TADs leads to a
 tree-like hierarchy of TADs and meta-TADs across genomic scales up to
-the range of entire chromosomes \citep{Fraser2015}. Similar than
-A/B-compartments, these three structures correlate with epigenetic marks
+the range of entire chromosomes \citep{Fraser2015}. Similar to
+A/B-compartments, these tree structures correlate with epigenetic marks
 and expression changes during cell differentiation \citep{Fraser2015}.
 
 However, TADs can also be divided further into smaller regions with
-stronger preferential interactions within them, which are often referred
-to as sub-TADs \citep{Phillips-Cremins2013}. They might correspond to
+stronger preferential interactions within them. These are often referred
+to as sub-TADs \citep{Phillips-Cremins2013} and might correspond to
 contact domains which were later identified using high-resolution Hi-C
 \citep{Rao2014}. While sub-TADs display the same self-association
 features as TADs with decreased contact frequencies across sub-TAD
 boundaries, sub-TADs seems to be less stable across different cell types
 and tissues and are stronger related to tissue-specific gene expression
-\citep{Berlivet2013, Phillips-Cremins2013}. Smaller structural units
-within TADs were also reported from studies CTCF and cohesin mediated
-interactions using ChiA-PET \citep{Dowen2014, Hnisz2016a}
+\citep{Berlivet2013, Phillips-Cremins2013}. Studies of CTCF and cohesin
+mediated interactions using ChIA-PET identified smaller structural units
+within TADs \citep{Dowen2014}. Chromatin loops anchored at CTCF and
+cohesin binding sites span genomic regions described as insulated
+neighborhoods that restrict enhancer-promoter interactions
+\citep{Hnisz2016a}. Furthermore, perturbations of anchor regions by
+naturally occurring or experimentally induced mutations lead to
+dysregulation of enclosed genes \citep{Dowen2014, Hnisz2016, Ji2016}. In
+summary, segregation of chromosomes into domain-like structures seems to
+follow a hierarchical organization across genomic-length scales.
+Accordingly, interaction clustering appears at scales of A/-B
+compartments or meta-TADs over TADs, contact domains, sub-TADs to
+individual chromatin loops.
 
-\begin{itemize}
-\tightlist
-\item
-  long distnace between regulatory regions and genes in vertebrate genes
-\end{itemize}
+\hypertarget{chromatin-looping-interactions}{%
+\subsection{Chromatin looping
+interactions}\label{chromatin-looping-interactions}}
 
-To function as a transcriptional regulator an enhancer needs to be
-brought into close spatial proximity with its target promoter through
-chromatin looping. For example, the enhancers of the \(\beta\)-globin
-gene interact strongly with its target gene via long-range chromatin
-contacts in erythroid cells where the \(\beta\)-globin gene is active
-but shows little or no interactions in cells from different lineages
-\citep{Palstra2003}.
+High-resolution proximity ligation techniques enabled to measure
+genome-wide pairwise interactions that interact significantly more
+frequently than background interactions (Fig.
+\ref{fig:GenomeHierarchy}D). Chromatin loops can be broadly divided into
+two types \citep{Yu2017, Andrey2017} The first type is constitutive or
+architectural loops. Constitutive loops are mostly invariant across cell
+types and demarcate TAD or sub-TAD boundaries
+\citep{Dowen2014, Ji2016, Phillips-Cremins2013}. Often, they are formed
+by CTCF and cohesin complexes \citep{Rao2014}.
 
-Recent studies provide functional insights into how chromatin loops are
-formed and highlight the role of architectural proteins such as CTCF and
-cohesin \citep{Merkenschlager2016}. CTCF recognizes a specific sequence
-motif, to which it binds with high affinity \citep{Kim2007, Nagy2016}.
-Interestingly, CTCF motifs are present in convergent orientation at
+High-resolution Hi-C data showed that around 80\% of borders of contact
+domains interact each other as loop anchors \citep{Rao2014}. This
+indicating that TADs form through loops between their borders and
+eventually several further nested loops within them.
+
+An intrinsic feature of vertebrate genomes is a comparatively long
+distance between regulatory regions, such as enhancers, and their
+regulated genes. For their ability to function as transcriptional
+regulators, enhancers need to come into close spatial proximity with
+their target promoter. These regulatory interactions are facilitated by
+the second type of chromatin loops, facultative loops. These loops are
+more cell type-specific and represent enhancer-promoter interactions.
+For example, the enhancers of the \(\beta\)-globin gene interact
+strongly with its target gene via long-range chromatin contacts in
+erythroid cells where the \(\beta\)-globin gene is active but shows
+little or no interactions in cells from different lineages
+\citep{Palstra2003}. Notably, such regulatory interactions of
+facultative loops appear mostly within regions spanned by consecutive
+loops or TADs \citep{Hnisz2016a}.
+
+\hypertarget{loop-mechanism}{%
+\subsection{TAD and loop formation by architectural
+proteins}\label{loop-mechanism}}
+
+An important question in current research efforts is to understand how
+TADs and chromatin loops are established on a molecular level. These
+mechanisms might differ between species. Several, so-called,
+architectural proteins are enriched at TAD boundaries in flies and allow
+dynamic regulation of these boundaries
+\citep{Bortle2014, Gomez-Diaz2014}. In vertebrates, only some of these
+proteins are conserved, indicating a partially different set of factors
+with such functions \citep{Phillips-Cremins2013, Bonev2016}. Profiling
+76 TFs for binding signals at strong chromatin loop anchors identified
+CTCF, subunits of the cohesin complex, ying yang 1 (YY1) and zinc finger
+protein 143 (ZNF143) as highly enriched \citep{Rao2014}. Furthermore,
+the mediator complex has a well-characterized role in bridging enhancer
+and promoters of long-range distances and assemble the pre-initiation
+complex for transcriptional elongation \citep{Allen2015}. Mediator
+depletion resulted in diminished looping interaction strength
+\citep{Bonev2016}.
+
+Cohesin is a ring-shaped protein and has several functions including
+sister chromatid cohesion and DNA repair and interacts with mediator
+complex and CTCF in the context of chromatin architecture
+\citep{Bonev2016, Merkenschlager2016}. Initial studies analzed chromatin
+organization in cohesin deficient cells. In two studies depletion of
+cohesin reduced interactions within TADs but did not alter TAD
+structures completely \citep{Seitan2013, Zuin2014}. One study report a
+significant increase in interactions between different TADs after
+cohesin depletion \citep{Sofueva2013}. Conditional deletion of cohesin
+in non-cycling thymocytes suggested a role of cohesin in mediating
+regulatory interactions between enhancers within TADs
+\citep{Ing-simmons2015}.
+
+The best studied architectural protein is probably CTCF \citep{Ong2014}.
+CTCF is conserved in most bilaterians, expressed in all tissues, and
+essential for embryonic development. By its ability to restrict
+promoter-enhancer interaction in reporter plasmids, CTCF was
+characterized as insulator protein. CTCF has 11 zinc finger binding
+domains which recognize a specific DNA sequence motif, to which CTCF
+binds with high affinity \citep{Kim2007, Nagy2016}. CTCF binding sites
+are enriched at TAD boundaries in \emph{Drosophila} and mammals.
+However, only around 15\% of CTCF binding sites are located at TAD
+boundaries, suggesting that CTCF binding not be sufficient for TAD
+formation \citep{Bonev2016}. About 30\% to 60\% of CTCF binding sites
+are cell-type specific, and many variable sites show an association of
+DNA methylation with CTCF binding. CTCF binding sites that depend on
+methylation are located mostly within TADs. Interestingly, CTCF ChIP-seq
+data across individuals show a higher variability of CTCF binding within
+TADs and lower variation at TAD boundaries \citep{Ruiz-Velasco2017}.
+Also, evolutionary conservation of CTCF binding across species is
+stronger at TAD boundaries \citep{VietriRudan2015}. Depletion of CTCF
+had a similar effect than cohesin degradation, resulting in increased
+inter-domains interactions \citep{Seitan2013, Zuin2014}. These data
+suggest a crucial role of cohesin and CTCF in promoter-enhancer
+interactions and TAD formation \citep{Pombo2015, Merkenschlager2016}.
+
+Interestingly, CTCF motifs appear mostly in convergent orientation at
 chromatin loop anchors \citep{Rao2014, Tang2015, VietriRudan2015}.
 Furthermore, experimental inversion of the motif results in changes of
-loop formation and altered gene expression \citep{Guo2015, deWit2015}.
-Polymer simulations and experimental perturbations led to a model of
-loop extrusion, in which loop-extruding factors, such as cohesin, form
-progressively larger loops but stall at CTCF binding sites in convergent
-orientation \citep{Sanborn2015, Fudenberg2016}. According to these
-models, CTCF binding sites can function as anchors of chromatin loops.
+loop formation and, at least in some cases, altered gene expression
+\citep{Guo2015, deWit2015, Sanborn2015}. Polymer simulation studies
+together with perturbation experiments led to a model of TAD and loop
+formation by loop extrusion. According to this model, loop-extruding
+factors, such as cohesin, form progressively larger loops but stall at
+CTCF binding sites in convergent orientation
+\citep{Sanborn2015, Fudenberg2016}. Interestingly, this model explains
+many features of chromatin interaction data, such as the directionality
+of CTCF motif and nested hierarchy of TADs and TAD-like structures.
 
-In summary, these findings suggest a hierarchical organization of
-chromosome architecture. First, dynamic nucleosome contacts from
-clutches and fibers. These engage in long-range chromatin loops, some of
-which are stabilized by architectural proteins, such as CTCF and
-cohesin, and lead to the formation of TADs. TADs form clusters by their
-epigenomic type into A/B compartments, and coalescence of compartments
-in the same chromosome forms chromosome territories \citep{Bonev2016}.
-
-\hypertarget{molecular-mechanisms-of-tad-and-loop-formation}{%
-\subsection{Molecular mechanisms of TAD and loop
-formation}\label{molecular-mechanisms-of-tad-and-loop-formation}}
-
-Several initial studies analyzed the role of CTCF and cohesin in TAD
-formation. In two studies depletion of cohesin reduced interactions
-within TADs but did not alter TAD structures completely
-\citep{Seitan2013, Zuin2014}. One study report a significant increase in
-interactions between different TADs after cohesin depletion
-\citep{Sofueva2013}. Depletion of CTCF had a similar effect with
-increased inter-domains interactions \citep{Seitan2013, Zuin2014}. These
-results suggest a functional role of cohesin and CTCF in
-promoter-enhancer interactions and TAD formation \citep{Pombo2015}.
+In summary, genome-wide interaction data suggest a hierarchical
+organization of chromosome architecture. First, dynamic nucleosome
+contacts form clutches and fibers. These engage in long-range chromatin
+loops, some of which are stabilized by architectural proteins, such as
+CTCF and cohesin at convergently oriented motif sites, and lead to the
+formation of TADs. TADs form clusters by their epigenomic type into A/B
+compartments, and coalescence of compartments in the same chromosome
+forms chromosome territories \citep{Bonev2016}.
 
 \hypertarget{dynamics-of-chromatin-structure}{%
 \section{Dynamics of chromatin
 structure}\label{dynamics-of-chromatin-structure}}
 
-Proximity ligation experiments like Hi-C measure contact frequencies as
-average over millions of cells in the sample. Therefore, identified
-contacts might not be present in each individual cells and could be in
-principle very dynamic over short time-scales in individual cells. It is
-important to keep in mind how chromosome folding change during cell
-division. Spatial organization is generally studied in non-synchronous
-cells, of which interphase cells make up the biggest proportion
-\citep{Bouwman2015}. In interphase, chromosomes are decondensed and
-hierarchically organized into the territories, compartments, and TADs as
-described above. To prepare for cell division chromosomes untangle and
-condense, while transcription ceases almost entirely. Mitotic
-chromosomes do not show preferential organization, such as compartments
-or TADs \citep{Naumova2013}. Enhancer-promoter looping might be absent
-as well \citep{Dekker2014}. After cell division, chromosomes decondense
-and fold into the interphase hierarchy. While individual genes are
-relatively mobile during the early G1 phase, they become quickly
-constrained to a small nuclear sub-volume, after which genome folding is
-relatively stable for the rest of the interphase
+Proximity ligation experiments, like Hi-C, measure contact frequencies
+as average over millions of cells in the sample. Therefore, identified
+contacts might be present only in a subset of cells. Furthermore,
+specific contacts could be very dynamic over short time-scales in
+individual cells. While recent methodological advances allow studying of
+variation across individual cells (discussed in section
+\ref{single-cell}), initial studies focused on the differences of genome
+folding across cell cycle and cell differentiation.
+
+\hypertarget{dynamics-across-the-cell-cycle}{%
+\subsection{Dynamics across the cell
+cycle}\label{dynamics-across-the-cell-cycle}}
+
+It is important to keep in mind how chromosome folding changes during
+cell division. Spatial organization is generally studied in
+non-synchronous cells, of which interphase cells make up the biggest
+proportion \citep{Bouwman2015}. In interphase, chromosomes are
+decondensed and hierarchically organized into territories, compartments,
+and TADs as described above. To prepare for cell division chromosomes
+untangle and condense, while transcription ceases almost entirely.
+Mitotic chromosomes do not show preferential organization, such as
+compartments or TADs \citep{Naumova2013}. Enhancer-promoter looping
+might be absent as well \citep{Dekker2014}. After cell division,
+chromosomes decondense and fold into the interphase hierarchy. While
+individual genes are relatively mobile during the early G1 phase, they
+become quickly constrained to a small nuclear sub-volume, after which
+genome folding is relatively stable for the rest of the interphase
 \citep{Chubb2002, Walter2003}. These dynamics during cell-cycle raise
 the question of how the pattern of 3D organization is re-established
 with each cell division.
 
-\hypertarget{variation-of-chromatin-structure-across-cell-types}{%
-\subsection{Variation of chromatin structure across cell
-types}\label{variation-of-chromatin-structure-across-cell-types}}
+\hypertarget{dynamics-across-cell-types-and-differntiation}{%
+\subsection{Dynamics across cell types and
+differntiation}\label{dynamics-across-cell-types-and-differntiation}}
 
-The primary domain architecture of chromatin is mostly preserved in
+~ The primary domain architecture of chromatin is mostly preserved in
 different cell types and even across species \citep{Dixon2012, Rao2014}.
 However, chromatin dynamics specify distinct gene expression programs
 and biological functions \citep{Bonev2016}. One example of dynamic
 chromatin organization is dosage compensation, in which the X chromosome
-is transcriptionally inactivated in human female cells. Whereas normal
-TAD structures were observed on the active X chromosome, only two very
-large domains were identified on the inactive X chromosome in
+is transcriptionally inactivated in human female cells. Whereas typical
+TAD structures were observed on the active X chromosome, only two huge
+domains were identified on the inactive X chromosome in
 \emph{Drosophila} and human \citep{Deng2015, Rao2014}. Other examples
 include differences in terminally differentiated post-mitotic cells. For
 example, rod photoreceptor cells in nocturnal mammals have an unusual,
 inverted nuclear architecture, in which heterochromatin is enriched in
 the center of the nucleus and is absent from the periphery
-\citep{Solovei2013}. Further biological processes related to cell cycle
-exit strongly affect three-dimensional chromatin organization. These are
-quiescence in yeast, where intrachromosomal contacts increase
-\citep{Rutledge2015}, and senescence, where heterochromatin relocalizes
-from the nuclear periphery to the interior \citep{Chandra2015}. However,
-A/B compartments and TADs seems to be largely unaffected in these
-processes \citep{Criscione2016}.
+\citep{Solovei2013, Falk2018}. Further biological processes related to
+cell cycle exit strongly affect three-dimensional chromatin
+organization. These are quiescence in yeast, where intrachromosomal
+contacts increase \citep{Rutledge2015}, and senescence, where
+heterochromatin relocalizes from the nuclear periphery to the interior
+\citep{Chandra2015}. However, A/B compartments and TADs seems to be
+mostly unaffected in these processes \citep{Criscione2016}.
 
 Subtler effects of changes in chromatin reorganization are observed
 during biological processes such as cell differentiation and signaling
@@ -719,12 +874,12 @@ observed between bivalent gene promoters \citep{Joshi2015}. These
 changes depended on Polycomb repressive complex 2, underscoring its role
 in establishing 3D genome organization in early development, as was
 previously shown for \emph{Drosophila} \citep{Bantignies2011}. To
-address the question, how nuclear architecture change during lineage
+address the question of how nuclear architecture change during lineage
 specification, a recent Hi-C study produced Hi-C interaction maps in
 ESCs and four ESC-derived lineages representing early developmental
 stages \citep{Dixon2015}. Interestingly, TADs are mostly unchanged
 during lineage specification, but intra-TAD interactions in some domains
-were strongly altered and these changes correlate with active chromatin
+were strongly altered, and these changes correlate with active chromatin
 state \citep{Dixon2015}. Furthermore, often entire TADs relocate from
 one compartment to another, which was also associated with
 transcriptional changes of genes in these TADs. Also in B cell
@@ -733,22 +888,15 @@ relocate from the nuclear periphery to the interior \citep{Lin2012}.
 
 The dynamics of chromatin architecture were also studied in response to
 stimuli, such as hormone signaling by progestin or estradiol. Despite
-large changes in the transcriptional activity, only small changes were
-observed in the domain organization of chromatin \citep{LeDily2014}.
-However, often the entire TAD responded as a unit by changing histone
-modifications and switching between A and B compartment. This suggests,
-that transcription status is coordinated within TADs.
-
-\begin{itemize}
-\tightlist
-\item
-  Add the percentage of shared boundaries between cell types
-  \citep{Dixon2012, Rao2014}.
-\item
-  Summary of dynamics
-\item
-  Add figure 5 from \citep{Andrey2017} as figure.
-\end{itemize}
+substantial changes in the transcriptional activity, only small
+differences were observed in the domain organization of chromatin
+\citep{LeDily2014}. However, often the entire TAD responded as a unit by
+changing histone modifications and switching between A and B
+compartment. This suggests that transcription status is coordinated
+within TADs. Overall, TADs seems to be mostly cell-type invariant,
+whereby local regulatory interactions within TADs and global differences
+in compartment type change between cell types and correlate with
+differential gene expression.
 
 \hypertarget{evolution-of-chromatin-organization}{%
 \section{Evolution of chromatin
@@ -758,18 +906,17 @@ While TADs were initially described for mammalian genomes, a similar
 domain organization was found in the genomes of non-mammalian species
 such as \emph{Drosophila} \citep{Sexton2012}, zebrafish
 \citep{Gomez-Marin2015} \emph{Caenorhabditis elegans} \citep{Crane2015}
-and yeast \citep{Hsieh2015, Mizuguchi2014}.
-
-However, in \emph{C. elegans} TADs were only observed on the X
-chromosome of XX hermaphrodites and not on autosomes \citep{Crane2015}.
-The small and compact genome with most of the cis-regulatory information
-within 10kb from the TSS might not need long-range domains for gene
-regulation \citep{Long2016}. In contrast, plants have long-range
-cell-type specific enhancers \citep{Zhu2015}, but TAD like structures
-could not be observed in Hi-C experiments in \emph{A. thaliana}.
-Interestingly, both \emph{C.elegans} and \emph{A.thaliana} do not encode
-a CTCF homolog \citep{Heger2012}, suggesting alternative mechanisms of
-genome organization and segmentation in these species \citep{Long2016}.
+and yeast \citep{Hsieh2015, Mizuguchi2014}. However, in \emph{C.
+elegans}, TADs were only observed on the X chromosome of XX
+hermaphrodites and not on autosomes \citep{Crane2015}. The small and
+compact genome with most of the cis-regulatory information within 10kb
+from the TSS might not need long-range domains for gene regulation
+\citep{Long2016}. In contrast, plants have long-range cell-type specific
+enhancers \citep{Zhu2015}, but TAD like structures could not be observed
+in Hi-C experiments in \emph{A. thaliana}. Interestingly, both
+\emph{C.elegans} and \emph{A.thaliana} do not encode a CTCF homolog
+\citep{Heger2012}, suggesting alternative mechanisms of genome
+organization and segmentation in these species \citep{Long2016}.
 TAD-like structures are therefore not required for eukaryotic interphase
 chromosome folding. Nevertheless, Hi-C experiments in bacteria and yeast
 suggest that self-interacting domains may be an ancient feature of
@@ -779,103 +926,104 @@ size \citep{Le2013}. In fission yeast \emph{S. pombe}, globule
 structures at the 40-100 kb scale were identified and depend on cohesin
 complex \citep{Mizuguchi2014}. Furthermore, in very short CIDs of around
 2-10 kb were detected in \emph{S.cerevisiae} and bounded by highly
-transcribed genes \citep{Hsieh2015}. Further high-resolution experiments
-in more diverse species are needed to understand the evolutionary origin
-of genome segregation into TAD-like structures.
+transcribed genes \citep{Hsieh2015}.
+
+In summary, TAD like structures have been detected in many organisms,
+including files, worms, fungi, and bacteria, but variations in size and
+internal structure indicate differences in their formation and
+biological functions \citep{Dekker2015}. Further high-resolution
+experiments in more diverse species are needed to understand the
+evolutionary origin of genome segregation into TAD-like structures.
 
 The presence of domain-like structures in diverse species across the
 tree of life leads to the question if not only the genomic sequence but
 also its folding structure is conserved between species. Interestingly,
-TADs are not only largely stable across different cell-types
+TADs are not only mostly stable across different cell-types
 \citep{Dixon2012, Rao2014} and during differentiation \citep{Dixon2015},
 but also remarkably similar between homologous regions in mouse and
-human \citep{Dixon2012}. More than 54\% of TAD boundaries in human hESC
-cells occur at homologous genomic positions in mouse ESCs
-\citep{Dixon2012}. Similarly, 45\% of contact domains called in mouse
-B-lymphoblasts were also identified in homologous regions in human
-lymphoblastoid cells \citep{Rao2014}. A single TAD boundary at the Six
-gene loci could be traced back in evolution to the origin of
-deuterostomes \citep{Gomez-Marin2015}. However, these analyses focused
-only on the subset of syntenic regions that can be mapped uniquely
-between genomes.
+human \citep{Dixon2012}. About half of the TAD boundaries identified in
+human hESC cells occur at homologous genomic positions in mouse ESCs
+\citep{Dixon2012}. A similar fraction of contact domains was detected at
+homologous genomic locations in mouse and human lymphoblastoid cells
+\citep{Rao2014}. Another study could trace back a single TAD boundary at
+the Six gene loci to the origin of deuterostomes
+\citep{Gomez-Marin2015}. However, these analyses focused only on the
+subset of syntenic regions between genomes and therefore, do not allow
+conclusions about disruptions or the conservation of TADs by chromosomal
+rearrangements between species.
 
 During evolution, the genome sequence underwent several types of
 mutations. While single nucleotide mutations only alter a single DNA
-base at a time, structural variants (SVs) modify larger chromosomal
-regions by deletions, duplications, inversions, or translocations.
-Thereby deletions and duplications can alter the copy number of genes.
-The breakpoint of such rearrangements can also lead to disruption of
-genes or gene fusion. However, rearrangement breakpoints can also alter
-the regulatory environment of genes by disrupting regulatory regions,
-such as enhancers, or their interactions. Comparative genomic analysis
-of two species can identify evolutionary rearrangements by altered
-adjacencies of orthologous genes.
+base at a time, structural variants modify larger chromosomal regions by
+deletions, duplications, inversions, or translocations. Thereby
+deletions and duplications can alter the copy number of genes. The
+breakpoint of such rearrangements can also lead to disruption of genes
+or gene fusion. However, rearrangement breakpoints can also alter the
+regulatory environment of genes by disrupting regulatory regions, such
+as enhancers, or their interactions. Comparative genomic analysis of two
+species can identify evolutionary rearrangements by altered adjacencies
+of orthologous genes.
 
 Initial comparative Hi-C studies identified several evolutionary
 breakpoints at TAD boundaries and highlighted an important role of
 conserved CTCF binding sites in facilitating conservation of TADs
-\citep{VietriRudan2015}. Initial comparative Hi-C studies identified
-several evolutionary breakpoints at TAD boundaries and highlighted an
-important role of conserved CTCF binding sites in facilitating
-conservation of TADs \citep{VietriRudan2015}. However, it remains to be
-investigated systematically if TAD regions as a whole might be stable or
-disrupted by rearrangements during evolution and how this is associated
-with conserved or divergent transcriptional regulation between species.
+\citep{VietriRudan2015}. However, it remains to be investigated
+systematically if TAD regions as a whole might be stable or disrupted by
+rearrangements during evolution and how this is associated with
+conserved or divergent transcriptional regulation between species.
 
 \hypertarget{disruption-of-chromatin-architecture-in-disease}{%
 \section{Disruption of chromatin architecture in
 disease}\label{disruption-of-chromatin-architecture-in-disease}}
 
-The insulating function of TADs restricting promoter-enhancer
-interactions \citep{Symmons2014} suggests that alternations of TAD
+The insulating function of TADs, which restrict promoter-enhancer
+interactions \citep{Symmons2014}, suggests that alterations of TAD
 structures may induce ectopic interactions between regulatory elements
 and genes in neighboring TADs, leading to gene dysregulation (Fig.
-\ref{fig:EnhancerAdoption}).
+\ref{fig:EnhancerAdoption}). Consistently, genetic manipulation of
+specific TAD boundaries can change the surrounding interaction patterns
+and thus affect the expression of nearby genes. After experimental
+deletion of a 58-kb region encompassing a TAD boundary in mouse ESC,
+interactions between adjacent TADs increased significantly and genes in
+neighboring TADs were upregulated \citep{Nora2012}. More precise
+deletion or inversion of CTCF binding site at loop anchors in TAD
+boundaries altered local chromatin architecture and nearby gene
+expression \citep{Dowen2014, Guo2015, Narendra2015}.
 
-Several experiments of genetic manipulation of specific TAD boundaries
-can change the surrounding interaction patterns and thus affect the
-expression of nearby genes. After experimental deletion of a 58-kb
-region encompassing a TAD boundary in mouse ESC, interactions between
-adjacent TADs significantly increased and genes in neighboring TADs were
-upregulated \citep{Nora2012}. More precise deletion or inversion of CTCF
-binding site at loop anchors in TAD boundaries altered local chromatin
-architecture and nearby gene expression
-\citep{Dowen2014, Guo2015, Narendra2015}.
-
-The alternation of chromatin contacts upon TAD boundary disruptions
-leads to the question whether disruption of TADs could also be and
-mechanism of disease pathology. This hypothesis was initially discussed
-by studying the etiology of the Liebenberg syndrome, in which an
-upper-limb malformation phenotype is caused by a deletion in the
-vicinity of the \emph{PITX1} gene. \emph{PITX1} becomes thereby
-accessible to an enhancer with specific activity in lower-limb and was
-miss-expressed in a corresponding mouse model \citep{Spielmann2012}.
-Overlap of this deletion with later identified TAD boundaries leads to
-the hypothesis of a regulatory effect mechanism of boundary deletions
-referred to as enhancer adoption \citep{Spielmann2013a}.
+The alteration of chromatin contacts upon experimental disruptions of
+TAD boundaries leads to the question whether disruption of TADs could
+also be and mechanism of disease pathology. This hypothesis was
+initially discussed by studying the etiology of the Liebenberg syndrome,
+in which an upper-limb malformation phenotype is caused by a deletion in
+the vicinity of the \emph{PITX1} gene \citep{Spielmann2013a}.
+\emph{PITX1} becomes thereby accessible to an enhancer with specific
+activity in lower-limb and was miss-expressed in a corresponding mouse
+model \citep{Spielmann2012}. Overlap of this deletion with later
+identified TAD boundaries leads to the hypothesis of a regulatory effect
+mechanism of boundary deletions referred to as enhancer adoption.
 
 An association of TAD disruptions with diseases was first shown by
 computational analysis integrating TAD structures, with tissue-specific
-enhancers, and large chromosomal deletions associated with clinical
-phenotypes \citep{Ibn-Salem2014}.
-
-In this study, the Human Phenotype Ontology database \citep{Kohler2014}
-was used to relate the phenotypes of 922 deletion cases from the
-DECIPHER database \citep{Firth2009} to monogenic diseases associated
-with genes in or adjacent to the deletions. This was used to
-differentiate for each deletion case between two possible pathogenic
-effect mechanism that best explains the phenotypes observed in the
-patients. Many deletions were best explained by a gene dosage mechanism
-and haploinsufficiency of genes located within the deletion. However,
-about 12 percent of cases were best explained by a TAD boundary
-disruption and specific combinations of tissue-specific enhancers and
-genes in adjacent TADs. Importantly, randomization of phenotype data
-showed that this enhancer adaption mechanism was significantly more
-frequent than expected by chance \citep{Ibn-Salem2014}. Therefore, this
-study shows for the first time an association of TAD disruption with
-genetic diseases and describes a regulatory effect mechanism of TAD
-disruptions that need to be further investigated and has to be
-considered when interpreting genetic variations in patient genomes.
+enhancers, and large chromosomal deletions, which were associated with
+clinical phenotypes \citep{Ibn-Salem2014}. In this study, the Human
+Phenotype Ontology database \citep{Kohler2014} was used to relate the
+phenotypes of 922 deletion cases from the DECIPHER database
+\citep{Firth2009} to monogenic diseases associated with genes in or
+adjacent to the deletions. This was used to differentiate for each
+deletion case between two possible pathogenic effect mechanism that best
+explains the phenotypes observed in the patients (Fig.
+\ref{fig:EnhancerAdoption}). Many deletions were best explained by a
+gene dosage mechanism and haploinsufficiency of genes located within the
+deletion. However, about 12 percent of cases were best explained by a
+TAD boundary disruption and specific combinations of tissue-specific
+enhancers and genes in adjacent TADs. Importantly, randomization of
+phenotype data showed that this enhancer adaption mechanism was
+significantly more frequent than expected by chance
+\citep{Ibn-Salem2014}. Therefore, this study shows for the first time an
+association of TAD disruption with genetic diseases and describes a
+regulatory effect mechanism of TAD disruptions that need to be further
+investigated and has to be considered when interpreting genetic
+variations in patient genomes.
 
 \begin{figure}
 
@@ -883,27 +1031,27 @@ considered when interpreting genetic variations in patient genomes.
 
 }
 
-\caption{\textbf{Models of pathomechanisms by chromosomal
-deletions involving TAD disruption} In each panel, an exemplary deletion
-is shown as a red bar, a TDB is indicated with a black arrow, and genes
-associated with the phenotypes of the CNV patient are shown in blue,
-other genes in gray. Phenotypic abnormalities are represented as
-exemplary HPO terms (HP1, HP2 and HP3). Three tissue-specific enhancers
-are shown in (B) as black ovals. \textbf{(A)} Gene-dosage effect. A
-deletion leads to a reduction in the dosage of haplosensitive genes
-located within the CNV. The individual with the deletion has two
-phenotypic abnormalities (HP1, HP2) resulting from deletion of two
-haplosensitive genes. A Mendelian disease related to mutations in the
-first gene is associated with HP1, and a Mendelian disease related to
-mutations in the second gene is associated with HP2. \textbf{(B)} TAD
-boundary deletion and enhancer adoption. Removal of the topological
-domain boundary allows the tissue-specific enhancer inappropriately to
-activate a phenotypically relevant gene located adjacent to the
-deletion, a phenomenon that we refer to as enhancer adoption. In this
-case, the individual with the deletion has a phenotypic abnormality
-(HP3) that is also seen in individuals with a Mendelian disease related
-to a mutation in the gene adjacent to the deletion. Figure adapted from
-\citep{Ibn-Salem2014}.}\label{fig:EnhancerAdoption}
+\caption{\textbf{Models of pathomechanisms by
+chromosomal deletions involving TAD disruption} In each panel, an
+exemplary deletion is shown as a red bar, a TDB is indicated with a
+black arrow, and genes associated with the phenotypes of the CNV patient
+are shown in blue, other genes in gray. Phenotypic abnormalities are
+represented as exemplary HPO terms (HP1, HP2, and HP3). Three
+tissue-specific enhancers are shown in (B) as black ovals. \textbf{(A)}
+Gene-dosage effect. A deletion leads to a reduction in the dosage of
+haplosensitive genes located within the CNV. The individual with the
+deletion has two phenotypic abnormalities (HP1, HP2) resulting from
+deletion of two haplosensitive genes. A Mendelian disease related to
+mutations in the first gene is associated with HP1, and a Mendelian
+disease related to mutations in the second gene is associated with HP2.
+\textbf{(B)} TAD boundary deletion and enhancer adoption. Removal of the
+topological domain boundary allows the tissue-specific enhancer
+inappropriately to activate a phenotypically relevant gene located
+adjacent to the deletion, a phenomenon that we refer to as enhancer
+adoption. In this case, the individual with the deletion has a
+phenotypic abnormality (HP3) that is also seen in individuals with a
+Mendelian disease related to a mutation in the gene adjacent to the
+deletion. Figure adapted from \citep{Ibn-Salem2014}.}\label{fig:EnhancerAdoption}
 \end{figure}
 
 
@@ -928,12 +1076,12 @@ to a mutation in the gene adjacent to the deletion. Figure adapted from
 
 
 
-Interestingly, these initial results are largely confirmed by very
+Interestingly, these initial results are largely confirmed by more
 recent studies investigating structural variants that disrupt TADs and
 lead to ectopic gene expression in genetic diseases
 \citep{Lupianez2015, Franke2016, Redin2017} and cancers
 \citep{Northcott2014, Hnisz2016, Weischenfeldt2016}. This is discussed
-in more detail in section \#ref(thesis-discussion).
+in more detail below (Chapter \ref{thesis-discussion}).
 
 Together, these observations lead to the questions whether other types
 of structural variants, like translocations and inversions, could also
@@ -956,31 +1104,33 @@ genomic functions such as histone modifications
 gene expression correlation \citep{Nora2012, LeDily2014}. We previously
 showed a significant association of TAD disruptions by large chromosomal
 deletions with clinical phenotypes, likely caused by an enhancer
-adaption mechanism \citep{Ibn-Salem2014, Lupianez2015}. However, it is
-still unclear how exactly the genome folds into TADs and what
-consequence this has for gene regulation during evolution and in genetic
-diseases. For example, it is not clear to which extends genes within the
-same TAD are expressed and regulated in a coordinated manner. Despite
-initial evidence of evolutionary conservation of TADs in homologous
-regions between human and mouse \citep{Dixon2012, VietriRudan2015},
-there was no systematic analysis of the stability of TADs during
-evolution and the consequences of TAD disruptions on gene expression
-divergence between species. The accumulating evidence of the critical
-gene regulatory function of TADs leads to the question if TADs play an
-essential role in genetic diseases \citep{Spielmann2016}. More
+adaption mechanism \citep{Ibn-Salem2014}. However, it is still unclear
+how exactly the genome folds into TADs and what consequence this has for
+gene regulation during evolution and in genetic diseases. For example,
+it is not clear to which extends genes within the same TAD are expressed
+and regulated in a coordinated manner. Despite initial evidence of
+evolutionary conservation of TADs in homologous regions between human
+and mouse \citep{Dixon2012, VietriRudan2015}, there was no systematic
+analysis of the stability of TADs during evolution. Furthermore, it is
+unclear if TAD disruptions during evolution correlate with gene
+expression divergence between species. The accumulating evidence of the
+critical gene regulatory function of TADs leads to the question if TADs
+play an essential role in genetic diseases \citep{Spielmann2016}. More
 specifically, TADs might be used together with other genomic
 annotations, such as enhancers and their interactions with regulated
-genes to interpret structural variations in patient genomes.
-Furthermore, increasing mechanistic understanding of chromatin looping
-interactions and TAD formation could be used to improve genome-wide
-contact maps and predict long-range interactions in diverse tissues and
-conditions. Therefore, this thesis addresses the question whether TADs
-represent only structural units of genomes or also crucial functional
-building blocks and necessary for coordinated gene regulation. By
+genes, to interpret structural variations in patient genomes.
+Furthermore, increasing molecular and mechanistic understanding of
+chromatin looping and TAD formation could be used to improve genome-wide
+contact maps and predict computationally long-range interactions in
+diverse tissues and conditions.
+
+Therefore, this thesis addresses the question, whether TADs represent
+only structural units of genomes or also essential functional building
+block, in which genes can be regulated in a coordinated manner. By
 computationally integrating genome-wide chromatin interaction maps with
-diverse genomic datasets, including sequence conservation, regulatory
-activity, protein binding, gene expression and clinical phenotypes, I
-address the following questions.
+diverse genomic datasets, including sequence conservation, enhancer
+activity, protein binding, gene expression and clinical phenotypes, this
+work addresses the following questions.
 
 \textbf{Is the three-dimensional folding structure of genomes associated
 with co-regulation of functionally related genes?}
@@ -988,7 +1138,7 @@ with co-regulation of functionally related genes?}
 \begin{itemize}
 \tightlist
 \item
-  How are paralog genes distributed in the linear genome and in the
+  How are paralog genes distributed in the linear genome and the
   three-dimensional genome architecture?
 \item
   Are paralogs co-regulated with shared enhancers and located in the
@@ -1024,22 +1174,21 @@ TADs and the regulation of relevant genes?}
   chromosomal rearrangements in whole-genome sequenced patients?
 \item
   How can we quantify the similarity of phenotypes observed in patients
-  and phenotypes associated with genes in order to prioritize candidate
-  genes?
+  and phenotypes associated with genes to prioritize candidate genes?
 \item
   Can we provide a computational tool to integrate functional genomic
   elements, chromatin interaction data, and TADs with phenotype data of
   patients to predict pathomechanism of structural variations?
 \end{itemize}
 
-\textbf{Can ChIP-seq signals and sequence features predict chromatin
-looping interactions?}
+\textbf{Can protein binding profiles and genomic sequence features
+predict chromatin looping interactions?}
 
 \begin{itemize}
 \tightlist
 \item
-  Does the cross-linking effect in ChIP-seq provide characteristic
-  signals at interacting chromatin loop anchors?
+  Does the cross-linking effect in ChIP-seq experiments provide
+  characteristic signals at interacting chromatin loop anchors?
 \item
   Does the genomic sequence encode features that are predictive for
   long-range chromatin interactions?
@@ -1063,18 +1212,19 @@ of gene expression during evolution (Chapter \ref{paralog-regulation}).
 Next, whole-genome alignment between human and other vertebrate genomes
 are used to systematically investigate whether TADs represent conserved
 building blocks of genomes and whether rearrangements of TADs lead to
-altered gene expression programs (Chapter \ref{TAD-evolution}). The next
-chapter address disruptions of chromatin organization by analyzing
-disease associated rearrangement breakpoints from whole-genome sequenced
-patients of various genetic diseases to explain their phenotypes by
+altered gene expression programs (Chapter \ref{TAD-evolution}). Then, we
+address disruptions of chromatin organization by analyzing disease
+associated rearrangement breakpoints from whole-genome sequenced
+patients of various genetic disorders to explain their phenotypes by
 miss-regulation of genes in disrupted TADs (Chapter
-\ref{position-effect}). Finally, I make use of recent insights in
+\ref{position-effect}). Finally, we make use of recent insights in
 chromatin loop formation to provide a computational tool for predicting
-long-range chromatin contacts from largely available ChIP-seq data, with
+long-range chromatin contacts from broadly available ChIP-seq data, with
 the aim to facilitate three-dimensional folding analysis in diverse
 tissues and conditions for which Hi-C like data is not available
-(Chapter \ref{loop}). The overall findings are then discussed together
-with further research perspectives (Chapter \ref{thesis-discussion}).
+(Chapter \ref{loop}). The overall findings are then discussed in the
+context of most recent literature and future research perspectives
+(Chapter \ref{thesis-discussion}).
 
 \hypertarget{paralog-regulation}{%
 \chapter{Paralog genes in the 3D genome
@@ -1085,17 +1235,16 @@ architecture}\label{paralog-regulation}}
 \addcontentsline{toc}{subsection}{Preamble}
 
 \begin{quote}
-This chapter was published as a first-author paper in the journal
-Nucleic Acids Research:
+This chapter is published in the journal Nucleic Acids Research:
 
 \textbf{Ibn-Salem J}, Muro EM, Andrade-Navarro MA.
 \textbf{\emph{Co-regulation of paralog genes in the three-dimensional
 chromatin architecture}}. Nucleic Acids Res. 2017;45(1):81-91.
 \href{https://doi.org/10.1093/nar/gkw813}{doi:10.1093/nar/gkw813}.
 
-The publication is availible online:
+The publication is available online:
 \url{https://doi.org/10.1093/nar/gkw813}. My contributions to this
-publication is indicated in Table \ref{tab:contribution}. The source
+publication are indicated in Table \ref{tab:contribution}. The source
 code of the complete analysis is available at GitHub:
 \url{https://github.com/ibn-salem/paralog_regulation}. Supplementary
 figures are shown in Appendix \ref{sup-paralog-regulation}.
@@ -2047,7 +2196,8 @@ creating from nothing a complete new regulatory environment for a new
 gene.
 
 \hypertarget{acknowledgements}{%
-\section{Acknowledgements}\label{acknowledgements}}
+\section*{Acknowledgements}\label{acknowledgements}}
+\addcontentsline{toc}{section}{Acknowledgements}
 
 The authors thank all members of the CBDM group for fruitful
 discussions.
@@ -2060,20 +2210,22 @@ discussions.
 \addcontentsline{toc}{subsection}{Preamble}
 
 \begin{quote}
-This chapter is submitted as a corresponding-author paper to BMC Biology
-and is currently under review. A preprint is published at bioRxiv:
+This chapter is submitted for publication and currently under
+peer-review. A preprint is available on bioRxiv:
 
-Krefting J, Andrade-Navarro MA, \textbf{Ibn-Salem J}.
-\textbf{\emph{Evolutionary stability of topologically associating
-domains is associated with conserved gene regulation}}. bioRxiv. 2017.
+Krefting J, Andrade-Navarro MA, \textbf{Ibn-Salem
+J}\textsuperscript{\#}. \textbf{\emph{Evolutionary stability of
+topologically associating domains is associated with conserved gene
+regulation}}. bioRxiv. 2017.
 \href{https://doi.org/10.1101/231431}{doi:doi.org/10.1101/231431}.
 
-The preprint is availible online: \url{https://doi.org/10.1101/231431}.
-My contributions to this publication is indicated in Table
+My contributions to this publication are indicated in Table
 \ref{tab:contribution}. The source code of the complete analysis is
 available at GitHub: \url{https://github.com/Juppen/TAD-Evolution}.
 Supplementary figures and links to supplementary tables are shown in
 Appendix \ref{sup-tad-evolution}.
+
+\textsuperscript{\#}corresponding author
 \end{quote}
 
 \hypertarget{abstract-2}{%
@@ -2107,14 +2259,6 @@ of TADs in gene expression regulation.
 conserved building blocks of genomes with regulatory functions that are
 often reshuffled as a whole instead of being disrupted by
 rearrangements.
-
-\hypertarget{keywords}{%
-\subsection*{Keywords}\label{keywords}}
-\addcontentsline{toc}{subsection}{Keywords}
-
-Genome rearrangements; Topologically associating domains; TAD; Chromatin
-interactions; 3D genome architecture; Hi-C; Evolution; Selection; Gene
-regulation; Structural variants
 
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
@@ -2838,22 +2982,13 @@ base (version grch37.ensembl.org) using the package biomaRt
 packages from tidyverse \citep{Wickham2017}.
 
 \hypertarget{declarations}{%
-\section{Declarations}\label{declarations}}
-
-\hypertarget{ethics-approval-and-consent-to-participate}{%
-\subsection{Ethics approval and consent to
-participate}\label{ethics-approval-and-consent-to-participate}}
-
-Not applicable
-
-\hypertarget{consent-for-publication}{%
-\subsection{Consent for publication}\label{consent-for-publication}}
-
-Not applicable
+\section*{Declarations}\label{declarations}}
+\addcontentsline{toc}{section}{Declarations}
 
 \hypertarget{availability-of-data-and-material}{%
-\subsection{Availability of data and
+\subsection*{Availability of data and
 material}\label{availability-of-data-and-material}}
+\addcontentsline{toc}{subsection}{Availability of data and material}
 
 The source code of all analysis is available on GitHub:
 \href{https://github.com/Juppen/TAD-Evolution}{\emph{https://github.com/Juppen/TAD-Evolution}}.
@@ -2863,24 +2998,22 @@ identifiers listed in Table \ref{tab:TadEvoSpecies} and
 \protect\hyperlink{TadEvoSupTab}{Table S1}.
 
 \hypertarget{competing-interests}{%
-\subsection{Competing interests}\label{competing-interests}}
+\subsection*{Competing interests}\label{competing-interests}}
+\addcontentsline{toc}{subsection}{Competing interests}
 
 The authors declare that they have no competing interests.
 
-\hypertarget{funding}{%
-\subsection{Funding}\label{funding}}
-
-Not applicable.
-
 \hypertarget{authors-contributions}{%
-\subsection{Authors` contributions}\label{authors-contributions}}
+\subsection*{Authors` contributions}\label{authors-contributions}}
+\addcontentsline{toc}{subsection}{Authors` contributions}
 
 JK and JI developed and implemented the methods and performed the
 analysis. JI conceived the study. JK wrote the first draft of the
 manuscript. JK, MA and JI wrote the manuscript. MA supervised the study.
 
 \hypertarget{acknowledgments}{%
-\subsection{Acknowledgments}\label{acknowledgments}}
+\subsection*{Acknowledgments}\label{acknowledgments}}
+\addcontentsline{toc}{subsection}{Acknowledgments}
 
 The authors thank all members of the CBDM group for fruitful
 discussions.
@@ -2894,8 +3027,7 @@ genomes}\label{position-effect}}
 \addcontentsline{toc}{subsection}{Preamble}
 
 \begin{quote}
-This chapter was published as a co-first-author paper in the American
-Journal of Human Genetics:
+This chapter is published in the American Journal of Human Genetics:
 
 Cinthya J. Zepeda-Mendoza\textsuperscript{*}, \textbf{Jonas
 Ibn-Salem\textsuperscript{*}}, Tammy Kammin, David J. Harris, Debra
@@ -2909,9 +3041,9 @@ Position Effects of Apparently Balanced Human Chromosomal
 Rearrangements}}. Am J Hum Genet. 2017;101(2):206-217.
 \href{https://doi.org/10.1016/j.ajhg.2017.06.011}{doi:10.1016/j.ajhg.2017.06.011}.
 
-The publication is availible online:
+The publication is available online:
 \url{https://doi.org/10.1016/j.ajhg.2017.06.011}. My contributions to
-this publication is indicated in Table \ref{tab:contribution}. The
+this publication are indicated in Table \ref{tab:contribution}. The
 source code of the complete analysis is available at GitHub:
 \url{https://github.com/ibn-salem/position_effect}. Supplementary
 information is shown in Appendix \ref{sup-position-effect}.
@@ -3074,7 +3206,7 @@ karyotypes are reported, with overlap of breakpoints with regulatory
 elements (E = enhancer, DHS = DNaseI hypersensitive sites, CTCF = CTCF
 binding sites), and TADs from H1-hESC, IMR90, and GM12878 (1= one
 breakpoint within TAD, 2=both BCA breakpoints are located within TAD).
-Top-ranking position effect genes are provided for the ±1 Mb windows
+Top-ranking position effect genes are provided for the +-1 Mb windows
 surrounding the BCA breakpoints; each gene is highlighted with different
 evidence supporting its inclusion (a = ClinGen known recessive genes, b=
 ClinGen genes with emerging and sufficient evidence suggesting
@@ -3089,7 +3221,7 @@ interactions).}\tabularnewline
 \end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\raggedright
 \textbf{Breakpoints within TADs (hESC / IMR90 / GM12878)}\strut
 \end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedleft
-\textbf{Top-ranking Candidates +/-1 Mb }\strut
+\textbf{Top-ranking Candidates +-1 Mb }\strut
 \end{minipage}\tabularnewline
 \midrule
 \endfirsthead
@@ -3101,7 +3233,7 @@ interactions).}\tabularnewline
 \end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\raggedright
 \textbf{Breakpoints within TADs (hESC / IMR90 / GM12878)}\strut
 \end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedleft
-\textbf{Top-ranking Candidates +/-1 Mb }\strut
+\textbf{Top-ranking Candidates +-1 Mb }\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
@@ -3266,8 +3398,8 @@ DHS\strut
 breakpoints}\label{analysis-of-genes-bordering-the-rearrangement-breakpoints}}
 
 The presence of annotated genes or pseudogenes and lincRNAs was assessed
-in windows of ±3 and ±1 Mb neighboring each subject's translocation and
-inversion breakpoints, and within reported H1-hESC topologically
+in windows of +-3 and +-1 Mb neighboring each subject's translocation
+and inversion breakpoints, and within reported H1-hESC topologically
 associated domains (TADs)\citep{Dixon2012} where the breakpoints were
 located. The gene annotation file was obtained from Ensembl GRCh37
 archive,\citep{Flicek2014} and we used the Human Body Map lincRNAs
@@ -3331,7 +3463,7 @@ information content of the most speciﬁc HPO term that is part of or a
 common ancestor (more general term) of a set of phenotypes. Our set of
 phenotypes is constituted by the HPO terms associated to DGAP cases and
 the ones annotated to candidate position effect genes within windows of
-±3 and ±1 Mb of sequence in proximity to the breakpoints. We used two
++-3 and +-1 Mb of sequence in proximity to the breakpoints. We used two
 background models to assess signiﬁcance of this similarity. The ﬁrst is
 based on randomly permuting the associations of phenotypes to genes; to
 this effect, the phenotype-gene associations are shuffled 100 times
@@ -3494,11 +3626,11 @@ effects}\label{identification-of-genes-with-potential-position-effects}}
 
 To identify genes which could be generating the complex DGAP phenotypes
 via position effects from chromosome rearrangements, we analyzed all
-annotated genes within windows of ±3 and ±1 Mb proximal and distal to
+annotated genes within windows of +-3 and +-1 Mb proximal and distal to
 the breakpoints, and within the BCA-containing H1-hESC reported TAD
-positions. A total of 3081 genes were contained within the ±3 and ±1 Mb
-windows for all cases; 106 of these genes (\textasciitilde{}3.4\%) have
-an HI score of \textless{}10\%, which is a predictor of
+positions. A total of 3081 genes were contained within the +-3 and +-1
+Mb windows for all cases; 106 of these genes (\textasciitilde{}3.4\%)
+have an HI score of \textless{}10\%, which is a predictor of
 haploinsufficiency,\citep{Huang2010} and 55 and two genes have ClinGen
 emerging evidence suggesting that dosage haplo/triplo-sensitivity,
 respectively, is associated with clinical phenotype
@@ -3522,7 +3654,7 @@ neighboring gene phenotypes. The similarity significance is then
 calculated based on randomly permuting the associations of phenotypes to
 genes, and in shifting the DGAP translocation and inversion breakpoint
 positions along the chromosome. We obtained phenomatch scores ranging
-from 0.003 to 91.48 for 179 genes within the ±3 and ±1 Mb windows, as
+from 0.003 to 91.48 for 179 genes within the +-3 and +-1 Mb windows, as
 well as within the TAD positions
 (\protect\hyperlink{position-effect-sub-tab}{Table S}15).
 
@@ -3536,7 +3668,7 @@ genes and enhancers included in predicted enhancer-promoter interactions
 would be strong position effect candidates. We used the ENCODE distal
 DHS/enhancer--promoter connections\citep{Thurman2012} to assess
 disrupted predicted \emph{cis}-regulatory interactions by the DGAP
-breakpoints within a ±500 Kb window. The analysis revealed 193 genes
+breakpoints within a +-500 Kb window. The analysis revealed 193 genes
 that were separated from their predicted candidate enhancers,
 potentially altering gene expression
 (\protect\hyperlink{position-effect-sub-tab}{Table S}13). A total of 133
@@ -3548,7 +3680,7 @@ interactions with 10 or up to 91 enhancers
 For the 17 analyzed DGAP BCAs, there are a total of 645 genes with
 either evidence of dosage sensitivity, disrupted enhancer-promoter
 interactions, or significant phenotypic similarity. This represents
-\textasciitilde{}21\% of the genes contained within the ±3 Mb windows,
+\textasciitilde{}21\% of the genes contained within the +-3 Mb windows,
 clearly an undesirable number for timely clinical interpretation and
 functional analyses. To filter the most promising candidates, we ranked
 them using their reported dosage sensitivity, disrupted regulatory
@@ -3560,7 +3692,7 @@ per case and adding up their dosage sensitivity and disrupted regulatory
 interaction data, we consistently ranked the reported pathogenic and
 likely pathogenic genes in the upper decile for 52 out of the 57 control
 DGAP cases (\textasciitilde{}91\%) when considering candidates within
-the TAD and ±1 Mb analysis windows (Table S17). 32 of these genes were
+the TAD and +-1 Mb analysis windows (Table S17). 32 of these genes were
 the top-ranking candidates in their corresponding DGAP case, while 19 of
 them were positioned in the second-tier rank. Only five genes could not
 be found in the top decile ranking positions as they had one or no lines
@@ -3568,11 +3700,11 @@ of evidence supporting their inclusion.
 
 Applying this ranking strategy to the 17 non-coding BCAs, we predict 16
 top-ranking candidates for 11 DGAP cases and 102 second-tier candidates
-for the 17 analyzed DGAP cases within ±1 Mb analysis windows (Table
+for the 17 analyzed DGAP cases within +-1 Mb analysis windows (Table
 \ref{tab:position-effect-subjects} and
 \protect\hyperlink{position-effect-sub-tab}{Table S}15). This is a
 significant reduction compared to the initial 645 possible candidates
-(\textasciitilde{}3.8\% of the neighboring genes in the ±3 Mb windows
+(\textasciitilde{}3.8\% of the neighboring genes in the +-3 Mb windows
 considering top and second-tier candidates, and only 0.05\% considering
 top candidates only). Of note, only nine of the 16 top-ranking
 candidates are included within the same TAD as the BCA breakpoint
@@ -3760,9 +3892,9 @@ genomic and regulatory elements, chromatin conformation capture
 information, predicted enhancer-promoter interactions, phenomatch
 scores, as well as haploinsufficiency and triplosensitivity information
 for all genes surrounding the BCA breakpoints at different window sizes
-(±3 and ±1 Mb as well as BCA-containing TAD positions), we discovered 16
-genes for 11 DGAP cases that are top-ranking position effect candidates
-for the subjects' clinical phenotypes (Table
+(+-3 and +-1 Mb as well as BCA-containing TAD positions), we discovered
+16 genes for 11 DGAP cases that are top-ranking position effect
+candidates for the subjects' clinical phenotypes (Table
 \ref{tab:position-effect-subjects}).
 
 We observed that eight of the sequenced DGAP BCA breakpoints,
@@ -3856,7 +3988,7 @@ well as HI scores build upon this selection, and can help laboratories
 and clinicians focus in subsequent analyses on candidates of their
 interest. As of now, the ``top-ranking'' candidates have the highest
 number of evidence supporting their selection; however, there are also
-102 second-tier candidates for the 17 analyzed DGAP cases within ±1 Mb
+102 second-tier candidates for the 17 analyzed DGAP cases within +-1 Mb
 analysis windows which may well play a functional role. Presently, we
 are unable to give ``weights'' to any of these selection criteria
 (\emph{i.e}., a gene with a high phenomatch score and no evidence of HI
@@ -3921,6 +4053,10 @@ hope to study additional cases with complete phenotypic information and
 be able to refine better the rules for the prediction of position
 effects on gene expression and discover new mechanisms of pathogenicity.
 
+\hypertarget{declarations-1}{%
+\section*{Declarations}\label{declarations-1}}
+\addcontentsline{toc}{section}{Declarations}
+
 \hypertarget{acknowledgements-1}{%
 \subsection*{Acknowledgements}\label{acknowledgements-1}}
 \addcontentsline{toc}{subsection}{Acknowledgements}
@@ -3933,7 +4069,8 @@ Institutes of Health (GM061354 to CCM and MET). The authors declare no
 conflicts of interest.
 
 \hypertarget{web-resources}{%
-\subsection{Web Resources}\label{web-resources}}
+\subsection*{Web Resources}\label{web-resources}}
+\addcontentsline{toc}{subsection}{Web Resources}
 
 The scripts used in this study to predict position effects can be
 downloaded from:
@@ -3985,22 +4122,24 @@ GTEx portal,
 \addcontentsline{toc}{subsection}{Preamble}
 
 \begin{quote}
-This chapter is submitted as a first-author paper to Genome Biology. A
-preprint is published at bioRxiv:
+This chapter is submitted for publication. A preprint is available on
+bioRxiv:
 
-Ibn-Salem J, Andrade-Navarro MA. Computational Chromosome Conformation
-Capture by Correlation of ChIP-seq at CTCF motifs. bioRxiv. 2018.
+\textbf{Ibn-Salem J\textsuperscript{\#}}, Andrade-Navarro MA.
+\textbf{\emph{Computational Chromosome Conformation Capture by
+Correlation of ChIP-seq at CTCF motifs}}. bioRxiv. 2018.
 \href{https://doi.org/10.1101/257584}{doi:10.1101/257584}.
-\end{quote}
 
-\begin{quote}
-The preprint is availible online:
+The preprint is available online:
 \url{https://www.biorxiv.org/content/early/2018/02/01/257584}. My
-contributions to this publication is indicated in Table
+contributions to this publication are indicated in Table
 \ref{tab:contribution}. The source code of the complete analysis is
 available at GitHub: \url{https://github.com/Juppen/sevenC} and
 \url{https://github.com/Juppen/sevenC_analysis}. Supplementary figures
-and links to supplementary tables are shown in Appendix \ref{sup-loop}.
+and links to supplementary tables are shown in Appendix
+\protect\hyperlink{loop-support}{D}.
+
+\textsuperscript{\#}corresponding author
 \end{quote}
 
 \hypertarget{abstract-4}{%
@@ -4036,14 +4175,6 @@ genes in a condition-specific manner. Furthermore, profiling of hundreds
 of ChIP-seq datasets results in novel candidate factors functionally
 involved in chromatin looping. Our method is available as an R package:
 \url{https://ibn-salem.github.io/sevenC/}
-
-\hypertarget{keywords-1}{%
-\subsection*{Keywords}\label{keywords-1}}
-\addcontentsline{toc}{subsection}{Keywords}
-
-Chromatin interactions, three-dimensional genome architecture,
-transcription factors, ChIP-seq, 3C, 4C, 5C, Hi-C, 6C, ChIA-PET, 7C,
-prediction, chromatin loops
 
 \hypertarget{introduction-3}{%
 \section{Introduction}\label{introduction-3}}
@@ -4957,23 +5088,14 @@ All analysis presented in this work were implemented in R and all
 scripts used have been made available in a separate GitHub repository:
 \href{https://github.com/ibn-salem/chromloop_analysis}{\emph{https://github.com/ibn-salem/sevenC\_analysis}}.
 
-\hypertarget{declarations-1}{%
-\section{Declarations}\label{declarations-1}}
-
-\hypertarget{ethics-approval-and-consent-to-participate-1}{%
-\subsection{Ethics approval and consent to
-participate}\label{ethics-approval-and-consent-to-participate-1}}
-
-Not applicable
-
-\hypertarget{consent-for-publication-1}{%
-\subsection{Consent for publication}\label{consent-for-publication-1}}
-
-Not applicable
+\hypertarget{declarations-2}{%
+\section*{Declarations}\label{declarations-2}}
+\addcontentsline{toc}{section}{Declarations}
 
 \hypertarget{availability-of-data-and-material-1}{%
-\subsection{Availability of data and
+\subsection*{Availability of data and
 material}\label{availability-of-data-and-material-1}}
+\addcontentsline{toc}{subsection}{Availability of data and material}
 
 The source code for the \emph{sevenC} package is available on GitHub:
 \href{https://github.com/ibn-salem/sevenC}{\emph{https://github.com/ibn-salem/sevenC}}.
@@ -4985,24 +5107,22 @@ downloaded from the GEO repository or ENCODE as described in the methods
 section.
 
 \hypertarget{competing-interests-1}{%
-\subsection{Competing interests}\label{competing-interests-1}}
+\subsection*{Competing interests}\label{competing-interests-1}}
+\addcontentsline{toc}{subsection}{Competing interests}
 
 The authors declare that they have no competing interests.
 
-\hypertarget{funding-1}{%
-\subsection{Funding}\label{funding-1}}
-
-Not applicable.
-
 \hypertarget{authors-contributions-1}{%
-\subsection{Authors` contributions}\label{authors-contributions-1}}
+\subsection*{Authors` contributions}\label{authors-contributions-1}}
+\addcontentsline{toc}{subsection}{Authors` contributions}
 
 JI developed and implemented the method, conceived the study and
 performed all analyses. MA supervised the study. JI and MA wrote the
 manuscript.
 
 \hypertarget{acknowledgments-1}{%
-\subsection{Acknowledgments}\label{acknowledgments-1}}
+\subsection*{Acknowledgments}\label{acknowledgments-1}}
+\addcontentsline{toc}{subsection}{Acknowledgments}
 
 The authors thank all members of the CBDM group for fruitful
 discussions, especially Katerina Taškova for ideas on modeling and
@@ -5019,197 +5139,829 @@ anchors.
 \hypertarget{thesis-discussion}{%
 \chapter{Discussion}\label{thesis-discussion}}
 
-\begin{itemize}
-\item
-  Limitations of 3C based methods
-\item
-  Plasticity and dynamics of chromatin interactions
-\item
-  Single cell resolution
-\item
-  Functional mechanism
-\item
-  Establishment of compartments / TADs / loops
-\item
-  Regulation of compartments / TADs / loops
-\item
-  Notes
+Recent developments in proximity-ligation methods allow measuring of
+pairwise chromatin interactions genome-wide. Resulting interaction maps
+revealed a hierarchical organization of genome folding with the property
+of interphase chromosomes to fold into frequently interacting domains,
+called TADs. This non-random organization lead to many fundamental
+questions of how genome folding contributes to functional segregation in
+genomes and how domain organization ensures precise regulation of gene
+expression (Chapter \protect\hyperlink{intro}{1}).
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Neo-TADs by tandem-duplication in evolution \citep{Franke2016}
-  \item
-    A key component and driver for new gene function in evolution or
-    neo-functionalization can be the birth of new enhancers through
-    acquisition of transcription factor binding and subsequent novel
-    regulatory functions \citep{Long2016}.
-  \item
-    This data can be computationally integrated with one-dimensional
-    measurements along the genome and lead to exciting findings of
-    higher order organisation.
-  \item
-    TADs are not only structural units of chromosomes, but also
-    functional building blocks of genomes.
-  \end{itemize}
-\end{itemize}
+Chromatin interaction data can be integrated computationally with
+one-dimensional measurements along the genome. This allows annotating
+folding structures with diverse functional data such as epigenetic
+marks, protein binding signals, tissue-specific gene expression, or
+sequence conservation across genomes. Work in this thesis applied such
+approaches to analyze the function of TADs for gene regulation in the
+contexts of evolution and diseases. The results highlight the role of
+TADs as regulatory environments for gene expression, their stability
+during millions of years of evolution as well as their disruptions by
+disease-associated genetic variants. Furthermore, recent insights into
+molecular mechanisms of chromatin loop formation are used to predict
+long-range interactions genome-wide from protein binding data.
 
-\hypertarget{discussion-paralog-co-regulation-in-tads}{%
-\section{Discussion paralog co-regulation in
-TADs}\label{discussion-paralog-co-regulation-in-tads}}
+This section discusses the results of chapters \ref{paralog-regulation},
+\ref{TAD-evolution}, \ref{position-effect}, and \ref{loop} in light of
+the most recent literature and suggests further research perspectives.
+
+\hypertarget{co-regulation-of-functionally-related-genes-in-tads}{%
+\section{Co-regulation of functionally related genes in
+TADs}\label{co-regulation-of-functionally-related-genes-in-tads}}
+
+The ability to measure gene expression genome-wide in many different
+tissues and conditions allowed the observation of clusters of
+co-expressed genes in higher eukaryotes
+\citep{Boutanaev2002, Purmann2007}. It was previously speculated that
+the structure of the chromatin and cis-acting units might be responsible
+for the observed co-expression \citep{Sproul2005, Purmann2007}. The
+ability to measure chromatin interactions leads to the discovery and
+characterization of TADs and enforces the question whether TADs insulate
+regulatory units in the genome to allow co-regulation of functionally
+similar genes.
+
+To study the interplay between TADs, gene co-regulation, and evolution,
+we decided to focus on pairs of paralog genes. Paralogs arise from gene
+duplication events during evolution. Because of their homology and
+resulting sequence similarity, paralog genes often encode proteins with
+related functions. This makes them an exceptional model for functionally
+related and co-regulated genes. Indeed, in gene expression data from
+various sources across different cell types and tissues, paralogs have
+significantly increased expression correlation compared to other close
+genes (Chapter \ref{paralog-regulation}).
+
+The main challenge in statistically analyzing paralog gene pairs was
+their bias for short genomic distances. Most duplications appear to be
+created by tandem duplications in direct orientation \citep{Newman2015},
+which explains the clustering of paralogs in the genome and enrichment
+for being transcribed from the same DNA strand. These properties
+complicated our analysis by the need for an adequately sampled control
+set of gene pairs.
+
+However, the development of careful sampling techniques results in
+control gene pairs that have similar properties regarding genomic
+distance, transcription strand, number of enhancers per gene, and the
+distance of enhancers to genes. These approaches allowed us to compare
+features of paralog gene pairs to random expectations in a statistically
+robust manner.
+
+Our results show that paralogs are significantly enriched in TADs,
+frequently share the same regulatory enhancer and have increased Hi-C
+contacts, even when they are more than 1 Mb apart in the linear genome.
+These results show that evolutionary and functionally related genes tend
+to be co-regulated within TADs. Importantly, this highlights a
+functional organization of the three-dimensional genome, in which domain
+organization segregates distinct regulatory environments (Fig.
+\ref{fig:CoRegTAD}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figures/Dixon2016_Fig3ab} 
+
+}
+
+\caption{\textbf{Co-regulation by shared enhancers in TADs.}
+\textbf{(A)} Example diagram showing the co-regulation of multiple genes
+by a single regulatory element within a TAD. \textbf{(B)} Diagram of the
+potential for TAD boundaries to serve an enhancer blocking role that
+restricts enhancers to target genes within the same TAD. Figure adapted
+from \citep{Dixon2016}.}\label{fig:CoRegTAD}
+\end{figure}
+
+
+
+
+
+
+
 
 The association of gene expression with gene localizing in TADs is
-consistent with a recent computational study with the aim to separate
-the proportion of expression associated with genome organization from
-independent sources. A large fraction of expression can be attributed to
-positioning of genes in genome architecture and hihgly informative for
-TAD activity and organization \citep{Rennie2018}.
+consistent with a very recent computational study with the aim to
+separate the proportion of expression associated with genome
+organization from independent sources. A large fraction of expression
+variance can be attributed to the positioning of genes in genome
+architecture and is highly informative for TAD activity and organization
+\citep{Rennie2018}.
 
-\hypertarget{discussion-on-tad-evolution}{%
-\section{Discussion on TAD
-evolution}\label{discussion-on-tad-evolution}}
+Together, with results from many other studies
+\citep{Bonev2016, Andrey2017, Hnisz2016a}, our results support the
+notion of TADs as functional units of chromosomes in which related genes
+are co-regulated.
 
-Follow up studes might experimentally support the functional importance
-of evolutionary conserved TADs. A very recent study investigated the
-requirenment of ultra-conserved non-coding region containing enhancers
-by knock-out experiments in mice \citep{Dickel2018}. Knowck-out mice
-that lack individual or combination of enhancers were viable but showed
-strong neurological phenotypes. Indicating that the remarkably strong
-sequence conservation likely results from fitness deficit that appear
-subtle in a laboratory setting \citep{Dickel2018}. This could be similar
-for targeted deletions of conserved TAD boundaries.
+\hypertarget{evolution-by-gene-duplications-and-altered-regulatory-environments}{%
+\section{Evolution by gene duplications and altered regulatory
+environments}\label{evolution-by-gene-duplications-and-altered-regulatory-environments}}
 
-The increased expression conservation of genes within TADs is somewhat
-consistent with a very recent study, in which promoter and enhancer
-activity was measured in liver samples from 15 species
-\citep{Berthelot2017}. In this study gene expression conservation could
-best be explained by the number and conservation of surrounding
-enhancers and promoters.
+However, the analysis of paralog regulation with respect to
+three-dimensional genome folding allows further conclusions about the
+evolutionary history of genes and how new functionality by novel genes
+is most efficiently created during evolution. Loss-of-function mutations
+degrade most young duplicated genes into pseudogenes \citep{Lynch2003}.
+These observations raise the question of which mechanisms led to the
+survival and expression of the many paralog genes present in the human
+genome. Some models explain the survival of paralogs by
+sub-functionalization, neo-functionalization or sharing of gene dosage
+\citep{Innan2010}. Our observation of co-regulated paralogs in the
+regulatory environments of TADs is consistent with a recent study of
+expression patterns between young and old paralogs \citep{Lan2016}. This
+study often finds one copy of young paralogs to be downregulated,
+indicating that dosage-sharing allows for initial survival of duplicated
+genes and slow functional adaption later on \citep{Lan2016}.
 
-In this thesis, I analysed the functions of TADs for gene regulation and
-highlight their stability in evolution as well as their consideration
-when analyzing genomic variations in patient genomes. - Paralog genes as
-model for co-regulation in TADs - enhancer sharing - co-expression
+The creation of paralogs by tandem duplication is an efficient
+evolutionary mechanism to introduce additional functionality to a genome
+by keeping the original gene unaffected. We observe that very close
+paralogs seems to have decreased Hi-C contacts between their promoters
+when located in the same TAD, but show enriched association to the same
+regulatory elements. This somewhat unexpected phenomenon can be
+explained by a subset of paralogs that functionally replace each other,
+for example as alternative units in protein complexes. This replacing
+functionality would require actively regulated exclusive expression of
+paralogs. Interestingly, a similar mechanism was reported for olfactory
+receptor genes that contact each other even across different chromosomes
+to facilitate particular expression of only a single receptor gene per
+cell \citep{Monahan2015, Monahan2017}.
 
-As consequence of these association of TADs with co-regulation, enhancer
-sharing and co-expression, we hypothesized TADs provide regulatory
-environments for genes and therefore be conserved during evolution. More
-specifically, we asked whether genomic rearrangement between related
-species would more frequently occur at TAD boundaries. Furthermore, we
-hypothesized that disruption of TADs during evolution might be
-associated with changes of gene expression programs between the species.
+The results of our analysis together with recent literature suggest a
+many-step mechanism of paralog evolution (Fig.
+\ref{fig:ParalogSeparation}). First, tandem duplications generate
+paralog genes, initially coregulated within TADs. Then subsequent
+chromosomal rearrangements might relocate paralogs to loci distant from
+their homologs but retain increased chromatin contacts. Further,
+reorganization of the regulatory environment allows their increased
+independence being eventually placed even on different chromosomes where
+contact is no longer necessary. An exception would be genes that precise
+to be strongly co-regulated with the original copy, for example, to
+produce replacement proteins.
 
-The analysis of genomic rearrangements between human and other species
-during evolution lead to the conclusion that TADs are important
-regulatory building blocks of genomes. Indeed the changes of expression
-profiles are associated with the disruption of TADs during evolution.
-This might likely lead to severe disadvantages to the organism, as was
-observed for example in genetic diseases
-\citep{Ibn-Salem2014, Lupianez2015} and cancers. Therefore, we interpret
-the depletion of evolutionary rearrangements in TADs and the expression
-change associated with TAD disruption to be a consequence of selective
-pressure on TAD structure. Therefore selective pressure is likely to act
-on TAD structures. While in neutral selection
+\begin{figure}
 
-\begin{itemize}
-\tightlist
-\item
-  Relate to GRBs and CNE clusters
-  \citep{Harmston2017, Polychronopoulos2017}
-\end{itemize}
+{\centering \includegraphics[width=0.8\linewidth]{figures/model_paralog_expansion} 
 
-The majority of disease-associated variants uncovered by genome-wide
-association studies (GWAS) reside in noncoding sequences. Many variants
-are located near cis-regulatory sequences and enhancers and could,
-therefore, contribute to pathogenesis by affecting transcription of
-specific genes \citep{Hindorff2009}. The ability to measure long-range
-chromatin interactions makes it possible to assign understand the role
+}
+
+\caption{\textbf{Model of paralog gene creation in TADs
+and evolving regulatory context and TADs over time.} Tandem-duplication
+accounts for the creation of most paralogs. Duplication within a TAD
+allows the new copy of the gene to be regulated by the same environment
+(top left). Over evolutionary time, the interactions pattern and
+regulatory input might change to allow for more independent expression
+regulation (top center). Evolutionary rearrangements might even relocate
+the genes to different chromosomes (top right). Alternatively, the two
+copies might stay in the same TAD to enable them to be coordinately
+regulated (bottom).}\label{fig:ParalogSeparation}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+Several mechanisms can explain the creation of new functionality and
+morphological diversity between species across evolution. A key
+component and driver for new gene function in evolution or
+neo-functionalization can be the birth of new enhancers through the
+acquisition of transcription factor binding and subsequent novel
+regulatory functions \citep{Long2016}. Similarly, deletion or
+duplication of TAD boundaries could change the folding structure of
+genomic regions and enable regulatory contacts with previously insulated
+regulatory elements \citep{Ibn-Salem2014, Lupianez2015, Franke2017}. In
+agreement with these mechanisms observed in genetic diseases, we find
+that evolutionary rearrangements disrupting TADs are associated with
+divergent gene expression patterns between mouse and human. These
+findings indicate an evolutionary mechanism by which structural
+variations lead to altered domain organization with associated
+expression changes. Expression in different tissues or developmental
+time points might enable novel functions and morphologies. One example
+of altered physiological morphologies upon structural variations is the
+Liebenberg Syndrom that is characterized by malformation of upper limbs,
+showing the characteristic bone morphology of hind-limbs
+\citep{Spielmann2012}. This syndrome is caused by deletions that disrupt
+a TAD boundary element or translocations. Bothe alternations expose the
+\emph{PITX1} gene to enhancers with specific lower-limb activity
+\citep{Spielmann2013a}. This example, together with other pathogenic
+phenotypes caused by TAD disruptions
+\citep{Lupianez2015, Franke2016, Flottmann2017}, shows that altered
+genome folding upon TAD disruption can potentially lead to physiological
+and morphological novelties during evolution.
+
+Together, our data suggest that TADs act as protective nests for
+evolving newcomer genes. Duplicating genes within TADs seems to be a
+reasonable evolutionary mechanism, much more straightforward than
+creating from nothing an entirely new regulatory environment for a new
+gene. Genetic variations that alter genome folding and expose genes to
+new regulatory environments can then create new functions of the gene by
+expression in different contexts leading to physiological or
+morphological novelties.
+
+\hypertarget{tads-are-stable-across-large-evolutionary-time-scales}{%
+\section{TADs are stable across large evolutionary
+time-scales}\label{tads-are-stable-across-large-evolutionary-time-scales}}
+
+In light of the regulatory functions of TADs, such as enhancer sharing
+and co-expression, we hypothesized that TADs provide essential
+regulatory environments for genes and are therefore conserved during
+evolution. More specifically, we asked whether genomic rearrangement
+between distantly related species would more frequently occur at TAD
+boundaries or within TAD regions. Furthermore, we hypothesized that
+disruption of TADs during evolution might be associated with changes in
+gene expression programs between the species.
+
+We find evolutionary rearrangements between distant vertebrate species
+highly enriched at TAD boundaries and depleted within TADs (Chapter
+\ref{TAD-evolution}). This is consistent with the enrichment of
+non-coding sequence conservation in TADs
+\citep{Harmston2017, Polychronopoulos2017}. Interestingly, another study
+investigated the requirement of the ultra-conserved non-coding regions
+containing enhancers by knock-out experiments in mice
+\citep{Dickel2018}. Knock-out mice that lack individual or combination
+of enhancers were viable but showed strong neurological phenotypes.
+These effects indicate that the remarkably strong sequence conservation,
+which is also found in TADs, likely results from fitness deficit upon
+mutations although they appear subtle in a laboratory setting
+\citep{Dickel2018}. Targeted deletions of strongly conserved TAD
+boundaries could result in similar effects, but this has to be
+demonstrated.
+
+Interestingly, genetic variation data across human populations revealed
+that loci in the same TAD have a reduced recombination rate
+\citep{Liu2016b}. Consistent with this finding, the linkage
+disequilibrium, which measures co-transmission of genetic variants in
+populations, correlates with Hi-C interaction frequencies
+\citep{Gerber2018}. This association indicates functional interactions
+between alleles in regulatory domains \citep{Liu2016b}.
+
+We observed enrichment for expression conservation for genes in TADs and
+even stronger for genes in conserved TADs. This is somewhat consistent
+with a recent study, analyzing promoter and enhancer activity in liver
+samples from 15 species \citep{Berthelot2017}. In this study gene
+expression conservation could be best explained by the number and
+conservation of surrounding enhancers and promoters.
+
+In summary, our analysis of genomic rearrangements between human and
+other species during evolution leads to the conclusion that TADs are
+essential regulatory building blocks of genomes. This is supported by
+strong enrichment for non-coding conservation in TADs
+\citep{Harmston2017}. Furthermore, changes of expression profiles are
+associated with the disruption of TADs during evolution. This altered
+regulation upon TAD disruption might be beneficial for an organism and
+allow evolutionary leaps (as discussed above). However, in most cases,
+these gene miss-expressions might be detrimental to an organism, as was
+observed in genetic diseases and cancers (as discussed below).
+Therefore, we interpret the depletion of evolutionary rearrangements in
+TADs and the expression change associated with TAD disruption to be a
+consequence of selective pressure on TAD structures.
+
+\hypertarget{TAD-disease}{%
+\section{Gene expression changes by altered TADs in
+disease}\label{TAD-disease}}
+
+The functional importance of TADs is supported by their stability during
+evolution. However, if TADs are indeed crucial for proper gene
+regulation during development, one would expect that TAD disruptions are
+associated with disease and lead to phenotypes by dysregulation of
+phenotypically relevant genes.
+
+We analyzed balanced chromosomal rearrangements in 17 subjects with
+diverse pathogenic phenotypes (Chapter \ref{position-effect}). The
+rearrangement breakpoints are in non-coding regions but frequently
+disrupt TADs. Furthermore, we reported disruption of long-range
+chromatin interactions between several enhancers and genes whose
+annotated clinical features are strongly associated with the subjects
+phenotypes. For some candidate genes, we confirm gene expression changes
+in cell lines derived from subjects with such rearrangements. These
+detrimental effects of rearrangements in disease genomes are consistent
+with our comparative genomic analysis, finding selective pressure on TAD
+disruptions.
+
+The causal relationship between TAD disruption, miss-expression and
+pathogenic phenotypes has been studied recently in more detail (reviewed
+for example in \citet{Krijger2016}; \citet{Achinger-Kawecka2017};
+\citet{Yu2017}; \citet{Andrey2017}). In these studies, the authors
+linked observed pathogenic phenotypes of congenital diseases and cancers
+to structural variations identified in the subjects genomes. The
+observed phenotypes could not be explained, when only the disruption of
+protein-coding sequence or gene dosage was considered. However, when
+considering the genome folding structure and TADs together with enhancer
+activity, the pathogenic effect mechanism became apparent.
+
+Deletions of TAD boundaries can lead to ectopic activation of genes by
+enhancers in neighboring TADs (Fig. \ref{fig:TadDisruptions}A). This
+effect mechanism was first shown to be relevant by computationally
+integrating hundreds of deletions with tissue-specific enhancers,
+phenotype-gene associations, and TAD positions \citep{Ibn-Salem2014}.
+Such an enhancer adaption mechanism could best explain a significant
+proportion of deletion cases.
+
+The development of CRISPR-derived methodologies allows validating
+miss-expression due to ectopic contacts by experimentally induced
+structural variants in mice \citep{Kraft2015, Andrey2017}. These
+approaches could experimentally validate that deletion of the
+centromeric or telomeric boundary of a TAD containing the \emph{EPHA4}
+gene causes activation of \emph{IHH} or \emph{PAX}, leading to
+brachydactyly or polydactyly, respectively \citep{Lupianez2015}.
+Interestingly and in line with the insulating function of TAD
+boundaries, introducing a slightly shorter deletion, that did not
+overlap the TAD boundary, did not cause up-regulation
+\citep{Lupianez2015}. Other examples include the locus of the
+\emph{LMNB1} gene \citep{Giorgio2015}. Deletion of a TAD boundary
+upstream of \emph{LMNB1} result in ectopic contact of enhancers with the
+\emph{LMNB1} promoter, and overexpression of \emph{LMNB1}. This
+pathomechanism leads to autosomal dominant adult-onset demyelinating
+leukodystrophy \citep{Giorgio2015}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figures/Andrey2017_Fig5} 
+
+}
+
+\caption{\textbf{Structural variants can affect TAD
+structure and enhancer-promoter interactions.} Structural variants can
+induce ectopic increase or loss of gene expression leading to disease.
+Here, topologically associating domains (TADs) are represented by shaded
+triangles, genes by gray blocks, and enhancers by colored ovals. Gene
+expression patterns are driven by enhancers in E10.5 mouse embryos are
+shown. A representative chromatin configuration is shown above the TADs.
+\textbf{(A)} In the wild-type chromatin conformation, Enhancer C (E-C)
+controls Gene 3 (G-3) in the neural tube. \textbf{(B)} The deletion of a
+TAD boundary element leads to ectopic contact between Enhancer C (E-C)
+and gene 1 (G-1) (red arrow), which results in the ectopic expression of
+Gene 1 in the neural tube. \textbf{(C)} In the case of a rearrangement
+through an inversion (blue arrows) or translocation that leads to the
+repositioning of functional elements, Enhancer C (E-C) from a
+neighboring TAD is free to activate Gene 1 (G-1), resulting in the
+ectopic expression of Gene 1 in the neural tube. The inversion also
+leaves Enhancer C insulated from its native target Gene 3 (G-3) by a
+boundary, resulting in the loss of Gene 3 expression in the neural tube.
+\textbf{(D)} The duplication of a region allows a new chromatin domain
+(a neo-TAD; green triangle) to form that contains regulatory region(s)
+and gene(s), which produce new expression patterns. Here, the duplicated
+Enhancer C′ (E-C′) and Gene 2′ (G-2′), which both locate to the
+insulated neo-TAD, produce the ectopic expression of Gene 2′ in the
+neural tube. Figure and figure caption adapted from \citep{Andrey2017}.}\label{fig:TadDisruptions}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Depending on their size and positioning, also duplications can bring
+enhancers into contact with gene promoters, which were before separated
+by a TAD boundary (Fig. \ref{fig:TadDisruptions}D). Duplications
+involving no regulatory elements and contained entirely within a TAD
+(intra-TAD) have in general no major effect on genes in the same TAD, as
+enhancer-promoter contacts are mainly invariant of genomic distance
+within TADs \citep{Symmons2016}. This lack of regulatory phenotype can
+also explain why paralog genes are often created by tandem-duplications
+within TADs during evolution without affecting the regulatory
+environments of other genes (Chapter \ref{paralog-regulation}). However,
+when an intra-TAD duplication contains regulatory environments with
+several enhancers, increased regulatory inputs can lead to
+over-expression. This mechanism leads, for example, to upregulation of
+the \emph{SOX9} gene and, in turn, causes female to male sex reversal
+\citep{Franke2016}. However, further extension of the duplication at the
+\emph{SOX9} locus, encompassing a TAD boundary and the nearby
+\emph{KCN72} gene, leads to the formation of a new TAD, called neo-TAD.
+Since both, \emph{SOX9} enhancers and the \emph{KCN72} gene are included
+in the duplicated regions, \emph{KCN72} gets activated by the
+\emph{SOX9} enhancers leading to Cooks syndrome \citep{Franke2016}.
+
+Beside deletions and duplications, balanced chromosomal abnormalities
+(BCA) like inversion or translocation can disrupt TADs and lead to
+similar effect mechanism without gain or loss of genetic material.
+Inversions of TAD boundaries can bring promoters under the control of an
+enhancer, that was before in different TADs (Fig.
+\ref{fig:TadDisruptions}C). Such a mechanism leads for example to
+F-syndrome, where inversion of the centromeric boundary of the
+\emph{EPHA4} TAD cause activation of the \emph{WNT6} gene
+\citep{Lupianez2015}. Another recent study analyzed BCAs in 273 subjects
+with a spectrum of congenital abnormalities and find 7.3\% of them
+disrupting TADs encompassing known syndromic loci. Eight rearrangement
+breakpoints were localized in a single TAD containing the \emph{MEF2C}
+gene and resulted in decreased expression of \emph{MEF2C} in these
+subjects \citep{Redin2017}.
+
+Also, somatic mutation can disrupt TAD boundaries and lead to cancers.
+For example, in T-cell acute lymphoblastic leukemia, two oncogenes,
+\emph{TAL1} and \emph{LMO2} are close to a TAD boundary and get
+activated upon boundary deletion in HEK-293T cells \citep{Hnisz2016}.
+Furthermore, in \emph{IDH} mutant gliomas, TET proteins, which are
+involved in active demethylation, are repressed. This effect leads to
+hypermethylation of several CTCF binding sites and, in turn, decreased
+insulation functions of TAD boundaries. This result in ectopic contact
+of constitutively active enhancers and the oncogene \emph{PDGFRA}
+leading to its upregulation \citep{Flavahan2016}. In conjunction with
+these findings, CTCF and cohesin binding sites are frequently mutated by
+single nucleotide variants in several cancer types, suggesting oncogene
+activation by TAD disruptions as a common mechanism in cancers
+\citep{Katainen2015, Yu2017}.
+
+Together, these studies confirm our findings of computationally
+predicted pathomechanism of TAD disruptions upon deletions
+\citep{Ibn-Salem2014} or balanced rearrangements (Chapter
+\ref{position-effect}). TAD disruptions can lead to miss-expression not
+only during evolution but also in disease manifestation. Therefore, it
+will be increasingly important to take the three-dimensional genome
+folding structure into account to interpret the effect of genetic
+variants.
+
+\hypertarget{towards-predicting-regulatory-pathomechanisms-of-structural-variants}{%
+\section{Towards predicting regulatory pathomechanisms of structural
+variants}\label{towards-predicting-regulatory-pathomechanisms-of-structural-variants}}
+
+Structural variation, either inherited or arising from de novo germline
+or somatic mutations, make up the majority of different nucleotides
+among human genomes \citep{Sudmant2015, Auton2015}. By their ability to
+alter gene dosage, promote gene fusions, unmask recessive alleles, or
+disrupt associations between genes and their regulatory elements,
+structural variants are involved in numerous congenital syndromes and
+cancers \citep{Stankiewicz2010}. However, many structural variants
+affect only non-coding regions in the genome and are therefore difficult
+to interpret in modern molecular diagnoses.
+
+In several syndromes, structural variants disrupt TADs and rewire
+regulatory interactions between enhancers and genes (Section
+\ref{TAD-disease}). These effects suggest that molecular diagnoses can
+benefit from taking the genome folding structure into account to
+identify the underlying pathogenic effect mechanism.
+
+In this thesis (Chapter \ref{position-effect}) and previous work
+\citep{Ibn-Salem2014}, we demonstrated how publicly available chromatin
+interaction data could be used together with diverse genomic and
+structured phenotype data to predict regulatory effect mechanism and
+candidate genes. We discovered 16 genes for 11 DGAP cases that are
+top-ranking position effect candidates for the subjects' clinical
+phenotypes. Importantly, we also applied our computational pipeline to
+cases with known pathogenic genes from the DGAP cohort, and correctly
+prediction 52 out of 57 genes, indicating a high sensitivity of this
+approach. While our approach cannot prove causal relationships, compared
+to more elaborate experimental screenings, our computational analysis is
+rapid and can provide additional information to benefit the clinical
+assessment of both coding and non-coding genome variants. Therefore,
+cost-efficient analysis by computational integration of genomic and
+phenotypic data is a crucial step towards prediction of pathogenic
+consequences of genetic variation observed in prenatal samples.
+
+However, the here presented computational prediction method is limited
+by the quality of genomic and phenotypic data. An essential step in our
+analysis was the quantification of phenotype similarities between
+phenotypes annotated to genes, on the one hand, and phenotypes observed
+in the subject, on the other hand. Such prioritization of candidate
+genes was only possible through detailed phenotypic annotation data of
+subjects using the Human Phenotype Ontology (HPO). The HPO provides a
+standardized vocabulary of phenotypic abnormalities encountered in human
+disease and relations between them. Furthermore, HPO links phenotype
+terms to genes using data from mono-genic diseases \citep{Kohler2014}.
+The brought application of such deeply structured phenotypic information
+will be essential for correctly interpreting genomic variants causing
+individual abnormalities observed in heterogeneous patient cohorts
+\citep{Brookes2015}. While the continuously decreasing sequencing costs
+allow variant detection at high-resolution in large cohorts and
+populations, the detailed and precise phenotypical annotation is lacking
+often behind. Therefore, standardized vocabularies of phenotypes and
+electronic health records need to become the standard in clinical
+practice.
+
+The crucial implications of genome folding structure on the influence of
+genetic variants highlight the importance of taking genome folding data
+into account in clinical practice. However, an apparent limitation in
+predicting the effect of genetic variants on genome folding is the lack
+of high-resolution chromatin interaction data that is specific for the
+tissue of interest. While TAD boundaries are mostly stable between
+cell-types \citep{Dixon2012, Rao2014, Schmitt2016} and during
+differentiation \citep{Dixon2015}, many regulatory interactions are cell
+type-specific \citep{LeDily2014, Dixon2015}. This tissue-specificity
+raises the question of whether chromatin interaction data from different
+tissues can be used to predict regulatory interactions changes in the
+cell-types and tissues relevant for pathogenesis. Although genome-wide
+contact maps become increasingly available in recent years, high
+heterogeneity between proximity-ligation methods makes it challenging to
+train prediction methods on data across different studies. Therefore, it
+will be crucial to computationally predict long-range interaction in the
+tissue of interest from other tissue-specific genomic data that is
+measured along the linear genome.
+
+Another critical challenge is to predict not only the disrupted
+chromatin interactions but also gained interactions and resulting domain
+organization. Similar to the creation of neo-TADs by tandem-duplication
+of TAD boundaries, inversion and translocations can create novel folding
+structures by connecting loci that were before separated by TAD
+boundaries or even on different chromosomes (Fig.
+\ref{fig:TadDisruptions}. However, which regions in such fused TADs
+interact across rearrangement breakpoints is not clear and can currently
+only be measured experimentally in transgenic mouse models.
+Computational models that predict long-range interactions from genomic
+sequence could help here. A prediction model could be trained on the
+unaffected genome to learn the sequence features that are predictive for
+its folding. Application of the model to genomic sequence that is
+altered by structural variations can then predict the resulting folding
+structure. Such predictive modeling can help to understand better if and
+how new TADs are formed and which regulatory interactions are gained
+upon structural variations. We provide initial support for such an
+approach by developing 7C to predict chromatin looping interactions from
+protein binding data and genomic sequence features (Chapter \ref{loop}).
+Approaches like these, allow predicting genome folding by taking into
+account, both, the tissue specificity and the potentially altered
+genomic sequence. However, the application in predicting folding of
+rearranged genomes needs to be demonstrated.
+
+\hypertarget{towards-studying-genome-folding-in-specific-conditions}{%
+\section{Towards studying genome folding in specific
+conditions}\label{towards-studying-genome-folding-in-specific-conditions}}
+
+Understanding the variability of genome folding across cell-types and
+conditions is a key challenge faced by ongoing and future genomic
+research \citep{Yu2017}. It becomes increasingly clear that
+condition-specific long-range interaction data is needed to (i)
+associate non-coding variants to affected target genes, (ii) associate
+TF binding sites and enhancers to genes, (iii) understand the
+variability of long-range contacts across individuals and (iv) reveal
+the contribution of single cells to folding structures observed for cell
+populations. How computational modeling and targeted experimental
+approaches can address these questions is discussed below.
+
+\hypertarget{interpretation-of-non-coding-variants-by-interacting-genes}{%
+\subsection{Interpretation of non-coding variants by interacting
+genes}\label{interpretation-of-non-coding-variants-by-interacting-genes}}
+
+The majority of disease-associated single nucleotide variants uncovered
+by genome-wide association studies (GWAS) reside in non-coding
+sequences. Many variants are located near cis-regulatory sequences and
+enhancers and could, therefore, contribute to pathogenesis by affecting
+transcription of specific genes \citep{Hindorff2009}. The ability to
+measure long-range chromatin interactions allows understanding the role
 of non-coding variants by predicting its interacting target gene
-\citep{Smemo2014, Visser2012}. This has been shown by measuring the
-interactions of promoters in 17 human primary hematopoietic cells types
-revealing more than 2,400 potential disease-associated genes liked to
-thousands of GWAS SNPs \citep{Javierre2016}. In another study, the
-noncoding variants associated with schizophrenia could be annotated
-using Hi-C contact maps from human cerebral cortex \citep{Won2016}.
+\citep{Smemo2014, Visser2012}. This has been demonstrated by measuring
+the interactions of promoters in 17 human primary hematopoietic cells
+types, revealing more than 2,400 potential disease-associated genes
+liked to thousands of GWAS variants \citep{Javierre2016}. In another
+study, the non-coding variants associated with schizophrenia could be
+annotated using Hi-C contact maps from human cerebral cortex
+\citep{Won2016}. These studies demonstrate how tissue-specific genome
+folding information can help to interpret not only structural variants
+but also single nucleotide variants. Furthermore, these examples
+highlight the need for tissue-specific interaction maps. While
+proximity-ligation experiments are still costly and time-intensive to
+produce for each tissue or individual of interest, computational
+predictions of such interactions from ChIP-seq and motif data will
+likely become and fast and accurate alternative in such studies.
 
-\hypertarget{further-directions}{%
-\section{Further directions}\label{further-directions}}
+\hypertarget{cell-type-specific-regulatory-interactions-between-enhancers-and-genes}{%
+\subsection{Cell type-specific regulatory interactions between enhancers
+and
+genes}\label{cell-type-specific-regulatory-interactions-between-enhancers-and-genes}}
 
-\begin{itemize}
-\tightlist
-\item
-  Plasticity and dynamics of chromatin interactions
-\item
-  Single cell resolution
+Studying the function of, and genes regulated by, transcription factors
+(TF) is challenging by their ability to not only bind to promoters, but
+also to distal sites in the genome. To link these binding sites to
+regulated genes requires chromatin looping information for the specific
+tissue of interest. While TADs seems to be mostly stable across
+different cell types \citep{Dixon2012} and during differentiation
+\citep{Dixon2015}, individual interactions of distal TF binding sites or
+enhancers with their regulated target gene occur in cell-type or
+condition-specific manner \citep{Bonev2016, Andrey2017}. Enhancers are
+often located several hundred kb apart from their gene promoter, and
+most enhancers do not regulate the nearest gene \citep{Sanyal2012}.
+Therefore, tissue and condition-specific interactions of regulatory
+elements with genes are essential to predict gene-regulatory events
+correctly. Since many enhancer-gene interactions appear to be in
+enclosed CTCF loops \citep{Hnisz2016a}, our prediction tool 7C can be
+used to predict such interactions by taking condition specific signals
+such as ChIP-seq as input. Therefore, 7C can improve condition-specific
+association of TF binding events to regulated target genes.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Single cell Hi-C studies: \citep{Nagano2017, Stevens2017}
-  \item
-    Computational modelling of single cells \citep{Sekelja2016}.
-  \end{itemize}
-\item
-  Functional mechanism
-\item
-  Establishment of compartments / TADs / loops
-\item
-  Regulation of compartment / TADs / loops
-\end{itemize}
+\hypertarget{variability-of-long-range-interactions-across-individuals}{%
+\subsection{Variability of long-range interactions across
+individuals}\label{variability-of-long-range-interactions-across-individuals}}
+
+Interestingly, initial studies start to analyze the variability of
+epigenetic marks by ChIP-seq of histone modifications across individuals
+\citep{Grubert2015, Waszak2015}. The variability of histone marks
+correlates with single nucleotide variants. These histone quantitative
+trait loci (hQTLs) cluster in TADs. However, it is not clear yet, how
+TADs or individual loops vary across individuals. Therefore, predictive
+modeling approaches like 7C could fill this gap to analyze the
+variability of chromatin looping contacts cross individuals. When
+combined with SNP data from the same individuals, one could potentially
+correlate genetic variants and loop variations across individuals to
+find loop quantitative trait loci (lQTLs).
+
+\hypertarget{single-cell}{%
+\subsection{Genome folding in single cells}\label{single-cell}}
+
+In contrast to imaging-based methods, genome-wide proximity-ligation
+experiments such as Hi-C and ChIA-PET measure chromatin contacts in cell
+populations. This limitation raises the question whether observed
+structures like A/B compartments, TADs, or loops appear only stable in a
+subset of cells or appear from variable contacts in every single cell.
+Recently the Hi-C protocol has been adapted to measure contacts in
+single cells \citep{Sekelja2016, Ulianov2017}. A/B compartment structure
+has been confirmed by imaging methods on single chromosomes
+\citep{Wang2016d}. TADs were also observed in single-cell Hi-C data
+\citep{Nagano2013}. However, imaging and single-cell Hi-C studies have
+illustrated significant cell-to-cell variability regarding 3D genome
+organization \citep{Nagano2013, Ramani2016, Flyamer2017, Stevens2017}.
+Accordingly, TADs seem to emerge from cell population averages and do
+not exist as static structures in individual cells. However, it is
+unclear how this variability relates to gene regulation in single cells.
+It will be an exciting future challenge to improve experimental
+protocols by separating RNA from chromatin in individual cells in a way
+to measure from the same cell both, gene expression and genome folding
+by single-cell RNA-seq and single-cell Hi-C, respectively.
+
+Given the sparsity of coverage in current single-cell protocols
+\citep{Nagano2013, Flyamer2017, Stevens2017}, it would be interesting to
+computationally predict single cell structures from other genomic data
+measured along the linear genome in individual cells, such as
+transcription. Although single-cell ChIP-seq is published
+\citep{Rotem2015}, ChIP-seq needs a lot of sample material as input.
+Therefore, it will be challenging to produce TF binding profiles in
+single cells with high coverage. However, thanks to single-cell ATAC-seq
+\citep{Buenrostro2015}, prediction approaches like 7C could use
+chromatin accessibility data from single cells to predict variability in
+looping interactions across single cells.
+
+\hypertarget{constantly-improving-targeted-experimental-methods.}{%
+\subsection{Constantly improving targeted experimental
+methods.}\label{constantly-improving-targeted-experimental-methods.}}
+
+While 7C archives high prediction performance (Chapter \ref{loop}), due
+to its need for parameter training, it can only be as good as the
+quality of experimental methods. Currently, high-resolution Hi-C and
+ChIA-PET can be considered as gold standard for CTCF mediated long-range
+interactions \citep{Rao2014, Tang2015}. However, from the recent
+literature, it becomes clear, that there will be a continuously
+increasing development of experimental methods to probe interactions in
+a more efficient and targeted way
+\citep{Denker2016, Schmitt2016, Davies2017}. Beside the first generation
+of genome-wide 3C methods, like Hi-C and ChIA-PET (see section
+\ref{proximity-ligation}), more recent experimental developments improve
+resolution and efficiency by often capturing only a specific subset of
+interest among all interactions. These methods include, for example, TCC
+\citep{Kalhor2011}, Capture-Hi-C \citep{Dryden2014}, Capture-C
+\citep{Hughes2014}, HiCap \citep{Sahlen2015}, NG Capture-C
+\citep{Davies2016}, HiChIP \citep{Mumbach2016}, or T2C
+\citep{Kolovos2018}. These methodological advances together with
+appropriate computational analysis will enable analysis of the
+plasticity and dynamics of chromatin interactions across diverse
+conditions.
+
+\hypertarget{molecular-mechanisms-driving-genome-folding}{%
+\section{Molecular mechanisms driving genome
+folding}\label{molecular-mechanisms-driving-genome-folding}}
+
+A strong focus of current research in the field of three-dimensional
+chromatin architecture is to understand the molecular mechanism behind
+the formation of chromatin loops and TADs. It is not clear how molecular
+interactions between proteins at the nanometer scale organize
+micron-long protein-bound DNA molecules and how TAD formation can lead
+to insulating or facilitating of interactions between specific genomic
+elements \citep{Fudenberg2018}. Enrichment of CTCF at TAD boundaries,
+the convergent orientation of CTCF motifs in chromatin loops, as well
+as, extensive polymer modeling result in the loop extrusion model
+(Section \ref{loop-mechanism}). According to this model, loops and TADs
+are formed by active extrusion of chromatin through a loop-extruding
+molecule, which was suggested to be cohesin. Thereby, barrier elements,
+such as CTCF can arrest the extrusion and lead to stable loops. Multiple
+further extrusion processes within such loops can explain TAD like
+structures in Hi-C \citep{Fudenberg2016}. It is however not entirely
+clear which molecular forces could drive this extrusion process.
+Interestingly, active transcription was suggested to be involved in
+chromatin organization and TAD formation
+\citep{Ulianov2015, Rowley2017}. However, transcription and passive
+diffusion of cohesin might are likely to slow \citep{Barrington2017}.
+Active translocations of cohesin by some motor forces are more likely to
+explain the somewhat rapid formation of loops by extrusion
+\citep{Rao2017}.
+
+While cohesin and CTCF are the best studied architectural proteins, it
+is not clear which other factors might drive loop formation by extrusion
+or other processes. Using our loop prediction tool 7C, we could screen
+ChIP-seq datasets from 124 different TF to quantify the ability of the
+TF binding signals to predict chromatin looping events. Interestingly,
+we could confirm the implication of many known architectural proteins,
+such as CTCF, ZNF143, and the subunits of cohesin RAD21 and SMC3. These
+findings are largely consistent with recent perturbation studies that
+analyze the effect of cohesin or CTCF depletion or knock-out on genome
+folding. Removal of cohesin and deletion of the cohesin-loading factor
+Nipbl lead to global loss of loops and TADs
+\citep{Rao2017, Schwarzer2017}. Also, depletion of CTCF in embryonal
+stem cells leads to loss of loops and TADs and impacts transcriptional
+regulation \citep{Nora2017}. Interestingly, the formation of A/B
+compartments seems not to be affected by CTCF depletion \citep{Nora2017}
+and even increased upon cohesin knock out \citep{Schwarzer2017},
+indicating an independent mechanism for loop formation and
+compartmentalization. Since A/B compartments correlation strongly with
+epigenetic marks \citep{Fortin2015, DiPierro2017, Prakash2017}, a
+mechanism similar to phase separation might drive compartmentalization.
+Also, imaging-based data from \emph{Drosophila} suggest the formation of
+heterochromatin domains by phase separation \citep{Strom2017}. Polymer
+modeling and Hi-C data in rod photoreceptor neurons, which have inverted
+nuclei, confirm that heterochromatin drives the compartmental
+organization in both, inverted and conventional, nuclei
+\citep{Falk2018}.
+
+Together, these studies point to an essential role of architectural
+proteins, such as CTCF and cohesin, in forming loops and domains, while
+clustering of epigenetic marks by a process similar to phase-separation
+might case the A/B compartment formation. Future studies are needed to
+confirm the role of other architectural proteins as well as the causal
+relationship between heterochromatin and compartmentalization.
+
+Multidisciplinary studies combing imaging and genome-wide
+proximity-ligation methods with computational modeling are needed to
+better understand the complexity of three-dimensional genome folding and
+gene regulation. Large collaborative projects, such as the 4D Nucleosome
+projects \citep{Dekker2017a}, will provide new standards and improved
+methods. These efforts, as well as many independent studies, are
+promising to improve our understanding of three-dimensional genome
+folding in different species as well as its regulation and dynamics
+during cell-cycle, evolution, in development and disease.
 
 \hypertarget{conclusions}{%
 \section{Conclusions}\label{conclusions}}
 
-Recent methodological advances in chromatin conformation capture
-experiments resulted in genome-wide contact maps of genomes. These data
-lead to many interesting insights in the folding structures of genomes.
-One important discovery was that chromosomes fold locally into discreet
-genomic domains, called TADs.
+Recent methodological advances in capturing the conformation of
+chromosomes resulted in genome-wide chromatin contact maps. These data
+lead to many fascinating insights into the folding structures of
+genomes. One important discovery was that chromosomes fold locally into
+discreet genomic domains, called TADs.
 
-In this thesis, I showed that TADs are not only structural units of
-genomes, but that they are also functionally important for the correct
-regulation of gene expression. TADs represent regulatory environment
-that restrict the interaction landscape of enhancers. Indeed,
-functionally related genes, such as paralogs, are co-regulated within
-TADs. During evolution, new genes can emerge by duplication and find
-established regulatory environments within TADs. Therefore, TADs
-represent productive nests for novel genes in evolution. The functional
-important of TADs was further stressed by their stability during hundred
-million years of evolution. Indeed stable TADs are associated with
-conserved expression profiles of genes.
+The work described in this thesis shows that TADs are not only
+structural units of genomes but that they are also functionally
+important for the correct regulation of gene expression. TADs represent
+a regulatory environment that restricts the interaction landscape of
+enhancers and genes. Indeed, functionally related genes, such as
+paralogs, are co-regulated within TADs. During evolution, new genes can
+emerge by duplication and find established regulatory environments
+within TADs. Therefore, TADs represent productive nests for novel genes
+in evolution. Consistently, TADs are conserved across million years of
+evolution. Furthermore, stable TADs are associated with conserved
+expression profiles of genes.
 
-Disruption of TADs by rearrangements is associated to changes of gene
+Disruption of TADs by rearrangements is associated with changes in gene
 expression profiles during evolution as well as in genomes of subjects
-with developmental diseases. While these disruptions of TADs might be
-beneficial for an organism and lead to evolutionary leaps in some cases,
-I showed in disease genomes, that disruption of TADs can result in
-severe phenotypes like mental retardation. Therefore, the
-three-dimensonal folding structure of genomes, including TADs and
-enhancer-promoter interactions have to be considered for the
-interpretation of genomic variants of patient genomes.
+with neurodevelopmental syndromes. While these disruptions of TADs might
+be beneficial for an organism and lead to evolutionary leaps in some
+cases, we show in disease genomes, that disruptions of TADs can result
+in pathological phenotypes. Therefore, the three-dimensional folding
+structure of genomes, including TADs and enhancer-promoter interactions
+has to be considered for the interpretation of genomic variants of
+patient genomes.
 
-While constantly decreasing costs of sequencing will further enable the
+While continually decreasing costs of sequencing will further enable the
 analysis of individual genomes in many genetic syndromes or cancers, it
-will be increasingly important to correctly interpret these variants
-within their functional genomic context. To this end, we need a deeper
+will be increasingly important to interpret these variants within their
+functional genomic context correctly. To this end, we need a deeper
 understanding of the functional role of genome folding including its
 dynamics between single cells as well as its changes in specific cell
 types and conditions. To integrate diverse types of functional data that
-is measured along the genomes with the chromatin folding patterns and
-their interplay, we need carefully designed computational models. This
-will address not only fundamental questions such as evolution of
-genomes, mechanisms of gene regulation in differentiation and
-development, but also solve practical problems such as the
-interpretation of genetic variants in disease genomes for better
-developments of diagnosis and treatments.
+is measured along the linear genomes with three-dimensional chromatin
+folding patterns and their interplay, we need carefully designed
+computational methods. These approaches will address not only
+fundamental questions such as the evolution of genomes, mechanisms of
+gene regulation in differentiation and development but also solve
+practical problems such as the interpretation of genetic variants in
+disease genomes for better molecular diagnosis and treatment
+developments.
+
+\hypertarget{refs}{}
 
 \hypertarget{appendix-appendix}{%
 \appendix}
 
 
 \hypertarget{sup-paralog-regulation}{%
-\chapter{Co-regulation of paralog genes: Supporting
-Information}\label{sup-paralog-regulation}}
+\chapter{Supporting Information: Co-regulation of paralog
+genes}\label{sup-paralog-regulation}}
 
 \begin{figure}
 
@@ -5598,8 +6350,8 @@ database \citep{Schaefer2012}.}\label{fig:PPI}
 
 
 \hypertarget{sup-tad-evolution}{%
-\chapter{TAD evolution: Supporting
-Information}\label{sup-tad-evolution}}
+\chapter{Supplementary Data: Stability of TADs in
+evolution}\label{sup-tad-evolution}}
 
 \hypertarget{TadEvoSupTab}{%
 \section{Supplementary Tables}\label{TadEvoSupTab}}
@@ -5664,11 +6416,14 @@ domain boundary. P-values according to Wilcoxon's rank-sum test.}\label{fig:TadE
 
 
 \hypertarget{sup-position-effect}{%
-\chapter{Position Effect: Supplemental Data}\label{sup-position-effect}}
+\chapter{Supplemental Data: Position effects of rearrangements in
+disease genomes}\label{sup-position-effect}}
 
-\hypertarget{supplemental-note-case-reports}{%
-\section{Supplemental Note: Case
-Reports}\label{supplemental-note-case-reports}}
+\hypertarget{supplemental-note}{%
+\section{Supplemental Note}\label{supplemental-note}}
+
+\hypertarget{case-reports}{%
+\subsection{Case Reports}\label{case-reports}}
 
 \textbf{DGAP017}
 
@@ -5907,9 +6662,9 @@ commands. She had a reported normal clinical CytoSure ISCA 8x60K v2.0
 microarray, although a paternally inherited 150 Kb deletion at 18q22.3
 from her phenotypically normal father was detected.
 
-\hypertarget{supplemental-note-nucleotide-level-nomenclature-for-dgap-karyotypes}{%
-\section{Supplemental Note: Nucleotide Level Nomenclature for DGAP
-karyotypes}\label{supplemental-note-nucleotide-level-nomenclature-for-dgap-karyotypes}}
+\hypertarget{nucleotide-level-nomenclature-for-dgap-karyotypes}{%
+\subsection{Nucleotide Level Nomenclature for DGAP
+karyotypes}\label{nucleotide-level-nomenclature-for-dgap-karyotypes}}
 
 Karyotypes of DGAP cases are described using a revised nomenclature that
 incorporates next-generation sequencing positions from Ordulu \emph{et
@@ -6251,8 +7006,9 @@ HGVS\_ng, HGVS\_p, Condition, Most severe clinical significance,
 Submitters, Highest review status and Last evaluated are provided for
 each overlap.
 
-\hypertarget{sup-loop}{%
-\chapter{Loop prediction: Supplemental Information}\label{sup-loop}}
+\hypertarget{loop-support}{%
+\chapter{Supplemental Information: Prediction of chromatin looping
+interactions}\label{loop-support}}
 
 \hypertarget{LoopPredSupTab}{%
 \section{Supplementary Tables}\label{LoopPredSupTab}}
@@ -6321,33 +7077,619 @@ best performing models.}\label{fig:LoopPredS1}
 \chapter{Contribution to individual
 publications}\label{contribution-to-individual-publications}}
 
-\begin{table}
-
-\caption{\label{tab:contribution}Contribution to individual publications. Contributions in percent from all authors for each contribution role and publication. Author contribution definitions according to the CRediT Taxonomy (http://journals.plos.org/plosone/s/authorship).}
-\centering
-\begin{tabular}[t]{llrrrr}
+\begin{longtable}[]{@{}lllll@{}}
+\caption{\label{tab:contribution} \textbf{Contributions to individual
+publications}. Contributions in percent from all authors for each
+contribution role and publication. Author contribution definitions
+according to the CRediT Taxonomy
+(\url{http://journals.plos.org/plosone/s/authorship}).}\tabularnewline
 \toprule
-Contributor Role & Role Definition & Paralog regulation (Chapter \textbackslash{}@ref(paralog-regulation)) & TAD evolution (Chapter \textbackslash{}@ref(TAD-evolution)) & Position effect (Chapter \textbackslash{}@ref(position-effect)) & Loop prediction (Chapter \textbackslash{}@ref(loop))\\
+\begin{minipage}[b]{0.49\columnwidth}\raggedright
+\textbf{Contributor Role:} Role Definition (according to CRediT
+Taxonomy)\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright
+Chapter \ref{paralog-regulation}\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright
+Chapter \ref{TAD-evolution}\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright
+Chapter \ref{position-effect}\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
+Chapter \ref{loop}\strut
+\end{minipage}\tabularnewline
 \midrule
-Conceptualization & Ideas; formulation or evolution of overarching research goals and aims. & 80 & 90 & 20 & 90\\
-Data Curation & Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later reuse. & 100 & 80 & 50 & 100\\
-Formal Analysis & Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data. & 100 & 50 & 40 & 100\\
-Funding Acquisition & Acquisition of the financial support for the project leading to this publication. & 0 & 0 & 0 & 0\\
-Investigation & Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection. & 100 & 80 & 20 & 100\\
-\addlinespace
-Methodology & Development or design of methodology; creation of models & 90 & 80 & 30 & 100\\
-Project Administration & Management and coordination responsibility for the research activity planning and execution. & 50 & 80 & 0 & 80\\
-Resources & Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools. & 0 & 20 & 0 & 0\\
-Software & Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components. & 100 & 50 & 50 & 100\\
-Supervision & Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team. & 0 & 80 & 0 & 0\\
-\addlinespace
-Validation & Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs. & 100 & 80 & 20 & 100\\
-Visualization & Preparation, creation and/or presentation of the published work, specifically visualization/data presentation. & 100 & 50 & 0 & 100\\
-Writing – Original Draft Preparation & Creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation). & 100 & 60 & 20 & 100\\
-Writing – Review \& Editing & Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages. & 50 & 80 & 20 & 50\\
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.49\columnwidth}\raggedright
+\textbf{Contributor Role:} Role Definition (according to CRediT
+Taxonomy)\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright
+Chapter \ref{paralog-regulation}\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright
+Chapter \ref{TAD-evolution}\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright
+Chapter \ref{position-effect}\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
+Chapter \ref{loop}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Conceptualization:} Ideas; formulation or evolution of
+overarching research goals and aims.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+90\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+90\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Data Curation:} Management activities to annotate (produce
+metadata), scrub data and maintain research data (including software
+code, where it is necessary for interpreting the data itself) for
+initial use and later reuse.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Formal Analysis:} Application of statistical, mathematical,
+computational, or other formal techniques to analyze or synthesize study
+data.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Funding Acquisition:} Acquisition of the financial support for
+the project leading to this publication.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Investigation:} Conducting a research and investigation process,
+specifically performing the experiments, or data/evidence
+collection.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Methodology:} Development or design of methodology; creation of
+models\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+90\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Project Administration:} Management and coordination
+responsibility for the research activity planning and execution.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Resources:} Provision of study materials, reagents, materials,
+patients, laboratory samples, animals, instrumentation, computing
+resources, or other analysis tools.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Software:} Programming, software development; designing computer
+programs; implementation of the computer code and supporting algorithms;
+testing of existing code components.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Supervision:} Oversight and leadership responsibility for the
+research activity planning and execution, including mentorship external
+to the core team.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Validation:} Verification, whether as a part of the activity or
+separate, of the overall replication/reproducibility of
+results/experiments and other research outputs.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Visualization:} Preparation, creation and/or presentation of the
+published work, specifically visualization/data presentation.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Writing -- Original Draft Preparation:} Creation and/or
+presentation of the published work, specifically writing the initial
+draft (including substantive translation).\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+70\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.49\columnwidth}\raggedright
+\textbf{Writing -- Review \& Editing:} Preparation, creation and/or
+presentation of the published work by those from the original research
+group, specifically critical review, commentary or revision -- including
+pre- or post-publication stages.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+50\strut
+\end{minipage}\tabularnewline
 \bottomrule
-\end{tabular}
-\end{table}
+\end{longtable}
+
+\hypertarget{zusammenfassung}{%
+\chapter*{Zusammenfassung}\label{zusammenfassung}}
+\addcontentsline{toc}{chapter}{Zusammenfassung}
+
+Im dreidimensionalen Zellkern ist das menschliche Genome hierarchisch
+gefaltet. Paarweise Chromatin Interaktionen kommen gebündelt in
+diskreten chromosomalen Regionen vor, welche topologically associating
+domains (TADs) genannt werden. Ob TADs eine essenzielle Rolle spielen
+für die Regulation der Genexpression in der Evolution und in
+Krankheiten, wird in dieser Dissertation untersucht. Dazu werden
+genomweite Chromatin Interaktions-Karten mit verschiedensten Daten, die
+entlang des linearen Genoms erhoben wurden, computergestützt integriert
+und analysiert.
+
+Funktional ähnliche Gene gruppieren sich dabei in TADs und teilen sich
+regulatorische Elemente im Genom, um eine koordinierte Expression zu
+ermöglichen. TADs werden mehrheitlich stabil über die Evolution vererbt
+und sind mit konservierter Genexpression assoziiert. Zerstörungen von
+TADs durch Chromosomenmutationen während der Evolution oder in
+genetischen Erkrankungen sind mit Änderungen von Genexpression
+assoziiert. Daten über Chromatin Interaktionen und TADs können genutzt
+werden, um gen-regulatorische Effekte von strukturellen
+Chromosomenaberration zu interpretieren, wie hier anhand von Patienten
+mit diversen klinischen Phänotypen gezeigt wird. Außerdem wurde eine
+Software entwickelt, um anhand von genetischen Sequenzeigenschaften und
+Gewebe-spezifischen Signalen von Protein-Bindestellen, genomweite
+Chromatin Interaktionen mit hoher Genauigkeit vorherzusagen.
+
+Diese Arbeit zeigt, dass TADs nicht nur strukturelle Einheiten von
+Chromosomen sind, sondern entscheidende funktionale Bausteine von
+Genomen sind, welche das regulatorische Umfeld von Genen definieren.
+Daher wird es zunehmend wichtig, die Faltung des Genoms zu
+berücksichtigen, sowohl in der genomischen Forschung, als auch in der
+klinischen Praxis.
+
+\hypertarget{curriculum-vitae}{%
+\chapter*{Curriculum vitae}\label{curriculum-vitae}}
+\addcontentsline{toc}{chapter}{Curriculum vitae}
+
+\textbf{Jonas Ibn-Salem}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Personal data }
+
+\begin{description}
+\item[Date of birth]
+24.07.1987
+\item[Place of birth]
+Mamers (France)
+\item[Nationality]
+German
+\end{description}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Education}
+
+\begin{description}
+\item[2014--2018]
+PhD in Computational Biology, \emph{Johannes Gutenberg University Mainz
+and Institute of Molecular Biology (IMB)}, Mainz, Germany
+\item[2011--2014]
+MSc Bioinformatics, \emph{Freie Universität Berlin}, Germany
+\item[2008--2011]
+BSc Bioinformatics, \emph{Freie Universität Berlin}, Germany
+\item[1994--2007]
+Abitur (A level), \emph{Rudolf-Steiner-Schule Loheland}, Fulda, Germany
+\end{description}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Publications}
+
+\begin{itemize}
+\item
+  Zepeda-Mendoza CJ*, \textbf{Ibn-Salem J*}, Kammin T, Harris DJ, Rita
+  D, Gripp KW, MacKenzie JJ, Gropman A, Graham B, Shaheen R, Alkuraya
+  FS, Brasington CK, Spence EJ, Masser-Frye D, Bird LM, Spiegel E,
+  Sparkes RL, Ordulu Z, Talkowski ME, Andrade-Navarro MA, Robinson PN,
+  Morton CC.\\
+  \textbf{Computational Prediction of Position Effects of Apparently
+  Balanced Human Chromosomal Rearrangements.}\\
+  \emph{Am J Hum Genet.} 2017 Aug 3;101(2):206-217.
+  \href{https://doi.org/10.1016/j.ajhg.2017.06.011}{doi:
+  10.1016/j.ajhg.2017.06.011}.
+\item
+  \textbf{Ibn-Salem J}, Muro EM, Andrade-Navarro MA.\\
+  \textbf{Co-regulation of paralog genes in the three-dimensional
+  chromatin architecture.}\\
+  \emph{Nucleic Acids Research} 2017 Jan 9;45(1):81-91.
+  \href{https://doi.org/10.1093/nar/gkw813}{doi: 10.1093/nar/gkw813}.\\
+\item
+  \textbf{Ibn-Salem, J}., Meiers, S., Eigenbrod, O., Sehlke, R., Talyan,
+  S., Schwahn, K., Otto, R., Pataskar, A., Metge, F., \& Angerer, P.\\
+  \textbf{Highlights of the 1st Student Symposium on Computational
+  Genomics.}\\
+  \emph{Genomics And Computational Biology}. 2017 2(1), e59.
+  \href{https://doi.org/10.18547/gcb.2016.vol2.iss1.e59}{doi:10.18547/gcb.2016.vol2.iss1.e59}
+\item
+  Hansen P, Hecht J, \textbf{Ibn-Salem J}, Menkuec BS, Roskosch S, Truss
+  M, Robinson PN.\\
+  \textbf{Q-nexus: a comprehensive and efficient analysis pipeline
+  designed for ChIP-nexus.}\\
+  \emph{BMC Genomics}. 2016 Nov 4;17(1):873.
+  \url{https://doi.org/10.1186/s12864-016-3164-6} ~\\
+\item
+  Piacentino ML, Zuch DT, Fishman J, Rose S, Speranza EE, Li C, Yu J,
+  Chung O, Ramachandran J, Ferrell P, Patel V, Reyna A, Hameeduddin H,
+  Chaves J, Hewitt FB, Bardot E, Lee D, Core AB, Hogan JD, Keenan JL,
+  Luo L, Coulombe-Huntington J, Blute TA, Oleinik E, \textbf{Ibn-Salem
+  J}, Poustka AJ, Bradham CA.\\
+  \textbf{RNA-Seq identifies SPGs as a ventral skeletal patterning cue
+  in sea urchins.}\\
+  \emph{Development}. 2016 Jan 11.
+  \href{https://doi.org/10.1242/dev.129312}{doi: 10.1242/dev.129312} ~\\
+\item
+  Starick SR*, \textbf{Ibn-Salem J*}, Jurk M, Hernandez C, Love MI,
+  Chung HR, Vingron M, Thomas-Chollier M, Meijsing SH.\\
+  \textbf{ChIP-exo signal associated with DNA-binding motifs provides
+  insight into the genomic binding of the glucocorticoid receptor and
+  cooperating transcription factors}.\\
+  \emph{Genome Research}. 2015 Jun;25(6):825-35.
+  \href{https://doi.org/10.1101/gr.185157.114}{doi:10.1101/gr.185157.114}
+\item
+  Köhler S, Schoeneberg U, Czeschik JC, Doelken SC, Hehir-Kwa JY,
+  \textbf{Ibn-Salem J}, Mungall CJ, Smedley D, Haendel MA, Robinson
+  PN.\\
+  \textbf{Clinical interpretation of CNVs with cross-species phenotype
+  data}.\\
+  \emph{J Med Genet}. 2014 Nov;51(11):766-772.
+  \href{https://doi.org/10.1136/jmedgenet-2014-102633}{doi:
+  10.1136/jmedgenet-2014-102633}.
+\item
+  \textbf{Ibn-Salem J*}, Köhler S*, Love MI, Chung HR, Huang N, Hurles
+  ME, Haendel M, Washington NL, Smedley D, Mungall CJ, Lewis SE, Ott CE,
+  Bauer S, Schofield PN, Mundlos S, Spielmann M, Robinson PN.\\
+  \textbf{Deletions of chromosomal regulatory boundaries are associated
+  with congenital disease.}\\
+  \emph{Genome Biology}. 2014 Sep 4;15(9):423.
+  \href{https://doi.org/10.1186/s13059-014-0423-1}{doi:
+  10.1186/s13059-014-0423-1}.
+\end{itemize}
+
+* equal contributions
+
+\textbf{Preprints}
+
+\begin{itemize}
+\item
+  Krefting J, Andrade-Navarro MA, \textbf{Ibn-Salem
+  J\textsuperscript{\#}}.\\
+  \textbf{Evolutionary stability of topologically associating domains is
+  associated with conserved gene regulation.}\\
+  \emph{bioRxiv}. 2017.
+  \href{https://doi.org/10.1101/231431}{doi:10.1101/231431}.
+\item
+  \textbf{Ibn-Salem J\textsuperscript{\#}}, Andrade-Navarro
+  MA\textsuperscript{\#}.\\
+  \textbf{Computational Chromosome Conformation Capture by Correlation
+  of ChIP-seq at CTCF motifs.}\\
+  \emph{bioRxiv}. February 2018:257584.
+  \href{https://doi.org/10.1101/257584}{doi:10.1101/257584}.
+\end{itemize}
+
+\textsuperscript{\#} corresponding author
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Invited Talks}
+
+\begin{itemize}
+\item
+  \textbf{Imperial College London, MRC London Institute of Medical
+  Sciences}, 19 May. 2017, London, UK\\
+  Title: \emph{Evolution of TADs and prediction of chromatin looping}
+\item
+  \textbf{Humboldt University Berlin, Humboldt University Berlin}, 19
+  Dez. 2016, Berlin, Germany\\
+  Title: \emph{ChIP-seq and related techniques to analyze protein-DNA
+  interactions and predict chromatin looping interactions.}
+\item
+  \textbf{Max-Planck-Institute for Molecular Genetics}, 04 Dez. 2015,
+  Berlin, Germany\\
+  Title: \emph{Co-regulation of paralog genes in the 3D chromatin
+  architecture}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Conference Presentations}
+
+\begin{itemize}
+\item
+  \textbf{Basel Computational Biology Conference BC\(^{2}\)}, 12-15 Sept
+  2017, Basel, Switzerland\\
+  Title: \emph{Prediction of chromatin looping interactions from
+  ChIP-seq profiles at CTCF motifs}
+\item
+  \textbf{ISCB European Student Council Symposium 2016}, 3 Sept 2016,
+  The Hauge, Netherlands\\
+  Title: \emph{Prediction of Chromatin Looping Events}
+\item
+  \textbf{ISCB Student Council Symposium 2015}, 10 July 2015, Dublin,
+  Ireland\\
+  Title: \emph{Co-regulation of human paralog genes in the
+  three-dimensional chromatin architecture}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Poster Presentations}
+
+\begin{itemize}
+\item
+  \textbf{2017 IMB Conference: Gene Regulation by The Numbers}, 19 - 21
+  June 2017, Mainz, Germany\\
+  Title: \emph{Prediction of chromatin looping interactions from
+  ChIP-seq profiles at CTCF motifs}
+\item
+  \textbf{15th European Conference on Computational Biology}, 4-7 Sept
+  2016, The Hauge, Netherlands\\
+  Title: \emph{Co-regulation of paralog genes in the three-dimensional
+  chromatin architecture}
+\item
+  \textbf{German Conference on Bioinformatics 2016}, 12-15 Sept 2016,
+  Berlin, Germany\\
+  Title: \emph{Prediction of three-dimensional chromatin looping from
+  sequence motifs and protein binding signals}
+\item
+  \textbf{EMBO Conference: From Functional Genomics to Systems Biology},
+  12-15 Nov 2016, Heidelberg, Germany\\
+  Title: \emph{Three-dimensional chromatin looping predicted by CTCF
+  motifs and ChIP-seq signals}
+\item
+  \textbf{RECOMB Comparative Genomics 2015}, 04-07 Oct.~2015, Frankfurt,
+  Germany\\
+  Title: \emph{Co-regulation of paralog genes in the three-dimensional
+  chromatin architecture}
+\item
+  \textbf{ISMB/ECCB Conference 2015}, 12-14 July, Dublin, Ireland\\
+  Title: \emph{Co-regulation of human paralog genes in the
+  three-dimensional chromatin architecture}
+\item
+  \textbf{Regulatory Genomics Special Interest Group}, 11 July 2015,
+  Dublin, Ireland\\
+  Title: \emph{Co-regulation of human paralog genes in the
+  three-dimensional chromatin architecture}
+\item
+  \textbf{ISCB Student Council Symposium 2015}, 10 July 2015, Dublin,
+  Ireland\\
+  Title: \emph{Co-regulation of human paralog genes in the
+  three-dimensional chromatin architecture}
+\item
+  \textbf{Genome Regulation in 3D Conference}, June 28-30, 2015,
+  Rehovot, Israel\\
+  Title: \emph{Co-regulation of human paralog genes in the
+  three-dimensional chromatin architecture}
+\item
+  \textbf{German Conference on Bioinformatics 2014}, Sept.~29 - Oct.~1,
+  2014, Bielefeld, Germany\\
+  Title: \emph{Deletions of chromosomal regulatory boundaries are
+  associated with congenital disease}
+\item
+  \textbf{Annual Meeting of the AGD 2014}, Oct 10-11, Potsdam, Germany\\
+  Title: \emph{Deletions of chromosomal regulatory boundaries are
+  associated with congenital disease}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Grants and Awards}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Travel Grant from gsk Stiftung} (350 EUR) for ```Genomic
+  Regulation 2018''' workshop, 15-18 March 2018, Nendaz, Switzerland.
+\item
+  \textbf{Digital Future Scholarship} free admission (900 EUR) to ```The
+  Digital Future''' conference on May 13th, 2017 in Berlin
+\item
+  \textbf{Scientific Event Grant 3,500 Euro} from Boehringer Ingelheim
+  Stiftung for Student Symposium on Computational Genomics, Nov 30,
+  2016, Mainz
+\item
+  \textbf{Scientific Meeting Grant 1,500 GBP (\textasciitilde{}1,750
+  EUR)} from The Company of Biologists (EA1228) for Student Symposium on
+  Computational Genomics, Nov 30, 2016, Mainz
+\item
+  \textbf{Travel Fellowship Award for 4th ISCB European Student Council
+  Symposium 2016}, Sept 2016, The Hauge, Netherlands
+\item
+  \textbf{Digital Future Scholarship} free admission (900 EUR) to ```The
+  Digital Future''' conference on May 11th, 2016 in Berlin
+\item
+  \textbf{F1000Research Poster Awards from ISMB/ECCB}
+\item
+  \textbf{Runner-up Poster Presentation Award form ISCB Student Council
+  Symposium 2015}
+\item
+  \textbf{Travel Award to the Genome regulation in 3D meeting}, June
+  28-30, Weizmann Institute of Science, Rehovot, Israel
+\item
+  \textbf{Third poster price of Annual Meeting of the AGD 2014}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Organizational Experience}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Student Symposium on Computational Genomics, Nov 30, 2016},
+  IMB, Mainz, Germany (main organizer and symposium chair)
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Research Experience}
+
+\begin{description}
+\item[Sep 2014 -- Feb 2018]
+\textbf{Research assistant and doctoral student}, \emph{Johannes
+Gutenberg University Mainz} and \emph{Institute of Molecular Biology
+(IMB)}, Mainz, Germany
+\item[May 2017 (for two weeks)]
+\textbf{Lab visit}, \emph{Imperial College London}, London, UK. Invited
+by Boris Lehnert and Matthias Merkenschlager.\\
+Computational analysis of gene expression and 3D genome organization
+upon knock-down of cohesin in mouse macrophages and thymocytes
+\item[Jun 2014 -- August 2014]
+\textbf{Research assistant}, \emph{Computational Biology Group at
+Institute for Medical Genetics and Human Genetics}, Charité --
+Universitätsmedizin, Berlin, Germany.\\
+Computational analysis of structural variations and phenotype
+associations.
+\item[Sep 2013 -- Jun 2014]
+\textbf{Student assistant (Master thesis project)}, \emph{Department
+Vingron at Max Planck Institute for Molecular Genetics}, Berlin, Germany
+and \emph{Institut de Biologie de l' Ecole Normale Superieure}, Paris,
+France\\
+Transcription factor binding profiles in ChIP-exo data
+\item[Apr 2013 -- Dec 2013]
+\textbf{Student assistant}, \emph{Computational Biology Group at
+Institute for Medical Genetics and Human Genetics}, Charité --
+Universitätsmedizin, Berlin\\
+Modeling the effect of genomic deletions of regulatory barriers in the
+chromatin structure on gene regulation and phenotypes.
+\item[Jan 2011 -- Aug 2013]
+\textbf{Student assistant}, \emph{Max Planck Institute for Molecular
+Genetics}, Department Lehrarch, Group: Evolution and Development, Berlin
+\end{description}
+
+\hypertarget{acknowledgements-2}{%
+\chapter*{Acknowledgements}\label{acknowledgements-2}}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+This work would not have been possible without the input from many
+amazing colleagues and collaborators. First of all, I would like to
+thanks my supervisor Miguel Andrade. Miguel not only let me work on this
+exciting topic and was always open to my ideas, but he also had constant
+trust and interest in my work. He provided useful feedback and brilliant
+ideas. I highly appreciate his contributions and writing in all the here
+presented publications.
+
+All publications making up this thesis were collaborative efforts with
+significant contributions from other authors. I thank all of them for
+their contributions. I am grateful especially to Jan Krefting for his
+comprehensive and detailed analysis of TADs in evolution. It was always
+a pleasure to discuss and work with him. I would like to thank
+especially Cinthya Zepeda-Mendoza who did most of the analysis and
+writing in the position effect project. It was always a pleasure and
+great experience to work with her. I also thank Cynthia C. Morton and
+Nick Robinson for initializing this collaboration and their input. I
+appreciate the contribution of all DGAP subjects and their families to
+this and other research by providing their data.
+
+I thank the entire CBDM group at IMB and JGU Mainz, consisting of Miguel
+Andrade, Enrique Muro, Jean-Fred Fontaine, Katerina Taškova, Sweta
+Talyan, Pablo Mier Muñoz, Gregorio Alanís Lobato, Tommaso Andreani,
+Steffen Albrecht, Susanne Klingens, and Birgit Reubert. I thank them for
+a great time in this exciting group.
+
+I met regularly with my thesis advisory committee, consisting of Miguel,
+Vijay Tiwari, Christoph Cremer, and Peter Nick Robinson. I appreciate
+the insightful discussions and useful feedback during these meetings.
+Furthermore, I thank Susanne Gerber for her interest and time to review
+my thesis. I thank David Fournier for reading, correcting and commenting
+the thesis draft. Moreover, I thank Dimitris Polychronopoulos for a
+great and inspiring time during a research-stay at MRC London. Last but
+not least, I would like to thank my partner in life, Marlien, for her
+motivation, her understanding, her patience and her endless support.
+This work would have never finished without her.
 
 \bibliography{bib/PhDfltClean.bib}
 
