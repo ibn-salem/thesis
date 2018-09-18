@@ -22,7 +22,7 @@ To learn more about available options and modifications read the [cleanthesis do
 
 ### Title page
 
-Metadata variable such as title, university, and reviews can be modified in the file `preamble.txt`.
+Metadata variable such as title, university, and reviews can be modified in the file `preamble.tex`.
 This template contains two different kinds of title pages. You can modify or remove them in the latex file `titlepage.tex`.
 
 - The actual title page and second page are completely customized according to the requirements of my university. 
