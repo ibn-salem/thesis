@@ -31,6 +31,6 @@ This template contains two different kinds of title pages. You can modify or rem
 ## Further resources
 
 - [R Markdown](https://github.com/rstudio/Rmarkdown)
-- [bookdown](https://github.com/rstudio/bookdown)
+- [bookdown](https://github.com/rstudio/bookdown) and https://bookdown.org
 - [cleanthesis](https://github.com/derric/cleanthesis)
 
